@@ -1,0 +1,470 @@
+[
+  {
+    "id": "english-comprehension-001",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "inference",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-lighthouse",
+    "question": "Why does Nell become alarmed at half past two?",
+    "options": [
+      "The sound of her father pacing above her has stopped.",
+      "The storm has suddenly become much louder.",
+      "Her candle has gone out on the staircase.",
+      "She has heard a ship in trouble out at sea."
+    ],
+    "answer": 0,
+    "explanation": "The passage says 'At half past two the scraping stopped. Nell sat up.' The scraping was her father's boots, so its absence is what worries her.",
+    "distractorNotes": [
+      "",
+      "The storm is described earlier, but nothing changes about it at half past two.",
+      "The candle goes out after she has already started climbing, so it is not the cause.",
+      "The ship is only mentioned at the very end, and she does not hear it."
+    ],
+    "learningPoint": "When a question asks 'why', find the sentence where the change happens and read the one just before it.",
+    "tags": ["comprehension", "inference", "fiction"]
+  },
+  {
+    "id": "english-comprehension-002",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "character_motivation",
+    "type": "comprehension-inference",
+    "difficulty": 4,
+    "passageId": "passage-lighthouse",
+    "question": "'the relief that flooded through her was so sudden that it came out as anger'. What does this tell us about Nell?",
+    "options": [
+      "She had been badly frightened, and her sharp words come from worry rather than temper.",
+      "She is often rude to her father and does not respect him.",
+      "She is angry that her father has woken her up in the night.",
+      "She does not care very much whether her father is safe."
+    ],
+    "answer": 0,
+    "explanation": "The word 'relief' shows she is glad he is safe. The sentence explains that the strength of that feeling is what makes her sound angry — the anger is a sign of how frightened she had been.",
+    "distractorNotes": [
+      "",
+      "Nothing suggests this is usual behaviour; the passage presents it as a one-off reaction.",
+      "Her father did not wake her — she woke because the pacing stopped.",
+      "This is the opposite of what 'relief' tells us."
+    ],
+    "learningPoint": "Characters often show a feeling through an unexpected reaction. Look at the emotion word the author actually uses.",
+    "tags": ["comprehension", "character", "inference"]
+  },
+  {
+    "id": "english-comprehension-003",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "vocabulary_in_context",
+    "type": "comprehension-vocabulary",
+    "difficulty": 3,
+    "passageId": "passage-lighthouse",
+    "question": "In the phrase 'long, shuddering pushes', the word 'shuddering' most nearly means",
+    "options": ["shaking", "freezing", "howling", "sudden"],
+    "answer": 0,
+    "explanation": "'Shuddering' describes a trembling or shaking movement, which fits the wind making the iron staircase hum.",
+    "distractorNotes": [
+      "",
+      "Shuddering is often associated with cold, but here it describes movement, not temperature.",
+      "'Howling' describes a sound; the sentence is describing how the wind moves.",
+      "The pushes are described as 'long', which is the opposite of sudden."
+    ],
+    "learningPoint": "For 'meaning in context' questions, put each option back into the sentence and see which one still makes sense.",
+    "tags": ["comprehension", "vocabulary", "context"]
+  },
+  {
+    "id": "english-comprehension-004",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "retrieval",
+    "type": "comprehension-retrieval",
+    "difficulty": 1,
+    "passageId": "passage-lighthouse",
+    "question": "How does Nell manage to climb the stairs after her candle goes out?",
+    "options": [
+      "She knows the staircase so well that she does not need light.",
+      "Her father calls down to guide her.",
+      "The light from the lamp room shines down the stairs.",
+      "She lights a second candle that she keeps in her pocket."
+    ],
+    "answer": 0,
+    "explanation": "The passage states 'she did not need it. She knew the number of steps better than she knew her own age.'",
+    "distractorNotes": [
+      "",
+      "Her father does not speak until she reaches the top.",
+      "No light from the lamp room is mentioned on the staircase.",
+      "There is no second candle in the passage."
+    ],
+    "learningPoint": "Retrieval questions can be answered from the text itself — find the exact line rather than guessing.",
+    "tags": ["comprehension", "retrieval"]
+  },
+  {
+    "id": "english-comprehension-005",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "authors_intent",
+    "type": "comprehension-inference",
+    "difficulty": 4,
+    "passageId": "passage-market",
+    "question": "Why does Otis's grandmother stand beside him in silence?",
+    "options": [
+      "To stop herself from stepping in, so that Otis has to speak for himself.",
+      "Because she is too tired to serve the next customer.",
+      "Because she is annoyed and has decided not to speak to him.",
+      "To listen carefully to what the customer wants to buy."
+    ],
+    "answer": 0,
+    "explanation": "Her final line — 'You were simply waiting for me to do it for you' — shows that her silence was deliberate. By refusing to speak, she forced Otis to find his own voice.",
+    "distractorNotes": [
+      "",
+      "Nothing in the passage suggests tiredness; she moves away briskly afterwards.",
+      "She does speak to him, warmly, immediately afterwards.",
+      "The customer has not said anything yet."
+    ],
+    "learningPoint": "When a character's actions seem puzzling, the explanation is often in what they say at the end of the passage.",
+    "tags": ["comprehension", "inference", "author's intent"]
+  },
+  {
+    "id": "english-comprehension-006",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "meaning_of_phrases",
+    "type": "comprehension-vocabulary",
+    "difficulty": 3,
+    "passageId": "passage-market",
+    "question": "What does the writer suggest by 'the particular sigh she kept for him'?",
+    "options": [
+      "His grandmother has sighed at him in this same way many times before.",
+      "His grandmother rarely shows any emotion at all.",
+      "His grandmother is trying to hide how proud she is.",
+      "His grandmother has a cough and is unwell."
+    ],
+    "answer": 0,
+    "explanation": "The word 'kept' suggests the sigh is stored up and reused, and 'particular' suggests it belongs to him alone — so this is a familiar, repeated reaction.",
+    "distractorNotes": [
+      "",
+      "A sigh is itself a show of emotion, so this is contradicted.",
+      "Pride comes later in the passage, not at this moment.",
+      "There is nothing about illness in the passage."
+    ],
+    "learningPoint": "Small word choices such as 'particular' and 'kept' carry meaning — ask why the author chose that word instead of a plainer one.",
+    "tags": ["comprehension", "phrases", "inference"]
+  },
+  {
+    "id": "english-grammar-001",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "word_classes",
+    "type": "grammar",
+    "difficulty": 2,
+    "question": "In the sentence 'The exhausted runner collapsed gratefully onto the damp grass', which word is an adverb?",
+    "options": ["gratefully", "exhausted", "damp", "collapsed"],
+    "answer": 0,
+    "explanation": "'Gratefully' describes how the runner collapsed, so it modifies the verb and is an adverb.",
+    "distractorNotes": [
+      "",
+      "'Exhausted' describes the runner, so it is an adjective here.",
+      "'Damp' describes the grass, so it is an adjective.",
+      "'Collapsed' is the verb — the action itself."
+    ],
+    "learningPoint": "An adverb usually tells you how, when or where an action happens. Not every word ending in -ly is an adverb, though — 'friendly' is an adjective.",
+    "followUpIds": ["english-grammar-002"],
+    "tags": ["grammar", "word classes", "adverbs"]
+  },
+  {
+    "id": "english-grammar-002",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "word_classes",
+    "type": "grammar",
+    "difficulty": 2,
+    "question": "In the sentence 'She spoke quietly to the nervous child', which word is an adjective?",
+    "options": ["nervous", "quietly", "spoke", "child"],
+    "answer": 0,
+    "explanation": "'Nervous' describes the noun 'child', so it is an adjective.",
+    "distractorNotes": [
+      "",
+      "'Quietly' describes how she spoke, so it is an adverb.",
+      "'Spoke' is the verb.",
+      "'Child' is the noun being described."
+    ],
+    "learningPoint": "Adjectives describe nouns; adverbs describe verbs.",
+    "tags": ["grammar", "word classes", "adjectives"]
+  },
+  {
+    "id": "english-grammar-003",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "clauses",
+    "type": "grammar",
+    "difficulty": 4,
+    "question": "Which sentence contains a subordinate clause?",
+    "options": [
+      "Although the rain had stopped, the pitch was still unplayable.",
+      "The rain stopped and the sun appeared.",
+      "The players walked slowly back to the changing rooms.",
+      "It was a cold, miserable afternoon in November."
+    ],
+    "answer": 0,
+    "explanation": "'Although the rain had stopped' cannot stand alone as a sentence and depends on the main clause, so it is a subordinate clause.",
+    "distractorNotes": [
+      "",
+      "This joins two main clauses with 'and' — both could stand alone.",
+      "This is a single main clause with an adverbial phrase.",
+      "This is a single main clause with two adjectives."
+    ],
+    "learningPoint": "A subordinate clause cannot stand alone. Words such as although, because, when, if and while often begin one.",
+    "tags": ["grammar", "clauses", "sentence structure"]
+  },
+  {
+    "id": "english-grammar-004",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "standard_english",
+    "type": "grammar",
+    "difficulty": 3,
+    "question": "Which sentence is written in standard English?",
+    "options": [
+      "There were fewer cars on the road than usual.",
+      "There were less cars on the road than usual.",
+      "There was less cars on the road than usual.",
+      "There was fewer cars on the road than usual."
+    ],
+    "answer": 0,
+    "explanation": "'Cars' can be counted, so 'fewer' is correct rather than 'less'. 'Cars' is plural, so the verb must be 'were' rather than 'was'.",
+    "distractorNotes": [
+      "",
+      "'Less' should only be used for things that cannot be counted, such as less water.",
+      "This has both errors: 'was' with a plural noun, and 'less' with a countable noun.",
+      "'Fewer' is right, but 'was' does not agree with the plural 'cars'."
+    ],
+    "learningPoint": "Use 'fewer' for things you can count and 'less' for amounts you cannot count.",
+    "tags": ["grammar", "standard english", "agreement"]
+  },
+  {
+    "id": "english-punctuation-001",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "apostrophes",
+    "type": "punctuation",
+    "difficulty": 3,
+    "question": "Which sentence uses apostrophes correctly?",
+    "options": [
+      "The girls' coats were left in the boys' changing room.",
+      "The girl's coats were left in the boy's changing room.",
+      "The girls coat's were left in the boys changing room.",
+      "The girls's coats were left in the boys's changing room."
+    ],
+    "answer": 0,
+    "explanation": "Both nouns are plural and already end in -s, so the apostrophe goes after the s: girls' and boys'.",
+    "distractorNotes": [
+      "",
+      "This suggests one girl and one boy, which does not match 'coats' being plural.",
+      "The apostrophe has been put on 'coats', which is a simple plural and needs none.",
+      "You do not add another s after a plural that already ends in s."
+    ],
+    "learningPoint": "Plural noun already ending in s → apostrophe after the s. Singular noun → apostrophe then s.",
+    "tags": ["punctuation", "apostrophes", "possession"]
+  },
+  {
+    "id": "english-punctuation-002",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "commas_and_speech",
+    "type": "punctuation",
+    "difficulty": 3,
+    "question": "Which sentence is punctuated correctly?",
+    "options": [
+      "'Wait here,' said Marcus, 'I won't be long.'",
+      "'Wait here' said Marcus, 'I won't be long.'",
+      "'Wait here,' said Marcus 'I wont be long.'",
+      "'Wait here,' Said Marcus, 'I won't be long.'"
+    ],
+    "answer": 0,
+    "explanation": "Speech is closed with a comma before the speech marks, 'said Marcus' is followed by a comma, and 'won't' needs an apostrophe for the missing letter.",
+    "distractorNotes": [
+      "",
+      "There is no comma before the closing speech mark after 'here'.",
+      "There is no comma after 'Marcus', and 'wont' is missing its apostrophe.",
+      "'Said' should not have a capital letter in the middle of a sentence."
+    ],
+    "learningPoint": "Punctuation that belongs to the spoken words goes inside the speech marks.",
+    "tags": ["punctuation", "speech", "commas"]
+  },
+  {
+    "id": "english-spelling-001",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "prefixes",
+    "type": "spelling",
+    "difficulty": 2,
+    "question": "Which prefix turns 'legible' into a word meaning 'impossible to read'?",
+    "options": ["il-", "in-", "un-", "dis-"],
+    "answer": 0,
+    "explanation": "'Illegible' means impossible to read. Before a word beginning with l, the prefix in- changes to il- so that it is easier to say.",
+    "distractorNotes": [
+      "",
+      "'Inlegible' is not a word — in- becomes il- before an l.",
+      "'Unlegible' is not used in English, although un- works with many other words.",
+      "'Dislegible' is not a word; dis- usually reverses an action, as in disappear."
+    ],
+    "learningPoint": "The prefix in- changes to match the next letter: il- before l, im- before m or p, and ir- before r.",
+    "tags": ["spelling", "prefixes"]
+  },
+  {
+    "id": "english-spelling-002",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "confused_words",
+    "type": "spelling",
+    "difficulty": 3,
+    "question": "Which sentence uses the underlined word correctly? Choose the sentence in which the word in capitals is right.",
+    "options": [
+      "The new rules had little EFFECT on the traffic.",
+      "The new rules had little AFFECT on the traffic.",
+      "The rain did not EFFECT our plans at all.",
+      "We were all EFFECTED by the sad news."
+    ],
+    "answer": 0,
+    "explanation": "'Effect' is usually a noun meaning a result, and that is how it is used here. 'Affect' is usually a verb meaning to influence something.",
+    "distractorNotes": [
+      "",
+      "'Affect' is a verb, so it cannot follow 'little' like this.",
+      "This needs the verb 'affect'.",
+      "This needs the verb form 'affected'."
+    ],
+    "learningPoint": "Affect is an Action (verb); Effect is the End result (noun).",
+    "followUpIds": ["english-spelling-003"],
+    "tags": ["spelling", "confused words", "homophones"]
+  },
+  {
+    "id": "english-spelling-003",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "confused_words",
+    "type": "spelling",
+    "difficulty": 2,
+    "question": "Choose the correct word: 'The team played much better than ___ opponents.'",
+    "options": ["their", "there", "they're", "theirs"],
+    "answer": 0,
+    "explanation": "'Their' shows possession — the opponents belong to the other team.",
+    "distractorNotes": [
+      "",
+      "'There' refers to a place.",
+      "'They're' is short for 'they are', which does not fit here.",
+      "'Theirs' stands alone and is not followed by a noun."
+    ],
+    "learningPoint": "Their = belonging to them. There = a place. They're = they are.",
+    "tags": ["spelling", "homophones"]
+  },
+  {
+    "id": "english-spelling-004",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "suffixes",
+    "type": "spelling",
+    "difficulty": 3,
+    "question": "Which word is spelled correctly?",
+    "options": ["necessary", "neccessary", "necesary", "nessecary"],
+    "answer": 0,
+    "explanation": "'Necessary' has one c and two s's.",
+    "distractorNotes": [
+      "",
+      "This has doubled the c instead of the s.",
+      "This is missing the second s.",
+      "The letters have been swapped around."
+    ],
+    "learningPoint": "One collar and two sleeves — necessary has one c and two s's.",
+    "tags": ["spelling", "tricky words"]
+  },
+  {
+    "id": "english-vocabulary-001",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "precise_word_choice",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "question": "Which word best completes the sentence? 'Despite the noise from the road, the old cat remained completely ___.'",
+    "options": ["unperturbed", "unaware", "unavailable", "unpleasant"],
+    "answer": 0,
+    "explanation": "'Unperturbed' means untroubled or not bothered, which fits a cat that stays calm despite the noise.",
+    "distractorNotes": [
+      "",
+      "'Unaware' would mean it had not noticed, but 'despite' suggests it noticed and was untroubled.",
+      "'Unavailable' does not make sense about a cat's reaction to noise.",
+      "'Unpleasant' describes character, not a reaction to noise."
+    ],
+    "learningPoint": "The word 'despite' signals a contrast — the answer must show the opposite of what you would expect.",
+    "tags": ["vocabulary", "context", "word choice"]
+  },
+  {
+    "id": "english-vocabulary-002",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "idioms",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "question": "What does it mean to say that someone 'took the news in their stride'?",
+    "options": [
+      "They dealt with it calmly and carried on.",
+      "They walked away without saying anything.",
+      "They were extremely upset by it.",
+      "They refused to believe it was true."
+    ],
+    "answer": 0,
+    "explanation": "The idiom comes from a runner who steps over an obstacle without breaking their rhythm — it means coping calmly with something difficult.",
+    "distractorNotes": [
+      "",
+      "This takes 'stride' literally as walking.",
+      "The idiom means the opposite of being upset.",
+      "The idiom is about how they coped, not whether they believed it."
+    ],
+    "learningPoint": "Idioms do not mean what the individual words say. Think about the picture behind the phrase.",
+    "tags": ["vocabulary", "idioms"]
+  },
+  {
+    "id": "english-vocabulary-003",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "shades_of_meaning",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "question": "Which word is closest in meaning to 'reluctant'?",
+    "options": ["unwilling", "unable", "uninterested", "unkind"],
+    "answer": 0,
+    "explanation": "'Reluctant' means hesitating to do something because you do not want to — in other words, unwilling.",
+    "distractorNotes": [
+      "",
+      "'Unable' means you cannot do it, not that you do not want to.",
+      "'Uninterested' means bored by something, which is not quite the same as resisting it.",
+      "'Unkind' describes how you treat others."
+    ],
+    "learningPoint": "Watch the difference between not wanting to (reluctant) and not being able to (unable).",
+    "tags": ["vocabulary", "synonyms", "shades of meaning"]
+  },
+  {
+    "id": "english-grammar-005",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "pronouns",
+    "type": "grammar",
+    "difficulty": 3,
+    "question": "Which sentence uses pronouns correctly?",
+    "options": [
+      "The prize was shared between my sister and me.",
+      "The prize was shared between my sister and I.",
+      "The prize was shared between myself and my sister.",
+      "The prize was shared between I and my sister."
+    ],
+    "answer": 0,
+    "explanation": "After a preposition such as 'between' you need the object pronoun 'me'. Test it by removing 'my sister and': you would say 'shared between me'.",
+    "distractorNotes": [
+      "",
+      "'I' is a subject pronoun and cannot follow 'between'.",
+      "'Myself' should only be used when you are also the subject, as in 'I hurt myself'.",
+      "This has the same problem as 'and I' and also sounds unnatural."
+    ],
+    "learningPoint": "Take the other person out of the sentence and see which pronoun still sounds right.",
+    "tags": ["grammar", "pronouns"]
+  }
+]

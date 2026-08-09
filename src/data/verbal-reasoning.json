@@ -1,0 +1,640 @@
+[
+  {
+    "id": "vr-synonyms-001",
+    "subject": "verbal-reasoning",
+    "topic": "Synonyms",
+    "skill": "synonyms",
+    "type": "synonyms",
+    "difficulty": 2,
+    "question": "Which word means most nearly the same as ABUNDANT?",
+    "options": ["plentiful", "expensive", "enormous", "generous"],
+    "answer": 0,
+    "explanation": "'Abundant' means existing in large quantities, which matches 'plentiful'.",
+    "distractorNotes": [
+      "",
+      "Something abundant is often cheap because there is so much of it — this is nearly the opposite.",
+      "'Enormous' describes the size of one thing, not how much of it there is.",
+      "'Generous' describes a person's character, not an amount."
+    ],
+    "learningPoint": "Synonym questions test the exact shade of meaning — 'a lot of' is not the same as 'very big'.",
+    "followUpIds": ["vr-synonyms-002"],
+    "tags": ["synonyms", "vocabulary"]
+  },
+  {
+    "id": "vr-synonyms-002",
+    "subject": "verbal-reasoning",
+    "topic": "Synonyms",
+    "skill": "synonyms",
+    "type": "synonyms",
+    "difficulty": 2,
+    "question": "Which word means most nearly the same as WEARY?",
+    "options": ["tired", "careful", "worried", "bored"],
+    "answer": 0,
+    "explanation": "'Weary' means very tired.",
+    "distractorNotes": [
+      "",
+      "You may be thinking of 'wary', which means cautious — a different word.",
+      "'Worried' is about anxiety, not tiredness.",
+      "Being weary of something can involve boredom, but the core meaning is tiredness."
+    ],
+    "learningPoint": "Words that look similar (weary / wary) can mean completely different things — read carefully.",
+    "tags": ["synonyms", "vocabulary"]
+  },
+  {
+    "id": "vr-synonyms-003",
+    "subject": "verbal-reasoning",
+    "topic": "Synonyms",
+    "skill": "synonyms",
+    "type": "synonyms",
+    "difficulty": 4,
+    "question": "Which word means most nearly the same as OBSTINATE?",
+    "options": ["stubborn", "obvious", "rude", "confident"],
+    "answer": 0,
+    "explanation": "'Obstinate' means refusing to change your mind, which is exactly what 'stubborn' means.",
+    "distractorNotes": [
+      "",
+      "'Obvious' just looks similar at the start of the word.",
+      "An obstinate person is not necessarily rude to others.",
+      "'Confident' is about self-belief, not about refusing to change your mind."
+    ],
+    "learningPoint": "Do not choose a word simply because it starts with the same letters.",
+    "tags": ["synonyms", "vocabulary"]
+  },
+  {
+    "id": "vr-antonyms-001",
+    "subject": "verbal-reasoning",
+    "topic": "Antonyms",
+    "skill": "antonyms",
+    "type": "antonyms",
+    "difficulty": 2,
+    "question": "Which word is most nearly OPPOSITE in meaning to ANCIENT?",
+    "options": ["modern", "young", "small", "ruined"],
+    "answer": 0,
+    "explanation": "'Ancient' means belonging to the distant past, so its opposite is 'modern', belonging to the present.",
+    "distractorNotes": [
+      "",
+      "'Young' is the opposite of 'old' when talking about living things, but 'ancient' is about time periods.",
+      "Size has nothing to do with age.",
+      "Ancient things are often ruined, so this is linked rather than opposite."
+    ],
+    "learningPoint": "Choose the opposite of the exact word given, not of a word that is merely related to it.",
+    "tags": ["antonyms", "vocabulary"]
+  },
+  {
+    "id": "vr-antonyms-002",
+    "subject": "verbal-reasoning",
+    "topic": "Antonyms",
+    "skill": "antonyms",
+    "type": "antonyms",
+    "difficulty": 3,
+    "question": "Which word is most nearly OPPOSITE in meaning to SCARCE?",
+    "options": ["plentiful", "frightened", "large", "cheap"],
+    "answer": 0,
+    "explanation": "'Scarce' means in short supply, so its opposite is 'plentiful'.",
+    "distractorNotes": [
+      "",
+      "You may be thinking of 'scared', which is a different word.",
+      "'Large' is about size, not about quantity available.",
+      "Scarce things are usually expensive, so 'cheap' is a consequence rather than an opposite."
+    ],
+    "learningPoint": "Deal with the meaning of the word itself, not with what usually happens as a result of it.",
+    "tags": ["antonyms", "vocabulary"]
+  },
+  {
+    "id": "vr-analogies-001",
+    "subject": "verbal-reasoning",
+    "topic": "Analogies",
+    "skill": "word_analogies",
+    "type": "analogies",
+    "difficulty": 3,
+    "question": "Bird is to nest as bee is to ___",
+    "options": ["hive", "honey", "flower", "sting"],
+    "answer": 0,
+    "explanation": "A nest is where a bird lives, so the answer must be where a bee lives: a hive.",
+    "distractorNotes": [
+      "",
+      "Honey is what a bee makes, not where it lives.",
+      "A flower is where a bee feeds.",
+      "A sting is part of a bee's body."
+    ],
+    "learningPoint": "Say the relationship out loud in a full sentence, then apply exactly the same sentence to the second pair.",
+    "followUpIds": ["vr-analogies-002"],
+    "tags": ["analogies", "relationships"]
+  },
+  {
+    "id": "vr-analogies-002",
+    "subject": "verbal-reasoning",
+    "topic": "Analogies",
+    "skill": "word_analogies",
+    "type": "analogies",
+    "difficulty": 3,
+    "question": "Author is to book as composer is to ___",
+    "options": ["symphony", "orchestra", "piano", "concert"],
+    "answer": 0,
+    "explanation": "An author creates a book, so a composer creates a symphony.",
+    "distractorNotes": [
+      "",
+      "An orchestra performs the music; it is not what the composer creates.",
+      "A piano is an instrument used to play music.",
+      "A concert is an event where the music is performed."
+    ],
+    "learningPoint": "'Creator to creation' is one of the most common analogy relationships.",
+    "tags": ["analogies", "relationships"]
+  },
+  {
+    "id": "vr-analogies-003",
+    "subject": "verbal-reasoning",
+    "topic": "Analogies",
+    "skill": "word_analogies",
+    "type": "analogies",
+    "difficulty": 4,
+    "question": "Whisper is to shout as glimpse is to ___",
+    "options": ["stare", "blink", "watch", "notice"],
+    "answer": 0,
+    "explanation": "A whisper is a quiet version of a shout — the pair contrasts a brief, small action with a long, intense one. A glimpse is a brief look, so its intense partner is a stare.",
+    "distractorNotes": [
+      "",
+      "A blink is also brief, so it does not create the contrast.",
+      "'Watch' is longer than a glimpse but not as intense as 'stare'.",
+      "'Notice' is close in meaning to 'glimpse' rather than opposite in degree."
+    ],
+    "learningPoint": "Some analogies are about degree — small version to large version of the same thing.",
+    "tags": ["analogies", "degree", "relationships"]
+  },
+  {
+    "id": "vr-odd-one-out-001",
+    "subject": "verbal-reasoning",
+    "topic": "Word classification",
+    "skill": "odd_one_out",
+    "type": "odd-one-out",
+    "difficulty": 2,
+    "question": "Which word is the odd one out?",
+    "options": ["oak", "daisy", "willow", "birch"],
+    "answer": 1,
+    "explanation": "Oak, willow and birch are all trees. A daisy is a flower.",
+    "distractorNotes": [
+      "Oak is a tree, like willow and birch.",
+      "",
+      "Willow is a tree, like oak and birch.",
+      "Birch is a tree, like oak and willow."
+    ],
+    "learningPoint": "Find what three of the words share, then the fourth is the odd one out.",
+    "tags": ["classification", "odd one out"]
+  },
+  {
+    "id": "vr-odd-one-out-002",
+    "subject": "verbal-reasoning",
+    "topic": "Word classification",
+    "skill": "odd_one_out",
+    "type": "odd-one-out",
+    "difficulty": 4,
+    "question": "Which word is the odd one out?",
+    "options": ["stationary", "motionless", "still", "gradual"],
+    "answer": 3,
+    "explanation": "Stationary, motionless and still all mean not moving. 'Gradual' means happening slowly, which still involves movement or change.",
+    "distractorNotes": [
+      "'Stationary' means not moving.",
+      "'Motionless' means not moving.",
+      "'Still' means not moving.",
+      ""
+    ],
+    "learningPoint": "Slow is not the same as stopped — check the precise meaning before deciding.",
+    "tags": ["classification", "odd one out", "vocabulary"]
+  },
+  {
+    "id": "vr-classification-001",
+    "subject": "verbal-reasoning",
+    "topic": "Word classification",
+    "skill": "grouping",
+    "type": "classification",
+    "difficulty": 3,
+    "question": "Which word belongs with: violin, cello, viola?",
+    "options": ["double bass", "flute", "drum", "trumpet"],
+    "answer": 0,
+    "explanation": "Violin, cello and viola are all bowed string instruments, and so is the double bass.",
+    "distractorNotes": [
+      "",
+      "A flute is a woodwind instrument.",
+      "A drum is a percussion instrument.",
+      "A trumpet is a brass instrument."
+    ],
+    "learningPoint": "Work out the precise group — 'instrument' is too broad here; the group is 'string instruments'.",
+    "tags": ["classification", "grouping"]
+  },
+  {
+    "id": "vr-letter-sequence-001",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? CE, FH, IK, LN, ___",
+    "options": ["OQ", "MO", "PR", "NP"],
+    "answer": 0,
+    "explanation": "Each pair moves on 3 letters from the last pair: C → F → I → L → O. Within each pair the second letter is 2 on from the first: O + 2 = Q. So the answer is OQ.",
+    "distractorNotes": [
+      "",
+      "This moves on only 1 letter from L instead of 3.",
+      "This moves on 4 letters from L instead of 3.",
+      "This moves on 2 letters from L instead of 3."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "followUpIds": ["vr-letter-sequence-002"],
+    "tags": ["letter sequence", "patterns"]
+  },
+  {
+    "id": "vr-letter-sequence-002",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? AD, BE, CF, DG, ___",
+    "options": ["EH", "EG", "DH", "FI"],
+    "answer": 0,
+    "explanation": "The first letters go A, B, C, D, so next is E. The second letter is always 3 on from the first: E + 3 = H. So the answer is EH.",
+    "distractorNotes": [
+      "",
+      "The gap between the letters must be 3, not 2.",
+      "The first letter should move on from D to E.",
+      "This skips E and jumps to F."
+    ],
+    "learningPoint": "Write the alphabet along the top of your page — it makes letter sequences far quicker.",
+    "tags": ["letter sequence", "patterns"]
+  },
+  {
+    "id": "vr-codes-001",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If CAT is written in code as ECV, how would DOG be written in the same code?",
+    "options": ["FQI", "EPH", "CNF", "FQH"],
+    "answer": 0,
+    "explanation": "Each letter moves forward 2 places in the alphabet: C → E, A → C, T → V. Applying the same rule, D → F, O → Q and G → I, giving FQI.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 1 place.",
+      "This moves each letter backwards 1 place.",
+      "The first two letters move 2 places but the G only moves 1."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "followUpIds": ["vr-codes-002"],
+    "tags": ["codes", "letter shifts"]
+  },
+  {
+    "id": "vr-codes-002",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If BOAT is written in code as ANZS, what is the code for SHIP?",
+    "options": ["RGHO", "TIJQ", "RIHQ", "TGJO"],
+    "answer": 0,
+    "explanation": "Each letter moves back 1 place in the alphabet: B → A, O → N, A → Z and T → S. Applying the same rule to SHIP gives S → R, H → G, I → H and P → O, so the code is RGHO.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward 1 place instead of back.",
+      "Only some letters have been moved back.",
+      "This mixes forward and backward moves."
+    ],
+    "learningPoint": "Check your rule against every letter of the example before you use it.",
+    "tags": ["codes", "letter shifts"]
+  },
+  {
+    "id": "vr-hidden-words-001",
+    "subject": "verbal-reasoning",
+    "topic": "Hidden words",
+    "skill": "hidden_words",
+    "type": "hidden-words",
+    "difficulty": 3,
+    "question": "A four-letter word is hidden across the end of one word and the start of the next. In which sentence is the word BEAR hidden?",
+    "options": [
+      "She will be around at six o'clock.",
+      "Please bring the large box inside.",
+      "We stopped to admire the view.",
+      "He must leave early tomorrow."
+    ],
+    "answer": 0,
+    "explanation": "In 'be around', the end of 'be' joins the start of 'around' to give b-e-a-r, hidden across the two words.",
+    "distractorNotes": [
+      "",
+      "No four letters in a row across a join spell BEAR here.",
+      "There is no hidden BEAR across any join in this sentence.",
+      "There is no hidden BEAR across any join in this sentence."
+    ],
+    "learningPoint": "Hidden-word questions need letters that run in order across the gap between two words.",
+    "followUpIds": ["vr-hidden-words-002"],
+    "tags": ["hidden words", "patterns"]
+  },
+  {
+    "id": "vr-hidden-words-002",
+    "subject": "verbal-reasoning",
+    "topic": "Hidden words",
+    "skill": "hidden_words",
+    "type": "hidden-words",
+    "difficulty": 2,
+    "question": "In which sentence is the word LAMP hidden across the end of one word and the start of the next?",
+    "options": [
+      "The koala members of the group arrived late.",
+      "We climbed the steep hill slowly.",
+      "She lit a lamp beside the window.",
+      "The camp was quiet at dawn."
+    ],
+    "answer": 0,
+    "explanation": "In 'koala members', the end of 'koala' joins the start of 'members' to give l-a-m-p across the gap.",
+    "distractorNotes": [
+      "",
+      "No four letters in a row across a join spell LAMP here.",
+      "The word appears whole rather than hidden across a join.",
+      "'camp' is close but the letters do not spell LAMP."
+    ],
+    "learningPoint": "Underline the last two letters of each word and the first two of the next — the hidden word must sit across that join.",
+    "tags": ["hidden words", "patterns"]
+  },
+  {
+    "id": "vr-compound-words-001",
+    "subject": "verbal-reasoning",
+    "topic": "Word building",
+    "skill": "compound_words",
+    "type": "compound-words",
+    "difficulty": 3,
+    "question": "Which word can go BEFORE all of these to make three new words: ___ ball, ___ path, ___ print?",
+    "options": ["foot", "hand", "sun", "over"],
+    "answer": 0,
+    "explanation": "Foot gives football, footpath and footprint.",
+    "distractorNotes": [
+      "",
+      "Handball and handprint work, but 'handpath' is not a word.",
+      "Sunpath and sunball are not words.",
+      "Overprint exists, but 'overball' does not."
+    ],
+    "learningPoint": "Test your answer against every part of the question — it must work for all of them, not just the first.",
+    "followUpIds": ["vr-compound-words-002"],
+    "tags": ["compound words", "word building"]
+  },
+  {
+    "id": "vr-compound-words-002",
+    "subject": "verbal-reasoning",
+    "topic": "Word building",
+    "skill": "compound_words",
+    "type": "compound-words",
+    "difficulty": 3,
+    "question": "Which word can go AFTER all of these to make three new words: rain ___, water ___, snow ___?",
+    "options": ["fall", "coat", "drop", "flake"],
+    "answer": 0,
+    "explanation": "Fall gives rainfall, waterfall and snowfall.",
+    "distractorNotes": [
+      "",
+      "Raincoat works, but 'watercoat' and 'snowcoat' are not words.",
+      "Raindrop and snowdrop work, but 'waterdrop' is not standard.",
+      "Snowflake works, but 'rainflake' and 'waterflake' do not."
+    ],
+    "learningPoint": "Check every combination before choosing — three out of four is not enough.",
+    "tags": ["compound words", "word building"]
+  },
+  {
+    "id": "vr-word-relationships-001",
+    "subject": "verbal-reasoning",
+    "topic": "Word relationships",
+    "skill": "part_whole",
+    "type": "word-relationships",
+    "difficulty": 3,
+    "question": "Which pair of words has the same relationship as PETAL and FLOWER?",
+    "options": ["branch : tree", "puppy : dog", "cold : ice", "run : sprint"],
+    "answer": 0,
+    "explanation": "A petal is a part of a flower, and in the same way a branch is a part of a tree.",
+    "distractorNotes": [
+      "",
+      "A puppy is a young dog, not a part of one.",
+      "Cold describes ice; it is not a part of it.",
+      "A sprint is a type of run, not a part of one."
+    ],
+    "learningPoint": "'Part of' relationships are different from 'type of' relationships — decide which one you are looking at.",
+    "tags": ["word relationships", "part-whole"]
+  },
+  {
+    "id": "vr-word-relationships-002",
+    "subject": "verbal-reasoning",
+    "topic": "Word relationships",
+    "skill": "function",
+    "type": "word-relationships",
+    "difficulty": 4,
+    "question": "Which pair of words has the same relationship as THERMOMETER and TEMPERATURE?",
+    "options": [
+      "scales : mass",
+      "clock : hands",
+      "ruler : wooden",
+      "kettle : water"
+    ],
+    "answer": 0,
+    "explanation": "A thermometer is an instrument used to measure temperature, and scales are used to measure mass.",
+    "distractorNotes": [
+      "",
+      "Hands are a part of a clock, not what it measures.",
+      "'Wooden' describes what a ruler is made of.",
+      "A kettle heats water rather than measuring it."
+    ],
+    "learningPoint": "'Instrument to what it measures' is a common relationship — say the link as a sentence to check it.",
+    "tags": ["word relationships", "function"]
+  },
+  {
+    "id": "vr-number-letter-001",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 3, 6, 12, 24, ___",
+    "options": ["48", "36", "30", "42"],
+    "answer": 0,
+    "explanation": "Each number is double the one before: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24 and 24 × 2 = 48.",
+    "distractorNotes": [
+      "",
+      "This adds 12, which only fits the last step.",
+      "This adds 6 each time, which does not fit the earlier steps.",
+      "This adds 18, which does not fit any consistent rule."
+    ],
+    "learningPoint": "If the gaps grow quickly, try multiplying rather than adding.",
+    "tags": ["number series", "patterns"]
+  },
+  {
+    "id": "vr-number-letter-002",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 4,
+    "question": "What is the next number in this sequence? 2, 5, 11, 23, ___",
+    "options": ["47", "46", "35", "44"],
+    "answer": 0,
+    "explanation": "Each number is double the previous one plus 1: 2 × 2 + 1 = 5, 5 × 2 + 1 = 11, 11 × 2 + 1 = 23, and 23 × 2 + 1 = 47.",
+    "distractorNotes": [
+      "",
+      "This doubles but forgets to add 1.",
+      "This adds 12, following only the last gap.",
+      "This follows no consistent rule."
+    ],
+    "learningPoint": "If neither adding nor doubling works alone, try a two-part rule such as 'double and add one'.",
+    "tags": ["number series", "patterns", "reasoning"]
+  },
+  {
+    "id": "vr-logic-001",
+    "subject": "verbal-reasoning",
+    "topic": "Logical reasoning",
+    "skill": "deduction",
+    "type": "logic",
+    "difficulty": 4,
+    "question": "All the pupils in Year 6 who play the violin also sing in the choir. Rosa sings in the choir. Which statement must be true?",
+    "options": [
+      "None of these statements must be true.",
+      "Rosa plays the violin.",
+      "Rosa does not play the violin.",
+      "Everyone in the choir plays the violin."
+    ],
+    "answer": 0,
+    "explanation": "We know violinists are all in the choir, but the choir may include people who do not play the violin. So Rosa might or might not play — nothing here must be true.",
+    "distractorNotes": [
+      "",
+      "The rule works one way only: violinists sing, but singers need not play.",
+      "We cannot rule it out either — she may well play the violin.",
+      "This reverses the statement, which is not allowed."
+    ],
+    "learningPoint": "'All A are B' does not mean 'all B are A'. Check the direction of the rule.",
+    "tags": ["logic", "deduction", "reasoning"]
+  },
+  {
+    "id": "vr-logic-002",
+    "subject": "verbal-reasoning",
+    "topic": "Logical reasoning",
+    "skill": "ordering",
+    "type": "logic",
+    "difficulty": 4,
+    "question": "Tom is taller than Priya. Priya is taller than Alex. Sam is shorter than Alex. Who is the shortest?",
+    "options": ["Sam", "Alex", "Priya", "Tom"],
+    "answer": 0,
+    "explanation": "In order of height: Tom, then Priya, then Alex, then Sam. Sam is at the bottom of the list.",
+    "distractorNotes": [
+      "",
+      "Alex is shorter than Priya but taller than Sam.",
+      "Priya is in the middle of the group.",
+      "Tom is the tallest."
+    ],
+    "learningPoint": "Write the names in a single line from tallest to shortest as you read each clue.",
+    "tags": ["logic", "ordering", "reasoning"]
+  },
+  {
+    "id": "vr-word-formation-001",
+    "subject": "verbal-reasoning",
+    "topic": "Word building",
+    "skill": "letter_removal",
+    "type": "word-building",
+    "difficulty": 3,
+    "question": "Which word is made by removing ONE letter from CRATE, keeping the other letters in the same order?",
+    "options": ["RATE", "CART", "TRACE", "CREATE"],
+    "answer": 0,
+    "explanation": "Removing the C from CRATE leaves R, A, T, E in their original order, giving RATE.",
+    "distractorNotes": [
+      "",
+      "CART uses the same kinds of letters but reorders them, so it is an anagram rather than a removal.",
+      "TRACE rearranges all five letters instead of removing one.",
+      "CREATE adds a letter rather than removing one."
+    ],
+    "learningPoint": "'Keeping the same order' rules out anagrams — cross off any option whose letters have been shuffled.",
+    "tags": ["word building", "letters"]
+  },
+  {
+    "id": "vr-vocabulary-001",
+    "subject": "verbal-reasoning",
+    "topic": "Vocabulary",
+    "skill": "closest_meaning",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "question": "Which two words are closest in meaning? (candid, hostile, frank, distant)",
+    "options": [
+      "candid and frank",
+      "hostile and distant",
+      "candid and hostile",
+      "frank and distant"
+    ],
+    "answer": 0,
+    "explanation": "Both 'candid' and 'frank' mean honest and direct in what you say.",
+    "distractorNotes": [
+      "",
+      "'Hostile' means unfriendly and 'distant' means cool or remote — related, but not close in meaning.",
+      "'Candid' is about honesty and 'hostile' is about unfriendliness.",
+      "'Frank' is about honesty and 'distant' is about coolness."
+    ],
+    "learningPoint": "When two pairs both seem possible, choose the pair that could replace each other in a sentence.",
+    "followUpIds": ["vr-vocabulary-002"],
+    "tags": ["vocabulary", "synonyms"]
+  },
+  {
+    "id": "vr-vocabulary-002",
+    "subject": "verbal-reasoning",
+    "topic": "Vocabulary",
+    "skill": "closest_meaning",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "question": "Which two words are closest in meaning? (brave, calm, loud, fearless)",
+    "options": [
+      "brave and fearless",
+      "calm and loud",
+      "brave and calm",
+      "calm and fearless"
+    ],
+    "answer": 0,
+    "explanation": "'Brave' and 'fearless' both mean showing no fear in the face of danger.",
+    "distractorNotes": [
+      "",
+      "'Calm' and 'loud' are closer to opposites than to synonyms.",
+      "A brave person may be calm, but the words do not mean the same thing.",
+      "Being calm is about staying relaxed, not about facing danger."
+    ],
+    "learningPoint": "Test a pair by swapping one word for the other in a sentence — true synonyms still make sense.",
+    "tags": ["vocabulary", "synonyms"]
+  },
+  {
+    "id": "vr-sequences-001",
+    "subject": "verbal-reasoning",
+    "topic": "Word sequences",
+    "skill": "completing_sequences",
+    "type": "word-sequence",
+    "difficulty": 3,
+    "question": "Which word completes the sequence? January, March, May, July, ___",
+    "options": ["September", "August", "October", "June"],
+    "answer": 0,
+    "explanation": "The months go up in twos: January (1), March (3), May (5), July (7), so next is the ninth month, September.",
+    "distractorNotes": [
+      "",
+      "August is the eighth month, only one on from July.",
+      "October is the tenth month, three on from July.",
+      "June comes before July."
+    ],
+    "learningPoint": "Turn words into numbers where you can — it makes the pattern much easier to see.",
+    "followUpIds": ["vr-sequences-002"],
+    "tags": ["sequences", "patterns"]
+  },
+  {
+    "id": "vr-sequences-002",
+    "subject": "verbal-reasoning",
+    "topic": "Word sequences",
+    "skill": "completing_sequences",
+    "type": "word-sequence",
+    "difficulty": 2,
+    "question": "Which word completes the sequence? Monday, Wednesday, Friday, ___",
+    "options": ["Sunday", "Saturday", "Thursday", "Tuesday"],
+    "answer": 0,
+    "explanation": "The days go up in twos: Monday (1), Wednesday (3), Friday (5), so the next is the seventh day, Sunday.",
+    "distractorNotes": [
+      "",
+      "Saturday is only one day on from Friday.",
+      "Thursday comes before Friday.",
+      "Tuesday comes much earlier in the week."
+    ],
+    "learningPoint": "Number the days or months first, then look for the gap between them.",
+    "tags": ["sequences", "patterns"]
+  }
+]
