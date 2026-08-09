@@ -175,7 +175,7 @@ src/
 .github/workflows/deploy.yml   GitHub Pages deployment
 ```
 
-See **[docs/question-format.md](docs/question-format.md)** for the question schema and instructions for adding more questions, and **[sources.md](sources.md)** for the material consulted when designing the skill taxonomy.
+See **[docs/question-format.md](docs/question-format.md)** for the question schema and instructions for adding more questions, **[ROADMAP.md](ROADMAP.md)** for planned improvements and known limitations, and **[sources.md](sources.md)** for the material consulted when designing the skill taxonomy.
 
 ### Adding a new subject
 
