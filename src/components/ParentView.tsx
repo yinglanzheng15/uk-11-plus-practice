@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FeedbackTab } from './FeedbackTab'
 import { ProgressBar } from './ProgressBar'
 import { formatDuration } from './Timer'
 import { getSubject, SUBJECTS } from '../data/subjects'
@@ -9,6 +10,9 @@ import type { Progress } from '../types'
 interface Props {
   progress: Progress
   onReset: () => void
+  onAddNote: (message: string) => void
+  onRemoveFeedback: (id: string) => void
+  onClearFeedback: () => void
 }
 
 function formatDate(at: number): string {
@@ -20,9 +24,78 @@ function formatDate(at: number): string {
   })
 }
 
-export function ParentView({ progress, onReset }: Props) {
+export function ParentView({
+  progress,
+  onReset,
+  onAddNote,
+  onRemoveFeedback,
+  onClearFeedback,
+}: Props) {
   const [confirming, setConfirming] = useState(false)
+  const [tab, setTab] = useState<'progress' | 'feedback'>('progress')
+  const feedbackCount = (progress.feedback ?? []).length
 
+  return (
+    <>
+      <div className="tabs" role="tablist" aria-label="Parent sections">
+        <button
+          type="button"
+          role="tab"
+          id="tab-progress"
+          aria-selected={tab === 'progress'}
+          aria-controls="panel-parent"
+          className={`tab ${tab === 'progress' ? 'tab-active' : ''}`}
+          onClick={() => setTab('progress')}
+        >
+          Progress
+        </button>
+        <button
+          type="button"
+          role="tab"
+          id="tab-feedback"
+          aria-selected={tab === 'feedback'}
+          aria-controls="panel-parent"
+          className={`tab ${tab === 'feedback' ? 'tab-active' : ''}`}
+          onClick={() => setTab('feedback')}
+        >
+          Feedback
+          {feedbackCount > 0 && <span className="tab-count">{feedbackCount}</span>}
+        </button>
+      </div>
+
+      <div
+        id="panel-parent"
+        role="tabpanel"
+        aria-labelledby={tab === 'progress' ? 'tab-progress' : 'tab-feedback'}
+      >
+        {tab === 'feedback' ? (
+          <FeedbackTab
+            progress={progress}
+            onAddNote={onAddNote}
+            onRemove={onRemoveFeedback}
+            onClear={onClearFeedback}
+          />
+        ) : (
+          <ParentProgress
+            progress={progress}
+            onReset={onReset}
+            confirming={confirming}
+            setConfirming={setConfirming}
+          />
+        )}
+      </div>
+    </>
+  )
+}
+
+interface ProgressProps {
+  progress: Progress
+  onReset: () => void
+  confirming: boolean
+  setConfirming: (v: boolean) => void
+}
+
+function ParentProgress({ progress, onReset, confirming, setConfirming }: ProgressProps) {
   const topics = topicMastery(progress)
     .filter((t) => t.attempts > 0)
     .sort((a, b) => (a.score ?? 0) - (b.score ?? 0))

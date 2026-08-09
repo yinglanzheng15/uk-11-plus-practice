@@ -9,6 +9,7 @@ export function emptyProgress(): Progress {
     questions: {},
     recentQuestionIds: [],
     sessions: [],
+    feedback: [],
     streak: { lastDate: null, current: 0, best: 0 },
     totals: { answered: 0, correct: 0 },
     preferences: { timed: false },
@@ -30,6 +31,8 @@ function migrate(raw: unknown): Progress {
     questions: data.questions ?? base.questions,
     recentQuestionIds: data.recentQuestionIds ?? base.recentQuestionIds,
     sessions: data.sessions ?? base.sessions,
+    // Added after the first release; older saved profiles will not have it.
+    feedback: data.feedback ?? base.feedback,
     streak: { ...base.streak, ...data.streak },
     totals: { ...base.totals, ...data.totals },
     preferences: { ...base.preferences, ...data.preferences },

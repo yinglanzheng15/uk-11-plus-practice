@@ -80,12 +80,33 @@ export interface SessionSummaryRecord {
   weakTopics: string[]
 }
 
+/** Why a question was flagged. Presets keep reports comparable and quick to file. */
+export type FeedbackReason =
+  | 'answer-wrong'
+  | 'confusing'
+  | 'too-hard'
+  | 'too-easy'
+  | 'typo'
+  | 'other'
+
+export interface FeedbackItem {
+  id: string
+  createdAt: number
+  /** 'question' reports are tied to a question id; 'general' notes are free-standing. */
+  kind: 'question' | 'general'
+  questionId?: string
+  reason?: FeedbackReason
+  message: string
+}
+
 export interface Progress {
   version: number
   questions: Record<string, QuestionRecord>
   /** Rolling list of the most recently served question ids (newest first). */
   recentQuestionIds: string[]
   sessions: SessionSummaryRecord[]
+  /** Newest first. Stored locally like everything else; never sent anywhere. */
+  feedback: FeedbackItem[]
   streak: {
     /** Local date string (YYYY-MM-DD) of the last day a session was completed. */
     lastDate: string | null

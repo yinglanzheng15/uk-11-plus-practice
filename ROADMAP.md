@@ -95,6 +95,7 @@ Proper spaced repetition — revisit a correctly-answered question after 1 day, 
 ## 5. Smaller improvements
 
 - ~~**Run the smoke test in CI.**~~ Done — `npm test` now runs in the workflow before the build.
+- **Act on flagged questions.** The Feedback tab collects question reports with their ids; there is no script yet that takes an exported feedback file and lists the flagged questions alongside their bank entries. A small `npm run triage` would close that loop.
 - **Export and import progress.** Since everything is local, a lost browser profile or a new device means starting from zero. A "download my progress" / "restore" pair of buttons in the parent view would fix that, and would also make moving from laptop to tablet painless.
 - **More than one child.** One browser currently means one child. A simple profile picker would let siblings share a device.
 - **Per-question timing.** `elapsedMs` is already recorded but unused. The parent view could show which topics take longest — often more revealing than accuracy alone.

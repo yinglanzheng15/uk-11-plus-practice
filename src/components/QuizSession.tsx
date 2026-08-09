@@ -12,7 +12,7 @@ import {
   MAX_FOLLOW_UPS,
   type SessionState,
 } from '../logic/session'
-import type { Question, SessionConfig } from '../types'
+import type { FeedbackReason, Question, SessionConfig } from '../types'
 
 interface Props {
   config: SessionConfig
@@ -23,6 +23,7 @@ interface Props {
   onFinish: (state: SessionState) => void
   onExit: () => void
   onRestart: () => void
+  onReport: (questionId: string, reason: FeedbackReason, message: string) => void
 }
 
 export function QuizSession({
@@ -33,6 +34,7 @@ export function QuizSession({
   onFinish,
   onExit,
   onRestart,
+  onReport,
 }: Props) {
   const initial = useMemo(() => createSession(config, questions), [config, questions])
   const [state, setState] = useState(initial)
@@ -179,6 +181,7 @@ export function QuizSession({
             variant={state.phase === 'followup-feedback' ? 'followup' : 'main'}
             exhausted={state.followUpExhausted}
             onContinue={handleContinue}
+            onReport={onReport}
             continueLabel={
               state.lastCorrect || state.followUpExhausted
                 ? state.index + 1 >= questions.length

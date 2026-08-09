@@ -1,4 +1,5 @@
-import type { Question } from '../types'
+import { ReportProblem } from './ReportProblem'
+import type { FeedbackReason, Question } from '../types'
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F']
 
@@ -11,6 +12,7 @@ interface Props {
   exhausted: boolean
   onContinue: () => void
   continueLabel: string
+  onReport: (questionId: string, reason: FeedbackReason, message: string) => void
 }
 
 export function FeedbackPanel({
@@ -21,6 +23,7 @@ export function FeedbackPanel({
   exhausted,
   onContinue,
   continueLabel,
+  onReport,
 }: Props) {
   // The chosen answer is called out separately above, so it is left out here
   // rather than repeated verbatim.
@@ -100,6 +103,12 @@ export function FeedbackPanel({
           {continueLabel}
         </button>
       </div>
+
+      <ReportProblem
+        key={question.id}
+        questionId={question.id}
+        onSubmit={(reason, message) => onReport(question.id, reason, message)}
+      />
     </div>
   )
 }

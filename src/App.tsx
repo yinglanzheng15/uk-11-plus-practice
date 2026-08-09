@@ -11,9 +11,10 @@ import {
   recordAnswer,
   resetProgress,
 } from './logic/progress'
+import { addFeedback, clearFeedback, removeFeedback } from './logic/feedback'
 import { loadProgress, saveProgress, clearProgress } from './logic/storage'
 import { mainAnswers, sessionDurationMs, type SessionState } from './logic/session'
-import type { Progress, Question, SessionConfig } from './types'
+import type { FeedbackReason, Progress, Question, SessionConfig } from './types'
 
 type View = 'home' | 'quiz' | 'dashboard' | 'parent'
 
@@ -90,6 +91,25 @@ export default function App() {
     setProgress((p) => ({ ...p, preferences: { ...p.preferences, timed } }))
   }, [])
 
+  const handleReport = useCallback(
+    (questionId: string, reason: FeedbackReason, message: string) => {
+      setProgress((p) => addFeedback(p, { kind: 'question', questionId, reason, message }))
+    },
+    [],
+  )
+
+  const handleAddNote = useCallback((message: string) => {
+    setProgress((p) => addFeedback(p, { kind: 'general', message }))
+  }, [])
+
+  const handleRemoveFeedback = useCallback((id: string) => {
+    setProgress((p) => removeFeedback(p, id))
+  }, [])
+
+  const handleClearFeedback = useCallback(() => {
+    setProgress((p) => clearFeedback(p))
+  }, [])
+
   const handleReset = useCallback(() => {
     clearProgress()
     setProgress(resetProgress())
@@ -142,13 +162,20 @@ export default function App() {
             onFinish={handleFinish}
             onExit={handleExit}
             onRestart={handleRestart}
+            onReport={handleReport}
           />
         )}
 
         {view === 'dashboard' && <Dashboard progress={progress} />}
 
         {view === 'parent' && (
-          <ParentView progress={progress} onReset={handleReset} />
+          <ParentView
+            progress={progress}
+            onReset={handleReset}
+            onAddNote={handleAddNote}
+            onRemoveFeedback={handleRemoveFeedback}
+            onClearFeedback={handleClearFeedback}
+          />
         )}
       </main>
 

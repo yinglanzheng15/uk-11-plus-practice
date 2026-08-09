@@ -104,6 +104,16 @@ A `public/.nojekyll` file is included so GitHub Pages serves Vite's hashed asset
 
 ---
 
+## Feedback
+
+The **Parent** screen has two tabs: **Progress** and **Feedback**.
+
+Underneath every answer there is a quiet *"Report a problem with this question"* link. It offers a short list of reasons — *I think the answer is wrong*, *the question was confusing*, *a spelling mistake*, *too hard*, *too easy* — plus an optional comment. Reports collect in the Feedback tab together with any notes you add yourself.
+
+Each report is stored against the question's id, so the tab shows the question text, the marked answer and the comment side by side. **Copy** and **Download** produce a Markdown summary containing those ids, which is exactly what someone needs to correct the bank — the ids match the ones in `docs/review-sheet.md`.
+
+Like all the other data, feedback is stored only in that browser and is never sent anywhere. Sharing it is a deliberate copy-and-paste.
+
 ## Modes
 
 | Mode | Description |
