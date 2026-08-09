@@ -49,32 +49,35 @@ Other scripts:
 
 ---
 
-## Deploying to GitHub Pages
+## Running it
 
-This deploys to:
-
-**https://yinglanzheng15.github.io/uk-11-plus-practice/**
-
-### First-time setup
+Day to day, run it locally:
 
 ```bash
-git init
-git add .
-git commit -m "11+ practice app"
-git branch -M main
-git remote add origin https://github.com/yinglanzheng15/uk-11-plus-practice.git
-git push -u origin main
+npm install     # first time only
+npm run dev
 ```
 
-Then, in the repository on GitHub, go to **Settings → Pages** and set **Source** to **GitHub Actions**. (Create the repo first at <https://github.com/new>, named `uk-11-plus-practice`, without a README or .gitignore.)
+Then open **http://localhost:5173/uk-11-plus-practice/**. Progress is saved in that browser, so the child can pick up where they left off.
 
-The workflow in `.github/workflows/deploy.yml` installs dependencies, validates the question bank, builds, and deploys `dist/`. The first run takes a couple of minutes; after that the site updates on every push.
+## Publishing to GitHub Pages (not enabled yet)
 
-From then on, deploying is just:
+The code lives at <https://github.com/yinglanzheng15/uk-11-plus-practice>, currently **private**.
 
-```bash
-git push
-```
+GitHub Pages is not available for a private repository on the free plan, so the deployment workflow is set to **manual-only** and does not run on push. Everything needed to publish is already in place and the build is known to pass in CI.
+
+To go live later, pick one:
+
+- **Make the repository public** — free. `gh repo edit yinglanzheng15/uk-11-plus-practice --visibility public`
+- **Upgrade to GitHub Pro** — keeps the repository private.
+
+Then:
+
+1. In `.github/workflows/deploy.yml`, uncomment the `push:` trigger.
+2. On GitHub, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
+3. `git push` — or run the workflow manually from the **Actions** tab.
+
+The site will then be at **https://yinglanzheng15.github.io/uk-11-plus-practice/**, updating on every push.
 
 ### If you rename the repository
 

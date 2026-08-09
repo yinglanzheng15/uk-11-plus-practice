@@ -1,9 +1,15 @@
 name: Deploy to GitHub Pages
 
+# Manual-only for now: GitHub Pages is not available for a private repository
+# on the free plan, so an automatic push trigger would fail on every commit.
+#
+# To publish the site later, either make the repository public or upgrade to
+# GitHub Pro, then set Settings -> Pages -> Source to "GitHub Actions" and
+# uncomment the `push` trigger below.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
+  # push:
+  #   branches: [main]
 
 permissions:
   contents: read
