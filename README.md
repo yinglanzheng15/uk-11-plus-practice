@@ -8,6 +8,29 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 ---
 
+## Status (handoff summary)
+
+**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (47 checks) and `npm run build` are all green as of the latest commit. No known bugs.
+
+**What's built:**
+- Full quiz engine with the wrong-answer learning loop, mastery tracking, streaks, and all revision modes (Quick 5/10/20, subject/topic practice, mixed, mistakes, weak areas, challenge, timed sessions).
+- **156 questions** (63 Maths, 41 English, 52 Verbal Reasoning) across 4 comprehension passages — every topic has at least 4 questions, and Foundation-level (difficulty 1) coverage exists in all three subjects.
+- **Two-layer question vetting**: `npm run validate` catches structural issues and machine-verifies maths answers via an optional `verify` expression; `npm run review` generates `docs/review-sheet.md` for human read-through, with `npm run review:accept` to avoid re-reviewing.
+- **Parent view** with Progress and Feedback tabs. Feedback can be filed in-quiz ("Report a problem with this question") or added as free notes, and exported as Markdown (Copy/Download) — everything stays local, nothing is transmitted.
+- GitHub Actions deploy workflow, currently **manual-only** (see below).
+
+**Repo:** [github.com/yinglanzheng15/uk-11-plus-practice](https://github.com/yinglanzheng15/uk-11-plus-practice) — private, pushed and up to date.
+
+**Not yet done / deliberately deferred:**
+- **Site is not live.** GitHub Pages requires a public repo or a paid plan; the repo is currently private by choice. To publish: make the repo public (`gh repo edit ... --visibility public`) or upgrade to GitHub Pro, then uncomment the `push:` trigger in `.github/workflows/deploy.yml` and set Pages source to "GitHub Actions". See "Publishing to GitHub Pages" below.
+- **Question bank is at 156/850+** of the original stretch target. Roadmap targets 280 next, then 850+. See `ROADMAP.md`.
+- **Session state doesn't survive a page refresh** mid-quiz (answered questions are saved; the in-progress session position is not). Noted in `ROADMAP.md` as the top remaining engine gap.
+- No spaced-repetition scheduling, no progress export/import, no multi-child profiles, no NVR/problem-solving sections yet — all scoped in `ROADMAP.md` with rough effort/value notes.
+
+**Where to pick this up:** `ROADMAP.md` has the full prioritised list. `docs/question-format.md` covers adding questions. `docs/review-sheet.md` is generated, not hand-edited — run `npm run review` after any bank change.
+
+---
+
 ## What makes it different
 
 Most quiz apps show the right answer and move on. This one doesn't.
