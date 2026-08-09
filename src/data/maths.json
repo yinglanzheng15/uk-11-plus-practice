@@ -653,5 +653,647 @@
     ],
     "learningPoint": "To find a starting number, work backwards and use the opposite operation at each step, in reverse order.",
     "tags": ["inverse operations", "reasoning", "word problem"]
+  },
+  {
+    "id": "maths-place-value-004",
+    "subject": "maths",
+    "topic": "Place value",
+    "skill": "reading_large_numbers",
+    "type": "number",
+    "difficulty": 1,
+    "question": "What is the value of the digit 6 in the number 4 682?",
+    "options": ["600", "60", "6", "6 000"],
+    "answer": 0,
+    "verify": "600",
+    "explanation": "Reading from the right, the digits are units, tens, hundreds and thousands. The 6 is in the hundreds column, so it is worth 600.",
+    "distractorNotes": [
+      "",
+      "This is the tens column, where the 8 sits.",
+      "This is the units column, where the 2 sits.",
+      "This is the thousands column, where the 4 sits."
+    ],
+    "learningPoint": "Name the columns from the right: units, tens, hundreds, thousands.",
+    "tags": ["place value", "number"]
+  },
+  {
+    "id": "maths-place-value-005",
+    "subject": "maths",
+    "topic": "Place value",
+    "skill": "counting_in_steps",
+    "type": "number",
+    "difficulty": 1,
+    "question": "What number is 1 000 more than 3 450?",
+    "options": ["4 450", "3 550", "4 350", "13 450"],
+    "answer": 0,
+    "verify": "3450 + 1000",
+    "explanation": "Adding 1 000 changes only the thousands digit: 3 450 becomes 4 450.",
+    "distractorNotes": [
+      "",
+      "This has added 100 rather than 1 000.",
+      "This has added 1 000 to the hundreds column by mistake.",
+      "This has written the 1 000 in front instead of adding it."
+    ],
+    "learningPoint": "When you add a round number, only that column changes — the other digits stay put.",
+    "tags": ["place value", "addition"]
+  },
+  {
+    "id": "maths-factors-003",
+    "subject": "maths",
+    "topic": "Factors and multiples",
+    "skill": "factors",
+    "type": "number",
+    "difficulty": 1,
+    "question": "Which of these numbers is a factor of 24?",
+    "options": ["6", "9", "10", "7"],
+    "answer": 0,
+    "explanation": "A factor divides exactly with nothing left over. 24 ÷ 6 = 4, so 6 is a factor of 24.",
+    "distractorNotes": [
+      "",
+      "24 ÷ 9 leaves a remainder, so 9 is not a factor.",
+      "24 ÷ 10 leaves a remainder, so 10 is not a factor.",
+      "24 ÷ 7 leaves a remainder, so 7 is not a factor."
+    ],
+    "learningPoint": "A factor divides into the number exactly. A multiple is what you get when you count up in that number.",
+    "tags": ["factors", "division"]
+  },
+  {
+    "id": "maths-factors-004",
+    "subject": "maths",
+    "topic": "Factors and multiples",
+    "skill": "common_multiples",
+    "type": "number",
+    "difficulty": 2,
+    "question": "Which number is a multiple of both 4 and 6?",
+    "options": ["24", "18", "20", "14"],
+    "answer": 0,
+    "explanation": "24 = 4 × 6 and 24 = 6 × 4, so it appears in both times tables.",
+    "distractorNotes": [
+      "",
+      "18 is a multiple of 6 but not of 4.",
+      "20 is a multiple of 4 but not of 6.",
+      "14 is a multiple of neither."
+    ],
+    "learningPoint": "A common multiple must appear in both times tables — check it against each one separately.",
+    "tags": ["multiples", "factors"]
+  },
+  {
+    "id": "maths-order-of-operations-003",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 1,
+    "question": "Work out 10 − 2 × 3.",
+    "options": ["4", "24", "9", "11"],
+    "answer": 0,
+    "verify": "10 - 2 * 3",
+    "explanation": "Multiplication comes before subtraction, so 2 × 3 = 6 first, then 10 − 6 = 4.",
+    "distractorNotes": [
+      "",
+      "This works left to right: (10 − 2) × 3.",
+      "This subtracts 2 and then adds 1 by mistake.",
+      "This adds instead of subtracting after multiplying."
+    ],
+    "learningPoint": "Multiply and divide before you add and subtract, whatever order they are written in.",
+    "tags": ["bidmas", "order of operations"]
+  },
+  {
+    "id": "maths-order-of-operations-004",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 3,
+    "question": "Work out 6 + 12 ÷ 3 × 2.",
+    "options": ["14", "8", "12", "10"],
+    "answer": 0,
+    "verify": "6 + 12 / 3 * 2",
+    "explanation": "Division and multiplication rank equally, so work left to right: 12 ÷ 3 = 4, then 4 × 2 = 8. Finally 6 + 8 = 14.",
+    "distractorNotes": [
+      "",
+      "This does the multiplication first: 12 ÷ (3 × 2) = 2, then 6 + 2.",
+      "This works strictly left to right from the start: (6 + 12) ÷ 3 × 2.",
+      "This forgets to multiply by 2 at the end."
+    ],
+    "learningPoint": "Division and multiplication have equal rank — when both appear, work from left to right.",
+    "tags": ["bidmas", "order of operations"]
+  },
+  {
+    "id": "maths-negative-numbers-003",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "subtracting_past_zero",
+    "type": "number",
+    "difficulty": 1,
+    "question": "Work out 3 − 8.",
+    "options": ["−5", "5", "−11", "11"],
+    "answer": 0,
+    "verify": "3 - 8",
+    "explanation": "Counting back 8 from 3 takes you 3 steps to zero and then 5 steps below it, giving −5.",
+    "distractorNotes": [
+      "",
+      "This subtracts the smaller number from the larger one and ignores the order.",
+      "This adds the two numbers instead of subtracting.",
+      "This adds the numbers and drops the minus sign."
+    ],
+    "learningPoint": "When you take away more than you started with, the answer goes below zero.",
+    "tags": ["negative numbers", "subtraction"]
+  },
+  {
+    "id": "maths-negative-numbers-004",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 3,
+    "question": "At noon the temperature was 4 °C. By midnight it had fallen by 11 degrees. What was the temperature at midnight?",
+    "options": ["−7 °C", "7 °C", "−15 °C", "15 °C"],
+    "answer": 0,
+    "verify": "4 - 11",
+    "explanation": "Falling 11 degrees from 4 °C: 4 degrees takes you down to 0 °C, and the remaining 7 degrees take you to −7 °C.",
+    "distractorNotes": [
+      "",
+      "This subtracts 4 from 11 and loses the minus sign.",
+      "This adds the two numbers and makes the result negative.",
+      "This adds the two numbers instead of subtracting."
+    ],
+    "learningPoint": "A fall in temperature moves you left on the number line — count down to zero first, then carry on.",
+    "tags": ["negative numbers", "temperature"]
+  },
+  {
+    "id": "maths-fractions-006",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "equivalent_fractions",
+    "type": "fractions",
+    "difficulty": 1,
+    "question": "Which fraction is equal to one half?",
+    "options": ["4/8", "2/6", "3/8", "5/12"],
+    "answer": 0,
+    "explanation": "4/8 simplifies to 1/2, because 4 is exactly half of 8.",
+    "distractorNotes": [
+      "",
+      "2/6 simplifies to 1/3, not 1/2.",
+      "3/8 is less than a half, because half of 8 is 4.",
+      "5/12 is just under a half, because half of 12 is 6."
+    ],
+    "learningPoint": "A fraction equals one half when the top number is exactly half the bottom number.",
+    "tags": ["fractions", "equivalence"]
+  },
+  {
+    "id": "maths-fractions-007",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 1,
+    "question": "What is 1/4 of 20?",
+    "options": ["5", "4", "16", "80"],
+    "answer": 0,
+    "verify": "20 / 4",
+    "explanation": "One quarter means dividing into 4 equal parts: 20 ÷ 4 = 5.",
+    "distractorNotes": [
+      "",
+      "This gives the number of parts rather than the size of one part.",
+      "This is the other three quarters of 20.",
+      "This multiplies by 4 instead of dividing."
+    ],
+    "learningPoint": "To find a unit fraction of an amount, divide by the bottom number.",
+    "tags": ["fractions", "of quantity"]
+  },
+  {
+    "id": "maths-fractions-008",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "subtracting_fractions",
+    "type": "fractions",
+    "difficulty": 3,
+    "question": "Work out 5/6 − 1/3.",
+    "options": ["1/2", "4/3", "2/3", "4/9"],
+    "answer": 0,
+    "explanation": "Write both with a denominator of 6: 1/3 = 2/6. Then 5/6 − 2/6 = 3/6, which simplifies to 1/2.",
+    "distractorNotes": [
+      "",
+      "This subtracts the numerators and the denominators separately, which is not how fractions work.",
+      "This subtracts 1/6 rather than converting 1/3 first.",
+      "This subtracts tops and bottoms in the wrong direction."
+    ],
+    "learningPoint": "Give both fractions the same denominator first, then subtract only the top numbers.",
+    "tags": ["fractions", "subtraction"]
+  },
+  {
+    "id": "maths-fractions-009",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "mixed_numbers",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "Which improper fraction is the same as 2 3/4?",
+    "options": ["11/4", "9/4", "23/4", "6/4"],
+    "answer": 0,
+    "explanation": "Two whole ones are 8/4. Adding the extra 3/4 gives 8/4 + 3/4 = 11/4.",
+    "distractorNotes": [
+      "",
+      "This uses only 2 quarters for the whole numbers instead of 8.",
+      "This has written the digits 2 and 3 side by side rather than calculating.",
+      "This forgets the whole numbers entirely."
+    ],
+    "learningPoint": "Multiply the whole number by the denominator, then add the numerator.",
+    "tags": ["fractions", "mixed numbers"]
+  },
+  {
+    "id": "maths-decimals-003",
+    "subject": "maths",
+    "topic": "Decimals",
+    "skill": "decimal_place_value",
+    "type": "decimals",
+    "difficulty": 1,
+    "question": "In the number 3.07, what is the value of the digit 7?",
+    "options": ["7 hundredths", "7 tenths", "7 units", "7 thousandths"],
+    "answer": 0,
+    "explanation": "After the decimal point the columns are tenths, then hundredths. The 0 is in the tenths column and the 7 is in the hundredths column.",
+    "distractorNotes": [
+      "",
+      "The tenths column holds the 0, not the 7.",
+      "The units column holds the 3, before the decimal point.",
+      "Thousandths would be a third digit after the point."
+    ],
+    "learningPoint": "After the decimal point the columns run tenths, hundredths, thousandths.",
+    "tags": ["decimals", "place value"]
+  },
+  {
+    "id": "maths-decimals-004",
+    "subject": "maths",
+    "topic": "Decimals",
+    "skill": "decimal_addition",
+    "type": "decimals",
+    "difficulty": 2,
+    "question": "Work out 0.7 + 0.45.",
+    "options": ["1.15", "0.52", "1.5", "0.115"],
+    "answer": 0,
+    "verify": "0.7 + 0.45",
+    "explanation": "Write 0.7 as 0.70, then line up the decimal points: 0.70 + 0.45 = 1.15.",
+    "distractorNotes": [
+      "",
+      "This adds 7 and 45 as whole numbers and puts the point back at the front.",
+      "This rounds 0.45 up to 0.5 before adding.",
+      "This lines the numbers up by their last digit instead of by the decimal point."
+    ],
+    "learningPoint": "Line up the decimal points, not the ends of the numbers. Fill any gaps with zeros.",
+    "tags": ["decimals", "addition"]
+  },
+  {
+    "id": "maths-decimals-005",
+    "subject": "maths",
+    "topic": "Decimals",
+    "skill": "fraction_decimal_conversion",
+    "type": "decimals",
+    "difficulty": 3,
+    "question": "Which decimal is equal to 3/8?",
+    "options": ["0.375", "0.38", "0.83", "0.125"],
+    "answer": 0,
+    "verify": "3 / 8",
+    "explanation": "A fraction is a division: 3 ÷ 8 = 0.375.",
+    "distractorNotes": [
+      "",
+      "This is 3/8 rounded, not its exact value.",
+      "This swaps the digits 3 and 8 round.",
+      "This is 1/8, not 3/8."
+    ],
+    "learningPoint": "To turn a fraction into a decimal, divide the top number by the bottom number.",
+    "tags": ["decimals", "fractions", "conversion"]
+  },
+  {
+    "id": "maths-percentages-004",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_of_quantity",
+    "type": "percentages",
+    "difficulty": 1,
+    "question": "What is 50% of 46?",
+    "options": ["23", "46", "92", "20"],
+    "answer": 0,
+    "verify": "46 / 2",
+    "explanation": "50% means one half, and half of 46 is 23.",
+    "distractorNotes": [
+      "",
+      "This is the whole amount, not half of it.",
+      "This doubles the amount instead of halving it.",
+      "This is roughly half but not exact — check the calculation."
+    ],
+    "learningPoint": "50% is a half, 25% is a quarter, 10% is a tenth.",
+    "tags": ["percentages", "halving"]
+  },
+  {
+    "id": "maths-percentages-005",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "comparing_fractions_decimals_percentages",
+    "type": "percentages",
+    "difficulty": 3,
+    "question": "Which of these is the largest?",
+    "options": ["5/8", "0.6", "57%", "1/2"],
+    "answer": 0,
+    "explanation": "Written as decimals: 5/8 = 0.625, then 0.6, then 57% = 0.57, then 1/2 = 0.5. So 5/8 is the largest.",
+    "distractorNotes": [
+      "",
+      "0.6 is close, but it is smaller than 0.625.",
+      "57% is 0.57, which is smaller than both 5/8 and 0.6.",
+      "1/2 is 0.5, the smallest of the four."
+    ],
+    "learningPoint": "To compare fractions, decimals and percentages, turn them all into decimals first.",
+    "tags": ["percentages", "decimals", "fractions", "comparing"]
+  },
+  {
+    "id": "maths-percentages-006",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_increase",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A jacket costs £60. Its price rises by 10%. What is the new price?",
+    "options": ["£66", "£6", "£70", "£54"],
+    "answer": 0,
+    "verify": "60 + 60 / 10",
+    "explanation": "10% of £60 is £6, and the price rises, so the new price is £60 + £6 = £66.",
+    "distractorNotes": [
+      "",
+      "£6 is the increase, not the new price.",
+      "This adds £10 rather than 10%.",
+      "This takes the 10% off instead of adding it on."
+    ],
+    "learningPoint": "Work out the percentage first, then decide whether to add it on or take it off.",
+    "tags": ["percentages", "money", "increase"]
+  },
+  {
+    "id": "maths-ratio-003",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "simplifying_ratios",
+    "type": "ratio",
+    "difficulty": 2,
+    "question": "Write the ratio 12 : 18 in its simplest form.",
+    "options": ["2 : 3", "6 : 9", "3 : 2", "1 : 6"],
+    "answer": 0,
+    "explanation": "The highest number that divides into both 12 and 18 is 6. Dividing both sides by 6 gives 2 : 3.",
+    "distractorNotes": [
+      "",
+      "This divides both sides by 2, but 6 : 9 can be simplified further.",
+      "This has the two numbers the wrong way round.",
+      "This subtracts instead of dividing."
+    ],
+    "learningPoint": "Divide both sides of a ratio by the largest number that goes into both.",
+    "tags": ["ratio", "simplifying"]
+  },
+  {
+    "id": "maths-ratio-004",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "proportional_reasoning",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "In a class the ratio of boys to girls is 3 : 4. There are 12 boys. How many girls are there?",
+    "options": ["16", "9", "13", "28"],
+    "answer": 0,
+    "verify": "12 / 3 * 4",
+    "explanation": "12 boys is 3 parts, so one part is 12 ÷ 3 = 4 children. The girls have 4 parts, so 4 × 4 = 16 girls.",
+    "distractorNotes": [
+      "",
+      "This scales the wrong way round, using 4 parts for the boys.",
+      "This adds 1 because 4 is one more than 3, rather than scaling.",
+      "This gives the total number of children, not the number of girls."
+    ],
+    "learningPoint": "Find the value of one part first, then multiply by the number of parts you need.",
+    "tags": ["ratio", "proportion"]
+  },
+  {
+    "id": "maths-measures-003",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 1,
+    "question": "How many grams are there in 2 kilograms?",
+    "options": ["2 000 g", "200 g", "20 g", "20 000 g"],
+    "answer": 0,
+    "verify": "2 * 1000",
+    "explanation": "There are 1 000 grams in a kilogram, so 2 × 1 000 = 2 000 g.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1 000.",
+      "This multiplies by 10 instead of 1 000.",
+      "This multiplies by 10 000."
+    ],
+    "learningPoint": "Kilo means a thousand: kilograms to grams and kilometres to metres both use × 1 000.",
+    "tags": ["measurement", "conversion", "mass"]
+  },
+  {
+    "id": "maths-measures-004",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "money_calculations",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "Ella has £5. She buys 3 pens costing 85p each. How much money does she have left?",
+    "options": ["£2.45", "£2.55", "£4.15", "£1.45"],
+    "answer": 0,
+    "verify": "5 - 3 * 0.85",
+    "explanation": "Three pens cost 3 × 85p = £2.55. She has £5 − £2.55 = £2.45 left.",
+    "distractorNotes": [
+      "",
+      "£2.55 is what she spent, not what she has left.",
+      "This buys only one pen instead of three.",
+      "This subtracts £3.55 by mistake — check 3 × 85p again."
+    ],
+    "learningPoint": "Work out the total cost first, and check whether the question wants the cost or the change.",
+    "tags": ["money", "measurement", "word problem"]
+  },
+  {
+    "id": "maths-measures-005",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "time_intervals",
+    "type": "measurement",
+    "difficulty": 3,
+    "question": "A film starts at 19:45 and lasts 135 minutes. What time does it finish?",
+    "options": ["22:00", "21:20", "22:20", "21:00"],
+    "answer": 0,
+    "explanation": "135 minutes is 2 hours and 15 minutes. From 19:45, two hours takes you to 21:45, and 15 more minutes takes you to 22:00.",
+    "distractorNotes": [
+      "",
+      "This treats 135 minutes as 1 hour 35 minutes.",
+      "This adds 2 hours 35 minutes instead of 2 hours 15 minutes.",
+      "This adds only 1 hour 15 minutes."
+    ],
+    "learningPoint": "Turn the minutes into hours and minutes first: 135 ÷ 60 = 2 remainder 15.",
+    "tags": ["time", "measurement"]
+  },
+  {
+    "id": "maths-geometry-005",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "types_of_angle",
+    "type": "geometry",
+    "difficulty": 1,
+    "question": "How would you describe an angle of 45°?",
+    "options": ["Acute", "Obtuse", "A right angle", "Reflex"],
+    "answer": 0,
+    "explanation": "An acute angle is smaller than 90°, and 45° is smaller than 90°.",
+    "distractorNotes": [
+      "",
+      "An obtuse angle is between 90° and 180°.",
+      "A right angle is exactly 90°.",
+      "A reflex angle is greater than 180°."
+    ],
+    "learningPoint": "Acute is under 90°, right is exactly 90°, obtuse is between 90° and 180°, reflex is over 180°.",
+    "tags": ["angles", "geometry"]
+  },
+  {
+    "id": "maths-geometry-006",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "symmetry",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "How many lines of symmetry does a rectangle have, if it is not a square?",
+    "options": ["2", "4", "1", "0"],
+    "answer": 0,
+    "explanation": "A rectangle can be folded in half across its width and across its height, so it has 2 lines of symmetry. The diagonals are not lines of symmetry.",
+    "distractorNotes": [
+      "",
+      "A square has 4 lines of symmetry, but a rectangle has fewer.",
+      "A rectangle has more than one — try folding it both ways.",
+      "A rectangle does have lines of symmetry."
+    ],
+    "learningPoint": "A line of symmetry must fold the shape so both halves match exactly. A rectangle's diagonals do not.",
+    "tags": ["symmetry", "geometry", "shapes"]
+  },
+  {
+    "id": "maths-geometry-007",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "volume",
+    "type": "geometry",
+    "difficulty": 3,
+    "question": "A cuboid measures 5 cm by 3 cm by 4 cm. What is its volume?",
+    "options": ["60 cm³", "12 cm³", "47 cm³", "94 cm³"],
+    "answer": 0,
+    "verify": "5 * 3 * 4",
+    "explanation": "Volume is length × width × height: 5 × 3 × 4 = 60 cm³.",
+    "distractorNotes": [
+      "",
+      "This adds the three measurements instead of multiplying them.",
+      "This multiplies only two of the sides and adds the third.",
+      "This is the surface area, which is a different measurement."
+    ],
+    "learningPoint": "Volume multiplies three lengths, so the units are cubic — cm³, not cm².",
+    "tags": ["volume", "geometry", "cuboid"]
+  },
+  {
+    "id": "maths-data-003",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "reading_tables",
+    "type": "data",
+    "difficulty": 1,
+    "question": "A tally chart shows favourite fruits: apple 7, banana 4, pear 9, orange 5. Which fruit was chosen most often?",
+    "options": ["Pear", "Apple", "Orange", "Banana"],
+    "answer": 0,
+    "explanation": "Pear has the highest number, 9, which is more than apple's 7, orange's 5 and banana's 4.",
+    "distractorNotes": [
+      "",
+      "Apple has 7, which is the second highest.",
+      "Orange has 5, which is the third highest.",
+      "Banana has 4, the fewest of all."
+    ],
+    "learningPoint": "'Most often' means the largest number — read every row before choosing.",
+    "tags": ["data", "tables"]
+  },
+  {
+    "id": "maths-data-004",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mode_and_range",
+    "type": "data",
+    "difficulty": 2,
+    "question": "What is the mode of this set of numbers? 3, 7, 3, 9, 4, 3",
+    "options": ["3", "6", "4", "7"],
+    "answer": 0,
+    "explanation": "The mode is the value that appears most often. The number 3 appears three times, more than any other.",
+    "distractorNotes": [
+      "",
+      "6 is the range (9 − 3), not the mode.",
+      "4 is one of the values but appears only once.",
+      "7 appears only once."
+    ],
+    "learningPoint": "Mode is the most common value; range is the biggest minus the smallest; mean is the total shared out.",
+    "tags": ["averages", "mode", "data"]
+  },
+  {
+    "id": "maths-data-005",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "interpreting_graphs",
+    "type": "data",
+    "difficulty": 3,
+    "question": "A line graph shows a plant's height each week: week 1 is 4 cm, week 2 is 7 cm, week 3 is 13 cm and week 4 is 15 cm. Between which two weeks did the plant grow the most?",
+    "options": [
+      "Weeks 2 and 3",
+      "Weeks 1 and 2",
+      "Weeks 3 and 4",
+      "Weeks 1 and 4"
+    ],
+    "answer": 0,
+    "explanation": "The growth each week was 3 cm, then 6 cm, then 2 cm. The largest single increase, 6 cm, was between weeks 2 and 3.",
+    "distractorNotes": [
+      "",
+      "The plant grew 3 cm here, which is less than between weeks 2 and 3.",
+      "The plant grew only 2 cm here, the smallest increase.",
+      "This is the total growth across the whole period, not the growth between two weeks."
+    ],
+    "learningPoint": "'Grew the most' means the biggest jump between two points, not the highest point on the graph.",
+    "tags": ["data", "graphs", "reasoning"]
+  },
+  {
+    "id": "maths-word-problems-004",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multiplication_in_context",
+    "type": "word-problem",
+    "difficulty": 2,
+    "question": "A box holds 24 pencils. How many pencils are there in 15 boxes?",
+    "options": ["360", "39", "240", "120"],
+    "answer": 0,
+    "verify": "24 * 15",
+    "explanation": "24 × 15 = (24 × 10) + (24 × 5) = 240 + 120 = 360 pencils.",
+    "distractorNotes": [
+      "",
+      "This adds the two numbers instead of multiplying.",
+      "This is 24 × 10, so five boxes have been left out.",
+      "This is 24 × 5, so ten boxes have been left out."
+    ],
+    "learningPoint": "For a tricky multiplication, split it up: × 15 is the same as × 10 then × 5, added together.",
+    "tags": ["multiplication", "word problem"]
+  },
+  {
+    "id": "maths-word-problems-005",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_reasoning",
+    "type": "word-problem",
+    "difficulty": 4,
+    "question": "A shop sells apples at 40p each and pears at 55p each. Nadia buys 4 apples and some pears, and spends £3.25 altogether. How many pears did she buy?",
+    "options": ["3", "2", "4", "5"],
+    "answer": 0,
+    "verify": "(3.25 - 4 * 0.40) / 0.55",
+    "explanation": "The apples cost 4 × 40p = £1.60. That leaves £3.25 − £1.60 = £1.65 for the pears, and £1.65 ÷ 55p = 3 pears.",
+    "distractorNotes": [
+      "",
+      "Two pears would cost only £1.10, leaving money unspent.",
+      "Four pears would cost £2.20, which is more than the £1.65 remaining.",
+      "Five pears would cost £2.75, far more than she had left."
+    ],
+    "learningPoint": "In a two-part problem, work out the part you know first, subtract it, then share out what is left.",
+    "tags": ["money", "multi-step", "division", "word problem"]
   }
 ]

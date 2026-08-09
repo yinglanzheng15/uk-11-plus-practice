@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "validate": "tsx scripts/validate-questions.ts",
+    "review": "tsx scripts/review-sheet.ts",
+    "review:accept": "tsx scripts/review-accept.ts",
+    "test": "tsx scripts/smoke-test.ts",
     "typecheck": "tsc --noEmit",
     "build": "npm run validate && tsc --noEmit && vite build",
     "preview": "vite preview"

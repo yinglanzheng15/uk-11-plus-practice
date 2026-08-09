@@ -16,7 +16,7 @@ This app's **structure and skill taxonomy** were informed by the publicly docume
 - **No paywalled or restricted material was accessed or circumvented.** Where content could not be legally accessed, it simply was not used.
 - **No school, consortium, publisher or examination board is claimed as a source, partner or endorser.**
 
-The two comprehension passages (`The Keeper's Daughter` and `Saturday at the Market` in `src/data/passages.json`) are original short fiction written for this app.
+The comprehension passages in `src/data/passages.json` — `The Keeper's Daughter`, `Saturday at the Market`, `The Causeway` and `The New Girl` — are original short fiction written for this app.
 
 ## What this app is and is not
 

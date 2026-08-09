@@ -39,13 +39,24 @@ Other scripts:
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | Start the dev server |
-| `npm run validate` | Check the question bank for errors (see below) |
+| `npm run validate` | Check the question bank for errors and quality warnings |
+| `npm run review` | Write `docs/review-sheet.md` for human vetting of questions |
+| `npm run review:accept` | Mark the current questions as reviewed |
+| `npm test` | Run the engine test suite (47 checks) |
 | `npm run typecheck` | TypeScript check, no build |
 | `npm run build` | Validate → typecheck → build to `dist/` |
 | `npm run preview` | Serve the production build locally |
-| `npx tsx scripts/smoke-test.ts` | Run the engine test suite (47 checks) |
 
 `npm run build` runs the validator first, so a broken question bank cannot be deployed.
+
+### Question vetting
+
+Questions go through two layers before they count as done:
+
+1. **`npm run validate`** — structure, duplicates, UK English, and *machine-verified arithmetic*: a maths question can carry a `verify` expression that the validator evaluates and checks against the marked answer, so the sums are proved rather than trusted.
+2. **`npm run review`** — generates a readable sheet of every question, in the order the child sees them, for a person to check the things automation cannot judge: ambiguity, arguable distractors, and whether an explanation actually teaches.
+
+Full details in [docs/question-format.md](docs/question-format.md).
 
 ---
 

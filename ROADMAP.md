@@ -8,33 +8,25 @@ Ordered roughly by value for the child per unit of effort. Nothing here is requi
 
 **The single highest-value change.** Everything else is polish by comparison.
 
-There are currently **82 questions**. A child doing a Quick 10 most days will start seeing repeats within about a week. The anti-repetition logic remembers the last 60 questions served, so once the bank is smaller than that the "avoid recent" rule has to relax constantly.
+There are currently **156 questions** (63 Maths, 41 English, 52 VR) across 4 comprehension passages. The anti-repetition logic remembers the last 60 questions served, so the bank is now comfortably above the point where that constraint has to keep relaxing.
 
-### Current coverage
+### Done in the first expansion (82 → 156)
 
-| | Total | Weakest topics (question count) |
-| --- | --- | --- |
-| **Maths** | 32 | Factors and multiples (2), Order of operations (2), Negative numbers (2), Decimals (2), Ratio and proportion (2), Measurement (2), Data handling (2) |
-| **English** | 20 | Punctuation (2), Vocabulary (3), Spelling (4) |
-| **Verbal Reasoning** | 30 | Antonyms (2), Letter sequences (2), Codes (2), Hidden words (2), Word relationships (2), Number/letter relationships (2), Logical reasoning (2), Word sequences (2) |
+- Every topic now has **at least 4 questions**, so topic practice and weak-area sessions no longer recycle immediately.
+- **Foundation level fixed.** Difficulty 1 went from 4 questions bank-wide (and *none* in Verbal Reasoning) to a healthy share in all three subjects. This mattered more than the raw count: the difficulty ceiling drops when a child is struggling and the learning loop prefers an easier follow-up after a mistake — with no easy questions, neither had anywhere to go.
+- **Two more passages** (`The Causeway`, `The New Girl`), each with 4–6 questions, and the existing thin passage topped up.
+- **Vetting was built first** — see "Question vetting" in the README. Machine-verified arithmetic plus a generated review sheet.
 
-### Two specific gaps worth fixing first
-
-**a) Almost no Foundation-level questions.** Difficulty 1 is barely represented: 3 in Maths, 1 in English, **none at all** in Verbal Reasoning.
-
-This matters more than it sounds. The difficulty ceiling starts at 3 for an untouched topic and drops to 2 when a topic is going badly — but if there are no easy questions to drop to, a struggling child gets no gentler on-ramp. The learning loop also prefers an *easier* question after a mistake, and often can't find one.
-
-**Aim for roughly 20% of each subject at difficulty 1.**
-
-**b) Only two comprehension passages.** Six English questions share them. A child will memorise both passages within a fortnight, after which those questions test recall rather than comprehension. **Aim for 8–10 passages**, 4–6 questions each.
-
-### Suggested targets
+### Remaining targets
 
 | Stage | Maths | English | VR | Total | Roughly |
 | --- | --- | --- | --- | --- | --- |
-| Now | 32 | 20 | 30 | 82 | ~1 week of variety |
+| ~~Start~~ | ~~32~~ | ~~20~~ | ~~30~~ | ~~82~~ | ~1 week of variety |
+| **Now** | **63** | **41** | **52** | **156** | ~3 weeks |
 | Next | 100 | 80 | 100 | 280 | ~1 month |
 | Full | 300 | 250 | 300 | 850+ | a full year |
+
+Still worth adding: more comprehension passages (4 now, **8–10** is the target — passages are the fastest thing to memorise), and more difficulty-4 stretch questions, which remain the thinnest band.
 
 Add them in batches by topic rather than scattering — it is easier to keep quality and difficulty consistent that way. See `docs/question-format.md`. The validator catches structural mistakes, and `npm run validate` should be run after every batch.
 
@@ -102,7 +94,7 @@ Proper spaced repetition — revisit a correctly-answered question after 1 day, 
 
 ## 5. Smaller improvements
 
-- **Run the smoke test in CI.** The workflow validates and builds, but `scripts/smoke-test.ts` isn't run. One line in `deploy.yml` would catch engine regressions before deployment.
+- ~~**Run the smoke test in CI.**~~ Done — `npm test` now runs in the workflow before the build.
 - **Export and import progress.** Since everything is local, a lost browser profile or a new device means starting from zero. A "download my progress" / "restore" pair of buttons in the parent view would fix that, and would also make moving from laptop to tablet painless.
 - **More than one child.** One browser currently means one child. A simple profile picker would let siblings share a device.
 - **Per-question timing.** `elapsedMs` is already recorded but unused. The parent view could show which topics take longest — often more revealing than accuracy alone.

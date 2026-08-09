@@ -46,6 +46,70 @@ interface Question {
   learningPoint: string
   followUpIds?: string[]
   tags: string[]
+  /**
+   * Optional arithmetic expression that must evaluate to the correct option.
+   * Lets the validator independently prove a maths answer rather than trusting
+   * the author. E.g. "96 / 8 * 5" for "5/8 of 96".
+   */
+  verify?: string
+}
+
+/** Americanisms the spec explicitly rules out, plus common US spellings. */
+const US_USAGE: [RegExp, string][] = [
+  [/\bmath\b/i, 'use "maths"'],
+  [/\bsoccer\b/i, 'use "football"'],
+  [/\b(\d+(st|nd|rd|th)\s+)?grade\b/i, 'use "year group" / "Year 6"'],
+  [/\bcolor(s|ed|ing)?\b/i, 'use "colour"'],
+  [/\bfavorite\b/i, 'use "favourite"'],
+  [/\bneighbor(s|hood)?\b/i, 'use "neighbour"'],
+  [/\bcenter(s|ed)?\b/i, 'use "centre"'],
+  [/\bmeter(s)?\b/i, 'use "metre"'],
+  [/\bliter(s)?\b/i, 'use "litre"'],
+  [/\bgray\b/i, 'use "grey"'],
+  [/\bpractic(e|ing)\b(?=\s+(the|your|a)\b)/i, 'check practise (verb) vs practice (noun)'],
+  [/\brecogniz|organiz|realiz|apologiz/i, 'use -ise spelling'],
+  [/\$\d/, 'use £ for money'],
+  [/\bcell phone\b/i, 'use "mobile phone"'],
+  [/\bvacation\b/i, 'use "holiday"'],
+  [/\bfall\b(?=\s+(season|term))/i, 'use "autumn"'],
+]
+
+/**
+ * Evaluate a restricted arithmetic expression. Only digits and the four
+ * operations are permitted, so there is no code-execution surface even though
+ * this is a build-time-only script.
+ */
+function evaluateArithmetic(expr: string): number | null {
+  if (!/^[\d\s+\-*/().]+$/.test(expr)) return null
+  try {
+    // eslint-disable-next-line no-new-func
+    const value = Function(`"use strict"; return (${expr});`)() as unknown
+    return typeof value === 'number' && Number.isFinite(value) ? value : null
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Pull a number out of an option such as "£1 350.50", "36 cm²" or "−7 °C".
+ * Returns null when the option isn't a plain number (e.g. a fraction "5/8").
+ */
+function numericValue(option: string): number | null {
+  const cleaned = option
+    .replace(/[£%,]/g, '')
+    .replace(/[−–—]/g, '-') // unicode minus / dashes
+    .replace(/(\d)\s+(?=\d{3}\b)/g, '$1') // "1 350" -> "1350"
+    .replace(/[^\d.\-]/g, '')
+    .trim()
+  if (cleaned === '' || cleaned === '-') return null
+  const n = Number(cleaned)
+  return Number.isFinite(n) ? n : null
+}
+
+/** The trailing unit of an option, e.g. "cm²" from "54 cm²". */
+function unitOf(option: string): string {
+  const m = option.trim().match(/[a-zA-Z°²³]+$/)
+  return m ? m[0].toLowerCase() : ''
 }
 
 const errors: string[] = []
@@ -168,6 +232,72 @@ for (const q of questions) {
     warnings.push(`${label}: explanation looks too short to be useful`)
   }
 
+  // --- Machine-verified arithmetic ------------------------------------------
+  if (q.verify) {
+    const expected = evaluateArithmetic(q.verify)
+    if (expected === null) {
+      errors.push(`${label}: verify "${q.verify}" is not a valid arithmetic expression`)
+    } else if (Array.isArray(q.options) && q.options[q.answer] !== undefined) {
+      const actual = numericValue(String(q.options[q.answer]))
+      if (actual === null) {
+        errors.push(
+          `${label}: verify is set but the correct option "${q.options[q.answer]}" is not numeric`,
+        )
+      } else if (Math.abs(actual - expected) > 1e-6) {
+        errors.push(
+          `${label}: verify "${q.verify}" = ${expected}, but the marked answer is ${actual}`,
+        )
+      }
+    }
+  }
+
+  // --- Option consistency ---------------------------------------------------
+  if (Array.isArray(q.options) && q.options.length > 0) {
+    const numeric = q.options.map((o) => numericValue(String(o)))
+    const numericCount = numeric.filter((n) => n !== null).length
+    // A lone number among words (or vice versa) stands out and gives the game away.
+    if (numericCount > 0 && numericCount < q.options.length) {
+      const oddOnesOut = numericCount === 1 || numericCount === q.options.length - 1
+      if (oddOnesOut && !q.passageId) {
+        warnings.push(
+          `${label}: options mix numeric and non-numeric values, which can make one stand out`,
+        )
+      }
+    }
+    // Units should match across options: "36 cm" vs "36 cm²" is a real distinction,
+    // but only one option carrying a unit is a giveaway.
+    const units = q.options.map((o) => unitOf(String(o))).filter((u) => u !== '')
+    if (units.length > 0 && units.length < q.options.length && numericCount > 1) {
+      warnings.push(
+        `${label}: some options carry a unit and others do not — check for an accidental clue`,
+      )
+    }
+  }
+
+  // --- Distractor notes -----------------------------------------------------
+  if (q.distractorNotes) {
+    const filled = q.distractorNotes.filter((n) => n && n.trim() !== '')
+    if (new Set(filled.map(normalise)).size !== filled.length) {
+      warnings.push(`${label}: two distractor notes are identical`)
+    }
+    if (q.distractorNotes[q.answer] && q.distractorNotes[q.answer].trim() !== '') {
+      warnings.push(
+        `${label}: the correct option has a distractor note; it should be an empty string`,
+      )
+    }
+  }
+
+  // --- UK English -----------------------------------------------------------
+  const prose = [q.question, q.explanation, q.learningPoint, ...(q.options ?? [])]
+    .filter(Boolean)
+    .join(' ')
+  for (const [pattern, advice] of US_USAGE) {
+    if (pattern.test(prose)) {
+      // "fall" and "grade" have innocent uses; those patterns are already narrowed.
+      errors.push(`${label}: American usage found (${pattern.source}) — ${advice}`)
+    }
+  }
+
   if (q.passageId && !passageIds.has(q.passageId)) {
     errors.push(`${label}: passageId "${q.passageId}" does not exist`)
   }
@@ -212,6 +342,62 @@ for (const [index, count] of answerCounts) {
   if (share > 0.6) {
     warnings.push(
       `Answer position ${index} is correct for ${Math.round(share * 100)}% of questions — consider varying it`,
+    )
+  }
+}
+
+// Foundation questions matter: the difficulty ceiling drops when a child is
+// struggling, and the learning loop prefers an easier follow-up after a
+// mistake. Without difficulty-1 questions there is nothing to drop to.
+const MIN_FOUNDATION_SHARE = 0.12
+for (const subject of VALID_SUBJECTS) {
+  const inSubject = questions.filter((q) => q.subject === subject)
+  if (inSubject.length === 0) continue
+  const foundation = inSubject.filter((q) => q.difficulty === 1).length
+  const share = foundation / inSubject.length
+  if (share < MIN_FOUNDATION_SHARE) {
+    warnings.push(
+      `${subject}: only ${foundation}/${inSubject.length} questions are difficulty 1 ` +
+        `(${Math.round(share * 100)}%) — aim for at least ${Math.round(MIN_FOUNDATION_SHARE * 100)}%`,
+    )
+  }
+}
+
+// Thin topics recycle quickly in topic practice and weak-area sessions.
+const MIN_PER_TOPIC = 4
+const topicCounts = new Map<string, number>()
+for (const q of questions) {
+  const key = `${q.subject} · ${q.topic}`
+  topicCounts.set(key, (topicCounts.get(key) ?? 0) + 1)
+}
+for (const [key, count] of [...topicCounts].sort((a, b) => a[1] - b[1])) {
+  if (count < MIN_PER_TOPIC) {
+    warnings.push(`${key}: only ${count} question(s) — thin for a 10-question topic session`)
+  }
+}
+
+// Passages should carry enough questions to be worth reading.
+const passageUse = new Map<string, number>()
+for (const q of questions) {
+  if (q.passageId) passageUse.set(q.passageId, (passageUse.get(q.passageId) ?? 0) + 1)
+}
+for (const id of passageIds) {
+  const used = passageUse.get(id) ?? 0
+  if (used === 0) warnings.push(`passage "${id}" is not used by any question`)
+  else if (used < 3) warnings.push(`passage "${id}": only ${used} question(s) — aim for 4+`)
+}
+
+// Copy-pasted learning points suggest questions that teach the same thing twice.
+const pointUse = new Map<string, string[]>()
+for (const q of questions) {
+  if (!q.learningPoint) continue
+  const key = normalise(q.learningPoint)
+  pointUse.set(key, [...(pointUse.get(key) ?? []), q.id])
+}
+for (const [, ids] of pointUse) {
+  if (ids.length > 2) {
+    warnings.push(
+      `${ids.length} questions share an identical learning point (${ids.slice(0, 3).join(', ')}…)`,
     )
   }
 }

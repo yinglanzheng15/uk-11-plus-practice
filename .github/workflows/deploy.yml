@@ -35,6 +35,9 @@ jobs:
 
       - run: npm ci
 
+      # Engine tests: quiz flow, learning loop, selection, mastery, edge cases.
+      - run: npm test
+
       # Validates the question bank, type-checks, then builds to dist/.
       - run: npm run build
 

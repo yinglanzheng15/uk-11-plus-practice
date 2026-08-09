@@ -94,7 +94,53 @@ Passages live in `src/data/passages.json`:
 
 Questions reference one with `passageId`. Several questions should share a passage — that mirrors how comprehension is actually assessed and rewards reading it properly. Passages must be **original writing**, never extracts from published work.
 
-## Validation
+## Vetting new questions
+
+Two layers, because they catch different things.
+
+### Layer 1 — automated (`npm run validate`)
+
+Catches anything mechanically checkable. Runs as the first step of `npm run build`, so a broken bank cannot be deployed.
+
+The strongest check is **`verify`**: an optional arithmetic expression that must evaluate to the correct option.
+
+```jsonc
+"question": "A jacket costs £60. Its price rises by 10%. What is the new price?",
+"options": ["£66", "£6", "£70", "£54"],
+"answer": 0,
+"verify": "60 + 60 / 10"
+```
+
+The validator computes `60 + 60 / 10 = 66`, reads `£66` from the marked answer, and fails the build if they disagree. This means the arithmetic is *proved*, not merely asserted by whoever wrote the question. **Add `verify` to every maths question whose answer is a plain number.** It costs one line and removes a whole category of mistake.
+
+It only accepts digits and `+ - * / ( ) .`, so there is no way to smuggle code into it.
+
+### Layer 2 — human (`npm run review`)
+
+Writes **`docs/review-sheet.md`**: every question in the shuffled order the child actually sees, with the correct answer marked, the distractor notes inline, and the explanation underneath.
+
+This exists because automation cannot judge whether a question is *fair*. Read it looking for:
+
+- Could a bright child argue for a different answer?
+- Is a distractor accidentally correct, or so silly it can be dismissed on sight?
+- Is the wording clear on first reading? Is the vocabulary fair for Year 5/6?
+- Does the explanation teach the method, or just restate the answer?
+- Is the difficulty label about right?
+
+Once you have read it:
+
+```bash
+npm run review:accept     # records every current id in docs/.review-seen
+npm run review -- new     # next time, shows only questions added since
+```
+
+So a growing bank never means re-reading questions you have already approved.
+
+### Why both layers
+
+Every structural mistake I have made in this bank was caught by layer 1. Every *reasoning* mistake — a code question whose rule did not actually hold, a compound-word question where the answer only worked for two of the three words — was invisible to it and only found by reading. Run both.
+
+## Validation reference
 
 ```bash
 npm run validate
@@ -112,15 +158,22 @@ Errors (these fail the build):
 - Fewer than 3 options
 - `passageId` or `followUpIds` referencing something that doesn't exist
 - `followUpIds` referencing itself
+- **`verify` not matching the marked answer**, or not being valid arithmetic
+- **American usage** — "math", "soccer", "grade", "color", "$", `-ize` endings and similar
 - Malformed JSON
 
 Warnings (printed, don't fail the build):
 
 - Correct option much longer than every distractor
-- Explanation suspiciously short
-- No tags
+- Explanation suspiciously short, or no tags
 - One answer position dominating the bank after shuffling
 - A question with no possible follow-up
+- Two identical distractor notes, or a note on the correct option
+- Options mixing numeric and non-numeric values, or inconsistent units
+- A subject with under 12% Foundation (difficulty 1) questions
+- A topic with fewer than 4 questions
+- A passage used by fewer than 3 questions
+- Three or more questions sharing an identical learning point
 
 ## Adding questions
 

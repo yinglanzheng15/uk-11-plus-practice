@@ -466,5 +466,505 @@
     ],
     "learningPoint": "Take the other person out of the sentence and see which pronoun still sounds right.",
     "tags": ["grammar", "pronouns"]
+  },
+  {
+    "id": "english-comprehension-007",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "retrieval",
+    "type": "comprehension-retrieval",
+    "difficulty": 1,
+    "passageId": "passage-market",
+    "question": "Where does Otis have to stand on market days?",
+    "options": [
+      "Behind his grandmother's vegetable stall.",
+      "In the queue for fried onions.",
+      "At the entrance to the square.",
+      "Beside the parsnips, facing away from the crowd."
+    ],
+    "answer": 0,
+    "explanation": "The passage says being useful 'meant standing behind the vegetable stall shouting prices at strangers'.",
+    "distractorNotes": [
+      "",
+      "The onions are mentioned as a smell, not as somewhere he stands.",
+      "The square is mentioned only when his voice carries across it.",
+      "The parsnips are what a customer inspects, not where he stands."
+    ],
+    "learningPoint": "For a retrieval question, find the exact sentence rather than relying on memory.",
+    "tags": ["comprehension", "retrieval"]
+  },
+  {
+    "id": "english-comprehension-008",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "vocabulary_in_context",
+    "type": "comprehension-vocabulary",
+    "difficulty": 3,
+    "passageId": "passage-market",
+    "question": "'The words came out thin and apologetic.' What does 'thin' suggest about the way Otis spoke?",
+    "options": [
+      "His voice was weak and lacked confidence.",
+      "He spoke very quickly and ran out of breath.",
+      "He used as few words as he possibly could.",
+      "His voice was unusually high-pitched."
+    ],
+    "answer": 0,
+    "explanation": "'Thin' is being used to describe a voice with no strength behind it, which fits 'apologetic' and explains why the customer put the parsnips back down.",
+    "distractorNotes": [
+      "",
+      "Nothing in the passage suggests he spoke quickly.",
+      "'Thin' describes how the words sounded, not how many there were.",
+      "Pitch is not what is being described here; strength is."
+    ],
+    "learningPoint": "Writers often use a word about one thing (a thin object) to describe another (a weak voice). Ask what quality is being borrowed.",
+    "tags": ["comprehension", "vocabulary", "context"]
+  },
+  {
+    "id": "english-comprehension-009",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "retrieval",
+    "type": "comprehension-retrieval",
+    "difficulty": 1,
+    "passageId": "passage-tide",
+    "question": "Why had Isaac written two times on the back of his hand?",
+    "options": [
+      "They were the hours between which the causeway could be crossed on foot.",
+      "They were the times of the buses back to the mainland.",
+      "They were the times he had agreed to meet somebody on the island.",
+      "They were the times the refuge box was unlocked."
+    ],
+    "answer": 0,
+    "explanation": "The passage opens by saying the island 'could be reached on foot for four hours either side of low tide', and Isaac had written 11:20 and 15:20 — a four-hour window.",
+    "distractorNotes": [
+      "",
+      "No buses are mentioned anywhere in the passage.",
+      "Isaac appears to be alone; no meeting is mentioned.",
+      "The refuge box is not locked, and it is only mentioned near the end."
+    ],
+    "learningPoint": "When numbers appear in a passage, look at the sentence before them to find out what they measure.",
+    "tags": ["comprehension", "retrieval"]
+  },
+  {
+    "id": "english-comprehension-010",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "meaning_of_phrases",
+    "type": "comprehension-vocabulary",
+    "difficulty": 4,
+    "passageId": "passage-tide",
+    "question": "'the way spilt water spreads across a table — slowly, and then all at once.' Why does the writer use this comparison?",
+    "options": [
+      "To show that the danger built up gradually and then arrived very suddenly.",
+      "To suggest that Isaac was clumsy and had caused the problem himself.",
+      "To make the sea seem small and harmless, like a domestic accident.",
+      "To explain that the causeway was flat and smooth like a table top."
+    ],
+    "answer": 0,
+    "explanation": "The point of the comparison is the timing — 'slowly, and then all at once' — which is exactly how the tide catches him out. It warns the reader that his time is nearly up.",
+    "distractorNotes": [
+      "",
+      "The comparison is about how water moves, not about Isaac's character.",
+      "The tide turns out to be anything but harmless, so this reading is contradicted by what follows.",
+      "The shape of the causeway is not what the image is describing."
+    ],
+    "learningPoint": "When asked why a comparison is used, look for the one quality that both things share — here, the speed.",
+    "tags": ["comprehension", "imagery", "inference"]
+  },
+  {
+    "id": "english-comprehension-011",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "character_motivation",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-tide",
+    "question": "'He told himself this several times, quite firmly, and then he began to run.' What does this tell us about Isaac?",
+    "options": [
+      "He was more frightened than he was willing to admit to himself.",
+      "He had decided the situation was hopeless and gave up.",
+      "He enjoyed the excitement of racing the tide.",
+      "He had misread the tide times written on his hand."
+    ],
+    "answer": 0,
+    "explanation": "Having to repeat 'there was no need to hurry' several times shows he did not believe it, and running proves it. The gap between what he says and what he does reveals his fear.",
+    "distractorNotes": [
+      "",
+      "He acts immediately, which is the opposite of giving up.",
+      "Nothing suggests enjoyment; the tone is anxious throughout.",
+      "He checked the times twice, and the passage does not say he got them wrong."
+    ],
+    "learningPoint": "When a character's actions contradict their words, trust the actions — that gap is usually the point.",
+    "tags": ["comprehension", "inference", "character"]
+  },
+  {
+    "id": "english-comprehension-012",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "authors_intent",
+    "type": "comprehension-inference",
+    "difficulty": 4,
+    "passageId": "passage-tide",
+    "question": "Why does the writer end with 'that was almost worse'?",
+    "options": [
+      "To show that Isaac's embarrassment now troubles him more than the danger did.",
+      "To warn the reader that Isaac is still in serious danger.",
+      "To suggest that Isaac will not be rescued for a very long time.",
+      "To show that Isaac has learned nothing from the experience."
+    ],
+    "answer": 0,
+    "explanation": "The passage states plainly that he 'was not in any danger'. What is left is having to explain himself — so the ending shifts the problem from physical risk to embarrassment.",
+    "distractorNotes": [
+      "",
+      "The passage says directly that he is not in danger.",
+      "How long he waits is never mentioned.",
+      "The line about being 'exactly as foolish as he had been' suggests he has recognised his mistake."
+    ],
+    "learningPoint": "The last line of a passage often changes what the story is really about — read it especially carefully.",
+    "tags": ["comprehension", "author's intent", "inference"]
+  },
+  {
+    "id": "english-comprehension-013",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "inference",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-newcomer",
+    "question": "Why does Marguerite let everybody mispronounce her name?",
+    "options": [
+      "She does not yet feel confident enough to correct them.",
+      "She does not mind what people call her.",
+      "She thinks the wrong versions are funnier than her real name.",
+      "She has been told by her mother not to make a fuss."
+    ],
+    "answer": 0,
+    "explanation": "She stays silent even when a boy is unkind, and later admits school is 'fine' only in a hollow way. Her silence comes from feeling new and unsure, not from indifference.",
+    "distractorNotes": [
+      "",
+      "The care she takes teaching Priya later shows that she does mind.",
+      "The joke is at her expense and nobody suggests she found it funny.",
+      "Her mother only asks how school is going; no such instruction is given."
+    ],
+    "learningPoint": "What a character does *not* say can be as revealing as what they do say.",
+    "tags": ["comprehension", "inference", "character"]
+  },
+  {
+    "id": "english-comprehension-014",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "meaning_of_phrases",
+    "type": "comprehension-vocabulary",
+    "difficulty": 4,
+    "passageId": "passage-newcomer",
+    "question": "'which was true in the way that a photograph of a room is true.' What does this suggest about Marguerite's answer?",
+    "options": [
+      "It was accurate but left out everything that really mattered.",
+      "It was completely untrue and she was lying to her mother.",
+      "It was a memory of something that had happened long ago.",
+      "It was carefully rehearsed before she said it."
+    ],
+    "answer": 0,
+    "explanation": "A photograph shows a room correctly but flattens it — no sound, no feeling, nothing outside the frame. Her 'fine' is accurate in the same limited way.",
+    "distractorNotes": [
+      "",
+      "The passage says it was true, so it is not a lie.",
+      "A photograph can record the past, but that is not the quality being borrowed here.",
+      "Nothing suggests she prepared the answer in advance."
+    ],
+    "learningPoint": "With an unusual comparison, ask which single quality the writer is borrowing — here, being accurate but incomplete.",
+    "tags": ["comprehension", "imagery", "inference"]
+  },
+  {
+    "id": "english-comprehension-015",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "character_motivation",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-newcomer",
+    "question": "Why does the writer describe Priya saying the name a third time 'as though filing it away somewhere safe'?",
+    "options": [
+      "To show that Priya intends to remember it and get it right in future.",
+      "To show that Priya finds the name difficult and is giving up.",
+      "To suggest that Priya is only pretending to be interested.",
+      "To show that Priya is worried about forgetting it in a test."
+    ],
+    "answer": 0,
+    "explanation": "'Filing it away somewhere safe' suggests deliberate care and storage for later. That effort is why the moment matters so much to Marguerite.",
+    "distractorNotes": [
+      "",
+      "She had already got it right by then, so she is not giving up.",
+      "Pretending would not require a third attempt after already succeeding.",
+      "There is no test; this is during silent reading."
+    ],
+    "learningPoint": "Small, deliberate actions in a story usually signal something important about a character.",
+    "tags": ["comprehension", "inference", "character"]
+  },
+  {
+    "id": "english-comprehension-016",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "summarising",
+    "type": "comprehension-inference",
+    "difficulty": 4,
+    "passageId": "passage-newcomer",
+    "question": "Which sentence best sums up the change described in the passage?",
+    "options": [
+      "A small act of attention gives Marguerite the first thing she has looked forward to since moving.",
+      "Marguerite makes a close friend who defends her against unkind classmates.",
+      "Marguerite decides to correct everybody who says her name wrongly.",
+      "Marguerite realises that her new school is much like her old one."
+    ],
+    "answer": 0,
+    "explanation": "The passage is careful to say it 'was not a friendship yet' and 'not even a conversation, really' — the change is small, but it is the first thing she has looked forward to.",
+    "distractorNotes": [
+      "",
+      "The passage explicitly denies this, and Priya did not defend her.",
+      "She tells Priya her name, but there is no decision to correct everyone.",
+      "Her old school is never mentioned."
+    ],
+    "learningPoint": "For a summary question, choose the option that fits the whole passage — including the parts that qualify or limit it.",
+    "tags": ["comprehension", "summarising"]
+  },
+  {
+    "id": "english-grammar-006",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "word_classes",
+    "type": "grammar",
+    "difficulty": 1,
+    "question": "In the sentence 'The dog barked loudly at the postman', which word is a noun?",
+    "options": ["postman", "barked", "loudly", "at"],
+    "answer": 0,
+    "explanation": "A noun names a person, place or thing. 'Postman' names a person, so it is a noun.",
+    "distractorNotes": [
+      "",
+      "'Barked' is the action, so it is a verb.",
+      "'Loudly' describes how the dog barked, so it is an adverb.",
+      "'At' is a preposition, showing direction."
+    ],
+    "learningPoint": "A noun is a naming word: a person, place or thing.",
+    "tags": ["grammar", "word classes", "nouns"]
+  },
+  {
+    "id": "english-grammar-007",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "verb_tense",
+    "type": "grammar",
+    "difficulty": 2,
+    "question": "Which sentence is written in the past tense?",
+    "options": [
+      "We caught the early train to Euston.",
+      "We are catching the early train to Euston.",
+      "We will catch the early train to Euston.",
+      "We catch the early train to Euston every Monday."
+    ],
+    "answer": 0,
+    "explanation": "'Caught' is the past form of 'catch', so the action has already happened.",
+    "distractorNotes": [
+      "",
+      "'Are catching' describes something happening now.",
+      "'Will catch' describes something that has not happened yet.",
+      "'Catch' here describes something that happens regularly."
+    ],
+    "learningPoint": "Find the verb first, then ask whether the action has happened, is happening, or has yet to happen.",
+    "tags": ["grammar", "verbs", "tense"]
+  },
+  {
+    "id": "english-punctuation-003",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "capital_letters",
+    "type": "punctuation",
+    "difficulty": 1,
+    "question": "Which sentence uses capital letters correctly?",
+    "options": [
+      "On Friday we visited the British Museum in London.",
+      "On friday we visited the british museum in london.",
+      "On Friday we Visited the British Museum in London.",
+      "on Friday we visited the British museum in London."
+    ],
+    "answer": 0,
+    "explanation": "Days of the week, the names of places and the names of buildings all take capital letters, and so does the first word of a sentence.",
+    "distractorNotes": [
+      "",
+      "'Friday', 'British Museum' and 'London' are all names and need capitals.",
+      "'Visited' is an ordinary verb and should not have a capital letter.",
+      "The first word of a sentence needs a capital, and 'Museum' is part of the building's name."
+    ],
+    "learningPoint": "Capital letters go on names, days, months and the first word of a sentence — not on ordinary words.",
+    "tags": ["punctuation", "capital letters"]
+  },
+  {
+    "id": "english-punctuation-004",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "commas_in_lists",
+    "type": "punctuation",
+    "difficulty": 2,
+    "question": "Which sentence uses commas correctly?",
+    "options": [
+      "We packed sandwiches, apples, a flask and a blanket.",
+      "We packed sandwiches, apples, a flask, and a blanket,",
+      "We packed, sandwiches, apples, a flask and a blanket.",
+      "We packed sandwiches apples, a flask and a blanket."
+    ],
+    "answer": 0,
+    "explanation": "Commas separate the items in a list, and 'and' replaces the final comma before the last item.",
+    "distractorNotes": [
+      "",
+      "A list should not end with a comma before the full stop.",
+      "There should be no comma between the verb 'packed' and the first item.",
+      "The comma between the first two items is missing."
+    ],
+    "learningPoint": "In a list, put commas between the items and 'and' before the last one.",
+    "tags": ["punctuation", "commas", "lists"]
+  },
+  {
+    "id": "english-punctuation-005",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "commas_for_clauses",
+    "type": "punctuation",
+    "difficulty": 4,
+    "question": "Which sentence is punctuated correctly?",
+    "options": [
+      "My uncle, who lives in Barnet, has three dogs.",
+      "My uncle who lives in Barnet, has three dogs.",
+      "My uncle, who lives in Barnet has three dogs.",
+      "My uncle who, lives in Barnet, has three dogs."
+    ],
+    "answer": 0,
+    "explanation": "'Who lives in Barnet' is extra information dropped into the sentence, so it needs a comma at both ends — like a pair of brackets.",
+    "distractorNotes": [
+      "",
+      "The opening comma is missing, so only one end of the clause is marked.",
+      "The closing comma is missing, so the clause is never closed.",
+      "The comma has been placed inside the clause rather than at its start."
+    ],
+    "learningPoint": "Extra information in the middle of a sentence needs a comma at both ends. Test it by removing the clause — the sentence should still make sense.",
+    "tags": ["punctuation", "commas", "clauses"]
+  },
+  {
+    "id": "english-spelling-005",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "plurals",
+    "type": "spelling",
+    "difficulty": 1,
+    "question": "What is the plural of 'baby'?",
+    "options": ["babies", "babys", "babyes", "babries"],
+    "answer": 0,
+    "explanation": "When a word ends in a consonant followed by y, the y changes to i and you add -es: baby becomes babies.",
+    "distractorNotes": [
+      "",
+      "The y must change to i before adding the ending.",
+      "You do not keep the y and add -es.",
+      "No extra letters are added to the middle of the word."
+    ],
+    "learningPoint": "Consonant + y at the end of a word: change the y to i and add -es.",
+    "tags": ["spelling", "plurals"]
+  },
+  {
+    "id": "english-spelling-006",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "suffixes",
+    "type": "spelling",
+    "difficulty": 2,
+    "question": "Which spelling is correct?",
+    "options": ["beginning", "begining", "begginning", "beggining"],
+    "answer": 0,
+    "explanation": "'Begin' ends in a single vowel followed by a single consonant and is stressed on the last syllable, so the n doubles before -ing.",
+    "distractorNotes": [
+      "",
+      "The n needs to be doubled before -ing.",
+      "The g should not be doubled, only the n.",
+      "This doubles the g instead of the n."
+    ],
+    "learningPoint": "Short vowel + single consonant at the end of a stressed syllable: double the consonant before adding -ing or -ed.",
+    "tags": ["spelling", "suffixes"]
+  },
+  {
+    "id": "english-spelling-007",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "confused_words",
+    "type": "spelling",
+    "difficulty": 3,
+    "question": "Choose the correct word: 'The path was much steeper than we had ___ expected.'",
+    "options": ["at first", "at first,", "atfirst", "a first"],
+    "answer": 0,
+    "explanation": "'At first' is written as two separate words and needs no comma in the middle of this sentence.",
+    "distractorNotes": [
+      "",
+      "No comma is needed here, as the phrase is not separating extra information.",
+      "'At first' is always written as two words.",
+      "'A first' means something different — a first attempt or a first place."
+    ],
+    "learningPoint": "Some common phrases are always two words: at first, a lot, in fact, as well.",
+    "tags": ["spelling", "confused words"]
+  },
+  {
+    "id": "english-vocabulary-004",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "synonyms",
+    "type": "vocabulary",
+    "difficulty": 1,
+    "question": "Which word means most nearly the same as 'enormous'?",
+    "options": ["huge", "heavy", "ancient", "empty"],
+    "answer": 0,
+    "explanation": "'Enormous' means extremely large, which is what 'huge' means.",
+    "distractorNotes": [
+      "",
+      "Something can be huge without being heavy, such as a balloon.",
+      "'Ancient' is about age, not size.",
+      "'Empty' describes what is inside something, not how big it is."
+    ],
+    "learningPoint": "Check that the synonym describes the same quality — size, age and weight are all different things.",
+    "tags": ["vocabulary", "synonyms"]
+  },
+  {
+    "id": "english-vocabulary-005",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "prefixes",
+    "type": "vocabulary",
+    "difficulty": 2,
+    "question": "What does the prefix 'trans-' mean in the word 'transport'?",
+    "options": ["across", "under", "before", "again"],
+    "answer": 0,
+    "explanation": "'Trans-' means across, so transport is carrying something across a distance, and transatlantic means across the Atlantic.",
+    "distractorNotes": [
+      "",
+      "'Under' is the meaning of sub-, as in submarine.",
+      "'Before' is the meaning of pre-, as in preview.",
+      "'Again' is the meaning of re-, as in rebuild."
+    ],
+    "learningPoint": "Knowing common prefixes lets you work out unfamiliar words: trans- across, sub- under, pre- before, re- again.",
+    "tags": ["vocabulary", "prefixes", "word building"]
+  },
+  {
+    "id": "english-vocabulary-006",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "precise_word_choice",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "question": "Which word best completes the sentence? 'Her explanation was so ___ that nobody was left with a single question.'",
+    "options": ["thorough", "lengthy", "confident", "polite"],
+    "answer": 0,
+    "explanation": "'Thorough' means complete and covering everything, which is exactly why no questions were left.",
+    "distractorNotes": [
+      "",
+      "A lengthy explanation can still leave things out — length is not the same as completeness.",
+      "Someone can sound confident and still fail to explain everything.",
+      "Politeness has nothing to do with how complete an explanation is."
+    ],
+    "learningPoint": "Look for the word whose meaning explains the result described in the rest of the sentence.",
+    "tags": ["vocabulary", "context", "word choice"]
   }
 ]
