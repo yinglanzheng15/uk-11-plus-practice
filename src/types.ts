@@ -124,6 +124,13 @@ export interface Progress {
   }
   preferences: {
     timed: boolean
+    /**
+     * How long a timed session allows per question, in seconds. Adjustable in
+     * the parent view because real papers differ: Dame Alice Owen's verbal
+     * reasoning paper is 80 questions in 50 minutes, about 37 seconds each,
+     * while a relaxed practice run wants considerably more.
+     */
+    secondsPerQuestion: number
   }
 }
 

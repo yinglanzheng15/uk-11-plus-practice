@@ -1,8 +1,14 @@
 import type { Progress, QuestionRecord } from '../types'
 
+/** Generous rather than pressured — the pace a child starts with. */
+export const DEFAULT_SECONDS_PER_QUESTION = 45
+
 const KEY = 'elevenplus:v1:progress'
-/** 2 added `streak` to QuestionRecord for spaced repetition. */
-export const SCHEMA_VERSION = 2
+/**
+ * 2 added `streak` to QuestionRecord for spaced repetition.
+ * 3 added `preferences.secondsPerQuestion`.
+ */
+export const SCHEMA_VERSION = 3
 
 export function emptyProgress(): Progress {
   return {
@@ -13,7 +19,7 @@ export function emptyProgress(): Progress {
     feedback: [],
     streak: { lastDate: null, current: 0, best: 0 },
     totals: { answered: 0, correct: 0 },
-    preferences: { timed: false },
+    preferences: { timed: false, secondsPerQuestion: DEFAULT_SECONDS_PER_QUESTION },
   }
 }
 
@@ -53,7 +59,17 @@ function migrate(raw: unknown): Progress {
     feedback: data.feedback ?? base.feedback,
     streak: { ...base.streak, ...data.streak },
     totals: { ...base.totals, ...data.totals },
-    preferences: { ...base.preferences, ...data.preferences },
+    preferences: {
+      ...base.preferences,
+      ...data.preferences,
+      // Added in schema 3; also repairs a damaged value rather than producing
+      // a session with a nonsensical time limit.
+      secondsPerQuestion:
+        typeof data.preferences?.secondsPerQuestion === 'number' &&
+        data.preferences.secondsPerQuestion > 0
+          ? data.preferences.secondsPerQuestion
+          : DEFAULT_SECONDS_PER_QUESTION,
+    },
   }
 }
 

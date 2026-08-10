@@ -10,6 +10,8 @@ import {
   RESUME_MAX_AGE_MS,
 } from '../src/logic/sessionStorage'
 import { describeBackup, exportProgress, parseBackup } from '../src/logic/backup'
+import { PACE_PRESETS, timeLimitFor } from '../src/logic/pace'
+import { formatDuration } from '../src/components/Timer'
 import {
   createSession,
   currentQuestion,
@@ -211,6 +213,35 @@ console.log('\n== timer ==')
   check('timeout ends the session', s.phase === 'complete')
   check('timeout flagged', s.timedOut === true)
   check('answers so far are kept', mainAnswers(s).length === 1)
+}
+
+console.log('\n== adjustable pace ==')
+{
+  check('the default is 45 seconds', emptyProgress().preferences.secondsPerQuestion === 45)
+  check('a 10-question session at 45s is 7:30', formatDuration(timeLimitFor(10, 45)) === '7:30')
+  check('the same session at exam pace is shorter', timeLimitFor(10, 37) < timeLimitFor(10, 45))
+  check('20 questions at 37s is about 12 minutes', timeLimitFor(20, 37) === 740_000)
+  check('every preset is a positive number of seconds', PACE_PRESETS.every((p) => p.seconds > 0))
+  check('presets run slowest to fastest', PACE_PRESETS.every((p, i, a) => i === 0 || a[i - 1].seconds > p.seconds))
+  check('the default is one of the presets', PACE_PRESETS.some((p) => p.seconds === 45))
+
+  // Profiles saved before the setting existed, and damaged values, must not
+  // produce a session with a nonsensical or zero time limit.
+  const legacy = JSON.parse(exportProgress(emptyProgress()))
+  delete legacy.progress.preferences.secondsPerQuestion
+  const migrated = parseBackup(JSON.stringify(legacy))
+  check(
+    'an older profile gets the default pace',
+    migrated.ok && migrated.progress.preferences.secondsPerQuestion === 45,
+  )
+
+  const damaged = JSON.parse(exportProgress(emptyProgress()))
+  damaged.progress.preferences.secondsPerQuestion = 0
+  const repaired = parseBackup(JSON.stringify(damaged))
+  check(
+    'a zero pace is repaired rather than used',
+    repaired.ok && repaired.progress.preferences.secondsPerQuestion === 45,
+  )
 }
 
 console.log('\n== the clock stops for explanations ==')

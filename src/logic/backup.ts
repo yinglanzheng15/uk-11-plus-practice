@@ -6,7 +6,7 @@
  * child from zero. A plain JSON file is the whole answer: no account, no
  * server, and something a parent can actually read and keep.
  */
-import { emptyProgress, SCHEMA_VERSION } from './storage'
+import { DEFAULT_SECONDS_PER_QUESTION, emptyProgress, SCHEMA_VERSION } from './storage'
 import type { Progress } from '../types'
 
 /** Identifies our own files, so an unrelated JSON file fails clearly. */
@@ -119,7 +119,17 @@ export function parseBackup(text: string): ImportResult {
       feedback: Array.isArray(p.feedback) ? p.feedback : [],
       streak: { ...base.streak, ...p.streak },
       totals: { ...base.totals, ...p.totals },
-      preferences: { ...base.preferences, ...p.preferences },
+      preferences: {
+        ...base.preferences,
+        ...p.preferences,
+        // A backup file is editable by hand, so this cannot be trusted. A zero
+        // or missing pace would make every timed session expire immediately.
+        secondsPerQuestion:
+          typeof p.preferences?.secondsPerQuestion === 'number' &&
+          p.preferences.secondsPerQuestion > 0
+            ? p.preferences.secondsPerQuestion
+            : DEFAULT_SECONDS_PER_QUESTION,
+      },
     },
   }
 }

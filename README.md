@@ -10,7 +10,7 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 ## Status (handoff summary)
 
-**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (121 checks) and `npm run build` are all green as of the latest commit. No known bugs.
+**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (130 checks) and `npm run build` are all green as of the latest commit. No known bugs.
 
 **What's built:**
 - Full quiz engine with the wrong-answer learning loop, mastery tracking, streaks, and all revision modes (Quick 5/10/20, subject/topic practice, mixed, mistakes, weak areas, challenge, timed sessions).
@@ -73,7 +73,7 @@ Other scripts:
 | `npm run validate` | Check the question bank for errors and quality warnings |
 | `npm run review` | Write `docs/review-sheet.md` for human vetting of questions |
 | `npm run review:accept` | Mark the current questions as reviewed |
-| `npm test` | Run the engine test suite (121 checks) |
+| `npm test` | Run the engine test suite (130 checks) |
 | `npm run typecheck` | TypeScript check, no build |
 | `npm run build` | Validate → typecheck → build to `dist/` |
 | `npm run preview` | Serve the production build locally |
@@ -145,7 +145,7 @@ Like all the other data, feedback is stored only in that browser and is never se
 | **Weak areas** | Automatically targets topics below 70% mastery |
 | **Challenge** | Prioritises difficulty 3–4 questions |
 
-Any session can optionally be timed (about 45 seconds per question). The timer never fails the child — when it expires, the session ends gracefully and shows results for the questions reached.
+Any session can optionally be timed. **The pace is set by a grown-up in the Parent tab** — Gentle (90s a question), Steady (60s), Standard (45s, the default), Exam pace (37s) or Fast (30s). Exam pace is roughly that of Dame Alice Owen's verbal reasoning paper, 80 questions in 50 minutes. Timings differ between schools and change from year to year, so check the school's own admissions material for the year being sat. The timer never fails the child — when it expires, the session ends gracefully and shows results for the questions reached.
 
 **The clock stops while an explanation is on screen**, and while the child works through a follow-up question. A timed session measures time spent *answering*, not time spent reading — otherwise engaging with the learning loop would cost time, which is exactly backwards.
 

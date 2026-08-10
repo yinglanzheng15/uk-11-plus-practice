@@ -156,6 +156,10 @@ export default function App() {
     setProgress((p) => ({ ...p, preferences: { ...p.preferences, timed } }))
   }, [])
 
+  const handleSetSecondsPerQuestion = useCallback((secondsPerQuestion: number) => {
+    setProgress((p) => ({ ...p, preferences: { ...p.preferences, secondsPerQuestion } }))
+  }, [])
+
   const handleReport = useCallback(
     (questionId: string, reason: FeedbackReason, message: string) => {
       setProgress((p) => addFeedback(p, { kind: 'question', questionId, reason, message }))
@@ -264,6 +268,7 @@ export default function App() {
             onRemoveFeedback={handleRemoveFeedback}
             onClearFeedback={handleClearFeedback}
             onRestore={handleRestore}
+            onSetSecondsPerQuestion={handleSetSecondsPerQuestion}
           />
         )}
       </main>

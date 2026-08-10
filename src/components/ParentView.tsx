@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BackupPanel } from './BackupPanel'
+import { PacePanel } from './PacePanel'
 import { FeedbackTab } from './FeedbackTab'
 import { ProgressBar } from './ProgressBar'
 import { formatDuration } from './Timer'
@@ -15,6 +16,7 @@ interface Props {
   onRemoveFeedback: (id: string) => void
   onClearFeedback: () => void
   onRestore: (progress: Progress) => void
+  onSetSecondsPerQuestion: (seconds: number) => void
 }
 
 function formatDate(at: number): string {
@@ -33,6 +35,7 @@ export function ParentView({
   onRemoveFeedback,
   onClearFeedback,
   onRestore,
+  onSetSecondsPerQuestion,
 }: Props) {
   const [confirming, setConfirming] = useState(false)
   const [tab, setTab] = useState<'progress' | 'feedback'>('progress')
@@ -83,6 +86,7 @@ export function ParentView({
             progress={progress}
             onReset={onReset}
             onRestore={onRestore}
+            onSetSecondsPerQuestion={onSetSecondsPerQuestion}
             confirming={confirming}
             setConfirming={setConfirming}
           />
@@ -96,6 +100,7 @@ interface ProgressProps {
   progress: Progress
   onReset: () => void
   onRestore: (progress: Progress) => void
+  onSetSecondsPerQuestion: (seconds: number) => void
   confirming: boolean
   setConfirming: (v: boolean) => void
 }
@@ -104,6 +109,7 @@ function ParentProgress({
   progress,
   onReset,
   onRestore,
+  onSetSecondsPerQuestion,
   confirming,
   setConfirming,
 }: ProgressProps) {
@@ -238,6 +244,11 @@ function ParentProgress({
           </ul>
         </div>
       )}
+
+      <PacePanel
+        secondsPerQuestion={progress.preferences.secondsPerQuestion}
+        onChange={onSetSecondsPerQuestion}
+      />
 
       <BackupPanel progress={progress} onRestore={onRestore} />
 

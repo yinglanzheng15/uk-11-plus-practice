@@ -4,6 +4,7 @@ import { topicsForSubject } from '../data'
 import { mistakeIds, overallAccuracy } from '../logic/progress'
 import { topicMastery } from '../logic/mastery'
 import { mainAnswers } from '../logic/session'
+import { paceLabel, timeLimitFor } from '../logic/pace'
 import type { RestoredSession } from '../logic/sessionStorage'
 import type { Progress, SessionConfig, SessionMode, SubjectId } from '../types'
 
@@ -15,11 +16,6 @@ interface Props {
   resumable?: RestoredSession | null
   onResume: () => void
   onDiscardResume: () => void
-}
-
-/** Roughly 45 seconds per question — generous rather than pressured. */
-function timeLimitFor(length: number): number {
-  return length * 45_000
 }
 
 /** "just now" / "20 minutes ago" / "yesterday" — no library needed for three cases. */
@@ -42,6 +38,7 @@ export function Home({
 }: Props) {
   const [subjectPicker, setSubjectPicker] = useState<SubjectId | null>(null)
   const timed = progress.preferences.timed
+  const secondsPerQuestion = progress.preferences.secondsPerQuestion
 
   const accuracy = overallAccuracy(progress)
   const mistakes = mistakeIds(progress)
@@ -56,7 +53,7 @@ export function Home({
       subjects,
       topic,
       timed,
-      timeLimitMs: timed ? timeLimitFor(length) : undefined,
+      timeLimitMs: timed ? timeLimitFor(length, secondsPerQuestion) : undefined,
     })
   }
 
@@ -218,6 +215,12 @@ export function Home({
           />
           Use a timer for my next session
         </label>
+        {timed && (
+          <p className="muted small" style={{ marginTop: 6, marginBottom: 0 }}>
+            {secondsPerQuestion} seconds a question ({paceLabel(secondsPerQuestion)}) — a
+            grown-up can change this in the Parent tab.
+          </p>
+        )}
       </div>
 
       <div className="card">
