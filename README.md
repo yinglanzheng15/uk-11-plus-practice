@@ -35,6 +35,34 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 ---
 
+## Next steps
+
+Prioritised, grounded in the real GL/Latymer familiarisation papers. The content specifics are in [`docs/latymer-alignment.md`](docs/latymer-alignment.md). Suggested order: English "No mistake" → Maths numeric batch → Full-paper mode → VR batch → NVR expansion → multi-child profiles.
+
+**1. Close the content-fidelity gaps** (highest value, fits the existing engine)
+- **English "No mistake" spelling + punctuation** — the biggest gap. GL splits a sentence into labelled parts; the child picks the faulty part *or* **E = "No mistake"** (~1 in 5 answers). Add ~8 + ~8 questions in that exact shape. *Do this first.*
+- **Maths missing types** — coordinates, Roman numerals, timetable/time-interval reading, function machines / simple algebra (~20 Q). All numeric, so each can carry a `verify` expression the validator checks.
+- **VR missing types** — "word with two meanings" (homographs) and "insert a letter that ends one word and starts the next" (~12 Q).
+
+**2. Make sessions feel like the real exam**
+- A **Full-paper mode** per subject: fixed-length timed run (50 Maths, 80 VR at ~37s/Q) with the section structure of the real booklet and a scaled score.
+- A **per-section breakdown** in the summary ("Spelling 7/9, Punctuation 5/9…"), which is how GL reports strengths and tells a parent what to drill.
+
+**3. Grow NVR from taster to full section**
+- Add rotation, reflection, matrix/grid completion (2×2 and 3×3), hidden shape, and cube nets.
+- First build a reusable SVG shape library (`src/data/nvrShapes.ts`) so questions compose helpers instead of hand-drawn SVG.
+
+**4. Product / UX**
+- **Multi-child profiles** — the main structural gap; a family currently shares one localStorage history.
+- A **printable revisit sheet** from the end-of-session review data.
+- A home-screen picker mirroring the six real GL booklets.
+
+**5. Quality & vetting (ongoing)**
+- The 308 questions still need the human read-through (`npm run review` → read → `npm run review:accept`), including the new NVR taster.
+- Spot-check that topic *coverage* reflects the papers' actual weighting (comprehension and VR letter/number types are heavily represented).
+
+---
+
 ## What makes it different
 
 Most quiz apps show the right answer and move on. This one doesn't.
