@@ -19,13 +19,12 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 - **Resume after a refresh.** An unfinished session is saved as you go and offered back — *"Carry on where you left off?"* — for up to 24 hours. A timed session keeps the time it had left rather than burning it while the tab was shut.
 - **Spaced repetition.** A question answered correctly comes back after 1 day, then 3, then 7, then 21. A mistake resets it to the start of the ladder.
 - **Parent view** with Progress and Feedback tabs, plus **download and restore of progress** as a JSON file — the way to move a child's history to a new device, or to survive a cleared browser.
-- GitHub Actions deploy workflow, currently **manual-only** (see below).
+- **Live at [yinglanzheng15.github.io/uk-11-plus-practice](https://yinglanzheng15.github.io/uk-11-plus-practice/)**, redeployed by GitHub Actions on every push to `main`.
 
-**Repo:** [github.com/yinglanzheng15/uk-11-plus-practice](https://github.com/yinglanzheng15/uk-11-plus-practice) — private, pushed and up to date.
+**Repo:** [github.com/yinglanzheng15/uk-11-plus-practice](https://github.com/yinglanzheng15/uk-11-plus-practice) — public, pushed and up to date.
 
 **Not yet done / deliberately deferred:**
 - **The 288 new-and-existing questions have passed `npm run validate` but only the first 156 have had a human read-through.** The letter sequences, codes and hidden words in the new batch were additionally checked by script. Run `npm run review` and read `docs/review-sheet.md` before treating the bank as vetted; then `npm run review:accept`.
-- **Site is not live.** GitHub Pages requires a public repo or a paid plan; the repo is currently private by choice. To publish: make the repo public (`gh repo edit ... --visibility public`) or upgrade to GitHub Pro, then uncomment the `push:` trigger in `.github/workflows/deploy.yml` and set Pages source to "GitHub Actions". See "Publishing to GitHub Pages" below.
 - **Question bank is at 288/850+** of the original stretch target. See `ROADMAP.md`.
 - No multi-child profiles, no NVR/problem-solving sections yet — both scoped in `ROADMAP.md` with rough effort/value notes.
 
@@ -96,24 +95,13 @@ npm run dev
 
 Then open **http://localhost:5173/uk-11-plus-practice/**. Progress is saved in that browser, so the child can pick up where they left off.
 
-## Publishing to GitHub Pages (not enabled yet)
+## The live site
 
-The code lives at <https://github.com/yinglanzheng15/uk-11-plus-practice>, currently **private**.
+**<https://yinglanzheng15.github.io/uk-11-plus-practice/>**
 
-GitHub Pages is not available for a private repository on the free plan, so the deployment workflow is set to **manual-only** and does not run on push. Everything needed to publish is already in place and the build is known to pass in CI.
+The repository is public and **Settings → Pages → Source** is set to **GitHub Actions**. Every push to `main` runs `.github/workflows/deploy.yml`, which runs the engine tests and the question-bank validator before building — so a broken bank or a failing test stops the deployment rather than shipping it. A deployment can also be re-run by hand from the **Actions** tab.
 
-To go live later, pick one:
-
-- **Make the repository public** — free. `gh repo edit yinglanzheng15/uk-11-plus-practice --visibility public`
-- **Upgrade to GitHub Pro** — keeps the repository private.
-
-Then:
-
-1. In `.github/workflows/deploy.yml`, uncomment the `push:` trigger.
-2. On GitHub, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
-3. `git push` — or run the workflow manually from the **Actions** tab.
-
-The site will then be at **https://yinglanzheng15.github.io/uk-11-plus-practice/**, updating on every push.
+The site is free to host and has no backend. The URL is public to anyone who has it, which is fine here: there is no login, no personal data and no way to identify a user. Each child's progress lives in their own browser and is visible only on their own device.
 
 ### If you rename the repository
 

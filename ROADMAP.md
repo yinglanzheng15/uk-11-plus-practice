@@ -44,45 +44,30 @@ Add them in batches by topic rather than scattering — it is easier to keep qua
 
 ---
 
-## 2. Getting it online
+## 2. Getting it online — **done**
 
-Right now the app only runs on this laptop while `npm run dev` is going. Three routes, cheapest first.
+The app is live at **<https://yinglanzheng15.github.io/uk-11-plus-practice/>**.
 
-### a) On a tablet or phone today, no hosting needed
+The repository was made public and **Settings → Pages → Source** set to **GitHub Actions**; the `push:` trigger in `.github/workflows/deploy.yml` is now enabled, so every push to `main` republishes the site. The workflow runs `npm test` and `npm run validate` before building, so a failing test or a broken question bank stops the deploy instead of shipping it.
 
-If the device is on the same wi-fi as this laptop:
+Nothing sensitive went public: the history was checked before the switch and contains only source files — no keys, and no progress data, which never leaves the browser.
+
+### If you would rather it were private
+
+Two alternatives, if the repository ever needs to go back to private:
+
+- **GitHub Pro** — keeps the repository private and Pages working, as a paid plan.
+- **Cloudflare Pages, Netlify or Vercel** — all deploy from a *private* GitHub repo on their free tiers. Connect the repo, set build command `npm run build` and output directory `dist`. One change is needed: these hosts serve from the domain root, so set `base: '/'` in `vite.config.ts`.
+
+### On a tablet without any hosting
+
+Still worth knowing. If the device is on the same wi-fi as the laptop:
 
 ```bash
 npm run dev -- --host
 ```
 
-Vite then prints a **Network** address such as `http://192.168.1.42:5173/uk-11-plus-practice/`. Open that on the tablet.
-
-Costs nothing and takes ten seconds. The catch: the laptop must be on and running the server, and it only works at home. Good for trying it out on the sofa; not good as the everyday setup.
-
-### b) GitHub Pages — free, but the repo must be public
-
-Already fully configured; blocked only because the repository is private and Pages needs a paid plan for private repos.
-
-```bash
-gh repo edit yinglanzheng15/uk-11-plus-practice --visibility public
-```
-
-Then uncomment the `push:` trigger in `.github/workflows/deploy.yml` and set **Settings → Pages → Source: GitHub Actions**. Live at `https://yinglanzheng15.github.io/uk-11-plus-practice/` within a couple of minutes, updating on every push.
-
-There is nothing sensitive in the repository — no keys, and no progress data, which never leaves the browser.
-
-### c) Keep the repo private and still host it free
-
-**Cloudflare Pages**, **Netlify** and **Vercel** all deploy from a *private* GitHub repo on their free tiers. Connect the repo, set build command `npm run build` and output directory `dist`, and it deploys on push like the GitHub workflow does.
-
-One change is needed: these hosts serve from the domain root, so set `base: '/'` in `vite.config.ts`.
-
-This is probably the best option if you want it private **and** online.
-
-### Worth knowing either way
-
-Once hosted, the URL is public to anyone who has it. That is fine here — there is no login, no personal data, and no way to identify a user. Progress stays in each browser, so the child's results are visible only on their own device.
+Vite prints a **Network** address such as `http://192.168.1.42:5173/uk-11-plus-practice/`. Useful for trying an unreleased change on the sofa; the laptop has to stay on.
 
 ---
 
