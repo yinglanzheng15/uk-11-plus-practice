@@ -51,6 +51,11 @@ export interface QuestionRecord {
   lastSeen: number
   /** Whether the most recent attempt was correct. */
   lastCorrect: boolean
+  /**
+   * Consecutive correct answers, reset to 0 by a mistake. Drives the spaced
+   * -repetition interval — see `REVIEW_INTERVAL_DAYS` in questionSelector.ts.
+   */
+  streak: number
 }
 
 export interface TopicKey {

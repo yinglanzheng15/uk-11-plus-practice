@@ -13,6 +13,12 @@ import {
 } from './logic/progress'
 import { addFeedback, clearFeedback, removeFeedback } from './logic/feedback'
 import { loadProgress, saveProgress, clearProgress } from './logic/storage'
+import {
+  clearSession,
+  loadSession,
+  saveSession,
+  type RestoredSession,
+} from './logic/sessionStorage'
 import { mainAnswers, sessionDurationMs, type SessionState } from './logic/session'
 import type { FeedbackReason, Progress, Question, SessionConfig } from './types'
 
@@ -22,6 +28,8 @@ interface ActiveSession {
   config: SessionConfig
   questions: Question[]
   note?: string
+  /** Present only when carrying on a session restored from a previous visit. */
+  initialState?: SessionState
   /** Bumped on restart so QuizSession remounts with fresh state. */
   key: number
 }
@@ -30,6 +38,9 @@ export default function App() {
   const [progress, setProgress] = useState<Progress>(() => loadProgress())
   const [view, setView] = useState<View>('home')
   const [session, setSession] = useState<ActiveSession | null>(null)
+  // Read once on load. A saved session is only *offered* — it is never resumed
+  // automatically, because the child may well want to start something else.
+  const [resumable, setResumable] = useState<RestoredSession | null>(() => loadSession())
 
   // Persist on every change, so a refresh mid-session never loses answered work.
   useEffect(() => {
@@ -40,6 +51,8 @@ export default function App() {
     (config: SessionConfig) => {
       const result = selectQuestions(config, progress)
       setProgress((p) => noteServed(p, result.questions.map((q) => q.id)))
+      setResumable(null)
+      clearSession()
       setSession({
         config,
         questions: result.questions,
@@ -49,6 +62,33 @@ export default function App() {
       setView('quiz')
     },
     [progress],
+  )
+
+  const handleResume = useCallback(() => {
+    if (!resumable) return
+    setSession({
+      config: resumable.state.config,
+      questions: resumable.state.questions,
+      note: resumable.note,
+      initialState: resumable.state,
+      key: resumable.savedAt,
+    })
+    setResumable(null)
+    setView('quiz')
+  }, [resumable])
+
+  const handleDiscardResume = useCallback(() => {
+    clearSession()
+    setResumable(null)
+  }, [])
+
+  const sessionNote = session?.note
+  const handlePersist = useCallback(
+    (state: SessionState) => {
+      if (state.phase === 'complete') clearSession()
+      else saveSession(state, sessionNote)
+    },
+    [sessionNote],
   )
 
   const handleRecord = useCallback((question: Question, correct: boolean) => {
@@ -78,7 +118,11 @@ export default function App() {
     )
   }, [])
 
+  // Stopping deliberately is a decision, not an interruption — there is nothing
+  // to come back to, so the snapshot goes with it.
   const handleExit = useCallback(() => {
+    clearSession()
+    setResumable(null)
     setSession(null)
     setView('home')
   }, [])
@@ -110,8 +154,20 @@ export default function App() {
     setProgress((p) => clearFeedback(p))
   }, [])
 
+  // A restore replaces the profile wholesale, so any half-done session from the
+  // old one is meaningless and goes too.
+  const handleRestore = useCallback((restored: Progress) => {
+    clearSession()
+    setResumable(null)
+    setSession(null)
+    setProgress(restored)
+  }, [])
+
   const handleReset = useCallback(() => {
     clearProgress()
+    clearSession()
+    setResumable(null)
+    setSession(null)
     setProgress(resetProgress())
   }, [])
 
@@ -149,7 +205,14 @@ export default function App() {
 
       <main>
         {view === 'home' && (
-          <Home progress={progress} onStart={startSession} onSetTimed={handleSetTimed} />
+          <Home
+            progress={progress}
+            onStart={startSession}
+            onSetTimed={handleSetTimed}
+            resumable={resumable}
+            onResume={handleResume}
+            onDiscardResume={handleDiscardResume}
+          />
         )}
 
         {view === 'quiz' && session && (
@@ -158,7 +221,9 @@ export default function App() {
             config={session.config}
             questions={session.questions}
             note={session.note}
+            initialState={session.initialState}
             onRecord={handleRecord}
+            onPersist={handlePersist}
             onFinish={handleFinish}
             onExit={handleExit}
             onRestart={handleRestart}
@@ -175,6 +240,7 @@ export default function App() {
             onAddNote={handleAddNote}
             onRemoveFeedback={handleRemoveFeedback}
             onClearFeedback={handleClearFeedback}
+            onRestore={handleRestore}
           />
         )}
       </main>

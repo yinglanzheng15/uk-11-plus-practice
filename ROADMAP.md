@@ -8,7 +8,17 @@ Ordered roughly by value for the child per unit of effort. Nothing here is requi
 
 **The single highest-value change.** Everything else is polish by comparison.
 
-There are currently **156 questions** (63 Maths, 41 English, 52 VR) across 4 comprehension passages. The anti-repetition logic remembers the last 60 questions served, so the bank is now comfortably above the point where that constraint has to keep relaxing.
+There are currently **288 questions** (104 Maths, 80 English, 104 VR) across 8 comprehension passages. The anti-repetition logic remembers the last 60 questions served, so the bank is now comfortably above the point where that constraint has to keep relaxing.
+
+### Done in the second expansion (156 → 288)
+
+- Hit the **280 target** in the table below, with every subject at or above its figure.
+- **Four new passages** — *The Sunflower Contest*, *Mooring at Dusk*, *The Birds That Almost Never Land* and *Why the Local Library Still Matters* — taking the total to 8. The last two are non-fiction and argument, which the bank previously had none of; the London consortium format uses both.
+- **Difficulty 4 nearly doubled**, from 9 to 46 questions bank-wide. It remains the thinnest band and is still where new questions are most valuable.
+- New maths questions carry a `verify` expression wherever the answer is a plain number, so their arithmetic is machine-proved.
+- The letter sequences, codes and hidden words were additionally checked by script — every shift rule, alphabet position and word boundary was confirmed programmatically rather than by eye.
+
+**Still outstanding: the human read-through.** `npm run validate` passes, but only the first 156 questions have been read by a person. Run `npm run review`, read `docs/review-sheet.md`, then `npm run review:accept`.
 
 ### Done in the first expansion (82 → 156)
 
@@ -22,11 +32,11 @@ There are currently **156 questions** (63 Maths, 41 English, 52 VR) across 4 com
 | Stage | Maths | English | VR | Total | Roughly |
 | --- | --- | --- | --- | --- | --- |
 | ~~Start~~ | ~~32~~ | ~~20~~ | ~~30~~ | ~~82~~ | ~1 week of variety |
-| **Now** | **63** | **41** | **52** | **156** | ~3 weeks |
-| Next | 100 | 80 | 100 | 280 | ~1 month |
+| ~~Then~~ | ~~63~~ | ~~41~~ | ~~52~~ | ~~156~~ | ~3 weeks |
+| **Now** | **104** | **80** | **104** | **288** | ~1 month |
 | Full | 300 | 250 | 300 | 850+ | a full year |
 
-Still worth adding: more comprehension passages (4 now, **8–10** is the target — passages are the fastest thing to memorise), and more difficulty-4 stretch questions, which remain the thinnest band.
+Still worth adding: more comprehension passages (8 now, **10–12** would be comfortable — passages are the fastest thing to memorise), and more difficulty-4 stretch questions, which remain the thinnest band despite nearly doubling.
 
 Add them in batches by topic rather than scattering — it is easier to keep quality and difficulty consistent that way. See `docs/question-format.md`. The validator catches structural mistakes, and `npm run validate` should be run after every batch.
 
@@ -76,19 +86,29 @@ Once hosted, the URL is public to anyone who has it. That is fine here — there
 
 ---
 
-## 3. Resume a session after a refresh
+## 3. Resume a session after a refresh — **done**
 
-**Known limitation.** Individual answers are saved as they happen, so nothing is lost from mastery or streaks. But the *session itself* lives only in memory — refresh or close the tab mid-quiz and you return to the home screen rather than question 7 of 20.
+Previously a refresh mid-quiz returned you to the home screen rather than question 7 of 20. Now `src/logic/sessionStorage.ts` snapshots the session on every transition and the home screen offers *"Carry on where you left off?"*.
 
-For a 20-question timed session that is genuinely annoying. Fix: persist the session state to `localStorage` on each transition and offer "Carry on where you left off?" on load. Moderate effort, contained in `src/App.tsx` and `src/logic/session.ts`.
+Details worth knowing:
+
+- Questions are stored as **ids** and rehydrated from the bank, so a snapshot cannot go stale against an edited question. If an id has vanished the snapshot is discarded rather than half-restored.
+- A snapshot older than **24 hours** is not offered. Coming back the next morning is reasonable; coming back to last week's half-quiz is not.
+- For a timed session the clock is **shifted, not restored** — a session saved with four minutes left resumes with four minutes left, rather than having burnt them while the tab was closed.
+- Stopping a session deliberately clears the snapshot. Only an interruption is recoverable.
 
 ---
 
-## 4. Space out revision over time
+## 4. Space out revision over time — **done**
 
-The selector currently favours questions that were answered wrong or not seen recently, with a mild bonus as time passes. It does not schedule deliberate revisit intervals.
+`src/logic/questionSelector.ts` now schedules revisits rather than merely preferring older questions. `QuestionRecord` gained a `streak` field (consecutive correct answers), and the interval ladder is `REVIEW_INTERVAL_DAYS = [0, 1, 3, 7, 21]`: right once means come back tomorrow, right four times running means come back in three weeks, and any mistake resets to due-immediately.
 
-Proper spaced repetition — revisit a correctly-answered question after 1 day, then 3, then 7, then 21 — is well matched to the app's stated goal of *retention over volume*, and the data needed (`lastSeen`, `lastCorrect`, `attempts`) is already stored. Contained almost entirely in `src/logic/questionSelector.ts`.
+Two properties were worth preserving and are covered by tests:
+
+- A question that is **not yet due** drops near the bottom of the ranking but stays in the pool, so a small bank or a narrow topic filter still fills a session.
+- An **unseen** question still outranks an overdue one — scheduling must not crowd out new material.
+
+Storage schema went to version 2. Profiles saved before this get `streak: 1` for anything last answered correctly, so they come round again tomorrow rather than all at once.
 
 ---
 
@@ -96,7 +116,7 @@ Proper spaced repetition — revisit a correctly-answered question after 1 day, 
 
 - ~~**Run the smoke test in CI.**~~ Done — `npm test` now runs in the workflow before the build.
 - **Act on flagged questions.** The Feedback tab collects question reports with their ids; there is no script yet that takes an exported feedback file and lists the flagged questions alongside their bank entries. A small `npm run triage` would close that loop.
-- **Export and import progress.** Since everything is local, a lost browser profile or a new device means starting from zero. A "download my progress" / "restore" pair of buttons in the parent view would fix that, and would also make moving from laptop to tablet painless.
+- ~~**Export and import progress.**~~ Done — the parent view has **Download progress** and **Restore from a file**. The file is plain JSON, produced in the browser and never uploaded. A restore is parsed and summarised (*"Saved on 10 August 2026: 412 questions answered across 38 sessions"*) before the parent confirms, because it replaces everything.
 - **More than one child.** One browser currently means one child. A simple profile picker would let siblings share a device.
 - **Per-question timing.** `elapsedMs` is already recorded but unused. The parent view could show which topics take longest — often more revealing than accuracy alone.
 - **A "why was I wrong?" review list.** Mistakes can be reviewed right after a session, but there is no way to revisit last week's explanations without re-answering.

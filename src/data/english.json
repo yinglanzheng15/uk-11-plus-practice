@@ -23,7 +23,11 @@
       "The ship is only mentioned at the very end, and she does not hear it."
     ],
     "learningPoint": "When a question asks 'why', find the sentence where the change happens and read the one just before it.",
-    "tags": ["comprehension", "inference", "fiction"]
+    "tags": [
+      "comprehension",
+      "inference",
+      "fiction"
+    ]
   },
   {
     "id": "english-comprehension-002",
@@ -49,7 +53,11 @@
       "This is the opposite of what 'relief' tells us."
     ],
     "learningPoint": "Characters often show a feeling through an unexpected reaction. Look at the emotion word the author actually uses.",
-    "tags": ["comprehension", "character", "inference"]
+    "tags": [
+      "comprehension",
+      "character",
+      "inference"
+    ]
   },
   {
     "id": "english-comprehension-003",
@@ -60,7 +68,12 @@
     "difficulty": 3,
     "passageId": "passage-lighthouse",
     "question": "In the phrase 'long, shuddering pushes', the word 'shuddering' most nearly means",
-    "options": ["shaking", "freezing", "howling", "sudden"],
+    "options": [
+      "shaking",
+      "freezing",
+      "howling",
+      "sudden"
+    ],
     "answer": 0,
     "explanation": "'Shuddering' describes a trembling or shaking movement, which fits the wind making the iron staircase hum.",
     "distractorNotes": [
@@ -70,7 +83,11 @@
       "The pushes are described as 'long', which is the opposite of sudden."
     ],
     "learningPoint": "For 'meaning in context' questions, put each option back into the sentence and see which one still makes sense.",
-    "tags": ["comprehension", "vocabulary", "context"]
+    "tags": [
+      "comprehension",
+      "vocabulary",
+      "context"
+    ]
   },
   {
     "id": "english-comprehension-004",
@@ -96,7 +113,10 @@
       "There is no second candle in the passage."
     ],
     "learningPoint": "Retrieval questions can be answered from the text itself — find the exact line rather than guessing.",
-    "tags": ["comprehension", "retrieval"]
+    "tags": [
+      "comprehension",
+      "retrieval"
+    ]
   },
   {
     "id": "english-comprehension-005",
@@ -122,7 +142,11 @@
       "The customer has not said anything yet."
     ],
     "learningPoint": "When a character's actions seem puzzling, the explanation is often in what they say at the end of the passage.",
-    "tags": ["comprehension", "inference", "author's intent"]
+    "tags": [
+      "comprehension",
+      "inference",
+      "author's intent"
+    ]
   },
   {
     "id": "english-comprehension-006",
@@ -148,7 +172,11 @@
       "There is nothing about illness in the passage."
     ],
     "learningPoint": "Small word choices such as 'particular' and 'kept' carry meaning — ask why the author chose that word instead of a plainer one.",
-    "tags": ["comprehension", "phrases", "inference"]
+    "tags": [
+      "comprehension",
+      "phrases",
+      "inference"
+    ]
   },
   {
     "id": "english-grammar-001",
@@ -158,7 +186,12 @@
     "type": "grammar",
     "difficulty": 2,
     "question": "In the sentence 'The exhausted runner collapsed gratefully onto the damp grass', which word is an adverb?",
-    "options": ["gratefully", "exhausted", "damp", "collapsed"],
+    "options": [
+      "gratefully",
+      "exhausted",
+      "damp",
+      "collapsed"
+    ],
     "answer": 0,
     "explanation": "'Gratefully' describes how the runner collapsed, so it modifies the verb and is an adverb.",
     "distractorNotes": [
@@ -168,8 +201,14 @@
       "'Collapsed' is the verb — the action itself."
     ],
     "learningPoint": "An adverb usually tells you how, when or where an action happens. Not every word ending in -ly is an adverb, though — 'friendly' is an adjective.",
-    "followUpIds": ["english-grammar-002"],
-    "tags": ["grammar", "word classes", "adverbs"]
+    "followUpIds": [
+      "english-grammar-002"
+    ],
+    "tags": [
+      "grammar",
+      "word classes",
+      "adverbs"
+    ]
   },
   {
     "id": "english-grammar-002",
@@ -179,7 +218,12 @@
     "type": "grammar",
     "difficulty": 2,
     "question": "In the sentence 'She spoke quietly to the nervous child', which word is an adjective?",
-    "options": ["nervous", "quietly", "spoke", "child"],
+    "options": [
+      "nervous",
+      "quietly",
+      "spoke",
+      "child"
+    ],
     "answer": 0,
     "explanation": "'Nervous' describes the noun 'child', so it is an adjective.",
     "distractorNotes": [
@@ -189,7 +233,11 @@
       "'Child' is the noun being described."
     ],
     "learningPoint": "Adjectives describe nouns; adverbs describe verbs.",
-    "tags": ["grammar", "word classes", "adjectives"]
+    "tags": [
+      "grammar",
+      "word classes",
+      "adjectives"
+    ]
   },
   {
     "id": "english-grammar-003",
@@ -214,7 +262,11 @@
       "This is a single main clause with two adjectives."
     ],
     "learningPoint": "A subordinate clause cannot stand alone. Words such as although, because, when, if and while often begin one.",
-    "tags": ["grammar", "clauses", "sentence structure"]
+    "tags": [
+      "grammar",
+      "clauses",
+      "sentence structure"
+    ]
   },
   {
     "id": "english-grammar-004",
@@ -239,7 +291,11 @@
       "'Fewer' is right, but 'was' does not agree with the plural 'cars'."
     ],
     "learningPoint": "Use 'fewer' for things you can count and 'less' for amounts you cannot count.",
-    "tags": ["grammar", "standard english", "agreement"]
+    "tags": [
+      "grammar",
+      "standard english",
+      "agreement"
+    ]
   },
   {
     "id": "english-punctuation-001",
@@ -264,7 +320,11 @@
       "You do not add another s after a plural that already ends in s."
     ],
     "learningPoint": "Plural noun already ending in s → apostrophe after the s. Singular noun → apostrophe then s.",
-    "tags": ["punctuation", "apostrophes", "possession"]
+    "tags": [
+      "punctuation",
+      "apostrophes",
+      "possession"
+    ]
   },
   {
     "id": "english-punctuation-002",
@@ -289,7 +349,11 @@
       "'Said' should not have a capital letter in the middle of a sentence."
     ],
     "learningPoint": "Punctuation that belongs to the spoken words goes inside the speech marks.",
-    "tags": ["punctuation", "speech", "commas"]
+    "tags": [
+      "punctuation",
+      "speech",
+      "commas"
+    ]
   },
   {
     "id": "english-spelling-001",
@@ -299,7 +363,12 @@
     "type": "spelling",
     "difficulty": 2,
     "question": "Which prefix turns 'legible' into a word meaning 'impossible to read'?",
-    "options": ["il-", "in-", "un-", "dis-"],
+    "options": [
+      "il-",
+      "in-",
+      "un-",
+      "dis-"
+    ],
     "answer": 0,
     "explanation": "'Illegible' means impossible to read. Before a word beginning with l, the prefix in- changes to il- so that it is easier to say.",
     "distractorNotes": [
@@ -309,7 +378,10 @@
       "'Dislegible' is not a word; dis- usually reverses an action, as in disappear."
     ],
     "learningPoint": "The prefix in- changes to match the next letter: il- before l, im- before m or p, and ir- before r.",
-    "tags": ["spelling", "prefixes"]
+    "tags": [
+      "spelling",
+      "prefixes"
+    ]
   },
   {
     "id": "english-spelling-002",
@@ -334,8 +406,14 @@
       "This needs the verb form 'affected'."
     ],
     "learningPoint": "Affect is an Action (verb); Effect is the End result (noun).",
-    "followUpIds": ["english-spelling-003"],
-    "tags": ["spelling", "confused words", "homophones"]
+    "followUpIds": [
+      "english-spelling-003"
+    ],
+    "tags": [
+      "spelling",
+      "confused words",
+      "homophones"
+    ]
   },
   {
     "id": "english-spelling-003",
@@ -345,7 +423,12 @@
     "type": "spelling",
     "difficulty": 2,
     "question": "Choose the correct word: 'The team played much better than ___ opponents.'",
-    "options": ["their", "there", "they're", "theirs"],
+    "options": [
+      "their",
+      "there",
+      "they're",
+      "theirs"
+    ],
     "answer": 0,
     "explanation": "'Their' shows possession — the opponents belong to the other team.",
     "distractorNotes": [
@@ -355,7 +438,10 @@
       "'Theirs' stands alone and is not followed by a noun."
     ],
     "learningPoint": "Their = belonging to them. There = a place. They're = they are.",
-    "tags": ["spelling", "homophones"]
+    "tags": [
+      "spelling",
+      "homophones"
+    ]
   },
   {
     "id": "english-spelling-004",
@@ -365,7 +451,12 @@
     "type": "spelling",
     "difficulty": 3,
     "question": "Which word is spelled correctly?",
-    "options": ["necessary", "neccessary", "necesary", "nessecary"],
+    "options": [
+      "necessary",
+      "neccessary",
+      "necesary",
+      "nessecary"
+    ],
     "answer": 0,
     "explanation": "'Necessary' has one c and two s's.",
     "distractorNotes": [
@@ -375,7 +466,10 @@
       "The letters have been swapped around."
     ],
     "learningPoint": "One collar and two sleeves — necessary has one c and two s's.",
-    "tags": ["spelling", "tricky words"]
+    "tags": [
+      "spelling",
+      "tricky words"
+    ]
   },
   {
     "id": "english-vocabulary-001",
@@ -385,7 +479,12 @@
     "type": "vocabulary",
     "difficulty": 3,
     "question": "Which word best completes the sentence? 'Despite the noise from the road, the old cat remained completely ___.'",
-    "options": ["unperturbed", "unaware", "unavailable", "unpleasant"],
+    "options": [
+      "unperturbed",
+      "unaware",
+      "unavailable",
+      "unpleasant"
+    ],
     "answer": 0,
     "explanation": "'Unperturbed' means untroubled or not bothered, which fits a cat that stays calm despite the noise.",
     "distractorNotes": [
@@ -395,7 +494,11 @@
       "'Unpleasant' describes character, not a reaction to noise."
     ],
     "learningPoint": "The word 'despite' signals a contrast — the answer must show the opposite of what you would expect.",
-    "tags": ["vocabulary", "context", "word choice"]
+    "tags": [
+      "vocabulary",
+      "context",
+      "word choice"
+    ]
   },
   {
     "id": "english-vocabulary-002",
@@ -420,7 +523,10 @@
       "The idiom is about how they coped, not whether they believed it."
     ],
     "learningPoint": "Idioms do not mean what the individual words say. Think about the picture behind the phrase.",
-    "tags": ["vocabulary", "idioms"]
+    "tags": [
+      "vocabulary",
+      "idioms"
+    ]
   },
   {
     "id": "english-vocabulary-003",
@@ -430,7 +536,12 @@
     "type": "vocabulary",
     "difficulty": 4,
     "question": "Which word is closest in meaning to 'reluctant'?",
-    "options": ["unwilling", "unable", "uninterested", "unkind"],
+    "options": [
+      "unwilling",
+      "unable",
+      "uninterested",
+      "unkind"
+    ],
     "answer": 0,
     "explanation": "'Reluctant' means hesitating to do something because you do not want to — in other words, unwilling.",
     "distractorNotes": [
@@ -440,7 +551,11 @@
       "'Unkind' describes how you treat others."
     ],
     "learningPoint": "Watch the difference between not wanting to (reluctant) and not being able to (unable).",
-    "tags": ["vocabulary", "synonyms", "shades of meaning"]
+    "tags": [
+      "vocabulary",
+      "synonyms",
+      "shades of meaning"
+    ]
   },
   {
     "id": "english-grammar-005",
@@ -465,7 +580,10 @@
       "This has the same problem as 'and I' and also sounds unnatural."
     ],
     "learningPoint": "Take the other person out of the sentence and see which pronoun still sounds right.",
-    "tags": ["grammar", "pronouns"]
+    "tags": [
+      "grammar",
+      "pronouns"
+    ]
   },
   {
     "id": "english-comprehension-007",
@@ -491,7 +609,10 @@
       "The parsnips are what a customer inspects, not where he stands."
     ],
     "learningPoint": "For a retrieval question, find the exact sentence rather than relying on memory.",
-    "tags": ["comprehension", "retrieval"]
+    "tags": [
+      "comprehension",
+      "retrieval"
+    ]
   },
   {
     "id": "english-comprehension-008",
@@ -517,7 +638,11 @@
       "Pitch is not what is being described here; strength is."
     ],
     "learningPoint": "Writers often use a word about one thing (a thin object) to describe another (a weak voice). Ask what quality is being borrowed.",
-    "tags": ["comprehension", "vocabulary", "context"]
+    "tags": [
+      "comprehension",
+      "vocabulary",
+      "context"
+    ]
   },
   {
     "id": "english-comprehension-009",
@@ -543,7 +668,10 @@
       "The refuge box is not locked, and it is only mentioned near the end."
     ],
     "learningPoint": "When numbers appear in a passage, look at the sentence before them to find out what they measure.",
-    "tags": ["comprehension", "retrieval"]
+    "tags": [
+      "comprehension",
+      "retrieval"
+    ]
   },
   {
     "id": "english-comprehension-010",
@@ -569,7 +697,11 @@
       "The shape of the causeway is not what the image is describing."
     ],
     "learningPoint": "When asked why a comparison is used, look for the one quality that both things share — here, the speed.",
-    "tags": ["comprehension", "imagery", "inference"]
+    "tags": [
+      "comprehension",
+      "imagery",
+      "inference"
+    ]
   },
   {
     "id": "english-comprehension-011",
@@ -595,7 +727,11 @@
       "He checked the times twice, and the passage does not say he got them wrong."
     ],
     "learningPoint": "When a character's actions contradict their words, trust the actions — that gap is usually the point.",
-    "tags": ["comprehension", "inference", "character"]
+    "tags": [
+      "comprehension",
+      "inference",
+      "character"
+    ]
   },
   {
     "id": "english-comprehension-012",
@@ -621,7 +757,11 @@
       "The line about being 'exactly as foolish as he had been' suggests he has recognised his mistake."
     ],
     "learningPoint": "The last line of a passage often changes what the story is really about — read it especially carefully.",
-    "tags": ["comprehension", "author's intent", "inference"]
+    "tags": [
+      "comprehension",
+      "author's intent",
+      "inference"
+    ]
   },
   {
     "id": "english-comprehension-013",
@@ -647,7 +787,11 @@
       "Her mother only asks how school is going; no such instruction is given."
     ],
     "learningPoint": "What a character does *not* say can be as revealing as what they do say.",
-    "tags": ["comprehension", "inference", "character"]
+    "tags": [
+      "comprehension",
+      "inference",
+      "character"
+    ]
   },
   {
     "id": "english-comprehension-014",
@@ -673,7 +817,11 @@
       "Nothing suggests she prepared the answer in advance."
     ],
     "learningPoint": "With an unusual comparison, ask which single quality the writer is borrowing — here, being accurate but incomplete.",
-    "tags": ["comprehension", "imagery", "inference"]
+    "tags": [
+      "comprehension",
+      "imagery",
+      "inference"
+    ]
   },
   {
     "id": "english-comprehension-015",
@@ -699,7 +847,11 @@
       "There is no test; this is during silent reading."
     ],
     "learningPoint": "Small, deliberate actions in a story usually signal something important about a character.",
-    "tags": ["comprehension", "inference", "character"]
+    "tags": [
+      "comprehension",
+      "inference",
+      "character"
+    ]
   },
   {
     "id": "english-comprehension-016",
@@ -725,7 +877,10 @@
       "Her old school is never mentioned."
     ],
     "learningPoint": "For a summary question, choose the option that fits the whole passage — including the parts that qualify or limit it.",
-    "tags": ["comprehension", "summarising"]
+    "tags": [
+      "comprehension",
+      "summarising"
+    ]
   },
   {
     "id": "english-grammar-006",
@@ -735,7 +890,12 @@
     "type": "grammar",
     "difficulty": 1,
     "question": "In the sentence 'The dog barked loudly at the postman', which word is a noun?",
-    "options": ["postman", "barked", "loudly", "at"],
+    "options": [
+      "postman",
+      "barked",
+      "loudly",
+      "at"
+    ],
     "answer": 0,
     "explanation": "A noun names a person, place or thing. 'Postman' names a person, so it is a noun.",
     "distractorNotes": [
@@ -745,7 +905,11 @@
       "'At' is a preposition, showing direction."
     ],
     "learningPoint": "A noun is a naming word: a person, place or thing.",
-    "tags": ["grammar", "word classes", "nouns"]
+    "tags": [
+      "grammar",
+      "word classes",
+      "nouns"
+    ]
   },
   {
     "id": "english-grammar-007",
@@ -770,7 +934,11 @@
       "'Catch' here describes something that happens regularly."
     ],
     "learningPoint": "Find the verb first, then ask whether the action has happened, is happening, or has yet to happen.",
-    "tags": ["grammar", "verbs", "tense"]
+    "tags": [
+      "grammar",
+      "verbs",
+      "tense"
+    ]
   },
   {
     "id": "english-punctuation-003",
@@ -795,7 +963,10 @@
       "The first word of a sentence needs a capital, and 'Museum' is part of the building's name."
     ],
     "learningPoint": "Capital letters go on names, days, months and the first word of a sentence — not on ordinary words.",
-    "tags": ["punctuation", "capital letters"]
+    "tags": [
+      "punctuation",
+      "capital letters"
+    ]
   },
   {
     "id": "english-punctuation-004",
@@ -820,7 +991,11 @@
       "The comma between the first two items is missing."
     ],
     "learningPoint": "In a list, put commas between the items and 'and' before the last one.",
-    "tags": ["punctuation", "commas", "lists"]
+    "tags": [
+      "punctuation",
+      "commas",
+      "lists"
+    ]
   },
   {
     "id": "english-punctuation-005",
@@ -845,7 +1020,11 @@
       "The comma has been placed inside the clause rather than at its start."
     ],
     "learningPoint": "Extra information in the middle of a sentence needs a comma at both ends. Test it by removing the clause — the sentence should still make sense.",
-    "tags": ["punctuation", "commas", "clauses"]
+    "tags": [
+      "punctuation",
+      "commas",
+      "clauses"
+    ]
   },
   {
     "id": "english-spelling-005",
@@ -855,7 +1034,12 @@
     "type": "spelling",
     "difficulty": 1,
     "question": "What is the plural of 'baby'?",
-    "options": ["babies", "babys", "babyes", "babries"],
+    "options": [
+      "babies",
+      "babys",
+      "babyes",
+      "babries"
+    ],
     "answer": 0,
     "explanation": "When a word ends in a consonant followed by y, the y changes to i and you add -es: baby becomes babies.",
     "distractorNotes": [
@@ -865,7 +1049,10 @@
       "No extra letters are added to the middle of the word."
     ],
     "learningPoint": "Consonant + y at the end of a word: change the y to i and add -es.",
-    "tags": ["spelling", "plurals"]
+    "tags": [
+      "spelling",
+      "plurals"
+    ]
   },
   {
     "id": "english-spelling-006",
@@ -875,7 +1062,12 @@
     "type": "spelling",
     "difficulty": 2,
     "question": "Which spelling is correct?",
-    "options": ["beginning", "begining", "begginning", "beggining"],
+    "options": [
+      "beginning",
+      "begining",
+      "begginning",
+      "beggining"
+    ],
     "answer": 0,
     "explanation": "'Begin' ends in a single vowel followed by a single consonant and is stressed on the last syllable, so the n doubles before -ing.",
     "distractorNotes": [
@@ -885,7 +1077,10 @@
       "This doubles the g instead of the n."
     ],
     "learningPoint": "Short vowel + single consonant at the end of a stressed syllable: double the consonant before adding -ing or -ed.",
-    "tags": ["spelling", "suffixes"]
+    "tags": [
+      "spelling",
+      "suffixes"
+    ]
   },
   {
     "id": "english-spelling-007",
@@ -895,7 +1090,12 @@
     "type": "spelling",
     "difficulty": 3,
     "question": "Choose the correct word: 'The path was much steeper than we had ___ expected.'",
-    "options": ["at first", "at first,", "atfirst", "a first"],
+    "options": [
+      "at first",
+      "at first,",
+      "atfirst",
+      "a first"
+    ],
     "answer": 0,
     "explanation": "'At first' is written as two separate words and needs no comma in the middle of this sentence.",
     "distractorNotes": [
@@ -905,7 +1105,10 @@
       "'A first' means something different — a first attempt or a first place."
     ],
     "learningPoint": "Some common phrases are always two words: at first, a lot, in fact, as well.",
-    "tags": ["spelling", "confused words"]
+    "tags": [
+      "spelling",
+      "confused words"
+    ]
   },
   {
     "id": "english-vocabulary-004",
@@ -915,7 +1118,12 @@
     "type": "vocabulary",
     "difficulty": 1,
     "question": "Which word means most nearly the same as 'enormous'?",
-    "options": ["huge", "heavy", "ancient", "empty"],
+    "options": [
+      "huge",
+      "heavy",
+      "ancient",
+      "empty"
+    ],
     "answer": 0,
     "explanation": "'Enormous' means extremely large, which is what 'huge' means.",
     "distractorNotes": [
@@ -925,7 +1133,10 @@
       "'Empty' describes what is inside something, not how big it is."
     ],
     "learningPoint": "Check that the synonym describes the same quality — size, age and weight are all different things.",
-    "tags": ["vocabulary", "synonyms"]
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ]
   },
   {
     "id": "english-vocabulary-005",
@@ -935,7 +1146,12 @@
     "type": "vocabulary",
     "difficulty": 2,
     "question": "What does the prefix 'trans-' mean in the word 'transport'?",
-    "options": ["across", "under", "before", "again"],
+    "options": [
+      "across",
+      "under",
+      "before",
+      "again"
+    ],
     "answer": 0,
     "explanation": "'Trans-' means across, so transport is carrying something across a distance, and transatlantic means across the Atlantic.",
     "distractorNotes": [
@@ -945,7 +1161,11 @@
       "'Again' is the meaning of re-, as in rebuild."
     ],
     "learningPoint": "Knowing common prefixes lets you work out unfamiliar words: trans- across, sub- under, pre- before, re- again.",
-    "tags": ["vocabulary", "prefixes", "word building"]
+    "tags": [
+      "vocabulary",
+      "prefixes",
+      "word building"
+    ]
   },
   {
     "id": "english-vocabulary-006",
@@ -955,7 +1175,12 @@
     "type": "vocabulary",
     "difficulty": 4,
     "question": "Which word best completes the sentence? 'Her explanation was so ___ that nobody was left with a single question.'",
-    "options": ["thorough", "lengthy", "confident", "polite"],
+    "options": [
+      "thorough",
+      "lengthy",
+      "confident",
+      "polite"
+    ],
     "answer": 0,
     "explanation": "'Thorough' means complete and covering everything, which is exactly why no questions were left.",
     "distractorNotes": [
@@ -965,6 +1190,1151 @@
       "Politeness has nothing to do with how complete an explanation is."
     ],
     "learningPoint": "Look for the word whose meaning explains the result described in the rest of the sentence.",
-    "tags": ["vocabulary", "context", "word choice"]
+    "tags": [
+      "vocabulary",
+      "context",
+      "word choice"
+    ]
+  },
+  {
+    "id": "english-comprehension-017",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "retrieval",
+    "type": "comprehension-retrieval",
+    "difficulty": 2,
+    "passageId": "passage-allotment",
+    "question": "How tall was Grandad's sunflower on the last Saturday in August?",
+    "options": [
+      "Two metres and nineteen centimetres",
+      "Two metres and four centimetres",
+      "Two metres and fourteen centimetres",
+      "Two metres and ninety centimetres"
+    ],
+    "answer": 0,
+    "explanation": "The fourth paragraph gives both heights: Priya's was two metres and four centimetres, and Grandad's was two metres and nineteen.",
+    "distractorNotes": [
+      "",
+      "This is Priya's sunflower, not Grandad's.",
+      "This misreads 'nineteen' as 'fourteen'.",
+      "This misreads 'nineteen' as 'ninety'."
+    ],
+    "learningPoint": "When two numbers appear close together, check carefully which one belongs to which person.",
+    "tags": [
+      "comprehension",
+      "retrieval"
+    ]
+  },
+  {
+    "id": "english-comprehension-018",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "meaning_of_phrases",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-allotment",
+    "question": "'as though a plant could be persuaded by good record-keeping'. What does this phrase suggest?",
+    "options": [
+      "Priya's careful notes could not actually make the sunflower grow.",
+      "Priya wrote her measurements down wrongly and confused herself.",
+      "Priya only kept records because Grandad had told her to.",
+      "Priya preferred writing in her notebook to gardening itself."
+    ],
+    "answer": 0,
+    "explanation": "'As though' signals something that is not really true. The writer is gently pointing out that measuring a plant carefully has no effect at all on how it grows.",
+    "distractorNotes": [
+      "",
+      "Nothing suggests her measurements were inaccurate — the passage treats them as reliable.",
+      "The contest was Grandad's idea, but the notebook was entirely hers.",
+      "She clearly cares about the sunflower itself; the notebook is how she shows it."
+    ],
+    "learningPoint": "'As though' and 'as if' usually introduce a comparison the writer does not actually believe.",
+    "tags": [
+      "comprehension",
+      "figurative language",
+      "inference"
+    ]
+  },
+  {
+    "id": "english-comprehension-019",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "character_motivation",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-allotment",
+    "question": "Grandad explains that his sunflower is against a warm wall. Why does the writer say this 'somehow made it worse'?",
+    "options": [
+      "He is not boasting, so Priya cannot even be annoyed with him fairly.",
+      "He is admitting that he cheated, which spoils the whole contest.",
+      "He is showing that Priya had misunderstood the rules from the start.",
+      "He is refusing to tell her why his sunflower has grown so tall."
+    ],
+    "answer": 0,
+    "explanation": "The passage says he said it 'without any triumph at all'. If he had gloated, Priya could have been cross with him; because he does not, her frustration has nowhere to go.",
+    "distractorNotes": [
+      "",
+      "Nothing in the rules said where the seeds had to be planted, so this is not cheating.",
+      "Priya understood the rules perfectly — what she had missed was the warm wall.",
+      "He answers her question directly and fully as soon as she asks it."
+    ],
+    "learningPoint": "Ask why a character's reaction is surprising — the reason is usually the point the writer is making.",
+    "tags": [
+      "comprehension",
+      "character",
+      "inference"
+    ]
+  },
+  {
+    "id": "english-comprehension-020",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "inference",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-allotment",
+    "question": "What has Priya done by the following October?",
+    "options": [
+      "Given Grandad the open lawn and kept the warm wall for herself.",
+      "Refused to take part in the sunflower contest for a second year.",
+      "Planted her seeds much earlier than Grandad planted his.",
+      "Asked Grandad to move his sunflower away from the brick wall."
+    ],
+    "answer": 0,
+    "explanation": "The last paragraph says Grandad's seeds were 'planted in the middle of the lawn' and the wall had been left 'for somebody else' — that somebody else is Priya.",
+    "distractorNotes": [
+      "",
+      "The new seeds going in shows she is very much taking part again.",
+      "Both sets of seeds go in during October, as they did the first year.",
+      "She does not ask him anything; she simply rearranges the planting."
+    ],
+    "learningPoint": "When a passage says 'somebody else' without naming them, work out from the rest of the paragraph who it must be.",
+    "tags": [
+      "comprehension",
+      "inference",
+      "plot"
+    ]
+  },
+  {
+    "id": "english-comprehension-021",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "authors_intent",
+    "type": "comprehension-inference",
+    "difficulty": 4,
+    "passageId": "passage-allotment",
+    "question": "Why does the writer end with Grandad fetching a second notebook?",
+    "options": [
+      "It shows he admires her determination and wants to join in with it.",
+      "It shows he intends to keep a record of how badly she does.",
+      "It shows he has decided the contest has become too serious.",
+      "It shows he wants to prove that record-keeping is pointless."
+    ],
+    "answer": 0,
+    "explanation": "He laughs 'for a good minute', which is affectionate rather than annoyed, and then adopts her method — the notebook and even the ruled columns. Taking up somebody's habit is a way of approving of it.",
+    "distractorNotes": [
+      "",
+      "The laughter is warm, and there is nothing unkind anywhere in the ending.",
+      "He is happily starting another year of it, which is the opposite of calling a halt.",
+      "He is now keeping records himself, so he can hardly be arguing they are pointless."
+    ],
+    "learningPoint": "Endings often show a change in a relationship. Ask what a character does differently from before.",
+    "tags": [
+      "comprehension",
+      "author's purpose",
+      "inference"
+    ]
+  },
+  {
+    "id": "english-comprehension-022",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "retrieval",
+    "type": "comprehension-retrieval",
+    "difficulty": 1,
+    "passageId": "passage-canal",
+    "question": "What is the name of the boat?",
+    "options": [
+      "Marigold",
+      "Moorhen",
+      "Towpath",
+      "Nettle"
+    ],
+    "answer": 0,
+    "explanation": "The very first sentence gives the name: 'The boat was called the Marigold'.",
+    "distractorNotes": [
+      "",
+      "A moorhen is a bird Ben hears in the reeds, not the boat.",
+      "The towpath is the path beside the canal.",
+      "This word does not appear in the passage at all."
+    ],
+    "learningPoint": "Straightforward retrieval questions are usually answered in the first or last sentence of a paragraph.",
+    "tags": [
+      "comprehension",
+      "retrieval"
+    ]
+  },
+  {
+    "id": "english-comprehension-023",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "retrieval",
+    "type": "comprehension-inference",
+    "difficulty": 2,
+    "passageId": "passage-canal",
+    "question": "Why does Ben's aunt say that listening matters more than looking?",
+    "options": [
+      "The boat cannot leave the channel, but sounds warn her what is ahead.",
+      "She finds it difficult to see clearly while she is holding her tea.",
+      "The canal is usually too foggy in the evening for her to see far.",
+      "She has travelled this canal so often that she knows it by heart."
+    ],
+    "answer": 0,
+    "explanation": "She says that on a canal 'there was nowhere else to go, so looking was mostly a formality', and then lists the sounds — the engine, the bow, the hull — that tell her what is happening.",
+    "distractorNotes": [
+      "",
+      "The tea is a detail about her manner, not a reason she gives.",
+      "The passage never mentions fog or poor visibility.",
+      "She may know the canal well, but that is not the reason she gives Ben."
+    ],
+    "learningPoint": "When a question asks why a character says something, use the reason they give, not one you can imagine.",
+    "tags": [
+      "comprehension",
+      "retrieval",
+      "inference"
+    ]
+  },
+  {
+    "id": "english-comprehension-024",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "character_motivation",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-canal",
+    "question": "'his aunt said nothing about either, which he appreciated more than praise.' Why did Ben appreciate her silence?",
+    "options": [
+      "Being left to get on with it made him feel trusted rather than watched.",
+      "He was embarrassed about the crooked pin and hoped she had not noticed.",
+      "He found his aunt's voice irritating after a long day on the water.",
+      "He knew that praise from her would not have been genuinely meant."
+    ],
+    "answer": 0,
+    "explanation": "She says nothing about the crooked pin *or* the good one. Not commenting on either treats him as somebody capable of judging his own work, which is why it means more to him than being praised.",
+    "distractorNotes": [
+      "",
+      "If it were only about the crooked one, her silence about the good one would not matter.",
+      "The passage shows him listening to her with real interest.",
+      "Nothing suggests he doubts her sincerity."
+    ],
+    "learningPoint": "Notice what a character does *not* do — silence and inaction can be as revealing as speech.",
+    "tags": [
+      "comprehension",
+      "character",
+      "inference"
+    ]
+  },
+  {
+    "id": "english-comprehension-025",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "authors_intent",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-canal",
+    "question": "Why does the writer list the sounds Ben hears once the engine is switched off?",
+    "options": [
+      "To show how much he notices once the noise has stopped.",
+      "To suggest that the mooring is a noisier place than it looks.",
+      "To warn the reader that something is about to go wrong.",
+      "To explain why Ben found it hard to get to sleep that night."
+    ],
+    "answer": 0,
+    "explanation": "The paragraph says the sounds 'he had not known were there arrived one after another'. Listing them one by one makes the reader notice them in the same way Ben suddenly does.",
+    "distractorNotes": [
+      "",
+      "The sounds are small and distant; the effect is of quiet, not noise.",
+      "The passage is calm throughout and nothing goes wrong.",
+      "Sleep is never mentioned."
+    ],
+    "learningPoint": "A list is a deliberate choice. Ask what effect the piling-up of details has on the reader.",
+    "tags": [
+      "comprehension",
+      "author's purpose",
+      "structure"
+    ]
+  },
+  {
+    "id": "english-comprehension-026",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "meaning_of_phrases",
+    "type": "comprehension-inference",
+    "difficulty": 4,
+    "passageId": "passage-canal",
+    "question": "'without sounding like somebody much older than eleven'. What is Ben's difficulty at the end?",
+    "options": [
+      "Admitting he enjoyed the quiet would sound oddly grown-up to his friends.",
+      "He cannot remember enough of the week to describe it to his friends.",
+      "His friends would not believe that the boat travelled so slowly.",
+      "He is worried that his friends will think the holiday sounds expensive."
+    ],
+    "answer": 0,
+    "explanation": "He had told his friends the week would be 'a week of nothing happening', and has found the opposite. Saying that a slow, quiet week was the best part is the sort of thing adults say, which is what makes it awkward to admit.",
+    "distractorNotes": [
+      "",
+      "He remembers the week vividly — the whole passage is full of what he noticed.",
+      "The slowness is something he has come to like, not something he must convince them of.",
+      "Money is never mentioned in the passage."
+    ],
+    "learningPoint": "In a closing line, work out what the character would have to admit — that is usually where the meaning sits.",
+    "tags": [
+      "comprehension",
+      "inference",
+      "character"
+    ]
+  },
+  {
+    "id": "english-comprehension-027",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "retrieval",
+    "type": "comprehension-retrieval",
+    "difficulty": 1,
+    "passageId": "passage-swifts",
+    "question": "How long may a young swift stay in the air after leaving the nest?",
+    "options": [
+      "Two or three years",
+      "Two or three months",
+      "Two or three weeks",
+      "Two or three days"
+    ],
+    "answer": 0,
+    "explanation": "The second paragraph says a young swift 'may not touch down again for two or even three years'.",
+    "distractorNotes": [
+      "",
+      "Months would not allow time for several journeys to Africa and back.",
+      "This is far too short — the passage is describing years, not weeks.",
+      "This would make the swift no more remarkable than any other bird."
+    ],
+    "learningPoint": "For a fact question, find the sentence that states it and read the unit of time exactly.",
+    "tags": [
+      "comprehension",
+      "retrieval",
+      "non-fiction"
+    ]
+  },
+  {
+    "id": "english-comprehension-028",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "retrieval",
+    "type": "comprehension-retrieval",
+    "difficulty": 2,
+    "passageId": "passage-swifts",
+    "question": "According to the passage, why have swift numbers fallen in Britain?",
+    "options": [
+      "Modern roof repairs seal up the gaps where swifts nest.",
+      "Swifts are being caught by predators on their way to Africa.",
+      "The insects that swifts feed on have almost entirely disappeared.",
+      "Swifts are being confused by the lights of modern towns."
+    ],
+    "answer": 0,
+    "explanation": "The fourth paragraph gives one clear reason: swifts nest in gaps under the eaves of older buildings, and modern repairs close those gaps up.",
+    "distractorNotes": [
+      "",
+      "Predators are never mentioned in the passage.",
+      "Food supply is not given as a reason, although the birds do feed on the wing.",
+      "The passage says nothing about lighting."
+    ],
+    "learningPoint": "In non-fiction, answer from the reason the text actually gives, even if other reasons sound likely.",
+    "tags": [
+      "comprehension",
+      "retrieval",
+      "non-fiction"
+    ]
+  },
+  {
+    "id": "english-comprehension-029",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "vocabulary_in_context",
+    "type": "comprehension-vocabulary",
+    "difficulty": 3,
+    "passageId": "passage-swifts",
+    "question": "The swift is described as 'scythe-shaped'. What does this tell us about the bird?",
+    "options": [
+      "Its wings sweep back in a long, narrow curve.",
+      "It is far larger than most other garden birds.",
+      "It has a sharp beak for catching insects in flight.",
+      "Its feathers are a dull, metallic silver colour."
+    ],
+    "answer": 0,
+    "explanation": "A scythe is a tool with a long curved blade used for cutting grass. Describing the bird as scythe-shaped tells us about its outline: swept-back, curved and narrow.",
+    "distractorNotes": [
+      "",
+      "A scythe is thin and curved; the comparison says nothing about size.",
+      "The blade of a scythe is sharp, but the comparison is about shape, not the beak.",
+      "The passage describes the bird as dark, and a shape comparison is not about colour."
+    ],
+    "learningPoint": "When a writer compares something to an object, work out which property of the object is meant — usually shape, movement or sound.",
+    "tags": [
+      "comprehension",
+      "vocabulary",
+      "imagery"
+    ]
+  },
+  {
+    "id": "english-comprehension-030",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "authors_intent",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-swifts",
+    "question": "Why does the writer mention pilots and tracking devices?",
+    "options": [
+      "To show how a claim that sounded impossible was gradually proved.",
+      "To argue that scientists should have believed the pilots sooner.",
+      "To explain how tracking devices are attached to small birds.",
+      "To show that swifts are dangerous to aircraft flying at night."
+    ],
+    "answer": 0,
+    "explanation": "The paragraph begins by admitting that sleeping in flight 'sounds impossible', then gives the evidence in order: first the pilots' reports, then the tracking data. The point is how the belief changed.",
+    "distractorNotes": [
+      "",
+      "The writer does not criticise anyone; the doubt is presented as reasonable.",
+      "The passage mentions only that the devices are light enough to be safe.",
+      "No danger to aircraft is suggested anywhere."
+    ],
+    "learningPoint": "When evidence is given in order, ask what the sequence is meant to show — often that a belief changed over time.",
+    "tags": [
+      "comprehension",
+      "author's purpose",
+      "non-fiction"
+    ]
+  },
+  {
+    "id": "english-comprehension-031",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "summarising",
+    "type": "comprehension-inference",
+    "difficulty": 4,
+    "passageId": "passage-swifts",
+    "question": "Which sentence best sums up the final paragraph?",
+    "options": [
+      "Helping swifts is unusually cheap and simple to do.",
+      "Swifts will recover in Britain without any human help.",
+      "New houses should not be built where swifts already nest.",
+      "Only conservation experts can solve the swifts' problem."
+    ],
+    "answer": 0,
+    "explanation": "The paragraph says a swift box or a special brick 'costs very little and lasts for decades', and ends by noting how rare it is for saving a species to be this straightforward.",
+    "distractorNotes": [
+      "",
+      "The paragraph is about action being needed, not about the problem solving itself.",
+      "The passage suggests adapting new houses, not stopping them being built.",
+      "The whole point is that this is something ordinary people can do."
+    ],
+    "learningPoint": "A summary must cover the paragraph's main claim, not just one detail from inside it.",
+    "tags": [
+      "comprehension",
+      "summarising",
+      "non-fiction"
+    ]
+  },
+  {
+    "id": "english-comprehension-032",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "retrieval",
+    "type": "comprehension-retrieval",
+    "difficulty": 2,
+    "passageId": "passage-library",
+    "question": "According to the passage, roughly what does a library service cost a household each year?",
+    "options": [
+      "A few pounds",
+      "A few hundred pounds",
+      "A few pence",
+      "Nothing at all"
+    ],
+    "answer": 0,
+    "explanation": "The third paragraph says the cost is 'a few pounds a year, less than a single paperback'.",
+    "distractorNotes": [
+      "",
+      "Hundreds of pounds is what the writer says research databases would cost an individual.",
+      "The passage compares the cost to a paperback, which is pounds rather than pence.",
+      "The writer's point is that the cost is small, not that there is none."
+    ],
+    "learningPoint": "Comparisons such as 'less than a paperback' are there to fix the size of a number — use them.",
+    "tags": [
+      "comprehension",
+      "retrieval",
+      "non-fiction"
+    ]
+  },
+  {
+    "id": "english-comprehension-033",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "authors_intent",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-library",
+    "question": "Why does the writer describe particular library users in the second paragraph?",
+    "options": [
+      "To show that libraries meet needs a website cannot meet.",
+      "To show that libraries are used by very few people now.",
+      "To argue that libraries should charge those who can afford it.",
+      "To suggest that most library users are children doing homework."
+    ],
+    "answer": 0,
+    "explanation": "Each example needs something a screen cannot provide — a warm room, a quiet hour, another adult to talk to. The paragraph ends by saying exactly that: 'None of these needs is met by a website.'",
+    "distractorNotes": [
+      "",
+      "The examples are chosen to show variety of use, not scarcity.",
+      "Charging is never suggested; the writer stresses that entry is free.",
+      "The child is only the first of three quite different examples."
+    ],
+    "learningPoint": "In an argument, examples are chosen to prove a point — look for the sentence that states the point directly.",
+    "tags": [
+      "comprehension",
+      "author's purpose",
+      "non-fiction"
+    ]
+  },
+  {
+    "id": "english-comprehension-034",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "meaning_of_phrases",
+    "type": "comprehension-inference",
+    "difficulty": 3,
+    "passageId": "passage-library",
+    "question": "'A library that stood still would indeed deserve the accusation of being a museum.' What is the writer doing here?",
+    "options": [
+      "Granting that the criticism would be fair, if it were true.",
+      "Agreeing that libraries have failed to change at all.",
+      "Arguing that museums are a poor use of public money.",
+      "Suggesting that libraries should become museums instead."
+    ],
+    "answer": 0,
+    "explanation": "The writer accepts the criticism in principle — 'would indeed deserve' — and then immediately answers it with 'Very few have stood still.' Conceding a point before answering it makes an argument more convincing.",
+    "distractorNotes": [
+      "",
+      "The very next sentence says the opposite: very few libraries have stood still.",
+      "Museums are used only as a comparison; the writer makes no claim about them.",
+      "The writer is defending libraries as they are now, not proposing a change."
+    ],
+    "learningPoint": "Writers often admit a point against them before answering it. Read the following sentence to find the answer.",
+    "tags": [
+      "comprehension",
+      "argument",
+      "non-fiction"
+    ]
+  },
+  {
+    "id": "english-comprehension-035",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "authors_intent",
+    "type": "comprehension-inference",
+    "difficulty": 4,
+    "passageId": "passage-library",
+    "question": "How does the writer treat the argument that libraries have had their day?",
+    "options": [
+      "They state it fairly, then set out why it does not hold.",
+      "They ignore it and describe what libraries do instead.",
+      "They dismiss it immediately as not worth answering.",
+      "They accept it but say the cost is too small to matter."
+    ],
+    "answer": 0,
+    "explanation": "The opening paragraph sets the argument out clearly and even calls it 'modern and sensible' before adding that it is 'mostly wrong'. The rest of the passage then answers it point by point.",
+    "distractorNotes": [
+      "",
+      "The argument is addressed directly in the first paragraph, not avoided.",
+      "The writer calls it sensible-sounding before disagreeing, which is not dismissal.",
+      "The writer disagrees with the argument rather than accepting it."
+    ],
+    "learningPoint": "Ask how a writer handles the opposing view — stating it fairly first is a deliberate persuasive technique.",
+    "tags": [
+      "comprehension",
+      "argument",
+      "author's purpose"
+    ]
+  },
+  {
+    "id": "english-comprehension-036",
+    "subject": "english",
+    "topic": "Comprehension",
+    "skill": "inference",
+    "type": "comprehension-inference",
+    "difficulty": 4,
+    "passageId": "passage-library",
+    "question": "'without being expected to spend a penny'. Why does the writer think this matters?",
+    "options": [
+      "Almost nowhere else is now open to someone with no money.",
+      "Libraries would lose their character if they began charging.",
+      "Books are too expensive for most families to buy themselves.",
+      "Councils save money when buildings take no payments at all."
+    ],
+    "answer": 0,
+    "explanation": "The phrase comes in a sentence calling the library 'one of the last buildings' where this is true. The writer's point is about how rare such a place has become, not about books alone.",
+    "distractorNotes": [
+      "",
+      "Charging is not being proposed; the writer is describing what already exists.",
+      "The cost of books is a smaller point made earlier, not this one.",
+      "Taking no payments does not save a council money — it is the opposite."
+    ],
+    "learningPoint": "Read a quoted phrase in the whole sentence it comes from. Words such as 'one of the last' carry the meaning.",
+    "tags": [
+      "comprehension",
+      "inference",
+      "argument"
+    ]
+  },
+  {
+    "id": "english-grammar-008",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "word_classes",
+    "type": "grammar",
+    "difficulty": 1,
+    "question": "Which word in this sentence is an adverb? 'The old dog barked loudly at the postman.'",
+    "options": [
+      "loudly",
+      "old",
+      "barked",
+      "postman"
+    ],
+    "answer": 0,
+    "explanation": "An adverb tells you more about a verb. 'Loudly' tells you how the dog barked, so it is the adverb.",
+    "distractorNotes": [
+      "",
+      "'Old' describes the dog, so it is an adjective.",
+      "'Barked' is the action itself, so it is the verb.",
+      "'Postman' is a person, so it is a noun."
+    ],
+    "learningPoint": "An adverb usually answers how, when or where about the verb — many, though not all, end in -ly.",
+    "tags": [
+      "grammar",
+      "word classes",
+      "adverbs"
+    ]
+  },
+  {
+    "id": "english-grammar-009",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "verb_tense",
+    "type": "grammar",
+    "difficulty": 2,
+    "question": "Which sentence is written in the past perfect tense?",
+    "options": [
+      "She had finished her homework before supper.",
+      "She finished her homework before supper.",
+      "She has finished her homework already.",
+      "She was finishing her homework at supper."
+    ],
+    "answer": 0,
+    "explanation": "The past perfect uses 'had' with the past participle, and describes something completed before another past event. 'She had finished' happened before supper.",
+    "distractorNotes": [
+      "",
+      "This is the simple past — one completed action, with no 'had'.",
+      "This is the present perfect, which uses 'has' and links to now.",
+      "This is the past continuous, describing something still going on."
+    ],
+    "learningPoint": "'Had' plus a past participle signals the past perfect: the earlier of two past events.",
+    "tags": [
+      "grammar",
+      "tenses",
+      "verbs"
+    ]
+  },
+  {
+    "id": "english-grammar-010",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "standard_english",
+    "type": "grammar",
+    "difficulty": 2,
+    "question": "Which sentence is written in Standard English?",
+    "options": [
+      "We were not told about the change.",
+      "We wasn't told about the change.",
+      "We weren't never told about the change.",
+      "Us were not told about the change."
+    ],
+    "answer": 0,
+    "explanation": "'We' takes 'were', and one negative is enough. 'We were not told' is correct Standard English.",
+    "distractorNotes": [
+      "",
+      "'We' needs 'were', not 'was'.",
+      "'Weren't never' is a double negative, which is not Standard English.",
+      "'Us' is an object pronoun and cannot be the subject of a sentence."
+    ],
+    "learningPoint": "Standard English uses one negative per clause and matches the verb to the subject.",
+    "tags": [
+      "grammar",
+      "standard english"
+    ]
+  },
+  {
+    "id": "english-grammar-011",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "pronouns",
+    "type": "grammar",
+    "difficulty": 3,
+    "question": "Which sentence uses pronouns correctly?",
+    "options": [
+      "My brother and I built the shed together.",
+      "Me and my brother built the shed together.",
+      "My brother and me built the shed together.",
+      "Myself and my brother built the shed together."
+    ],
+    "answer": 0,
+    "explanation": "Take the other person out of the sentence and try it alone: you would say 'I built the shed', not 'me built the shed'. So 'My brother and I' is right.",
+    "distractorNotes": [
+      "",
+      "'Me built the shed' is clearly wrong, so 'Me and my brother' must be too.",
+      "The order is polite here, but 'me' is still the wrong pronoun for the subject.",
+      "'Myself' can only be used when you have already appeared in the sentence."
+    ],
+    "learningPoint": "To test 'I' or 'me', remove the other person and read the sentence on its own.",
+    "tags": [
+      "grammar",
+      "pronouns"
+    ]
+  },
+  {
+    "id": "english-grammar-012",
+    "subject": "english",
+    "topic": "Grammar",
+    "skill": "clauses",
+    "type": "grammar",
+    "difficulty": 3,
+    "question": "Which sentence contains a relative clause?",
+    "options": [
+      "The path, which had not been used for years, was thick with nettles.",
+      "After the wet summer the narrow path was completely impassable.",
+      "Nettles and brambles had grown right across the old stone path.",
+      "The path was thick with nettles and difficult to follow at dusk."
+    ],
+    "answer": 0,
+    "explanation": "A relative clause gives extra information about a noun and usually begins with who, which or that. 'Which had not been used for years' tells us more about the path.",
+    "distractorNotes": [
+      "",
+      "This begins with an adverbial phrase about time, not a relative clause.",
+      "This is a single main clause with two subjects joined by 'and'.",
+      "This is a main clause with an adjective phrase added on."
+    ],
+    "learningPoint": "Relative clauses begin with who, whom, whose, which or that, and sit next to the noun they describe.",
+    "tags": [
+      "grammar",
+      "clauses",
+      "relative clauses"
+    ]
+  },
+  {
+    "id": "english-punctuation-006",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "capital_letters",
+    "type": "punctuation",
+    "difficulty": 1,
+    "question": "Which sentence uses capital letters correctly?",
+    "options": [
+      "In September we are going to France.",
+      "In september we are going to France.",
+      "In September we are going to france.",
+      "in September we are going to France."
+    ],
+    "answer": 0,
+    "explanation": "Months and countries are proper nouns and always take a capital letter, and a sentence must begin with one too.",
+    "distractorNotes": [
+      "",
+      "'September' is a month, so it needs a capital.",
+      "'France' is a country, so it needs a capital.",
+      "The first word of a sentence always needs a capital letter."
+    ],
+    "learningPoint": "Names of months, days, people and places always take a capital letter, wherever they appear.",
+    "tags": [
+      "punctuation",
+      "capital letters"
+    ]
+  },
+  {
+    "id": "english-punctuation-007",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "apostrophes",
+    "type": "punctuation",
+    "difficulty": 2,
+    "question": "Which sentence uses the apostrophe correctly?",
+    "options": [
+      "The children's coats were left in the hall.",
+      "The childrens' coats were left in the hall.",
+      "The childrens coats were left in the hall.",
+      "The children's coat's were left in the hall."
+    ],
+    "answer": 0,
+    "explanation": "'Children' is already plural without an s, so the possessive is formed in the ordinary way: add an apostrophe and an s.",
+    "distractorNotes": [
+      "",
+      "An apostrophe after the s is only used for plurals that already end in s.",
+      "This has no apostrophe at all, so it does not show possession.",
+      "'Coats' is a simple plural and needs no apostrophe."
+    ],
+    "learningPoint": "Irregular plurals such as children, men and mice take 's, exactly like a singular noun.",
+    "tags": [
+      "punctuation",
+      "apostrophes",
+      "possession"
+    ]
+  },
+  {
+    "id": "english-punctuation-008",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "commas_in_lists",
+    "type": "punctuation",
+    "difficulty": 2,
+    "question": "Which sentence is punctuated correctly?",
+    "options": [
+      "We packed sandwiches, apples, a flask and a map.",
+      "We packed sandwiches apples, a flask and a map.",
+      "We packed, sandwiches, apples, a flask and a map.",
+      "We packed sandwiches, apples, a flask and, a map."
+    ],
+    "answer": 0,
+    "explanation": "In a list, commas separate the items and 'and' replaces the final comma. Nothing separates the verb from the first item.",
+    "distractorNotes": [
+      "",
+      "There is no comma between the first two items in the list.",
+      "The comma after 'packed' wrongly separates the verb from its list.",
+      "The comma after 'and' does not belong there."
+    ],
+    "learningPoint": "Commas go between the items of a list, never between the verb and the first item.",
+    "tags": [
+      "punctuation",
+      "commas",
+      "lists"
+    ]
+  },
+  {
+    "id": "english-punctuation-009",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "commas_and_speech",
+    "type": "punctuation",
+    "difficulty": 3,
+    "question": "Which sentence punctuates the speech correctly?",
+    "options": [
+      "\"Wait here,\" said Ravi, \"until I call you.\"",
+      "\"Wait here.\" said Ravi, \"until I call you.\"",
+      "\"Wait here,\" said Ravi \"until I call you.\"",
+      "\"Wait here,\" Said Ravi, \"until I call you.\""
+    ],
+    "answer": 0,
+    "explanation": "The spoken sentence is interrupted, so the first part ends with a comma inside the inverted commas, and a comma follows 'Ravi' before the speech starts again.",
+    "distractorNotes": [
+      "",
+      "A full stop cannot be used, because the spoken sentence carries on afterwards.",
+      "A comma is needed after 'Ravi' to reopen the speech.",
+      "'Said' does not take a capital letter in the middle of a sentence."
+    ],
+    "learningPoint": "When speech is interrupted by 'said', put a comma before the closing inverted comma and another after the speaker's name.",
+    "tags": [
+      "punctuation",
+      "speech",
+      "commas"
+    ]
+  },
+  {
+    "id": "english-punctuation-010",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "commas_for_clauses",
+    "type": "punctuation",
+    "difficulty": 4,
+    "question": "Which sentence tells us that only the runners who had trained hard finished the race?",
+    "options": [
+      "The runners who had trained hard finished the race.",
+      "The runners, who had trained hard, finished the race.",
+      "The runners who had trained hard, finished the race.",
+      "The runners, who had trained hard finished the race."
+    ],
+    "answer": 0,
+    "explanation": "Without commas, 'who had trained hard' narrows down which runners are meant — only those ones finished. With commas the clause becomes an aside, meaning all the runners had trained hard and all of them finished.",
+    "distractorNotes": [
+      "",
+      "The commas make the clause an aside, so this means every runner finished.",
+      "A single comma here is simply incorrect punctuation.",
+      "This opens an aside with a comma but never closes it."
+    ],
+    "learningPoint": "Commas around a clause turn it into extra information. Leave them out when the clause is needed to identify who is meant.",
+    "tags": [
+      "punctuation",
+      "commas",
+      "clauses",
+      "meaning"
+    ]
+  },
+  {
+    "id": "english-spelling-008",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "confused_words",
+    "type": "spelling",
+    "difficulty": 1,
+    "question": "Choose the correct word: 'The team played much better ___ they did last week.'",
+    "options": [
+      "than",
+      "then",
+      "that",
+      "thin"
+    ],
+    "answer": 0,
+    "explanation": "'Than' is used for comparisons. Here the team's play this week is being compared with last week.",
+    "distractorNotes": [
+      "",
+      "'Then' is about time or sequence, not comparison.",
+      "'That' would not make sense after 'better' in this sentence.",
+      "'Thin' is an adjective describing width."
+    ],
+    "learningPoint": "'Than' compares; 'then' tells you when. The a in 'than' matches the a in 'compare'.",
+    "tags": [
+      "spelling",
+      "confused words",
+      "homophones"
+    ]
+  },
+  {
+    "id": "english-spelling-009",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "plurals",
+    "type": "spelling",
+    "difficulty": 2,
+    "question": "What is the plural of 'shelf'?",
+    "options": [
+      "shelves",
+      "shelfs",
+      "shelfes",
+      "shelve"
+    ],
+    "answer": 0,
+    "explanation": "Most nouns ending in -f change to -ves in the plural: shelf becomes shelves, just as leaf becomes leaves.",
+    "distractorNotes": [
+      "",
+      "Adding a plain s does not follow the -f to -ves rule.",
+      "'-es' is added to words ending in s, x, ch or sh, not to -f words.",
+      "'Shelve' is a verb meaning to put something aside."
+    ],
+    "learningPoint": "Nouns ending in -f or -fe usually change to -ves: half, wolf, knife, life.",
+    "tags": [
+      "spelling",
+      "plurals"
+    ]
+  },
+  {
+    "id": "english-spelling-010",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "suffixes",
+    "type": "spelling",
+    "difficulty": 2,
+    "question": "Which spelling is correct?",
+    "options": [
+      "beautiful",
+      "beautifull",
+      "beutiful",
+      "beautyful"
+    ],
+    "answer": 0,
+    "explanation": "The suffix -ful is always spelt with one l, and the y of 'beauty' changes to an i before it: beautiful.",
+    "distractorNotes": [
+      "",
+      "The suffix -ful has only one l, even though 'full' has two.",
+      "The 'eau' of 'beauty' is kept in full.",
+      "The y of 'beauty' must change to an i before the suffix."
+    ],
+    "learningPoint": "The suffix -ful always has a single l: careful, hopeful, powerful.",
+    "tags": [
+      "spelling",
+      "suffixes"
+    ]
+  },
+  {
+    "id": "english-spelling-011",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "prefixes",
+    "type": "spelling",
+    "difficulty": 3,
+    "question": "Which word means 'impossible to read'?",
+    "options": [
+      "illegible",
+      "unlegible",
+      "dislegible",
+      "mislegible"
+    ],
+    "answer": 0,
+    "explanation": "The prefix in- becomes il- before a word beginning with l, so 'legible' becomes 'illegible'.",
+    "distractorNotes": [
+      "",
+      "'Un-' is a real prefix, but it is not the one used with 'legible'.",
+      "'Dis-' usually reverses an action, as in disagree or disappear.",
+      "'Mis-' means wrongly, as in misread or misspell — not 'not at all'."
+    ],
+    "learningPoint": "The prefix in- changes to il- before l, im- before m or p, and ir- before r.",
+    "tags": [
+      "spelling",
+      "prefixes"
+    ]
+  },
+  {
+    "id": "english-spelling-012",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "confused_words",
+    "type": "spelling",
+    "difficulty": 3,
+    "question": "Which sentence uses 'affect' and 'effect' correctly?",
+    "options": [
+      "The rain did not affect the match, but it had an effect on the crowd.",
+      "The rain did not effect the match, but it had an affect on the crowd.",
+      "The rain did not affect the match, but it had an affect on the crowd.",
+      "The rain did not effect the match, but it had an effect on the crowd."
+    ],
+    "answer": 0,
+    "explanation": "'Affect' is nearly always the verb — the doing word. 'Effect' is nearly always the noun — the result. The rain did not affect (verb) the match, but it had an effect (noun).",
+    "distractorNotes": [
+      "",
+      "Both words have been swapped over here.",
+      "The first is right, but 'an affect' should be the noun 'effect'.",
+      "The second is right, but 'did not effect' should be the verb 'affect'."
+    ],
+    "learningPoint": "Affect is the Action; Effect is the End result. If 'the' or 'an' comes before it, you almost always want effect.",
+    "tags": [
+      "spelling",
+      "confused words",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "english-vocabulary-007",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "synonyms",
+    "type": "vocabulary",
+    "difficulty": 1,
+    "question": "Which word means most nearly the same as 'enormous'?",
+    "options": [
+      "huge",
+      "tiny",
+      "heavy",
+      "hollow"
+    ],
+    "answer": 0,
+    "explanation": "'Enormous' means extremely large, so 'huge' is the closest in meaning.",
+    "distractorNotes": [
+      "",
+      "'Tiny' is the opposite of enormous.",
+      "'Heavy' is about weight, not size — a small thing can be heavy.",
+      "'Hollow' means empty inside, which is not about size at all."
+    ],
+    "learningPoint": "Check whether a word is about size, weight or shape before choosing a synonym.",
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ]
+  },
+  {
+    "id": "english-vocabulary-008",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "shades_of_meaning",
+    "type": "vocabulary",
+    "difficulty": 2,
+    "question": "Which word suggests the greatest amount of fear?",
+    "options": [
+      "terrified",
+      "nervous",
+      "uneasy",
+      "wary"
+    ],
+    "answer": 0,
+    "explanation": "All four describe some degree of fear, but 'terrified' is the strongest: it means overwhelmed by fear.",
+    "distractorNotes": [
+      "",
+      "'Nervous' suggests mild worry before something happens.",
+      "'Uneasy' is the mildest of these — a vague sense that something is wrong.",
+      "'Wary' means cautious, which is more about care than fear."
+    ],
+    "learningPoint": "Words that mean roughly the same thing often differ in strength — arrange them on a scale before choosing.",
+    "tags": [
+      "vocabulary",
+      "shades of meaning"
+    ]
+  },
+  {
+    "id": "english-vocabulary-009",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "idioms",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "question": "What does it mean to 'let the cat out of the bag'?",
+    "options": [
+      "To give away a secret by accident.",
+      "To make a bad situation much worse.",
+      "To take a risk that does not pay off.",
+      "To set something free after keeping it."
+    ],
+    "answer": 0,
+    "explanation": "It is an idiom meaning to reveal a secret without meaning to. The words have nothing to do with actual cats.",
+    "distractorNotes": [
+      "",
+      "That idea is closer to 'adding fuel to the fire'.",
+      "That idea is closer to 'a gamble that did not come off'.",
+      "This takes the idiom literally, which is exactly the trap."
+    ],
+    "learningPoint": "An idiom's meaning cannot be worked out from its words — learn each one as a whole phrase.",
+    "tags": [
+      "vocabulary",
+      "idioms",
+      "figurative language"
+    ]
+  },
+  {
+    "id": "english-vocabulary-010",
+    "subject": "english",
+    "topic": "Vocabulary",
+    "skill": "precise_word_choice",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "question": "Which word best completes the sentence? 'Her explanation was ___ : it answered every objection anyone had raised.'",
+    "options": [
+      "comprehensive",
+      "lengthy",
+      "confident",
+      "courteous"
+    ],
+    "answer": 0,
+    "explanation": "The second half of the sentence explains that nothing was left out. 'Comprehensive' means covering everything, which matches exactly.",
+    "distractorNotes": [
+      "",
+      "'Lengthy' means long, but a long explanation can still miss things out.",
+      "'Confident' describes how she sounded, not how complete the explanation was.",
+      "'Courteous' means polite, which the sentence says nothing about."
+    ],
+    "learningPoint": "The part of the sentence after the colon usually defines the missing word — read it before choosing.",
+    "tags": [
+      "vocabulary",
+      "precise word choice"
+    ]
   }
 ]

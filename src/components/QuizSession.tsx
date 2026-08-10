@@ -18,8 +18,12 @@ interface Props {
   config: SessionConfig
   questions: Question[]
   note?: string
+  /** A restored session, when the child chose to carry on where they left off. */
+  initialState?: SessionState
   /** Persist a single answer. Follow-ups are recorded too. */
   onRecord: (question: Question, correct: boolean) => void
+  /** Called on every transition so the session survives a refresh. */
+  onPersist: (state: SessionState) => void
   onFinish: (state: SessionState) => void
   onExit: () => void
   onRestart: () => void
@@ -30,17 +34,28 @@ export function QuizSession({
   config,
   questions,
   note,
+  initialState,
   onRecord,
+  onPersist,
   onFinish,
   onExit,
   onRestart,
   onReport,
 }: Props) {
-  const initial = useMemo(() => createSession(config, questions), [config, questions])
+  const initial = useMemo(
+    () => initialState ?? createSession(config, questions),
+    [initialState, config, questions],
+  )
   const [state, setState] = useState(initial)
   const finishedRef = useRef(false)
 
   const question = currentQuestion(state)
+
+  // Snapshot every transition, including the very first render, so closing the
+  // tab on question 1 is as recoverable as closing it on question 19.
+  useEffect(() => {
+    onPersist(state)
+  }, [state, onPersist])
 
   // Report completion exactly once, as an effect rather than inside an updater
   // (updaters are re-run under StrictMode and must stay side-effect free).

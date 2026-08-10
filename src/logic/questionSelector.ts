@@ -1,7 +1,7 @@
 import { QUESTIONS, topicKey } from '../data'
 import { topicMastery } from './mastery'
 import { mistakeIds } from './progress'
-import type { Progress, Question, SessionConfig } from '../types'
+import type { Progress, Question, QuestionRecord, SessionConfig } from '../types'
 
 /** Small deterministic PRNG so a session is reproducible from its seed. */
 export function mulberry32(seed: number): () => number {
@@ -20,19 +20,51 @@ export interface SelectionResult {
   note?: string
 }
 
+const DAY_MS = 86_400_000
+
+/**
+ * The spaced-repetition ladder, indexed by consecutive-correct streak.
+ *
+ * A question answered correctly once comes back the next day, then after three
+ * days, a week, three weeks. Getting it wrong resets the streak to 0, so it is
+ * due immediately. These are the conventional Leitner-style intervals, and they
+ * suit the app's stated aim of retention over volume.
+ */
+export const REVIEW_INTERVAL_DAYS = [0, 1, 3, 7, 21]
+
+export function intervalDaysFor(streak: number): number {
+  const i = Math.min(Math.max(streak, 0), REVIEW_INTERVAL_DAYS.length - 1)
+  return REVIEW_INTERVAL_DAYS[i]
+}
+
+/** Epoch ms at which a question is scheduled to come round again. */
+export function dueAt(record: QuestionRecord): number {
+  if (!record.lastCorrect) return record.lastSeen
+  return record.lastSeen + intervalDaysFor(record.streak) * DAY_MS
+}
+
+export function isDue(record: QuestionRecord, now: number = Date.now()): boolean {
+  return now >= dueAt(record)
+}
+
 /**
  * How highly a question deserves to be served next.
  *
  *   never seen            very high
  *   recently incorrect    high
- *   weak topic            bonus
- *   correct once          low
- *   correct repeatedly    very low
+ *   due for review        moderate, rising the longer it is overdue
+ *   not yet due           very low — but never zero, so a small bank still works
+ *   weak topic            bonus on top
+ *
+ * Scheduling, rather than a flat "prefer older" rule, is what makes this spaced
+ * repetition: a question answered right three times running is deliberately
+ * left alone for a week even though it is the oldest thing in the bank.
  */
 function score(
   q: Question,
   progress: Progress,
   masteryByTopic: Map<string, number | null>,
+  now: number,
 ): number {
   const r = progress.questions[q.id]
   let s: number
@@ -41,24 +73,23 @@ function score(
     s = 100
   } else if (!r.lastCorrect) {
     s = 70
-  } else if (r.correct >= 3) {
-    s = 4
-  } else if (r.correct >= 2) {
-    s = 10
   } else {
-    s = 22
+    const interval = intervalDaysFor(r.streak)
+    const elapsed = (now - r.lastSeen) / DAY_MS
+    // interval is 0 only for streak 0, which lastCorrect rules out here.
+    const ratio = interval === 0 ? 1 : elapsed / interval
+    s =
+      ratio >= 1
+        ? // Due. Overdue questions climb, but never above a fresh one.
+          40 + Math.min(25, (ratio - 1) * 20)
+        : // Not due. Kept in the pool as a fallback, but well down the order.
+          2 + ratio * 10
   }
 
   // Weak topics get a bonus of up to 30.
   const mastery = masteryByTopic.get(topicKey(q.subject, q.topic))
   if (mastery !== null && mastery !== undefined) {
     s += Math.round(((100 - mastery) / 100) * 30)
-  }
-
-  // Older attempts become eligible again as time passes (up to +15 after ~2 weeks).
-  if (r) {
-    const days = (Date.now() - r.lastSeen) / 86_400_000
-    s += Math.min(15, Math.round(days * 1.1))
   }
 
   return s
@@ -113,6 +144,7 @@ export function selectQuestions(
   config: SessionConfig,
   progress: Progress,
   seed: number = Date.now(),
+  now: number = Date.now(),
 ): SelectionResult {
   const rand = mulberry32(seed)
   const pool = poolForMode(config, progress)
@@ -129,7 +161,7 @@ export function selectQuestions(
       .map((q) => ({
         q,
         // Jitter keeps consecutive sessions from serving an identical order.
-        s: score(q, progress, masteryByTopic) + rand() * 12,
+        s: score(q, progress, masteryByTopic, now) + rand() * 12,
       }))
       .sort((a, b) => b.s - a.s)
       .map((e) => e.q)

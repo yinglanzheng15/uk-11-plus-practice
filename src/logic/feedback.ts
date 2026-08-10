@@ -99,8 +99,12 @@ export function feedbackToMarkdown(progress: Progress): string {
 }
 
 /** Trigger a file download without any server involvement. */
-export function downloadText(filename: string, text: string): void {
-  const blob = new Blob([text], { type: 'text/markdown;charset=utf-8' })
+export function downloadText(
+  filename: string,
+  text: string,
+  mimeType = 'text/markdown',
+): void {
+  const blob = new Blob([text], { type: `${mimeType};charset=utf-8` })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url

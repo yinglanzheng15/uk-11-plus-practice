@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BackupPanel } from './BackupPanel'
 import { FeedbackTab } from './FeedbackTab'
 import { ProgressBar } from './ProgressBar'
 import { formatDuration } from './Timer'
@@ -13,6 +14,7 @@ interface Props {
   onAddNote: (message: string) => void
   onRemoveFeedback: (id: string) => void
   onClearFeedback: () => void
+  onRestore: (progress: Progress) => void
 }
 
 function formatDate(at: number): string {
@@ -30,6 +32,7 @@ export function ParentView({
   onAddNote,
   onRemoveFeedback,
   onClearFeedback,
+  onRestore,
 }: Props) {
   const [confirming, setConfirming] = useState(false)
   const [tab, setTab] = useState<'progress' | 'feedback'>('progress')
@@ -79,6 +82,7 @@ export function ParentView({
           <ParentProgress
             progress={progress}
             onReset={onReset}
+            onRestore={onRestore}
             confirming={confirming}
             setConfirming={setConfirming}
           />
@@ -91,11 +95,18 @@ export function ParentView({
 interface ProgressProps {
   progress: Progress
   onReset: () => void
+  onRestore: (progress: Progress) => void
   confirming: boolean
   setConfirming: (v: boolean) => void
 }
 
-function ParentProgress({ progress, onReset, confirming, setConfirming }: ProgressProps) {
+function ParentProgress({
+  progress,
+  onReset,
+  onRestore,
+  confirming,
+  setConfirming,
+}: ProgressProps) {
   const topics = topicMastery(progress)
     .filter((t) => t.attempts > 0)
     .sort((a, b) => (a.score ?? 0) - (b.score ?? 0))
@@ -227,6 +238,8 @@ function ParentProgress({ progress, onReset, confirming, setConfirming }: Progre
           </ul>
         </div>
       )}
+
+      <BackupPanel progress={progress} onRestore={onRestore} />
 
       <div className="card">
         <h2 className="section-title">Reset</h2>

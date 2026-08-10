@@ -3,12 +3,18 @@ import { SUBJECTS } from '../data/subjects'
 import { topicsForSubject } from '../data'
 import { mistakeIds, overallAccuracy } from '../logic/progress'
 import { topicMastery } from '../logic/mastery'
+import { mainAnswers } from '../logic/session'
+import type { RestoredSession } from '../logic/sessionStorage'
 import type { Progress, SessionConfig, SessionMode, SubjectId } from '../types'
 
 interface Props {
   progress: Progress
   onStart: (config: SessionConfig) => void
   onSetTimed: (timed: boolean) => void
+  /** An unfinished session from a previous visit, if there is one worth offering. */
+  resumable?: RestoredSession | null
+  onResume: () => void
+  onDiscardResume: () => void
 }
 
 /** Roughly 45 seconds per question — generous rather than pressured. */
@@ -16,7 +22,24 @@ function timeLimitFor(length: number): number {
   return length * 45_000
 }
 
-export function Home({ progress, onStart, onSetTimed }: Props) {
+/** "just now" / "20 minutes ago" / "yesterday" — no library needed for three cases. */
+function describeWhen(at: number, now: number = Date.now()): string {
+  const minutes = Math.round((now - at) / 60_000)
+  if (minutes < 2) return 'a moment ago'
+  if (minutes < 60) return `${minutes} minutes ago`
+  const hours = Math.round(minutes / 60)
+  if (hours < 24) return `${hours} hour${hours === 1 ? '' : 's'} ago`
+  return 'yesterday'
+}
+
+export function Home({
+  progress,
+  onStart,
+  onSetTimed,
+  resumable,
+  onResume,
+  onDiscardResume,
+}: Props) {
   const [subjectPicker, setSubjectPicker] = useState<SubjectId | null>(null)
   const timed = progress.preferences.timed
 
@@ -78,6 +101,26 @@ export function Home({ progress, onStart, onSetTimed }: Props) {
 
   return (
     <>
+      {resumable && (
+        <div className="card">
+          <h2 className="section-title">Carry on where you left off?</h2>
+          <p className="muted">
+            You were on question {resumable.state.index + 1} of{' '}
+            {resumable.state.questions.length}, started {describeWhen(resumable.savedAt)}.
+            You have {mainAnswers(resumable.state).filter((a) => a.correct).length}{' '}
+            right so far.
+          </p>
+          <div className="actions">
+            <button type="button" className="btn btn-primary" onClick={onResume}>
+              Carry on
+            </button>
+            <button type="button" className="btn" onClick={onDiscardResume}>
+              Start something new
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="card">
         <h2 className="section-title">What would you like to practise?</h2>
 

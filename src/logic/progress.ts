@@ -36,6 +36,8 @@ export function recordAnswer(
     correct: (existing?.correct ?? 0) + (correct ? 1 : 0),
     lastSeen: at,
     lastCorrect: correct,
+    // One mistake sends the question back to the start of the review ladder.
+    streak: correct ? (existing?.streak ?? 0) + 1 : 0,
   }
   return {
     ...progress,

@@ -1,7 +1,8 @@
-import type { Progress } from '../types'
+import type { Progress, QuestionRecord } from '../types'
 
 const KEY = 'elevenplus:v1:progress'
-export const SCHEMA_VERSION = 1
+/** 2 added `streak` to QuestionRecord for spaced repetition. */
+export const SCHEMA_VERSION = 2
 
 export function emptyProgress(): Progress {
   return {
@@ -20,6 +21,23 @@ export function emptyProgress(): Progress {
  * Migrate an older stored shape forward. Kept deliberately simple: unknown or
  * damaged data falls back to a fresh profile rather than crashing the app.
  */
+/**
+ * Records written before schema 2 have no `streak`. Rather than guess at a
+ * history we do not have, a question last answered correctly starts one rung up
+ * the review ladder — it comes back tomorrow instead of immediately.
+ */
+function migrateQuestions(
+  questions: Record<string, QuestionRecord> | undefined,
+): Record<string, QuestionRecord> {
+  if (!questions) return {}
+  const out: Record<string, QuestionRecord> = {}
+  for (const [id, r] of Object.entries(questions)) {
+    out[id] =
+      typeof r?.streak === 'number' ? r : { ...r, streak: r?.lastCorrect ? 1 : 0 }
+  }
+  return out
+}
+
 function migrate(raw: unknown): Progress {
   const base = emptyProgress()
   if (!raw || typeof raw !== 'object') return base
@@ -28,7 +46,7 @@ function migrate(raw: unknown): Progress {
     ...base,
     ...data,
     version: SCHEMA_VERSION,
-    questions: data.questions ?? base.questions,
+    questions: migrateQuestions(data.questions),
     recentQuestionIds: data.recentQuestionIds ?? base.recentQuestionIds,
     sessions: data.sessions ?? base.sessions,
     // Added after the first release; older saved profiles will not have it.

@@ -1,5 +1,15 @@
 ﻿import { QUESTIONS, getQuestion } from '../src/data/index'
-import { selectQuestions } from '../src/logic/questionSelector'
+import {
+  intervalDaysFor,
+  isDue,
+  selectQuestions,
+  REVIEW_INTERVAL_DAYS,
+} from '../src/logic/questionSelector'
+import {
+  __internal as sessionStore,
+  RESUME_MAX_AGE_MS,
+} from '../src/logic/sessionStorage'
+import { describeBackup, exportProgress, parseBackup } from '../src/logic/backup'
 import {
   createSession,
   currentQuestion,
@@ -201,6 +211,138 @@ console.log('\n== bank integrity ==')
   for (const q of QUESTIONS) positions.set(q.answer, (positions.get(q.answer) ?? 0) + 1)
   const maxShare = Math.max(...positions.values()) / QUESTIONS.length
   check('answer positions are spread out', maxShare < 0.45, `max share=${(maxShare * 100).toFixed(0)}%`)
+}
+
+console.log('\n== spaced repetition ==')
+{
+  const DAY = 86_400_000
+  check('interval ladder is 0/1/3/7/21', REVIEW_INTERVAL_DAYS.join(',') === '0,1,3,7,21')
+  check('a longer streak waits longer', intervalDaysFor(1) === 1 && intervalDaysFor(3) === 7)
+  check('the ladder stops climbing at the top', intervalDaysFor(9) === 21)
+
+  const now = Date.now()
+  const fresh = { attempts: 1, correct: 1, lastSeen: now, lastCorrect: true, streak: 1 }
+  check('answered right today is not due today', !isDue(fresh, now))
+  check('the same question is due tomorrow', isDue(fresh, now + DAY + 1))
+
+  const wrong = { attempts: 1, correct: 0, lastSeen: now, lastCorrect: false, streak: 0 }
+  check('a mistake is due immediately', isDue(wrong, now))
+
+  // The behaviour that matters: with everything already learnt, the selector
+  // serves whatever has come round again rather than the most recently seen.
+  const maths = QUESTIONS.filter((q) => q.subject === 'maths')
+  const overdue = maths[0]
+  const questions: Progress['questions'] = {}
+  for (const q of maths) {
+    questions[q.id] = {
+      attempts: 3,
+      correct: 3,
+      // Everything was answered correctly today except one, seen a month ago.
+      lastSeen: q.id === overdue.id ? now - 30 * DAY : now,
+      lastCorrect: true,
+      streak: 3,
+    }
+  }
+  const p: Progress = { ...emptyProgress(), questions }
+  const run = selectQuestions(cfg({ subjects: ['maths'], length: 5 }), p, 21, now)
+  check(
+    'the overdue question is served ahead of ones seen today',
+    run.questions.some((q) => q.id === overdue.id),
+  )
+
+  // Scheduling must not crowd out new material: an unseen question still ranks
+  // above one that has merely come round again.
+  const withUnseen = { ...p, questions: { ...questions } }
+  delete withUnseen.questions[maths[1].id]
+  const mixed = selectQuestions(cfg({ subjects: ['maths'], length: 3 }), withUnseen, 21, now)
+  check(
+    'an unseen question still comes before an overdue one',
+    mixed.questions.findIndex((q) => q.id === maths[1].id) <
+      mixed.questions.findIndex((q) => q.id === overdue.id),
+  )
+}
+
+console.log('\n== resuming a session ==')
+{
+  const questions = selectQuestions(cfg({ length: 5 }), emptyProgress(), 31).questions
+  let s = createSession(cfg({ length: 5 }), questions)
+  s = sessionReducer(s, { type: 'answer', option: currentQuestion(s)!.answer, at: Date.now() })
+  s = sessionReducer(s, { type: 'continue', at: Date.now() })
+
+  const at = Date.now()
+  const snapshot = sessionStore.serialise(s, 'short-pool', at)
+  const restored = sessionStore.deserialise(snapshot, at + 60_000)
+  check('a saved session can be restored', restored !== null)
+  check('it resumes on the same question', restored!.state.index === s.index)
+  check('answers already given are kept', restored!.state.answers.length === s.answers.length)
+  check('the same questions come back', restored!.state.questions[0].id === s.questions[0].id)
+  check('the note is carried across', restored!.note === 'short-pool')
+  // Time spent away must not eat into a timed session's remaining minutes.
+  check(
+    'the clock is shifted by the time away',
+    restored!.state.startedAt === s.startedAt + 60_000,
+  )
+
+  const stale = sessionStore.deserialise(snapshot, at + RESUME_MAX_AGE_MS + 1)
+  check('a session older than a day is not offered', stale === null)
+
+  const gone = sessionStore.deserialise(
+    { ...snapshot, questionIds: [...snapshot.questionIds.slice(1), 'no-such-question'] },
+    at,
+  )
+  check('a session referring to a missing question is dropped', gone === null)
+
+  let done = createSession(cfg({ length: 1 }), questions.slice(0, 1))
+  done = sessionReducer(done, { type: 'timeout', at: Date.now() })
+  check(
+    'a finished session is never restored',
+    sessionStore.deserialise(sessionStore.serialise(done, undefined, at), at) === null,
+  )
+}
+
+console.log('\n== exporting and restoring progress ==')
+{
+  let p: Progress = emptyProgress()
+  p = recordAnswer(p, QUESTIONS[0], true)
+  p = recordAnswer(p, QUESTIONS[1], false)
+  p = finishSession(p, {
+    finishedAt: Date.now(),
+    mode: 'quick5',
+    subjects: ['maths'],
+    total: 2,
+    correct: 1,
+    durationMs: 60_000,
+    weakTopics: [],
+  })
+
+  const result = parseBackup(exportProgress(p))
+  check('an exported file can be read back', result.ok === true)
+  if (result.ok) {
+    check('totals survive the round trip', result.progress.totals.answered === 2)
+    check('sessions survive the round trip', result.progress.sessions.length === 1)
+    check(
+      'per-question records survive',
+      result.progress.questions[QUESTIONS[0].id]?.streak === 1,
+    )
+    check('the summary mentions the count', describeBackup(result).includes('2 questions'))
+  }
+
+  check('an unrelated JSON file is refused', parseBackup('{"hello":"world"}').ok === false)
+  check('a damaged file is refused', parseBackup('not json at all').ok === false)
+  check(
+    'a file from a newer version is refused',
+    parseBackup(JSON.stringify({ kind: 'uk-11-plus-practice-progress', version: 999, progress: p }))
+      .ok === false,
+  )
+
+  // Profiles saved before spaced repetition existed have no streak field.
+  const legacy = JSON.parse(exportProgress(p))
+  delete legacy.progress.questions[QUESTIONS[0].id].streak
+  const migrated = parseBackup(JSON.stringify(legacy))
+  check(
+    'an older file without streaks is migrated',
+    migrated.ok && migrated.progress.questions[QUESTIONS[0].id].streak === 1,
+  )
 }
 
 console.log(failures === 0 ? '\nAll checks passed.' : `\n${failures} check(s) failed.`)

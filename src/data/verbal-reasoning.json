@@ -7,7 +7,12 @@
     "type": "synonyms",
     "difficulty": 2,
     "question": "Which word means most nearly the same as ABUNDANT?",
-    "options": ["plentiful", "expensive", "enormous", "generous"],
+    "options": [
+      "plentiful",
+      "expensive",
+      "enormous",
+      "generous"
+    ],
     "answer": 0,
     "explanation": "'Abundant' means existing in large quantities, which matches 'plentiful'.",
     "distractorNotes": [
@@ -17,8 +22,13 @@
       "'Generous' describes a person's character, not an amount."
     ],
     "learningPoint": "Synonym questions test the exact shade of meaning — 'a lot of' is not the same as 'very big'.",
-    "followUpIds": ["vr-synonyms-002"],
-    "tags": ["synonyms", "vocabulary"]
+    "followUpIds": [
+      "vr-synonyms-002"
+    ],
+    "tags": [
+      "synonyms",
+      "vocabulary"
+    ]
   },
   {
     "id": "vr-synonyms-002",
@@ -28,7 +38,12 @@
     "type": "synonyms",
     "difficulty": 2,
     "question": "Which word means most nearly the same as WEARY?",
-    "options": ["tired", "careful", "worried", "bored"],
+    "options": [
+      "tired",
+      "careful",
+      "worried",
+      "bored"
+    ],
     "answer": 0,
     "explanation": "'Weary' means very tired.",
     "distractorNotes": [
@@ -38,7 +53,10 @@
       "Being weary of something can involve boredom, but the core meaning is tiredness."
     ],
     "learningPoint": "Words that look similar (weary / wary) can mean completely different things — read carefully.",
-    "tags": ["synonyms", "vocabulary"]
+    "tags": [
+      "synonyms",
+      "vocabulary"
+    ]
   },
   {
     "id": "vr-synonyms-003",
@@ -48,7 +66,12 @@
     "type": "synonyms",
     "difficulty": 4,
     "question": "Which word means most nearly the same as OBSTINATE?",
-    "options": ["stubborn", "obvious", "rude", "confident"],
+    "options": [
+      "stubborn",
+      "obvious",
+      "rude",
+      "confident"
+    ],
     "answer": 0,
     "explanation": "'Obstinate' means refusing to change your mind, which is exactly what 'stubborn' means.",
     "distractorNotes": [
@@ -58,7 +81,10 @@
       "'Confident' is about self-belief, not about refusing to change your mind."
     ],
     "learningPoint": "Do not choose a word simply because it starts with the same letters.",
-    "tags": ["synonyms", "vocabulary"]
+    "tags": [
+      "synonyms",
+      "vocabulary"
+    ]
   },
   {
     "id": "vr-antonyms-001",
@@ -68,7 +94,12 @@
     "type": "antonyms",
     "difficulty": 2,
     "question": "Which word is most nearly OPPOSITE in meaning to ANCIENT?",
-    "options": ["modern", "young", "small", "ruined"],
+    "options": [
+      "modern",
+      "young",
+      "small",
+      "ruined"
+    ],
     "answer": 0,
     "explanation": "'Ancient' means belonging to the distant past, so its opposite is 'modern', belonging to the present.",
     "distractorNotes": [
@@ -78,7 +109,10 @@
       "Ancient things are often ruined, so this is linked rather than opposite."
     ],
     "learningPoint": "Choose the opposite of the exact word given, not of a word that is merely related to it.",
-    "tags": ["antonyms", "vocabulary"]
+    "tags": [
+      "antonyms",
+      "vocabulary"
+    ]
   },
   {
     "id": "vr-antonyms-002",
@@ -88,7 +122,12 @@
     "type": "antonyms",
     "difficulty": 3,
     "question": "Which word is most nearly OPPOSITE in meaning to SCARCE?",
-    "options": ["plentiful", "frightened", "large", "cheap"],
+    "options": [
+      "plentiful",
+      "frightened",
+      "large",
+      "cheap"
+    ],
     "answer": 0,
     "explanation": "'Scarce' means in short supply, so its opposite is 'plentiful'.",
     "distractorNotes": [
@@ -98,7 +137,10 @@
       "Scarce things are usually expensive, so 'cheap' is a consequence rather than an opposite."
     ],
     "learningPoint": "Deal with the meaning of the word itself, not with what usually happens as a result of it.",
-    "tags": ["antonyms", "vocabulary"]
+    "tags": [
+      "antonyms",
+      "vocabulary"
+    ]
   },
   {
     "id": "vr-analogies-001",
@@ -108,7 +150,12 @@
     "type": "analogies",
     "difficulty": 3,
     "question": "Bird is to nest as bee is to ___",
-    "options": ["hive", "honey", "flower", "sting"],
+    "options": [
+      "hive",
+      "honey",
+      "flower",
+      "sting"
+    ],
     "answer": 0,
     "explanation": "A nest is where a bird lives, so the answer must be where a bee lives: a hive.",
     "distractorNotes": [
@@ -118,8 +165,13 @@
       "A sting is part of a bee's body."
     ],
     "learningPoint": "Say the relationship out loud in a full sentence, then apply exactly the same sentence to the second pair.",
-    "followUpIds": ["vr-analogies-002"],
-    "tags": ["analogies", "relationships"]
+    "followUpIds": [
+      "vr-analogies-002"
+    ],
+    "tags": [
+      "analogies",
+      "relationships"
+    ]
   },
   {
     "id": "vr-analogies-002",
@@ -129,7 +181,12 @@
     "type": "analogies",
     "difficulty": 3,
     "question": "Author is to book as composer is to ___",
-    "options": ["symphony", "orchestra", "piano", "concert"],
+    "options": [
+      "symphony",
+      "orchestra",
+      "piano",
+      "concert"
+    ],
     "answer": 0,
     "explanation": "An author creates a book, so a composer creates a symphony.",
     "distractorNotes": [
@@ -139,7 +196,10 @@
       "A concert is an event where the music is performed."
     ],
     "learningPoint": "'Creator to creation' is one of the most common analogy relationships.",
-    "tags": ["analogies", "relationships"]
+    "tags": [
+      "analogies",
+      "relationships"
+    ]
   },
   {
     "id": "vr-analogies-003",
@@ -149,7 +209,12 @@
     "type": "analogies",
     "difficulty": 4,
     "question": "Whisper is to shout as glimpse is to ___",
-    "options": ["stare", "blink", "watch", "notice"],
+    "options": [
+      "stare",
+      "blink",
+      "watch",
+      "notice"
+    ],
     "answer": 0,
     "explanation": "A whisper is a quiet version of a shout — the pair contrasts a brief, small action with a long, intense one. A glimpse is a brief look, so its intense partner is a stare.",
     "distractorNotes": [
@@ -159,7 +224,11 @@
       "'Notice' is close in meaning to 'glimpse' rather than opposite in degree."
     ],
     "learningPoint": "Some analogies are about degree — small version to large version of the same thing.",
-    "tags": ["analogies", "degree", "relationships"]
+    "tags": [
+      "analogies",
+      "degree",
+      "relationships"
+    ]
   },
   {
     "id": "vr-odd-one-out-001",
@@ -169,7 +238,12 @@
     "type": "odd-one-out",
     "difficulty": 2,
     "question": "Which word is the odd one out?",
-    "options": ["oak", "daisy", "willow", "birch"],
+    "options": [
+      "oak",
+      "daisy",
+      "willow",
+      "birch"
+    ],
     "answer": 1,
     "explanation": "Oak, willow and birch are all trees. A daisy is a flower.",
     "distractorNotes": [
@@ -179,7 +253,10 @@
       "Birch is a tree, like oak and willow."
     ],
     "learningPoint": "Find what three of the words share, then the fourth is the odd one out.",
-    "tags": ["classification", "odd one out"]
+    "tags": [
+      "classification",
+      "odd one out"
+    ]
   },
   {
     "id": "vr-odd-one-out-002",
@@ -189,7 +266,12 @@
     "type": "odd-one-out",
     "difficulty": 4,
     "question": "Which word is the odd one out?",
-    "options": ["stationary", "motionless", "still", "gradual"],
+    "options": [
+      "stationary",
+      "motionless",
+      "still",
+      "gradual"
+    ],
     "answer": 3,
     "explanation": "Stationary, motionless and still all mean not moving. 'Gradual' means happening slowly, which still involves movement or change.",
     "distractorNotes": [
@@ -199,7 +281,11 @@
       ""
     ],
     "learningPoint": "Slow is not the same as stopped — check the precise meaning before deciding.",
-    "tags": ["classification", "odd one out", "vocabulary"]
+    "tags": [
+      "classification",
+      "odd one out",
+      "vocabulary"
+    ]
   },
   {
     "id": "vr-classification-001",
@@ -209,7 +295,12 @@
     "type": "classification",
     "difficulty": 3,
     "question": "Which word belongs with: violin, cello, viola?",
-    "options": ["double bass", "flute", "drum", "trumpet"],
+    "options": [
+      "double bass",
+      "flute",
+      "drum",
+      "trumpet"
+    ],
     "answer": 0,
     "explanation": "Violin, cello and viola are all bowed string instruments, and so is the double bass.",
     "distractorNotes": [
@@ -219,7 +310,10 @@
       "A trumpet is a brass instrument."
     ],
     "learningPoint": "Work out the precise group — 'instrument' is too broad here; the group is 'string instruments'.",
-    "tags": ["classification", "grouping"]
+    "tags": [
+      "classification",
+      "grouping"
+    ]
   },
   {
     "id": "vr-letter-sequence-001",
@@ -229,7 +323,12 @@
     "type": "letter-sequence",
     "difficulty": 2,
     "question": "What comes next in this sequence? CE, FH, IK, LN, ___",
-    "options": ["OQ", "MO", "PR", "NP"],
+    "options": [
+      "OQ",
+      "MO",
+      "PR",
+      "NP"
+    ],
     "answer": 0,
     "explanation": "Each pair moves on 3 letters from the last pair: C → F → I → L → O. Within each pair the second letter is 2 on from the first: O + 2 = Q. So the answer is OQ.",
     "distractorNotes": [
@@ -239,8 +338,13 @@
       "This moves on 2 letters from L instead of 3."
     ],
     "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
-    "followUpIds": ["vr-letter-sequence-002"],
-    "tags": ["letter sequence", "patterns"]
+    "followUpIds": [
+      "vr-letter-sequence-002"
+    ],
+    "tags": [
+      "letter sequence",
+      "patterns"
+    ]
   },
   {
     "id": "vr-letter-sequence-002",
@@ -250,7 +354,12 @@
     "type": "letter-sequence",
     "difficulty": 2,
     "question": "What comes next in this sequence? AD, BE, CF, DG, ___",
-    "options": ["EH", "EG", "DH", "FI"],
+    "options": [
+      "EH",
+      "EG",
+      "DH",
+      "FI"
+    ],
     "answer": 0,
     "explanation": "The first letters go A, B, C, D, so next is E. The second letter is always 3 on from the first: E + 3 = H. So the answer is EH.",
     "distractorNotes": [
@@ -260,7 +369,10 @@
       "This skips E and jumps to F."
     ],
     "learningPoint": "Write the alphabet along the top of your page — it makes letter sequences far quicker.",
-    "tags": ["letter sequence", "patterns"]
+    "tags": [
+      "letter sequence",
+      "patterns"
+    ]
   },
   {
     "id": "vr-codes-001",
@@ -270,7 +382,12 @@
     "type": "codes",
     "difficulty": 3,
     "question": "If CAT is written in code as ECV, how would DOG be written in the same code?",
-    "options": ["FQI", "EPH", "CNF", "FQH"],
+    "options": [
+      "FQI",
+      "EPH",
+      "CNF",
+      "FQH"
+    ],
     "answer": 0,
     "explanation": "Each letter moves forward 2 places in the alphabet: C → E, A → C, T → V. Applying the same rule, D → F, O → Q and G → I, giving FQI.",
     "distractorNotes": [
@@ -280,8 +397,13 @@
       "The first two letters move 2 places but the G only moves 1."
     ],
     "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
-    "followUpIds": ["vr-codes-002"],
-    "tags": ["codes", "letter shifts"]
+    "followUpIds": [
+      "vr-codes-002"
+    ],
+    "tags": [
+      "codes",
+      "letter shifts"
+    ]
   },
   {
     "id": "vr-codes-002",
@@ -291,7 +413,12 @@
     "type": "codes",
     "difficulty": 3,
     "question": "If BOAT is written in code as ANZS, what is the code for SHIP?",
-    "options": ["RGHO", "TIJQ", "RIHQ", "TGJO"],
+    "options": [
+      "RGHO",
+      "TIJQ",
+      "RIHQ",
+      "TGJO"
+    ],
     "answer": 0,
     "explanation": "Each letter moves back 1 place in the alphabet: B → A, O → N, A → Z and T → S. Applying the same rule to SHIP gives S → R, H → G, I → H and P → O, so the code is RGHO.",
     "distractorNotes": [
@@ -301,7 +428,10 @@
       "This mixes forward and backward moves."
     ],
     "learningPoint": "Check your rule against every letter of the example before you use it.",
-    "tags": ["codes", "letter shifts"]
+    "tags": [
+      "codes",
+      "letter shifts"
+    ]
   },
   {
     "id": "vr-hidden-words-001",
@@ -326,8 +456,13 @@
       "The joins here are 'he must', 'must leave', 'leave early' — no BEAR."
     ],
     "learningPoint": "Hidden-word questions need letters that run in order across the gap between two words.",
-    "followUpIds": ["vr-hidden-words-002"],
-    "tags": ["hidden words", "patterns"]
+    "followUpIds": [
+      "vr-hidden-words-002"
+    ],
+    "tags": [
+      "hidden words",
+      "patterns"
+    ]
   },
   {
     "id": "vr-hidden-words-002",
@@ -352,7 +487,10 @@
       "'camp' is close but the letters do not spell LAMP."
     ],
     "learningPoint": "Underline the last two letters of each word and the first two of the next — the hidden word must sit across that join.",
-    "tags": ["hidden words", "patterns"]
+    "tags": [
+      "hidden words",
+      "patterns"
+    ]
   },
   {
     "id": "vr-compound-words-001",
@@ -362,7 +500,12 @@
     "type": "compound-words",
     "difficulty": 3,
     "question": "Which word can go BEFORE all of these to make three new words: ___ ball, ___ path, ___ print?",
-    "options": ["foot", "hand", "sun", "over"],
+    "options": [
+      "foot",
+      "hand",
+      "sun",
+      "over"
+    ],
     "answer": 0,
     "explanation": "Foot gives football, footpath and footprint.",
     "distractorNotes": [
@@ -372,8 +515,13 @@
       "Overprint exists, but 'overball' does not."
     ],
     "learningPoint": "Test your answer against every part of the question — it must work for all of them, not just the first.",
-    "followUpIds": ["vr-compound-words-002"],
-    "tags": ["compound words", "word building"]
+    "followUpIds": [
+      "vr-compound-words-002"
+    ],
+    "tags": [
+      "compound words",
+      "word building"
+    ]
   },
   {
     "id": "vr-compound-words-002",
@@ -383,7 +531,12 @@
     "type": "compound-words",
     "difficulty": 3,
     "question": "Which word can go AFTER all of these to make three new words: rain ___, water ___, snow ___?",
-    "options": ["fall", "coat", "drop", "flake"],
+    "options": [
+      "fall",
+      "coat",
+      "drop",
+      "flake"
+    ],
     "answer": 0,
     "explanation": "Fall gives rainfall, waterfall and snowfall.",
     "distractorNotes": [
@@ -393,7 +546,10 @@
       "Snowflake works, but 'rainflake' and 'waterflake' do not."
     ],
     "learningPoint": "Check every combination before choosing — three out of four is not enough.",
-    "tags": ["compound words", "word building"]
+    "tags": [
+      "compound words",
+      "word building"
+    ]
   },
   {
     "id": "vr-word-relationships-001",
@@ -403,7 +559,12 @@
     "type": "word-relationships",
     "difficulty": 3,
     "question": "Which pair of words has the same relationship as PETAL and FLOWER?",
-    "options": ["branch : tree", "puppy : dog", "cold : ice", "run : sprint"],
+    "options": [
+      "branch : tree",
+      "puppy : dog",
+      "cold : ice",
+      "run : sprint"
+    ],
     "answer": 0,
     "explanation": "A petal is a part of a flower, and in the same way a branch is a part of a tree.",
     "distractorNotes": [
@@ -413,7 +574,10 @@
       "A sprint is a type of run, not a part of one."
     ],
     "learningPoint": "'Part of' relationships are different from 'type of' relationships — decide which one you are looking at.",
-    "tags": ["word relationships", "part-whole"]
+    "tags": [
+      "word relationships",
+      "part-whole"
+    ]
   },
   {
     "id": "vr-word-relationships-002",
@@ -438,7 +602,10 @@
       "A kettle heats water rather than measuring it."
     ],
     "learningPoint": "'Instrument to what it measures' is a common relationship — say the link as a sentence to check it.",
-    "tags": ["word relationships", "function"]
+    "tags": [
+      "word relationships",
+      "function"
+    ]
   },
   {
     "id": "vr-number-letter-001",
@@ -448,7 +615,12 @@
     "type": "number-series",
     "difficulty": 3,
     "question": "What is the next number in this sequence? 3, 6, 12, 24, ___",
-    "options": ["48", "36", "30", "42"],
+    "options": [
+      "48",
+      "36",
+      "30",
+      "42"
+    ],
     "answer": 0,
     "explanation": "Each number is double the one before: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24 and 24 × 2 = 48.",
     "distractorNotes": [
@@ -458,7 +630,10 @@
       "This adds 18, which does not fit any consistent rule."
     ],
     "learningPoint": "If the gaps grow quickly, try multiplying rather than adding.",
-    "tags": ["number series", "patterns"]
+    "tags": [
+      "number series",
+      "patterns"
+    ]
   },
   {
     "id": "vr-number-letter-002",
@@ -468,7 +643,12 @@
     "type": "number-series",
     "difficulty": 4,
     "question": "What is the next number in this sequence? 2, 5, 11, 23, ___",
-    "options": ["47", "46", "35", "44"],
+    "options": [
+      "47",
+      "46",
+      "35",
+      "44"
+    ],
     "answer": 0,
     "explanation": "Each number is double the previous one plus 1: 2 × 2 + 1 = 5, 5 × 2 + 1 = 11, 11 × 2 + 1 = 23, and 23 × 2 + 1 = 47.",
     "distractorNotes": [
@@ -478,7 +658,11 @@
       "This follows no consistent rule."
     ],
     "learningPoint": "If neither adding nor doubling works alone, try a two-part rule such as 'double and add one'.",
-    "tags": ["number series", "patterns", "reasoning"]
+    "tags": [
+      "number series",
+      "patterns",
+      "reasoning"
+    ]
   },
   {
     "id": "vr-logic-001",
@@ -503,7 +687,11 @@
       "This reverses the statement, which is not allowed."
     ],
     "learningPoint": "'All A are B' does not mean 'all B are A'. Check the direction of the rule.",
-    "tags": ["logic", "deduction", "reasoning"]
+    "tags": [
+      "logic",
+      "deduction",
+      "reasoning"
+    ]
   },
   {
     "id": "vr-logic-002",
@@ -513,7 +701,12 @@
     "type": "logic",
     "difficulty": 4,
     "question": "Tom is taller than Priya. Priya is taller than Alex. Sam is shorter than Alex. Who is the shortest?",
-    "options": ["Sam", "Alex", "Priya", "Tom"],
+    "options": [
+      "Sam",
+      "Alex",
+      "Priya",
+      "Tom"
+    ],
     "answer": 0,
     "explanation": "In order of height: Tom, then Priya, then Alex, then Sam. Sam is at the bottom of the list.",
     "distractorNotes": [
@@ -523,7 +716,11 @@
       "Tom is the tallest."
     ],
     "learningPoint": "Write the names in a single line from tallest to shortest as you read each clue.",
-    "tags": ["logic", "ordering", "reasoning"]
+    "tags": [
+      "logic",
+      "ordering",
+      "reasoning"
+    ]
   },
   {
     "id": "vr-word-formation-001",
@@ -533,7 +730,12 @@
     "type": "word-building",
     "difficulty": 3,
     "question": "Which word is made by removing ONE letter from CRATE, keeping the other letters in the same order?",
-    "options": ["RATE", "CART", "TRACE", "CREATE"],
+    "options": [
+      "RATE",
+      "CART",
+      "TRACE",
+      "CREATE"
+    ],
     "answer": 0,
     "explanation": "Removing the C from CRATE leaves R, A, T, E in their original order, giving RATE.",
     "distractorNotes": [
@@ -543,7 +745,10 @@
       "CREATE adds a letter rather than removing one."
     ],
     "learningPoint": "'Keeping the same order' rules out anagrams — cross off any option whose letters have been shuffled.",
-    "tags": ["word building", "letters"]
+    "tags": [
+      "word building",
+      "letters"
+    ]
   },
   {
     "id": "vr-vocabulary-001",
@@ -568,8 +773,13 @@
       "'Frank' is about honesty and 'distant' is about coolness."
     ],
     "learningPoint": "When two pairs both seem possible, choose the pair that could replace each other in a sentence.",
-    "followUpIds": ["vr-vocabulary-002"],
-    "tags": ["vocabulary", "synonyms"]
+    "followUpIds": [
+      "vr-vocabulary-002"
+    ],
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ]
   },
   {
     "id": "vr-vocabulary-002",
@@ -594,7 +804,10 @@
       "Being calm is about staying relaxed, not about facing danger."
     ],
     "learningPoint": "Test a pair by swapping one word for the other in a sentence — true synonyms still make sense.",
-    "tags": ["vocabulary", "synonyms"]
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ]
   },
   {
     "id": "vr-sequences-001",
@@ -604,7 +817,12 @@
     "type": "word-sequence",
     "difficulty": 3,
     "question": "Which word completes the sequence? January, March, May, July, ___",
-    "options": ["September", "August", "October", "June"],
+    "options": [
+      "September",
+      "August",
+      "October",
+      "June"
+    ],
     "answer": 0,
     "explanation": "The months go up in twos: January (1), March (3), May (5), July (7), so next is the ninth month, September.",
     "distractorNotes": [
@@ -614,8 +832,13 @@
       "June comes before July."
     ],
     "learningPoint": "Turn words into numbers where you can — it makes the pattern much easier to see.",
-    "followUpIds": ["vr-sequences-002"],
-    "tags": ["sequences", "patterns"]
+    "followUpIds": [
+      "vr-sequences-002"
+    ],
+    "tags": [
+      "sequences",
+      "patterns"
+    ]
   },
   {
     "id": "vr-sequences-002",
@@ -625,7 +848,12 @@
     "type": "word-sequence",
     "difficulty": 2,
     "question": "Which word completes the sequence? Monday, Wednesday, Friday, ___",
-    "options": ["Sunday", "Saturday", "Thursday", "Tuesday"],
+    "options": [
+      "Sunday",
+      "Saturday",
+      "Thursday",
+      "Tuesday"
+    ],
     "answer": 0,
     "explanation": "The days go up in twos: Monday (1), Wednesday (3), Friday (5), so the next is the seventh day, Sunday.",
     "distractorNotes": [
@@ -635,7 +863,10 @@
       "Tuesday comes much earlier in the week."
     ],
     "learningPoint": "Number the days or months first, then look for the gap between them.",
-    "tags": ["sequences", "patterns"]
+    "tags": [
+      "sequences",
+      "patterns"
+    ]
   },
   {
     "id": "vr-synonyms-004",
@@ -645,7 +876,12 @@
     "type": "synonyms",
     "difficulty": 1,
     "question": "Which word means most nearly the same as RAPID?",
-    "options": ["quick", "loud", "heavy", "narrow"],
+    "options": [
+      "quick",
+      "loud",
+      "heavy",
+      "narrow"
+    ],
     "answer": 0,
     "explanation": "'Rapid' means happening very fast, which is what 'quick' means.",
     "distractorNotes": [
@@ -655,7 +891,10 @@
       "'Narrow' describes width, not speed."
     ],
     "learningPoint": "Make sure the synonym describes the same quality — speed, sound and weight are all different.",
-    "tags": ["synonyms", "vocabulary"]
+    "tags": [
+      "synonyms",
+      "vocabulary"
+    ]
   },
   {
     "id": "vr-antonyms-003",
@@ -665,7 +904,12 @@
     "type": "antonyms",
     "difficulty": 1,
     "question": "Which word is most nearly OPPOSITE in meaning to ARRIVE?",
-    "options": ["depart", "travel", "journey", "delay"],
+    "options": [
+      "depart",
+      "travel",
+      "journey",
+      "delay"
+    ],
     "answer": 0,
     "explanation": "'Arrive' means to reach a place, so its opposite is 'depart', meaning to leave one.",
     "distractorNotes": [
@@ -675,7 +919,10 @@
       "'Delay' means to arrive late, which is still arriving."
     ],
     "learningPoint": "An opposite must reverse the meaning, not just relate to the same topic.",
-    "tags": ["antonyms", "vocabulary"]
+    "tags": [
+      "antonyms",
+      "vocabulary"
+    ]
   },
   {
     "id": "vr-antonyms-004",
@@ -685,7 +932,12 @@
     "type": "antonyms",
     "difficulty": 3,
     "question": "Which word is most nearly OPPOSITE in meaning to GENEROUS?",
-    "options": ["mean", "wealthy", "cheerful", "honest"],
+    "options": [
+      "mean",
+      "wealthy",
+      "cheerful",
+      "honest"
+    ],
     "answer": 0,
     "explanation": "'Generous' means willing to give freely, so its opposite is 'mean', meaning unwilling to give.",
     "distractorNotes": [
@@ -695,7 +947,10 @@
       "'Honest' describes truthfulness, not generosity."
     ],
     "learningPoint": "Watch for options that are merely connected to the topic rather than genuinely opposite.",
-    "tags": ["antonyms", "vocabulary"]
+    "tags": [
+      "antonyms",
+      "vocabulary"
+    ]
   },
   {
     "id": "vr-analogies-004",
@@ -705,7 +960,12 @@
     "type": "analogies",
     "difficulty": 1,
     "question": "Puppy is to dog as kitten is to ___",
-    "options": ["cat", "mouse", "paw", "milk"],
+    "options": [
+      "cat",
+      "mouse",
+      "paw",
+      "milk"
+    ],
     "answer": 0,
     "explanation": "A puppy is a young dog, so a kitten is a young cat.",
     "distractorNotes": [
@@ -715,7 +975,10 @@
       "Milk is something a kitten drinks."
     ],
     "learningPoint": "'Young animal to adult animal' is a common analogy — say the link as a sentence and reuse it.",
-    "tags": ["analogies", "relationships"]
+    "tags": [
+      "analogies",
+      "relationships"
+    ]
   },
   {
     "id": "vr-odd-one-out-003",
@@ -725,7 +988,12 @@
     "type": "odd-one-out",
     "difficulty": 1,
     "question": "Which word is the odd one out?",
-    "options": ["apple", "carrot", "potato", "onion"],
+    "options": [
+      "apple",
+      "carrot",
+      "potato",
+      "onion"
+    ],
     "answer": 0,
     "explanation": "Carrot, potato and onion are all vegetables. An apple is a fruit.",
     "distractorNotes": [
@@ -735,7 +1003,10 @@
       "An onion is a vegetable, like carrot and potato."
     ],
     "learningPoint": "Look for the group that three of the words share, then the fourth is the odd one out.",
-    "tags": ["classification", "odd one out"]
+    "tags": [
+      "classification",
+      "odd one out"
+    ]
   },
   {
     "id": "vr-letter-sequence-003",
@@ -745,7 +1016,12 @@
     "type": "letter-sequence",
     "difficulty": 1,
     "question": "What comes next in this sequence? AB, CD, EF, ___",
-    "options": ["GH", "FG", "HI", "GI"],
+    "options": [
+      "GH",
+      "FG",
+      "HI",
+      "GI"
+    ],
     "answer": 0,
     "explanation": "The letters simply run through the alphabet in pairs: A B, C D, E F, then G H.",
     "distractorNotes": [
@@ -755,7 +1031,10 @@
       "The two letters in each pair must be next to each other in the alphabet."
     ],
     "learningPoint": "Write out the alphabet before you start — it turns letter sequences into simple counting.",
-    "tags": ["letter sequence", "patterns"]
+    "tags": [
+      "letter sequence",
+      "patterns"
+    ]
   },
   {
     "id": "vr-letter-sequence-004",
@@ -765,7 +1044,12 @@
     "type": "letter-sequence",
     "difficulty": 3,
     "question": "What comes next in this sequence? ZY, XW, VU, ___",
-    "options": ["TS", "TU", "SR", "UT"],
+    "options": [
+      "TS",
+      "TU",
+      "SR",
+      "UT"
+    ],
     "answer": 0,
     "explanation": "The alphabet is running backwards in pairs: Z Y, X W, V U, then T S.",
     "distractorNotes": [
@@ -775,7 +1059,10 @@
       "The letters are the right ones but in the wrong order — the sequence goes backwards."
     ],
     "learningPoint": "Check the direction first. A sequence can run backwards through the alphabet just as easily as forwards.",
-    "tags": ["letter sequence", "patterns"]
+    "tags": [
+      "letter sequence",
+      "patterns"
+    ]
   },
   {
     "id": "vr-codes-003",
@@ -785,7 +1072,12 @@
     "type": "codes",
     "difficulty": 1,
     "question": "If A = 1, B = 2 and C = 3, what is the code for the word CAB?",
-    "options": ["312", "123", "321", "213"],
+    "options": [
+      "312",
+      "123",
+      "321",
+      "213"
+    ],
     "answer": 0,
     "explanation": "Take each letter in turn: C = 3, A = 1 and B = 2, giving 312.",
     "distractorNotes": [
@@ -795,7 +1087,10 @@
       "This is the code for BAC."
     ],
     "learningPoint": "Work through the letters strictly in the order they appear in the word.",
-    "tags": ["codes", "number codes"]
+    "tags": [
+      "codes",
+      "number codes"
+    ]
   },
   {
     "id": "vr-codes-004",
@@ -805,7 +1100,12 @@
     "type": "codes",
     "difficulty": 3,
     "question": "If FISH is written in code as GJTI, what is the code for BIRD?",
-    "options": ["CJSE", "AHQC", "CJSD", "BJSE"],
+    "options": [
+      "CJSE",
+      "AHQC",
+      "CJSD",
+      "BJSE"
+    ],
     "answer": 0,
     "explanation": "Each letter moves forward 1 place in the alphabet: F → G, I → J, S → T and H → I. Applying the same rule to BIRD gives B → C, I → J, R → S and D → E, so the code is CJSE.",
     "distractorNotes": [
@@ -815,7 +1115,10 @@
       "The first letter has not been moved on — B should become C."
     ],
     "learningPoint": "Test your rule on every letter of the example before you use it on the new word.",
-    "tags": ["codes", "letter shifts"]
+    "tags": [
+      "codes",
+      "letter shifts"
+    ]
   },
   {
     "id": "vr-hidden-words-003",
@@ -840,7 +1143,10 @@
       "The joins are 'he put', 'put on' and 'on his' — none spell ANT."
     ],
     "learningPoint": "The hidden letters must run in order straight across the gap between two words.",
-    "tags": ["hidden words", "patterns"]
+    "tags": [
+      "hidden words",
+      "patterns"
+    ]
   },
   {
     "id": "vr-hidden-words-004",
@@ -865,7 +1171,10 @@
       "The joins are 'we opened', 'opened the' and 'the gate' — none spell PEAR."
     ],
     "learningPoint": "Cover the middle of each word and read only the letters either side of the gaps.",
-    "tags": ["hidden words", "patterns"]
+    "tags": [
+      "hidden words",
+      "patterns"
+    ]
   },
   {
     "id": "vr-compound-words-003",
@@ -875,7 +1184,12 @@
     "type": "compound-words",
     "difficulty": 1,
     "question": "Which word can go BEFORE all of these to make three new words: ___ box, ___ man, ___ card?",
-    "options": ["post", "match", "letter", "note"],
+    "options": [
+      "post",
+      "match",
+      "letter",
+      "note"
+    ],
     "answer": 0,
     "explanation": "Post gives postbox, postman and postcard.",
     "distractorNotes": [
@@ -885,7 +1199,10 @@
       "Notebox and notecard are unusual, and 'noteman' is not a word."
     ],
     "learningPoint": "Your answer has to work with every single word listed, not just the first one.",
-    "tags": ["compound words", "word building"]
+    "tags": [
+      "compound words",
+      "word building"
+    ]
   },
   {
     "id": "vr-word-relationships-003",
@@ -895,7 +1212,12 @@
     "type": "word-relationships",
     "difficulty": 1,
     "question": "Which pair of words has the same relationship as CAT and KITTEN?",
-    "options": ["dog : puppy", "horse : stable", "bird : feather", "cow : milk"],
+    "options": [
+      "dog : puppy",
+      "horse : stable",
+      "bird : feather",
+      "cow : milk"
+    ],
     "answer": 0,
     "explanation": "A kitten is a young cat, and in the same way a puppy is a young dog.",
     "distractorNotes": [
@@ -905,7 +1227,10 @@
       "Milk is something a cow produces."
     ],
     "learningPoint": "Say the relationship as a full sentence, then check the second pair fits exactly the same sentence.",
-    "tags": ["word relationships", "young and adult"]
+    "tags": [
+      "word relationships",
+      "young and adult"
+    ]
   },
   {
     "id": "vr-word-relationships-004",
@@ -930,7 +1255,10 @@
       "A tractor is equipment a farmer uses, not a workplace."
     ],
     "learningPoint": "Person-to-workplace and person-to-tool are different relationships. Decide which one the first pair shows.",
-    "tags": ["word relationships", "workplace"]
+    "tags": [
+      "word relationships",
+      "workplace"
+    ]
   },
   {
     "id": "vr-number-letter-003",
@@ -940,7 +1268,12 @@
     "type": "number-series",
     "difficulty": 1,
     "question": "What is the next number in this sequence? 5, 10, 15, 20, ___",
-    "options": ["25", "24", "30", "21"],
+    "options": [
+      "25",
+      "24",
+      "30",
+      "21"
+    ],
     "answer": 0,
     "explanation": "The numbers go up by 5 each time, so after 20 comes 25.",
     "distractorNotes": [
@@ -950,7 +1283,10 @@
       "This adds only 1."
     ],
     "learningPoint": "Work out the gap between the first two numbers, then check it is the same all the way along.",
-    "tags": ["number series", "patterns"]
+    "tags": [
+      "number series",
+      "patterns"
+    ]
   },
   {
     "id": "vr-number-letter-004",
@@ -960,7 +1296,12 @@
     "type": "number-series",
     "difficulty": 3,
     "question": "What is the next number in this sequence? 2, 6, 12, 20, ___",
-    "options": ["30", "28", "26", "24"],
+    "options": [
+      "30",
+      "28",
+      "26",
+      "24"
+    ],
     "answer": 0,
     "explanation": "The gaps grow steadily: 4, then 6, then 8. The next gap is 10, so 20 + 10 = 30.",
     "distractorNotes": [
@@ -970,7 +1311,11 @@
       "This adds only 4, the very first gap."
     ],
     "learningPoint": "If the gaps are not equal, look at how the gaps themselves change.",
-    "tags": ["number series", "patterns", "reasoning"]
+    "tags": [
+      "number series",
+      "patterns",
+      "reasoning"
+    ]
   },
   {
     "id": "vr-logic-003",
@@ -995,7 +1340,10 @@
       "This contradicts the rule we were given."
     ],
     "learningPoint": "Use only the information you are given — do not add anything from your own knowledge.",
-    "tags": ["logic", "deduction"]
+    "tags": [
+      "logic",
+      "deduction"
+    ]
   },
   {
     "id": "vr-logic-004",
@@ -1005,7 +1353,12 @@
     "type": "logic",
     "difficulty": 3,
     "question": "Amir is older than Beth. Beth is older than Chen. Dara is younger than Chen. Who is the oldest?",
-    "options": ["Amir", "Beth", "Chen", "Dara"],
+    "options": [
+      "Amir",
+      "Beth",
+      "Chen",
+      "Dara"
+    ],
     "answer": 0,
     "explanation": "In order from oldest to youngest: Amir, Beth, Chen, Dara. Amir is at the top.",
     "distractorNotes": [
@@ -1015,7 +1368,11 @@
       "Dara is the youngest of all four."
     ],
     "learningPoint": "Write the names in one line as you read each clue, adding each new person in the right place.",
-    "tags": ["logic", "ordering", "reasoning"]
+    "tags": [
+      "logic",
+      "ordering",
+      "reasoning"
+    ]
   },
   {
     "id": "vr-vocabulary-003",
@@ -1040,7 +1397,10 @@
       "'Start' and 'wait' are close to opposites."
     ],
     "learningPoint": "True synonyms can swap places in a sentence without changing the meaning.",
-    "tags": ["vocabulary", "synonyms"]
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ]
   },
   {
     "id": "vr-vocabulary-004",
@@ -1065,7 +1425,10 @@
       "'Empty' and 'damp' describe completely different qualities."
     ],
     "learningPoint": "Group the words by what they describe — space, sound, moisture — and the matching pair stands out.",
-    "tags": ["vocabulary", "synonyms"]
+    "tags": [
+      "vocabulary",
+      "synonyms"
+    ]
   },
   {
     "id": "vr-sequences-003",
@@ -1075,7 +1438,12 @@
     "type": "word-sequence",
     "difficulty": 1,
     "question": "Which word completes the sequence? March, April, May, ___",
-    "options": ["June", "July", "February", "August"],
+    "options": [
+      "June",
+      "July",
+      "February",
+      "August"
+    ],
     "answer": 0,
     "explanation": "These are consecutive months of the year, so the month after May is June.",
     "distractorNotes": [
@@ -1085,7 +1453,10 @@
       "August is three months after May."
     ],
     "learningPoint": "Check whether a sequence moves on by one step or by more before choosing.",
-    "tags": ["sequences", "patterns"]
+    "tags": [
+      "sequences",
+      "patterns"
+    ]
   },
   {
     "id": "vr-sequences-004",
@@ -1095,7 +1466,12 @@
     "type": "word-sequence",
     "difficulty": 3,
     "question": "Which word completes the sequence? Sunday, Tuesday, Thursday, ___",
-    "options": ["Saturday", "Friday", "Monday", "Wednesday"],
+    "options": [
+      "Saturday",
+      "Friday",
+      "Monday",
+      "Wednesday"
+    ],
     "answer": 0,
     "explanation": "The sequence skips a day each time: Sunday, then Tuesday, then Thursday, so next comes Saturday.",
     "distractorNotes": [
@@ -1105,6 +1481,1473 @@
       "Wednesday comes between Tuesday and Thursday, earlier in the sequence."
     ],
     "learningPoint": "Number the days of the week, then the pattern becomes an ordinary number sequence.",
-    "tags": ["sequences", "patterns"]
+    "tags": [
+      "sequences",
+      "patterns"
+    ]
+  },
+  {
+    "id": "vr-synonyms-005",
+    "subject": "verbal-reasoning",
+    "topic": "Synonyms",
+    "skill": "synonyms",
+    "type": "synonyms",
+    "difficulty": 1,
+    "question": "Which word means most nearly the same as 'begin'?",
+    "options": [
+      "start",
+      "finish",
+      "hurry",
+      "choose"
+    ],
+    "answer": 0,
+    "explanation": "To begin something is to start it, so 'start' is the closest in meaning.",
+    "distractorNotes": [
+      "",
+      "'Finish' is the opposite of begin.",
+      "'Hurry' is about speed, not about starting.",
+      "'Choose' means to pick something out."
+    ],
+    "learningPoint": "Read every option before choosing — the opposite of a word is often offered as a trap.",
+    "tags": [
+      "synonyms",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "vr-synonyms-006",
+    "subject": "verbal-reasoning",
+    "topic": "Synonyms",
+    "skill": "synonyms",
+    "type": "synonyms",
+    "difficulty": 2,
+    "question": "Which word means most nearly the same as 'reluctant'?",
+    "options": [
+      "unwilling",
+      "exhausted",
+      "careless",
+      "dishonest"
+    ],
+    "answer": 0,
+    "explanation": "Somebody reluctant does not want to do something, which is exactly what 'unwilling' means.",
+    "distractorNotes": [
+      "",
+      "'Exhausted' means very tired — a reluctant person need not be tired at all.",
+      "'Careless' means not paying attention.",
+      "'Dishonest' means untruthful, which is a different idea entirely."
+    ],
+    "learningPoint": "Try the word in a sentence: 'she was reluctant to go' and 'she was unwilling to go' mean the same thing.",
+    "tags": [
+      "synonyms",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "vr-synonyms-007",
+    "subject": "verbal-reasoning",
+    "topic": "Synonyms",
+    "skill": "synonyms",
+    "type": "synonyms",
+    "difficulty": 3,
+    "question": "Which word means most nearly the same as 'abundant'?",
+    "options": [
+      "plentiful",
+      "expensive",
+      "ancient",
+      "obvious"
+    ],
+    "answer": 0,
+    "explanation": "'Abundant' means existing in large quantities, so 'plentiful' matches it closely.",
+    "distractorNotes": [
+      "",
+      "Something plentiful is usually cheap rather than expensive.",
+      "'Ancient' is about age, not quantity.",
+      "'Obvious' means easy to see or understand."
+    ],
+    "learningPoint": "Decide first what the word is measuring — amount, age, cost or clarity — then match on that.",
+    "tags": [
+      "synonyms",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "vr-synonyms-008",
+    "subject": "verbal-reasoning",
+    "topic": "Synonyms",
+    "skill": "synonyms",
+    "type": "synonyms",
+    "difficulty": 4,
+    "question": "Which word means most nearly the same as 'candid'?",
+    "options": [
+      "frank",
+      "cheerful",
+      "cautious",
+      "clever"
+    ],
+    "answer": 0,
+    "explanation": "A candid answer is an honest and direct one, said without holding anything back. 'Frank' means exactly that.",
+    "distractorNotes": [
+      "",
+      "'Cheerful' means happy — a candid remark can be very unwelcome.",
+      "'Cautious' is nearly the opposite: a cautious person holds things back.",
+      "'Clever' is about intelligence rather than honesty."
+    ],
+    "learningPoint": "Do not be misled by words that merely sound similar or begin with the same letter.",
+    "tags": [
+      "synonyms",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "vr-antonyms-005",
+    "subject": "verbal-reasoning",
+    "topic": "Antonyms",
+    "skill": "antonyms",
+    "type": "antonyms",
+    "difficulty": 1,
+    "question": "Which word means the opposite of 'ancient'?",
+    "options": [
+      "modern",
+      "enormous",
+      "silent",
+      "distant"
+    ],
+    "answer": 0,
+    "explanation": "'Ancient' means very old, so its opposite is 'modern', meaning of the present time.",
+    "distractorNotes": [
+      "",
+      "'Enormous' is about size, not age.",
+      "'Silent' is about sound.",
+      "'Distant' is about how far away something is."
+    ],
+    "learningPoint": "An antonym must be opposite in the same way — check that both words describe the same quality.",
+    "tags": [
+      "antonyms",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "vr-antonyms-006",
+    "subject": "verbal-reasoning",
+    "topic": "Antonyms",
+    "skill": "antonyms",
+    "type": "antonyms",
+    "difficulty": 2,
+    "question": "Which word means the opposite of 'permanent'?",
+    "options": [
+      "temporary",
+      "valuable",
+      "popular",
+      "private"
+    ],
+    "answer": 0,
+    "explanation": "'Permanent' means lasting for ever, so its opposite is 'temporary', meaning lasting only for a short time.",
+    "distractorNotes": [
+      "",
+      "'Valuable' is about worth, not about how long something lasts.",
+      "'Popular' is about how well liked something is.",
+      "'Private' is the opposite of public, not of permanent."
+    ],
+    "learningPoint": "Ask what the word is about — time, size, worth — and look for the opposite in that same category.",
+    "tags": [
+      "antonyms",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "vr-antonyms-007",
+    "subject": "verbal-reasoning",
+    "topic": "Antonyms",
+    "skill": "antonyms",
+    "type": "antonyms",
+    "difficulty": 3,
+    "question": "Which word means the opposite of 'expand'?",
+    "options": [
+      "contract",
+      "deliver",
+      "replace",
+      "measure"
+    ],
+    "answer": 0,
+    "explanation": "To expand is to get bigger; to contract is to get smaller. They are direct opposites.",
+    "distractorNotes": [
+      "",
+      "'Deliver' means to take something somewhere.",
+      "'Replace' means to put something new in place of something old.",
+      "'Measure' means to find the size of something, not to change it."
+    ],
+    "learningPoint": "When the word is a verb, the opposite must be a verb describing the reverse action.",
+    "tags": [
+      "antonyms",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "vr-antonyms-008",
+    "subject": "verbal-reasoning",
+    "topic": "Antonyms",
+    "skill": "antonyms",
+    "type": "antonyms",
+    "difficulty": 4,
+    "question": "Which word means the opposite of 'humble'?",
+    "options": [
+      "arrogant",
+      "generous",
+      "sincere",
+      "anxious"
+    ],
+    "answer": 0,
+    "explanation": "A humble person does not think too highly of themselves. An arrogant person thinks far too highly of themselves, which is the direct opposite.",
+    "distractorNotes": [
+      "",
+      "'Generous' is about giving; a humble person can be generous too.",
+      "'Sincere' means genuine, which is not opposed to being humble.",
+      "'Anxious' means worried, which is a different quality altogether."
+    ],
+    "learningPoint": "For words describing character, ask what the exaggerated version of the opposite would be.",
+    "tags": [
+      "antonyms",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "vr-analogies-005",
+    "subject": "verbal-reasoning",
+    "topic": "Analogies",
+    "skill": "word_analogies",
+    "type": "analogies",
+    "difficulty": 1,
+    "question": "Puppy is to dog as kitten is to ___",
+    "options": [
+      "cat",
+      "mouse",
+      "kennel",
+      "fur"
+    ],
+    "answer": 0,
+    "explanation": "A puppy is a young dog, so a kitten is a young cat.",
+    "distractorNotes": [
+      "",
+      "A mouse is a different animal, not a grown-up kitten.",
+      "A kennel is where a dog sleeps, not what it grows into.",
+      "Fur is something both animals have."
+    ],
+    "learningPoint": "Say the relationship out loud in words — 'a puppy is a young dog' — before filling in the gap.",
+    "tags": [
+      "analogies",
+      "young and adult"
+    ]
+  },
+  {
+    "id": "vr-analogies-006",
+    "subject": "verbal-reasoning",
+    "topic": "Analogies",
+    "skill": "word_analogies",
+    "type": "analogies",
+    "difficulty": 2,
+    "question": "Foot is to sock as hand is to ___",
+    "options": [
+      "glove",
+      "finger",
+      "wrist",
+      "wave"
+    ],
+    "answer": 0,
+    "explanation": "A sock is the garment worn on a foot, so a glove is the garment worn on a hand.",
+    "distractorNotes": [
+      "",
+      "A finger is a part of the hand, not something worn on it.",
+      "A wrist is next to the hand, not worn on it.",
+      "A wave is something a hand does."
+    ],
+    "learningPoint": "'Object and what covers it' is a common analogy pattern — check the second pair matches the first exactly.",
+    "tags": [
+      "analogies",
+      "relationships"
+    ]
+  },
+  {
+    "id": "vr-analogies-007",
+    "subject": "verbal-reasoning",
+    "topic": "Analogies",
+    "skill": "word_analogies",
+    "type": "analogies",
+    "difficulty": 3,
+    "question": "Chapter is to book as scene is to ___",
+    "options": [
+      "play",
+      "actor",
+      "stage",
+      "story"
+    ],
+    "answer": 0,
+    "explanation": "A chapter is one section of a book, so a scene is one section of a play.",
+    "distractorNotes": [
+      "",
+      "An actor performs in a play but is not made up of scenes.",
+      "A stage is where a play is performed.",
+      "A story is what a play tells, not the whole made up of scenes."
+    ],
+    "learningPoint": "'Part to whole' analogies need the same direction on both sides — part first, whole second.",
+    "tags": [
+      "analogies",
+      "part and whole"
+    ]
+  },
+  {
+    "id": "vr-analogies-008",
+    "subject": "verbal-reasoning",
+    "topic": "Analogies",
+    "skill": "word_analogies",
+    "type": "analogies",
+    "difficulty": 4,
+    "question": "Hesitant is to decisive as vague is to ___",
+    "options": [
+      "precise",
+      "lengthy",
+      "hidden",
+      "foolish"
+    ],
+    "answer": 0,
+    "explanation": "Hesitant and decisive are opposites, so the second pair must be opposites too. The opposite of vague, meaning unclear, is precise.",
+    "distractorNotes": [
+      "",
+      "'Lengthy' is about how long something is; a long answer can still be vague.",
+      "'Hidden' is close in meaning to vague rather than opposite to it.",
+      "'Foolish' is about sense, not about clarity."
+    ],
+    "learningPoint": "Work out the relationship in the first pair first. If it is 'opposites', the second pair must be opposites as well.",
+    "tags": [
+      "analogies",
+      "antonyms"
+    ]
+  },
+  {
+    "id": "vr-odd-one-out-004",
+    "subject": "verbal-reasoning",
+    "topic": "Word classification",
+    "skill": "odd_one_out",
+    "type": "classification",
+    "difficulty": 1,
+    "question": "Which word is the odd one out? oak, birch, willow, tulip",
+    "options": [
+      "tulip",
+      "oak",
+      "birch",
+      "willow"
+    ],
+    "answer": 0,
+    "explanation": "Oak, birch and willow are all trees. A tulip is a flower, so it does not belong with the others.",
+    "distractorNotes": [
+      "",
+      "An oak is a tree, like the birch and the willow.",
+      "A birch is a tree, like the oak and the willow.",
+      "A willow is a tree, like the oak and the birch."
+    ],
+    "learningPoint": "Find what three of the words share first, then the fourth is the answer.",
+    "tags": [
+      "classification",
+      "odd one out"
+    ]
+  },
+  {
+    "id": "vr-odd-one-out-005",
+    "subject": "verbal-reasoning",
+    "topic": "Word classification",
+    "skill": "odd_one_out",
+    "type": "classification",
+    "difficulty": 2,
+    "question": "Which word is the odd one out? violin, cello, trumpet, viola",
+    "options": [
+      "trumpet",
+      "violin",
+      "cello",
+      "viola"
+    ],
+    "answer": 0,
+    "explanation": "The violin, cello and viola are all string instruments, played with a bow. The trumpet is a brass instrument, played by blowing.",
+    "distractorNotes": [
+      "",
+      "The violin has strings, like the cello and the viola.",
+      "The cello has strings, like the violin and the viola.",
+      "The viola has strings, like the violin and the cello."
+    ],
+    "learningPoint": "Group by how things work, not just by what they are used for — all four are instruments, so that cannot be the rule.",
+    "tags": [
+      "classification",
+      "odd one out",
+      "music"
+    ]
+  },
+  {
+    "id": "vr-odd-one-out-006",
+    "subject": "verbal-reasoning",
+    "topic": "Word classification",
+    "skill": "odd_one_out",
+    "type": "classification",
+    "difficulty": 3,
+    "question": "Which word is the odd one out? square, rhombus, cube, rectangle",
+    "options": [
+      "cube",
+      "square",
+      "rhombus",
+      "rectangle"
+    ],
+    "answer": 0,
+    "explanation": "The square, rhombus and rectangle are all flat, four-sided shapes. A cube is a solid, three-dimensional shape.",
+    "distractorNotes": [
+      "",
+      "A square is flat, like the rhombus and the rectangle.",
+      "A rhombus is flat, like the square and the rectangle.",
+      "A rectangle is flat, like the square and the rhombus."
+    ],
+    "learningPoint": "Watch for one item belonging to a different category altogether — here, solid rather than flat.",
+    "tags": [
+      "classification",
+      "odd one out",
+      "shapes"
+    ]
+  },
+  {
+    "id": "vr-classification-002",
+    "subject": "verbal-reasoning",
+    "topic": "Word classification",
+    "skill": "grouping",
+    "type": "classification",
+    "difficulty": 4,
+    "question": "Which word belongs in this group? sonnet, haiku, limerick, ___",
+    "options": [
+      "ballad",
+      "novel",
+      "essay",
+      "diary"
+    ],
+    "answer": 0,
+    "explanation": "A sonnet, a haiku and a limerick are all forms of poem. A ballad is also a form of poem, so it belongs with them.",
+    "distractorNotes": [
+      "",
+      "A novel is a long piece of prose, not a poem.",
+      "An essay is a piece of prose writing that argues a point.",
+      "A diary is a personal record kept day by day."
+    ],
+    "learningPoint": "When asked what belongs, name the group precisely — 'writing' is too broad here; 'poem' is the actual rule.",
+    "tags": [
+      "classification",
+      "grouping",
+      "literature"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-005",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 1,
+    "question": "What comes next in this sequence? AB, CD, EF, GH, ___",
+    "options": [
+      "IJ",
+      "HI",
+      "JK",
+      "GI"
+    ],
+    "answer": 0,
+    "explanation": "The pairs run straight through the alphabet in order: AB, CD, EF, GH, and then IJ.",
+    "distractorNotes": [
+      "",
+      "HI overlaps with the pair before it — H has already been used.",
+      "JK skips the letter I altogether.",
+      "GI reuses G and misses H."
+    ],
+    "learningPoint": "Write the alphabet out along the top of your paper — it makes letter sequences much quicker.",
+    "tags": [
+      "letter sequences",
+      "patterns"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-006",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? Z, X, V, T, ___",
+    "options": [
+      "R",
+      "S",
+      "Q",
+      "P"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves back two places: Z to X, X to V, V to T. Two places back from T gives R.",
+    "distractorNotes": [
+      "",
+      "S is only one place back from T.",
+      "Q is three places back from T.",
+      "P is four places back from T — that is two steps of the pattern, not one."
+    ],
+    "learningPoint": "Check the size of the step between every pair, not just the first two.",
+    "tags": [
+      "letter sequences",
+      "patterns"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-007",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 3,
+    "question": "What comes next in this sequence? CA, FD, IG, LJ, ___",
+    "options": [
+      "OM",
+      "NM",
+      "ON",
+      "PN"
+    ],
+    "answer": 0,
+    "explanation": "Both letters move forward three places each time. The first letters run C, F, I, L, then O; the second letters run A, D, G, J, then M.",
+    "distractorNotes": [
+      "",
+      "N is only two places after L, so the first letter is wrong.",
+      "The first letter is right, but N is four places after J.",
+      "P is four places after L and N is four places after J."
+    ],
+    "learningPoint": "In a two-letter sequence, treat each position as its own separate pattern.",
+    "tags": [
+      "letter sequences",
+      "patterns"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-008",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 4,
+    "question": "What comes next in this sequence? AZ, CX, EV, GT, ___",
+    "options": [
+      "IR",
+      "IS",
+      "HR",
+      "JR"
+    ],
+    "answer": 0,
+    "explanation": "The first letters go forward two at a time: A, C, E, G, then I. The second letters go backwards two at a time: Z, X, V, T, then R.",
+    "distractorNotes": [
+      "",
+      "The first letter is right, but S is only one place back from T.",
+      "H is only one place after G.",
+      "J is three places after G."
+    ],
+    "learningPoint": "When one letter climbs and the other falls, work out the two patterns separately before combining them.",
+    "tags": [
+      "letter sequences",
+      "patterns"
+    ]
+  },
+  {
+    "id": "vr-codes-005",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 1,
+    "question": "If CAT is written in code as DBU, what is the code for DOG?",
+    "options": [
+      "EPH",
+      "CNF",
+      "EPG",
+      "DPH"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward one place: C to D, A to B, T to U. Doing the same to DOG gives D to E, O to P and G to H, so the code is EPH.",
+    "distractorNotes": [
+      "",
+      "This moves each letter back one place instead of forward.",
+      "The last letter has not been moved on.",
+      "The first letter has not been moved on."
+    ],
+    "learningPoint": "Apply your rule to every letter, then read the answer back to check none was left behind.",
+    "tags": [
+      "codes",
+      "letter shifts"
+    ]
+  },
+  {
+    "id": "vr-codes-006",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "number_codes",
+    "type": "codes",
+    "difficulty": 2,
+    "question": "If A = 1, B = 2, C = 3 and so on through the alphabet, what is the code for BED?",
+    "options": [
+      "254",
+      "245",
+      "524",
+      "253"
+    ],
+    "answer": 0,
+    "explanation": "B is the 2nd letter, E is the 5th and D is the 4th, so BED is 2, 5, 4.",
+    "distractorNotes": [
+      "",
+      "This has the last two numbers the wrong way round.",
+      "This puts the letters in the order E, B, D.",
+      "This gives D as 3 instead of 4."
+    ],
+    "learningPoint": "Count carefully to the letter you need — a slip of one place changes the whole answer.",
+    "tags": [
+      "codes",
+      "number codes"
+    ]
+  },
+  {
+    "id": "vr-codes-007",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If PLANT is written in code as QMBOU, what is the code for STEM?",
+    "options": [
+      "TUFN",
+      "RSDL",
+      "TUFM",
+      "TVFN"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward one place: P to Q, L to M, A to B, N to O, T to U. Applying that to STEM gives S to T, T to U, E to F and M to N, which is TUFN.",
+    "distractorNotes": [
+      "",
+      "This moves every letter back one place rather than forward.",
+      "The final M has not been moved on.",
+      "The second letter has been moved forward two places instead of one."
+    ],
+    "learningPoint": "Test your rule against every letter of the example word before you use it on the new one.",
+    "tags": [
+      "codes",
+      "letter shifts"
+    ]
+  },
+  {
+    "id": "vr-codes-008",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "number_codes",
+    "type": "codes",
+    "difficulty": 4,
+    "question": "In a code, MILK is written as 13 9 12 11 and SALT is written as 19 1 12 20. What is the code for LIST?",
+    "options": [
+      "12 9 19 20",
+      "12 9 18 20",
+      "11 8 18 19",
+      "12 10 19 20"
+    ],
+    "answer": 0,
+    "explanation": "Each number is the position of the letter in the alphabet: M is 13, I is 9, L is 12, K is 11. So L is 12, I is 9, S is 19 and T is 20.",
+    "distractorNotes": [
+      "",
+      "This gives S as 18, but S is the 19th letter.",
+      "Every number here is one too small.",
+      "This gives I as 10, but I is the 9th letter."
+    ],
+    "learningPoint": "When two examples are given, use the second to confirm the rule you worked out from the first.",
+    "tags": [
+      "codes",
+      "number codes",
+      "alphabet"
+    ]
+  },
+  {
+    "id": "vr-hidden-words-005",
+    "subject": "verbal-reasoning",
+    "topic": "Hidden words",
+    "skill": "hidden_words",
+    "type": "hidden-words",
+    "difficulty": 1,
+    "question": "A four-letter word is hidden across the end of one word and the start of the next. Find it: 'We took the last opportunity to leave.'",
+    "options": [
+      "STOP",
+      "LAST",
+      "TOOK",
+      "PORT"
+    ],
+    "answer": 0,
+    "explanation": "The end of 'last' and the beginning of 'opportunity' give laST OPportunity, which hides the word STOP.",
+    "distractorNotes": [
+      "",
+      "'Last' is a whole word in the sentence, not one hidden across two words.",
+      "'Took' is also a whole word in the sentence.",
+      "The letters of 'port' do not appear together across a word boundary here."
+    ],
+    "learningPoint": "Hidden words always straddle a gap — look at the last letters of one word joined to the first letters of the next.",
+    "tags": [
+      "hidden words",
+      "letters"
+    ]
+  },
+  {
+    "id": "vr-hidden-words-006",
+    "subject": "verbal-reasoning",
+    "topic": "Hidden words",
+    "skill": "hidden_words",
+    "type": "hidden-words",
+    "difficulty": 2,
+    "question": "A four-letter word is hidden across two neighbouring words. Find it: 'The car dealer closed early.'",
+    "options": [
+      "CARD",
+      "DEAL",
+      "CARE",
+      "EARL"
+    ],
+    "answer": 0,
+    "explanation": "'Car' followed by 'dealer' gives CAR Dealer, and the first four letters across that gap spell CARD.",
+    "distractorNotes": [
+      "",
+      "'Deal' sits inside the single word 'dealer' and does not cross a gap.",
+      "'Care' does not appear across the join — 'car' is followed by a d, not an e.",
+      "'Earl' sits inside 'dealer' rather than across two words."
+    ],
+    "learningPoint": "The hidden word must use letters from both words — one on each side of the space.",
+    "tags": [
+      "hidden words",
+      "letters"
+    ]
+  },
+  {
+    "id": "vr-hidden-words-007",
+    "subject": "verbal-reasoning",
+    "topic": "Hidden words",
+    "skill": "hidden_words",
+    "type": "hidden-words",
+    "difficulty": 3,
+    "question": "A five-letter word is hidden across two neighbouring words. Find it: 'It caused a sad rift between them.'",
+    "options": [
+      "DRIFT",
+      "DRIED",
+      "TRIED",
+      "FIRST"
+    ],
+    "answer": 0,
+    "explanation": "The d at the end of 'sad' joins the start of 'rift' to give saD RIFT, which hides the word DRIFT.",
+    "distractorNotes": [
+      "",
+      "'Dried' would need an e, which does not appear at that join.",
+      "'Tried' begins with a t, but the letter before 'rift' is a d.",
+      "The letters of 'first' do not appear in order across any join here."
+    ],
+    "learningPoint": "For a five-letter hidden word, try taking one, two or three letters from the first word and the rest from the second.",
+    "tags": [
+      "hidden words",
+      "letters"
+    ]
+  },
+  {
+    "id": "vr-hidden-words-008",
+    "subject": "verbal-reasoning",
+    "topic": "Hidden words",
+    "skill": "hidden_words",
+    "type": "hidden-words",
+    "difficulty": 4,
+    "question": "In which sentence is the word HEAT hidden across two neighbouring words?",
+    "options": [
+      "She opened the atlas on the table.",
+      "He walked the entire route alone.",
+      "They chose the answer together.",
+      "We reached the harbour before dusk."
+    ],
+    "answer": 0,
+    "explanation": "'The atlas' gives tHE ATlas: the last two letters of 'the' and the first two of 'atlas' spell HEAT.",
+    "distractorNotes": [
+      "",
+      "'The entire' gives the letters h, e, e, n — not HEAT.",
+      "'The answer' gives the letters h, e, a, n — so close, but the last letter is wrong.",
+      "'The harbour' gives the letters h, e, h, a."
+    ],
+    "learningPoint": "When you are given the hidden word, test each join in turn rather than reading the sentences for sense.",
+    "tags": [
+      "hidden words",
+      "letters"
+    ]
+  },
+  {
+    "id": "vr-compound-words-004",
+    "subject": "verbal-reasoning",
+    "topic": "Word building",
+    "skill": "compound_words",
+    "type": "word-building",
+    "difficulty": 1,
+    "question": "Which word joins with 'foot' to make a compound word?",
+    "options": [
+      "ball",
+      "tree",
+      "glass",
+      "chair"
+    ],
+    "answer": 0,
+    "explanation": "'Foot' and 'ball' join to make 'football', a single compound word.",
+    "distractorNotes": [
+      "",
+      "'Foottree' is not a word.",
+      "'Footglass' is not a word.",
+      "'Footchair' is not a word."
+    ],
+    "learningPoint": "Say each possible compound out loud — if it does not sound like a real word, it usually is not one.",
+    "tags": [
+      "compound words",
+      "word building"
+    ]
+  },
+  {
+    "id": "vr-compound-words-005",
+    "subject": "verbal-reasoning",
+    "topic": "Word building",
+    "skill": "compound_words",
+    "type": "word-building",
+    "difficulty": 3,
+    "question": "Which word can go in front of all three of these to make compound words? ___ light, ___ shine, ___ burn",
+    "options": [
+      "sun",
+      "moon",
+      "day",
+      "star"
+    ],
+    "answer": 0,
+    "explanation": "Sunlight, sunshine and sunburn are all real words, so 'sun' works for all three.",
+    "distractorNotes": [
+      "",
+      "Moonlight and moonshine are words, but 'moonburn' is not.",
+      "Daylight is a word, but 'dayshine' and 'dayburn' are not.",
+      "Starlight is a word, but 'starshine' and 'starburn' are not."
+    ],
+    "learningPoint": "A word must work with every item in the list — test all of them before choosing.",
+    "tags": [
+      "compound words",
+      "word building"
+    ]
+  },
+  {
+    "id": "vr-word-formation-002",
+    "subject": "verbal-reasoning",
+    "topic": "Word building",
+    "skill": "letter_removal",
+    "type": "word-building",
+    "difficulty": 2,
+    "question": "Which letter must be taken out of STAND to leave a word meaning the fine grains found on a beach?",
+    "options": [
+      "T",
+      "D",
+      "N",
+      "A"
+    ],
+    "answer": 0,
+    "explanation": "Removing the T from STAND leaves SAND, which is what covers a beach.",
+    "distractorNotes": [
+      "",
+      "Removing the D leaves STAN, which is a name rather than a word for beach grains.",
+      "Removing the N leaves STAD, which is not a word.",
+      "Removing the A leaves STND, which is not a word."
+    ],
+    "learningPoint": "Work from the meaning you are given — write the target word down first, then see which letter is extra.",
+    "tags": [
+      "word building",
+      "letter removal"
+    ]
+  },
+  {
+    "id": "vr-word-formation-003",
+    "subject": "verbal-reasoning",
+    "topic": "Word building",
+    "skill": "letter_removal",
+    "type": "word-building",
+    "difficulty": 3,
+    "question": "Move one letter from SPARK to CAT so that both remain real words. Which letter moves?",
+    "options": [
+      "S",
+      "P",
+      "K",
+      "R"
+    ],
+    "answer": 0,
+    "explanation": "Taking the S from SPARK leaves PARK, and adding it to CAT makes CATS. Both are real words.",
+    "distractorNotes": [
+      "",
+      "Removing the P leaves SARK, which is not an ordinary word.",
+      "Removing the K leaves SPAR, which is a word, but CATK is not.",
+      "Removing the R leaves SPAK, which is not a word."
+    ],
+    "learningPoint": "Both halves must work. Check the second word as carefully as the first.",
+    "tags": [
+      "word building",
+      "letter removal"
+    ]
+  },
+  {
+    "id": "vr-word-relationships-005",
+    "subject": "verbal-reasoning",
+    "topic": "Word relationships",
+    "skill": "part_whole",
+    "type": "relationships",
+    "difficulty": 1,
+    "question": "Petal is to flower as branch is to ___",
+    "options": [
+      "tree",
+      "forest",
+      "garden",
+      "shade"
+    ],
+    "answer": 0,
+    "explanation": "A petal is a part of a flower, so a branch is a part of a tree.",
+    "distractorNotes": [
+      "",
+      "A forest is made of many trees, so this goes one step too far.",
+      "A garden is a place where trees may grow.",
+      "Shade is something a tree gives, not something it is made of."
+    ],
+    "learningPoint": "In a part-to-whole pair, the second word must be the thing the first is a piece of.",
+    "tags": [
+      "relationships",
+      "part and whole"
+    ]
+  },
+  {
+    "id": "vr-word-relationships-006",
+    "subject": "verbal-reasoning",
+    "topic": "Word relationships",
+    "skill": "young_and_adult",
+    "type": "relationships",
+    "difficulty": 2,
+    "question": "What is the young of a horse called?",
+    "options": [
+      "foal",
+      "cub",
+      "calf",
+      "lamb"
+    ],
+    "answer": 0,
+    "explanation": "A young horse is a foal.",
+    "distractorNotes": [
+      "",
+      "A cub is the young of a fox, bear or lion.",
+      "A calf is the young of a cow.",
+      "A lamb is the young of a sheep."
+    ],
+    "learningPoint": "Learn the common animal families as pairs — they come up in analogies as well as on their own.",
+    "tags": [
+      "relationships",
+      "animals"
+    ]
+  },
+  {
+    "id": "vr-word-relationships-007",
+    "subject": "verbal-reasoning",
+    "topic": "Word relationships",
+    "skill": "function",
+    "type": "relationships",
+    "difficulty": 3,
+    "question": "Thermometer is to temperature as barometer is to ___",
+    "options": [
+      "pressure",
+      "distance",
+      "rainfall",
+      "brightness"
+    ],
+    "answer": 0,
+    "explanation": "A thermometer measures temperature, so the pairing is instrument to what it measures. A barometer measures air pressure.",
+    "distractorNotes": [
+      "",
+      "Distance is measured with a tape measure or an odometer.",
+      "Rainfall is measured with a rain gauge.",
+      "Brightness is measured with a light meter."
+    ],
+    "learningPoint": "'Instrument and what it measures' is a favourite relationship — learn the common instruments.",
+    "tags": [
+      "relationships",
+      "function",
+      "science"
+    ]
+  },
+  {
+    "id": "vr-word-relationships-008",
+    "subject": "verbal-reasoning",
+    "topic": "Word relationships",
+    "skill": "young_and_adult",
+    "type": "relationships",
+    "difficulty": 4,
+    "question": "Cygnet is to swan as leveret is to ___",
+    "options": [
+      "hare",
+      "deer",
+      "goose",
+      "otter"
+    ],
+    "answer": 0,
+    "explanation": "A cygnet is a young swan, so the pairing is young animal to adult. A leveret is a young hare.",
+    "distractorNotes": [
+      "",
+      "A young deer is a fawn.",
+      "A young goose is a gosling.",
+      "A young otter is a cub or a pup."
+    ],
+    "learningPoint": "The less familiar animal names — cygnet, leveret, kit, gosling — are worth learning as a list.",
+    "tags": [
+      "relationships",
+      "animals",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "vr-number-letter-005",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 1,
+    "question": "What is the next number in this sequence? 3, 6, 9, 12, ___",
+    "options": [
+      "15",
+      "14",
+      "16",
+      "18"
+    ],
+    "answer": 0,
+    "explanation": "The numbers go up in threes, so after 12 comes 12 + 3 = 15.",
+    "distractorNotes": [
+      "",
+      "This adds 2 rather than 3.",
+      "This adds 4 rather than 3.",
+      "This adds 6, which is two steps of the pattern."
+    ],
+    "learningPoint": "Find the gap between the first two numbers, then check the same gap works all the way along.",
+    "tags": [
+      "number series",
+      "patterns"
+    ]
+  },
+  {
+    "id": "vr-number-letter-006",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 2,
+    "question": "What is the next number in this sequence? 1, 4, 9, 16, ___",
+    "options": [
+      "25",
+      "20",
+      "24",
+      "32"
+    ],
+    "answer": 0,
+    "explanation": "These are the square numbers: 1 × 1, 2 × 2, 3 × 3, 4 × 4. The next is 5 × 5 = 25.",
+    "distractorNotes": [
+      "",
+      "This adds 4, but the gaps are growing: 3, 5, 7, then 9.",
+      "This adds 8, which is one short of the next gap.",
+      "This doubles 16 instead of continuing the pattern."
+    ],
+    "learningPoint": "If the gaps between numbers keep growing, look for square numbers or a growing step.",
+    "tags": [
+      "number series",
+      "square numbers"
+    ]
+  },
+  {
+    "id": "vr-number-letter-007",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 4,
+    "question": "What is the next number in this sequence? 1, 2, 6, 24, ___",
+    "options": [
+      "120",
+      "96",
+      "48",
+      "72"
+    ],
+    "answer": 0,
+    "explanation": "The multiplier grows by one each time: 1 × 2 = 2, 2 × 3 = 6, 6 × 4 = 24. The next step multiplies by 5, giving 24 × 5 = 120.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 4 again instead of moving on to 5.",
+      "This doubles 24, which was only the first multiplier used.",
+      "This multiplies by 3, a multiplier already used earlier."
+    ],
+    "learningPoint": "If the numbers grow far too fast for adding, look at what each one is multiplied by — the multiplier itself may be changing.",
+    "tags": [
+      "number series",
+      "patterns",
+      "multiplication"
+    ]
+  },
+  {
+    "id": "vr-number-letter-008",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "Work out the rule and find the missing number. (4 [12] 8), (5 [15] 10), (7 [ ? ] 14)",
+    "options": [
+      "21",
+      "28",
+      "98",
+      "7"
+    ],
+    "answer": 0,
+    "explanation": "The middle number is the two outside numbers added together: 4 + 8 = 12 and 5 + 10 = 15. So the answer is 7 + 14 = 21.",
+    "distractorNotes": [
+      "",
+      "This doubles 14 instead of adding the two outside numbers together.",
+      "This multiplies the outside numbers rather than adding them.",
+      "This is the difference between the outside numbers, not their total."
+    ],
+    "learningPoint": "Test your rule on both complete examples before using it on the one with the gap.",
+    "tags": [
+      "number series",
+      "patterns",
+      "brackets"
+    ]
+  },
+  {
+    "id": "vr-logic-005",
+    "subject": "verbal-reasoning",
+    "topic": "Logical reasoning",
+    "skill": "ordering",
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Ana is taller than Ben. Ben is taller than Chloe. Who is the shortest?",
+    "options": [
+      "Chloe",
+      "Ben",
+      "Ana",
+      "It cannot be worked out"
+    ],
+    "answer": 0,
+    "explanation": "Putting them in order gives Ana, then Ben, then Chloe. Chloe is at the bottom, so she is the shortest.",
+    "distractorNotes": [
+      "",
+      "Ben is in the middle — taller than Chloe but shorter than Ana.",
+      "Ana is the tallest of the three.",
+      "There is enough information here to place all three in order."
+    ],
+    "learningPoint": "Write the names in a line as you read, and slot each new person into place.",
+    "tags": [
+      "logic",
+      "ordering"
+    ]
+  },
+  {
+    "id": "vr-logic-006",
+    "subject": "verbal-reasoning",
+    "topic": "Logical reasoning",
+    "skill": "deduction",
+    "type": "logic",
+    "difficulty": 2,
+    "question": "All the books on the top shelf are hardbacks. This book is a paperback. What must be true?",
+    "options": [
+      "It is not on the top shelf.",
+      "It is on the bottom shelf.",
+      "There are no hardbacks anywhere else.",
+      "All the paperbacks are on one shelf."
+    ],
+    "answer": 0,
+    "explanation": "If everything on the top shelf is a hardback, then anything that is not a hardback cannot be on the top shelf. That is all we can be sure of.",
+    "distractorNotes": [
+      "",
+      "There may be other shelves; we only know it is not the top one.",
+      "The statement says nothing about where hardbacks may also be found.",
+      "Nothing tells us the paperbacks are kept together."
+    ],
+    "learningPoint": "Answer only what the statements prove. 'Must be true' rules out anything merely likely.",
+    "tags": [
+      "logic",
+      "deduction"
+    ]
+  },
+  {
+    "id": "vr-logic-007",
+    "subject": "verbal-reasoning",
+    "topic": "Logical reasoning",
+    "skill": "ordering",
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Four friends finished a race. Dev finished after Ellie but before Femi. Gus finished last. Who came first?",
+    "options": [
+      "Ellie",
+      "Dev",
+      "Femi",
+      "Gus"
+    ],
+    "answer": 0,
+    "explanation": "Ellie came before Dev, and Dev came before Femi, giving Ellie, Dev, Femi. Gus was last, so the full order is Ellie, Dev, Femi, Gus.",
+    "distractorNotes": [
+      "",
+      "Dev finished after Ellie, so he cannot be first.",
+      "Femi finished after Dev, so he is third.",
+      "Gus is stated to have finished last."
+    ],
+    "learningPoint": "Build the order from the clue that links the most people, then fit the rest around it.",
+    "tags": [
+      "logic",
+      "ordering"
+    ]
+  },
+  {
+    "id": "vr-logic-008",
+    "subject": "verbal-reasoning",
+    "topic": "Logical reasoning",
+    "skill": "deduction",
+    "type": "logic",
+    "difficulty": 4,
+    "question": "Everyone in the choir can read music. Some people who can read music play the piano. Which statement must be true?",
+    "options": [
+      "Nobody in the choir is unable to read music.",
+      "Everyone who can read music is in the choir.",
+      "Everyone in the choir plays the piano.",
+      "Nobody in the choir plays the piano."
+    ],
+    "answer": 0,
+    "explanation": "'Everyone in the choir can read music' is another way of saying that no choir member is unable to read music. The other statements go further than the information allows.",
+    "distractorNotes": [
+      "",
+      "This turns the statement round. There may be readers of music who never joined the choir.",
+      "Only 'some' music readers play the piano, and we are not told which ones.",
+      "Some choir members may well play the piano; we simply do not know."
+    ],
+    "learningPoint": "Beware of reversing a statement. 'All A are B' never means 'all B are A'.",
+    "tags": [
+      "logic",
+      "deduction"
+    ]
+  },
+  {
+    "id": "vr-vocabulary-005",
+    "subject": "verbal-reasoning",
+    "topic": "Vocabulary",
+    "skill": "closest_meaning",
+    "type": "vocabulary",
+    "difficulty": 1,
+    "question": "Which word is closest in meaning to 'rapid'?",
+    "options": [
+      "quick",
+      "silent",
+      "gentle",
+      "narrow"
+    ],
+    "answer": 0,
+    "explanation": "'Rapid' means happening very fast, so 'quick' is closest.",
+    "distractorNotes": [
+      "",
+      "'Silent' is about sound.",
+      "'Gentle' is about force or manner.",
+      "'Narrow' is about width."
+    ],
+    "learningPoint": "Match the kind of quality first — speed, sound, size — and the right answer usually stands out.",
+    "tags": [
+      "vocabulary",
+      "closest meaning"
+    ]
+  },
+  {
+    "id": "vr-vocabulary-006",
+    "subject": "verbal-reasoning",
+    "topic": "Vocabulary",
+    "skill": "closest_meaning",
+    "type": "vocabulary",
+    "difficulty": 2,
+    "question": "Which word is closest in meaning to 'weary'?",
+    "options": [
+      "tired",
+      "angry",
+      "curious",
+      "brave"
+    ],
+    "answer": 0,
+    "explanation": "To be weary is to be very tired, especially after a long effort.",
+    "distractorNotes": [
+      "",
+      "'Angry' describes a different feeling altogether.",
+      "'Curious' means wanting to find something out.",
+      "'Brave' means willing to face danger."
+    ],
+    "learningPoint": "Do not confuse 'weary' with 'wary' — one means tired, the other means cautious.",
+    "tags": [
+      "vocabulary",
+      "closest meaning"
+    ]
+  },
+  {
+    "id": "vr-vocabulary-007",
+    "subject": "verbal-reasoning",
+    "topic": "Vocabulary",
+    "skill": "closest_meaning",
+    "type": "vocabulary",
+    "difficulty": 3,
+    "question": "Which word is closest in meaning to 'obstinate'?",
+    "options": [
+      "stubborn",
+      "generous",
+      "nervous",
+      "truthful"
+    ],
+    "answer": 0,
+    "explanation": "An obstinate person refuses to change their mind, which is exactly what 'stubborn' means.",
+    "distractorNotes": [
+      "",
+      "'Generous' is about giving freely.",
+      "'Nervous' is about worry.",
+      "'Truthful' is about honesty."
+    ],
+    "learningPoint": "Many harder vocabulary words describe character — decide whether the word is a compliment or a criticism first.",
+    "tags": [
+      "vocabulary",
+      "closest meaning"
+    ]
+  },
+  {
+    "id": "vr-vocabulary-008",
+    "subject": "verbal-reasoning",
+    "topic": "Vocabulary",
+    "skill": "closest_meaning",
+    "type": "vocabulary",
+    "difficulty": 4,
+    "question": "Which word is closest in meaning to 'meticulous'?",
+    "options": [
+      "painstaking",
+      "hesitant",
+      "forgetful",
+      "enthusiastic"
+    ],
+    "answer": 0,
+    "explanation": "Somebody meticulous takes enormous care over small details, which is what 'painstaking' describes.",
+    "distractorNotes": [
+      "",
+      "'Hesitant' means slow to decide — a meticulous person may be perfectly decisive.",
+      "'Forgetful' is nearly the opposite: meticulous people miss nothing.",
+      "'Enthusiastic' is about eagerness, not about care."
+    ],
+    "learningPoint": "Break a long word down: 'painstaking' literally means taking pains, and that is the idea behind meticulous too.",
+    "tags": [
+      "vocabulary",
+      "closest meaning"
+    ]
+  },
+  {
+    "id": "vr-sequences-005",
+    "subject": "verbal-reasoning",
+    "topic": "Word sequences",
+    "skill": "completing_sequences",
+    "type": "word-sequence",
+    "difficulty": 1,
+    "question": "Which word completes the sequence? spring, summer, autumn, ___",
+    "options": [
+      "winter",
+      "spring",
+      "harvest",
+      "season"
+    ],
+    "answer": 0,
+    "explanation": "These are the four seasons of the year in order. After autumn comes winter.",
+    "distractorNotes": [
+      "",
+      "Spring is where the sequence began — it comes round again only after winter.",
+      "Harvest is a time of year but not one of the four seasons.",
+      "A season is the category the others belong to, not a member of it."
+    ],
+    "learningPoint": "Sequences often run through a familiar set — seasons, days, months. Name the set first.",
+    "tags": [
+      "word sequences",
+      "seasons"
+    ]
+  },
+  {
+    "id": "vr-sequences-006",
+    "subject": "verbal-reasoning",
+    "topic": "Word sequences",
+    "skill": "completing_sequences",
+    "type": "word-sequence",
+    "difficulty": 2,
+    "question": "Which word completes the sequence? January, April, July, ___",
+    "options": [
+      "October",
+      "September",
+      "November",
+      "August"
+    ],
+    "answer": 0,
+    "explanation": "The months go forward three at a time: January, April, July, then October.",
+    "distractorNotes": [
+      "",
+      "September is only two months after July.",
+      "November is four months after July.",
+      "August is the very next month after July."
+    ],
+    "learningPoint": "Say the months in order under your breath and count the steps — it is quicker than it looks.",
+    "tags": [
+      "word sequences",
+      "months"
+    ]
+  },
+  {
+    "id": "vr-sequences-007",
+    "subject": "verbal-reasoning",
+    "topic": "Word sequences",
+    "skill": "completing_sequences",
+    "type": "word-sequence",
+    "difficulty": 4,
+    "question": "Which word completes the sequence? one, three, six, ten, ___",
+    "options": [
+      "fifteen",
+      "thirteen",
+      "fourteen",
+      "twenty"
+    ],
+    "answer": 0,
+    "explanation": "The gaps grow by one each time: 1 to 3 is 2, 3 to 6 is 3, 6 to 10 is 4. The next gap is 5, giving 10 + 5 = 15.",
+    "distractorNotes": [
+      "",
+      "This adds 3, which was the gap two steps ago.",
+      "This adds 4, repeating the previous gap instead of increasing it.",
+      "This doubles 10 rather than continuing the pattern."
+    ],
+    "learningPoint": "When the gaps themselves form a pattern, work out the sequence of gaps first.",
+    "tags": [
+      "word sequences",
+      "number patterns"
+    ]
+  },
+  {
+    "id": "vr-sequences-008",
+    "subject": "verbal-reasoning",
+    "topic": "Word sequences",
+    "skill": "completing_sequences",
+    "type": "word-sequence",
+    "difficulty": 3,
+    "question": "Which word completes the sequence? ant, bee, cat, dog, ___",
+    "options": [
+      "eel",
+      "fox",
+      "hen",
+      "owl"
+    ],
+    "answer": 0,
+    "explanation": "Each word is a three-letter animal, and their first letters run through the alphabet: a, b, c, d. The next must begin with e, which gives eel.",
+    "distractorNotes": [
+      "",
+      "'Fox' begins with f, which comes one letter too late.",
+      "'Hen' begins with h, several letters too far on.",
+      "'Owl' begins with o, well beyond the next letter needed."
+    ],
+    "learningPoint": "When words look unrelated, check their first letters — an alphabet pattern is a common trick.",
+    "tags": [
+      "word sequences",
+      "alphabet"
+    ]
   }
 ]
