@@ -11,7 +11,8 @@
       "plentiful",
       "expensive",
       "enormous",
-      "generous"
+      "generous",
+      "scarce"
     ],
     "answer": 0,
     "explanation": "'Abundant' means existing in large quantities, which matches 'plentiful'.",
@@ -19,7 +20,8 @@
       "",
       "Something abundant is often cheap because there is so much of it — this is nearly the opposite.",
       "'Enormous' describes the size of one thing, not how much of it there is.",
-      "'Generous' describes a person's character, not an amount."
+      "'Generous' describes a person's character, not an amount.",
+      "Scarce is the opposite of abundant."
     ],
     "learningPoint": "Synonym questions test the exact shade of meaning — 'a lot of' is not the same as 'very big'.",
     "followUpIds": [
@@ -42,7 +44,8 @@
       "tired",
       "careful",
       "worried",
-      "bored"
+      "bored",
+      "wary"
     ],
     "answer": 0,
     "explanation": "'Weary' means very tired.",
@@ -50,7 +53,8 @@
       "",
       "You may be thinking of 'wary', which means cautious — a different word.",
       "'Worried' is about anxiety, not tiredness.",
-      "Being weary of something can involve boredom, but the core meaning is tiredness."
+      "Being weary of something can involve boredom, but the core meaning is tiredness.",
+      "Wary means cautious. It looks almost the same as weary but means something different."
     ],
     "learningPoint": "Words that look similar (weary / wary) can mean completely different things — read carefully.",
     "tags": [
@@ -70,7 +74,8 @@
       "stubborn",
       "obvious",
       "rude",
-      "confident"
+      "confident",
+      "patient"
     ],
     "answer": 0,
     "explanation": "'Obstinate' means refusing to change your mind, which is exactly what 'stubborn' means.",
@@ -78,7 +83,8 @@
       "",
       "'Obvious' just looks similar at the start of the word.",
       "An obstinate person is not necessarily rude to others.",
-      "'Confident' is about self-belief, not about refusing to change your mind."
+      "'Confident' is about self-belief, not about refusing to change your mind.",
+      "Patient means willing to wait, not refusing to change your mind."
     ],
     "learningPoint": "Do not choose a word simply because it starts with the same letters.",
     "tags": [
@@ -98,7 +104,8 @@
       "modern",
       "young",
       "small",
-      "ruined"
+      "ruined",
+      "historic"
     ],
     "answer": 0,
     "explanation": "'Ancient' means belonging to the distant past, so its opposite is 'modern', belonging to the present.",
@@ -106,7 +113,8 @@
       "",
       "'Young' is the opposite of 'old' when talking about living things, but 'ancient' is about time periods.",
       "Size has nothing to do with age.",
-      "Ancient things are often ruined, so this is linked rather than opposite."
+      "Ancient things are often ruined, so this is linked rather than opposite.",
+      "Historic is close in meaning to ancient rather than opposite to it."
     ],
     "learningPoint": "Choose the opposite of the exact word given, not of a word that is merely related to it.",
     "tags": [
@@ -126,7 +134,8 @@
       "plentiful",
       "frightened",
       "large",
-      "cheap"
+      "cheap",
+      "rare"
     ],
     "answer": 0,
     "explanation": "'Scarce' means in short supply, so its opposite is 'plentiful'.",
@@ -134,7 +143,8 @@
       "",
       "You may be thinking of 'scared', which is a different word.",
       "'Large' is about size, not about quantity available.",
-      "Scarce things are usually expensive, so 'cheap' is a consequence rather than an opposite."
+      "Scarce things are usually expensive, so 'cheap' is a consequence rather than an opposite.",
+      "Rare means much the same as scarce, so it cannot be its opposite."
     ],
     "learningPoint": "Deal with the meaning of the word itself, not with what usually happens as a result of it.",
     "tags": [
@@ -154,7 +164,8 @@
       "hive",
       "honey",
       "flower",
-      "sting"
+      "sting",
+      "swarm"
     ],
     "answer": 0,
     "explanation": "A nest is where a bird lives, so the answer must be where a bee lives: a hive.",
@@ -162,7 +173,8 @@
       "",
       "Honey is what a bee makes, not where it lives.",
       "A flower is where a bee feeds.",
-      "A sting is part of a bee's body."
+      "A sting is part of a bee's body.",
+      "A swarm is a group of bees, not the place they live in."
     ],
     "learningPoint": "Say the relationship out loud in a full sentence, then apply exactly the same sentence to the second pair.",
     "followUpIds": [
@@ -185,7 +197,8 @@
       "symphony",
       "orchestra",
       "piano",
-      "concert"
+      "concert",
+      "conductor"
     ],
     "answer": 0,
     "explanation": "An author creates a book, so a composer creates a symphony.",
@@ -193,7 +206,8 @@
       "",
       "An orchestra performs the music; it is not what the composer creates.",
       "A piano is an instrument used to play music.",
-      "A concert is an event where the music is performed."
+      "A concert is an event where the music is performed.",
+      "A conductor leads a performance; the composer creates the music itself."
     ],
     "learningPoint": "'Creator to creation' is one of the most common analogy relationships.",
     "tags": [
@@ -213,7 +227,8 @@
       "stare",
       "blink",
       "watch",
-      "notice"
+      "notice",
+      "glance"
     ],
     "answer": 0,
     "explanation": "A whisper is a quiet version of a shout — the pair contrasts a brief, small action with a long, intense one. A glimpse is a brief look, so its intense partner is a stare.",
@@ -221,7 +236,8 @@
       "",
       "A blink is also brief, so it does not create the contrast.",
       "'Watch' is longer than a glimpse but not as intense as 'stare'.",
-      "'Notice' is close in meaning to 'glimpse' rather than opposite in degree."
+      "'Notice' is close in meaning to 'glimpse' rather than opposite in degree.",
+      "A glance is much like a glimpse. The pair must go from brief to long, as whisper goes to shout."
     ],
     "learningPoint": "Some analogies are about degree — small version to large version of the same thing.",
     "tags": [
@@ -242,7 +258,8 @@
       "oak",
       "daisy",
       "willow",
-      "birch"
+      "birch",
+      "pine"
     ],
     "answer": 1,
     "explanation": "Oak, willow and birch are all trees. A daisy is a flower.",
@@ -250,7 +267,8 @@
       "Oak is a tree, like willow and birch.",
       "",
       "Willow is a tree, like oak and birch.",
-      "Birch is a tree, like oak and willow."
+      "Birch is a tree, like oak and willow.",
+      "A pine is a tree, like the oak, the willow and the birch."
     ],
     "learningPoint": "Find what three of the words share, then the fourth is the odd one out.",
     "tags": [
@@ -270,7 +288,8 @@
       "stationary",
       "motionless",
       "still",
-      "gradual"
+      "gradual",
+      "unmoving"
     ],
     "answer": 3,
     "explanation": "Stationary, motionless and still all mean not moving. 'Gradual' means happening slowly, which still involves movement or change.",
@@ -278,7 +297,8 @@
       "'Stationary' means not moving.",
       "'Motionless' means not moving.",
       "'Still' means not moving.",
-      ""
+      "",
+      "Unmoving means the same as still and motionless."
     ],
     "learningPoint": "Slow is not the same as stopped — check the precise meaning before deciding.",
     "tags": [
@@ -299,7 +319,8 @@
       "double bass",
       "flute",
       "drum",
-      "trumpet"
+      "trumpet",
+      "clarinet"
     ],
     "answer": 0,
     "explanation": "Violin, cello and viola are all bowed string instruments, and so is the double bass.",
@@ -307,7 +328,8 @@
       "",
       "A flute is a woodwind instrument.",
       "A drum is a percussion instrument.",
-      "A trumpet is a brass instrument."
+      "A trumpet is a brass instrument.",
+      "A clarinet is a woodwind instrument, not a member of the violin family."
     ],
     "learningPoint": "Work out the precise group — 'instrument' is too broad here; the group is 'string instruments'.",
     "tags": [
@@ -327,7 +349,8 @@
       "OQ",
       "MO",
       "PR",
-      "NP"
+      "NP",
+      "OP"
     ],
     "answer": 0,
     "explanation": "Each pair moves on 3 letters from the last pair: C → F → I → L → O. Within each pair the second letter is 2 on from the first: O + 2 = Q. So the answer is OQ.",
@@ -335,7 +358,8 @@
       "",
       "This moves on only 1 letter from L instead of 3.",
       "This moves on 4 letters from L instead of 3.",
-      "This moves on 2 letters from L instead of 3."
+      "This moves on 2 letters from L instead of 3.",
+      "The second letter must be two places after the first, as C is to E."
     ],
     "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
     "followUpIds": [
@@ -358,7 +382,8 @@
       "EH",
       "EG",
       "DH",
-      "FI"
+      "FI",
+      "FH"
     ],
     "answer": 0,
     "explanation": "The first letters go A, B, C, D, so next is E. The second letter is always 3 on from the first: E + 3 = H. So the answer is EH.",
@@ -366,7 +391,8 @@
       "",
       "The gap between the letters must be 3, not 2.",
       "The first letter should move on from D to E.",
-      "This skips E and jumps to F."
+      "This skips E and jumps to F.",
+      "The first letter moves on by one each time, so it should be E rather than F."
     ],
     "learningPoint": "Write the alphabet along the top of your page — it makes letter sequences far quicker.",
     "tags": [
@@ -386,7 +412,8 @@
       "FQI",
       "EPH",
       "CNF",
-      "FQH"
+      "FQH",
+      "FQJ"
     ],
     "answer": 0,
     "explanation": "Each letter moves forward 2 places in the alphabet: C → E, A → C, T → V. Applying the same rule, D → F, O → Q and G → I, giving FQI.",
@@ -394,7 +421,8 @@
       "",
       "This moves each letter forward only 1 place.",
       "This moves each letter backwards 1 place.",
-      "The first two letters move 2 places but the G only moves 1."
+      "The first two letters move 2 places but the G only moves 1.",
+      "The last letter has been moved on three places instead of two."
     ],
     "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
     "followUpIds": [
@@ -417,7 +445,8 @@
       "RGHO",
       "TIJQ",
       "RIHQ",
-      "TGJO"
+      "TGJO",
+      "RGHP"
     ],
     "answer": 0,
     "explanation": "Each letter moves back 1 place in the alphabet: B → A, O → N, A → Z and T → S. Applying the same rule to SHIP gives S → R, H → G, I → H and P → O, so the code is RGHO.",
@@ -425,7 +454,8 @@
       "",
       "This moves each letter forward 1 place instead of back.",
       "Only some letters have been moved back.",
-      "This mixes forward and backward moves."
+      "This mixes forward and backward moves.",
+      "The final letter has not been moved back at all."
     ],
     "learningPoint": "Check your rule against every letter of the example before you use it.",
     "tags": [
@@ -445,7 +475,8 @@
       "She will be around at six o'clock.",
       "Please bring the large box inside.",
       "We stopped to admire the view.",
-      "He must leave early tomorrow."
+      "He must leave early tomorrow.",
+      "We walked home in the dark."
     ],
     "answer": 0,
     "explanation": "In 'be around', the end of 'be' joins the start of 'around' to give b-e-a-r, hidden across the two words.",
@@ -453,7 +484,8 @@
       "",
       "Check the joins: 'please bring', 'bring the', 'the large' — none of them spell BEAR.",
       "The joins here are 'we stopped', 'stopped to', 'to admire' — no BEAR.",
-      "The joins here are 'he must', 'must leave', 'leave early' — no BEAR."
+      "The joins here are 'he must', 'must leave', 'leave early' — no BEAR.",
+      "The joins here give d-h, e-i and e-d; none of them spell BEAR."
     ],
     "learningPoint": "Hidden-word questions need letters that run in order across the gap between two words.",
     "followUpIds": [
@@ -473,18 +505,20 @@
     "difficulty": 2,
     "question": "In which sentence is the word LAMP hidden across the end of one word and the start of the next?",
     "options": [
-      "The koala members of the group arrived late.",
+      "The hotel amplified the music at the party.",
       "We climbed the steep hill slowly.",
       "She lit a lamp beside the window.",
-      "The camp was quiet at dawn."
+      "The camp was quiet at dawn.",
+      "We saw a small pool of water."
     ],
     "answer": 0,
-    "explanation": "In 'koala members', the end of 'koala' joins the start of 'members' to give l-a-m-p across the gap.",
+    "explanation": "The end of 'hotel' and the start of 'amplified' run together as hoteL AMPlified, which hides the word LAMP.",
     "distractorNotes": [
       "",
       "No four letters in a row across a join spell LAMP here.",
       "The word appears whole rather than hidden across a join.",
-      "'camp' is close but the letters do not spell LAMP."
+      "'camp' is close but the letters do not spell LAMP.",
+      "'small pool' looks promising, but the letters run l-p rather than l-a-m-p."
     ],
     "learningPoint": "Underline the last two letters of each word and the first two of the next — the hidden word must sit across that join.",
     "tags": [
@@ -504,7 +538,8 @@
       "foot",
       "hand",
       "sun",
-      "over"
+      "over",
+      "eye"
     ],
     "answer": 0,
     "explanation": "Foot gives football, footpath and footprint.",
@@ -512,7 +547,8 @@
       "",
       "Handball and handprint work, but 'handpath' is not a word.",
       "Sunpath and sunball are not words.",
-      "Overprint exists, but 'overball' does not."
+      "Overprint exists, but 'overball' does not.",
+      "Eyeball is a word, but 'eyepath' and 'eyeprint' are not."
     ],
     "learningPoint": "Test your answer against every part of the question — it must work for all of them, not just the first.",
     "followUpIds": [
@@ -535,7 +571,8 @@
       "fall",
       "coat",
       "drop",
-      "flake"
+      "flake",
+      "storm"
     ],
     "answer": 0,
     "explanation": "Fall gives rainfall, waterfall and snowfall.",
@@ -543,7 +580,8 @@
       "",
       "Raincoat works, but 'watercoat' and 'snowcoat' are not words.",
       "Raindrop and snowdrop work, but 'waterdrop' is not standard.",
-      "Snowflake works, but 'rainflake' and 'waterflake' do not."
+      "Snowflake works, but 'rainflake' and 'waterflake' do not.",
+      "Rainstorm and snowstorm are words, but 'waterstorm' is not."
     ],
     "learningPoint": "Check every combination before choosing — three out of four is not enough.",
     "tags": [
@@ -563,7 +601,8 @@
       "branch : tree",
       "puppy : dog",
       "cold : ice",
-      "run : sprint"
+      "run : sprint",
+      "tree : forest"
     ],
     "answer": 0,
     "explanation": "A petal is a part of a flower, and in the same way a branch is a part of a tree.",
@@ -571,7 +610,8 @@
       "",
       "A puppy is a young dog, not a part of one.",
       "Cold describes ice; it is not a part of it.",
-      "A sprint is a type of run, not a part of one."
+      "A sprint is a type of run, not a part of one.",
+      "This goes from the whole to the larger group, the opposite way round from part to whole."
     ],
     "learningPoint": "'Part of' relationships are different from 'type of' relationships — decide which one you are looking at.",
     "tags": [
@@ -591,7 +631,8 @@
       "scales : mass",
       "clock : hands",
       "ruler : wooden",
-      "kettle : water"
+      "kettle : water",
+      "microscope : glass"
     ],
     "answer": 0,
     "explanation": "A thermometer is an instrument used to measure temperature, and scales are used to measure mass.",
@@ -599,7 +640,8 @@
       "",
       "Hands are a part of a clock, not what it measures.",
       "'Wooden' describes what a ruler is made of.",
-      "A kettle heats water rather than measuring it."
+      "A kettle heats water rather than measuring it.",
+      "Glass is what a microscope is made from, not what it measures."
     ],
     "learningPoint": "'Instrument to what it measures' is a common relationship — say the link as a sentence to check it.",
     "tags": [
@@ -619,7 +661,8 @@
       "48",
       "36",
       "30",
-      "42"
+      "42",
+      "96"
     ],
     "answer": 0,
     "explanation": "Each number is double the one before: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24 and 24 × 2 = 48.",
@@ -627,7 +670,8 @@
       "",
       "This adds 12, which only fits the last step.",
       "This adds 6 each time, which does not fit the earlier steps.",
-      "This adds 18, which does not fit any consistent rule."
+      "This adds 18, which does not fit any consistent rule.",
+      "This is two steps on rather than one."
     ],
     "learningPoint": "If the gaps grow quickly, try multiplying rather than adding.",
     "tags": [
@@ -647,7 +691,8 @@
       "47",
       "46",
       "35",
-      "44"
+      "44",
+      "24"
     ],
     "answer": 0,
     "explanation": "Each number is double the previous one plus 1: 2 × 2 + 1 = 5, 5 × 2 + 1 = 11, 11 × 2 + 1 = 23, and 23 × 2 + 1 = 47.",
@@ -655,7 +700,8 @@
       "",
       "This doubles but forgets to add 1.",
       "This adds 12, following only the last gap.",
-      "This follows no consistent rule."
+      "This follows no consistent rule.",
+      "This adds 1 to 23 instead of doubling it and then adding 1."
     ],
     "learningPoint": "If neither adding nor doubling works alone, try a two-part rule such as 'double and add one'.",
     "tags": [
@@ -676,7 +722,8 @@
       "None of these statements must be true.",
       "Rosa plays the violin.",
       "Rosa does not play the violin.",
-      "Everyone in the choir plays the violin."
+      "Everyone in the choir plays the violin.",
+      "Rosa does not sing in the choir."
     ],
     "answer": 0,
     "explanation": "We know violinists are all in the choir, but the choir may include people who do not play the violin. So Rosa might or might not play — nothing here must be true.",
@@ -684,7 +731,8 @@
       "",
       "The rule works one way only: violinists sing, but singers need not play.",
       "We cannot rule it out either — she may well play the violin.",
-      "This reverses the statement, which is not allowed."
+      "This reverses the statement, which is not allowed.",
+      "The question states that she does sing in the choir."
     ],
     "learningPoint": "'All A are B' does not mean 'all B are A'. Check the direction of the rule.",
     "tags": [
@@ -705,7 +753,8 @@
       "Sam",
       "Alex",
       "Priya",
-      "Tom"
+      "Tom",
+      "It cannot be worked out"
     ],
     "answer": 0,
     "explanation": "In order of height: Tom, then Priya, then Alex, then Sam. Sam is at the bottom of the list.",
@@ -713,7 +762,8 @@
       "",
       "Alex is shorter than Priya but taller than Sam.",
       "Priya is in the middle of the group.",
-      "Tom is the tallest."
+      "Tom is the tallest.",
+      "Sam is below Alex, who is below both Priya and Tom, so the order is clear."
     ],
     "learningPoint": "Write the names in a single line from tallest to shortest as you read each clue.",
     "tags": [
@@ -734,7 +784,8 @@
       "RATE",
       "CART",
       "TRACE",
-      "CREATE"
+      "CREATE",
+      "CARE"
     ],
     "answer": 0,
     "explanation": "Removing the C from CRATE leaves R, A, T, E in their original order, giving RATE.",
@@ -742,7 +793,8 @@
       "",
       "CART uses the same kinds of letters but reorders them, so it is an anagram rather than a removal.",
       "TRACE rearranges all five letters instead of removing one.",
-      "CREATE adds a letter rather than removing one."
+      "CREATE adds a letter rather than removing one.",
+      "CARE uses letters from CRATE but changes their order, which is not allowed."
     ],
     "learningPoint": "'Keeping the same order' rules out anagrams — cross off any option whose letters have been shuffled.",
     "tags": [
@@ -762,7 +814,8 @@
       "candid and frank",
       "hostile and distant",
       "candid and hostile",
-      "frank and distant"
+      "frank and distant",
+      "hostile and frank"
     ],
     "answer": 0,
     "explanation": "Both 'candid' and 'frank' mean honest and direct in what you say.",
@@ -770,7 +823,8 @@
       "",
       "'Hostile' means unfriendly and 'distant' means cool or remote — related, but not close in meaning.",
       "'Candid' is about honesty and 'hostile' is about unfriendliness.",
-      "'Frank' is about honesty and 'distant' is about coolness."
+      "'Frank' is about honesty and 'distant' is about coolness.",
+      "Hostile means unfriendly; frank means honest and direct."
     ],
     "learningPoint": "When two pairs both seem possible, choose the pair that could replace each other in a sentence.",
     "followUpIds": [
@@ -793,7 +847,8 @@
       "brave and fearless",
       "calm and loud",
       "brave and calm",
-      "calm and fearless"
+      "calm and fearless",
+      "loud and fearless"
     ],
     "answer": 0,
     "explanation": "'Brave' and 'fearless' both mean showing no fear in the face of danger.",
@@ -801,7 +856,8 @@
       "",
       "'Calm' and 'loud' are closer to opposites than to synonyms.",
       "A brave person may be calm, but the words do not mean the same thing.",
-      "Being calm is about staying relaxed, not about facing danger."
+      "Being calm is about staying relaxed, not about facing danger.",
+      "Loud is about volume; fearless is about courage."
     ],
     "learningPoint": "Test a pair by swapping one word for the other in a sentence — true synonyms still make sense.",
     "tags": [
@@ -821,7 +877,8 @@
       "September",
       "August",
       "October",
-      "June"
+      "June",
+      "November"
     ],
     "answer": 0,
     "explanation": "The months go up in twos: January (1), March (3), May (5), July (7), so next is the ninth month, September.",
@@ -829,7 +886,8 @@
       "",
       "August is the eighth month, only one on from July.",
       "October is the tenth month, three on from July.",
-      "June comes before July."
+      "June comes before July.",
+      "November is four months after July; the sequence moves on two at a time."
     ],
     "learningPoint": "Turn words into numbers where you can — it makes the pattern much easier to see.",
     "followUpIds": [
@@ -852,7 +910,8 @@
       "Sunday",
       "Saturday",
       "Thursday",
-      "Tuesday"
+      "Tuesday",
+      "Monday"
     ],
     "answer": 0,
     "explanation": "The days go up in twos: Monday (1), Wednesday (3), Friday (5), so the next is the seventh day, Sunday.",
@@ -860,7 +919,8 @@
       "",
       "Saturday is only one day on from Friday.",
       "Thursday comes before Friday.",
-      "Tuesday comes much earlier in the week."
+      "Tuesday comes much earlier in the week.",
+      "Monday is where the sequence began. Two days after Friday is Sunday."
     ],
     "learningPoint": "Number the days or months first, then look for the gap between them.",
     "tags": [
@@ -880,7 +940,8 @@
       "quick",
       "loud",
       "heavy",
-      "narrow"
+      "narrow",
+      "rigid"
     ],
     "answer": 0,
     "explanation": "'Rapid' means happening very fast, which is what 'quick' means.",
@@ -888,7 +949,8 @@
       "",
       "'Loud' describes sound, not speed.",
       "'Heavy' describes weight, not speed.",
-      "'Narrow' describes width, not speed."
+      "'Narrow' describes width, not speed.",
+      "Rigid means stiff. It begins with the same letter but has nothing to do with speed."
     ],
     "learningPoint": "Make sure the synonym describes the same quality — speed, sound and weight are all different.",
     "tags": [
@@ -908,7 +970,8 @@
       "depart",
       "travel",
       "journey",
-      "delay"
+      "delay",
+      "return"
     ],
     "answer": 0,
     "explanation": "'Arrive' means to reach a place, so its opposite is 'depart', meaning to leave one.",
@@ -916,7 +979,8 @@
       "",
       "'Travel' is what happens between arriving and departing, not the opposite of either.",
       "'Journey' is the trip itself, not an opposite.",
-      "'Delay' means to arrive late, which is still arriving."
+      "'Delay' means to arrive late, which is still arriving.",
+      "To return is to arrive back somewhere, which is not the opposite of arriving."
     ],
     "learningPoint": "An opposite must reverse the meaning, not just relate to the same topic.",
     "tags": [
@@ -936,7 +1000,8 @@
       "mean",
       "wealthy",
       "cheerful",
-      "honest"
+      "honest",
+      "kind"
     ],
     "answer": 0,
     "explanation": "'Generous' means willing to give freely, so its opposite is 'mean', meaning unwilling to give.",
@@ -944,7 +1009,8 @@
       "",
       "A wealthy person may be generous or mean — wealth is about how much you have, not what you give.",
       "'Cheerful' describes mood, not willingness to give.",
-      "'Honest' describes truthfulness, not generosity."
+      "'Honest' describes truthfulness, not generosity.",
+      "Kind is close in meaning to generous, not opposite to it."
     ],
     "learningPoint": "Watch for options that are merely connected to the topic rather than genuinely opposite.",
     "tags": [
@@ -964,7 +1030,8 @@
       "cat",
       "mouse",
       "paw",
-      "milk"
+      "milk",
+      "cub"
     ],
     "answer": 0,
     "explanation": "A puppy is a young dog, so a kitten is a young cat.",
@@ -972,7 +1039,8 @@
       "",
       "A mouse is a different animal altogether.",
       "A paw is a part of the animal's body.",
-      "Milk is something a kitten drinks."
+      "Milk is something a kitten drinks.",
+      "A cub is the young of a fox or a lion, not the grown-up form of a kitten."
     ],
     "learningPoint": "'Young animal to adult animal' is a common analogy — say the link as a sentence and reuse it.",
     "tags": [
@@ -992,7 +1060,8 @@
       "apple",
       "carrot",
       "potato",
-      "onion"
+      "onion",
+      "turnip"
     ],
     "answer": 0,
     "explanation": "Carrot, potato and onion are all vegetables. An apple is a fruit.",
@@ -1000,7 +1069,8 @@
       "",
       "A carrot is a vegetable, like potato and onion.",
       "A potato is a vegetable, like carrot and onion.",
-      "An onion is a vegetable, like carrot and potato."
+      "An onion is a vegetable, like carrot and potato.",
+      "A turnip grows underground, like the carrot, the potato and the onion."
     ],
     "learningPoint": "Look for the group that three of the words share, then the fourth is the odd one out.",
     "tags": [
@@ -1020,7 +1090,8 @@
       "GH",
       "FG",
       "HI",
-      "GI"
+      "GI",
+      "GF"
     ],
     "answer": 0,
     "explanation": "The letters simply run through the alphabet in pairs: A B, C D, E F, then G H.",
@@ -1028,7 +1099,8 @@
       "",
       "This starts from F, but F has already been used.",
       "This skips G altogether.",
-      "The two letters in each pair must be next to each other in the alphabet."
+      "The two letters in each pair must be next to each other in the alphabet.",
+      "These are the right two letters but in the wrong order."
     ],
     "learningPoint": "Write out the alphabet before you start — it turns letter sequences into simple counting.",
     "tags": [
@@ -1048,7 +1120,8 @@
       "TS",
       "TU",
       "SR",
-      "UT"
+      "UT",
+      "WV"
     ],
     "answer": 0,
     "explanation": "The alphabet is running backwards in pairs: Z Y, X W, V U, then T S.",
@@ -1056,7 +1129,8 @@
       "",
       "U has already been used in the previous pair.",
       "This skips T, moving two pairs on instead of one.",
-      "The letters are the right ones but in the wrong order — the sequence goes backwards."
+      "The letters are the right ones but in the wrong order — the sequence goes backwards.",
+      "W has already been used, in the pair XW."
     ],
     "learningPoint": "Check the direction first. A sequence can run backwards through the alphabet just as easily as forwards.",
     "tags": [
@@ -1076,7 +1150,8 @@
       "312",
       "123",
       "321",
-      "213"
+      "213",
+      "132"
     ],
     "answer": 0,
     "explanation": "Take each letter in turn: C = 3, A = 1 and B = 2, giving 312.",
@@ -1084,7 +1159,8 @@
       "",
       "This is the code for ABC, not CAB.",
       "This is the code for CBA — the last two letters are the wrong way round.",
-      "This is the code for BAC."
+      "This is the code for BAC.",
+      "This spells ACB rather than CAB."
     ],
     "learningPoint": "Work through the letters strictly in the order they appear in the word.",
     "tags": [
@@ -1104,7 +1180,8 @@
       "CJSE",
       "AHQC",
       "CJSD",
-      "BJSE"
+      "BJSE",
+      "CKSE"
     ],
     "answer": 0,
     "explanation": "Each letter moves forward 1 place in the alphabet: F → G, I → J, S → T and H → I. Applying the same rule to BIRD gives B → C, I → J, R → S and D → E, so the code is CJSE.",
@@ -1112,7 +1189,8 @@
       "",
       "This moves each letter back 1 place instead of forward.",
       "The last letter has not been moved on — D should become E.",
-      "The first letter has not been moved on — B should become C."
+      "The first letter has not been moved on — B should become C.",
+      "The second letter has been moved on two places instead of one."
     ],
     "learningPoint": "Test your rule on every letter of the example before you use it on the new word.",
     "tags": [
@@ -1132,7 +1210,8 @@
       "We ran to the shop.",
       "The ant crawled slowly.",
       "She sang a song.",
-      "He put on his coat."
+      "He put on his coat.",
+      "He opened the window slowly."
     ],
     "answer": 0,
     "explanation": "In 'ran to', the end of 'ran' joins the start of 'to' to give a-n-t across the gap.",
@@ -1140,7 +1219,8 @@
       "",
       "Here the word appears whole, not hidden across a join.",
       "The joins are 'she sang', 'sang a' and 'a song' — none spell ANT.",
-      "The joins are 'he put', 'put on' and 'on his' — none spell ANT."
+      "The joins are 'he put', 'put on' and 'on his' — none spell ANT.",
+      "None of the joins here spell ANT — check the letters either side of each space."
     ],
     "learningPoint": "The hidden letters must run in order straight across the gap between two words.",
     "tags": [
@@ -1160,7 +1240,8 @@
       "The tape arrived this morning.",
       "She ate a ripe pear.",
       "He played the drums badly.",
-      "We opened the gate quietly."
+      "We opened the gate quietly.",
+      "The sheep are in the field."
     ],
     "answer": 0,
     "explanation": "In 'tape arrived', the end of 'tape' joins the start of 'arrived' to give p-e-a-r across the gap.",
@@ -1168,7 +1249,8 @@
       "",
       "Here the word appears whole, so it is not hidden across a join.",
       "The joins are 'he played', 'played the' and 'the drums' — none spell PEAR.",
-      "The joins are 'we opened', 'opened the' and 'the gate' — none spell PEAR."
+      "The joins are 'we opened', 'opened the' and 'the gate' — none spell PEAR.",
+      "'sheep are' gives p-a-r-e, which is very close but not PEAR."
     ],
     "learningPoint": "Cover the middle of each word and read only the letters either side of the gaps.",
     "tags": [
@@ -1188,7 +1270,8 @@
       "post",
       "match",
       "letter",
-      "note"
+      "note",
+      "sand"
     ],
     "answer": 0,
     "explanation": "Post gives postbox, postman and postcard.",
@@ -1196,7 +1279,8 @@
       "",
       "Matchbox works, but 'matchman' and 'matchcard' are not words.",
       "Letterbox works, but 'letterman' and 'lettercard' are not used in British English.",
-      "Notebox and notecard are unusual, and 'noteman' is not a word."
+      "Notebox and notecard are unusual, and 'noteman' is not a word.",
+      "Sandbox and sandman are words, but 'sandcard' is not."
     ],
     "learningPoint": "Your answer has to work with every single word listed, not just the first one.",
     "tags": [
@@ -1216,7 +1300,8 @@
       "dog : puppy",
       "horse : stable",
       "bird : feather",
-      "cow : milk"
+      "cow : milk",
+      "sheep : wool"
     ],
     "answer": 0,
     "explanation": "A kitten is a young cat, and in the same way a puppy is a young dog.",
@@ -1224,7 +1309,8 @@
       "",
       "A stable is where a horse lives, not a young horse.",
       "A feather is part of a bird.",
-      "Milk is something a cow produces."
+      "Milk is something a cow produces.",
+      "Wool comes from a sheep but is not its young."
     ],
     "learningPoint": "Say the relationship as a full sentence, then check the second pair fits exactly the same sentence.",
     "tags": [
@@ -1244,7 +1330,8 @@
       "teacher : school",
       "chef : knife",
       "pilot : uniform",
-      "farmer : tractor"
+      "farmer : tractor",
+      "actor : costume"
     ],
     "answer": 0,
     "explanation": "A doctor works in a hospital, and a teacher works in a school — the link is person to workplace.",
@@ -1252,7 +1339,8 @@
       "",
       "A knife is a tool a chef uses, not the place they work.",
       "A uniform is what a pilot wears, not where they work.",
-      "A tractor is equipment a farmer uses, not a workplace."
+      "A tractor is equipment a farmer uses, not a workplace.",
+      "A costume is worn by an actor rather than being the place they work."
     ],
     "learningPoint": "Person-to-workplace and person-to-tool are different relationships. Decide which one the first pair shows.",
     "tags": [
@@ -1272,7 +1360,8 @@
       "25",
       "24",
       "30",
-      "21"
+      "21",
+      "35"
     ],
     "answer": 0,
     "explanation": "The numbers go up by 5 each time, so after 20 comes 25.",
@@ -1280,7 +1369,8 @@
       "",
       "This adds 4 rather than 5.",
       "This adds 10, skipping a step in the sequence.",
-      "This adds only 1."
+      "This adds only 1.",
+      "This adds 15 rather than 5."
     ],
     "learningPoint": "Work out the gap between the first two numbers, then check it is the same all the way along.",
     "tags": [
@@ -1300,7 +1390,8 @@
       "30",
       "28",
       "26",
-      "24"
+      "24",
+      "32"
     ],
     "answer": 0,
     "explanation": "The gaps grow steadily: 4, then 6, then 8. The next gap is 10, so 20 + 10 = 30.",
@@ -1308,7 +1399,8 @@
       "",
       "This repeats the previous gap of 8 instead of increasing it.",
       "This adds 6, an earlier gap in the sequence.",
-      "This adds only 4, the very first gap."
+      "This adds only 4, the very first gap.",
+      "This adds 12, but the gaps grow 4, 6, 8 and then 10."
     ],
     "learningPoint": "If the gaps are not equal, look at how the gaps themselves change.",
     "tags": [
@@ -1329,7 +1421,8 @@
       "Tom has whiskers.",
       "Tom is friendly.",
       "Every animal with whiskers is a cat.",
-      "Tom does not have whiskers."
+      "Tom does not have whiskers.",
+      "Some cats have no whiskers."
     ],
     "answer": 0,
     "explanation": "If every cat has whiskers, and Tom is a cat, then Tom must have whiskers.",
@@ -1337,7 +1430,8 @@
       "",
       "Nothing has been said about Tom's character.",
       "This reverses the rule; other animals such as mice have whiskers too.",
-      "This contradicts the rule we were given."
+      "This contradicts the rule we were given.",
+      "This contradicts the first statement, which says all cats have whiskers."
     ],
     "learningPoint": "Use only the information you are given — do not add anything from your own knowledge.",
     "tags": [
@@ -1357,7 +1451,8 @@
       "Amir",
       "Beth",
       "Chen",
-      "Dara"
+      "Dara",
+      "It cannot be worked out"
     ],
     "answer": 0,
     "explanation": "In order from oldest to youngest: Amir, Beth, Chen, Dara. Amir is at the top.",
@@ -1365,7 +1460,8 @@
       "",
       "Beth is younger than Amir.",
       "Chen is younger than both Amir and Beth.",
-      "Dara is the youngest of all four."
+      "Dara is the youngest of all four.",
+      "The three comparisons place all four in order, so it can be worked out."
     ],
     "learningPoint": "Write the names in one line as you read each clue, adding each new person in the right place.",
     "tags": [
@@ -1386,7 +1482,8 @@
       "begin and start",
       "stop and wait",
       "begin and stop",
-      "start and wait"
+      "start and wait",
+      "stop and start"
     ],
     "answer": 0,
     "explanation": "'Begin' and 'start' both mean to make something happen for the first time.",
@@ -1394,7 +1491,8 @@
       "",
       "'Stop' means to end something and 'wait' means to pause — related, but not the same.",
       "'Begin' and 'stop' are opposites.",
-      "'Start' and 'wait' are close to opposites."
+      "'Start' and 'wait' are close to opposites.",
+      "Stop and start are opposites, not close in meaning."
     ],
     "learningPoint": "True synonyms can swap places in a sentence without changing the meaning.",
     "tags": [
@@ -1414,7 +1512,8 @@
       "vacant and empty",
       "noisy and damp",
       "vacant and noisy",
-      "empty and damp"
+      "empty and damp",
+      "noisy and empty"
     ],
     "answer": 0,
     "explanation": "'Vacant' means unoccupied, and 'empty' means containing nothing — both describe a space with nothing in it.",
@@ -1422,7 +1521,8 @@
       "",
       "'Noisy' describes sound and 'damp' describes moisture; they are unrelated.",
       "A vacant room is more likely to be quiet than noisy.",
-      "'Empty' and 'damp' describe completely different qualities."
+      "'Empty' and 'damp' describe completely different qualities.",
+      "Noisy is about sound and empty is about what is inside."
     ],
     "learningPoint": "Group the words by what they describe — space, sound, moisture — and the matching pair stands out.",
     "tags": [
@@ -1442,7 +1542,8 @@
       "June",
       "July",
       "February",
-      "August"
+      "August",
+      "September"
     ],
     "answer": 0,
     "explanation": "These are consecutive months of the year, so the month after May is June.",
@@ -1450,7 +1551,8 @@
       "",
       "July comes after June, so it is one month too far.",
       "February comes before March.",
-      "August is three months after May."
+      "August is three months after May.",
+      "September is four months after May, but this sequence moves on one month at a time."
     ],
     "learningPoint": "Check whether a sequence moves on by one step or by more before choosing.",
     "tags": [
@@ -1470,7 +1572,8 @@
       "Saturday",
       "Friday",
       "Monday",
-      "Wednesday"
+      "Wednesday",
+      "Sunday"
     ],
     "answer": 0,
     "explanation": "The sequence skips a day each time: Sunday, then Tuesday, then Thursday, so next comes Saturday.",
@@ -1478,7 +1581,8 @@
       "",
       "Friday is only one day after Thursday, not two.",
       "Monday comes between Sunday and Tuesday, earlier in the sequence.",
-      "Wednesday comes between Tuesday and Thursday, earlier in the sequence."
+      "Wednesday comes between Tuesday and Thursday, earlier in the sequence.",
+      "Sunday is where the sequence began. Two days after Thursday is Saturday."
     ],
     "learningPoint": "Number the days of the week, then the pattern becomes an ordinary number sequence.",
     "tags": [
@@ -1498,7 +1602,8 @@
       "start",
       "finish",
       "hurry",
-      "choose"
+      "choose",
+      "pause"
     ],
     "answer": 0,
     "explanation": "To begin something is to start it, so 'start' is the closest in meaning.",
@@ -1506,7 +1611,8 @@
       "",
       "'Finish' is the opposite of begin.",
       "'Hurry' is about speed, not about starting.",
-      "'Choose' means to pick something out."
+      "'Choose' means to pick something out.",
+      "To pause is to stop for a moment, which is not the same as beginning."
     ],
     "learningPoint": "Read every option before choosing — the opposite of a word is often offered as a trap.",
     "tags": [
@@ -1526,7 +1632,8 @@
       "unwilling",
       "exhausted",
       "careless",
-      "dishonest"
+      "dishonest",
+      "eager"
     ],
     "answer": 0,
     "explanation": "Somebody reluctant does not want to do something, which is exactly what 'unwilling' means.",
@@ -1534,7 +1641,8 @@
       "",
       "'Exhausted' means very tired — a reluctant person need not be tired at all.",
       "'Careless' means not paying attention.",
-      "'Dishonest' means untruthful, which is a different idea entirely."
+      "'Dishonest' means untruthful, which is a different idea entirely.",
+      "Eager is the opposite of reluctant."
     ],
     "learningPoint": "Try the word in a sentence: 'she was reluctant to go' and 'she was unwilling to go' mean the same thing.",
     "tags": [
@@ -1554,7 +1662,8 @@
       "plentiful",
       "expensive",
       "ancient",
-      "obvious"
+      "obvious",
+      "scarce"
     ],
     "answer": 0,
     "explanation": "'Abundant' means existing in large quantities, so 'plentiful' matches it closely.",
@@ -1562,7 +1671,8 @@
       "",
       "Something plentiful is usually cheap rather than expensive.",
       "'Ancient' is about age, not quantity.",
-      "'Obvious' means easy to see or understand."
+      "'Obvious' means easy to see or understand.",
+      "Scarce means there is very little of something — the opposite of abundant."
     ],
     "learningPoint": "Decide first what the word is measuring — amount, age, cost or clarity — then match on that.",
     "tags": [
@@ -1582,7 +1692,8 @@
       "frank",
       "cheerful",
       "cautious",
-      "clever"
+      "clever",
+      "secretive"
     ],
     "answer": 0,
     "explanation": "A candid answer is an honest and direct one, said without holding anything back. 'Frank' means exactly that.",
@@ -1590,7 +1701,8 @@
       "",
       "'Cheerful' means happy — a candid remark can be very unwelcome.",
       "'Cautious' is nearly the opposite: a cautious person holds things back.",
-      "'Clever' is about intelligence rather than honesty."
+      "'Clever' is about intelligence rather than honesty.",
+      "Secretive is the opposite of candid."
     ],
     "learningPoint": "Do not be misled by words that merely sound similar or begin with the same letter.",
     "tags": [
@@ -1610,7 +1722,8 @@
       "modern",
       "enormous",
       "silent",
-      "distant"
+      "distant",
+      "aged"
     ],
     "answer": 0,
     "explanation": "'Ancient' means very old, so its opposite is 'modern', meaning of the present time.",
@@ -1618,7 +1731,8 @@
       "",
       "'Enormous' is about size, not age.",
       "'Silent' is about sound.",
-      "'Distant' is about how far away something is."
+      "'Distant' is about how far away something is.",
+      "Aged means much the same as ancient rather than the opposite."
     ],
     "learningPoint": "An antonym must be opposite in the same way — check that both words describe the same quality.",
     "tags": [
@@ -1638,7 +1752,8 @@
       "temporary",
       "valuable",
       "popular",
-      "private"
+      "private",
+      "lasting"
     ],
     "answer": 0,
     "explanation": "'Permanent' means lasting for ever, so its opposite is 'temporary', meaning lasting only for a short time.",
@@ -1646,7 +1761,8 @@
       "",
       "'Valuable' is about worth, not about how long something lasts.",
       "'Popular' is about how well liked something is.",
-      "'Private' is the opposite of public, not of permanent."
+      "'Private' is the opposite of public, not of permanent.",
+      "Lasting means the same as permanent."
     ],
     "learningPoint": "Ask what the word is about — time, size, worth — and look for the opposite in that same category.",
     "tags": [
@@ -1666,7 +1782,8 @@
       "contract",
       "deliver",
       "replace",
-      "measure"
+      "measure",
+      "increase"
     ],
     "answer": 0,
     "explanation": "To expand is to get bigger; to contract is to get smaller. They are direct opposites.",
@@ -1674,7 +1791,8 @@
       "",
       "'Deliver' means to take something somewhere.",
       "'Replace' means to put something new in place of something old.",
-      "'Measure' means to find the size of something, not to change it."
+      "'Measure' means to find the size of something, not to change it.",
+      "To increase is close in meaning to expanding, not opposite to it."
     ],
     "learningPoint": "When the word is a verb, the opposite must be a verb describing the reverse action.",
     "tags": [
@@ -1694,7 +1812,8 @@
       "arrogant",
       "generous",
       "sincere",
-      "anxious"
+      "anxious",
+      "modest"
     ],
     "answer": 0,
     "explanation": "A humble person does not think too highly of themselves. An arrogant person thinks far too highly of themselves, which is the direct opposite.",
@@ -1702,7 +1821,8 @@
       "",
       "'Generous' is about giving; a humble person can be generous too.",
       "'Sincere' means genuine, which is not opposed to being humble.",
-      "'Anxious' means worried, which is a different quality altogether."
+      "'Anxious' means worried, which is a different quality altogether.",
+      "Modest means much the same as humble."
     ],
     "learningPoint": "For words describing character, ask what the exaggerated version of the opposite would be.",
     "tags": [
@@ -1722,7 +1842,8 @@
       "cat",
       "mouse",
       "kennel",
-      "fur"
+      "fur",
+      "cub"
     ],
     "answer": 0,
     "explanation": "A puppy is a young dog, so a kitten is a young cat.",
@@ -1730,7 +1851,8 @@
       "",
       "A mouse is a different animal, not a grown-up kitten.",
       "A kennel is where a dog sleeps, not what it grows into.",
-      "Fur is something both animals have."
+      "Fur is something both animals have.",
+      "A cub is the young of a bear or a lion, not the adult a kitten becomes."
     ],
     "learningPoint": "Say the relationship out loud in words — 'a puppy is a young dog' — before filling in the gap.",
     "tags": [
@@ -1750,7 +1872,8 @@
       "glove",
       "finger",
       "wrist",
-      "wave"
+      "wave",
+      "shoe"
     ],
     "answer": 0,
     "explanation": "A sock is the garment worn on a foot, so a glove is the garment worn on a hand.",
@@ -1758,7 +1881,8 @@
       "",
       "A finger is a part of the hand, not something worn on it.",
       "A wrist is next to the hand, not worn on it.",
-      "A wave is something a hand does."
+      "A wave is something a hand does.",
+      "A shoe goes on a foot, which belongs to the first half of the pair."
     ],
     "learningPoint": "'Object and what covers it' is a common analogy pattern — check the second pair matches the first exactly.",
     "tags": [
@@ -1778,7 +1902,8 @@
       "play",
       "actor",
       "stage",
-      "story"
+      "story",
+      "chapter"
     ],
     "answer": 0,
     "explanation": "A chapter is one section of a book, so a scene is one section of a play.",
@@ -1786,7 +1911,8 @@
       "",
       "An actor performs in a play but is not made up of scenes.",
       "A stage is where a play is performed.",
-      "A story is what a play tells, not the whole made up of scenes."
+      "A story is what a play tells, not the whole made up of scenes.",
+      "Chapter belongs to the first pair; the answer must be what a scene is part of."
     ],
     "learningPoint": "'Part to whole' analogies need the same direction on both sides — part first, whole second.",
     "tags": [
@@ -1806,7 +1932,8 @@
       "precise",
       "lengthy",
       "hidden",
-      "foolish"
+      "foolish",
+      "brief"
     ],
     "answer": 0,
     "explanation": "Hesitant and decisive are opposites, so the second pair must be opposites too. The opposite of vague, meaning unclear, is precise.",
@@ -1814,7 +1941,8 @@
       "",
       "'Lengthy' is about how long something is; a long answer can still be vague.",
       "'Hidden' is close in meaning to vague rather than opposite to it.",
-      "'Foolish' is about sense, not about clarity."
+      "'Foolish' is about sense, not about clarity.",
+      "Brief is about length, not about how clear something is."
     ],
     "learningPoint": "Work out the relationship in the first pair first. If it is 'opposites', the second pair must be opposites as well.",
     "tags": [
@@ -1834,7 +1962,8 @@
       "tulip",
       "oak",
       "birch",
-      "willow"
+      "willow",
+      "pine"
     ],
     "answer": 0,
     "explanation": "Oak, birch and willow are all trees. A tulip is a flower, so it does not belong with the others.",
@@ -1842,7 +1971,8 @@
       "",
       "An oak is a tree, like the birch and the willow.",
       "A birch is a tree, like the oak and the willow.",
-      "A willow is a tree, like the oak and the birch."
+      "A willow is a tree, like the oak and the birch.",
+      "A pine is a tree, like the oak, the birch and the willow."
     ],
     "learningPoint": "Find what three of the words share first, then the fourth is the answer.",
     "tags": [
@@ -1862,7 +1992,8 @@
       "trumpet",
       "violin",
       "cello",
-      "viola"
+      "viola",
+      "double bass"
     ],
     "answer": 0,
     "explanation": "The violin, cello and viola are all string instruments, played with a bow. The trumpet is a brass instrument, played by blowing.",
@@ -1870,7 +2001,8 @@
       "",
       "The violin has strings, like the cello and the viola.",
       "The cello has strings, like the violin and the viola.",
-      "The viola has strings, like the violin and the cello."
+      "The viola has strings, like the violin and the cello.",
+      "A double bass has strings and is played with a bow, like the others."
     ],
     "learningPoint": "Group by how things work, not just by what they are used for — all four are instruments, so that cannot be the rule.",
     "tags": [
@@ -1891,7 +2023,8 @@
       "cube",
       "square",
       "rhombus",
-      "rectangle"
+      "rectangle",
+      "trapezium"
     ],
     "answer": 0,
     "explanation": "The square, rhombus and rectangle are all flat, four-sided shapes. A cube is a solid, three-dimensional shape.",
@@ -1899,7 +2032,8 @@
       "",
       "A square is flat, like the rhombus and the rectangle.",
       "A rhombus is flat, like the square and the rectangle.",
-      "A rectangle is flat, like the square and the rhombus."
+      "A rectangle is flat, like the square and the rhombus.",
+      "A trapezium is a flat four-sided shape, like the square, rhombus and rectangle."
     ],
     "learningPoint": "Watch for one item belonging to a different category altogether — here, solid rather than flat.",
     "tags": [
@@ -1920,7 +2054,8 @@
       "ballad",
       "novel",
       "essay",
-      "diary"
+      "diary",
+      "biography"
     ],
     "answer": 0,
     "explanation": "A sonnet, a haiku and a limerick are all forms of poem. A ballad is also a form of poem, so it belongs with them.",
@@ -1928,7 +2063,8 @@
       "",
       "A novel is a long piece of prose, not a poem.",
       "An essay is a piece of prose writing that argues a point.",
-      "A diary is a personal record kept day by day."
+      "A diary is a personal record kept day by day.",
+      "A biography is an account of someone's life, not a form of poem."
     ],
     "learningPoint": "When asked what belongs, name the group precisely — 'writing' is too broad here; 'poem' is the actual rule.",
     "tags": [
@@ -1949,7 +2085,8 @@
       "IJ",
       "HI",
       "JK",
-      "GI"
+      "GI",
+      "II"
     ],
     "answer": 0,
     "explanation": "The pairs run straight through the alphabet in order: AB, CD, EF, GH, and then IJ.",
@@ -1957,7 +2094,8 @@
       "",
       "HI overlaps with the pair before it — H has already been used.",
       "JK skips the letter I altogether.",
-      "GI reuses G and misses H."
+      "GI reuses G and misses H.",
+      "The two letters in each pair are different and next to each other in the alphabet."
     ],
     "learningPoint": "Write the alphabet out along the top of your paper — it makes letter sequences much quicker.",
     "tags": [
@@ -1977,7 +2115,8 @@
       "R",
       "S",
       "Q",
-      "P"
+      "P",
+      "T"
     ],
     "answer": 0,
     "explanation": "Each letter moves back two places: Z to X, X to V, V to T. Two places back from T gives R.",
@@ -1985,7 +2124,8 @@
       "",
       "S is only one place back from T.",
       "Q is three places back from T.",
-      "P is four places back from T — that is two steps of the pattern, not one."
+      "P is four places back from T — that is two steps of the pattern, not one.",
+      "T has already been used in the sequence."
     ],
     "learningPoint": "Check the size of the step between every pair, not just the first two.",
     "tags": [
@@ -2005,7 +2145,8 @@
       "OM",
       "NM",
       "ON",
-      "PN"
+      "PN",
+      "OL"
     ],
     "answer": 0,
     "explanation": "Both letters move forward three places each time. The first letters run C, F, I, L, then O; the second letters run A, D, G, J, then M.",
@@ -2013,7 +2154,8 @@
       "",
       "N is only two places after L, so the first letter is wrong.",
       "The first letter is right, but N is four places after J.",
-      "P is four places after L and N is four places after J."
+      "P is four places after L and N is four places after J.",
+      "The first letter is right, but the second must move on three places from J to M."
     ],
     "learningPoint": "In a two-letter sequence, treat each position as its own separate pattern.",
     "tags": [
@@ -2033,7 +2175,8 @@
       "IR",
       "IS",
       "HR",
-      "JR"
+      "JR",
+      "IQ"
     ],
     "answer": 0,
     "explanation": "The first letters go forward two at a time: A, C, E, G, then I. The second letters go backwards two at a time: Z, X, V, T, then R.",
@@ -2041,7 +2184,8 @@
       "",
       "The first letter is right, but S is only one place back from T.",
       "H is only one place after G.",
-      "J is three places after G."
+      "J is three places after G.",
+      "The first letter is right, but Q is three places back from T rather than two."
     ],
     "learningPoint": "When one letter climbs and the other falls, work out the two patterns separately before combining them.",
     "tags": [
@@ -2061,7 +2205,8 @@
       "EPH",
       "CNF",
       "EPG",
-      "DPH"
+      "DPH",
+      "FQI"
     ],
     "answer": 0,
     "explanation": "Each letter moves forward one place: C to D, A to B, T to U. Doing the same to DOG gives D to E, O to P and G to H, so the code is EPH.",
@@ -2069,7 +2214,8 @@
       "",
       "This moves each letter back one place instead of forward.",
       "The last letter has not been moved on.",
-      "The first letter has not been moved on."
+      "The first letter has not been moved on.",
+      "This moves each letter on two places instead of one."
     ],
     "learningPoint": "Apply your rule to every letter, then read the answer back to check none was left behind.",
     "tags": [
@@ -2089,7 +2235,8 @@
       "254",
       "245",
       "524",
-      "253"
+      "253",
+      "251"
     ],
     "answer": 0,
     "explanation": "B is the 2nd letter, E is the 5th and D is the 4th, so BED is 2, 5, 4.",
@@ -2097,7 +2244,8 @@
       "",
       "This has the last two numbers the wrong way round.",
       "This puts the letters in the order E, B, D.",
-      "This gives D as 3 instead of 4."
+      "This gives D as 3 instead of 4.",
+      "This gives D as 1 rather than 4."
     ],
     "learningPoint": "Count carefully to the letter you need — a slip of one place changes the whole answer.",
     "tags": [
@@ -2117,7 +2265,8 @@
       "TUFN",
       "RSDL",
       "TUFM",
-      "TVFN"
+      "TVFN",
+      "TUEN"
     ],
     "answer": 0,
     "explanation": "Each letter moves forward one place: P to Q, L to M, A to B, N to O, T to U. Applying that to STEM gives S to T, T to U, E to F and M to N, which is TUFN.",
@@ -2125,7 +2274,8 @@
       "",
       "This moves every letter back one place rather than forward.",
       "The final M has not been moved on.",
-      "The second letter has been moved forward two places instead of one."
+      "The second letter has been moved forward two places instead of one.",
+      "The third letter has not been moved on."
     ],
     "learningPoint": "Test your rule against every letter of the example word before you use it on the new one.",
     "tags": [
@@ -2145,7 +2295,8 @@
       "12 9 19 20",
       "12 9 18 20",
       "11 8 18 19",
-      "12 10 19 20"
+      "12 10 19 20",
+      "12 9 19 19"
     ],
     "answer": 0,
     "explanation": "Each number is the position of the letter in the alphabet: M is 13, I is 9, L is 12, K is 11. So L is 12, I is 9, S is 19 and T is 20.",
@@ -2153,7 +2304,8 @@
       "",
       "This gives S as 18, but S is the 19th letter.",
       "Every number here is one too small.",
-      "This gives I as 10, but I is the 9th letter."
+      "This gives I as 10, but I is the 9th letter.",
+      "This gives T as 19, but 19 is S — T is the 20th letter."
     ],
     "learningPoint": "When two examples are given, use the second to confirm the rule you worked out from the first.",
     "tags": [
@@ -2174,7 +2326,8 @@
       "STOP",
       "LAST",
       "TOOK",
-      "PORT"
+      "PORT",
+      "TOUR"
     ],
     "answer": 0,
     "explanation": "The end of 'last' and the beginning of 'opportunity' give laST OPportunity, which hides the word STOP.",
@@ -2182,7 +2335,8 @@
       "",
       "'Last' is a whole word in the sentence, not one hidden across two words.",
       "'Took' is also a whole word in the sentence.",
-      "The letters of 'port' do not appear together across a word boundary here."
+      "The letters of 'port' do not appear together across a word boundary here.",
+      "The letters t, o, u, r do not run together across any of the joins."
     ],
     "learningPoint": "Hidden words always straddle a gap — look at the last letters of one word joined to the first letters of the next.",
     "tags": [
@@ -2202,7 +2356,8 @@
       "CARD",
       "DEAL",
       "CARE",
-      "EARL"
+      "EARL",
+      "READ"
     ],
     "answer": 0,
     "explanation": "'Car' followed by 'dealer' gives CAR Dealer, and the first four letters across that gap spell CARD.",
@@ -2210,7 +2365,8 @@
       "",
       "'Deal' sits inside the single word 'dealer' and does not cross a gap.",
       "'Care' does not appear across the join — 'car' is followed by a d, not an e.",
-      "'Earl' sits inside 'dealer' rather than across two words."
+      "'Earl' sits inside 'dealer' rather than across two words.",
+      "The letters r, e, a, d do not appear together across the join."
     ],
     "learningPoint": "The hidden word must use letters from both words — one on each side of the space.",
     "tags": [
@@ -2230,7 +2386,8 @@
       "DRIFT",
       "DRIED",
       "TRIED",
-      "FIRST"
+      "FIRST",
+      "AFTER"
     ],
     "answer": 0,
     "explanation": "The d at the end of 'sad' joins the start of 'rift' to give saD RIFT, which hides the word DRIFT.",
@@ -2238,7 +2395,8 @@
       "",
       "'Dried' would need an e, which does not appear at that join.",
       "'Tried' begins with a t, but the letter before 'rift' is a d.",
-      "The letters of 'first' do not appear in order across any join here."
+      "The letters of 'first' do not appear in order across any join here.",
+      "AFTER shares letters with the sentence, but they do not run together across a join."
     ],
     "learningPoint": "For a five-letter hidden word, try taking one, two or three letters from the first word and the rest from the second.",
     "tags": [
@@ -2258,7 +2416,8 @@
       "She opened the atlas on the table.",
       "He walked the entire route alone.",
       "They chose the answer together.",
-      "We reached the harbour before dusk."
+      "We reached the harbour before dusk.",
+      "The class read the passage quietly."
     ],
     "answer": 0,
     "explanation": "'The atlas' gives tHE ATlas: the last two letters of 'the' and the first two of 'atlas' spell HEAT.",
@@ -2266,7 +2425,8 @@
       "",
       "'The entire' gives the letters h, e, e, n — not HEAT.",
       "'The answer' gives the letters h, e, a, n — so close, but the last letter is wrong.",
-      "'The harbour' gives the letters h, e, h, a."
+      "'The harbour' gives the letters h, e, h, a.",
+      "'the passage' gives the letters h-e-p, not HEAT."
     ],
     "learningPoint": "When you are given the hidden word, test each join in turn rather than reading the sentences for sense.",
     "tags": [
@@ -2286,7 +2446,8 @@
       "ball",
       "tree",
       "glass",
-      "chair"
+      "chair",
+      "window"
     ],
     "answer": 0,
     "explanation": "'Foot' and 'ball' join to make 'football', a single compound word.",
@@ -2294,7 +2455,8 @@
       "",
       "'Foottree' is not a word.",
       "'Footglass' is not a word.",
-      "'Footchair' is not a word."
+      "'Footchair' is not a word.",
+      "'Footwindow' is not a word."
     ],
     "learningPoint": "Say each possible compound out loud — if it does not sound like a real word, it usually is not one.",
     "tags": [
@@ -2314,7 +2476,8 @@
       "sun",
       "moon",
       "day",
-      "star"
+      "star",
+      "fire"
     ],
     "answer": 0,
     "explanation": "Sunlight, sunshine and sunburn are all real words, so 'sun' works for all three.",
@@ -2322,7 +2485,8 @@
       "",
       "Moonlight and moonshine are words, but 'moonburn' is not.",
       "Daylight is a word, but 'dayshine' and 'dayburn' are not.",
-      "Starlight is a word, but 'starshine' and 'starburn' are not."
+      "Starlight is a word, but 'starshine' and 'starburn' are not.",
+      "Firelight is a word, but 'fireshine' and 'fireburn' are not."
     ],
     "learningPoint": "A word must work with every item in the list — test all of them before choosing.",
     "tags": [
@@ -2342,7 +2506,8 @@
       "T",
       "D",
       "N",
-      "A"
+      "A",
+      "S"
     ],
     "answer": 0,
     "explanation": "Removing the T from STAND leaves SAND, which is what covers a beach.",
@@ -2350,7 +2515,8 @@
       "",
       "Removing the D leaves STAN, which is a name rather than a word for beach grains.",
       "Removing the N leaves STAD, which is not a word.",
-      "Removing the A leaves STND, which is not a word."
+      "Removing the A leaves STND, which is not a word.",
+      "Removing the S leaves TAND, which is not a word."
     ],
     "learningPoint": "Work from the meaning you are given — write the target word down first, then see which letter is extra.",
     "tags": [
@@ -2370,7 +2536,8 @@
       "S",
       "P",
       "K",
-      "R"
+      "R",
+      "A"
     ],
     "answer": 0,
     "explanation": "Taking the S from SPARK leaves PARK, and adding it to CAT makes CATS. Both are real words.",
@@ -2378,7 +2545,8 @@
       "",
       "Removing the P leaves SARK, which is not an ordinary word.",
       "Removing the K leaves SPAR, which is a word, but CATK is not.",
-      "Removing the R leaves SPAK, which is not a word."
+      "Removing the R leaves SPAK, which is not a word.",
+      "Removing the A leaves SPRK, which is not a word."
     ],
     "learningPoint": "Both halves must work. Check the second word as carefully as the first.",
     "tags": [
@@ -2398,7 +2566,8 @@
       "tree",
       "forest",
       "garden",
-      "shade"
+      "shade",
+      "leaf"
     ],
     "answer": 0,
     "explanation": "A petal is a part of a flower, so a branch is a part of a tree.",
@@ -2406,7 +2575,8 @@
       "",
       "A forest is made of many trees, so this goes one step too far.",
       "A garden is a place where trees may grow.",
-      "Shade is something a tree gives, not something it is made of."
+      "Shade is something a tree gives, not something it is made of.",
+      "A leaf is another part of a tree, not the whole that a branch belongs to."
     ],
     "learningPoint": "In a part-to-whole pair, the second word must be the thing the first is a piece of.",
     "tags": [
@@ -2426,7 +2596,8 @@
       "foal",
       "cub",
       "calf",
-      "lamb"
+      "lamb",
+      "kid"
     ],
     "answer": 0,
     "explanation": "A young horse is a foal.",
@@ -2434,7 +2605,8 @@
       "",
       "A cub is the young of a fox, bear or lion.",
       "A calf is the young of a cow.",
-      "A lamb is the young of a sheep."
+      "A lamb is the young of a sheep.",
+      "A kid is the young of a goat."
     ],
     "learningPoint": "Learn the common animal families as pairs — they come up in analogies as well as on their own.",
     "tags": [
@@ -2454,7 +2626,8 @@
       "pressure",
       "distance",
       "rainfall",
-      "brightness"
+      "brightness",
+      "temperature"
     ],
     "answer": 0,
     "explanation": "A thermometer measures temperature, so the pairing is instrument to what it measures. A barometer measures air pressure.",
@@ -2462,7 +2635,8 @@
       "",
       "Distance is measured with a tape measure or an odometer.",
       "Rainfall is measured with a rain gauge.",
-      "Brightness is measured with a light meter."
+      "Brightness is measured with a light meter.",
+      "Temperature is what a thermometer measures — that is the first half of the pair."
     ],
     "learningPoint": "'Instrument and what it measures' is a favourite relationship — learn the common instruments.",
     "tags": [
@@ -2483,7 +2657,8 @@
       "hare",
       "deer",
       "goose",
-      "otter"
+      "otter",
+      "rabbit"
     ],
     "answer": 0,
     "explanation": "A cygnet is a young swan, so the pairing is young animal to adult. A leveret is a young hare.",
@@ -2491,7 +2666,8 @@
       "",
       "A young deer is a fawn.",
       "A young goose is a gosling.",
-      "A young otter is a cub or a pup."
+      "A young otter is a cub or a pup.",
+      "A young rabbit is a kit; a leveret is specifically a young hare."
     ],
     "learningPoint": "The less familiar animal names — cygnet, leveret, kit, gosling — are worth learning as a list.",
     "tags": [
@@ -2512,7 +2688,8 @@
       "15",
       "14",
       "16",
-      "18"
+      "18",
+      "13"
     ],
     "answer": 0,
     "explanation": "The numbers go up in threes, so after 12 comes 12 + 3 = 15.",
@@ -2520,7 +2697,8 @@
       "",
       "This adds 2 rather than 3.",
       "This adds 4 rather than 3.",
-      "This adds 6, which is two steps of the pattern."
+      "This adds 6, which is two steps of the pattern.",
+      "This adds 1 rather than 3."
     ],
     "learningPoint": "Find the gap between the first two numbers, then check the same gap works all the way along.",
     "tags": [
@@ -2540,7 +2718,8 @@
       "25",
       "20",
       "24",
-      "32"
+      "32",
+      "36"
     ],
     "answer": 0,
     "explanation": "These are the square numbers: 1 × 1, 2 × 2, 3 × 3, 4 × 4. The next is 5 × 5 = 25.",
@@ -2548,7 +2727,8 @@
       "",
       "This adds 4, but the gaps are growing: 3, 5, 7, then 9.",
       "This adds 8, which is one short of the next gap.",
-      "This doubles 16 instead of continuing the pattern."
+      "This doubles 16 instead of continuing the pattern.",
+      "36 is the square after 25, so this is one step too far."
     ],
     "learningPoint": "If the gaps between numbers keep growing, look for square numbers or a growing step.",
     "tags": [
@@ -2568,7 +2748,8 @@
       "120",
       "96",
       "48",
-      "72"
+      "72",
+      "144"
     ],
     "answer": 0,
     "explanation": "The multiplier grows by one each time: 1 × 2 = 2, 2 × 3 = 6, 6 × 4 = 24. The next step multiplies by 5, giving 24 × 5 = 120.",
@@ -2576,7 +2757,8 @@
       "",
       "This multiplies by 4 again instead of moving on to 5.",
       "This doubles 24, which was only the first multiplier used.",
-      "This multiplies by 3, a multiplier already used earlier."
+      "This multiplies by 3, a multiplier already used earlier.",
+      "This multiplies 24 by 6 rather than by 5."
     ],
     "learningPoint": "If the numbers grow far too fast for adding, look at what each one is multiplied by — the multiplier itself may be changing.",
     "tags": [
@@ -2597,7 +2779,8 @@
       "21",
       "28",
       "98",
-      "7"
+      "7",
+      "14"
     ],
     "answer": 0,
     "explanation": "The middle number is the two outside numbers added together: 4 + 8 = 12 and 5 + 10 = 15. So the answer is 7 + 14 = 21.",
@@ -2605,7 +2788,8 @@
       "",
       "This doubles 14 instead of adding the two outside numbers together.",
       "This multiplies the outside numbers rather than adding them.",
-      "This is the difference between the outside numbers, not their total."
+      "This is the difference between the outside numbers, not their total.",
+      "This repeats the second outside number instead of adding the two together."
     ],
     "learningPoint": "Test your rule on both complete examples before using it on the one with the gap.",
     "tags": [
@@ -2626,7 +2810,8 @@
       "Chloe",
       "Ben",
       "Ana",
-      "It cannot be worked out"
+      "It cannot be worked out",
+      "Ben and Chloe are the same height"
     ],
     "answer": 0,
     "explanation": "Putting them in order gives Ana, then Ben, then Chloe. Chloe is at the bottom, so she is the shortest.",
@@ -2634,7 +2819,8 @@
       "",
       "Ben is in the middle — taller than Chloe but shorter than Ana.",
       "Ana is the tallest of the three.",
-      "There is enough information here to place all three in order."
+      "There is enough information here to place all three in order.",
+      "Nothing in the statements suggests any two of them are the same height."
     ],
     "learningPoint": "Write the names in a line as you read, and slot each new person into place.",
     "tags": [
@@ -2654,7 +2840,8 @@
       "It is not on the top shelf.",
       "It is on the bottom shelf.",
       "There are no hardbacks anywhere else.",
-      "All the paperbacks are on one shelf."
+      "All the paperbacks are on one shelf.",
+      "The book is a hardback after all."
     ],
     "answer": 0,
     "explanation": "If everything on the top shelf is a hardback, then anything that is not a hardback cannot be on the top shelf. That is all we can be sure of.",
@@ -2662,7 +2849,8 @@
       "",
       "There may be other shelves; we only know it is not the top one.",
       "The statement says nothing about where hardbacks may also be found.",
-      "Nothing tells us the paperbacks are kept together."
+      "Nothing tells us the paperbacks are kept together.",
+      "The question states plainly that this book is a paperback."
     ],
     "learningPoint": "Answer only what the statements prove. 'Must be true' rules out anything merely likely.",
     "tags": [
@@ -2682,7 +2870,8 @@
       "Ellie",
       "Dev",
       "Femi",
-      "Gus"
+      "Gus",
+      "It cannot be worked out"
     ],
     "answer": 0,
     "explanation": "Ellie came before Dev, and Dev came before Femi, giving Ellie, Dev, Femi. Gus was last, so the full order is Ellie, Dev, Femi, Gus.",
@@ -2690,7 +2879,8 @@
       "",
       "Dev finished after Ellie, so he cannot be first.",
       "Femi finished after Dev, so he is third.",
-      "Gus is stated to have finished last."
+      "Gus is stated to have finished last.",
+      "The clues place all four friends in order, so it can be worked out."
     ],
     "learningPoint": "Build the order from the clue that links the most people, then fit the rest around it.",
     "tags": [
@@ -2710,7 +2900,8 @@
       "Nobody in the choir is unable to read music.",
       "Everyone who can read music is in the choir.",
       "Everyone in the choir plays the piano.",
-      "Nobody in the choir plays the piano."
+      "Nobody in the choir plays the piano.",
+      "Some people who play the piano cannot read music."
     ],
     "answer": 0,
     "explanation": "'Everyone in the choir can read music' is another way of saying that no choir member is unable to read music. The other statements go further than the information allows.",
@@ -2718,7 +2909,8 @@
       "",
       "This turns the statement round. There may be readers of music who never joined the choir.",
       "Only 'some' music readers play the piano, and we are not told which ones.",
-      "Some choir members may well play the piano; we simply do not know."
+      "Some choir members may well play the piano; we simply do not know.",
+      "The statements say nothing at all about pianists outside this group."
     ],
     "learningPoint": "Beware of reversing a statement. 'All A are B' never means 'all B are A'.",
     "tags": [
@@ -2738,7 +2930,8 @@
       "quick",
       "silent",
       "gentle",
-      "narrow"
+      "narrow",
+      "steady"
     ],
     "answer": 0,
     "explanation": "'Rapid' means happening very fast, so 'quick' is closest.",
@@ -2746,7 +2939,8 @@
       "",
       "'Silent' is about sound.",
       "'Gentle' is about force or manner.",
-      "'Narrow' is about width."
+      "'Narrow' is about width.",
+      "Steady means even and unchanging, which is not the same as fast."
     ],
     "learningPoint": "Match the kind of quality first — speed, sound, size — and the right answer usually stands out.",
     "tags": [
@@ -2766,7 +2960,8 @@
       "tired",
       "angry",
       "curious",
-      "brave"
+      "brave",
+      "wary"
     ],
     "answer": 0,
     "explanation": "To be weary is to be very tired, especially after a long effort.",
@@ -2774,7 +2969,8 @@
       "",
       "'Angry' describes a different feeling altogether.",
       "'Curious' means wanting to find something out.",
-      "'Brave' means willing to face danger."
+      "'Brave' means willing to face danger.",
+      "Wary means cautious. It is one letter away from weary but means something different."
     ],
     "learningPoint": "Do not confuse 'weary' with 'wary' — one means tired, the other means cautious.",
     "tags": [
@@ -2794,7 +2990,8 @@
       "stubborn",
       "generous",
       "nervous",
-      "truthful"
+      "truthful",
+      "obvious"
     ],
     "answer": 0,
     "explanation": "An obstinate person refuses to change their mind, which is exactly what 'stubborn' means.",
@@ -2802,7 +2999,8 @@
       "",
       "'Generous' is about giving freely.",
       "'Nervous' is about worry.",
-      "'Truthful' is about honesty."
+      "'Truthful' is about honesty.",
+      "Obvious means easy to see. It begins like obstinate but means something else."
     ],
     "learningPoint": "Many harder vocabulary words describe character — decide whether the word is a compliment or a criticism first.",
     "tags": [
@@ -2822,7 +3020,8 @@
       "painstaking",
       "hesitant",
       "forgetful",
-      "enthusiastic"
+      "enthusiastic",
+      "careless"
     ],
     "answer": 0,
     "explanation": "Somebody meticulous takes enormous care over small details, which is what 'painstaking' describes.",
@@ -2830,7 +3029,8 @@
       "",
       "'Hesitant' means slow to decide — a meticulous person may be perfectly decisive.",
       "'Forgetful' is nearly the opposite: meticulous people miss nothing.",
-      "'Enthusiastic' is about eagerness, not about care."
+      "'Enthusiastic' is about eagerness, not about care.",
+      "Careless is the opposite of meticulous."
     ],
     "learningPoint": "Break a long word down: 'painstaking' literally means taking pains, and that is the idea behind meticulous too.",
     "tags": [
@@ -2850,7 +3050,8 @@
       "winter",
       "spring",
       "harvest",
-      "season"
+      "season",
+      "autumn"
     ],
     "answer": 0,
     "explanation": "These are the four seasons of the year in order. After autumn comes winter.",
@@ -2858,7 +3059,8 @@
       "",
       "Spring is where the sequence began — it comes round again only after winter.",
       "Harvest is a time of year but not one of the four seasons.",
-      "A season is the category the others belong to, not a member of it."
+      "A season is the category the others belong to, not a member of it.",
+      "Autumn is the season the sequence has just reached."
     ],
     "learningPoint": "Sequences often run through a familiar set — seasons, days, months. Name the set first.",
     "tags": [
@@ -2878,7 +3080,8 @@
       "October",
       "September",
       "November",
-      "August"
+      "August",
+      "December"
     ],
     "answer": 0,
     "explanation": "The months go forward three at a time: January, April, July, then October.",
@@ -2886,7 +3089,8 @@
       "",
       "September is only two months after July.",
       "November is four months after July.",
-      "August is the very next month after July."
+      "August is the very next month after July.",
+      "December is five months after July; the sequence moves on three at a time."
     ],
     "learningPoint": "Say the months in order under your breath and count the steps — it is quicker than it looks.",
     "tags": [
@@ -2906,7 +3110,8 @@
       "fifteen",
       "thirteen",
       "fourteen",
-      "twenty"
+      "twenty",
+      "sixteen"
     ],
     "answer": 0,
     "explanation": "The gaps grow by one each time: 1 to 3 is 2, 3 to 6 is 3, 6 to 10 is 4. The next gap is 5, giving 10 + 5 = 15.",
@@ -2914,7 +3119,8 @@
       "",
       "This adds 3, which was the gap two steps ago.",
       "This adds 4, repeating the previous gap instead of increasing it.",
-      "This doubles 10 rather than continuing the pattern."
+      "This doubles 10 rather than continuing the pattern.",
+      "This adds 6, but the gaps grow 2, 3, 4 and then 5."
     ],
     "learningPoint": "When the gaps themselves form a pattern, work out the sequence of gaps first.",
     "tags": [
@@ -2934,7 +3140,8 @@
       "eel",
       "fox",
       "hen",
-      "owl"
+      "owl",
+      "ape"
     ],
     "answer": 0,
     "explanation": "Each word is a three-letter animal, and their first letters run through the alphabet: a, b, c, d. The next must begin with e, which gives eel.",
@@ -2942,7 +3149,8 @@
       "",
       "'Fox' begins with f, which comes one letter too late.",
       "'Hen' begins with h, several letters too far on.",
-      "'Owl' begins with o, well beyond the next letter needed."
+      "'Owl' begins with o, well beyond the next letter needed.",
+      "Ape begins with a, a letter the sequence has already passed."
     ],
     "learningPoint": "When words look unrelated, check their first letters — an alphabet pattern is a common trick.",
     "tags": [

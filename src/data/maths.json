@@ -11,7 +11,8 @@
       "700 000",
       "70 000",
       "7 000",
-      "7 000 000"
+      "7 000 000",
+      "7"
     ],
     "answer": 0,
     "explanation": "Reading from the right, the digits are units, tens, hundreds, thousands, ten thousands, hundred thousands, millions. The 7 sits in the hundred thousands column, so it is worth 700 000.",
@@ -19,7 +20,8 @@
       "",
       "This is the ten thousands column — one column too far right.",
       "This is the thousands column — two columns too far right.",
-      "This is the millions column, where the 4 sits."
+      "This is the millions column, where the 4 sits.",
+      "This gives the digit itself rather than what it is worth in that column."
     ],
     "learningPoint": "Count the columns from the right-hand end of the number, not from the left.",
     "tags": [
@@ -39,7 +41,8 @@
       "35 000",
       "34 000",
       "34 900",
-      "35 962"
+      "35 962",
+      "30 000"
     ],
     "answer": 0,
     "explanation": "To round to the nearest thousand, look at the hundreds digit. Here it is 9, which is 5 or more, so the thousands digit rounds up from 34 to 35, giving 35 000.",
@@ -47,7 +50,8 @@
       "",
       "This is rounding down, but 962 is more than half of 1 000.",
       "This is rounded to the nearest hundred, not the nearest thousand.",
-      "This has added 1 000 rather than rounding."
+      "This has added 1 000 rather than rounding.",
+      "This rounds to the nearest ten thousand rather than the nearest thousand."
     ],
     "learningPoint": "To round to a column, look at the digit immediately to its right: 5 or more rounds up.",
     "followUpIds": [
@@ -70,7 +74,8 @@
       "7 400",
       "7 500",
       "7 000",
-      "7 420"
+      "7 420",
+      "8 000"
     ],
     "answer": 0,
     "explanation": "To round to the nearest hundred, look at the tens digit. Here it is 1, which is less than 5, so the hundreds digit stays as 4, giving 7 400.",
@@ -78,7 +83,8 @@
       "",
       "This rounds up, but 18 is less than half of 100.",
       "This is rounded to the nearest thousand.",
-      "This is rounded to the nearest ten."
+      "This is rounded to the nearest ten.",
+      "This rounds to the nearest thousand rather than the nearest hundred."
     ],
     "learningPoint": "Rounding to the nearest hundred means the answer must end in 00.",
     "tags": [
@@ -98,7 +104,8 @@
       "37",
       "39",
       "51",
-      "57"
+      "57",
+      "49"
     ],
     "answer": 0,
     "explanation": "37 has no factors other than 1 and itself. The others all divide: 39 = 3 × 13, 51 = 3 × 17 and 57 = 3 × 19.",
@@ -106,7 +113,8 @@
       "",
       "39 = 3 × 13, so it is not prime.",
       "51 = 3 × 17, so it is not prime.",
-      "57 = 3 × 19, so it is not prime."
+      "57 = 3 × 19, so it is not prime.",
+      "49 divides by 7 as well as by 1 and 49, so it is not prime."
     ],
     "learningPoint": "If the digits of a number add up to a multiple of 3, the number itself is a multiple of 3 and cannot be prime.",
     "tags": [
@@ -126,7 +134,8 @@
       "36",
       "30",
       "72",
-      "216"
+      "216",
+      "6"
     ],
     "answer": 0,
     "explanation": "They flash together at common multiples of 12 and 18. Multiples of 12 are 12, 24, 36, …; multiples of 18 are 18, 36, …. The lowest common multiple is 36 seconds.",
@@ -134,7 +143,8 @@
       "",
       "This adds 12 and 18 instead of finding a common multiple.",
       "72 is a common multiple, but it is not the first one.",
-      "This multiplies 12 by 18, which is a common multiple but far from the lowest."
+      "This multiplies 12 by 18, which is a common multiple but far from the lowest.",
+      "6 is the highest common factor of 12 and 18, not the lowest common multiple."
     ],
     "learningPoint": "'When do they next happen together?' means find the lowest common multiple.",
     "tags": [
@@ -155,7 +165,8 @@
       "24",
       "48",
       "28",
-      "20"
+      "20",
+      "18"
     ],
     "answer": 0,
     "explanation": "Multiplication comes before addition and subtraction, so 4 × 5 = 20 first. Then 6 + 20 − 2 = 24.",
@@ -163,7 +174,8 @@
       "",
       "This works strictly left to right: (6 + 4) × 5 − 2.",
       "This forgets to subtract the 2 at the end.",
-      "This subtracts before multiplying."
+      "This subtracts before multiplying.",
+      "This works out 5 − 2 first, but there are no brackets to make that happen."
     ],
     "learningPoint": "BIDMAS: Brackets, Indices, Division and Multiplication, then Addition and Subtraction.",
     "followUpIds": [
@@ -186,7 +198,8 @@
       "14",
       "19",
       "9.5",
-      "17"
+      "17",
+      "24"
     ],
     "answer": 0,
     "explanation": "Brackets first: 8 − 5 = 3. Then multiplication and division: 3 × 3 = 9 and 10 ÷ 2 = 5. Finally 9 + 5 = 14.",
@@ -194,7 +207,8 @@
       "",
       "This ignores the brackets and does 3 × 8 − 5 + 10 ÷ 2.",
       "This works entirely left to right.",
-      "This divides only the 10 by 2 after adding, changing the order."
+      "This divides only the 10 by 2 after adding, changing the order.",
+      "This ignores the brackets and works straight through: 3 × 8 − 5 + 10 ÷ 2."
     ],
     "learningPoint": "Do everything inside brackets before anything outside them.",
     "tags": [
@@ -214,7 +228,8 @@
       "4 °C",
       "−18 °C",
       "18 °C",
-      "−4 °C"
+      "−4 °C",
+      "11 °C"
     ],
     "answer": 0,
     "explanation": "Rising 11 degrees from −7 °C: 7 degrees takes you up to 0 °C, and the remaining 4 degrees take you to 4 °C.",
@@ -222,7 +237,8 @@
       "",
       "This adds the two numbers and keeps the minus sign.",
       "This ignores the minus sign at the start.",
-      "This subtracts 11 from 7 but keeps the answer negative."
+      "This subtracts 11 from 7 but keeps the answer negative.",
+      "This is the size of the rise, not the temperature it rose to."
     ],
     "learningPoint": "A rise in temperature moves you to the right on the number line; count up to zero first.",
     "followUpIds": [
@@ -245,7 +261,8 @@
       "9",
       "3",
       "18",
-      "6"
+      "6",
+      "−9"
     ],
     "answer": 0,
     "explanation": "From −3 °C up to 0 °C is 3 degrees, and from 0 °C up to 6 °C is another 6 degrees. Altogether that is 3 + 6 = 9 degrees.",
@@ -253,7 +270,8 @@
       "",
       "This subtracts 3 from 6 and ignores that −3 is below zero.",
       "This multiplies the two numbers instead of finding the gap.",
-      "This gives London's temperature rather than the difference."
+      "This gives London's temperature rather than the difference.",
+      "The size is right but the sign is wrong — London is the warmer of the two."
     ],
     "learningPoint": "To find the gap across zero, count up to zero and then onwards, and add the two parts together.",
     "tags": [
@@ -274,7 +292,8 @@
       "6/8",
       "5/8",
       "9/16",
-      "12/20"
+      "12/20",
+      "4/5"
     ],
     "answer": 0,
     "explanation": "Multiplying both the numerator and the denominator of 3/4 by 2 gives 6/8, so the two fractions are equal.",
@@ -282,7 +301,8 @@
       "",
       "The denominator has been doubled but the numerator only increased by 2.",
       "The numerator was multiplied by 3 but the denominator by 4.",
-      "12/20 simplifies to 3/5, not 3/4."
+      "12/20 simplifies to 3/5, not 3/4.",
+      "This adds 1 to the top and 1 to the bottom, which changes the value of the fraction."
     ],
     "learningPoint": "To make an equivalent fraction, multiply or divide the top and the bottom by the same number.",
     "tags": [
@@ -302,7 +322,8 @@
       "5/8",
       "3/5",
       "7/12",
-      "11/20"
+      "11/20",
+      "9/16"
     ],
     "answer": 0,
     "explanation": "Writing each fraction with a denominator of 120: 5/8 = 75/120, 3/5 = 72/120, 7/12 = 70/120 and 11/20 = 66/120. So 5/8 is the largest.",
@@ -310,7 +331,8 @@
       "",
       "3/5 is close but slightly smaller than 5/8.",
       "7/12 is only just above a half.",
-      "11/20 has the biggest numbers but is the smallest fraction here."
+      "11/20 has the biggest numbers but is the smallest fraction here.",
+      "9/16 is 0.5625, which is smaller than 5/8."
     ],
     "learningPoint": "Bigger numbers do not mean a bigger fraction — put them over a common denominator to compare.",
     "tags": [
@@ -330,7 +352,8 @@
       "60",
       "12",
       "36",
-      "76"
+      "76",
+      "48"
     ],
     "answer": 0,
     "explanation": "One eighth of 96 is 96 ÷ 8 = 12. Five eighths is 5 × 12 = 60 pages.",
@@ -338,7 +361,8 @@
       "",
       "This is only one eighth of the book.",
       "This is the number of pages left to read, not the number read.",
-      "This divides by 5 and multiplies by 8 — the wrong way round."
+      "This divides by 5 and multiplies by 8 — the wrong way round.",
+      "This is half of 96 rather than five eighths of it."
     ],
     "learningPoint": "To find a fraction of an amount, divide by the denominator then multiply by the numerator.",
     "followUpIds": [
@@ -361,7 +385,8 @@
       "27",
       "9",
       "21",
-      "36"
+      "36",
+      "147"
     ],
     "answer": 0,
     "explanation": "One seventh of 63 is 63 ÷ 7 = 9. Three sevenths is 3 × 9 = 27.",
@@ -369,7 +394,8 @@
       "",
       "This is only one seventh of 63.",
       "This divides by 3 instead of multiplying by 3.",
-      "This is the remaining 4/7 of 63."
+      "This is the remaining 4/7 of 63.",
+      "This multiplies by 7 and divides by 3, which is the fraction the wrong way up."
     ],
     "learningPoint": "Divide by the bottom number, then multiply by the top number.",
     "tags": [
@@ -389,7 +415,8 @@
       "11/12",
       "3/7",
       "3/12",
-      "1/2"
+      "1/2",
+      "3/4"
     ],
     "answer": 0,
     "explanation": "The lowest common denominator of 3 and 4 is 12. So 2/3 = 8/12 and 1/4 = 3/12, and 8/12 + 3/12 = 11/12.",
@@ -397,7 +424,8 @@
       "",
       "This adds the numerators and the denominators separately, which is not how fractions add.",
       "This converts correctly but then adds only the numerator of one fraction.",
-      "This is a rough guess rather than a calculation."
+      "This is a rough guess rather than a calculation.",
+      "This adds the numerators and simply keeps the larger denominator."
     ],
     "learningPoint": "You can only add fractions once they share the same denominator. Never add the denominators.",
     "tags": [
@@ -417,7 +445,8 @@
       "0.089",
       "0.1",
       "0.09",
-      "0.4"
+      "0.4",
+      "0.19"
     ],
     "answer": 0,
     "explanation": "Writing each to three decimal places: 0.089, 0.100, 0.090 and 0.400. So 0.089 is the smallest.",
@@ -425,7 +454,8 @@
       "",
       "0.1 is the same as 0.100, which is larger than 0.089.",
       "0.09 is the same as 0.090 — very close, but still larger than 0.089.",
-      "0.4 is the largest of the four."
+      "0.4 is the largest of the four.",
+      "0.19 has more digits than 0.1 but is larger than it — length does not decide size."
     ],
     "learningPoint": "A decimal with more digits is not automatically smaller — line up the decimal points and compare column by column.",
     "tags": [
@@ -445,7 +475,8 @@
       "0.24",
       "2.4",
       "0.024",
-      "1.0"
+      "1.0",
+      "0.0024"
     ],
     "answer": 0,
     "explanation": "6 × 4 = 24. There is one decimal place in each number, so there are two in the answer: 0.24.",
@@ -453,7 +484,8 @@
       "",
       "This has only one decimal place, so the answer is ten times too big.",
       "This has three decimal places, so the answer is ten times too small.",
-      "This adds the two decimals instead of multiplying."
+      "This adds the two decimals instead of multiplying.",
+      "This puts four decimal places in the answer where only two are needed."
     ],
     "learningPoint": "Count the decimal places in both numbers and put the same total into the answer.",
     "tags": [
@@ -473,7 +505,8 @@
       "£20",
       "£25",
       "£16",
-      "£60"
+      "£60",
+      "£40"
     ],
     "answer": 0,
     "explanation": "25% is the same as one quarter, and £80 ÷ 4 = £20.",
@@ -481,7 +514,8 @@
       "",
       "This simply repeats the percentage as an amount of money.",
       "This is 20% of £80, not 25%.",
-      "This is the amount left after taking off 25%."
+      "This is the amount left after taking off 25%.",
+      "This is 50% of £80 rather than 25%."
     ],
     "learningPoint": "25% means one quarter, 50% means one half and 10% means divide by 10.",
     "followUpIds": [
@@ -504,7 +538,8 @@
       "£6",
       "£10",
       "£16",
-      "£0.60"
+      "£0.60",
+      "£12"
     ],
     "answer": 0,
     "explanation": "10% means one tenth, and £60 ÷ 10 = £6.",
@@ -512,7 +547,8 @@
       "",
       "This repeats the percentage rather than working it out.",
       "This adds 10 and 6 instead of dividing.",
-      "This divides by 100 instead of by 10."
+      "This divides by 100 instead of by 10.",
+      "This is 20% of £60 rather than 10%."
     ],
     "learningPoint": "To find 10%, divide by 10. Once you have 10% you can build up to 20%, 30% and so on.",
     "tags": [
@@ -532,7 +568,8 @@
       "£36",
       "£9",
       "£25",
-      "£43"
+      "£43",
+      "£54"
     ],
     "answer": 0,
     "explanation": "20% of £45 is £9, so the price falls by £9. The sale price is £45 − £9 = £36.",
@@ -540,7 +577,8 @@
       "",
       "£9 is the discount, not the price you pay.",
       "This subtracts 20 from 45 instead of subtracting 20%.",
-      "This takes off 2% rather than 20%."
+      "This takes off 2% rather than 20%.",
+      "This adds 20% instead of taking it off."
     ],
     "learningPoint": "Check whether the question wants the discount or the final price — read the last line again.",
     "tags": [
@@ -561,7 +599,8 @@
       "£30",
       "£24",
       "£27",
-      "£45"
+      "£45",
+      "£6"
     ],
     "answer": 0,
     "explanation": "There are 4 + 5 = 9 equal parts, and £54 ÷ 9 = £6 per part. Priya has 5 parts, so she receives 5 × £6 = £30.",
@@ -569,7 +608,8 @@
       "",
       "£24 is Ben's share, not Priya's.",
       "This splits the money equally instead of in the ratio.",
-      "This uses 5 parts out of 6 rather than out of 9."
+      "This uses 5 parts out of 6 rather than out of 9.",
+      "£6 is the value of one part, not the five parts Priya receives."
     ],
     "learningPoint": "Add the parts of the ratio first, then find the value of one part.",
     "tags": [
@@ -590,7 +630,8 @@
       "750 g",
       "600 g",
       "500 g",
-      "1 200 g"
+      "1 200 g",
+      "3 000 g"
     ],
     "answer": 0,
     "explanation": "For 1 person you need 300 ÷ 4 = 75 g. For 10 people you need 10 × 75 = 750 g.",
@@ -598,7 +639,8 @@
       "",
       "This doubles the recipe, which serves 8 people rather than 10.",
       "This adds 200 g for the six extra people rather than scaling properly.",
-      "This multiplies by 4 instead of scaling to 10 people."
+      "This multiplies by 4 instead of scaling to 10 people.",
+      "This multiplies by 10 without first working out the flour for one person."
     ],
     "learningPoint": "Find the amount for one person first, then multiply up. This is called the unitary method.",
     "tags": [
@@ -618,7 +660,8 @@
       "1 350 ml",
       "135 ml",
       "13 500 ml",
-      "13.5 ml"
+      "13.5 ml",
+      "0.135 ml"
     ],
     "answer": 0,
     "explanation": "There are 1 000 millilitres in a litre, so 1.35 × 1 000 = 1 350 ml.",
@@ -626,7 +669,8 @@
       "",
       "This multiplies by 100 instead of 1 000.",
       "This multiplies by 10 000.",
-      "This multiplies by 10 only."
+      "This multiplies by 10 only.",
+      "This divides by 10 instead of multiplying by 1 000."
     ],
     "learningPoint": "Litres to millilitres, kilograms to grams and kilometres to metres all use × 1 000.",
     "tags": [
@@ -647,7 +691,8 @@
       "1 hour 37 minutes",
       "1 hour 77 minutes",
       "2 hours 23 minutes",
-      "1 hour 23 minutes"
+      "1 hour 23 minutes",
+      "2 hours 37 minutes"
     ],
     "answer": 0,
     "explanation": "From 14:38 to 15:38 is 1 hour, and from 15:38 to 16:15 is a further 37 minutes. The journey takes 1 hour 37 minutes.",
@@ -655,7 +700,8 @@
       "",
       "Minutes cannot go above 59 — this needs converting into hours.",
       "This counts to 17:00 rather than 16:15.",
-      "This subtracts the digits as if time worked in hundreds."
+      "This subtracts the digits as if time worked in hundreds.",
+      "This counts two whole hours, but the train arrives before 16:38."
     ],
     "learningPoint": "Time is not decimal. Count on to the next whole hour first, then count the extra minutes.",
     "tags": [
@@ -676,7 +722,8 @@
       "65°",
       "115°",
       "75°",
-      "45°"
+      "45°",
+      "112°"
     ],
     "answer": 0,
     "explanation": "The angles in a triangle add up to 180°. Since 47 + 68 = 115, the third angle is 180 − 115 = 65°.",
@@ -684,7 +731,8 @@
       "",
       "115° is the total of the two given angles, not the missing one.",
       "This subtracts from 190 rather than 180.",
-      "This subtracts from 160 rather than 180."
+      "This subtracts from 160 rather than 180.",
+      "This subtracts only one of the two known angles from 180°."
     ],
     "learningPoint": "Angles in a triangle add to 180°; angles on a straight line also add to 180°; angles around a point add to 360°.",
     "tags": [
@@ -705,7 +753,8 @@
       "54 cm²",
       "270 cm²",
       "189 cm²",
-      "45 cm²"
+      "45 cm²",
+      "15 cm²"
     ],
     "answer": 0,
     "explanation": "The perimeter is 2 × (length + width), so length + width = 15 cm. The width is 15 − 9 = 6 cm, and the area is 9 × 6 = 54 cm².",
@@ -713,7 +762,8 @@
       "",
       "This multiplies the perimeter by the length instead of finding the width.",
       "This uses a width of 21 cm, forgetting to halve the perimeter first.",
-      "This adds the length and width rather than multiplying them."
+      "This adds the length and width rather than multiplying them.",
+      "15 cm is half the perimeter — the length plus the width, not the area."
     ],
     "learningPoint": "Halve the perimeter of a rectangle to get length + width in one go.",
     "tags": [
@@ -734,7 +784,8 @@
       "All four sides are the same length.",
       "All four angles are right angles.",
       "It has exactly one pair of parallel sides.",
-      "Its diagonals are always the same length."
+      "Its diagonals are always the same length.",
+      "Its four angles are all different sizes."
     ],
     "answer": 0,
     "explanation": "A rhombus is a quadrilateral with four equal sides and two pairs of parallel sides. Its angles need not be right angles, and its diagonals are usually different lengths.",
@@ -742,7 +793,8 @@
       "",
       "That describes a square, which is only one special kind of rhombus.",
       "That describes a trapezium.",
-      "Equal diagonals belong to a rectangle or a square."
+      "Equal diagonals belong to a rectangle or a square.",
+      "Opposite angles of a rhombus are equal, so they cannot all be different."
     ],
     "learningPoint": "A square is a rhombus, but most rhombuses are not squares — 'always true' means true for every example.",
     "tags": [
@@ -763,7 +815,8 @@
       "(2, 5)",
       "(5, 2)",
       "(2, 6)",
-      "(6, 2)"
+      "(6, 2)",
+      "(1, 5)"
     ],
     "answer": 0,
     "explanation": "The side from (2, 1) to (6, 1) is 4 units long. Going 4 units up from (2, 1) gives (2, 5), which completes the square.",
@@ -771,7 +824,8 @@
       "",
       "This swaps the x and y coordinates over.",
       "This uses 6 for the y coordinate, making the shape taller than it is wide.",
-      "This repeats an x value of 6, which is the side you already have."
+      "This repeats an x value of 6, which is the side you already have.",
+      "The fourth corner must line up with (2, 1), so its first coordinate is 2."
     ],
     "learningPoint": "Coordinates are always written (x, y) — along the corridor first, then up the stairs.",
     "tags": [
@@ -791,7 +845,8 @@
       "14",
       "15",
       "11",
-      "70"
+      "70",
+      "17.5"
     ],
     "answer": 0,
     "explanation": "The total is 12 + 15 + 9 + 14 + 20 = 70, and 70 ÷ 5 = 14.",
@@ -799,7 +854,8 @@
       "",
       "15 is one of the scores, not the mean.",
       "11 is the difference between the highest and lowest scores.",
-      "70 is the total before dividing by how many pupils there are."
+      "70 is the total before dividing by how many pupils there are.",
+      "This divides the total of 70 by 4 instead of by 5."
     ],
     "learningPoint": "Mean = total ÷ how many values. Always divide at the end.",
     "tags": [
@@ -820,7 +876,8 @@
       "34",
       "23",
       "57",
-      "12"
+      "12",
+      "80"
     ],
     "answer": 0,
     "explanation": "Wednesday to Friday: 21 + 16 + 20 = 57. Monday and Tuesday: 14 + 9 = 23. The difference is 57 − 23 = 34.",
@@ -828,7 +885,8 @@
       "",
       "23 is the first-half total, not the difference.",
       "57 is the second-half total, not the difference.",
-      "This compares only Wednesday with Tuesday."
+      "This compares only Wednesday with Tuesday.",
+      "This is the total for the whole week rather than the difference between the two halves."
     ],
     "learningPoint": "'How many more' always means subtract one total from the other.",
     "tags": [
@@ -849,7 +907,8 @@
       "£0.95",
       "£5.75",
       "£1.05",
-      "£2.75"
+      "£2.75",
+      "£2.80"
     ],
     "answer": 0,
     "explanation": "The notebooks cost 3 × £2.40 = £7.20. Adding the pen gives £7.20 + £1.85 = £9.05. The change is £10 − £9.05 = £0.95.",
@@ -857,7 +916,8 @@
       "",
       "This buys only one notebook instead of three.",
       "This subtracts £8.95 by mistake — check the addition of £7.20 and £1.85.",
-      "This forgets to include the pen."
+      "This forgets to include the pen.",
+      "This forgets the pen and subtracts only the £7.20 spent on notebooks."
     ],
     "learningPoint": "In a multi-step problem, work out the total spent before you work out the change.",
     "tags": [
@@ -878,7 +938,8 @@
       "5",
       "4",
       "6",
-      "4.5"
+      "4.5",
+      "24"
     ],
     "answer": 0,
     "explanation": "Altogether there are 214 + 18 = 232 people. 232 ÷ 52 = 4 remainder 24, so four coaches would leave 24 people behind. Five coaches are needed.",
@@ -886,7 +947,8 @@
       "",
       "Four coaches carry only 208 people, which is not enough.",
       "Six coaches is more than necessary — the question asks for the smallest number.",
-      "You cannot book half a coach; this answer must be rounded up."
+      "You cannot book half a coach; this answer must be rounded up.",
+      "24 is the number of people left over after four coaches, not a number of coaches."
     ],
     "learningPoint": "When a division involves objects that cannot be split, always round the answer up.",
     "tags": [
@@ -908,7 +970,8 @@
       "13",
       "9.5",
       "173",
-      "38"
+      "38",
+      "208"
     ],
     "answer": 0,
     "explanation": "Work backwards: undo the subtraction with 45 + 7 = 52, then undo the multiplication with 52 ÷ 4 = 13.",
@@ -916,7 +979,8 @@
       "",
       "This subtracts 7 before dividing, undoing the steps in the wrong order.",
       "This multiplies by 4 and adds 7 instead of reversing the steps.",
-      "This only undoes the subtraction and stops there."
+      "This only undoes the subtraction and stops there.",
+      "This multiplies by 4 instead of dividing, undoing the two steps the wrong way."
     ],
     "learningPoint": "To find a starting number, work backwards and use the opposite operation at each step, in reverse order.",
     "tags": [
@@ -937,7 +1001,8 @@
       "600",
       "60",
       "6",
-      "6 000"
+      "6 000",
+      "68"
     ],
     "answer": 0,
     "verify": "600",
@@ -946,7 +1011,8 @@
       "",
       "This is the tens column, where the 8 sits.",
       "This is the units column, where the 2 sits.",
-      "This is the thousands column, where the 4 sits."
+      "This is the thousands column, where the 4 sits.",
+      "This reads the 6 and the 8 together rather than the value of the 6 on its own."
     ],
     "learningPoint": "Name the columns from the right: units, tens, hundreds, thousands.",
     "tags": [
@@ -966,7 +1032,8 @@
       "4 450",
       "3 550",
       "4 350",
-      "13 450"
+      "13 450",
+      "3 460"
     ],
     "answer": 0,
     "verify": "3450 + 1000",
@@ -975,7 +1042,8 @@
       "",
       "This has added 100 rather than 1 000.",
       "This has added 1 000 to the hundreds column by mistake.",
-      "This has written the 1 000 in front instead of adding it."
+      "This has written the 1 000 in front instead of adding it.",
+      "This adds 10 rather than 1 000."
     ],
     "learningPoint": "When you add a round number, only that column changes — the other digits stay put.",
     "tags": [
@@ -995,7 +1063,8 @@
       "6",
       "9",
       "10",
-      "7"
+      "7",
+      "5"
     ],
     "answer": 0,
     "explanation": "A factor divides exactly with nothing left over. 24 ÷ 6 = 4, so 6 is a factor of 24.",
@@ -1003,7 +1072,8 @@
       "",
       "24 ÷ 9 leaves a remainder, so 9 is not a factor.",
       "24 ÷ 10 leaves a remainder, so 10 is not a factor.",
-      "24 ÷ 7 leaves a remainder, so 7 is not a factor."
+      "24 ÷ 7 leaves a remainder, so 7 is not a factor.",
+      "24 ÷ 5 is 4 remainder 4, so 5 does not divide exactly into 24."
     ],
     "learningPoint": "A factor divides into the number exactly. A multiple is what you get when you count up in that number.",
     "tags": [
@@ -1023,7 +1093,8 @@
       "24",
       "18",
       "20",
-      "14"
+      "14",
+      "30"
     ],
     "answer": 0,
     "explanation": "24 = 4 × 6 and 24 = 6 × 4, so it appears in both times tables.",
@@ -1031,7 +1102,8 @@
       "",
       "18 is a multiple of 6 but not of 4.",
       "20 is a multiple of 4 but not of 6.",
-      "14 is a multiple of neither."
+      "14 is a multiple of neither.",
+      "30 is a multiple of 6 but not of 4."
     ],
     "learningPoint": "A common multiple must appear in both times tables — check it against each one separately.",
     "tags": [
@@ -1051,7 +1123,8 @@
       "4",
       "24",
       "9",
-      "11"
+      "11",
+      "6"
     ],
     "answer": 0,
     "verify": "10 - 2 * 3",
@@ -1060,7 +1133,8 @@
       "",
       "This works left to right: (10 − 2) × 3.",
       "This subtracts 2 and then adds 1 by mistake.",
-      "This adds instead of subtracting after multiplying."
+      "This adds instead of subtracting after multiplying.",
+      "This works out 10 − 2 = 8 and then subtracts 2 rather than multiplying."
     ],
     "learningPoint": "Multiply and divide before you add and subtract, whatever order they are written in.",
     "tags": [
@@ -1080,7 +1154,8 @@
       "14",
       "8",
       "12",
-      "10"
+      "10",
+      "18"
     ],
     "answer": 0,
     "verify": "6 + 12 / 3 * 2",
@@ -1089,7 +1164,8 @@
       "",
       "This does the multiplication first: 12 ÷ (3 × 2) = 2, then 6 + 2.",
       "This works strictly left to right from the start: (6 + 12) ÷ 3 × 2.",
-      "This forgets to multiply by 2 at the end."
+      "This forgets to multiply by 2 at the end.",
+      "This works straight through from the left: 6 + 12 = 18, then 18 ÷ 3 × 2."
     ],
     "learningPoint": "Division and multiplication have equal rank — when both appear, work from left to right.",
     "tags": [
@@ -1109,7 +1185,8 @@
       "−5",
       "5",
       "−11",
-      "11"
+      "11",
+      "−8"
     ],
     "answer": 0,
     "verify": "3 - 8",
@@ -1118,7 +1195,8 @@
       "",
       "This subtracts the smaller number from the larger one and ignores the order.",
       "This adds the two numbers instead of subtracting.",
-      "This adds the numbers and drops the minus sign."
+      "This adds the numbers and drops the minus sign.",
+      "This is the second number with a minus sign, not the result of the subtraction."
     ],
     "learningPoint": "When you take away more than you started with, the answer goes below zero.",
     "tags": [
@@ -1138,7 +1216,8 @@
       "−7 °C",
       "7 °C",
       "−15 °C",
-      "15 °C"
+      "15 °C",
+      "−11 °C"
     ],
     "answer": 0,
     "verify": "4 - 11",
@@ -1147,7 +1226,8 @@
       "",
       "This subtracts 4 from 11 and loses the minus sign.",
       "This adds the two numbers and makes the result negative.",
-      "This adds the two numbers instead of subtracting."
+      "This adds the two numbers instead of subtracting.",
+      "This is the size of the fall placed below zero, ignoring the 4 °C it started from."
     ],
     "learningPoint": "A fall in temperature moves you left on the number line — count down to zero first, then carry on.",
     "tags": [
@@ -1167,7 +1247,8 @@
       "4/8",
       "2/6",
       "3/8",
-      "5/12"
+      "5/12",
+      "3/5"
     ],
     "answer": 0,
     "explanation": "4/8 simplifies to 1/2, because 4 is exactly half of 8.",
@@ -1175,7 +1256,8 @@
       "",
       "2/6 simplifies to 1/3, not 1/2.",
       "3/8 is less than a half, because half of 8 is 4.",
-      "5/12 is just under a half, because half of 12 is 6."
+      "5/12 is just under a half, because half of 12 is 6.",
+      "3/5 is 0.6, which is more than a half."
     ],
     "learningPoint": "A fraction equals one half when the top number is exactly half the bottom number.",
     "tags": [
@@ -1195,7 +1277,8 @@
       "5",
       "4",
       "16",
-      "80"
+      "80",
+      "24"
     ],
     "answer": 0,
     "verify": "20 / 4",
@@ -1204,7 +1287,8 @@
       "",
       "This gives the number of parts rather than the size of one part.",
       "This is the other three quarters of 20.",
-      "This multiplies by 4 instead of dividing."
+      "This multiplies by 4 instead of dividing.",
+      "This adds 4 to 20 instead of dividing by 4."
     ],
     "learningPoint": "To find a unit fraction of an amount, divide by the bottom number.",
     "tags": [
@@ -1224,7 +1308,8 @@
       "1/2",
       "4/3",
       "2/3",
-      "4/9"
+      "4/9",
+      "5/3"
     ],
     "answer": 0,
     "explanation": "Write both with a denominator of 6: 1/3 = 2/6. Then 5/6 − 2/6 = 3/6, which simplifies to 1/2.",
@@ -1232,7 +1317,8 @@
       "",
       "This subtracts the numerators and the denominators separately, which is not how fractions work.",
       "This subtracts 1/6 rather than converting 1/3 first.",
-      "This subtracts tops and bottoms in the wrong direction."
+      "This subtracts tops and bottoms in the wrong direction.",
+      "This subtracts the numerators but also the denominators."
     ],
     "learningPoint": "Give both fractions the same denominator first, then subtract only the top numbers.",
     "tags": [
@@ -1252,7 +1338,8 @@
       "11/4",
       "9/4",
       "23/4",
-      "6/4"
+      "6/4",
+      "8/4"
     ],
     "answer": 0,
     "explanation": "Two whole ones are 8/4. Adding the extra 3/4 gives 8/4 + 3/4 = 11/4.",
@@ -1260,7 +1347,8 @@
       "",
       "This uses only 2 quarters for the whole numbers instead of 8.",
       "This has written the digits 2 and 3 side by side rather than calculating.",
-      "This forgets the whole numbers entirely."
+      "This forgets the whole numbers entirely.",
+      "8/4 is just 2, so the three quarters have been lost."
     ],
     "learningPoint": "Multiply the whole number by the denominator, then add the numerator.",
     "tags": [
@@ -1280,7 +1368,8 @@
       "7 hundredths",
       "7 tenths",
       "7 units",
-      "7 thousandths"
+      "7 thousandths",
+      "7 tens"
     ],
     "answer": 0,
     "explanation": "After the decimal point the columns are tenths, then hundredths. The 0 is in the tenths column and the 7 is in the hundredths column.",
@@ -1288,7 +1377,8 @@
       "",
       "The tenths column holds the 0, not the 7.",
       "The units column holds the 3, before the decimal point.",
-      "Thousandths would be a third digit after the point."
+      "Thousandths would be a third digit after the point.",
+      "The 7 is on the right of the decimal point, so it must be worth less than one."
     ],
     "learningPoint": "After the decimal point the columns run tenths, hundredths, thousandths.",
     "tags": [
@@ -1308,7 +1398,8 @@
       "1.15",
       "0.52",
       "1.5",
-      "0.115"
+      "0.115",
+      "1.12"
     ],
     "answer": 0,
     "verify": "0.7 + 0.45",
@@ -1317,7 +1408,8 @@
       "",
       "This adds 7 and 45 as whole numbers and puts the point back at the front.",
       "This rounds 0.45 up to 0.5 before adding.",
-      "This lines the numbers up by their last digit instead of by the decimal point."
+      "This lines the numbers up by their last digit instead of by the decimal point.",
+      "This adds 0.7 and 0.42, misreading the second number."
     ],
     "learningPoint": "Line up the decimal points, not the ends of the numbers. Fill any gaps with zeros.",
     "tags": [
@@ -1337,7 +1429,8 @@
       "0.375",
       "0.38",
       "0.83",
-      "0.125"
+      "0.125",
+      "0.625"
     ],
     "answer": 0,
     "verify": "3 / 8",
@@ -1346,7 +1439,8 @@
       "",
       "This is 3/8 rounded, not its exact value.",
       "This swaps the digits 3 and 8 round.",
-      "This is 1/8, not 3/8."
+      "This is 1/8, not 3/8.",
+      "0.625 is 5/8, not 3/8."
     ],
     "learningPoint": "To turn a fraction into a decimal, divide the top number by the bottom number.",
     "tags": [
@@ -1367,7 +1461,8 @@
       "23",
       "46",
       "92",
-      "20"
+      "20",
+      "4.6"
     ],
     "answer": 0,
     "verify": "46 / 2",
@@ -1376,7 +1471,8 @@
       "",
       "This is the whole amount, not half of it.",
       "This doubles the amount instead of halving it.",
-      "This is roughly half but not exact — check the calculation."
+      "This is roughly half but not exact — check the calculation.",
+      "This is 10% of 46 rather than 50%."
     ],
     "learningPoint": "50% is a half, 25% is a quarter, 10% is a tenth.",
     "tags": [
@@ -1396,7 +1492,8 @@
       "5/8",
       "0.6",
       "57%",
-      "1/2"
+      "1/2",
+      "0.58"
     ],
     "answer": 0,
     "explanation": "Written as decimals: 5/8 = 0.625, then 0.6, then 57% = 0.57, then 1/2 = 0.5. So 5/8 is the largest.",
@@ -1404,7 +1501,8 @@
       "",
       "0.6 is close, but it is smaller than 0.625.",
       "57% is 0.57, which is smaller than both 5/8 and 0.6.",
-      "1/2 is 0.5, the smallest of the four."
+      "1/2 is 0.5, the smallest of the four.",
+      "0.58 is bigger than 57% but still smaller than 5/8, which is 0.625."
     ],
     "learningPoint": "To compare fractions, decimals and percentages, turn them all into decimals first.",
     "tags": [
@@ -1426,7 +1524,8 @@
       "£66",
       "£6",
       "£70",
-      "£54"
+      "£54",
+      "£61"
     ],
     "answer": 0,
     "verify": "60 + 60 / 10",
@@ -1435,7 +1534,8 @@
       "",
       "£6 is the increase, not the new price.",
       "This adds £10 rather than 10%.",
-      "This takes the 10% off instead of adding it on."
+      "This takes the 10% off instead of adding it on.",
+      "This adds £1 rather than 10% of £60."
     ],
     "learningPoint": "Work out the percentage first, then decide whether to add it on or take it off.",
     "tags": [
@@ -1456,7 +1556,8 @@
       "2 : 3",
       "6 : 9",
       "3 : 2",
-      "1 : 6"
+      "1 : 6",
+      "4 : 6"
     ],
     "answer": 0,
     "explanation": "The highest number that divides into both 12 and 18 is 6. Dividing both sides by 6 gives 2 : 3.",
@@ -1464,7 +1565,8 @@
       "",
       "This divides both sides by 2, but 6 : 9 can be simplified further.",
       "This has the two numbers the wrong way round.",
-      "This subtracts instead of dividing."
+      "This subtracts instead of dividing.",
+      "This divides both sides by 3, but 4 : 6 can be simplified further."
     ],
     "learningPoint": "Divide both sides of a ratio by the largest number that goes into both.",
     "tags": [
@@ -1484,7 +1586,8 @@
       "16",
       "9",
       "13",
-      "28"
+      "28",
+      "12"
     ],
     "answer": 0,
     "verify": "12 / 3 * 4",
@@ -1493,7 +1596,8 @@
       "",
       "This scales the wrong way round, using 4 parts for the boys.",
       "This adds 1 because 4 is one more than 3, rather than scaling.",
-      "This gives the total number of children, not the number of girls."
+      "This gives the total number of children, not the number of girls.",
+      "This assumes there are as many girls as boys, but the ratio is not 1 : 1."
     ],
     "learningPoint": "Find the value of one part first, then multiply by the number of parts you need.",
     "tags": [
@@ -1513,7 +1617,8 @@
       "2 000 g",
       "200 g",
       "20 g",
-      "20 000 g"
+      "20 000 g",
+      "2 g"
     ],
     "answer": 0,
     "verify": "2 * 1000",
@@ -1522,7 +1627,8 @@
       "",
       "This multiplies by 100 instead of 1 000.",
       "This multiplies by 10 instead of 1 000.",
-      "This multiplies by 10 000."
+      "This multiplies by 10 000.",
+      "This is the number of kilograms with a gram label attached."
     ],
     "learningPoint": "Kilo means a thousand: kilograms to grams and kilometres to metres both use × 1 000.",
     "tags": [
@@ -1543,7 +1649,8 @@
       "£2.45",
       "£2.55",
       "£4.15",
-      "£1.45"
+      "£1.45",
+      "£2.15"
     ],
     "answer": 0,
     "verify": "5 - 3 * 0.85",
@@ -1552,7 +1659,8 @@
       "",
       "£2.55 is what she spent, not what she has left.",
       "This buys only one pen instead of three.",
-      "This subtracts £3.55 by mistake — check 3 × 85p again."
+      "This subtracts £3.55 by mistake — check 3 × 85p again.",
+      "This works out the pens as £2.85 rather than £2.55."
     ],
     "learningPoint": "Work out the total cost first, and check whether the question wants the cost or the change.",
     "tags": [
@@ -1573,7 +1681,8 @@
       "22:00",
       "21:20",
       "22:20",
-      "21:00"
+      "21:00",
+      "21:45"
     ],
     "answer": 0,
     "explanation": "135 minutes is 2 hours and 15 minutes. From 19:45, two hours takes you to 21:45, and 15 more minutes takes you to 22:00.",
@@ -1581,7 +1690,8 @@
       "",
       "This treats 135 minutes as 1 hour 35 minutes.",
       "This adds 2 hours 35 minutes instead of 2 hours 15 minutes.",
-      "This adds only 1 hour 15 minutes."
+      "This adds only 1 hour 15 minutes.",
+      "This adds 2 hours as though 135 minutes were 120."
     ],
     "learningPoint": "Turn the minutes into hours and minutes first: 135 ÷ 60 = 2 remainder 15.",
     "tags": [
@@ -1601,7 +1711,8 @@
       "Acute",
       "Obtuse",
       "A right angle",
-      "Reflex"
+      "Reflex",
+      "Straight"
     ],
     "answer": 0,
     "explanation": "An acute angle is smaller than 90°, and 45° is smaller than 90°.",
@@ -1609,7 +1720,8 @@
       "",
       "An obtuse angle is between 90° and 180°.",
       "A right angle is exactly 90°.",
-      "A reflex angle is greater than 180°."
+      "A reflex angle is greater than 180°.",
+      "A straight angle is 180°, four times the size of this one."
     ],
     "learningPoint": "Acute is under 90°, right is exactly 90°, obtuse is between 90° and 180°, reflex is over 180°.",
     "tags": [
@@ -1629,7 +1741,8 @@
       "2",
       "4",
       "1",
-      "0"
+      "0",
+      "3"
     ],
     "answer": 0,
     "explanation": "A rectangle can be folded in half across its width and across its height, so it has 2 lines of symmetry. The diagonals are not lines of symmetry.",
@@ -1637,7 +1750,8 @@
       "",
       "A square has 4 lines of symmetry, but a rectangle has fewer.",
       "A rectangle has more than one — try folding it both ways.",
-      "A rectangle does have lines of symmetry."
+      "A rectangle does have lines of symmetry.",
+      "A rectangle has no line of symmetry through its corners, so there are only two."
     ],
     "learningPoint": "A line of symmetry must fold the shape so both halves match exactly. A rectangle's diagonals do not.",
     "tags": [
@@ -1658,7 +1772,8 @@
       "60 cm³",
       "12 cm³",
       "47 cm³",
-      "94 cm³"
+      "94 cm³",
+      "24 cm³"
     ],
     "answer": 0,
     "verify": "5 * 3 * 4",
@@ -1667,7 +1782,8 @@
       "",
       "This adds the three measurements instead of multiplying them.",
       "This multiplies only two of the sides and adds the third.",
-      "This is the surface area, which is a different measurement."
+      "This is the surface area, which is a different measurement.",
+      "This multiplies only two of the three measurements together."
     ],
     "learningPoint": "Volume multiplies three lengths, so the units are cubic — cm³, not cm².",
     "tags": [
@@ -1688,7 +1804,8 @@
       "Pear",
       "Apple",
       "Orange",
-      "Banana"
+      "Banana",
+      "Grape"
     ],
     "answer": 0,
     "explanation": "Pear has the highest number, 9, which is more than apple's 7, orange's 5 and banana's 4.",
@@ -1696,7 +1813,8 @@
       "",
       "Apple has 7, which is the second highest.",
       "Orange has 5, which is the third highest.",
-      "Banana has 4, the fewest of all."
+      "Banana has 4, the fewest of all.",
+      "Grapes do not appear in the tally chart at all."
     ],
     "learningPoint": "'Most often' means the largest number — read every row before choosing.",
     "tags": [
@@ -1716,7 +1834,8 @@
       "3",
       "6",
       "4",
-      "7"
+      "7",
+      "4.8"
     ],
     "answer": 0,
     "explanation": "The mode is the value that appears most often. The number 3 appears three times, more than any other.",
@@ -1724,7 +1843,8 @@
       "",
       "6 is the range (9 − 3), not the mode.",
       "4 is one of the values but appears only once.",
-      "7 appears only once."
+      "7 appears only once.",
+      "This is roughly the mean of the numbers rather than the mode."
     ],
     "learningPoint": "Mode is the most common value; range is the biggest minus the smallest; mean is the total shared out.",
     "tags": [
@@ -1745,7 +1865,8 @@
       "Weeks 2 and 3",
       "Weeks 1 and 2",
       "Weeks 3 and 4",
-      "Weeks 1 and 4"
+      "Weeks 1 and 4",
+      "Weeks 2 and 4"
     ],
     "answer": 0,
     "explanation": "The growth each week was 3 cm, then 6 cm, then 2 cm. The largest single increase, 6 cm, was between weeks 2 and 3.",
@@ -1753,7 +1874,8 @@
       "",
       "The plant grew 3 cm here, which is less than between weeks 2 and 3.",
       "The plant grew only 2 cm here, the smallest increase.",
-      "This is the total growth across the whole period, not the growth between two weeks."
+      "This is the total growth across the whole period, not the growth between two weeks.",
+      "The question asks about two weeks next to each other on the graph."
     ],
     "learningPoint": "'Grew the most' means the biggest jump between two points, not the highest point on the graph.",
     "tags": [
@@ -1774,7 +1896,8 @@
       "360",
       "39",
       "240",
-      "120"
+      "120",
+      "3 600"
     ],
     "answer": 0,
     "verify": "24 * 15",
@@ -1783,7 +1906,8 @@
       "",
       "This adds the two numbers instead of multiplying.",
       "This is 24 × 10, so five boxes have been left out.",
-      "This is 24 × 5, so ten boxes have been left out."
+      "This is 24 × 5, so ten boxes have been left out.",
+      "This is ten times too big — check the size of your answer."
     ],
     "learningPoint": "For a tricky multiplication, split it up: × 15 is the same as × 10 then × 5, added together.",
     "tags": [
@@ -1803,7 +1927,8 @@
       "3",
       "2",
       "4",
-      "5"
+      "5",
+      "6"
     ],
     "answer": 0,
     "verify": "(3.25 - 4 * 0.40) / 0.55",
@@ -1812,7 +1937,8 @@
       "",
       "Two pears would cost only £1.10, leaving money unspent.",
       "Four pears would cost £2.20, which is more than the £1.65 remaining.",
-      "Five pears would cost £2.75, far more than she had left."
+      "Five pears would cost £2.75, far more than she had left.",
+      "Six pears would cost £3.30 on their own, which is already more than she spent."
     ],
     "learningPoint": "In a two-part problem, work out the part you know first, subtract it, then share out what is left.",
     "tags": [
@@ -1834,7 +1960,8 @@
       "5 650",
       "5 640",
       "5 600",
-      "5 700"
+      "5 700",
+      "5 649"
     ],
     "answer": 0,
     "verify": "5650",
@@ -1843,7 +1970,8 @@
       "",
       "This rounds down. The units digit is 9, so it must round up.",
       "This has been rounded to the nearest hundred instead of the nearest ten.",
-      "This has been rounded to the nearest hundred and rounded up as well."
+      "This has been rounded to the nearest hundred and rounded up as well.",
+      "This is the original number, which has not been rounded at all."
     ],
     "learningPoint": "Look at the digit immediately to the right of the place you are rounding to — nothing further along matters.",
     "tags": [
@@ -1863,7 +1991,8 @@
       "99 099",
       "90 909",
       "90 990",
-      "99 009"
+      "99 009",
+      "90 099"
     ],
     "answer": 0,
     "verify": "99099",
@@ -1872,7 +2001,8 @@
       "",
       "This begins 90, so it is smaller than either number beginning 99.",
       "This also begins 90 — the later 9s do not make up for a smaller thousands digit.",
-      "This is close, but its tens digit is 0 where the answer has 9."
+      "This is close, but its tens digit is 0 where the answer has 9.",
+      "This begins 90, so it is smaller than any number beginning 99."
     ],
     "learningPoint": "Compare numbers of the same length digit by digit from the left, and stop at the first place where they differ.",
     "tags": [
@@ -1892,7 +2022,8 @@
       "57",
       "50",
       "64",
-      "56"
+      "56",
+      "63"
     ],
     "answer": 0,
     "verify": "8 + 7 * 7",
@@ -1901,7 +2032,8 @@
       "",
       "This is the seventh term — one step short.",
       "This is the ninth term, from taking eight steps instead of seven.",
-      "This multiplies 8 by 7, which ignores the starting number."
+      "This multiplies 8 by 7, which ignores the starting number.",
+      "This adds seven sevens to 14 rather than to 8."
     ],
     "learningPoint": "To reach the nth term, take (n − 1) steps from the first term, not n steps.",
     "tags": [
@@ -1921,7 +2053,8 @@
       "12",
       "8",
       "9",
-      "16"
+      "16",
+      "18"
     ],
     "answer": 0,
     "verify": "12",
@@ -1930,7 +2063,8 @@
       "",
       "8 divides into 24 but not into 36.",
       "9 divides into 36 but not into 24.",
-      "16 divides into neither number."
+      "16 divides into neither number.",
+      "18 divides into 36 but not into 24."
     ],
     "learningPoint": "A common factor must divide exactly into every number given — always check it against all of them.",
     "tags": [
@@ -1950,7 +2084,8 @@
       "13",
       "9",
       "21",
-      "15"
+      "15",
+      "27"
     ],
     "answer": 0,
     "verify": "13",
@@ -1959,7 +2094,8 @@
       "",
       "9 divides by 3 as well as by 1 and 9.",
       "21 divides by 3 and by 7.",
-      "15 divides by 3 and by 5."
+      "15 divides by 3 and by 5.",
+      "27 divides by 3 and by 9 as well as by 1 and 27."
     ],
     "learningPoint": "To test a small number for primeness, try dividing by 2, 3, 5 and 7 — that is enough for anything under 100.",
     "tags": [
@@ -1979,7 +2115,8 @@
       "24",
       "48",
       "14",
-      "12"
+      "12",
+      "16"
     ],
     "answer": 0,
     "verify": "24",
@@ -1988,7 +2125,8 @@
       "",
       "48 is a common multiple, but not the first one.",
       "This adds 6 and 8 rather than finding a common multiple.",
-      "12 is a multiple of 6 but not of 8."
+      "12 is a multiple of 6 but not of 8.",
+      "16 is a multiple of 8 but not of 6."
     ],
     "learningPoint": "\"When do they next happen together?\" is asking for the lowest common multiple.",
     "tags": [
@@ -2008,7 +2146,8 @@
       "19",
       "35",
       "17",
-      "12"
+      "12",
+      "23"
     ],
     "answer": 0,
     "verify": "4 + 3 * 5",
@@ -2017,7 +2156,8 @@
       "",
       "This works from left to right: 4 + 3 = 7, then 7 × 5 = 35.",
       "This multiplies the wrong pair: 4 × 3 = 12, then adds 5.",
-      "This adds all three numbers together."
+      "This adds all three numbers together.",
+      "This adds 4 and 3 to make 7, then adds 5 times something rather than multiplying first."
     ],
     "learningPoint": "Multiply and divide before you add and subtract, however the sum is written out.",
     "tags": [
@@ -2037,7 +2177,8 @@
       "17",
       "2",
       "8",
-      "5"
+      "5",
+      "23"
     ],
     "answer": 0,
     "verify": "20 - 12 / 4",
@@ -2046,7 +2187,8 @@
       "",
       "This subtracts first: 20 − 12 = 8, then 8 ÷ 4 = 2.",
       "This is only 20 − 12, with the division forgotten.",
-      "This is only 20 ÷ 4, with the 12 ignored."
+      "This is only 20 ÷ 4, with the 12 ignored.",
+      "This adds the 3 from the division instead of subtracting it."
     ],
     "learningPoint": "Division outranks subtraction even when the subtraction is written first.",
     "tags": [
@@ -2066,7 +2208,8 @@
       "23",
       "8",
       "31",
-      "20"
+      "20",
+      "43"
     ],
     "answer": 0,
     "verify": "5 * (12 - 4) / 2 + 3",
@@ -2075,7 +2218,8 @@
       "",
       "This divides by 2 + 3 = 5, but the 3 is added on at the end, not part of the divisor.",
       "This ignores the brackets and works from left to right.",
-      "This stops before adding the 3."
+      "This stops before adding the 3.",
+      "This adds the 3 before dividing, but addition comes last."
     ],
     "learningPoint": "Brackets, then multiply and divide left to right, then add and subtract left to right.",
     "tags": [
@@ -2096,7 +2240,8 @@
       "5 °C",
       "11 °C",
       "−11 °C",
-      "−5 °C"
+      "−5 °C",
+      "8 °C"
     ],
     "answer": 0,
     "verify": "0 - 3 + 8",
@@ -2105,7 +2250,8 @@
       "",
       "This adds 8 to 3 and ignores the minus sign.",
       "This treats the rise as a fall.",
-      "This subtracts 8 from 3 and keeps the answer negative."
+      "This subtracts 8 from 3 and keeps the answer negative.",
+      "This is the size of the rise, not the temperature reached."
     ],
     "learningPoint": "A rise moves you to the right on the number line, whether you start above or below zero.",
     "tags": [
@@ -2125,7 +2271,8 @@
       "−8",
       "8",
       "−20",
-      "20"
+      "20",
+      "−14"
     ],
     "answer": 0,
     "verify": "6 - 14",
@@ -2134,7 +2281,8 @@
       "",
       "This is the right size but the wrong side of zero — 14 is bigger than 6, so the answer must be negative.",
       "This adds the two numbers instead of subtracting.",
-      "This adds the numbers and ignores the minus sign as well."
+      "This adds the numbers and ignores the minus sign as well.",
+      "This is the second number with its sign changed, not the answer."
     ],
     "learningPoint": "Subtracting a larger number from a smaller one always gives a negative answer.",
     "tags": [
@@ -2154,7 +2302,8 @@
       "11 degrees",
       "3 degrees",
       "7 degrees",
-      "28 degrees"
+      "28 degrees",
+      "4 degrees"
     ],
     "answer": 0,
     "verify": "4 - (0 - 7)",
@@ -2163,7 +2312,8 @@
       "",
       "This subtracts 4 from 7 instead of counting the whole way across zero.",
       "This counts only the part of the rise below zero.",
-      "This multiplies the two temperatures rather than finding the gap."
+      "This multiplies the two temperatures rather than finding the gap.",
+      "This is the temperature at noon rather than the size of the rise."
     ],
     "learningPoint": "To find a difference that crosses zero, count up to zero first and then onwards, and add the two parts.",
     "tags": [
@@ -2184,7 +2334,8 @@
       "12",
       "4",
       "16",
-      "44"
+      "44",
+      "52"
     ],
     "answer": 0,
     "verify": "48 / 4",
@@ -2193,7 +2344,8 @@
       "",
       "This is the denominator of the fraction, not a quarter of 48.",
       "This is a third of 48 rather than a quarter.",
-      "This subtracts 4 instead of dividing by 4."
+      "This subtracts 4 instead of dividing by 4.",
+      "This adds 4 to 48 instead of dividing by 4."
     ],
     "learningPoint": "To find a unit fraction of an amount, divide by the number on the bottom.",
     "tags": [
@@ -2213,7 +2365,8 @@
       "1/2",
       "2/9",
       "1/9",
-      "2/6"
+      "2/6",
+      "1/3"
     ],
     "answer": 0,
     "explanation": "Change 1/3 into sixths: 1/3 = 2/6. Then 2/6 + 1/6 = 3/6, which simplifies to 1/2.",
@@ -2221,7 +2374,8 @@
       "",
       "This adds the tops and the bottoms separately, which is not how fractions are added.",
       "This adds the tops but multiplies nothing, leaving an invented denominator.",
-      "This is 1/3 written again — the second fraction has not been added on."
+      "This is 1/3 written again — the second fraction has not been added on.",
+      "This is the first fraction on its own; the second has not been added."
     ],
     "learningPoint": "Fractions can only be added once they share a denominator. Change one to match the other first.",
     "tags": [
@@ -2242,7 +2396,8 @@
       "5/9",
       "3/8",
       "2/3",
-      "7/8"
+      "7/8",
+      "4/7"
     ],
     "answer": 0,
     "explanation": "Half of 9 is 4.5, so 5/9 is only half a ninth above a half — about 0.56. The others are further away: 3/8 is 0.375, 2/3 is about 0.67 and 7/8 is 0.875.",
@@ -2250,7 +2405,8 @@
       "",
       "3/8 is an eighth below a half, which is a bigger gap than 5/9 has.",
       "2/3 is well above a half.",
-      "7/8 is nearly a whole one."
+      "7/8 is nearly a whole one.",
+      "4/7 is about 0.571, close to a half but not as close as 5/9."
     ],
     "learningPoint": "To judge whether a fraction is near a half, compare the top with half of the bottom.",
     "tags": [
@@ -2270,7 +2426,8 @@
       "0.07",
       "0.7",
       "0.77",
-      "0.707"
+      "0.707",
+      "0.077"
     ],
     "answer": 0,
     "verify": "0.07",
@@ -2279,7 +2436,8 @@
       "",
       "0.7 is seven tenths, which is ten times bigger than 0.07.",
       "0.77 has both seven tenths and seven hundredths.",
-      "0.707 has seven tenths, so it is larger than 0.07 despite the extra digits."
+      "0.707 has seven tenths, so it is larger than 0.07 despite the extra digits.",
+      "0.077 has three digits but is still bigger than 0.07."
     ],
     "learningPoint": "Compare decimals from the left: tenths first, then hundredths. A longer decimal is not automatically a bigger one.",
     "tags": [
@@ -2299,7 +2457,8 @@
       "3.05",
       "3.11",
       "2.105",
-      "7.1"
+      "7.1",
+      "3.5"
     ],
     "answer": 0,
     "verify": "2.6 + 0.45",
@@ -2308,7 +2467,8 @@
       "",
       "This adds 2.6 and 0.51, from reversing the digits of the second number.",
       "This writes the digits side by side instead of lining up the decimal points.",
-      "This adds 2.6 and 4.5, from misreading 0.45."
+      "This adds 2.6 and 4.5, from misreading 0.45.",
+      "This adds 2.6 and 0.9, doubling the second number's tenths."
     ],
     "learningPoint": "Line up the decimal points, and fill any gaps with zeros before you add.",
     "tags": [
@@ -2328,7 +2488,8 @@
       "0.24",
       "2.4",
       "0.024",
-      "1"
+      "1",
+      "0.10"
     ],
     "answer": 0,
     "verify": "0.6 * 0.4",
@@ -2337,7 +2498,8 @@
       "",
       "This has only one decimal place; both numbers contribute one each.",
       "This has three decimal places, one too many.",
-      "This adds the two numbers instead of multiplying them."
+      "This adds the two numbers instead of multiplying them.",
+      "This adds the two numbers instead of multiplying, and then loses a digit."
     ],
     "learningPoint": "Multiplying two numbers below 1 gives an answer smaller than either of them.",
     "tags": [
@@ -2357,7 +2519,8 @@
       "25",
       "2.5",
       "50",
-      "125"
+      "125",
+      "225"
     ],
     "answer": 0,
     "verify": "250 / 10",
@@ -2366,7 +2529,8 @@
       "",
       "This is 1% of 250, from dividing by 100 instead of 10.",
       "This is 20% of 250.",
-      "This is 50% of 250."
+      "This is 50% of 250.",
+      "This takes 10% off 250 rather than working out what 10% is."
     ],
     "learningPoint": "10% of a number is always that number divided by 10 — the quickest percentage there is.",
     "tags": [
@@ -2386,7 +2550,8 @@
       "£189",
       "£9",
       "£185",
-      "£270"
+      "£270",
+      "£181"
     ],
     "answer": 0,
     "verify": "180 + 180 * 5 / 100",
@@ -2395,7 +2560,8 @@
       "",
       "£9 is the increase, not the new price.",
       "This adds £5 rather than 5%.",
-      "This adds 50% instead of 5%."
+      "This adds 50% instead of 5%.",
+      "This adds £1 rather than 5% of £180."
     ],
     "learningPoint": "Halve 10% to get 5% — it is far quicker than working with hundredths.",
     "tags": [
@@ -2416,7 +2582,8 @@
       "3/5",
       "0.55",
       "58%",
-      "1/2"
+      "1/2",
+      "57%"
     ],
     "answer": 0,
     "explanation": "Turn everything into decimals: 3/5 = 0.6, 58% = 0.58 and 1/2 = 0.5. The largest is 0.6, which is 3/5.",
@@ -2424,7 +2591,8 @@
       "",
       "0.55 is smaller than 0.6.",
       "58% is 0.58, which is just below 3/5.",
-      "1/2 is 0.5, the smallest of the four."
+      "1/2 is 0.5, the smallest of the four.",
+      "57% is 0.57, which is smaller than 3/5."
     ],
     "learningPoint": "When fractions, decimals and percentages are mixed together, convert them all to decimals before comparing.",
     "tags": [
@@ -2446,7 +2614,8 @@
       "£43.20",
       "£41.60",
       "£48.00",
-      "£44.80"
+      "£44.80",
+      "£46.40"
     ],
     "answer": 0,
     "verify": "64 * 0.75 * 0.9",
@@ -2455,7 +2624,8 @@
       "",
       "This takes 35% off the original price in one go, which is not the same as two separate reductions.",
       "This stops after the first reduction.",
-      "This takes the 10% off the original £64 rather than off the reduced price."
+      "This takes the 10% off the original £64 rather than off the reduced price.",
+      "This takes 25% off, then takes 10% off the original £64 rather than the reduced price."
     ],
     "learningPoint": "Two reductions one after the other are not the same as adding the percentages — the second is taken off a smaller amount.",
     "tags": [
@@ -2477,7 +2647,8 @@
       "2 : 3",
       "3 : 2",
       "1 : 3",
-      "6 : 9"
+      "6 : 9",
+      "2 : 9"
     ],
     "answer": 0,
     "explanation": "3 divides into both 6 and 9, giving 6 ÷ 3 = 2 and 9 ÷ 3 = 3. So 6 : 9 simplifies to 2 : 3.",
@@ -2485,7 +2656,8 @@
       "",
       "This is the right pair of numbers but the wrong way round — the order of a ratio matters.",
       "This divides 9 by 3 but subtracts from 6 instead of dividing.",
-      "This is the original ratio, which has not been simplified."
+      "This is the original ratio, which has not been simplified.",
+      "Only the first number has been divided by 3; both sides must be divided."
     ],
     "learningPoint": "Simplify a ratio by dividing both sides by the same number, and keep the parts in the order given.",
     "tags": [
@@ -2505,7 +2677,8 @@
       "£25",
       "£15",
       "£8",
-      "£24"
+      "£24",
+      "£5"
     ],
     "answer": 0,
     "verify": "40 / 8 * 5",
@@ -2514,7 +2687,8 @@
       "",
       "This is Amy's share of 3 parts, not Ben's.",
       "This is the total number of parts rather than an amount of money.",
-      "This divides £40 by 5 and multiplies by 3, using the wrong share."
+      "This divides £40 by 5 and multiplies by 3, using the wrong share.",
+      "£5 is the value of one part, not Ben's five parts."
     ],
     "learningPoint": "Add the parts of a ratio first to find what one part is worth, then multiply up.",
     "tags": [
@@ -2535,7 +2709,8 @@
       "1 575 g",
       "1 800 g",
       "1 350 g",
-      "2 100 g"
+      "2 100 g",
+      "1 575 kg"
     ],
     "answer": 0,
     "verify": "900 / 4 * 7",
@@ -2544,7 +2719,8 @@
       "",
       "This doubles the weight of four books, which would be eight books.",
       "This is the weight of six books.",
-      "This treats one book as 300 g, which would only be true if 900 g were three books."
+      "This treats one book as 300 g, which would only be true if 900 g were three books.",
+      "The number is right but the unit is not — the books weigh grams, not kilograms."
     ],
     "learningPoint": "Find the value of one item first, then multiply — the unitary method works on any proportion question.",
     "tags": [
@@ -2565,7 +2741,8 @@
       "8",
       "7",
       "9",
-      "10"
+      "10",
+      "6"
     ],
     "answer": 0,
     "verify": "600 / (450 / 6)",
@@ -2574,7 +2751,8 @@
       "",
       "This is one short — 600 g is enough for a full eight portions.",
       "Nine people would need 675 g, which is more flour than she has.",
-      "Ten people would need 750 g, well beyond what she has."
+      "Ten people would need 750 g, well beyond what she has.",
+      "Six people is the recipe as written, but she has more flour than that needs."
     ],
     "learningPoint": "Work out the amount for one person first; the answer to \"how many can I make?\" is then a division.",
     "tags": [
@@ -2595,7 +2773,8 @@
       "350 cm",
       "35 cm",
       "3 500 cm",
-      "0.035 cm"
+      "0.035 cm",
+      "3 500 mm"
     ],
     "answer": 0,
     "verify": "3.5 * 100",
@@ -2604,7 +2783,8 @@
       "",
       "This multiplies by 10 rather than 100.",
       "This multiplies by 1 000, which would convert metres to millimetres.",
-      "This divides by 100 instead of multiplying."
+      "This divides by 100 instead of multiplying.",
+      "This is the length in millimetres, not centimetres."
     ],
     "learningPoint": "Going from a larger unit to a smaller one always makes the number bigger.",
     "tags": [
@@ -2625,7 +2805,8 @@
       "£27.00",
       "£24.00",
       "£26.75",
-      "£10.75"
+      "£10.75",
+      "£25.00"
     ],
     "answer": 0,
     "verify": "4 * 6.75",
@@ -2634,7 +2815,8 @@
       "",
       "This multiplies only the pounds and drops the 75p.",
       "This adds £20 to one ticket instead of multiplying.",
-      "This adds £4 to the price of one ticket."
+      "This adds £4 to the price of one ticket.",
+      "This works out 4 × £6.25 rather than 4 × £6.75."
     ],
     "learningPoint": "Split an awkward money multiplication into pounds and pence, then add the two answers.",
     "tags": [
@@ -2655,7 +2837,8 @@
       "07:25",
       "07:35",
       "08:25",
-      "07:15"
+      "07:15",
+      "07:45"
     ],
     "answer": 0,
     "explanation": "Count back 1 hour from 09:15 to 08:15, then back 50 minutes. Going back 15 minutes reaches 08:00, and the remaining 35 minutes reaches 07:25.",
@@ -2663,7 +2846,8 @@
       "",
       "This goes back 1 hour 40 minutes rather than 1 hour 50.",
       "This goes back only 50 minutes and forgets the hour.",
-      "This treats 1 hour 50 minutes as 2 hours."
+      "This treats 1 hour 50 minutes as 2 hours.",
+      "This counts back 1 hour 30 minutes rather than 1 hour 50."
     ],
     "learningPoint": "When counting back through the hour, go back to the o'clock first and then take off what is left.",
     "tags": [
@@ -2684,7 +2868,8 @@
       "5",
       "6",
       "3",
-      "9"
+      "9",
+      "4"
     ],
     "answer": 0,
     "verify": "5",
@@ -2693,7 +2878,8 @@
       "",
       "6 faces would make it a cuboid.",
       "3 counts only the rectangular sides and forgets the two ends.",
-      "9 is the number of edges, not the number of faces."
+      "9 is the number of edges, not the number of faces.",
+      "A shape with 4 faces would be a triangular pyramid, not a prism."
     ],
     "learningPoint": "A face is a flat surface, an edge is where two faces meet, and a vertex is a corner — check which one the question wants.",
     "tags": [
@@ -2714,7 +2900,8 @@
       "55°",
       "65°",
       "35°",
-      "235°"
+      "235°",
+      "125°"
     ],
     "answer": 0,
     "verify": "180 - 125",
@@ -2723,7 +2910,8 @@
       "",
       "This subtracts from 190 rather than 180.",
       "This subtracts from 160, or treats the angles as adding to a right angle plus 70.",
-      "This adds to 360° instead, which applies to angles around a point."
+      "This adds to 360° instead, which applies to angles around a point.",
+      "This repeats the angle given rather than working out the other one."
     ],
     "learningPoint": "Angles on a straight line total 180°; angles all the way round a point total 360°.",
     "tags": [
@@ -2743,7 +2931,8 @@
       "28 cm",
       "196 cm",
       "14 cm",
-      "49 cm"
+      "49 cm",
+      "7 cm"
     ],
     "answer": 0,
     "verify": "7 * 4",
@@ -2752,7 +2941,8 @@
       "",
       "This multiplies the area by 4 instead of the side length.",
       "This is two sides rather than all four.",
-      "This repeats the area instead of working out the perimeter."
+      "This repeats the area instead of working out the perimeter.",
+      "7 cm is the length of one side, not the distance all the way round."
     ],
     "learningPoint": "To get from the area of a square back to its side, ask what number times itself gives that area.",
     "tags": [
@@ -2774,7 +2964,8 @@
       "70°",
       "140°",
       "35°",
-      "100°"
+      "100°",
+      "40°"
     ],
     "answer": 0,
     "verify": "(180 - 40) / 2",
@@ -2783,7 +2974,8 @@
       "",
       "140° is the total of the two angles, not the size of each one.",
       "This halves the 40° angle rather than halving what is left.",
-      "This subtracts 40 from 180 and then subtracts 40 again."
+      "This subtracts 40 from 180 and then subtracts 40 again.",
+      "This repeats the angle given; the other two angles are larger."
     ],
     "learningPoint": "In an isosceles triangle the two angles opposite the equal sides are themselves equal.",
     "tags": [
@@ -2804,7 +2996,8 @@
       "14",
       "19",
       "12",
-      "11"
+      "11",
+      "9.6"
     ],
     "answer": 0,
     "verify": "19 - 5",
@@ -2813,7 +3006,8 @@
       "",
       "This is the largest number on its own, not the spread between largest and smallest.",
       "This is the first number in the list.",
-      "This is close to the mean of the numbers rather than the range."
+      "This is close to the mean of the numbers rather than the range.",
+      "This is close to the mean of the numbers rather than their range."
     ],
     "learningPoint": "The range measures spread: biggest take away smallest, and it is always a single number.",
     "tags": [
@@ -2834,7 +3028,8 @@
       "14",
       "12",
       "10",
-      "34"
+      "34",
+      "48"
     ],
     "answer": 0,
     "verify": "12 * 4 - 8 - 15 - 11",
@@ -2843,7 +3038,8 @@
       "",
       "This assumes the missing number equals the mean, which is only true by coincidence.",
       "This finds the mean of the three known numbers instead.",
-      "This is the total of the three known numbers, not the missing one."
+      "This is the total of the three known numbers, not the missing one.",
+      "48 is the total of all four numbers, not the missing one."
     ],
     "learningPoint": "Working backwards from a mean starts with the total: mean × how many.",
     "tags": [
@@ -2864,7 +3060,8 @@
       "14",
       "7",
       "12",
-      "16"
+      "16",
+      "3.5"
     ],
     "answer": 0,
     "verify": "4 * 3.5",
@@ -2873,7 +3070,8 @@
       "",
       "This counts each circle as 2 letters rather than 4.",
       "This counts only the three whole circles and ignores the half.",
-      "This rounds the half circle up to a whole one."
+      "This rounds the half circle up to a whole one.",
+      "This is the number of circles rather than the number of letters."
     ],
     "learningPoint": "Always read the key of a pictogram first — a part symbol is worth the matching part of the key.",
     "tags": [
@@ -2894,7 +3092,8 @@
       "15",
       "30",
       "45",
-      "20"
+      "20",
+      "10"
     ],
     "answer": 0,
     "verify": "60 / 2 - 60 / 4",
@@ -2903,7 +3102,8 @@
       "",
       "30 is the number who chose football, not the difference.",
       "45 is football and netball added together.",
-      "This treats netball as a third of the pupils rather than a quarter."
+      "This treats netball as a third of the pupils rather than a quarter.",
+      "This is a sixth of the pupils rather than the difference between a half and a quarter."
     ],
     "learningPoint": "A pie chart shows fractions of a total — turn each slice into a number of people before comparing.",
     "tags": [
@@ -2920,21 +3120,23 @@
     "skill": "multiplication_in_context",
     "type": "word-problem",
     "difficulty": 2,
-    "question": "A box holds 24 pencils. How many pencils are there in 15 boxes?",
+    "question": "A box holds 18 pencils. How many pencils are there in 25 boxes?",
     "options": [
+      "450",
+      "43",
       "360",
-      "39",
-      "240",
-      "3 600"
+      "4 500",
+      "225"
     ],
     "answer": 0,
-    "verify": "24 * 15",
-    "explanation": "24 × 15 can be split up: 24 × 10 = 240 and 24 × 5 = 120. Adding those gives 360.",
+    "verify": "18 * 25",
+    "explanation": "18 × 25 can be split up: 18 × 20 = 360 and 18 × 5 = 90. Adding those gives 450.",
     "distractorNotes": [
       "",
       "This adds the two numbers instead of multiplying them.",
-      "This is 24 × 10, so five boxes have been left out.",
-      "This is ten times too big — check the size of your answer."
+      "This is 18 × 20, so five boxes have been left out.",
+      "This is ten times too big — check the size of your answer.",
+      "This is 18 × 12.5, or half the number of boxes."
     ],
     "learningPoint": "Split a two-digit multiplication into tens and units, work out each part, then add.",
     "tags": [
@@ -2954,7 +3156,8 @@
       "£16.00",
       "£28.00",
       "£12.50",
-      "£40.00"
+      "£40.00",
+      "£24.50"
     ],
     "answer": 0,
     "verify": "3.5 * 8 - 12",
@@ -2963,7 +3166,8 @@
       "",
       "This is what he saved, before he spent anything.",
       "This subtracts the £12 from a single week's saving.",
-      "This adds the £12 to his savings instead of taking it away."
+      "This adds the £12 to his savings instead of taking it away.",
+      "This subtracts £3.50 from £28 instead of the £12 he spent."
     ],
     "learningPoint": "In a two-step money problem, do the saving or earning first and the spending second.",
     "tags": [
@@ -2984,7 +3188,8 @@
       "5 minutes",
       "8 minutes",
       "13 minutes",
-      "6 minutes"
+      "6 minutes",
+      "4 minutes"
     ],
     "answer": 0,
     "verify": "40 / (3 + 40 / 8)",
@@ -2993,7 +3198,8 @@
       "",
       "This is the time the second tap takes on its own — adding a tap must make it quicker.",
       "This adds the two separate times, but running taps together speeds things up rather than slowing them down.",
-      "This uses only the first tap's rate for part of the tank."
+      "This uses only the first tap's rate for part of the tank.",
+      "This adds the two rates as 5 + 5 rather than 3 + 5."
     ],
     "learningPoint": "When two things work together, add their rates per minute — never their times.",
     "tags": [
@@ -3014,7 +3220,8 @@
       "9",
       "4.5",
       "72",
-      "18"
+      "18",
+      "36"
     ],
     "answer": 0,
     "verify": "(27 + 9) / 4",
@@ -3023,13 +3230,276 @@
       "",
       "This divides 27 by 4 and stops, without undoing the subtraction.",
       "This does the same operations forwards rather than backwards.",
-      "This undoes the multiplication first and the subtraction second, which is the wrong order."
+      "This undoes the multiplication first and the subtraction second, which is the wrong order.",
+      "36 is the total after undoing the subtraction; it still has to be divided by 4."
     ],
     "learningPoint": "To find a starting number, undo the operations in reverse order and use the opposite of each one.",
     "tags": [
       "inverse operations",
       "working backwards",
       "word problem"
+    ]
+  },
+  {
+    "id": "maths-geometry-012",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "volume_rearranged",
+    "type": "geometry",
+    "difficulty": 3,
+    "question": "The floor of a rectangular reservoir has an area of 250 m². 50 m³ of water is pumped in. By how much does the water level rise?",
+    "options": [
+      "20 cm",
+      "5 cm",
+      "200 cm",
+      "2 cm",
+      "0.2 cm"
+    ],
+    "answer": 0,
+    "verify": "50 / 250 * 100",
+    "explanation": "Volume = floor area × depth, so depth = volume ÷ floor area. That gives 50 ÷ 250 = 0.2 m. The answer is wanted in centimetres, so multiply by 100: 20 cm.",
+    "distractorNotes": [
+      "",
+      "This divides the area by the volume instead of the volume by the area.",
+      "This multiplies 0.2 m by 1 000, which converts to millimetres rather than centimetres.",
+      "This multiplies 0.2 by 10 instead of by 100.",
+      "This is the answer in metres with a centimetre label attached — the conversion has been missed."
+    ],
+    "learningPoint": "Depth = volume ÷ floor area. Then check the units the answer is asked for: metres and centimetres differ by a factor of 100.",
+    "tags": [
+      "volume",
+      "rearranging",
+      "unit conversion",
+      "multi-step"
+    ]
+  },
+  {
+    "id": "maths-geometry-013",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 3,
+    "question": "A rectangle has an area of 96 cm² and a length of 12 cm. What is its perimeter?",
+    "options": [
+      "40 cm",
+      "20 cm",
+      "16 cm",
+      "108 cm",
+      "84 cm"
+    ],
+    "answer": 0,
+    "verify": "(96 / 12 + 12) * 2",
+    "explanation": "The width is 96 ÷ 12 = 8 cm. The perimeter is 2 × (12 + 8) = 40 cm.",
+    "distractorNotes": [
+      "",
+      "This is 12 + 8, which is only half the perimeter.",
+      "This doubles the width but leaves out the two lengths.",
+      "This adds the area to the length instead of working out the width.",
+      "This subtracts the length from the area."
+    ],
+    "learningPoint": "To get from an area back to a missing side, divide. Then remember a perimeter needs all four sides.",
+    "tags": [
+      "area",
+      "perimeter",
+      "rearranging",
+      "multi-step"
+    ]
+  },
+  {
+    "id": "maths-geometry-014",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "volume_rearranged",
+    "type": "geometry",
+    "difficulty": 3,
+    "question": "A cuboid box has a volume of 3 000 cm³ and a square base of side 10 cm. How tall is the box, in millimetres?",
+    "options": [
+      "300 mm",
+      "30 mm",
+      "3 000 mm",
+      "3 mm",
+      "100 mm"
+    ],
+    "answer": 0,
+    "verify": "3000 / (10 * 10) * 10",
+    "explanation": "The base area is 10 × 10 = 100 cm². The height is 3 000 ÷ 100 = 30 cm. In millimetres that is 30 × 10 = 300 mm.",
+    "distractorNotes": [
+      "",
+      "This is the height in centimetres with a millimetre label — the conversion has been missed.",
+      "This divides by 10 rather than by the base area of 100.",
+      "This divides by 1 000, as though the base were 10 cm by 100 cm.",
+      "This is the base area rather than the height."
+    ],
+    "learningPoint": "Height = volume ÷ base area — and the base area is the two base measurements multiplied, not one of them.",
+    "tags": [
+      "volume",
+      "rearranging",
+      "unit conversion",
+      "multi-step"
+    ]
+  },
+  {
+    "id": "maths-geometry-015",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "volume",
+    "type": "geometry",
+    "difficulty": 4,
+    "question": "A tank measures 2 m by 1.5 m by 0.4 m. How many litres does it hold when full? (1 m³ = 1 000 litres.)",
+    "options": [
+      "1 200 litres",
+      "120 litres",
+      "12 000 litres",
+      "12 litres",
+      "3 900 litres"
+    ],
+    "answer": 0,
+    "verify": "2 * 1.5 * 0.4 * 1000",
+    "explanation": "The volume is 2 × 1.5 × 0.4 = 1.2 m³. Each cubic metre is 1 000 litres, so the tank holds 1.2 × 1 000 = 1 200 litres.",
+    "distractorNotes": [
+      "",
+      "This multiplies 1.2 by 100 rather than by 1 000.",
+      "This multiplies 1.2 by 10 000.",
+      "This is roughly the volume in cubic metres, not in litres.",
+      "This adds the three measurements and then multiplies, instead of multiplying all three."
+    ],
+    "learningPoint": "Work out the volume in cubic metres first, then convert. 1 m³ is 1 000 litres.",
+    "tags": [
+      "volume",
+      "capacity",
+      "unit conversion",
+      "decimals"
+    ]
+  },
+  {
+    "id": "maths-measures-009",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measures",
+    "difficulty": 4,
+    "question": "A rectangular garden measures 3 m by 4 m. What is its area in square centimetres?",
+    "options": [
+      "120 000 cm²",
+      "1 200 cm²",
+      "12 000 cm²",
+      "1 200 000 cm²",
+      "12 cm²"
+    ],
+    "answer": 0,
+    "verify": "3 * 100 * 4 * 100",
+    "explanation": "Convert each side first: 3 m is 300 cm and 4 m is 400 cm. The area is 300 × 400 = 120 000 cm². Note that 1 m² is 10 000 cm², not 100.",
+    "distractorNotes": [
+      "",
+      "This multiplies the area in square metres by 100, but each of the two sides is 100 times longer.",
+      "This multiplies by 1 000 rather than by 10 000.",
+      "This multiplies by 100 000, which is ten times too many.",
+      "This is the area in square metres with a square centimetre label attached."
+    ],
+    "learningPoint": "Converting an area needs the conversion applied twice: 1 m² = 100 × 100 = 10 000 cm².",
+    "tags": [
+      "area",
+      "unit conversion",
+      "measures"
+    ]
+  },
+  {
+    "id": "maths-measures-010",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measures",
+    "difficulty": 3,
+    "question": "A tap fills a 0.6 m³ tank in 4 minutes. How many litres flow from the tap each minute? (1 m³ = 1 000 litres.)",
+    "options": [
+      "150 litres",
+      "15 litres",
+      "1 500 litres",
+      "0.15 litres",
+      "2 400 litres"
+    ],
+    "answer": 0,
+    "verify": "0.6 * 1000 / 4",
+    "explanation": "0.6 m³ is 0.6 × 1 000 = 600 litres. Spread over 4 minutes that is 600 ÷ 4 = 150 litres a minute.",
+    "distractorNotes": [
+      "",
+      "This converts 0.6 m³ to 60 litres, using 100 instead of 1 000.",
+      "This divides by 0.4 rather than by 4.",
+      "This divides 0.6 by 4 without converting to litres at all.",
+      "This multiplies by 4 instead of dividing by it."
+    ],
+    "learningPoint": "Convert to the units the answer needs before dividing — it is much harder to spot a slip afterwards.",
+    "tags": [
+      "rates",
+      "unit conversion",
+      "capacity",
+      "multi-step"
+    ]
+  },
+  {
+    "id": "maths-data-010",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "data",
+    "difficulty": 4,
+    "question": "The mean height of 5 boys is 142 cm. A sixth boy joins them and the mean height becomes 144 cm. How tall is the sixth boy?",
+    "options": [
+      "154 cm",
+      "146 cm",
+      "144 cm",
+      "152 cm",
+      "162 cm"
+    ],
+    "answer": 0,
+    "verify": "144 * 6 - 142 * 5",
+    "explanation": "The five boys total 5 × 142 = 710 cm. All six total 6 × 144 = 864 cm. The sixth boy is 864 − 710 = 154 cm.",
+    "distractorNotes": [
+      "",
+      "This adds the rise in the mean to the old mean, but the extra 2 cm has to cover all six boys.",
+      "This assumes the new boy is exactly the new mean, which would have left the mean unchanged.",
+      "This adds the rise of 2 cm five times rather than six.",
+      "This adds twice the difference between the two means to the new mean."
+    ],
+    "learningPoint": "Work with totals, not means: total = mean × how many. The difference between the two totals is the new value.",
+    "tags": [
+      "mean",
+      "working backwards",
+      "multi-step"
+    ]
+  },
+  {
+    "id": "maths-percentages-011",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "reverse_percentage",
+    "type": "percentages",
+    "difficulty": 4,
+    "question": "In a sale, all prices are reduced by 20%. A coat costs £48 in the sale. What was its price before the sale?",
+    "options": [
+      "£60",
+      "£57.60",
+      "£38.40",
+      "£68",
+      "£96"
+    ],
+    "answer": 0,
+    "verify": "48 / 0.8",
+    "explanation": "The sale price is 80% of the original, so £48 represents 80%. One tenth is 48 ÷ 8 = £6, so the full 100% is 10 × £6 = £60.",
+    "distractorNotes": [
+      "",
+      "This adds 20% to £48, but the 20% was taken off the larger original price, not off £48.",
+      "This takes another 20% off £48 instead of working backwards.",
+      "This adds £20 rather than 20%.",
+      "This doubles £48, which would be a 50% reduction."
+    ],
+    "learningPoint": "After a 20% reduction the price you see is 80% of the original. Divide by 80, then multiply by 100 — never just add the percentage back on.",
+    "tags": [
+      "percentages",
+      "reverse percentage",
+      "working backwards",
+      "money"
     ]
   }
 ]

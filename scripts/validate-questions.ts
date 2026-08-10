@@ -15,6 +15,8 @@ const here = dirname(fileURLToPath(import.meta.url))
 const dataDir = join(here, '..', 'src', 'data')
 
 const VALID_SUBJECTS = ['maths', 'english', 'verbal-reasoning']
+/** Matched to the papers these schools actually set — see docs/question-format.md. */
+const OPTIONS_PER_QUESTION = 5
 const REQUIRED_FIELDS = [
   'id',
   'subject',
@@ -194,8 +196,12 @@ for (const q of questions) {
   }
 
   if (Array.isArray(q.options)) {
-    if (q.options.length < 3) {
-      errors.push(`${label}: needs at least 3 options`)
+    // Real 11+ papers offer five answers, not four. A guess is then worth 20%
+    // rather than 25%, and eliminating two still leaves three to choose from.
+    if (q.options.length !== OPTIONS_PER_QUESTION) {
+      errors.push(
+        `${label}: has ${q.options.length} options — every question needs exactly ${OPTIONS_PER_QUESTION}`,
+      )
     }
     const lowered = q.options.map((o) => normaliseOption(String(o)))
     if (new Set(lowered).size !== lowered.length) {

@@ -12,7 +12,8 @@
       "The sound of her father pacing above her has stopped.",
       "The storm has suddenly become much louder.",
       "Her candle has gone out on the staircase.",
-      "She has heard a ship in trouble out at sea."
+      "She has heard a ship in trouble out at sea.",
+      "Her father has called down to her from the lamp room."
     ],
     "answer": 0,
     "explanation": "The passage says 'At half past two the scraping stopped. Nell sat up.' The scraping was her father's boots, so its absence is what worries her.",
@@ -20,7 +21,8 @@
       "",
       "The storm is described earlier, but nothing changes about it at half past two.",
       "The candle goes out after she has already started climbing, so it is not the cause.",
-      "The ship is only mentioned at the very end, and she does not hear it."
+      "The ship is only mentioned at the very end, and she does not hear it.",
+      "Her father does not call to her; it is the silence above that alarms her."
     ],
     "learningPoint": "When a question asks 'why', find the sentence where the change happens and read the one just before it.",
     "tags": [
@@ -42,7 +44,8 @@
       "She had been badly frightened, and her sharp words come from worry rather than temper.",
       "She is often rude to her father and does not respect him.",
       "She is angry that her father has woken her up in the night.",
-      "She does not care very much whether her father is safe."
+      "She does not care very much whether her father is safe.",
+      "She is embarrassed to have come upstairs in her nightdress."
     ],
     "answer": 0,
     "explanation": "The word 'relief' shows she is glad he is safe. The sentence explains that the strength of that feeling is what makes her sound angry — the anger is a sign of how frightened she had been.",
@@ -50,7 +53,8 @@
       "",
       "Nothing suggests this is usual behaviour; the passage presents it as a one-off reaction.",
       "Her father did not wake her — she woke because the pacing stopped.",
-      "This is the opposite of what 'relief' tells us."
+      "This is the opposite of what 'relief' tells us.",
+      "The passage names relief, not embarrassment, as the feeling behind her words."
     ],
     "learningPoint": "Characters often show a feeling through an unexpected reaction. Look at the emotion word the author actually uses.",
     "tags": [
@@ -72,7 +76,8 @@
       "shaking",
       "freezing",
       "howling",
-      "sudden"
+      "sudden",
+      "gentle"
     ],
     "answer": 0,
     "explanation": "'Shuddering' describes a trembling or shaking movement, which fits the wind making the iron staircase hum.",
@@ -80,7 +85,8 @@
       "",
       "Shuddering is often associated with cold, but here it describes movement, not temperature.",
       "'Howling' describes a sound; the sentence is describing how the wind moves.",
-      "The pushes are described as 'long', which is the opposite of sudden."
+      "The pushes are described as 'long', which is the opposite of sudden.",
+      "A shuddering push is anything but gentle."
     ],
     "learningPoint": "For 'meaning in context' questions, put each option back into the sentence and see which one still makes sense.",
     "tags": [
@@ -102,7 +108,8 @@
       "She knows the staircase so well that she does not need light.",
       "Her father calls down to guide her.",
       "The light from the lamp room shines down the stairs.",
-      "She lights a second candle that she keeps in her pocket."
+      "She lights a second candle that she keeps in her pocket.",
+      "She counts the steps aloud as she goes up."
     ],
     "answer": 0,
     "explanation": "The passage states 'she did not need it. She knew the number of steps better than she knew her own age.'",
@@ -110,7 +117,8 @@
       "",
       "Her father does not speak until she reaches the top.",
       "No light from the lamp room is mentioned on the staircase.",
-      "There is no second candle in the passage."
+      "There is no second candle in the passage.",
+      "The passage says she knows the staircase, not that she counts it."
     ],
     "learningPoint": "Retrieval questions can be answered from the text itself — find the exact line rather than guessing.",
     "tags": [
@@ -131,7 +139,8 @@
       "To stop herself from stepping in, so that Otis has to speak for himself.",
       "Because she is too tired to serve the next customer.",
       "Because she is annoyed and has decided not to speak to him.",
-      "To listen carefully to what the customer wants to buy."
+      "To listen carefully to what the customer wants to buy.",
+      "To let Otis know that she is disappointed in him."
     ],
     "answer": 0,
     "explanation": "Her final line — 'You were simply waiting for me to do it for you' — shows that her silence was deliberate. By refusing to speak, she forced Otis to find his own voice.",
@@ -139,7 +148,8 @@
       "",
       "Nothing in the passage suggests tiredness; she moves away briskly afterwards.",
       "She does speak to him, warmly, immediately afterwards.",
-      "The customer has not said anything yet."
+      "The customer has not said anything yet.",
+      "Her silence makes room for him to speak; it is not a punishment."
     ],
     "learningPoint": "When a character's actions seem puzzling, the explanation is often in what they say at the end of the passage.",
     "tags": [
@@ -161,7 +171,8 @@
       "His grandmother has sighed at him in this same way many times before.",
       "His grandmother rarely shows any emotion at all.",
       "His grandmother is trying to hide how proud she is.",
-      "His grandmother has a cough and is unwell."
+      "His grandmother has a cough and is unwell.",
+      "His grandmother sighs at everybody in exactly this way."
     ],
     "answer": 0,
     "explanation": "The word 'kept' suggests the sigh is stored up and reused, and 'particular' suggests it belongs to him alone — so this is a familiar, repeated reaction.",
@@ -169,7 +180,8 @@
       "",
       "A sigh is itself a show of emotion, so this is contradicted.",
       "Pride comes later in the passage, not at this moment.",
-      "There is nothing about illness in the passage."
+      "There is nothing about illness in the passage.",
+      "The word 'particular' shows that this sigh is kept for him alone."
     ],
     "learningPoint": "Small word choices such as 'particular' and 'kept' carry meaning — ask why the author chose that word instead of a plainer one.",
     "tags": [
@@ -190,7 +202,8 @@
       "gratefully",
       "exhausted",
       "damp",
-      "collapsed"
+      "collapsed",
+      "runner"
     ],
     "answer": 0,
     "explanation": "'Gratefully' describes how the runner collapsed, so it modifies the verb and is an adverb.",
@@ -198,7 +211,8 @@
       "",
       "'Exhausted' describes the runner, so it is an adjective here.",
       "'Damp' describes the grass, so it is an adjective.",
-      "'Collapsed' is the verb — the action itself."
+      "'Collapsed' is the verb — the action itself.",
+      "'Runner' is a person, so it is a noun."
     ],
     "learningPoint": "An adverb usually tells you how, when or where an action happens. Not every word ending in -ly is an adverb, though — 'friendly' is an adjective.",
     "followUpIds": [
@@ -222,7 +236,8 @@
       "nervous",
       "quietly",
       "spoke",
-      "child"
+      "child",
+      "to"
     ],
     "answer": 0,
     "explanation": "'Nervous' describes the noun 'child', so it is an adjective.",
@@ -230,7 +245,8 @@
       "",
       "'Quietly' describes how she spoke, so it is an adverb.",
       "'Spoke' is the verb.",
-      "'Child' is the noun being described."
+      "'Child' is the noun being described.",
+      "'To' is a preposition, showing direction rather than describing."
     ],
     "learningPoint": "Adjectives describe nouns; adverbs describe verbs.",
     "tags": [
@@ -251,7 +267,8 @@
       "Although the rain had stopped, the pitch was still unplayable.",
       "The rain stopped and the sun appeared.",
       "The players walked slowly back to the changing rooms.",
-      "It was a cold, miserable afternoon in November."
+      "It was a cold, miserable afternoon in November.",
+      "The referee blew his whistle and the match was abandoned."
     ],
     "answer": 0,
     "explanation": "'Although the rain had stopped' cannot stand alone as a sentence and depends on the main clause, so it is a subordinate clause.",
@@ -259,7 +276,8 @@
       "",
       "This joins two main clauses with 'and' — both could stand alone.",
       "This is a single main clause with an adverbial phrase.",
-      "This is a single main clause with two adjectives."
+      "This is a single main clause with two adjectives.",
+      "This joins two main clauses with 'and'; either one could stand alone."
     ],
     "learningPoint": "A subordinate clause cannot stand alone. Words such as although, because, when, if and while often begin one.",
     "tags": [
@@ -280,7 +298,8 @@
       "There were fewer cars on the road than usual.",
       "There were less cars on the road than usual.",
       "There was less cars on the road than usual.",
-      "There was fewer cars on the road than usual."
+      "There was fewer cars on the road than usual.",
+      "There were fewer cars on the road than usually."
     ],
     "answer": 0,
     "explanation": "'Cars' can be counted, so 'fewer' is correct rather than 'less'. 'Cars' is plural, so the verb must be 'were' rather than 'was'.",
@@ -288,7 +307,8 @@
       "",
       "'Less' should only be used for things that cannot be counted, such as less water.",
       "This has both errors: 'was' with a plural noun, and 'less' with a countable noun.",
-      "'Fewer' is right, but 'was' does not agree with the plural 'cars'."
+      "'Fewer' is right, but 'was' does not agree with the plural 'cars'.",
+      "'Usually' is an adverb; the comparison needs the adjective 'usual'."
     ],
     "learningPoint": "Use 'fewer' for things you can count and 'less' for amounts you cannot count.",
     "tags": [
@@ -309,7 +329,8 @@
       "The girls' coats were left in the boys' changing room.",
       "The girl's coats were left in the boy's changing room.",
       "The girls coat's were left in the boys changing room.",
-      "The girls's coats were left in the boys's changing room."
+      "The girls's coats were left in the boys's changing room.",
+      "The girls' coats were left in the boy's changing room."
     ],
     "answer": 0,
     "explanation": "Both nouns are plural and already end in -s, so the apostrophe goes after the s: girls' and boys'.",
@@ -317,7 +338,8 @@
       "",
       "This suggests one girl and one boy, which does not match 'coats' being plural.",
       "The apostrophe has been put on 'coats', which is a simple plural and needs none.",
-      "You do not add another s after a plural that already ends in s."
+      "You do not add another s after a plural that already ends in s.",
+      "'Boys' is plural here too, so its apostrophe belongs after the s."
     ],
     "learningPoint": "Plural noun already ending in s → apostrophe after the s. Singular noun → apostrophe then s.",
     "tags": [
@@ -338,7 +360,8 @@
       "'Wait here,' said Marcus, 'I won't be long.'",
       "'Wait here' said Marcus, 'I won't be long.'",
       "'Wait here,' said Marcus 'I wont be long.'",
-      "'Wait here,' Said Marcus, 'I won't be long.'"
+      "'Wait here,' Said Marcus, 'I won't be long.'",
+      "'Wait here,' said Marcus, 'I won't be long'."
     ],
     "answer": 0,
     "explanation": "Speech is closed with a comma before the speech marks, 'said Marcus' is followed by a comma, and 'won't' needs an apostrophe for the missing letter.",
@@ -346,7 +369,8 @@
       "",
       "There is no comma before the closing speech mark after 'here'.",
       "There is no comma after 'Marcus', and 'wont' is missing its apostrophe.",
-      "'Said' should not have a capital letter in the middle of a sentence."
+      "'Said' should not have a capital letter in the middle of a sentence.",
+      "The full stop belongs inside the closing quotation mark."
     ],
     "learningPoint": "Punctuation that belongs to the spoken words goes inside the speech marks.",
     "tags": [
@@ -367,7 +391,8 @@
       "il-",
       "in-",
       "un-",
-      "dis-"
+      "dis-",
+      "mis-"
     ],
     "answer": 0,
     "explanation": "'Illegible' means impossible to read. Before a word beginning with l, the prefix in- changes to il- so that it is easier to say.",
@@ -375,7 +400,8 @@
       "",
       "'Inlegible' is not a word — in- becomes il- before an l.",
       "'Unlegible' is not used in English, although un- works with many other words.",
-      "'Dislegible' is not a word; dis- usually reverses an action, as in disappear."
+      "'Dislegible' is not a word; dis- usually reverses an action, as in disappear.",
+      "'Mis-' means wrongly, as in misread — not 'not at all'."
     ],
     "learningPoint": "The prefix in- changes to match the next letter: il- before l, im- before m or p, and ir- before r.",
     "tags": [
@@ -395,7 +421,8 @@
       "The new rules had little EFFECT on the traffic.",
       "The new rules had little AFFECT on the traffic.",
       "The rain did not EFFECT our plans at all.",
-      "We were all EFFECTED by the sad news."
+      "We were all EFFECTED by the sad news.",
+      "The medicine had no AFFECT on her cough."
     ],
     "answer": 0,
     "explanation": "'Effect' is usually a noun meaning a result, and that is how it is used here. 'Affect' is usually a verb meaning to influence something.",
@@ -403,7 +430,8 @@
       "",
       "'Affect' is a verb, so it cannot follow 'little' like this.",
       "This needs the verb 'affect'.",
-      "This needs the verb form 'affected'."
+      "This needs the verb form 'affected'.",
+      "After 'no' a noun is needed, so this should be effect."
     ],
     "learningPoint": "Affect is an Action (verb); Effect is the End result (noun).",
     "followUpIds": [
@@ -427,7 +455,8 @@
       "their",
       "there",
       "they're",
-      "theirs"
+      "theirs",
+      "them"
     ],
     "answer": 0,
     "explanation": "'Their' shows possession — the opponents belong to the other team.",
@@ -435,7 +464,8 @@
       "",
       "'There' refers to a place.",
       "'They're' is short for 'they are', which does not fit here.",
-      "'Theirs' stands alone and is not followed by a noun."
+      "'Theirs' stands alone and is not followed by a noun.",
+      "'Them' cannot come before a noun such as 'opponents'."
     ],
     "learningPoint": "Their = belonging to them. There = a place. They're = they are.",
     "tags": [
@@ -455,7 +485,8 @@
       "necessary",
       "neccessary",
       "necesary",
-      "nessecary"
+      "nessecary",
+      "necessery"
     ],
     "answer": 0,
     "explanation": "'Necessary' has one c and two s's.",
@@ -463,7 +494,8 @@
       "",
       "This has doubled the c instead of the s.",
       "This is missing the second s.",
-      "The letters have been swapped around."
+      "The letters have been swapped around.",
+      "The ending is -ary, not -ery."
     ],
     "learningPoint": "One collar and two sleeves — necessary has one c and two s's.",
     "tags": [
@@ -483,7 +515,8 @@
       "unperturbed",
       "unaware",
       "unavailable",
-      "unpleasant"
+      "unpleasant",
+      "unusual"
     ],
     "answer": 0,
     "explanation": "'Unperturbed' means untroubled or not bothered, which fits a cat that stays calm despite the noise.",
@@ -491,7 +524,8 @@
       "",
       "'Unaware' would mean it had not noticed, but 'despite' suggests it noticed and was untroubled.",
       "'Unavailable' does not make sense about a cat's reaction to noise.",
-      "'Unpleasant' describes character, not a reaction to noise."
+      "'Unpleasant' describes character, not a reaction to noise.",
+      "'Unusual' means rare; it says nothing about staying calm."
     ],
     "learningPoint": "The word 'despite' signals a contrast — the answer must show the opposite of what you would expect.",
     "tags": [
@@ -512,7 +546,8 @@
       "They dealt with it calmly and carried on.",
       "They walked away without saying anything.",
       "They were extremely upset by it.",
-      "They refused to believe it was true."
+      "They refused to believe it was true.",
+      "They took a very long time to understand it."
     ],
     "answer": 0,
     "explanation": "The idiom comes from a runner who steps over an obstacle without breaking their rhythm — it means coping calmly with something difficult.",
@@ -520,7 +555,8 @@
       "",
       "This takes 'stride' literally as walking.",
       "The idiom means the opposite of being upset.",
-      "The idiom is about how they coped, not whether they believed it."
+      "The idiom is about how they coped, not whether they believed it.",
+      "The idiom is about coping calmly, not about being slow."
     ],
     "learningPoint": "Idioms do not mean what the individual words say. Think about the picture behind the phrase.",
     "tags": [
@@ -540,7 +576,8 @@
       "unwilling",
       "unable",
       "uninterested",
-      "unkind"
+      "unkind",
+      "unreliable"
     ],
     "answer": 0,
     "explanation": "'Reluctant' means hesitating to do something because you do not want to — in other words, unwilling.",
@@ -548,7 +585,8 @@
       "",
       "'Unable' means you cannot do it, not that you do not want to.",
       "'Uninterested' means bored by something, which is not quite the same as resisting it.",
-      "'Unkind' describes how you treat others."
+      "'Unkind' describes how you treat others.",
+      "'Unreliable' means not to be depended on."
     ],
     "learningPoint": "Watch the difference between not wanting to (reluctant) and not being able to (unable).",
     "tags": [
@@ -569,7 +607,8 @@
       "The prize was shared between my sister and me.",
       "The prize was shared between my sister and I.",
       "The prize was shared between myself and my sister.",
-      "The prize was shared between I and my sister."
+      "The prize was shared between I and my sister.",
+      "The prize was shared between my sister and myself."
     ],
     "answer": 0,
     "explanation": "After a preposition such as 'between' you need the object pronoun 'me'. Test it by removing 'my sister and': you would say 'shared between me'.",
@@ -577,7 +616,8 @@
       "",
       "'I' is a subject pronoun and cannot follow 'between'.",
       "'Myself' should only be used when you are also the subject, as in 'I hurt myself'.",
-      "This has the same problem as 'and I' and also sounds unnatural."
+      "This has the same problem as 'and I' and also sounds unnatural.",
+      "'Myself' can only be used when you have already appeared in the sentence."
     ],
     "learningPoint": "Take the other person out of the sentence and see which pronoun still sounds right.",
     "tags": [
@@ -598,7 +638,8 @@
       "Behind his grandmother's vegetable stall.",
       "In the queue for fried onions.",
       "At the entrance to the square.",
-      "Beside the parsnips, facing away from the crowd."
+      "Beside the parsnips, facing away from the crowd.",
+      "Inside the shop at the edge of the square."
     ],
     "answer": 0,
     "explanation": "The passage says being useful 'meant standing behind the vegetable stall shouting prices at strangers'.",
@@ -606,7 +647,8 @@
       "",
       "The onions are mentioned as a smell, not as somewhere he stands.",
       "The square is mentioned only when his voice carries across it.",
-      "The parsnips are what a customer inspects, not where he stands."
+      "The parsnips are what a customer inspects, not where he stands.",
+      "The passage places him at the stall in the market square, not in a shop."
     ],
     "learningPoint": "For a retrieval question, find the exact sentence rather than relying on memory.",
     "tags": [
@@ -627,7 +669,8 @@
       "His voice was weak and lacked confidence.",
       "He spoke very quickly and ran out of breath.",
       "He used as few words as he possibly could.",
-      "His voice was unusually high-pitched."
+      "His voice was unusually high-pitched.",
+      "He spoke in a bored and flat tone."
     ],
     "answer": 0,
     "explanation": "'Thin' is being used to describe a voice with no strength behind it, which fits 'apologetic' and explains why the customer put the parsnips back down.",
@@ -635,7 +678,8 @@
       "",
       "Nothing in the passage suggests he spoke quickly.",
       "'Thin' describes how the words sounded, not how many there were.",
-      "Pitch is not what is being described here; strength is."
+      "Pitch is not what is being described here; strength is.",
+      "'Thin' suggests a lack of strength, not a lack of interest."
     ],
     "learningPoint": "Writers often use a word about one thing (a thin object) to describe another (a weak voice). Ask what quality is being borrowed.",
     "tags": [
@@ -657,7 +701,8 @@
       "They were the hours between which the causeway could be crossed on foot.",
       "They were the times of the buses back to the mainland.",
       "They were the times he had agreed to meet somebody on the island.",
-      "They were the times the refuge box was unlocked."
+      "They were the times the refuge box was unlocked.",
+      "They were the times of high tide that day."
     ],
     "answer": 0,
     "explanation": "The passage opens by saying the island 'could be reached on foot for four hours either side of low tide', and Isaac had written 11:20 and 15:20 — a four-hour window.",
@@ -665,7 +710,8 @@
       "",
       "No buses are mentioned anywhere in the passage.",
       "Isaac appears to be alone; no meeting is mentioned.",
-      "The refuge box is not locked, and it is only mentioned near the end."
+      "The refuge box is not locked, and it is only mentioned near the end.",
+      "They mark the hours either side of low tide, when the causeway is walkable."
     ],
     "learningPoint": "When numbers appear in a passage, look at the sentence before them to find out what they measure.",
     "tags": [
@@ -686,7 +732,8 @@
       "To show that the danger built up gradually and then arrived very suddenly.",
       "To suggest that Isaac was clumsy and had caused the problem himself.",
       "To make the sea seem small and harmless, like a domestic accident.",
-      "To explain that the causeway was flat and smooth like a table top."
+      "To explain that the causeway was flat and smooth like a table top.",
+      "To show that Isaac had plenty of time to get back."
     ],
     "answer": 0,
     "explanation": "The point of the comparison is the timing — 'slowly, and then all at once' — which is exactly how the tide catches him out. It warns the reader that his time is nearly up.",
@@ -694,7 +741,8 @@
       "",
       "The comparison is about how water moves, not about Isaac's character.",
       "The tide turns out to be anything but harmless, so this reading is contradicted by what follows.",
-      "The shape of the causeway is not what the image is describing."
+      "The shape of the causeway is not what the image is describing.",
+      "The comparison is about danger arriving suddenly, not about safety."
     ],
     "learningPoint": "When asked why a comparison is used, look for the one quality that both things share — here, the speed.",
     "tags": [
@@ -716,7 +764,8 @@
       "He was more frightened than he was willing to admit to himself.",
       "He had decided the situation was hopeless and gave up.",
       "He enjoyed the excitement of racing the tide.",
-      "He had misread the tide times written on his hand."
+      "He had misread the tide times written on his hand.",
+      "He was calm and in complete control of the situation."
     ],
     "answer": 0,
     "explanation": "Having to repeat 'there was no need to hurry' several times shows he did not believe it, and running proves it. The gap between what he says and what he does reveals his fear.",
@@ -724,7 +773,8 @@
       "",
       "He acts immediately, which is the opposite of giving up.",
       "Nothing suggests enjoyment; the tone is anxious throughout.",
-      "He checked the times twice, and the passage does not say he got them wrong."
+      "He checked the times twice, and the passage does not say he got them wrong.",
+      "Somebody in control does not need to reassure himself several times over."
     ],
     "learningPoint": "When a character's actions contradict their words, trust the actions — that gap is usually the point.",
     "tags": [
@@ -746,7 +796,8 @@
       "To show that Isaac's embarrassment now troubles him more than the danger did.",
       "To warn the reader that Isaac is still in serious danger.",
       "To suggest that Isaac will not be rescued for a very long time.",
-      "To show that Isaac has learned nothing from the experience."
+      "To show that Isaac has learned nothing from the experience.",
+      "To show that Isaac blames those who failed to warn him."
     ],
     "answer": 0,
     "explanation": "The passage states plainly that he 'was not in any danger'. What is left is having to explain himself — so the ending shifts the problem from physical risk to embarrassment.",
@@ -754,7 +805,8 @@
       "",
       "The passage says directly that he is not in danger.",
       "How long he waits is never mentioned.",
-      "The line about being 'exactly as foolish as he had been' suggests he has recognised his mistake."
+      "The line about being 'exactly as foolish as he had been' suggests he has recognised his mistake.",
+      "He blames nobody; what troubles him is having to explain himself."
     ],
     "learningPoint": "The last line of a passage often changes what the story is really about — read it especially carefully.",
     "tags": [
@@ -776,7 +828,8 @@
       "She does not yet feel confident enough to correct them.",
       "She does not mind what people call her.",
       "She thinks the wrong versions are funnier than her real name.",
-      "She has been told by her mother not to make a fuss."
+      "She has been told by her mother not to make a fuss.",
+      "Nobody at the school has asked her what her name is."
     ],
     "answer": 0,
     "explanation": "She stays silent even when a boy is unkind, and later admits school is 'fine' only in a hollow way. Her silence comes from feeling new and unsure, not from indifference.",
@@ -784,7 +837,8 @@
       "",
       "The care she takes teaching Priya later shows that she does mind.",
       "The joke is at her expense and nobody suggests she found it funny.",
-      "Her mother only asks how school is going; no such instruction is given."
+      "Her mother only asks how school is going; no such instruction is given.",
+      "People do say her name — they simply say it wrongly."
     ],
     "learningPoint": "What a character does *not* say can be as revealing as what they do say.",
     "tags": [
@@ -806,7 +860,8 @@
       "It was accurate but left out everything that really mattered.",
       "It was completely untrue and she was lying to her mother.",
       "It was a memory of something that had happened long ago.",
-      "It was carefully rehearsed before she said it."
+      "It was carefully rehearsed before she said it.",
+      "It was something she had read rather than lived through."
     ],
     "answer": 0,
     "explanation": "A photograph shows a room correctly but flattens it — no sound, no feeling, nothing outside the frame. Her 'fine' is accurate in the same limited way.",
@@ -814,7 +869,8 @@
       "",
       "The passage says it was true, so it is not a lie.",
       "A photograph can record the past, but that is not the quality being borrowed here.",
-      "Nothing suggests she prepared the answer in advance."
+      "Nothing suggests she prepared the answer in advance.",
+      "The comparison is about a true account that leaves out what matters."
     ],
     "learningPoint": "With an unusual comparison, ask which single quality the writer is borrowing — here, being accurate but incomplete.",
     "tags": [
@@ -836,7 +892,8 @@
       "To show that Priya intends to remember it and get it right in future.",
       "To show that Priya finds the name difficult and is giving up.",
       "To suggest that Priya is only pretending to be interested.",
-      "To show that Priya is worried about forgetting it in a test."
+      "To show that Priya is worried about forgetting it in a test.",
+      "To show that Priya writes the name down in a notebook."
     ],
     "answer": 0,
     "explanation": "'Filing it away somewhere safe' suggests deliberate care and storage for later. That effort is why the moment matters so much to Marguerite.",
@@ -844,7 +901,8 @@
       "",
       "She had already got it right by then, so she is not giving up.",
       "Pretending would not require a third attempt after already succeeding.",
-      "There is no test; this is during silent reading."
+      "There is no test; this is during silent reading.",
+      "'As though filing it away' is a comparison, not something she actually does."
     ],
     "learningPoint": "Small, deliberate actions in a story usually signal something important about a character.",
     "tags": [
@@ -866,7 +924,8 @@
       "A small act of attention gives Marguerite the first thing she has looked forward to since moving.",
       "Marguerite makes a close friend who defends her against unkind classmates.",
       "Marguerite decides to correct everybody who says her name wrongly.",
-      "Marguerite realises that her new school is much like her old one."
+      "Marguerite realises that her new school is much like her old one.",
+      "Marguerite decides to go back to her old school."
     ],
     "answer": 0,
     "explanation": "The passage is careful to say it 'was not a friendship yet' and 'not even a conversation, really' — the change is small, but it is the first thing she has looked forward to.",
@@ -874,7 +933,8 @@
       "",
       "The passage explicitly denies this, and Priya did not defend her.",
       "She tells Priya her name, but there is no decision to correct everyone.",
-      "Her old school is never mentioned."
+      "Her old school is never mentioned.",
+      "Nothing in the passage suggests she leaves the new school."
     ],
     "learningPoint": "For a summary question, choose the option that fits the whole passage — including the parts that qualify or limit it.",
     "tags": [
@@ -894,7 +954,8 @@
       "postman",
       "barked",
       "loudly",
-      "at"
+      "at",
+      "the"
     ],
     "answer": 0,
     "explanation": "A noun names a person, place or thing. 'Postman' names a person, so it is a noun.",
@@ -902,7 +963,8 @@
       "",
       "'Barked' is the action, so it is a verb.",
       "'Loudly' describes how the dog barked, so it is an adverb.",
-      "'At' is a preposition, showing direction."
+      "'At' is a preposition, showing direction.",
+      "'The' is a determiner, pointing to the noun rather than being one."
     ],
     "learningPoint": "A noun is a naming word: a person, place or thing.",
     "tags": [
@@ -923,7 +985,8 @@
       "We caught the early train to Euston.",
       "We are catching the early train to Euston.",
       "We will catch the early train to Euston.",
-      "We catch the early train to Euston every Monday."
+      "We catch the early train to Euston every Monday.",
+      "We have been catching the early train to Euston."
     ],
     "answer": 0,
     "explanation": "'Caught' is the past form of 'catch', so the action has already happened.",
@@ -931,7 +994,8 @@
       "",
       "'Are catching' describes something happening now.",
       "'Will catch' describes something that has not happened yet.",
-      "'Catch' here describes something that happens regularly."
+      "'Catch' here describes something that happens regularly.",
+      "This is the present perfect continuous, which links back to now."
     ],
     "learningPoint": "Find the verb first, then ask whether the action has happened, is happening, or has yet to happen.",
     "tags": [
@@ -952,7 +1016,8 @@
       "On Friday we visited the British Museum in London.",
       "On friday we visited the british museum in london.",
       "On Friday we Visited the British Museum in London.",
-      "on Friday we visited the British museum in London."
+      "on Friday we visited the British museum in London.",
+      "On Friday we visited the British museum in London."
     ],
     "answer": 0,
     "explanation": "Days of the week, the names of places and the names of buildings all take capital letters, and so does the first word of a sentence.",
@@ -960,7 +1025,8 @@
       "",
       "'Friday', 'British Museum' and 'London' are all names and need capitals.",
       "'Visited' is an ordinary verb and should not have a capital letter.",
-      "The first word of a sentence needs a capital, and 'Museum' is part of the building's name."
+      "The first word of a sentence needs a capital, and 'Museum' is part of the building's name.",
+      "'Museum' is part of the building's name, so it needs a capital as well."
     ],
     "learningPoint": "Capital letters go on names, days, months and the first word of a sentence — not on ordinary words.",
     "tags": [
@@ -980,7 +1046,8 @@
       "We packed sandwiches, apples, a flask and a blanket.",
       "We packed sandwiches, apples, a flask, and a blanket,",
       "We packed, sandwiches, apples, a flask and a blanket.",
-      "We packed sandwiches apples, a flask and a blanket."
+      "We packed sandwiches apples, a flask and a blanket.",
+      "We packed sandwiches, apples a flask, and a blanket."
     ],
     "answer": 0,
     "explanation": "Commas separate the items in a list, and 'and' replaces the final comma before the last item.",
@@ -988,7 +1055,8 @@
       "",
       "A list should not end with a comma before the full stop.",
       "There should be no comma between the verb 'packed' and the first item.",
-      "The comma between the first two items is missing."
+      "The comma between the first two items is missing.",
+      "There is no comma between 'apples' and 'a flask'."
     ],
     "learningPoint": "In a list, put commas between the items and 'and' before the last one.",
     "tags": [
@@ -1009,7 +1077,8 @@
       "My uncle, who lives in Barnet, has three dogs.",
       "My uncle who lives in Barnet, has three dogs.",
       "My uncle, who lives in Barnet has three dogs.",
-      "My uncle who, lives in Barnet, has three dogs."
+      "My uncle who, lives in Barnet, has three dogs.",
+      "My uncle, who lives, in Barnet has three dogs."
     ],
     "answer": 0,
     "explanation": "'Who lives in Barnet' is extra information dropped into the sentence, so it needs a comma at both ends — like a pair of brackets.",
@@ -1017,7 +1086,8 @@
       "",
       "The opening comma is missing, so only one end of the clause is marked.",
       "The closing comma is missing, so the clause is never closed.",
-      "The comma has been placed inside the clause rather than at its start."
+      "The comma has been placed inside the clause rather than at its start.",
+      "The pair of commas must enclose the whole clause 'who lives in Barnet'."
     ],
     "learningPoint": "Extra information in the middle of a sentence needs a comma at both ends. Test it by removing the clause — the sentence should still make sense.",
     "tags": [
@@ -1038,7 +1108,8 @@
       "babies",
       "babys",
       "babyes",
-      "babries"
+      "babries",
+      "babyies"
     ],
     "answer": 0,
     "explanation": "When a word ends in a consonant followed by y, the y changes to i and you add -es: baby becomes babies.",
@@ -1046,7 +1117,8 @@
       "",
       "The y must change to i before adding the ending.",
       "You do not keep the y and add -es.",
-      "No extra letters are added to the middle of the word."
+      "No extra letters are added to the middle of the word.",
+      "The y is replaced by an i before -es, not kept as well."
     ],
     "learningPoint": "Consonant + y at the end of a word: change the y to i and add -es.",
     "tags": [
@@ -1066,7 +1138,8 @@
       "beginning",
       "begining",
       "begginning",
-      "beggining"
+      "beggining",
+      "beginnning"
     ],
     "answer": 0,
     "explanation": "'Begin' ends in a single vowel followed by a single consonant and is stressed on the last syllable, so the n doubles before -ing.",
@@ -1074,7 +1147,8 @@
       "",
       "The n needs to be doubled before -ing.",
       "The g should not be doubled, only the n.",
-      "This doubles the g instead of the n."
+      "This doubles the g instead of the n.",
+      "There are two n's in the middle, not three."
     ],
     "learningPoint": "Short vowel + single consonant at the end of a stressed syllable: double the consonant before adding -ing or -ed.",
     "tags": [
@@ -1094,7 +1168,8 @@
       "at first",
       "at first,",
       "atfirst",
-      "a first"
+      "a first",
+      "at frist"
     ],
     "answer": 0,
     "explanation": "'At first' is written as two separate words and needs no comma in the middle of this sentence.",
@@ -1102,7 +1177,8 @@
       "",
       "No comma is needed here, as the phrase is not separating extra information.",
       "'At first' is always written as two words.",
-      "'A first' means something different — a first attempt or a first place."
+      "'A first' means something different — a first attempt or a first place.",
+      "The letters of 'first' have been swapped round."
     ],
     "learningPoint": "Some common phrases are always two words: at first, a lot, in fact, as well.",
     "tags": [
@@ -1122,7 +1198,8 @@
       "huge",
       "heavy",
       "ancient",
-      "empty"
+      "empty",
+      "hollow"
     ],
     "answer": 0,
     "explanation": "'Enormous' means extremely large, which is what 'huge' means.",
@@ -1130,7 +1207,8 @@
       "",
       "Something can be huge without being heavy, such as a balloon.",
       "'Ancient' is about age, not size.",
-      "'Empty' describes what is inside something, not how big it is."
+      "'Empty' describes what is inside something, not how big it is.",
+      "'Hollow' means empty inside, which says nothing about size."
     ],
     "learningPoint": "Check that the synonym describes the same quality — size, age and weight are all different things.",
     "tags": [
@@ -1150,7 +1228,8 @@
       "across",
       "under",
       "before",
-      "again"
+      "again",
+      "beyond"
     ],
     "answer": 0,
     "explanation": "'Trans-' means across, so transport is carrying something across a distance, and transatlantic means across the Atlantic.",
@@ -1158,7 +1237,8 @@
       "",
       "'Under' is the meaning of sub-, as in submarine.",
       "'Before' is the meaning of pre-, as in preview.",
-      "'Again' is the meaning of re-, as in rebuild."
+      "'Again' is the meaning of re-, as in rebuild.",
+      "'Beyond' means further than. 'Trans-' means across, as in transatlantic."
     ],
     "learningPoint": "Knowing common prefixes lets you work out unfamiliar words: trans- across, sub- under, pre- before, re- again.",
     "tags": [
@@ -1179,7 +1259,8 @@
       "thorough",
       "lengthy",
       "confident",
-      "polite"
+      "polite",
+      "brief"
     ],
     "answer": 0,
     "explanation": "'Thorough' means complete and covering everything, which is exactly why no questions were left.",
@@ -1187,7 +1268,8 @@
       "",
       "A lengthy explanation can still leave things out — length is not the same as completeness.",
       "Someone can sound confident and still fail to explain everything.",
-      "Politeness has nothing to do with how complete an explanation is."
+      "Politeness has nothing to do with how complete an explanation is.",
+      "A brief explanation is a short one, which is not the same as a complete one."
     ],
     "learningPoint": "Look for the word whose meaning explains the result described in the rest of the sentence.",
     "tags": [
@@ -1209,7 +1291,8 @@
       "Two metres and nineteen centimetres",
       "Two metres and four centimetres",
       "Two metres and fourteen centimetres",
-      "Two metres and ninety centimetres"
+      "Two metres and ninety centimetres",
+      "Two metres and nine centimetres"
     ],
     "answer": 0,
     "explanation": "The fourth paragraph gives both heights: Priya's was two metres and four centimetres, and Grandad's was two metres and nineteen.",
@@ -1217,7 +1300,8 @@
       "",
       "This is Priya's sunflower, not Grandad's.",
       "This misreads 'nineteen' as 'fourteen'.",
-      "This misreads 'nineteen' as 'ninety'."
+      "This misreads 'nineteen' as 'ninety'.",
+      "This misreads 'nineteen' as 'nine'."
     ],
     "learningPoint": "When two numbers appear close together, check carefully which one belongs to which person.",
     "tags": [
@@ -1238,7 +1322,8 @@
       "Priya's careful notes could not actually make the sunflower grow.",
       "Priya wrote her measurements down wrongly and confused herself.",
       "Priya only kept records because Grandad had told her to.",
-      "Priya preferred writing in her notebook to gardening itself."
+      "Priya preferred writing in her notebook to gardening itself.",
+      "Priya measured the sunflower at the wrong time of day."
     ],
     "answer": 0,
     "explanation": "'As though' signals something that is not really true. The writer is gently pointing out that measuring a plant carefully has no effect at all on how it grows.",
@@ -1246,7 +1331,8 @@
       "",
       "Nothing suggests her measurements were inaccurate — the passage treats them as reliable.",
       "The contest was Grandad's idea, but the notebook was entirely hers.",
-      "She clearly cares about the sunflower itself; the notebook is how she shows it."
+      "She clearly cares about the sunflower itself; the notebook is how she shows it.",
+      "The phrase is about record-keeping not affecting growth, not about timing."
     ],
     "learningPoint": "'As though' and 'as if' usually introduce a comparison the writer does not actually believe.",
     "tags": [
@@ -1268,7 +1354,8 @@
       "He is not boasting, so Priya cannot even be annoyed with him fairly.",
       "He is admitting that he cheated, which spoils the whole contest.",
       "He is showing that Priya had misunderstood the rules from the start.",
-      "He is refusing to tell her why his sunflower has grown so tall."
+      "He is refusing to tell her why his sunflower has grown so tall.",
+      "He is teasing her about how carefully she has measured."
     ],
     "answer": 0,
     "explanation": "The passage says he said it 'without any triumph at all'. If he had gloated, Priya could have been cross with him; because he does not, her frustration has nowhere to go.",
@@ -1276,7 +1363,8 @@
       "",
       "Nothing in the rules said where the seeds had to be planted, so this is not cheating.",
       "Priya understood the rules perfectly — what she had missed was the warm wall.",
-      "He answers her question directly and fully as soon as she asks it."
+      "He answers her question directly and fully as soon as she asks it.",
+      "There is no teasing — he says it without any triumph at all."
     ],
     "learningPoint": "Ask why a character's reaction is surprising — the reason is usually the point the writer is making.",
     "tags": [
@@ -1298,7 +1386,8 @@
       "Given Grandad the open lawn and kept the warm wall for herself.",
       "Refused to take part in the sunflower contest for a second year.",
       "Planted her seeds much earlier than Grandad planted his.",
-      "Asked Grandad to move his sunflower away from the brick wall."
+      "Asked Grandad to move his sunflower away from the brick wall.",
+      "Planted her sunflower seeds in a pot indoors."
     ],
     "answer": 0,
     "explanation": "The last paragraph says Grandad's seeds were 'planted in the middle of the lawn' and the wall had been left 'for somebody else' — that somebody else is Priya.",
@@ -1306,7 +1395,8 @@
       "",
       "The new seeds going in shows she is very much taking part again.",
       "Both sets of seeds go in during October, as they did the first year.",
-      "She does not ask him anything; she simply rearranges the planting."
+      "She does not ask him anything; she simply rearranges the planting.",
+      "The seeds go into the ground as before; what changes is where they go."
     ],
     "learningPoint": "When a passage says 'somebody else' without naming them, work out from the rest of the paragraph who it must be.",
     "tags": [
@@ -1328,7 +1418,8 @@
       "It shows he admires her determination and wants to join in with it.",
       "It shows he intends to keep a record of how badly she does.",
       "It shows he has decided the contest has become too serious.",
-      "It shows he wants to prove that record-keeping is pointless."
+      "It shows he wants to prove that record-keeping is pointless.",
+      "It shows he has forgotten the result of the first contest."
     ],
     "answer": 0,
     "explanation": "He laughs 'for a good minute', which is affectionate rather than annoyed, and then adopts her method — the notebook and even the ruled columns. Taking up somebody's habit is a way of approving of it.",
@@ -1336,7 +1427,8 @@
       "",
       "The laughter is warm, and there is nothing unkind anywhere in the ending.",
       "He is happily starting another year of it, which is the opposite of calling a halt.",
-      "He is now keeping records himself, so he can hardly be arguing they are pointless."
+      "He is now keeping records himself, so he can hardly be arguing they are pointless.",
+      "He remembers it perfectly well; the second notebook is for the year ahead."
     ],
     "learningPoint": "Endings often show a change in a relationship. Ask what a character does differently from before.",
     "tags": [
@@ -1358,7 +1450,8 @@
       "Marigold",
       "Moorhen",
       "Towpath",
-      "Nettle"
+      "Nettle",
+      "Kingfisher"
     ],
     "answer": 0,
     "explanation": "The very first sentence gives the name: 'The boat was called the Marigold'.",
@@ -1366,7 +1459,8 @@
       "",
       "A moorhen is a bird Ben hears in the reeds, not the boat.",
       "The towpath is the path beside the canal.",
-      "This word does not appear in the passage at all."
+      "This word does not appear in the passage at all.",
+      "No bird's name is used for the boat — the Marigold is named after a flower."
     ],
     "learningPoint": "Straightforward retrieval questions are usually answered in the first or last sentence of a paragraph.",
     "tags": [
@@ -1387,7 +1481,8 @@
       "The boat cannot leave the channel, but sounds warn her what is ahead.",
       "She finds it difficult to see clearly while she is holding her tea.",
       "The canal is usually too foggy in the evening for her to see far.",
-      "She has travelled this canal so often that she knows it by heart."
+      "She has travelled this canal so often that she knows it by heart.",
+      "Her hands are too busy for her to steer and look at once."
     ],
     "answer": 0,
     "explanation": "She says that on a canal 'there was nowhere else to go, so looking was mostly a formality', and then lists the sounds — the engine, the bow, the hull — that tell her what is happening.",
@@ -1395,7 +1490,8 @@
       "",
       "The tea is a detail about her manner, not a reason she gives.",
       "The passage never mentions fog or poor visibility.",
-      "She may know the canal well, but that is not the reason she gives Ben."
+      "She may know the canal well, but that is not the reason she gives Ben.",
+      "She steers with one hand throughout; the reason she gives is about sound."
     ],
     "learningPoint": "When a question asks why a character says something, use the reason they give, not one you can imagine.",
     "tags": [
@@ -1417,7 +1513,8 @@
       "Being left to get on with it made him feel trusted rather than watched.",
       "He was embarrassed about the crooked pin and hoped she had not noticed.",
       "He found his aunt's voice irritating after a long day on the water.",
-      "He knew that praise from her would not have been genuinely meant."
+      "He knew that praise from her would not have been genuinely meant.",
+      "He was glad she had not seen him make a mistake."
     ],
     "answer": 0,
     "explanation": "She says nothing about the crooked pin *or* the good one. Not commenting on either treats him as somebody capable of judging his own work, which is why it means more to him than being praised.",
@@ -1425,7 +1522,8 @@
       "",
       "If it were only about the crooked one, her silence about the good one would not matter.",
       "The passage shows him listening to her with real interest.",
-      "Nothing suggests he doubts her sincerity."
+      "Nothing suggests he doubts her sincerity.",
+      "She says nothing about the good pin either, which is the whole point."
     ],
     "learningPoint": "Notice what a character does *not* do — silence and inaction can be as revealing as speech.",
     "tags": [
@@ -1447,7 +1545,8 @@
       "To show how much he notices once the noise has stopped.",
       "To suggest that the mooring is a noisier place than it looks.",
       "To warn the reader that something is about to go wrong.",
-      "To explain why Ben found it hard to get to sleep that night."
+      "To explain why Ben found it hard to get to sleep that night.",
+      "To show that Ben was frightened by the darkness."
     ],
     "answer": 0,
     "explanation": "The paragraph says the sounds 'he had not known were there arrived one after another'. Listing them one by one makes the reader notice them in the same way Ben suddenly does.",
@@ -1455,7 +1554,8 @@
       "",
       "The sounds are small and distant; the effect is of quiet, not noise.",
       "The passage is calm throughout and nothing goes wrong.",
-      "Sleep is never mentioned."
+      "Sleep is never mentioned.",
+      "The passage is calm throughout; the sounds are noticed, not feared."
     ],
     "learningPoint": "A list is a deliberate choice. Ask what effect the piling-up of details has on the reader.",
     "tags": [
@@ -1477,7 +1577,8 @@
       "Admitting he enjoyed the quiet would sound oddly grown-up to his friends.",
       "He cannot remember enough of the week to describe it to his friends.",
       "His friends would not believe that the boat travelled so slowly.",
-      "He is worried that his friends will think the holiday sounds expensive."
+      "He is worried that his friends will think the holiday sounds expensive.",
+      "He had promised his friends he would be bored all week."
     ],
     "answer": 0,
     "explanation": "He had told his friends the week would be 'a week of nothing happening', and has found the opposite. Saying that a slow, quiet week was the best part is the sort of thing adults say, which is what makes it awkward to admit.",
@@ -1485,7 +1586,8 @@
       "",
       "He remembers the week vividly — the whole passage is full of what he noticed.",
       "The slowness is something he has come to like, not something he must convince them of.",
-      "Money is never mentioned in the passage."
+      "Money is never mentioned in the passage.",
+      "He said the week sounded like nothing happening, which is not a promise."
     ],
     "learningPoint": "In a closing line, work out what the character would have to admit — that is usually where the meaning sits.",
     "tags": [
@@ -1507,7 +1609,8 @@
       "Two or three years",
       "Two or three months",
       "Two or three weeks",
-      "Two or three days"
+      "Two or three days",
+      "Two or three hours"
     ],
     "answer": 0,
     "explanation": "The second paragraph says a young swift 'may not touch down again for two or even three years'.",
@@ -1515,7 +1618,8 @@
       "",
       "Months would not allow time for several journeys to Africa and back.",
       "This is far too short — the passage is describing years, not weeks.",
-      "This would make the swift no more remarkable than any other bird."
+      "This would make the swift no more remarkable than any other bird.",
+      "Hours would make the swift no more remarkable than any other bird."
     ],
     "learningPoint": "For a fact question, find the sentence that states it and read the unit of time exactly.",
     "tags": [
@@ -1537,7 +1641,8 @@
       "Modern roof repairs seal up the gaps where swifts nest.",
       "Swifts are being caught by predators on their way to Africa.",
       "The insects that swifts feed on have almost entirely disappeared.",
-      "Swifts are being confused by the lights of modern towns."
+      "Swifts are being confused by the lights of modern towns.",
+      "Swifts have stopped coming to Britain altogether."
     ],
     "answer": 0,
     "explanation": "The fourth paragraph gives one clear reason: swifts nest in gaps under the eaves of older buildings, and modern repairs close those gaps up.",
@@ -1545,7 +1650,8 @@
       "",
       "Predators are never mentioned in the passage.",
       "Food supply is not given as a reason, although the birds do feed on the wing.",
-      "The passage says nothing about lighting."
+      "The passage says nothing about lighting.",
+      "The passage describes birds returning each May, not staying away."
     ],
     "learningPoint": "In non-fiction, answer from the reason the text actually gives, even if other reasons sound likely.",
     "tags": [
@@ -1567,7 +1673,8 @@
       "Its wings sweep back in a long, narrow curve.",
       "It is far larger than most other garden birds.",
       "It has a sharp beak for catching insects in flight.",
-      "Its feathers are a dull, metallic silver colour."
+      "Its feathers are a dull, metallic silver colour.",
+      "It flies in a curved path rather than a straight line."
     ],
     "answer": 0,
     "explanation": "A scythe is a tool with a long curved blade used for cutting grass. Describing the bird as scythe-shaped tells us about its outline: swept-back, curved and narrow.",
@@ -1575,7 +1682,8 @@
       "",
       "A scythe is thin and curved; the comparison says nothing about size.",
       "The blade of a scythe is sharp, but the comparison is about shape, not the beak.",
-      "The passage describes the bird as dark, and a shape comparison is not about colour."
+      "The passage describes the bird as dark, and a shape comparison is not about colour.",
+      "The comparison describes the bird's outline, not the path it takes."
     ],
     "learningPoint": "When a writer compares something to an object, work out which property of the object is meant — usually shape, movement or sound.",
     "tags": [
@@ -1597,7 +1705,8 @@
       "To show how a claim that sounded impossible was gradually proved.",
       "To argue that scientists should have believed the pilots sooner.",
       "To explain how tracking devices are attached to small birds.",
-      "To show that swifts are dangerous to aircraft flying at night."
+      "To show that swifts are dangerous to aircraft flying at night.",
+      "To show that swifts are difficult to study at night."
     ],
     "answer": 0,
     "explanation": "The paragraph begins by admitting that sleeping in flight 'sounds impossible', then gives the evidence in order: first the pilots' reports, then the tracking data. The point is how the belief changed.",
@@ -1605,7 +1714,8 @@
       "",
       "The writer does not criticise anyone; the doubt is presented as reasonable.",
       "The passage mentions only that the devices are light enough to be safe.",
-      "No danger to aircraft is suggested anywhere."
+      "No danger to aircraft is suggested anywhere.",
+      "The point is that the evidence built up over time, not that it was hard to gather."
     ],
     "learningPoint": "When evidence is given in order, ask what the sequence is meant to show — often that a belief changed over time.",
     "tags": [
@@ -1627,7 +1737,8 @@
       "Helping swifts is unusually cheap and simple to do.",
       "Swifts will recover in Britain without any human help.",
       "New houses should not be built where swifts already nest.",
-      "Only conservation experts can solve the swifts' problem."
+      "Only conservation experts can solve the swifts' problem.",
+      "Swift boxes are too expensive for most people to fit."
     ],
     "answer": 0,
     "explanation": "The paragraph says a swift box or a special brick 'costs very little and lasts for decades', and ends by noting how rare it is for saving a species to be this straightforward.",
@@ -1635,7 +1746,8 @@
       "",
       "The paragraph is about action being needed, not about the problem solving itself.",
       "The passage suggests adapting new houses, not stopping them being built.",
-      "The whole point is that this is something ordinary people can do."
+      "The whole point is that this is something ordinary people can do.",
+      "The paragraph says a swift box costs very little and lasts for decades."
     ],
     "learningPoint": "A summary must cover the paragraph's main claim, not just one detail from inside it.",
     "tags": [
@@ -1657,7 +1769,8 @@
       "A few pounds",
       "A few hundred pounds",
       "A few pence",
-      "Nothing at all"
+      "Nothing at all",
+      "A few thousand pounds"
     ],
     "answer": 0,
     "explanation": "The third paragraph says the cost is 'a few pounds a year, less than a single paperback'.",
@@ -1665,7 +1778,8 @@
       "",
       "Hundreds of pounds is what the writer says research databases would cost an individual.",
       "The passage compares the cost to a paperback, which is pounds rather than pence.",
-      "The writer's point is that the cost is small, not that there is none."
+      "The writer's point is that the cost is small, not that there is none.",
+      "Thousands would be far more than the single paperback the writer compares it to."
     ],
     "learningPoint": "Comparisons such as 'less than a paperback' are there to fix the size of a number — use them.",
     "tags": [
@@ -1687,7 +1801,8 @@
       "To show that libraries meet needs a website cannot meet.",
       "To show that libraries are used by very few people now.",
       "To argue that libraries should charge those who can afford it.",
-      "To suggest that most library users are children doing homework."
+      "To suggest that most library users are children doing homework.",
+      "To show that library buildings are too small for their users."
     ],
     "answer": 0,
     "explanation": "Each example needs something a screen cannot provide — a warm room, a quiet hour, another adult to talk to. The paragraph ends by saying exactly that: 'None of these needs is met by a website.'",
@@ -1695,7 +1810,8 @@
       "",
       "The examples are chosen to show variety of use, not scarcity.",
       "Charging is never suggested; the writer stresses that entry is free.",
-      "The child is only the first of three quite different examples."
+      "The child is only the first of three quite different examples.",
+      "The paragraph is about what people need, not about the size of the building."
     ],
     "learningPoint": "In an argument, examples are chosen to prove a point — look for the sentence that states the point directly.",
     "tags": [
@@ -1717,7 +1833,8 @@
       "Granting that the criticism would be fair, if it were true.",
       "Agreeing that libraries have failed to change at all.",
       "Arguing that museums are a poor use of public money.",
-      "Suggesting that libraries should become museums instead."
+      "Suggesting that libraries should become museums instead.",
+      "Admitting that the writer has changed their own mind."
     ],
     "answer": 0,
     "explanation": "The writer accepts the criticism in principle — 'would indeed deserve' — and then immediately answers it with 'Very few have stood still.' Conceding a point before answering it makes an argument more convincing.",
@@ -1725,7 +1842,8 @@
       "",
       "The very next sentence says the opposite: very few libraries have stood still.",
       "Museums are used only as a comparison; the writer makes no claim about them.",
-      "The writer is defending libraries as they are now, not proposing a change."
+      "The writer is defending libraries as they are now, not proposing a change.",
+      "The writer's view does not change; a point is granted and then answered."
     ],
     "learningPoint": "Writers often admit a point against them before answering it. Read the following sentence to find the answer.",
     "tags": [
@@ -1747,7 +1865,8 @@
       "They state it fairly, then set out why it does not hold.",
       "They ignore it and describe what libraries do instead.",
       "They dismiss it immediately as not worth answering.",
-      "They accept it but say the cost is too small to matter."
+      "They accept it but say the cost is too small to matter.",
+      "They agree with it and suggest closing some libraries."
     ],
     "answer": 0,
     "explanation": "The opening paragraph sets the argument out clearly and even calls it 'modern and sensible' before adding that it is 'mostly wrong'. The rest of the passage then answers it point by point.",
@@ -1755,7 +1874,8 @@
       "",
       "The argument is addressed directly in the first paragraph, not avoided.",
       "The writer calls it sensible-sounding before disagreeing, which is not dismissal.",
-      "The writer disagrees with the argument rather than accepting it."
+      "The writer disagrees with the argument rather than accepting it.",
+      "The writer argues against closure throughout the passage."
     ],
     "learningPoint": "Ask how a writer handles the opposing view — stating it fairly first is a deliberate persuasive technique.",
     "tags": [
@@ -1777,7 +1897,8 @@
       "Almost nowhere else is now open to someone with no money.",
       "Libraries would lose their character if they began charging.",
       "Books are too expensive for most families to buy themselves.",
-      "Councils save money when buildings take no payments at all."
+      "Councils save money when buildings take no payments at all.",
+      "It shows that libraries should be paid for by their users."
     ],
     "answer": 0,
     "explanation": "The phrase comes in a sentence calling the library 'one of the last buildings' where this is true. The writer's point is about how rare such a place has become, not about books alone.",
@@ -1785,7 +1906,8 @@
       "",
       "Charging is not being proposed; the writer is describing what already exists.",
       "The cost of books is a smaller point made earlier, not this one.",
-      "Taking no payments does not save a council money — it is the opposite."
+      "Taking no payments does not save a council money — it is the opposite.",
+      "The writer's point is the opposite — that entry costs nothing."
     ],
     "learningPoint": "Read a quoted phrase in the whole sentence it comes from. Words such as 'one of the last' carry the meaning.",
     "tags": [
@@ -1806,7 +1928,8 @@
       "loudly",
       "old",
       "barked",
-      "postman"
+      "postman",
+      "at"
     ],
     "answer": 0,
     "explanation": "An adverb tells you more about a verb. 'Loudly' tells you how the dog barked, so it is the adverb.",
@@ -1814,7 +1937,8 @@
       "",
       "'Old' describes the dog, so it is an adjective.",
       "'Barked' is the action itself, so it is the verb.",
-      "'Postman' is a person, so it is a noun."
+      "'Postman' is a person, so it is a noun.",
+      "'At' is a preposition, showing where the barking was aimed."
     ],
     "learningPoint": "An adverb usually answers how, when or where about the verb — many, though not all, end in -ly.",
     "tags": [
@@ -1835,7 +1959,8 @@
       "She had finished her homework before supper.",
       "She finished her homework before supper.",
       "She has finished her homework already.",
-      "She was finishing her homework at supper."
+      "She was finishing her homework at supper.",
+      "She will have finished her homework by supper."
     ],
     "answer": 0,
     "explanation": "The past perfect uses 'had' with the past participle, and describes something completed before another past event. 'She had finished' happened before supper.",
@@ -1843,7 +1968,8 @@
       "",
       "This is the simple past — one completed action, with no 'had'.",
       "This is the present perfect, which uses 'has' and links to now.",
-      "This is the past continuous, describing something still going on."
+      "This is the past continuous, describing something still going on.",
+      "This is the future perfect, looking forward rather than back."
     ],
     "learningPoint": "'Had' plus a past participle signals the past perfect: the earlier of two past events.",
     "tags": [
@@ -1864,7 +1990,8 @@
       "We were not told about the change.",
       "We wasn't told about the change.",
       "We weren't never told about the change.",
-      "Us were not told about the change."
+      "Us were not told about the change.",
+      "We was not told about the change."
     ],
     "answer": 0,
     "explanation": "'We' takes 'were', and one negative is enough. 'We were not told' is correct Standard English.",
@@ -1872,7 +1999,8 @@
       "",
       "'We' needs 'were', not 'was'.",
       "'Weren't never' is a double negative, which is not Standard English.",
-      "'Us' is an object pronoun and cannot be the subject of a sentence."
+      "'Us' is an object pronoun and cannot be the subject of a sentence.",
+      "'We' takes 'were', never 'was'."
     ],
     "learningPoint": "Standard English uses one negative per clause and matches the verb to the subject.",
     "tags": [
@@ -1892,7 +2020,8 @@
       "My brother and I built the shed together.",
       "Me and my brother built the shed together.",
       "My brother and me built the shed together.",
-      "Myself and my brother built the shed together."
+      "Myself and my brother built the shed together.",
+      "My brother and myself built the shed together."
     ],
     "answer": 0,
     "explanation": "Take the other person out of the sentence and try it alone: you would say 'I built the shed', not 'me built the shed'. So 'My brother and I' is right.",
@@ -1900,7 +2029,8 @@
       "",
       "'Me built the shed' is clearly wrong, so 'Me and my brother' must be too.",
       "The order is polite here, but 'me' is still the wrong pronoun for the subject.",
-      "'Myself' can only be used when you have already appeared in the sentence."
+      "'Myself' can only be used when you have already appeared in the sentence.",
+      "Putting the other person first does not help — myself is still the wrong pronoun for the subject."
     ],
     "learningPoint": "To test 'I' or 'me', remove the other person and read the sentence on its own.",
     "tags": [
@@ -1920,7 +2050,8 @@
       "The path, which had not been used for years, was thick with nettles.",
       "After the wet summer the narrow path was completely impassable.",
       "Nettles and brambles had grown right across the old stone path.",
-      "The path was thick with nettles and difficult to follow at dusk."
+      "The path was thick with nettles and difficult to follow at dusk.",
+      "Because the path was overgrown, we turned back."
     ],
     "answer": 0,
     "explanation": "A relative clause gives extra information about a noun and usually begins with who, which or that. 'Which had not been used for years' tells us more about the path.",
@@ -1928,7 +2059,8 @@
       "",
       "This begins with an adverbial phrase about time, not a relative clause.",
       "This is a single main clause with two subjects joined by 'and'.",
-      "This is a main clause with an adjective phrase added on."
+      "This is a main clause with an adjective phrase added on.",
+      "This begins with a subordinate clause of reason, not a relative clause."
     ],
     "learningPoint": "Relative clauses begin with who, whom, whose, which or that, and sit next to the noun they describe.",
     "tags": [
@@ -1949,7 +2081,8 @@
       "In September we are going to France.",
       "In september we are going to France.",
       "In September we are going to france.",
-      "in September we are going to France."
+      "in September we are going to France.",
+      "In September We are going to France."
     ],
     "answer": 0,
     "explanation": "Months and countries are proper nouns and always take a capital letter, and a sentence must begin with one too.",
@@ -1957,7 +2090,8 @@
       "",
       "'September' is a month, so it needs a capital.",
       "'France' is a country, so it needs a capital.",
-      "The first word of a sentence always needs a capital letter."
+      "The first word of a sentence always needs a capital letter.",
+      "'We' is not a proper noun and takes no capital in the middle of a sentence."
     ],
     "learningPoint": "Names of months, days, people and places always take a capital letter, wherever they appear.",
     "tags": [
@@ -1977,7 +2111,8 @@
       "The children's coats were left in the hall.",
       "The childrens' coats were left in the hall.",
       "The childrens coats were left in the hall.",
-      "The children's coat's were left in the hall."
+      "The children's coat's were left in the hall.",
+      "The childrens's coats were left in the hall."
     ],
     "answer": 0,
     "explanation": "'Children' is already plural without an s, so the possessive is formed in the ordinary way: add an apostrophe and an s.",
@@ -1985,7 +2120,8 @@
       "",
       "An apostrophe after the s is only used for plurals that already end in s.",
       "This has no apostrophe at all, so it does not show possession.",
-      "'Coats' is a simple plural and needs no apostrophe."
+      "'Coats' is a simple plural and needs no apostrophe.",
+      "'Children' is already plural, so only an apostrophe and an s are added."
     ],
     "learningPoint": "Irregular plurals such as children, men and mice take 's, exactly like a singular noun.",
     "tags": [
@@ -2006,7 +2142,8 @@
       "We packed sandwiches, apples, a flask and a map.",
       "We packed sandwiches apples, a flask and a map.",
       "We packed, sandwiches, apples, a flask and a map.",
-      "We packed sandwiches, apples, a flask and, a map."
+      "We packed sandwiches, apples, a flask and, a map.",
+      "We packed; sandwiches, apples, a flask and a map."
     ],
     "answer": 0,
     "explanation": "In a list, commas separate the items and 'and' replaces the final comma. Nothing separates the verb from the first item.",
@@ -2014,7 +2151,8 @@
       "",
       "There is no comma between the first two items in the list.",
       "The comma after 'packed' wrongly separates the verb from its list.",
-      "The comma after 'and' does not belong there."
+      "The comma after 'and' does not belong there.",
+      "A semicolon cannot introduce a list in this way."
     ],
     "learningPoint": "Commas go between the items of a list, never between the verb and the first item.",
     "tags": [
@@ -2035,7 +2173,8 @@
       "\"Wait here,\" said Ravi, \"until I call you.\"",
       "\"Wait here.\" said Ravi, \"until I call you.\"",
       "\"Wait here,\" said Ravi \"until I call you.\"",
-      "\"Wait here,\" Said Ravi, \"until I call you.\""
+      "\"Wait here,\" Said Ravi, \"until I call you.\"",
+      "\"Wait here,\" said Ravi, \"Until I call you.\""
     ],
     "answer": 0,
     "explanation": "The spoken sentence is interrupted, so the first part ends with a comma inside the inverted commas, and a comma follows 'Ravi' before the speech starts again.",
@@ -2043,7 +2182,8 @@
       "",
       "A full stop cannot be used, because the spoken sentence carries on afterwards.",
       "A comma is needed after 'Ravi' to reopen the speech.",
-      "'Said' does not take a capital letter in the middle of a sentence."
+      "'Said' does not take a capital letter in the middle of a sentence.",
+      "The spoken sentence carries on, so 'until' does not take a capital letter."
     ],
     "learningPoint": "When speech is interrupted by 'said', put a comma before the closing inverted comma and another after the speaker's name.",
     "tags": [
@@ -2064,7 +2204,8 @@
       "The runners who had trained hard finished the race.",
       "The runners, who had trained hard, finished the race.",
       "The runners who had trained hard, finished the race.",
-      "The runners, who had trained hard finished the race."
+      "The runners, who had trained hard finished the race.",
+      "The runners, who had trained hard; finished the race."
     ],
     "answer": 0,
     "explanation": "Without commas, 'who had trained hard' narrows down which runners are meant — only those ones finished. With commas the clause becomes an aside, meaning all the runners had trained hard and all of them finished.",
@@ -2072,7 +2213,8 @@
       "",
       "The commas make the clause an aside, so this means every runner finished.",
       "A single comma here is simply incorrect punctuation.",
-      "This opens an aside with a comma but never closes it."
+      "This opens an aside with a comma but never closes it.",
+      "A semicolon cannot be used to close a pair of commas."
     ],
     "learningPoint": "Commas around a clause turn it into extra information. Leave them out when the clause is needed to identify who is meant.",
     "tags": [
@@ -2094,7 +2236,8 @@
       "than",
       "then",
       "that",
-      "thin"
+      "thin",
+      "them"
     ],
     "answer": 0,
     "explanation": "'Than' is used for comparisons. Here the team's play this week is being compared with last week.",
@@ -2102,7 +2245,8 @@
       "",
       "'Then' is about time or sequence, not comparison.",
       "'That' would not make sense after 'better' in this sentence.",
-      "'Thin' is an adjective describing width."
+      "'Thin' is an adjective describing width.",
+      "'Them' does not fit before 'they did last week'."
     ],
     "learningPoint": "'Than' compares; 'then' tells you when. The a in 'than' matches the a in 'compare'.",
     "tags": [
@@ -2123,7 +2267,8 @@
       "shelves",
       "shelfs",
       "shelfes",
-      "shelve"
+      "shelve",
+      "shelfies"
     ],
     "answer": 0,
     "explanation": "Most nouns ending in -f change to -ves in the plural: shelf becomes shelves, just as leaf becomes leaves.",
@@ -2131,7 +2276,8 @@
       "",
       "Adding a plain s does not follow the -f to -ves rule.",
       "'-es' is added to words ending in s, x, ch or sh, not to -f words.",
-      "'Shelve' is a verb meaning to put something aside."
+      "'Shelve' is a verb meaning to put something aside.",
+      "The f changes to a v before -es, giving shelves."
     ],
     "learningPoint": "Nouns ending in -f or -fe usually change to -ves: half, wolf, knife, life.",
     "tags": [
@@ -2151,7 +2297,8 @@
       "beautiful",
       "beautifull",
       "beutiful",
-      "beautyful"
+      "beautyful",
+      "beautifil"
     ],
     "answer": 0,
     "explanation": "The suffix -ful is always spelt with one l, and the y of 'beauty' changes to an i before it: beautiful.",
@@ -2159,7 +2306,8 @@
       "",
       "The suffix -ful has only one l, even though 'full' has two.",
       "The 'eau' of 'beauty' is kept in full.",
-      "The y of 'beauty' must change to an i before the suffix."
+      "The y of 'beauty' must change to an i before the suffix.",
+      "The suffix is -ful, spelt with a u."
     ],
     "learningPoint": "The suffix -ful always has a single l: careful, hopeful, powerful.",
     "tags": [
@@ -2179,7 +2327,8 @@
       "illegible",
       "unlegible",
       "dislegible",
-      "mislegible"
+      "mislegible",
+      "imlegible"
     ],
     "answer": 0,
     "explanation": "The prefix in- becomes il- before a word beginning with l, so 'legible' becomes 'illegible'.",
@@ -2187,7 +2336,8 @@
       "",
       "'Un-' is a real prefix, but it is not the one used with 'legible'.",
       "'Dis-' usually reverses an action, as in disagree or disappear.",
-      "'Mis-' means wrongly, as in misread or misspell — not 'not at all'."
+      "'Mis-' means wrongly, as in misread or misspell — not 'not at all'.",
+      "The prefix in- becomes im- before m or p, not before l."
     ],
     "learningPoint": "The prefix in- changes to il- before l, im- before m or p, and ir- before r.",
     "tags": [
@@ -2207,7 +2357,8 @@
       "The rain did not affect the match, but it had an effect on the crowd.",
       "The rain did not effect the match, but it had an affect on the crowd.",
       "The rain did not affect the match, but it had an affect on the crowd.",
-      "The rain did not effect the match, but it had an effect on the crowd."
+      "The rain did not effect the match, but it had an effect on the crowd.",
+      "The rain did not affects the match, but it had an effect on the crowd."
     ],
     "answer": 0,
     "explanation": "'Affect' is nearly always the verb — the doing word. 'Effect' is nearly always the noun — the result. The rain did not affect (verb) the match, but it had an effect (noun).",
@@ -2215,7 +2366,8 @@
       "",
       "Both words have been swapped over here.",
       "The first is right, but 'an affect' should be the noun 'effect'.",
-      "The second is right, but 'did not effect' should be the verb 'affect'."
+      "The second is right, but 'did not effect' should be the verb 'affect'.",
+      "After 'did not' the plain form is used: affect, not affects."
     ],
     "learningPoint": "Affect is the Action; Effect is the End result. If 'the' or 'an' comes before it, you almost always want effect.",
     "tags": [
@@ -2236,7 +2388,8 @@
       "huge",
       "tiny",
       "heavy",
-      "hollow"
+      "hollow",
+      "narrow"
     ],
     "answer": 0,
     "explanation": "'Enormous' means extremely large, so 'huge' is the closest in meaning.",
@@ -2244,7 +2397,8 @@
       "",
       "'Tiny' is the opposite of enormous.",
       "'Heavy' is about weight, not size — a small thing can be heavy.",
-      "'Hollow' means empty inside, which is not about size at all."
+      "'Hollow' means empty inside, which is not about size at all.",
+      "'Narrow' describes width rather than overall size."
     ],
     "learningPoint": "Check whether a word is about size, weight or shape before choosing a synonym.",
     "tags": [
@@ -2264,7 +2418,8 @@
       "terrified",
       "nervous",
       "uneasy",
-      "wary"
+      "wary",
+      "startled"
     ],
     "answer": 0,
     "explanation": "All four describe some degree of fear, but 'terrified' is the strongest: it means overwhelmed by fear.",
@@ -2272,7 +2427,8 @@
       "",
       "'Nervous' suggests mild worry before something happens.",
       "'Uneasy' is the mildest of these — a vague sense that something is wrong.",
-      "'Wary' means cautious, which is more about care than fear."
+      "'Wary' means cautious, which is more about care than fear.",
+      "Startled is a brief shock rather than the strongest kind of fear."
     ],
     "learningPoint": "Words that mean roughly the same thing often differ in strength — arrange them on a scale before choosing.",
     "tags": [
@@ -2292,7 +2448,8 @@
       "To give away a secret by accident.",
       "To make a bad situation much worse.",
       "To take a risk that does not pay off.",
-      "To set something free after keeping it."
+      "To set something free after keeping it.",
+      "To do something without thinking it through."
     ],
     "answer": 0,
     "explanation": "It is an idiom meaning to reveal a secret without meaning to. The words have nothing to do with actual cats.",
@@ -2300,7 +2457,8 @@
       "",
       "That idea is closer to 'adding fuel to the fire'.",
       "That idea is closer to 'a gamble that did not come off'.",
-      "This takes the idiom literally, which is exactly the trap."
+      "This takes the idiom literally, which is exactly the trap.",
+      "That idea is closer to acting on impulse."
     ],
     "learningPoint": "An idiom's meaning cannot be worked out from its words — learn each one as a whole phrase.",
     "tags": [
@@ -2321,7 +2479,8 @@
       "comprehensive",
       "lengthy",
       "confident",
-      "courteous"
+      "courteous",
+      "hesitant"
     ],
     "answer": 0,
     "explanation": "The second half of the sentence explains that nothing was left out. 'Comprehensive' means covering everything, which matches exactly.",
@@ -2329,7 +2488,8 @@
       "",
       "'Lengthy' means long, but a long explanation can still miss things out.",
       "'Confident' describes how she sounded, not how complete the explanation was.",
-      "'Courteous' means polite, which the sentence says nothing about."
+      "'Courteous' means polite, which the sentence says nothing about.",
+      "'Hesitant' describes uncertainty, not how complete the explanation was."
     ],
     "learningPoint": "The part of the sentence after the colon usually defines the missing word — read it before choosing.",
     "tags": [
