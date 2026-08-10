@@ -98,6 +98,10 @@ export function QuizSession({
     )
   }, [apply])
 
+  const handleSkip = useCallback(() => {
+    apply((s) => sessionReducer(s, { type: 'skip', at: Date.now() }))
+  }, [apply])
+
   const handleTimeout = useCallback(() => {
     apply((s) => sessionReducer(s, { type: 'timeout', at: Date.now() }))
   }, [apply])
@@ -146,11 +150,20 @@ export function QuizSession({
   const inLearningLoop = state.phase === 'followup' || state.phase === 'followup-feedback'
   const subject = getSubject(question.subject)
 
+  // "Finish" only when there is genuinely nothing after this — including the
+  // skipped questions still waiting for a second look.
+  const stillParked = state.skipped.filter((i) => i !== state.index).length
+  const isLastQuestion = state.revisiting
+    ? stillParked === 0
+    : state.index + 1 >= questions.length && stillParked === 0
+
   return (
     <>
       <div className="quiz-meta">
         <span>
-          Question {Math.min(state.index + 1, questions.length)} / {questions.length}
+          {state.revisiting
+            ? `Skipped question ${state.index + 1} / ${questions.length}`
+            : `Question ${Math.min(state.index + 1, questions.length)} / ${questions.length}`}
         </span>
         <span>
           {subject.label} · {question.topic}
@@ -179,6 +192,13 @@ export function QuizSession({
         </div>
       )}
 
+      {state.revisiting && !inLearningLoop && (
+        <div className="learning-banner">
+          Back to the ones you skipped — {state.skipped.length} to go. Have another look
+          now you have seen the rest.
+        </div>
+      )}
+
       <div className="card">
         <QuestionCard
           key={question.id}
@@ -199,7 +219,7 @@ export function QuizSession({
             onReport={onReport}
             continueLabel={
               state.lastCorrect || state.followUpExhausted
-                ? state.index + 1 >= questions.length
+                ? isLastQuestion
                   ? 'Finish'
                   : 'Next question'
                 : 'Try a practice question'
@@ -208,9 +228,22 @@ export function QuizSession({
         )}
       </div>
 
-      <button type="button" className="btn btn-quiet" onClick={onExit}>
-        Stop this session
-      </button>
+      <div className="actions">
+        {state.phase === 'question' && (
+          <button type="button" className="btn" onClick={handleSkip}>
+            {state.revisiting ? 'Leave this one' : 'Skip for now'}
+          </button>
+        )}
+        <button type="button" className="btn btn-quiet" onClick={onExit}>
+          Stop this session
+        </button>
+      </div>
+
+      {state.phase === 'question' && !state.revisiting && (
+        <p className="muted small" style={{ marginTop: 4 }}>
+          Skipped questions come back at the end — nothing is lost.
+        </p>
+      )}
     </>
   )
 }

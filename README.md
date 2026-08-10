@@ -10,12 +10,13 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 ## Status (handoff summary)
 
-**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (74 checks) and `npm run build` are all green as of the latest commit. No known bugs.
+**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (92 checks) and `npm run build` are all green as of the latest commit. No known bugs.
 
 **What's built:**
 - Full quiz engine with the wrong-answer learning loop, mastery tracking, streaks, and all revision modes (Quick 5/10/20, subject/topic practice, mixed, mistakes, weak areas, challenge, timed sessions).
 - **288 questions** (104 Maths, 80 English, 104 Verbal Reasoning) across 8 comprehension passages — every topic has at least 4 questions, and every subject has both Foundation (difficulty 1) and Stretch (difficulty 4) coverage.
 - **Two-layer question vetting**: `npm run validate` catches structural issues and machine-verifies maths answers via an optional `verify` expression; `npm run review` generates `docs/review-sheet.md` for human read-through, with `npm run review:accept` to avoid re-reviewing.
+- **Skip for now.** A question can be parked and comes back at the end of the run for a second look. A skip records nothing and never counts against the score.
 - **Resume after a refresh.** An unfinished session is saved as you go and offered back — *"Carry on where you left off?"* — for up to 24 hours. A timed session keeps the time it had left rather than burning it while the tab was shut.
 - **Spaced repetition.** A question answered correctly comes back after 1 day, then 3, then 7, then 21. A mistake resets it to the start of the ladder.
 - **Parent view** with Progress and Feedback tabs, plus **download and restore of progress** as a JSON file — the way to move a child's history to a new device, or to survive a cleared browser.
@@ -66,7 +67,7 @@ Other scripts:
 | `npm run validate` | Check the question bank for errors and quality warnings |
 | `npm run review` | Write `docs/review-sheet.md` for human vetting of questions |
 | `npm run review:accept` | Mark the current questions as reviewed |
-| `npm test` | Run the engine test suite (47 checks) |
+| `npm test` | Run the engine test suite (92 checks) |
 | `npm run typecheck` | TypeScript check, no build |
 | `npm run build` | Validate → typecheck → build to `dist/` |
 | `npm run preview` | Serve the production build locally |
@@ -139,6 +140,14 @@ Like all the other data, feedback is stored only in that browser and is never se
 | **Challenge** | Prioritises difficulty 3–4 questions |
 
 Any session can optionally be timed (about 45 seconds per question). The timer never fails the child — when it expires, the session ends gracefully and shows results for the questions reached.
+
+### Skipping a question
+
+Every question has a **Skip for now** button. This is deliberate exam technique rather than a way out: the app already tells the child *"if a question is taking too long, make your best choice and move on"*, and until now there was no way to act on that advice.
+
+A skipped question is **parked, not lost**. Once the run reaches the end, the skipped ones come back — *"Back to the ones you skipped"* — for a second look now the rest have been seen. Skipping on that second pass lets the question go for good, so the session always terminates.
+
+A skip records nothing: no answer, no mastery change, no mark against the score. Anything still unanswered at the end is reported in the summary ("You left 2 questions") and excluded from the accuracy figure, so leaving a question never looks like getting it wrong. It stays unseen in the bank and comes round again another day.
 
 ---
 

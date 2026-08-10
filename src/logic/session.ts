@@ -27,6 +27,14 @@ export interface SessionState {
   /** True when the follow-ups ran out without a correct answer. */
   followUpExhausted: boolean
   answers: SessionAnswer[]
+  /**
+   * Indices of main questions parked by "Skip for now", oldest first. They are
+   * offered again once the end of the run is reached; anything still here when
+   * the session finishes was genuinely left unanswered.
+   */
+  skipped: number[]
+  /** True while working back through the skipped questions at the end. */
+  revisiting: boolean
   /** Every question id shown in this session, main or follow-up. */
   usedIds: string[]
   techniqueCard: TechniqueCard | null
@@ -40,6 +48,7 @@ export interface SessionState {
 export type SessionAction =
   | { type: 'answer'; option: number; at: number }
   | { type: 'continue'; at: number }
+  | { type: 'skip'; at: number }
   | { type: 'timeout'; at: number }
 
 export function createSession(
@@ -58,6 +67,8 @@ export function createSession(
     followUpRound: 0,
     followUpExhausted: false,
     answers: [],
+    skipped: [],
+    revisiting: false,
     usedIds: questions.map((q) => q.id),
     techniqueCard: null,
     startedAt: at,
@@ -98,23 +109,64 @@ function techniqueCardFor(state: SessionState): TechniqueCard | null {
   return TECHNIQUE_CARDS[idx]
 }
 
-function advance(state: SessionState, at: number): SessionState {
-  const nextIndex = state.index + 1
-  if (nextIndex >= state.questions.length) {
-    return { ...state, phase: 'complete', endedAt: at, selected: null }
-  }
-  const card = techniqueCardFor(state)
+/** Common reset when any question is left behind, whatever comes next. */
+function moveTo(
+  state: SessionState,
+  index: number,
+  at: number,
+  extra: Partial<SessionState> = {},
+): SessionState {
   return {
     ...state,
-    index: nextIndex,
-    phase: card ? 'technique' : 'question',
-    techniqueCard: card,
+    index,
+    phase: 'question',
     selected: null,
     followUp: null,
     followUpRound: 0,
     followUpExhausted: false,
     questionStartedAt: at,
+    ...extra,
   }
+}
+
+/**
+ * Finish with the current question and move on.
+ *
+ * The run goes straight through the questions once, then returns to anything
+ * parked by "Skip for now". Whatever is still parked when that second pass ends
+ * was left unanswered, and the summary says so.
+ */
+function advance(state: SessionState, at: number, park = false): SessionState {
+  // Whatever happens next, this question is no longer waiting where it was.
+  // `park` puts it back at the end of the queue instead of dropping it.
+  const others = state.skipped.filter((i) => i !== state.index)
+  const remaining = park ? [...others, state.index] : others
+  const complete = (): SessionState => ({
+    ...state,
+    skipped: remaining,
+    phase: 'complete',
+    endedAt: at,
+    selected: null,
+  })
+
+  if (state.revisiting) {
+    if (remaining.length === 0) return complete()
+    return moveTo(state, remaining[0], at, { skipped: remaining })
+  }
+
+  const nextIndex = state.index + 1
+  if (nextIndex < state.questions.length) {
+    const card = techniqueCardFor(state)
+    return moveTo(state, nextIndex, at, {
+      skipped: remaining,
+      phase: card ? 'technique' : 'question',
+      techniqueCard: card,
+    })
+  }
+
+  // End of the straight run. Anything skipped now gets a second look.
+  if (remaining.length === 0) return complete()
+  return moveTo(state, remaining[0], at, { skipped: remaining, revisiting: true })
 }
 
 export function sessionReducer(state: SessionState, action: SessionAction): SessionState {
@@ -122,6 +174,15 @@ export function sessionReducer(state: SessionState, action: SessionAction): Sess
     case 'timeout':
       if (state.phase === 'complete') return state
       return { ...state, phase: 'complete', endedAt: action.at, timedOut: true }
+
+    case 'skip': {
+      // Only a main question can be parked. A follow-up is the teaching part of
+      // a mistake, and the loop already lets the child out after two rounds.
+      if (state.phase !== 'question') return state
+      // On the second pass the child has already had their second look, so a
+      // skip there lets the question go rather than queueing it again for ever.
+      return advance(state, action.at, !state.revisiting)
+    }
 
     case 'answer': {
       const question = currentQuestion(state)
@@ -203,6 +264,12 @@ export function sessionReducer(state: SessionState, action: SessionAction): Sess
 /** Called when the child clicks past an exhausted learning loop. */
 export function resolveExhausted(state: SessionState, at: number): SessionState {
   return advance({ ...state, followUpExhausted: false }, at)
+}
+
+/** Main questions the child never answered — skipped and left, or timed out. */
+export function unansweredQuestions(state: SessionState): Question[] {
+  const answered = new Set(mainAnswers(state).map((a) => a.questionId))
+  return state.questions.filter((q) => !answered.has(q.id))
 }
 
 export function sessionDurationMs(state: SessionState): number {

@@ -16,6 +16,7 @@ import {
   mainAnswers,
   resolveExhausted,
   sessionReducer,
+  unansweredQuestions,
   type SessionState,
 } from '../src/logic/session'
 import {
@@ -260,6 +261,64 @@ console.log('\n== spaced repetition ==')
     mixed.questions.findIndex((q) => q.id === maths[1].id) <
       mixed.questions.findIndex((q) => q.id === overdue.id),
   )
+}
+
+console.log('\n== skipping and coming back ==')
+{
+  const questions = selectQuestions(cfg({ length: 4 }), emptyProgress(), 41).questions
+  const answer = (s: SessionState) =>
+    sessionReducer(
+      sessionReducer(s, { type: 'answer', option: currentQuestion(s)!.answer, at: Date.now() }),
+      { type: 'continue', at: Date.now() },
+    )
+  const skip = (s: SessionState) => sessionReducer(s, { type: 'skip', at: Date.now() })
+
+  let s = createSession(cfg({ length: 4 }), questions)
+  const first = currentQuestion(s)!.id
+  s = skip(s)
+  check('skipping moves straight on', currentQuestion(s)!.id === questions[1].id)
+  check('the question is parked', s.skipped.length === 1)
+  check('no answer is recorded for a skip', s.answers.length === 0)
+  check('the skip does not reveal the answer', s.phase === 'question')
+
+  s = answer(s)
+  s = answer(s)
+  s = answer(s)
+  check('the skipped question comes back at the end', currentQuestion(s)!.id === first)
+  check('and is flagged as the second pass', s.revisiting === true)
+  check('the session has not finished yet', s.phase !== 'complete')
+
+  s = answer(s)
+  check('answering it finishes the session', s.phase === 'complete')
+  check('nothing is left parked', s.skipped.length === 0)
+  check('all four questions were answered', mainAnswers(s).length === 4)
+  check('none is reported as unanswered', unansweredQuestions(s).length === 0)
+
+  // Skipping again on the second pass lets the question go, rather than
+  // queueing it for ever.
+  let t = createSession(cfg({ length: 4 }), questions)
+  t = skip(t)
+  t = answer(t)
+  t = answer(t)
+  t = answer(t)
+  check('second pass reached', t.revisiting === true)
+  t = skip(t)
+  check('a second skip ends the session', t.phase === 'complete')
+  check('the question is left unanswered', unansweredQuestions(t).length === 1)
+  check('it is not still parked', t.skipped.length === 0)
+
+  // Skipping everything must still terminate.
+  let u = createSession(cfg({ length: 4 }), questions)
+  for (let i = 0; i < 20 && u.phase !== 'complete'; i += 1) u = skip(u)
+  check('skipping every question terminates', u.phase === 'complete')
+  check('all four are reported unanswered', unansweredQuestions(u).length === 4)
+
+  // A skipped question survives a refresh.
+  let v = createSession(cfg({ length: 4 }), questions)
+  v = skip(v)
+  const at = Date.now()
+  const back = sessionStore.deserialise(sessionStore.serialise(v, undefined, at), at)
+  check('a parked question survives a refresh', back!.state.skipped.length === 1)
 }
 
 console.log('\n== resuming a session ==')

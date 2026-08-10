@@ -100,6 +100,7 @@ Storage schema went to version 2. Profiles saved before this get `streak: 1` for
 ## 5. Smaller improvements
 
 - ~~**Run the smoke test in CI.**~~ Done — `npm test` now runs in the workflow before the build.
+- ~~**Skip a question.**~~ Done — **Skip for now** parks a question and re-offers it once the run reaches the end. A skip records nothing at all, and anything still unanswered is reported in the summary rather than counted as wrong. Skipping again on the second pass releases it, which is what guarantees the session terminates.
 - **Act on flagged questions.** The Feedback tab collects question reports with their ids; there is no script yet that takes an exported feedback file and lists the flagged questions alongside their bank entries. A small `npm run triage` would close that loop.
 - ~~**Export and import progress.**~~ Done — the parent view has **Download progress** and **Restore from a file**. The file is plain JSON, produced in the browser and never uploaded. A restore is parsed and summarised (*"Saved on 10 August 2026: 412 questions answered across 38 sessions"*) before the parent confirms, because it replaces everything.
 - **More than one child.** One browser currently means one child. A simple profile picker would let siblings share a device.

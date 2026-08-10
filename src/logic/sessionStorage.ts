@@ -40,6 +40,8 @@ interface StoredSession {
   followUpRound: number
   followUpExhausted: boolean
   answers: SessionAnswer[]
+  skipped: number[]
+  revisiting: boolean
   usedIds: string[]
   techniqueCardId: string | null
   startedAt: number
@@ -69,6 +71,8 @@ function serialise(
     followUpRound: state.followUpRound,
     followUpExhausted: state.followUpExhausted,
     answers: state.answers,
+    skipped: state.skipped,
+    revisiting: state.revisiting,
     usedIds: state.usedIds,
     techniqueCardId: state.techniqueCard?.id ?? null,
     startedAt: state.startedAt,
@@ -121,6 +125,9 @@ function deserialise(stored: StoredSession, at: number): RestoredSession | null 
       followUpRound: stored.followUpRound,
       followUpExhausted: stored.followUpExhausted,
       answers: stored.answers,
+      // Snapshots written before "Skip for now" existed have neither field.
+      skipped: stored.skipped ?? [],
+      revisiting: stored.revisiting ?? false,
       usedIds: stored.usedIds,
       techniqueCard:
         TECHNIQUE_CARDS.find((c) => c.id === stored.techniqueCardId) ?? null,

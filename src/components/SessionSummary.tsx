@@ -2,7 +2,12 @@ import { useState } from 'react'
 import { getQuestion } from '../data'
 import { getSubject } from '../data/subjects'
 import { formatDuration } from './Timer'
-import { mainAnswers, sessionDurationMs, type SessionState } from '../logic/session'
+import {
+  mainAnswers,
+  sessionDurationMs,
+  unansweredQuestions,
+  type SessionState,
+} from '../logic/session'
 
 interface Props {
   state: SessionState
@@ -43,6 +48,9 @@ export function SessionSummary({ state, onExit, onRestart }: Props) {
   const toPractise = ranked.filter((t) => t.right < t.n).slice(-3).reverse()
 
   const mistakes = answered.filter((a) => !a.correct)
+  // Skipped and left, or not reached before the timer went. Either way they are
+  // reported rather than quietly dropped, but they never count against accuracy.
+  const unanswered = state.timedOut ? [] : unansweredQuestions(state)
 
   return (
     <>
@@ -72,6 +80,16 @@ export function SessionSummary({ state, onExit, onRestart }: Props) {
             <div className="stat-label">Time taken</div>
           </div>
         </div>
+
+        {unanswered.length > 0 && (
+          <p style={{ marginTop: 18 }}>
+            <strong>
+              You left {unanswered.length} question{unanswered.length === 1 ? '' : 's'}.
+            </strong>{' '}
+            That is a perfectly sensible thing to do in a real test — they are not
+            counted above, and they will come round again another day.
+          </p>
+        )}
 
         {strongest.length > 0 && (
           <p style={{ marginTop: 18 }}>
