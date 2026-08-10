@@ -13,6 +13,7 @@ import { describeBackup, exportProgress, parseBackup } from '../src/logic/backup
 import {
   createSession,
   currentQuestion,
+  deadlineAt,
   mainAnswers,
   resolveExhausted,
   sessionReducer,
@@ -163,6 +164,87 @@ console.log('\n== timer ==')
   check('timeout ends the session', s.phase === 'complete')
   check('timeout flagged', s.timedOut === true)
   check('answers so far are kept', mainAnswers(s).length === 1)
+}
+
+console.log('\n== the clock stops for explanations ==')
+{
+  const LIMIT = 10 * 60_000
+  const questions = selectQuestions(cfg({ length: 4 }), emptyProgress(), 51).questions
+  const conf = cfg({ length: 4, timed: true, timeLimitMs: LIMIT })
+  const t0 = 1_000_000
+
+  let s = createSession(conf, questions, t0)
+  check('the clock starts running', s.pausedAt === null && s.pausedMs === 0)
+  check('the first deadline is the plain limit', deadlineAt(s, LIMIT) === t0 + LIMIT)
+
+  // Answer wrongly, then spend a minute reading the explanation.
+  const q = currentQuestion(s)!
+  s = sessionReducer(s, { type: 'answer', option: (q.answer + 1) % q.options.length, at: t0 + 5_000 })
+  check('answering stops the clock', s.pausedAt === t0 + 5_000)
+  check('the deadline has not moved yet', deadlineAt(s, LIMIT) === t0 + LIMIT)
+
+  s = sessionReducer(s, { type: 'continue', at: t0 + 65_000 })
+  check('entering the learning loop restarts it', s.pausedAt === null)
+  check('the minute spent reading is given back', s.pausedMs === 60_000)
+  check('the deadline moved by a minute', deadlineAt(s, LIMIT) === t0 + LIMIT + 60_000)
+
+  // A correct follow-up, read for another 30 seconds.
+  const fu = currentQuestion(s)!
+  s = sessionReducer(s, { type: 'answer', option: fu.answer, at: t0 + 70_000 })
+  s = sessionReducer(s, { type: 'continue', at: t0 + 100_000 })
+  check('follow-up reading time is given back too', s.pausedMs === 90_000)
+  check('the clock is running on the next question', s.pausedAt === null)
+
+  // A correct answer still pauses while its explanation is on screen.
+  let u = createSession(conf, questions, t0)
+  u = sessionReducer(u, { type: 'answer', option: currentQuestion(u)!.answer, at: t0 + 1_000 })
+  check('a correct answer stops the clock as well', u.pausedAt === t0 + 1_000)
+  u = sessionReducer(u, { type: 'continue', at: t0 + 11_000 })
+  check('and hands the time back on continue', u.pausedMs === 10_000)
+
+  // Skipping is not reading time, so it must not earn any credit.
+  let v = createSession(conf, questions, t0)
+  v = sessionReducer(v, { type: 'skip', at: t0 + 3_000 })
+  check('skipping does not stop the clock', v.pausedAt === null && v.pausedMs === 0)
+
+  // A paused session that is saved and restored keeps the time it had left.
+  let w = createSession(conf, questions, t0)
+  w = sessionReducer(w, { type: 'answer', option: currentQuestion(w)!.answer, at: t0 + 5_000 })
+  const stored = sessionStore.serialise(w, undefined, t0 + 6_000)
+  const back = sessionStore.deserialise(stored, t0 + 6_000 + 120_000)!
+  check(
+    'a session restored mid-explanation is still paused',
+    back.state.pausedAt !== null,
+  )
+  check(
+    'and has exactly the time it had left',
+    deadlineAt(back.state, LIMIT) - back.state.pausedAt! === LIMIT - 5_000,
+  )
+}
+
+console.log('\n== technique cards ==')
+{
+  const questions = selectQuestions(cfg({ length: 10 }), emptyProgress(), 52).questions
+  const answer = (s: SessionState) =>
+    sessionReducer(
+      sessionReducer(s, { type: 'answer', option: currentQuestion(s)!.answer, at: Date.now() }),
+      { type: 'continue', at: Date.now() },
+    )
+
+  let s = createSession(cfg({ length: 10 }), questions)
+  for (let i = 0; i < 6; i += 1) {
+    s = answer(s)
+    if (s.phase === 'technique') break
+  }
+  check('a tip appears after six answers', s.phase === 'technique')
+  s = sessionReducer(s, { type: 'continue', at: Date.now() })
+
+  // Skipping does not move the answered count, so without a guard the same
+  // card would be offered again on every skip in a row.
+  s = sessionReducer(s, { type: 'skip', at: Date.now() })
+  check('skipping does not trigger a tip', s.phase === 'question')
+  s = sessionReducer(s, { type: 'skip', at: Date.now() })
+  check('nor does a second skip in a row', s.phase === 'question')
 }
 
 console.log('\n== progress, mastery, persistence ==')

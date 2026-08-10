@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { getPassage } from '../data'
 import type { Question } from '../types'
 
@@ -14,7 +14,6 @@ interface Props {
 
 export function QuestionCard({ question, selected, revealed, onSelect }: Props) {
   const passage = getPassage(question.passageId)
-  const groupRef = useRef<HTMLDivElement>(null)
 
   // Number keys 1–4 pick an answer; a small speed-up that also helps
   // keyboard-only users avoid tabbing through every option.
@@ -55,7 +54,6 @@ export function QuestionCard({ question, selected, revealed, onSelect }: Props) 
         className="options"
         role="group"
         aria-label="Answer options"
-        ref={groupRef}
       >
         {question.options.map((option, i) => (
           <button

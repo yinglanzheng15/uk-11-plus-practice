@@ -40,6 +40,15 @@ export interface SessionState {
   techniqueCard: TechniqueCard | null
   startedAt: number
   questionStartedAt: number
+  /**
+   * Time the clock has been stopped for, in ms. A timed session should measure
+   * time spent *answering*, not time spent reading an explanation — otherwise
+   * engaging with the learning loop costs the child time, which is precisely
+   * backwards.
+   */
+  pausedMs: number
+  /** When the clock stopped, or null while it is running. */
+  pausedAt: number | null
   endedAt: number | null
   /** Set when the timer ran out rather than the child finishing all questions. */
   timedOut: boolean
@@ -73,6 +82,8 @@ export function createSession(
     techniqueCard: null,
     startedAt: at,
     questionStartedAt: at,
+    pausedMs: 0,
+    pausedAt: null,
     endedAt: questions.length === 0 ? at : null,
     timedOut: false,
   }
@@ -91,15 +102,11 @@ export function mainAnswers(state: SessionState): SessionAnswer[] {
   return state.answers.filter((a) => !a.isFollowUp)
 }
 
-export function sessionScore(state: SessionState): { correct: number; total: number } {
-  const main = mainAnswers(state)
-  return {
-    correct: main.filter((a) => a.correct).length,
-    total: state.questions.length,
-  }
-}
-
-/** A short technique card appears after every 6th question, at most once a session. */
+/**
+ * A short technique card appears after every 6th question answered — so a
+ * Quick 20 sees about three of them, and a Quick 5 none at all. Never two in a
+ * row: the card just shown is still on the state, which blocks the next one.
+ */
 function techniqueCardFor(state: SessionState): TechniqueCard | null {
   const answered = mainAnswers(state).length
   const isLast = state.index + 1 >= state.questions.length
@@ -107,6 +114,21 @@ function techniqueCardFor(state: SessionState): TechniqueCard | null {
   if (state.techniqueCard) return null
   const idx = (state.startedAt + answered) % TECHNIQUE_CARDS.length
   return TECHNIQUE_CARDS[idx]
+}
+
+/** Stop the clock. Idempotent, so a double transition cannot double-count. */
+function pause(state: SessionState, at: number): SessionState {
+  return state.pausedAt === null ? { ...state, pausedAt: at } : state
+}
+
+/** Start the clock again, banking however long it was stopped for. */
+function resume(state: SessionState, at: number): SessionState {
+  if (state.pausedAt === null) return state
+  return {
+    ...state,
+    pausedMs: state.pausedMs + Math.max(0, at - state.pausedAt),
+    pausedAt: null,
+  }
 }
 
 /** Common reset when any question is left behind, whatever comes next. */
@@ -117,7 +139,7 @@ function moveTo(
   extra: Partial<SessionState> = {},
 ): SessionState {
   return {
-    ...state,
+    ...resume(state, at),
     index,
     phase: 'question',
     selected: null,
@@ -156,12 +178,15 @@ function advance(state: SessionState, at: number, park = false): SessionState {
 
   const nextIndex = state.index + 1
   if (nextIndex < state.questions.length) {
-    const card = techniqueCardFor(state)
-    return moveTo(state, nextIndex, at, {
+    // No tip after a skip. The answered count has not moved, so the same card
+    // would otherwise be offered again on the next skip in a row.
+    const card = park ? null : techniqueCardFor(state)
+    const next = moveTo(state, nextIndex, at, {
       skipped: remaining,
       phase: card ? 'technique' : 'question',
       techniqueCard: card,
     })
+    return card ? pause(next, at) : next
   }
 
   // End of the straight run. Anything skipped now gets a second look.
@@ -198,7 +223,8 @@ export function sessionReducer(state: SessionState, action: SessionAction): Sess
         elapsedMs: action.at - state.questionStartedAt,
       }
       return {
-        ...state,
+        // Reading the explanation is not answering time.
+        ...pause(state, action.at),
         selected: action.option,
         lastCorrect: correct,
         answers: [...state.answers, answer],
@@ -208,7 +234,7 @@ export function sessionReducer(state: SessionState, action: SessionAction): Sess
 
     case 'continue': {
       if (state.phase === 'technique') {
-        return { ...state, phase: 'question', questionStartedAt: action.at }
+        return { ...resume(state, action.at), phase: 'question', questionStartedAt: action.at }
       }
 
       if (state.phase === 'feedback') {
@@ -221,7 +247,7 @@ export function sessionReducer(state: SessionState, action: SessionAction): Sess
         )
         if (!followUp) return advance(state, action.at)
         return {
-          ...state,
+          ...resume(state, action.at),
           phase: 'followup',
           followUp,
           followUpRound: 1,
@@ -243,7 +269,7 @@ export function sessionReducer(state: SessionState, action: SessionAction): Sess
         )
         if (!next) return { ...state, followUpExhausted: true }
         return {
-          ...state,
+          ...resume(state, action.at),
           phase: 'followup',
           followUp: next,
           followUpRound: state.followUpRound + 1,
@@ -272,6 +298,15 @@ export function unansweredQuestions(state: SessionState): Question[] {
   return state.questions.filter((q) => !answered.has(q.id))
 }
 
+/** Wall-clock length of the session, including time spent reading feedback. */
 export function sessionDurationMs(state: SessionState): number {
   return (state.endedAt ?? Date.now()) - state.startedAt
+}
+
+/**
+ * When a timed session runs out, in epoch ms. Moves later every time the clock
+ * is stopped, so the limit only ever covers time spent answering.
+ */
+export function deadlineAt(state: SessionState, limitMs: number): number {
+  return state.startedAt + state.pausedMs + limitMs
 }

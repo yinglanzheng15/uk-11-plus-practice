@@ -46,6 +46,8 @@ interface StoredSession {
   techniqueCardId: string | null
   startedAt: number
   questionStartedAt: number
+  pausedMs: number
+  pausedAt: number | null
   timedOut: boolean
 }
 
@@ -77,6 +79,8 @@ function serialise(
     techniqueCardId: state.techniqueCard?.id ?? null,
     startedAt: state.startedAt,
     questionStartedAt: state.questionStartedAt,
+    pausedMs: state.pausedMs,
+    pausedAt: state.pausedAt,
     timedOut: state.timedOut,
   }
 }
@@ -133,6 +137,12 @@ function deserialise(stored: StoredSession, at: number): RestoredSession | null 
         TECHNIQUE_CARDS.find((c) => c.id === stored.techniqueCardId) ?? null,
       startedAt: stored.startedAt + away,
       questionStartedAt: stored.questionStartedAt + away,
+      pausedMs: stored.pausedMs ?? 0,
+      // Shifted with everything else, so a session saved mid-explanation comes
+      // back with the clock still stopped and the same time left.
+      pausedAt: stored.pausedAt === null || stored.pausedAt === undefined
+        ? null
+        : stored.pausedAt + away,
       endedAt: null,
       timedOut: stored.timedOut,
     },

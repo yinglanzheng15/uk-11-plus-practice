@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Home } from './components/Home'
 import { QuizSession } from './components/QuizSession'
 import { Dashboard } from './components/Dashboard'
@@ -41,6 +41,9 @@ export default function App() {
   // Read once on load. A saved session is only *offered* — it is never resumed
   // automatically, because the child may well want to start something else.
   const [resumable, setResumable] = useState<RestoredSession | null>(() => loadSession())
+  // The most recent snapshot, kept so that leaving a quiz can offer it straight
+  // back rather than throwing it away.
+  const liveSession = useRef<SessionState | null>(null)
 
   // Persist on every change, so a refresh mid-session never loses answered work.
   useEffect(() => {
@@ -52,6 +55,7 @@ export default function App() {
       const result = selectQuestions(config, progress)
       setProgress((p) => noteServed(p, result.questions.map((q) => q.id)))
       setResumable(null)
+      liveSession.current = null
       clearSession()
       setSession({
         config,
@@ -79,20 +83,29 @@ export default function App() {
 
   const handleDiscardResume = useCallback(() => {
     clearSession()
+    liveSession.current = null
     setResumable(null)
   }, [])
 
   const sessionNote = session?.note
   const handlePersist = useCallback(
     (state: SessionState) => {
-      if (state.phase === 'complete') clearSession()
-      else saveSession(state, sessionNote)
+      if (state.phase === 'complete') {
+        liveSession.current = null
+        clearSession()
+      } else {
+        liveSession.current = state
+        saveSession(state, sessionNote)
+      }
     },
     [sessionNote],
   )
 
+  // Follow-ups are chosen by the learning loop rather than by selectQuestions,
+  // so noting every served question here is what stops one reappearing as a
+  // main question in the very next session.
   const handleRecord = useCallback((question: Question, correct: boolean) => {
-    setProgress((p) => recordAnswer(p, question, correct))
+    setProgress((p) => noteServed(recordAnswer(p, question, correct), [question.id]))
   }, [])
 
   const handleFinish = useCallback((state: SessionState) => {
@@ -118,14 +131,22 @@ export default function App() {
     )
   }, [])
 
-  // Stopping deliberately is a decision, not an interruption — there is nothing
-  // to come back to, so the snapshot goes with it.
+  /**
+   * Leave the quiz — whether by "Stop this session" or the Home link.
+   *
+   * Deliberately *not* destructive. Half a Quick 20 is a lot of work to lose to
+   * a mistapped link, so the snapshot is kept and offered back on the home
+   * screen. Starting anything new clears it.
+   */
   const handleExit = useCallback(() => {
-    clearSession()
-    setResumable(null)
+    const live = liveSession.current
+    if (live && live.phase !== 'complete') {
+      setResumable({ state: live, note: sessionNote, savedAt: Date.now() })
+      liveSession.current = null
+    }
     setSession(null)
     setView('home')
-  }, [])
+  }, [sessionNote])
 
   const handleRestart = useCallback(() => {
     if (session) startSession(session.config)
@@ -158,6 +179,7 @@ export default function App() {
   // old one is meaningless and goes too.
   const handleRestore = useCallback((restored: Progress) => {
     clearSession()
+    liveSession.current = null
     setResumable(null)
     setSession(null)
     setProgress(restored)
@@ -166,6 +188,7 @@ export default function App() {
   const handleReset = useCallback(() => {
     clearProgress()
     clearSession()
+    liveSession.current = null
     setResumable(null)
     setSession(null)
     setProgress(resetProgress())

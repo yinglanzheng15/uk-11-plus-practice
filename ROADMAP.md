@@ -80,7 +80,7 @@ Details worth knowing:
 - Questions are stored as **ids** and rehydrated from the bank, so a snapshot cannot go stale against an edited question. If an id has vanished the snapshot is discarded rather than half-restored.
 - A snapshot older than **24 hours** is not offered. Coming back the next morning is reasonable; coming back to last week's half-quiz is not.
 - For a timed session the clock is **shifted, not restored** — a session saved with four minutes left resumes with four minutes left, rather than having burnt them while the tab was closed.
-- Stopping a session deliberately clears the snapshot. Only an interruption is recoverable.
+- Leaving is never destructive. "Stop this session" and the Home link both hand the session to the home screen's resume card rather than dropping it — half a Quick 20 is too much to lose to a mistapped link. Only starting something new clears it.
 
 ---
 

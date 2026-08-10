@@ -7,6 +7,8 @@ import { getSubject } from '../data/subjects'
 import {
   createSession,
   currentQuestion,
+  deadlineAt,
+  mainAnswers,
   resolveExhausted,
   sessionReducer,
   MAX_FOLLOW_UPS,
@@ -106,10 +108,9 @@ export function QuizSession({
     apply((s) => sessionReducer(s, { type: 'timeout', at: Date.now() }))
   }, [apply])
 
-  if (state.phase === 'complete') {
-    return <SessionSummary state={state} onExit={onExit} onRestart={onRestart} />
-  }
-
+  // Checked before `complete`: a session built from an empty pool is born
+  // complete, so the other order left this message permanently unreachable and
+  // showed a bewildering "0 / 0" summary instead.
   if (questions.length === 0) {
     return (
       <div className="card">
@@ -125,6 +126,10 @@ export function QuizSession({
         </div>
       </div>
     )
+  }
+
+  if (state.phase === 'complete') {
+    return <SessionSummary state={state} onExit={onExit} onRestart={onRestart} />
   }
 
   if (state.phase === 'technique' && state.techniqueCard) {
@@ -152,6 +157,7 @@ export function QuizSession({
 
   // "Finish" only when there is genuinely nothing after this — including the
   // skipped questions still waiting for a second look.
+  const answeredCount = mainAnswers(state).length
   const stillParked = state.skipped.filter((i) => i !== state.index).length
   const isLastQuestion = state.revisiting
     ? stillParked === 0
@@ -170,12 +176,19 @@ export function QuizSession({
         </span>
         {config.timed && config.timeLimitMs && (
           <Timer
-            startedAt={state.startedAt}
-            limitMs={config.timeLimitMs}
-            paused={false}
+            deadlineAt={deadlineAt(state, config.timeLimitMs)}
+            pausedAt={state.pausedAt}
             onExpire={handleTimeout}
           />
         )}
+      </div>
+
+      {/* Decorative: the same count is already given in words just above. */}
+      <div className="quiz-progress" aria-hidden="true">
+        <div
+          className="quiz-progress-fill"
+          style={{ width: `${(answeredCount / questions.length) * 100}%` }}
+        />
       </div>
 
       {note === 'short-pool' && state.index === 0 && (
@@ -194,8 +207,9 @@ export function QuizSession({
 
       {state.revisiting && !inLearningLoop && (
         <div className="learning-banner">
-          Back to the ones you skipped — {state.skipped.length} to go. Have another look
-          now you have seen the rest.
+          Back to the ones you skipped —{' '}
+          {stillParked === 0 ? 'this is the last one' : `this one and ${stillParked} more`}.
+          Have another look now you have seen the rest.
         </div>
       )}
 
@@ -239,7 +253,8 @@ export function QuizSession({
         </button>
       </div>
 
-      {state.phase === 'question' && !state.revisiting && (
+      {/* Explained once, on the first question, rather than on every screen. */}
+      {state.phase === 'question' && !state.revisiting && answeredCount === 0 && (
         <p className="muted small" style={{ marginTop: 4 }}>
           Skipped questions come back at the end — nothing is lost.
         </p>

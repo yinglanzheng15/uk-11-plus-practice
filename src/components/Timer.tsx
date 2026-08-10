@@ -8,13 +8,15 @@ export function formatDuration(ms: number): string {
 }
 
 interface Props {
-  startedAt: number
-  limitMs: number
-  paused: boolean
+  /** Epoch ms at which the time runs out. */
+  deadlineAt: number
+  /** When the clock is stopped, the moment it stopped — otherwise null. */
+  pausedAt: number | null
   onExpire: () => void
 }
 
-export function Timer({ startedAt, limitMs, paused, onExpire }: Props) {
+export function Timer({ deadlineAt, pausedAt, onExpire }: Props) {
+  const paused = pausedAt !== null
   const [now, setNow] = useState(() => Date.now())
 
   useEffect(() => {
@@ -23,7 +25,8 @@ export function Timer({ startedAt, limitMs, paused, onExpire }: Props) {
     return () => window.clearInterval(id)
   }, [paused])
 
-  const remaining = startedAt + limitMs - now
+  // While paused the display holds at whatever was left when it stopped.
+  const remaining = deadlineAt - (pausedAt ?? now)
 
   useEffect(() => {
     if (!paused && remaining <= 0) onExpire()
