@@ -14,7 +14,7 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 **What's built:**
 - Full quiz engine with the wrong-answer learning loop, mastery tracking, streaks, and all revision modes (Quick 5/10/20, subject/topic practice, mixed, mistakes, weak areas, challenge, timed sessions).
-- **288 questions** (104 Maths, 80 English, 104 Verbal Reasoning) across 8 comprehension passages — every topic has at least 4 questions, and every subject has both Foundation (difficulty 1) and Stretch (difficulty 4) coverage.
+- **296 questions, each with five options A–E** (112 Maths, 80 English, 104 Verbal Reasoning) across 8 comprehension passages — every topic has at least 4 questions, and every subject has both Foundation (difficulty 1) and Stretch (difficulty 4) coverage.
 - **Two-layer question vetting**: `npm run validate` catches structural issues and machine-verifies maths answers via an optional `verify` expression; `npm run review` generates `docs/review-sheet.md` for human read-through, with `npm run review:accept` to avoid re-reviewing.
 - **Skip for now.** A question can be parked and comes back at the end of the run for a second look. A skip records nothing and never counts against the score.
 - **Resume after a refresh.** An unfinished session is saved as you go and offered back — *"Carry on where you left off?"* — for up to 24 hours. A timed session keeps the time it had left rather than burning it while the tab was shut.
@@ -25,8 +25,8 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 **Repo:** [github.com/yinglanzheng15/uk-11-plus-practice](https://github.com/yinglanzheng15/uk-11-plus-practice) — public, pushed and up to date.
 
 **Not yet done / deliberately deferred:**
-- **The 288 new-and-existing questions have passed `npm run validate` but only the first 156 have had a human read-through.** The letter sequences, codes and hidden words in the new batch were additionally checked by script. Run `npm run review` and read `docs/review-sheet.md` before treating the bank as vetted; then `npm run review:accept`.
-- **Question bank is at 288/850+** of the original stretch target. See `ROADMAP.md`.
+- **The 296 questions have passed `npm run validate` but only the first 156 have had a human read-through.** The letter sequences, codes and hidden words in the new batch were additionally checked by script. Run `npm run review` and read `docs/review-sheet.md` before treating the bank as vetted; then `npm run review:accept`.
+- **Question bank is at 296/850+** of the original stretch target. See `ROADMAP.md`.
 - No multi-child profiles, no NVR/problem-solving sections yet — both scoped in `ROADMAP.md` with rough effort/value notes.
 
 **Where to pick this up:** `ROADMAP.md` has the full prioritised list. `docs/question-format.md` covers adding questions. `docs/review-sheet.md` is generated, not hand-edited — run `npm run review` after any bank change.

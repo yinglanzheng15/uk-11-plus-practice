@@ -333,6 +333,46 @@ for (const q of questions) {
   }
 }
 
+/**
+ * Hidden-word questions state their target in capitals and hide it across the
+ * gap between two words. Whether the letters actually span that gap is exactly
+ * checkable — and one question in this bank was wrong about it for months
+ * ("koala members" spells LAME, not LAMP), which no amount of reading caught.
+ */
+function spansWordBoundary(sentence: string, word: string): boolean {
+  const target = word.toUpperCase()
+  const parts = sentence.toUpperCase().split(/[^A-Z]+/).filter(Boolean)
+  for (let i = 0; i < parts.length - 1; i += 1) {
+    const joined = parts[i] + parts[i + 1]
+    for (let start = 0; start < parts[i].length; start += 1) {
+      const end = start + target.length
+      if (end > joined.length) continue
+      // Must use at least one letter from each side of the gap.
+      if (end > parts[i].length && joined.slice(start, end) === target) return true
+    }
+  }
+  return false
+}
+
+for (const q of questions) {
+  if (q.skill !== 'hidden_words' || !Array.isArray(q.options)) continue
+  const stated = q.question.match(/\b([A-Z]{3,})\b/)
+  if (!stated) continue
+  const target = stated[1]
+  // Only meaningful when the options are sentences to search, not word answers.
+  if (!q.options.some((o) => String(o).includes(' '))) continue
+  q.options.forEach((option, i) => {
+    const hides = spansWordBoundary(String(option), target)
+    if (i === q.answer && !hides) {
+      errors.push(
+        `${q.id}: the marked answer does not hide "${target}" across a word boundary`,
+      )
+    } else if (i !== q.answer && hides) {
+      errors.push(`${q.id}: option ${i} also hides "${target}", so there are two answers`)
+    }
+  })
+}
+
 // ---- Bank-level checks ---------------------------------------------------
 
 // Questions are authored with the correct answer first and permuted at load

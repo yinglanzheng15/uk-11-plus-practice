@@ -15,7 +15,7 @@ Questions live in `src/data/` as plain JSON arrays, one file per subject. They a
   "passageId": "passage-lighthouse",  // optional; English comprehension only
 
   "question": "Which fraction is equivalent to 3/4?",
-  "options": ["6/8", "5/8", "9/16", "12/20"],
+  "options": ["6/8", "5/8", "9/16", "12/20", "4/5"],   // exactly five
   "answer": 0,                        // index into options — see note below
 
   "explanation": "3/4 is equivalent to 6/8 because both the numerator and denominator have been multiplied by 2.",
@@ -23,7 +23,8 @@ Questions live in `src/data/` as plain JSON arrays, one file per subject. They a
     "",                               // the correct option's entry is empty
     "The denominator has been doubled but the numerator only increased by 2.",
     "The numerator was multiplied by 3 but the denominator by 4.",
-    "12/20 simplifies to 3/5, not 3/4."
+    "12/20 simplifies to 3/5, not 3/4.",
+    "This adds 1 to the top and 1 to the bottom, which changes the value."
   ],
   "learningPoint": "To make an equivalent fraction, multiply or divide the top and the bottom by the same number.",
   "followUpIds": ["maths-fractions-004"],  // optional; see Follow-ups below
@@ -34,6 +35,12 @@ Questions live in `src/data/` as plain JSON arrays, one file per subject. They a
 ### Required fields
 
 `id`, `subject`, `topic`, `skill`, `type`, `difficulty`, `question`, `options`, `answer`, `explanation`, `learningPoint`, `tags`.
+
+### Exactly five options
+
+Every question has **five** options, A to E — the shape the papers these schools set actually use. Four is easier in a way that matters: a blind guess is worth 25% rather than 20%, and eliminating two leaves a choice of two rather than three. The validator rejects anything that is not exactly five.
+
+The fifth option has to be a *real* mistake, like the others. A padded fifth that nobody would pick restores the four-option question and wastes a line.
 
 ### Always write the correct answer first
 
@@ -155,10 +162,11 @@ Errors (these fail the build):
 - Duplicate options
 - Invalid subject or difficulty
 - `distractorNotes` length not matching `options`
-- Fewer than 3 options
+- Not exactly 5 options
 - `passageId` or `followUpIds` referencing something that doesn't exist
 - `followUpIds` referencing itself
 - **`verify` not matching the marked answer**, or not being valid arithmetic
+- **A hidden-word answer that does not really span a word boundary** — the letters are checked against every join in the sentence, and the wrong options are checked for accidentally hiding it too
 - **American usage** — "math", "soccer", "grade", "color", "$", `-ize` endings and similar
 - Malformed JSON
 

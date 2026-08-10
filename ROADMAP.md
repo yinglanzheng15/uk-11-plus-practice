@@ -8,7 +8,13 @@ Ordered roughly by value for the child per unit of effort. Nothing here is requi
 
 **The single highest-value change.** Everything else is polish by comparison.
 
-There are currently **288 questions** (104 Maths, 80 English, 104 VR) across 8 comprehension passages. The anti-repetition logic remembers the last 60 questions served, so the bank is now comfortably above the point where that constraint has to keep relaxing.
+There are currently **296 questions** (112 Maths, 80 English, 104 VR) across 8 comprehension passages, **each with five options A–E** to match the papers these schools set. The anti-repetition logic remembers the last 60 questions served, so the bank is now comfortably above the point where that constraint has to keep relaxing.
+
+### Done in the third pass (five options, 296)
+
+- **Every question moved from four options to five**, matching the papers Latymer, QE Barnet and Dame Alice Owen's actually set. Each fifth option was written individually with a note on why it tempts; the validator now requires exactly five.
+- **Eight new maths questions** in the style of a real sample paper: rearranging a volume or area formula, working backwards from a mean or a sale price, and — the pattern that was missing entirely — doing the sum in one unit and being asked for the answer in another.
+- Two genuine content errors surfaced, both invisible to the old validator: a hidden-word question whose marked answer did not contain the hidden word, and a pair of maths questions with identical stems that differing options had masked. The validator now checks hidden words against every word boundary, so that class of error cannot recur.
 
 ### Done in the second expansion (156 → 288)
 
