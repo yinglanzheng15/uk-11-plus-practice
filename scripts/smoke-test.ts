@@ -133,6 +133,53 @@ console.log('\n== quiz engine: wrong -> follow-up correct ==')
   check('follow-up still recorded in answers', s.answers.length === 2)
 }
 
+console.log('\n== declining the practice question ==')
+{
+  const questions = selectQuestions(cfg({ length: 3 }), emptyProgress(), 61).questions
+  let s: SessionState = createSession(cfg({ length: 3 }), questions)
+  const first = currentQuestion(s)!
+  const wrong = (first.answer + 1) % first.options.length
+
+  s = sessionReducer(s, { type: 'answer', option: wrong, at: Date.now() })
+  check('the explanation is shown first', s.phase === 'feedback')
+
+  s = sessionReducer(s, { type: 'move-on', at: Date.now() })
+  check('moving on skips the learning loop', s.phase === 'question' || s.phase === 'technique')
+  check('it goes to the next question', s.index === 1)
+  check('no follow-up was served', s.answers.every((a) => !a.isFollowUp))
+  check('the mistake is still recorded', mainAnswers(s).filter((a) => !a.correct).length === 1)
+  check('so it is there to review at the end', mainAnswers(s)[0].chosen === wrong)
+
+  // Available from inside the loop too, not just at the first explanation.
+  let t: SessionState = createSession(cfg({ length: 3 }), questions)
+  const q0 = currentQuestion(t)!
+  t = sessionReducer(t, { type: 'answer', option: (q0.answer + 1) % q0.options.length, at: Date.now() })
+  t = sessionReducer(t, { type: 'continue', at: Date.now() })
+  check('in the learning loop', t.phase === 'followup')
+  const fu = currentQuestion(t)!
+  t = sessionReducer(t, { type: 'answer', option: (fu.answer + 1) % fu.options.length, at: Date.now() })
+  t = sessionReducer(t, { type: 'move-on', at: Date.now() })
+  check('leaving the loop moves to the next question', t.index === 1)
+  check('the loop state is cleared', t.followUp === null && t.followUpRound === 0)
+
+  // It must not fire from anywhere else.
+  let u: SessionState = createSession(cfg({ length: 3 }), questions)
+  check(
+    'moving on does nothing before an answer',
+    sessionReducer(u, { type: 'move-on', at: Date.now() }) === u,
+  )
+
+  // The clock is handed back exactly as it is when continuing normally.
+  const LIMIT = 60_000
+  const t0 = 2_000_000
+  let v = createSession(cfg({ length: 3, timed: true, timeLimitMs: LIMIT }), questions, t0)
+  const q1 = currentQuestion(v)!
+  v = sessionReducer(v, { type: 'answer', option: (q1.answer + 1) % q1.options.length, at: t0 + 1_000 })
+  v = sessionReducer(v, { type: 'move-on', at: t0 + 21_000 })
+  check('reading time is given back when moving on', v.pausedMs === 20_000)
+  check('and the clock is running again', v.pausedAt === null)
+}
+
 console.log('\n== quiz engine: exhausting the retry loop ==')
 {
   const questions = selectQuestions(cfg({ length: 3 }), emptyProgress(), 11).questions

@@ -100,12 +100,13 @@ Storage schema went to version 2. Profiles saved before this get `streak: 1` for
 ## 5. Smaller improvements
 
 - ~~**Run the smoke test in CI.**~~ Done — `npm test` now runs in the workflow before the build.
+- ~~**A "why was I wrong?" review list.**~~ Done in part — the session summary now shows the full working for every mistake and every question left unanswered: what was chosen and why it was tempting, the correct answer, the explanation and the learning point. Revisiting *last week's* explanations without re-answering is still not possible.
+- ~~**Decline the practice question.**~~ Done — "Next question instead" sits beside "Try a practice question" after a mistake. The learning loop is the recommended path, not a compulsory one, and the end-of-session review carries the teaching for anyone who skips it.
 - ~~**Skip a question.**~~ Done — **Skip for now** parks a question and re-offers it once the run reaches the end. A skip records nothing at all, and anything still unanswered is reported in the summary rather than counted as wrong. Skipping again on the second pass releases it, which is what guarantees the session terminates.
 - **Act on flagged questions.** The Feedback tab collects question reports with their ids; there is no script yet that takes an exported feedback file and lists the flagged questions alongside their bank entries. A small `npm run triage` would close that loop.
 - ~~**Export and import progress.**~~ Done — the parent view has **Download progress** and **Restore from a file**. The file is plain JSON, produced in the browser and never uploaded. A restore is parsed and summarised (*"Saved on 10 August 2026: 412 questions answered across 38 sessions"*) before the parent confirms, because it replaces everything.
 - **More than one child.** One browser currently means one child. A simple profile picker would let siblings share a device.
 - **Per-question timing.** `elapsedMs` is already recorded but unused. The parent view could show which topics take longest — often more revealing than accuracy alone.
-- **A "why was I wrong?" review list.** Mistakes can be reviewed right after a session, but there is no way to revisit last week's explanations without re-answering.
 - **Offline use (PWA).** A service worker would let the app run with no connection at all — useful on a tablet in the car or on a train. The app is already fully self-contained, so this is mostly configuration.
 - **Sound and animation are absent by design.** If the child finds it dry, a small correct/incorrect chime (with a mute setting) would be the least distracting addition.
 

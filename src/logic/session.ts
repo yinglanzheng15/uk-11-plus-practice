@@ -58,6 +58,8 @@ export type SessionAction =
   | { type: 'answer'; option: number; at: number }
   | { type: 'continue'; at: number }
   | { type: 'skip'; at: number }
+  /** Decline the practice question after a mistake and carry on down the run. */
+  | { type: 'move-on'; at: number }
   | { type: 'timeout'; at: number }
 
 export function createSession(
@@ -199,6 +201,14 @@ export function sessionReducer(state: SessionState, action: SessionAction): Sess
     case 'timeout':
       if (state.phase === 'complete') return state
       return { ...state, phase: 'complete', endedAt: action.at, timedOut: true }
+
+    case 'move-on': {
+      // Offered only on a wrong answer, where the alternative is the learning
+      // loop. The explanation has already been read; the mistake is kept for
+      // the end-of-session review either way.
+      if (state.phase !== 'feedback' && state.phase !== 'followup-feedback') return state
+      return advance(state, action.at)
+    }
 
     case 'skip': {
       // Only a main question can be parked. A follow-up is the teaching part of

@@ -100,6 +100,10 @@ export function QuizSession({
     )
   }, [apply])
 
+  const handleMoveOn = useCallback(() => {
+    apply((s) => sessionReducer(s, { type: 'move-on', at: Date.now() }))
+  }, [apply])
+
   const handleSkip = useCallback(() => {
     apply((s) => sessionReducer(s, { type: 'skip', at: Date.now() }))
   }, [apply])
@@ -230,6 +234,8 @@ export function QuizSession({
             variant={state.phase === 'followup-feedback' ? 'followup' : 'main'}
             exhausted={state.followUpExhausted}
             onContinue={handleContinue}
+            onMoveOn={handleMoveOn}
+            moveOnLabel={isLastQuestion ? 'Finish instead' : 'Next question instead'}
             onReport={onReport}
             continueLabel={
               state.lastCorrect || state.followUpExhausted

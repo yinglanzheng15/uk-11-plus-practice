@@ -51,6 +51,8 @@ export function SessionSummary({ state, onExit, onRestart }: Props) {
   // Skipped and left, or not reached before the timer went. Either way they are
   // reported rather than quietly dropped, but they never count against accuracy.
   const unanswered = state.timedOut ? [] : unansweredQuestions(state)
+  // Everything worth a second look: what was got wrong, plus what was left.
+  const reviewable = mistakes.length + unanswered.length
 
   return (
     <>
@@ -106,17 +108,21 @@ export function SessionSummary({ state, onExit, onRestart }: Props) {
         )}
 
         <div className="actions">
-          {mistakes.length > 0 && (
+          {reviewable > 0 && (
             <button
               type="button"
-              className="btn"
+              className="btn btn-primary"
               onClick={() => setShowMistakes((v) => !v)}
               aria-expanded={showMistakes}
             >
-              {showMistakes ? 'Hide review' : `Review mistakes (${mistakes.length})`}
+              {showMistakes ? 'Hide the review' : `Go through these (${reviewable})`}
             </button>
           )}
-          <button type="button" className="btn btn-primary" onClick={onRestart}>
+          <button
+            type="button"
+            className={reviewable > 0 ? 'btn' : 'btn btn-primary'}
+            onClick={onRestart}
+          >
             Try another session
           </button>
           <button type="button" className="btn" onClick={onExit}>
@@ -127,27 +133,67 @@ export function SessionSummary({ state, onExit, onRestart }: Props) {
 
       {showMistakes && (
         <div className="card">
-          <h2 className="section-title">Questions to review</h2>
-          <ul className="list-plain">
-            {mistakes.map((a) => {
-              const q = getQuestion(a.questionId)
-              if (!q) return null
-              return (
-                <li key={a.questionId}>
-                  <p className="small muted" style={{ margin: 0 }}>
-                    {getSubject(q.subject).label} · {q.topic}
-                  </p>
-                  <p style={{ margin: '2px 0 6px', fontWeight: 600 }}>{q.question}</p>
-                  <p className="small" style={{ margin: 0 }}>
-                    <strong>Answer:</strong> {q.options[q.answer]}
-                  </p>
-                  <p className="small muted" style={{ margin: '4px 0 0' }}>
-                    {q.learningPoint}
-                  </p>
-                </li>
-              )
-            })}
-          </ul>
+          <h2 className="section-title">Going through them</h2>
+          <p className="muted small">
+            The full working for each one, so there is no need to sit through a practice
+            question during the quiz unless you want to.
+          </p>
+
+          {mistakes.length > 0 && (
+            <ul className="list-plain">
+              {mistakes.map((a) => {
+                const q = getQuestion(a.questionId)
+                if (!q) return null
+                const yourNote = a.chosen >= 0 ? q.distractorNotes?.[a.chosen] : undefined
+                return (
+                  <li key={a.questionId}>
+                    <p className="small muted" style={{ margin: 0 }}>
+                      {getSubject(q.subject).label} · {q.topic}
+                    </p>
+                    <p style={{ margin: '2px 0 6px', fontWeight: 600 }}>{q.question}</p>
+                    <p className="small" style={{ margin: 0 }}>
+                      <strong>You chose:</strong> {q.options[a.chosen]}
+                      {yourNote ? ` — ${yourNote}` : ''}
+                    </p>
+                    <p className="small" style={{ margin: '4px 0 0' }}>
+                      <strong>Correct answer:</strong> {q.options[q.answer]}
+                    </p>
+                    <p className="small" style={{ margin: '4px 0 0' }}>{q.explanation}</p>
+                    <p className="small muted" style={{ margin: '4px 0 0' }}>
+                      <strong>Remember: </strong>
+                      {q.learningPoint}
+                    </p>
+                  </li>
+                )
+              })}
+            </ul>
+          )}
+
+          {unanswered.length > 0 && (
+            <>
+              <h3 className="section-title" style={{ marginTop: 20 }}>
+                The ones you left
+              </h3>
+              <ul className="list-plain">
+                {unanswered.map((q) => (
+                  <li key={q.id}>
+                    <p className="small muted" style={{ margin: 0 }}>
+                      {getSubject(q.subject).label} · {q.topic}
+                    </p>
+                    <p style={{ margin: '2px 0 6px', fontWeight: 600 }}>{q.question}</p>
+                    <p className="small" style={{ margin: 0 }}>
+                      <strong>Correct answer:</strong> {q.options[q.answer]}
+                    </p>
+                    <p className="small" style={{ margin: '4px 0 0' }}>{q.explanation}</p>
+                    <p className="small muted" style={{ margin: '4px 0 0' }}>
+                      <strong>Remember: </strong>
+                      {q.learningPoint}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
       )}
     </>

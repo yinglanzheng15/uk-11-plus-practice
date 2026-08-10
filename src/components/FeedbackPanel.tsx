@@ -12,6 +12,12 @@ interface Props {
   exhausted: boolean
   onContinue: () => void
   continueLabel: string
+  /**
+   * Decline the practice question and carry on. Offered only after a mistake,
+   * where the primary button starts the learning loop instead.
+   */
+  onMoveOn?: () => void
+  moveOnLabel?: string
   onReport: (questionId: string, reason: FeedbackReason, message: string) => void
 }
 
@@ -23,8 +29,13 @@ export function FeedbackPanel({
   exhausted,
   onContinue,
   continueLabel,
+  onMoveOn,
+  moveOnLabel,
   onReport,
 }: Props) {
+  // A practice question is offered, not imposed: the child can read the
+  // explanation and move on, and every mistake is waiting in the summary.
+  const offerMoveOn = Boolean(onMoveOn) && !correct && !exhausted
   // The chosen answer is called out separately above, so it is left out here
   // rather than repeated verbatim.
   const traps = (question.distractorNotes ?? [])
@@ -102,7 +113,18 @@ export function FeedbackPanel({
         <button type="button" className="btn btn-primary" onClick={onContinue} autoFocus>
           {continueLabel}
         </button>
+        {offerMoveOn && (
+          <button type="button" className="btn" onClick={onMoveOn}>
+            {moveOnLabel ?? 'Next question'}
+          </button>
+        )}
       </div>
+
+      {offerMoveOn && (
+        <p className="muted small" style={{ marginTop: 8, marginBottom: 0 }}>
+          Either way, you can look at this one again at the end.
+        </p>
+      )}
 
       <ReportProblem
         key={question.id}

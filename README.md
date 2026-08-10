@@ -10,7 +10,7 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 ## Status (handoff summary)
 
-**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (109 checks) and `npm run build` are all green as of the latest commit. No known bugs.
+**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (121 checks) and `npm run build` are all green as of the latest commit. No known bugs.
 
 **What's built:**
 - Full quiz engine with the wrong-answer learning loop, mastery tracking, streaks, and all revision modes (Quick 5/10/20, subject/topic practice, mixed, mistakes, weak areas, challenge, timed sessions).
@@ -44,11 +44,17 @@ When a question is answered incorrectly, the child gets:
 3. **Why** that answer is correct
 4. **Why the other answers are traps** — each distractor represents a realistic mistake
 5. A short **Remember** rule
-6. A **related follow-up question** they must get right before continuing
+6. A **related follow-up question** — offered, not imposed
 
 If the follow-up is also wrong, they get a second explanation and a second related question. After two attempts the app moves on with an encouraging message and flags the topic to revisit later — the child is never trapped.
 
 Follow-up questions are recorded against topic mastery but **never count against the session score**, so engaging with the learning loop can only help.
+
+### Or leave it to the end
+
+Alongside *"Try a practice question"* there is a quieter **"Next question instead"**. Sitting through a practice question is the right thing when the child is working through a topic; it is the wrong thing when they are doing a timed run and want to keep going. Declining costs nothing — the mistake is recorded either way.
+
+Whatever they choose, the session summary ends with **"Go through these"**: every question got wrong *and* every one left unanswered, each with what they picked and why it was tempting, the correct answer, the full explanation and the rule to remember. That is the review, and it is where the teaching lands if the practice questions were declined.
 
 ---
 
@@ -67,7 +73,7 @@ Other scripts:
 | `npm run validate` | Check the question bank for errors and quality warnings |
 | `npm run review` | Write `docs/review-sheet.md` for human vetting of questions |
 | `npm run review:accept` | Mark the current questions as reviewed |
-| `npm test` | Run the engine test suite (109 checks) |
+| `npm test` | Run the engine test suite (121 checks) |
 | `npm run typecheck` | TypeScript check, no build |
 | `npm run build` | Validate → typecheck → build to `dist/` |
 | `npm run preview` | Serve the production build locally |
