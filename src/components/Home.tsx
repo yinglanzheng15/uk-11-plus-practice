@@ -46,6 +46,44 @@ export function Home({
     (t) => t.score !== null && t.score < 70 && t.attempts >= 2,
   )
 
+  // A single, adaptive suggestion so the child always has an obvious next step.
+  const recommendation = (() => {
+    if (progress.totals.answered === 0) {
+      return {
+        eyebrow: 'Start here',
+        title: 'Warm up with a Quick 5',
+        blurb: 'Five mixed questions to get going — only a few minutes.',
+        cta: 'Start Quick 5',
+        run: () => start('quick5', 5, []),
+      }
+    }
+    if (mistakes.length >= 3) {
+      return {
+        eyebrow: 'Recommended',
+        title: 'Review your mistakes',
+        blurb: `You have ${mistakes.length} questions worth another look. Fixing these lifts your score fastest.`,
+        cta: 'Review mistakes',
+        run: () => start('mistakes', Math.min(10, mistakes.length), []),
+      }
+    }
+    if (weakTopics.length > 0) {
+      return {
+        eyebrow: 'Recommended',
+        title: 'Practise your weak areas',
+        blurb: `${weakTopics.length} topic${weakTopics.length === 1 ? '' : 's'} could use some work. A focused 10 makes a real difference.`,
+        cta: 'Practise weak areas',
+        run: () => start('weak', 10, []),
+      }
+    }
+    return {
+      eyebrow: 'Keep it up',
+      title: 'A mixed Quick 10',
+      blurb: 'Ten questions across every subject to keep everything sharp.',
+      cta: 'Start Quick 10',
+      run: () => start('quick10', 10, []),
+    }
+  })()
+
   function start(mode: SessionMode, length: number, subjects: SubjectId[], topic?: string) {
     onStart({
       mode,
@@ -98,6 +136,34 @@ export function Home({
 
   return (
     <>
+      <div className="greeting">
+        <h2>Ready to practise?</h2>
+        <p>
+          {progress.totals.answered === 0
+            ? 'Pick something below to begin.'
+            : `${progress.totals.answered} questions answered so far — nice work.`}
+        </p>
+      </div>
+
+      {!resumable && (
+        <div className="card recommend">
+          <p className="recommend-eyebrow">{recommendation.eyebrow}</p>
+          <h2>{recommendation.title}</h2>
+          <p className="muted" style={{ marginTop: 0 }}>
+            {recommendation.blurb}
+          </p>
+          <div className="actions">
+            <button
+              type="button"
+              className="btn btn-on-accent"
+              onClick={recommendation.run}
+            >
+              {recommendation.cta}
+            </button>
+          </div>
+        </div>
+      )}
+
       {resumable && (
         <div className="card">
           <h2 className="section-title">Carry on where you left off?</h2>
@@ -148,7 +214,10 @@ export function Home({
               style={{ ['--tile-colour' as string]: s.colour }}
               onClick={() => setSubjectPicker(s.id)}
             >
-              {s.label}
+              <span>
+                <span className="tile-dot" aria-hidden="true" />
+                {s.label}
+              </span>
               <span className="tile-sub">Choose a topic</span>
             </button>
           ))}

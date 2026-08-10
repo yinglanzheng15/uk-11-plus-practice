@@ -34,25 +34,68 @@ export function Dashboard({ progress }: Props) {
     )
   }
 
+  // Accuracy per completed session, oldest → newest, for the trend chart.
+  const recentSessions = progress.sessions
+    .filter((s) => s.total > 0)
+    .slice(-10)
+    .map((s) => Math.round((s.correct / s.total) * 100))
+
   return (
     <>
       <div className="card">
         <h2 className="section-title">Overall</h2>
-        <div className="stat-row">
-          <div className="stat">
-            <div className="stat-value">{progress.totals.answered}</div>
-            <div className="stat-label">Questions answered</div>
+        <div className="overall-grid">
+          <div
+            className="ring"
+            style={{ ['--ring-pct' as string]: accuracy }}
+            role="img"
+            aria-label={`Overall accuracy ${accuracy} per cent`}
+          >
+            <div className="ring-label">
+              <div className="ring-value">{accuracy}%</div>
+              <div className="ring-sub">Accuracy</div>
+            </div>
           </div>
-          <div className="stat">
-            <div className="stat-value">{accuracy}%</div>
-            <div className="stat-label">Accuracy</div>
-          </div>
-          <div className="stat">
-            <div className="stat-value">{progress.streak.current}</div>
-            <div className="stat-label">Day streak (best {progress.streak.best})</div>
+          <div className="stat-row" style={{ flex: 1 }}>
+            <div className="stat">
+              <div className="stat-value">{progress.totals.answered}</div>
+              <div className="stat-label">Questions answered</div>
+            </div>
+            <div className="stat">
+              <div className="stat-value">{progress.streak.current}</div>
+              <div className="stat-label">Day streak</div>
+            </div>
+            <div className="stat">
+              <div className="stat-value">{progress.streak.best}</div>
+              <div className="stat-label">Best streak</div>
+            </div>
           </div>
         </div>
       </div>
+
+      {recentSessions.length >= 2 && (
+        <div className="card">
+          <h2 className="section-title">Accuracy over time</h2>
+          <div
+            className="trend"
+            role="img"
+            aria-label={`Accuracy across your last ${recentSessions.length} sessions: ${recentSessions.join(', ')} per cent`}
+          >
+            {recentSessions.map((pct, i) => (
+              <div className="trend-bar" key={i} title={`${pct}%`}>
+                <span style={{ height: `${Math.max(pct, 4)}%` }} />
+              </div>
+            ))}
+          </div>
+          <div className="trend-axis">
+            <span>Oldest</span>
+            <span>Most recent</span>
+          </div>
+          <p className="muted small" style={{ marginTop: 10, marginBottom: 0 }}>
+            Each bar is one practice session. Watch it climb as you improve.
+          </p>
+        </div>
+      )}
 
       <div className="card">
         <h2 className="section-title">By subject</h2>
