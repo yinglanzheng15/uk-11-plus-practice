@@ -14,7 +14,7 @@ import { shuffleOptions } from '../src/data/shuffle'
 const here = dirname(fileURLToPath(import.meta.url))
 const dataDir = join(here, '..', 'src', 'data')
 
-const VALID_SUBJECTS = ['maths', 'english', 'verbal-reasoning']
+const VALID_SUBJECTS = ['maths', 'english', 'verbal-reasoning', 'non-verbal-reasoning']
 /** Matched to the papers these schools actually set — see docs/question-format.md. */
 const OPTIONS_PER_QUESTION = 5
 const REQUIRED_FIELDS = [

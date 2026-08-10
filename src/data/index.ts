@@ -2,6 +2,7 @@ import type { Passage, Question, SubjectId } from '../types'
 import maths from './maths.json'
 import english from './english.json'
 import verbalReasoning from './verbal-reasoning.json'
+import nonVerbalReasoning from './non-verbal-reasoning.json'
 import passagesJson from './passages.json'
 import { SUBJECTS } from './subjects'
 import { shuffleOptions } from './shuffle'
@@ -18,6 +19,7 @@ export const QUESTIONS: readonly Question[] = Object.freeze(
     ...(maths as Question[]),
     ...(english as Question[]),
     ...(verbalReasoning as Question[]),
+    ...(nonVerbalReasoning as Question[]),
   ].map(shuffleOptions),
 )
 

@@ -4,6 +4,25 @@ Ordered roughly by value for the child per unit of effort. Nothing here is requi
 
 ---
 
+## 0. What the target exams actually look like
+
+This drives several decisions below, so it is worth stating plainly. The formats were checked against each school's own admissions material; **they change year to year, so re-check the school's site for the exact entry year before relying on any of this.**
+
+| School | Format |
+| --- | --- |
+| **QE Boys, Barnet** | English and Maths, **both multiple choice**, answers on a separate OMR sheet |
+| **The Latymer School, Edmonton** | Via Quest Assessments: Maths and English comprehension **multiple choice** (OMR), **plus a handwritten creative-writing paper** |
+| **Dame Alice Owen's** | **Part 1** GL Verbal Reasoning — 80 multiple-choice questions in 50 minutes (~37s each). **Part 2** (top ~325 only): English (1 hr, comprehension **plus extended writing**) and Maths (1 hr), **both written internally** |
+
+What this implied, and what was done about it:
+
+- **Five options, not four.** A real sample paper offered five answers (A–E). All four-option questions were converted — see section 1. A blind guess on five is worth 20%, not 25%.
+- **"Exam pace" timing.** The adjustable pace (section 5) includes a 37s/question preset matched to Dame Alice Owen's VR paper.
+- **Writing is the real gap the app cannot fill.** Latymer's creative-writing paper and DAO's Part 2 extended writing are two of the three schools, need a human to mark, and no multiple-choice app touches them. Budget separate time for these outside the app.
+- **Written-answer maths was scoped and declined for now** — see the `written-answers` branch and `docs/written-answers.md`. Only DAO Part 2 maths is written, and only for candidates who clear Part 1; a written paper marked internally likely rewards *method*, which a text box cannot assess. The analysis and a runnable answer-matching spike are on the branch if this changes.
+
+---
+
 ## 1. Expand the question bank
 
 **The single highest-value change.** Everything else is polish by comparison.
@@ -39,7 +58,8 @@ There are currently **296 questions** (112 Maths, 80 English, 104 VR) across 8 c
 | --- | --- | --- | --- | --- | --- |
 | ~~Start~~ | ~~32~~ | ~~20~~ | ~~30~~ | ~~82~~ | ~1 week of variety |
 | ~~Then~~ | ~~63~~ | ~~41~~ | ~~52~~ | ~~156~~ | ~3 weeks |
-| **Now** | **104** | **80** | **104** | **288** | ~1 month |
+| ~~Then~~ | ~~104~~ | ~~80~~ | ~~104~~ | ~~288~~ | ~1 month |
+| **Now** | **112** | **80** | **104** | **296** | five options each |
 | Full | 300 | 250 | 300 | 850+ | a full year |
 
 Still worth adding: more comprehension passages (8 now, **10–12** would be comfortable — passages are the fastest thing to memorise), and more difficulty-4 stretch questions, which remain the thinnest band despite nearly doubling.
@@ -123,11 +143,11 @@ Storage schema went to version 2. Profiles saved before this get `streak: 1` for
 
 The architecture already supports extra subjects — a JSON file, an import, and a registry entry, as described in the README. The London 11+ Consortium format also includes:
 
-- **Non-Verbal Reasoning** — the significant one, and the hardest to add: it needs shapes and patterns, so questions would need inline SVG rather than text. Worth designing an `svg` field on the question model before starting.
+- **Non-Verbal Reasoning** — **a 12-question taster now exists** (`src/data/non-verbal-reasoning.json`): odd-one-out, sequences and figure pairs, drawn with inline SVG. The question model gained `figure` and `optionFigures` fields and `QuestionCard` renders them, so the format is proven end-to-end. Growing it into a full section means more types (rotation, reflection, matrix/grid completion, hidden shape, cube nets) and, ideally, a small library of reusable SVG shape helpers so each question isn't hand-drawn. NVR is inherently inaccessible to screen-reader-only users; per-option text descriptions mitigate but don't remove this.
 - **Problem solving** — largely multi-step reasoning; fits the existing text-based model with no changes.
 - **Creative comprehension** — open-ended writing, which does not fit multiple choice at all. Would need a different answer type and, realistically, a parent to mark it.
 
-Problem solving is the natural next section. NVR is the most valuable but the most work.
+Problem solving is the natural next section. Growing NVR beyond the taster is the most valuable but the most work. See `docs/latymer-alignment.md` for the Maths/English/VR question types the real GL papers use that the text banks don't yet cover.
 
 ---
 

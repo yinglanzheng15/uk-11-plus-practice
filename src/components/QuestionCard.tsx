@@ -50,16 +50,27 @@ export function QuestionCard({ question, selected, revealed, onSelect }: Props) 
 
       <p className="question-text">{question.question}</p>
 
+      {question.figure && (
+        <div
+          className="figure figure-stem"
+          role="img"
+          aria-label="Question figure"
+          dangerouslySetInnerHTML={{ __html: question.figure }}
+        />
+      )}
+
       <div
         className="options"
         role="group"
         aria-label="Answer options"
       >
-        {question.options.map((option, i) => (
+        {question.options.map((option, i) => {
+          const figure = question.optionFigures?.[i]
+          return (
           <button
             key={i}
             type="button"
-            className={optionClass(i)}
+            className={figure ? `${optionClass(i)} option-visual` : optionClass(i)}
             disabled={revealed}
             aria-pressed={selected === i}
             onClick={() => onSelect(i)}
@@ -67,7 +78,20 @@ export function QuestionCard({ question, selected, revealed, onSelect }: Props) 
             <span className="option-letter" aria-hidden="true">
               {LETTERS[i]}
             </span>
-            <span>{option}</span>
+            {figure ? (
+              <>
+                {/* The shape is the answer; its text description is the
+                    accessible name and the review-sheet fallback. */}
+                <span
+                  className="figure option-figure"
+                  aria-hidden="true"
+                  dangerouslySetInnerHTML={{ __html: figure }}
+                />
+                <span className="sr-only">{option}</span>
+              </>
+            ) : (
+              <span>{option}</span>
+            )}
             {/* Correctness is never signalled by colour alone. */}
             {revealed && i === question.answer && (
               <span className="option-mark">✓ Correct answer</span>
@@ -76,7 +100,8 @@ export function QuestionCard({ question, selected, revealed, onSelect }: Props) 
               <span className="option-mark">✗ Your answer</span>
             )}
           </button>
-        ))}
+          )
+        })}
       </div>
     </>
   )

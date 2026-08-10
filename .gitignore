@@ -3,3 +3,7 @@ dist/
 *.local
 .DS_Store
 .vite/
+
+# Third-party 11+ familiarisation papers (© GL Assessment) — kept locally for
+# reference only, never redistributed. See docs/latymer-alignment.md.
+data/past papers/

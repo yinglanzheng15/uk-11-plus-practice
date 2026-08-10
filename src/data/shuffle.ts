@@ -16,6 +16,8 @@ interface Shufflable {
   options: string[]
   answer: number
   distractorNotes?: string[]
+  /** Parallel to options; realigned alongside them when present (NVR figures). */
+  optionFigures?: string[]
 }
 
 function hashString(value: string): number {
@@ -54,6 +56,9 @@ export function shuffleOptions<T extends Shufflable>(question: T): T {
     answer: order.indexOf(question.answer),
     distractorNotes: question.distractorNotes
       ? order.map((i) => question.distractorNotes![i])
+      : undefined,
+    optionFigures: question.optionFigures
+      ? order.map((i) => question.optionFigures![i])
       : undefined,
   }
 }

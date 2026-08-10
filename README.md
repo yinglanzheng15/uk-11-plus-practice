@@ -14,11 +14,12 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 **What's built:**
 - Full quiz engine with the wrong-answer learning loop, mastery tracking, streaks, and all revision modes (Quick 5/10/20, subject/topic practice, mixed, mistakes, weak areas, challenge, timed sessions).
-- **296 questions, each with five options A–E** (112 Maths, 80 English, 104 Verbal Reasoning) across 8 comprehension passages — every topic has at least 4 questions, and every subject has both Foundation (difficulty 1) and Stretch (difficulty 4) coverage.
+- **308 questions, each with five options A–E** (112 Maths, 80 English, 104 Verbal Reasoning, 12 Non-Verbal Reasoning) across 8 comprehension passages — every topic has at least 4 questions, and every subject has both Foundation (difficulty 1) and Stretch (difficulty 4) coverage. The 12 Non-Verbal Reasoning questions are a **taster** of a new visual (inline-SVG) subject — see `docs/latymer-alignment.md`.
 - **Two-layer question vetting**: `npm run validate` catches structural issues and machine-verifies maths answers via an optional `verify` expression; `npm run review` generates `docs/review-sheet.md` for human read-through, with `npm run review:accept` to avoid re-reviewing.
 - **Skip for now.** A question can be parked and comes back at the end of the run for a second look. A skip records nothing and never counts against the score.
 - **Resume after a refresh.** An unfinished session is saved as you go and offered back — *"Carry on where you left off?"* — for up to 24 hours. A timed session keeps the time it had left rather than burning it while the tab was shut.
 - **Spaced repetition.** A question answered correctly comes back after 1 day, then 3, then 7, then 21. A mistake resets it to the start of the ladder.
+- **Adjustable timing.** A grown-up sets the pace of timed sessions in the Parent tab — from Gentle (90s a question) to Exam pace (37s, roughly Dame Alice Owen's verbal reasoning paper). The clock stops while an explanation is on screen, so reading the feedback never costs exam time.
 - **Parent view** with Progress and Feedback tabs, plus **download and restore of progress** as a JSON file — the way to move a child's history to a new device, or to survive a cleared browser.
 - **Live at [yinglanzheng15.github.io/uk-11-plus-practice](https://yinglanzheng15.github.io/uk-11-plus-practice/)**, redeployed by GitHub Actions on every push to `main`.
 
@@ -27,7 +28,8 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 **Not yet done / deliberately deferred:**
 - **The 296 questions have passed `npm run validate` but only the first 156 have had a human read-through.** The letter sequences, codes and hidden words in the new batch were additionally checked by script. Run `npm run review` and read `docs/review-sheet.md` before treating the bank as vetted; then `npm run review:accept`.
 - **Question bank is at 296/850+** of the original stretch target. See `ROADMAP.md`.
-- No multi-child profiles, no NVR/problem-solving sections yet — both scoped in `ROADMAP.md` with rough effort/value notes.
+- No multi-child profiles yet. **Non-Verbal Reasoning now has a 12-question taster** (odd-one-out, sequences, figure pairs) proving the inline-SVG format; growing it into a full section, plus a Problem-Solving section, are scoped in `ROADMAP.md`.
+- **The Latymer / GL familiarisation papers** (added under `data/past papers/`) were analysed in `docs/latymer-alignment.md`, which lists the specific Maths/English/VR question types still worth adding. Those PDFs are © GL Assessment — do **not** commit them to the public repo.
 
 **Where to pick this up:** `ROADMAP.md` has the full prioritised list. `docs/question-format.md` covers adding questions. `docs/review-sheet.md` is generated, not hand-edited — run `npm run review` after any bank change.
 

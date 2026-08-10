@@ -38,6 +38,13 @@ export const SUBJECTS: SubjectMeta[] = [
     colour: '#0f9d58',
     description: 'Word relationships, codes, sequences, analogies and logic.',
   },
+  {
+    id: 'non-verbal-reasoning',
+    label: 'Non-Verbal Reasoning',
+    shortLabel: 'NVR',
+    colour: '#e8590c',
+    description: 'Shapes and patterns: odd one out, sequences and figure pairs.',
+  },
 ]
 
 const bySubjectId = new Map(SUBJECTS.map((s) => [s.id, s]))

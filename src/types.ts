@@ -28,7 +28,19 @@ export interface Question {
   /** English comprehension questions reference a passage by id. */
   passageId?: string
   question: string
+  /**
+   * Optional inline SVG for a visual (Non-Verbal Reasoning) question stem —
+   * the sequence or pair shown above the answer choices. Bundled, authored
+   * markup only; it is rendered as-is.
+   */
+  figure?: string
   options: string[]
+  /**
+   * Optional inline SVG per option, parallel to `options`, for visual answer
+   * choices. When present, each option renders its shape; the matching
+   * `options` string is the accessible description and review-sheet fallback.
+   */
+  optionFigures?: string[]
   /** Index into `options`. */
   answer: number
   explanation: string

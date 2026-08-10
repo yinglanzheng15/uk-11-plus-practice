@@ -320,6 +320,47 @@ button {
   white-space: nowrap;
 }
 
+/* ---------- Non-Verbal Reasoning figures ---------- */
+
+/* Shapes are drawn with stroke/fill of currentColor, so they inherit the
+   text colour and stay legible in both light and dark themes. */
+.figure {
+  color: var(--text);
+}
+
+.figure svg {
+  display: block;
+  height: auto;
+}
+
+.figure-stem {
+  margin: 0 0 18px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+}
+
+.figure-stem svg {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.option-figure {
+  flex: 0 0 auto;
+}
+
+.option-figure svg {
+  width: 64px;
+  height: 64px;
+}
+
+/* Keep the tick/cross pinned right even though the shape replaces the text. */
+.option-visual {
+  align-items: center;
+}
+
 /* ---------- Feedback ---------- */
 
 .feedback {
