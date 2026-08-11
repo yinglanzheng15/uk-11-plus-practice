@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { BackupPanel } from './BackupPanel'
-import { PacePanel } from './PacePanel'
 import { FeedbackTab } from './FeedbackTab'
+import { SettingsView } from './SettingsView'
 import { ProgressBar } from './ProgressBar'
 import { formatDuration } from './Timer'
 import { getSubject, SUBJECTS } from '../data/subjects'
@@ -37,8 +36,7 @@ export function ParentView({
   onRestore,
   onSetSecondsPerQuestion,
 }: Props) {
-  const [confirming, setConfirming] = useState(false)
-  const [tab, setTab] = useState<'progress' | 'feedback'>('progress')
+  const [tab, setTab] = useState<'progress' | 'feedback' | 'settings'>('progress')
   const feedbackCount = (progress.feedback ?? []).length
 
   return (
@@ -67,30 +65,43 @@ export function ParentView({
           Feedback
           {feedbackCount > 0 && <span className="tab-count">{feedbackCount}</span>}
         </button>
+        <button
+          type="button"
+          role="tab"
+          id="tab-settings"
+          aria-selected={tab === 'settings'}
+          aria-controls="panel-parent"
+          className={`tab ${tab === 'settings' ? 'tab-active' : ''}`}
+          onClick={() => setTab('settings')}
+        >
+          Settings
+        </button>
       </div>
 
       <div
         id="panel-parent"
         role="tabpanel"
-        aria-labelledby={tab === 'progress' ? 'tab-progress' : 'tab-feedback'}
+        aria-labelledby={
+          tab === 'feedback' ? 'tab-feedback' : tab === 'settings' ? 'tab-settings' : 'tab-progress'
+        }
       >
-        {tab === 'feedback' ? (
+        {tab === 'feedback' && (
           <FeedbackTab
             progress={progress}
             onAddNote={onAddNote}
             onRemove={onRemoveFeedback}
             onClear={onClearFeedback}
           />
-        ) : (
-          <ParentProgress
+        )}
+        {tab === 'settings' && (
+          <SettingsView
             progress={progress}
             onReset={onReset}
             onRestore={onRestore}
             onSetSecondsPerQuestion={onSetSecondsPerQuestion}
-            confirming={confirming}
-            setConfirming={setConfirming}
           />
         )}
+        {tab === 'progress' && <ParentProgress progress={progress} />}
       </div>
     </>
   )
@@ -98,21 +109,9 @@ export function ParentView({
 
 interface ProgressProps {
   progress: Progress
-  onReset: () => void
-  onRestore: (progress: Progress) => void
-  onSetSecondsPerQuestion: (seconds: number) => void
-  confirming: boolean
-  setConfirming: (v: boolean) => void
 }
 
-function ParentProgress({
-  progress,
-  onReset,
-  onRestore,
-  onSetSecondsPerQuestion,
-  confirming,
-  setConfirming,
-}: ProgressProps) {
+function ParentProgress({ progress }: ProgressProps) {
   const topics = topicMastery(progress)
     .filter((t) => t.attempts > 0)
     .sort((a, b) => (a.score ?? 0) - (b.score ?? 0))
@@ -244,44 +243,6 @@ function ParentProgress({
           </ul>
         </div>
       )}
-
-      <PacePanel
-        secondsPerQuestion={progress.preferences.secondsPerQuestion}
-        onChange={onSetSecondsPerQuestion}
-      />
-
-      <BackupPanel progress={progress} onRestore={onRestore} />
-
-      <div className="card">
-        <h2 className="section-title">Reset</h2>
-        {confirming ? (
-          <>
-            <p>
-              This will permanently delete all progress stored in this browser. It cannot
-              be undone.
-            </p>
-            <div className="actions">
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={() => {
-                  onReset()
-                  setConfirming(false)
-                }}
-              >
-                Yes, delete everything
-              </button>
-              <button type="button" className="btn" onClick={() => setConfirming(false)}>
-                Cancel
-              </button>
-            </div>
-          </>
-        ) : (
-          <button type="button" className="btn" onClick={() => setConfirming(true)}>
-            Reset all progress
-          </button>
-        )}
-      </div>
     </>
   )
 }
