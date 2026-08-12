@@ -1,5 +1,6 @@
 import { QUESTIONS, topicKey } from '../data'
 import { topicMastery } from './mastery'
+import { paperFor, sectionTopicKeys } from './papers'
 import { mistakeIds } from './progress'
 import type { Progress, Question, QuestionRecord, SessionConfig } from '../types'
 
@@ -149,6 +150,8 @@ export function selectQuestions(
   seed: number = Date.now(),
   now: number = Date.now(),
 ): SelectionResult {
+  if (config.mode === 'paper') return selectPaper(config, progress, seed, now)
+
   const rand = mulberry32(seed)
   const pool = poolForMode(config, progress)
 
@@ -206,6 +209,54 @@ export function selectQuestions(
     config.subjects.length === 1 ? chosen : interleaveBySubject(chosen)
 
   return { questions, note }
+}
+
+/**
+ * Fill a full paper section by section, in the booklet's own order.
+ *
+ * Each section is just an ordinary single-subject selection restricted to that
+ * section's topics, so every rule the rest of the app relies on — spaced
+ * repetition, the difficulty ceiling, avoiding recently served questions —
+ * applies unchanged within it. What a paper adds is the *quota*: a run of 50
+ * that happens to contain no geometry is not a maths paper, however well the
+ * questions were chosen.
+ *
+ * Sections are never interleaved. Sitting a whole section before moving on is
+ * part of what the child is rehearsing.
+ */
+function selectPaper(
+  config: SessionConfig,
+  progress: Progress,
+  seed: number,
+  now: number,
+): SelectionResult {
+  const paper = paperFor(config.subjects[0])
+  if (!paper) return { questions: [], note: 'empty-pool' }
+
+  const questions: Question[] = []
+  let short = false
+  paper.sections.forEach((section, i) => {
+    const result = selectQuestions(
+      {
+        mode: 'subject',
+        length: section.count,
+        subjects: [paper.subject],
+        topicKeys: sectionTopicKeys(paper, section),
+        timed: false,
+      },
+      progress,
+      // A per-section seed, or every section would draw the same jitter.
+      seed + i * 7919,
+      now,
+    )
+    // A thin section shortens the paper rather than failing it — the child
+    // still sits a real run, and the summary reports what was actually served.
+    if (result.questions.length < section.count) short = true
+    questions.push(...result.questions)
+  })
+
+  if (questions.length === 0) return { questions: [], note: 'empty-pool' }
+  return { questions, note: short ? 'short-pool' : undefined }
 }
 
 function interleaveBySubject(questions: Question[]): Question[] {

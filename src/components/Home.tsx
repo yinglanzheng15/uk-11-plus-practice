@@ -6,6 +6,7 @@ import { mistakeIds, overallAccuracy } from '../logic/progress'
 import { topicMastery } from '../logic/mastery'
 import { mainAnswers } from '../logic/session'
 import { paceLabel, timeLimitFor } from '../logic/pace'
+import { PAPERS, paperLength, type Paper } from '../logic/papers'
 import type { RestoredSession } from '../logic/sessionStorage'
 import type { Progress, SessionConfig, SessionMode, SubjectId } from '../types'
 
@@ -120,6 +121,21 @@ export function Home({
   /** Quick and mixed sessions all honour the panel's selection. */
   function startPractice(mode: SessionMode, length: number) {
     start(mode, length, practiceSubjects, chosenTopicKeys)
+  }
+
+  /**
+   * A paper is always timed, and to the booklet's own total rather than the
+   * pace preference. The preference sets how long a question should take in
+   * practice; a paper is asking whether the child can finish the real thing.
+   */
+  function startPaper(paper: Paper) {
+    onStart({
+      mode: 'paper',
+      length: paperLength(paper),
+      subjects: [paper.subject],
+      timed: true,
+      timeLimitMs: paper.minutes * 60_000,
+    })
   }
 
   if (subjectPicker) {
@@ -310,6 +326,38 @@ export function Home({
             Challenge
             <span className="tile-sub">Harder questions</span>
           </button>
+        </div>
+
+        <h3 className="section-title" style={{ marginTop: 22 }}>
+          Full paper
+        </h3>
+        <p className="muted small" style={{ marginTop: -6 }}>
+          A whole paper in one sitting, timed like the real thing, with a
+          section-by-section breakdown at the end. Sit it when there is a clear
+          fifty minutes — this one is not meant to be interrupted.
+        </p>
+        <div className="tile-grid">
+          {PAPERS.map((paper) => {
+            const subject = SUBJECTS.find((s) => s.id === paper.subject)
+            if (!subject) return null
+            return (
+              <button
+                key={paper.subject}
+                type="button"
+                className="tile tile-accent"
+                style={{ ['--tile-colour' as string]: subject.colour }}
+                onClick={() => startPaper(paper)}
+              >
+                <span>
+                  <span className="tile-dot" aria-hidden="true" />
+                  {subject.label}
+                </span>
+                <span className="tile-sub">
+                  {paperLength(paper)} questions · {paper.minutes} minutes
+                </span>
+              </button>
+            )
+          })}
         </div>
 
         <label

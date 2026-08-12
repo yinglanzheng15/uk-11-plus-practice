@@ -27,7 +27,7 @@ What this implied, and what was done about it:
 
 **The single highest-value change.** Everything else is polish by comparison.
 
-There are currently **434 questions** (208 Maths, 80 English, 134 VR, 12 NVR) across 8 comprehension passages, **each with five options A–E** to match the papers these schools set. The anti-repetition logic remembers the last 60 questions served, so the bank is now comfortably above the point where that constraint has to keep relaxing.
+There are currently **450 questions** (208 Maths, 96 English, 134 VR, 12 NVR) across 8 comprehension passages, **each with five options A–E** to match the papers these schools set. The anti-repetition logic remembers the last 60 questions served, so the bank is now comfortably above the point where that constraint has to keep relaxing.
 
 ### Done in the fourth pass (templates, 308 → 434)
 
@@ -189,10 +189,10 @@ paying users arrive.
 - **Maths `verify` coverage is 157/208 (75%).** The other 51 are hand-checked only. The
   validator machine-checks the arithmetic wherever `verify` is present, so every one added is
   a class of error permanently ruled out. Cheapest quality win in the repo.
-- **Only 15 of 434 questions (3%) have explicit `followUpIds`.** The learning loop falls back
+- **Only 15 of 450 questions (3%) have explicit `followUpIds`.** The learning loop falls back
   to same-skill then same-topic matching, which works, but the follow-up after a mistake is
   the teaching moment — the hand-picked ones are much better than the inferred ones.
-- **English is the thinnest subject at 80 questions**, and 36 of those are Comprehension
+- **English is the thinnest subject at 96 questions**, and 36 of those are Comprehension
   bound to 8 passages. Grammar/Spelling/Punctuation/Vocabulary have 10–12 each. This is also
   where `docs/latymer-alignment.md` puts the biggest fidelity gap ("No mistake").
 - **192 distinct tags, 62 of them used exactly once**, against 96 distinct skills. Tags are

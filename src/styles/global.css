@@ -786,6 +786,14 @@ button {
   border-bottom: 0;
 }
 
+/* Section name on the left, mark on the right — the shape of a mark sheet. */
+.section-score {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .actions {
   display: flex;
   gap: 10px;

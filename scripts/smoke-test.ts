@@ -13,6 +13,7 @@ import {
 } from '../src/logic/sessionStorage'
 import { describeBackup, exportProgress, parseBackup } from '../src/logic/backup'
 import { PACE_PRESETS, timeLimitFor } from '../src/logic/pace'
+import { PAPERS, paperLength } from '../src/logic/papers'
 import { formatDuration } from '../src/components/Timer'
 import {
   createSession,
@@ -756,6 +757,91 @@ console.log('\n== batched saving ==')
   check('so the profile stays empty', loadProgress().totals.answered === 0)
 
   delete (globalThis as any).window
+}
+
+console.log('\n== full paper ==')
+{
+  for (const paper of PAPERS) {
+    const length = paperLength(paper)
+    const result = selectQuestions(
+      {
+        mode: 'paper',
+        length,
+        subjects: [paper.subject],
+        timed: true,
+        timeLimitMs: paper.minutes * 60_000,
+      },
+      emptyProgress(),
+    )
+    check(
+      `${paper.subject}: the bank can fill the paper`,
+      result.questions.length === length,
+      `got ${result.questions.length}/${length}`,
+    )
+    check(`${paper.subject}: not flagged short`, result.note !== 'short-pool')
+    check(
+      `${paper.subject}: every question is in the subject`,
+      result.questions.every((q) => q.subject === paper.subject),
+    )
+    check(
+      `${paper.subject}: no repeats`,
+      new Set(result.questions.map((q) => q.id)).size === result.questions.length,
+    )
+    // Each section must get its full quota, in the booklet's order — that is
+    // the whole difference between a paper and a long practice run.
+    const quotasMet = paper.sections.every((section) => {
+      const n = result.questions.filter((q) => section.topics.includes(q.topic)).length
+      return n === section.count
+    })
+    check(`${paper.subject}: every section gets its quota`, quotasMet)
+    const order = result.questions.map((q) =>
+      paper.sections.findIndex((s) => s.topics.includes(q.topic)),
+    )
+    check(
+      `${paper.subject}: sections are not interleaved`,
+      order.every((s, i) => i === 0 || s >= order[i - 1]),
+    )
+  }
+
+  // Sections sharing a topic would double-count in the breakdown and starve
+  // one of the two quotas.
+  const overlapping = PAPERS.some((p) => {
+    const topics = p.sections.flatMap((s) => s.topics)
+    return new Set(topics).size !== topics.length
+  })
+  check('no paper has a topic in two sections', !overlapping)
+
+  // A paper runs straight through: no learning loop, no technique cards.
+  {
+    const paper = PAPERS[0]
+    const config = {
+      mode: 'paper' as const,
+      length: paperLength(paper),
+      subjects: [paper.subject],
+      timed: true,
+      timeLimitMs: paper.minutes * 60_000,
+    }
+    const picked = selectQuestions(config, emptyProgress())
+    let s = createSession(config, picked.questions.slice(0, 8), Date.now())
+    let sawFollowUp = false
+    let sawTechnique = false
+    let guard = 0
+    while (s.phase !== 'complete' && guard++ < 200) {
+      if (s.phase === 'technique') sawTechnique = true
+      if (s.phase === 'followup' || s.phase === 'followup-feedback') sawFollowUp = true
+      if (s.phase === 'question') {
+        // Answer everything wrong — the case that would trigger the loop.
+        const q = currentQuestion(s)!
+        s = sessionReducer(s, { type: 'answer', option: (q.answer + 1) % 5, at: Date.now() })
+      } else {
+        s = sessionReducer(s, { type: 'continue', at: Date.now() })
+      }
+    }
+    check('a paper completes', s.phase === 'complete')
+    check('no learning loop in a paper', !sawFollowUp)
+    check('no technique cards in a paper', !sawTechnique)
+    check('all 8 answers are main-run answers', mainAnswers(s).length === 8)
+  }
 }
 
 console.log('\n== error-spotting questions keep their option order ==')

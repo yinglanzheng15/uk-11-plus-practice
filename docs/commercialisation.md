@@ -36,7 +36,7 @@ teaser.
   queued write, so a reset cannot be undone by a save landing after it. 8 checks cover it.
 
 **Deliberately still open:** the build writes the paid half to `public/paid.json`, so the
-deployed app is still the whole 434-question bank, free to everyone, exactly as before. It is
+deployed app is still the whole 450-question bank, free to everyone, exactly as before. It is
 the seam, not the paywall — no existing user lost anything.
 
 **Still leaking:** the authored banks (`src/data/maths.json` and friends) remain in the
@@ -182,7 +182,7 @@ Not optional, and cheap if done early.
   ✅ **Verified 11 Aug 2026:** `git rev-list --all --objects` finds no PDF blob anywhere in
   history, across all refs. `sources.md`'s claim that no past-paper question was copied is
   intact — keep it accurate.
-- **Finish the human read-through.** 278 of 434 questions have never been read by a person.
+- **Finish the human read-through.** 434 of 450 are done; the 16 new error-spotting questions are not.
   Free users tolerate a wrong answer; paying parents of exam candidates do not, and one
   Mumsnet thread about a bad answer key is worse than a slow launch. See `ROADMAP.md` §8 for
   the specific data gaps found in the 11 Aug scan.
@@ -192,7 +192,7 @@ Not optional, and cheap if done early.
 ## Verification
 
 - **After any bank change:** `npm run build` (generate → split → validate → typecheck →
-  build) and `npm test` must both be green. The 147-check smoke test is the regression net.
+  build) and `npm test` must both be green. The 184-check smoke test is the regression net.
 - **After the gate closes:** confirm in a browser that a logged-out visitor sees 99 questions
   and a subscriber sees 434.
 - **After sync:** sign in on two browsers, answer in one, confirm it appears in the other.

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { getQuestion } from '../data'
 import { getSubject } from '../data/subjects'
 import { formatDuration } from './Timer'
+import { paperFor } from '../logic/papers'
 import {
   mainAnswers,
   sessionDurationMs,
@@ -43,6 +44,25 @@ export function SessionSummary({ state, onExit, onRestart }: Props) {
     if (a.correct) entry.right += 1
     byTopic.set(key, entry)
   }
+  // A full paper reports by section instead of by topic: "Spelling 7/12" is
+  // what tells a parent where to spend the next fortnight, and it is the way
+  // the real papers report back. Sections the child never reached are shown
+  // too, at 0 answered — a paper they ran out of time on is the finding.
+  const paper = state.config.mode === 'paper' ? paperFor(state.config.subjects[0]) : undefined
+  const sectionScores = paper
+    ? paper.sections.map((section) => {
+        const served = state.questions.filter((q) => section.topics.includes(q.topic))
+        const ids = new Set(served.map((q) => q.id))
+        const done = answered.filter((a) => ids.has(a.questionId))
+        return {
+          name: section.name,
+          right: done.filter((a) => a.correct).length,
+          answered: done.length,
+          served: served.length,
+        }
+      })
+    : []
+
   const ranked = [...byTopic.values()].sort((a, b) => b.right / b.n - a.right / a.n)
   const strongest = ranked.filter((t) => t.right === t.n).slice(0, 2)
   const toPractise = ranked.filter((t) => t.right < t.n).slice(-3).reverse()
@@ -93,14 +113,44 @@ export function SessionSummary({ state, onExit, onRestart }: Props) {
           </p>
         )}
 
-        {strongest.length > 0 && (
+        {sectionScores.length > 0 && (
+          <>
+            <h3 className="section-title" style={{ marginTop: 20 }}>
+              Section by section
+            </h3>
+            <ul className="list-plain">
+              {sectionScores.map((s) => (
+                <li key={s.name} className="section-score">
+                  <span>{s.name}</span>
+                  <strong>
+                    {s.right} / {s.answered}
+                    {s.answered < s.served && (
+                      <span className="muted small">
+                        {' '}
+                        ({s.served - s.answered} not reached)
+                      </span>
+                    )}
+                  </strong>
+                </li>
+              ))}
+            </ul>
+            <p className="muted small">
+              These are raw marks out of what was attempted. They are not a
+              standardised or scaled score — a real 11+ score is worked out
+              against how everyone else sitting that paper did, which is not
+              something this app can know.
+            </p>
+          </>
+        )}
+
+        {sectionScores.length === 0 && strongest.length > 0 && (
           <p style={{ marginTop: 18 }}>
             <strong>You were strongest at: </strong>
             {strongest.map((t) => t.label).join(', ')}
           </p>
         )}
 
-        {toPractise.length > 0 && (
+        {sectionScores.length === 0 && toPractise.length > 0 && (
           <p>
             <strong>Practise next: </strong>
             {toPractise.map((t) => t.label).join(', ')}

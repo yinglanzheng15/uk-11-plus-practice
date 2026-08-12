@@ -10,7 +10,7 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 ## Status (handoff summary)
 
-**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (147 checks) and `npm run build` are all green as of the latest commit. No known bugs.
+**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (184 checks) and `npm run build` are all green as of the latest commit. No known bugs.
 
 > **Picking this up mid-stream (11 Aug 2026):** the app is being turned into a paid product.
 > The free/paid seam is in place but **deliberately not closed** — the build still ships the
@@ -20,8 +20,8 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 > from the same day's repo scan.
 
 **What's built:**
-- Full quiz engine with the wrong-answer learning loop, mastery tracking, streaks, and all revision modes (Quick 5/10/20, subject/topic practice, mixed, mistakes, weak areas, challenge, timed sessions).
-- **434 questions, each with five options A–E** (208 Maths, 80 English, 134 Verbal Reasoning, 12 Non-Verbal Reasoning) across 8 comprehension passages — 126 of them expanded from 12 *templates* (see below), the rest hand-written — every topic has at least 4 questions, and every subject has both Foundation (difficulty 1) and Stretch (difficulty 4) coverage. The 12 Non-Verbal Reasoning questions are a **taster** of a new visual (inline-SVG) subject — see `docs/latymer-alignment.md`.
+- Full quiz engine with the wrong-answer learning loop, mastery tracking, streaks, and all revision modes (Quick 5/10/20, subject/topic practice, mixed, mistakes, weak areas, challenge, timed sessions, and a **full timed paper** per subject with a section-by-section breakdown).
+- **450 questions, each with five options A–E** (208 Maths, 96 English, 134 Verbal Reasoning, 12 Non-Verbal Reasoning) across 8 comprehension passages — 126 of them expanded from 12 *templates* (see below), the rest hand-written — every topic has at least 4 questions, and every subject has both Foundation (difficulty 1) and Stretch (difficulty 4) coverage. The 12 Non-Verbal Reasoning questions are a **taster** of a new visual (inline-SVG) subject — see `docs/latymer-alignment.md`.
 - **Two-layer question vetting**: `npm run validate` catches structural issues and machine-verifies maths answers via an optional `verify` expression; `npm run review` generates `docs/review-sheet.md` for human read-through, with `npm run review:accept` to avoid re-reviewing.
 - **Skip for now.** A question can be parked and comes back at the end of the run for a second look. A skip records nothing and never counts against the score.
 - **Resume after a refresh.** An unfinished session is saved as you go and offered back — *"Carry on where you left off?"* — for up to 24 hours. A timed session keeps the time it had left rather than burning it while the tab was shut.
@@ -33,8 +33,8 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 **Repo:** [github.com/yinglanzheng15/uk-11-plus-practice](https://github.com/yinglanzheng15/uk-11-plus-practice) — public, pushed and up to date.
 
 **Not yet done / deliberately deferred:**
-- **The 434 questions have passed `npm run validate` but only the first 156 have had a human read-through.** The 126 generated ones are read a template at a time — check one variant of each carefully, then skim the rest for anything the numbers broke. The letter sequences, codes and hidden words in the new batch were additionally checked by script. Run `npm run review` and read `docs/review-sheet.md` before treating the bank as vetted; then `npm run review:accept`.
-- **Question bank is at 434/850+** of the original stretch target. See `ROADMAP.md`.
+- **434 of the 450 questions have had a human read-through** (`docs/.review-seen`). The outstanding 16 are the new GL-style error-spotting spelling and punctuation questions — run `npm run review`, read them in `docs/review-sheet.md`, then `npm run review:accept`.
+- **Question bank is at 450/850+** of the original stretch target. See `ROADMAP.md`.
 - No multi-child profiles yet. **Non-Verbal Reasoning now has a 12-question taster** (odd-one-out, sequences, figure pairs) proving the inline-SVG format; growing it into a full section, plus a Problem-Solving section, are scoped in `ROADMAP.md`.
 - **The Latymer / GL familiarisation papers** (added under `data/past papers/`) were analysed in `docs/latymer-alignment.md`, which lists the specific Maths/English/VR question types still worth adding. Those PDFs are © GL Assessment — do **not** commit them to the public repo.
 
@@ -44,16 +44,17 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 ## Next steps
 
-Prioritised, grounded in the real GL/Latymer familiarisation papers. The content specifics are in [`docs/latymer-alignment.md`](docs/latymer-alignment.md). Suggested order: English "No mistake" → Maths numeric batch → Full-paper mode → VR batch → NVR expansion → multi-child profiles.
+Prioritised, grounded in the real GL/Latymer familiarisation papers. The content specifics are in [`docs/latymer-alignment.md`](docs/latymer-alignment.md). Suggested order: Maths numeric batch → VR batch → NVR expansion → multi-child profiles.
 
-**1. Close the content-fidelity gaps** (highest value, fits the existing engine)
-- **English "No mistake" spelling + punctuation** — the biggest gap. GL splits a sentence into labelled parts; the child picks the faulty part *or* **E = "No mistake"** (~1 in 5 answers). Add ~8 + ~8 questions in that exact shape. *Do this first.*
-- **Maths missing types** — coordinates, Roman numerals, timetable/time-interval reading, function machines / simple algebra (~20 Q). All numeric and all template-shaped: write four templates in `src/data/templates.ts` rather than twenty objects, and the `verify` expressions come out of them for free.
+**Done since this list was written:** the English "No mistake" spelling and punctuation gap (16 questions), and Full-paper mode with the per-section breakdown.
+
+**1. Close the remaining content-fidelity gaps** (highest value, fits the existing engine)
+- **Maths missing types** — coordinates, Roman numerals, timetable/time-interval reading, function machines / simple algebra (~20 Q). All numeric and all template-shaped: write four templates in `src/data/templates.ts` rather than twenty objects, and the `verify` expressions come out of them for free. *Do this first.*
 - **VR missing types** — "word with two meanings" (homographs) and "insert a letter that ends one word and starts the next" (~12 Q). Hand-written: the answer turns on the words, not on a number that can be varied.
 
-**2. Make sessions feel like the real exam**
-- A **Full-paper mode** per subject: fixed-length timed run (50 Maths, 80 VR at ~37s/Q) with the section structure of the real booklet and a scaled score.
-- A **per-section breakdown** in the summary ("Spelling 7/9, Punctuation 5/9…"), which is how GL reports strengths and tells a parent what to drill.
+**2. Sharpen full-paper mode**
+- **The clock still stops while an explanation is on screen.** Right in practice, wrong in a paper — the real one keeps running. A paper should either run the clock through the feedback screen or skip the feedback screen entirely.
+- **The papers are single-subject.** The real sitting is several booklets in a morning; a combined paper is the next step up.
 
 **3. Grow NVR from taster to full section**
 - Add rotation, reflection, matrix/grid completion (2×2 and 3×3), hidden shape, and cube nets.
@@ -65,7 +66,7 @@ Prioritised, grounded in the real GL/Latymer familiarisation papers. The content
 - A home-screen picker mirroring the six real GL booklets.
 
 **5. Quality & vetting (ongoing)**
-- The 434 questions still need the human read-through (`npm run review` → read → `npm run review:accept`), including the new NVR taster.
+- The 16 new error-spotting questions still need the human read-through (`npm run review` → read → `npm run review:accept`). The other 434 are done.
 - Spot-check that topic *coverage* reflects the papers' actual weighting (comprehension and VR letter/number types are heavily represented). Maths is now the largest subject at 208 questions, roughly half of them template-generated — worth watching that the hand-written half still carries the harder multi-step reasoning.
 
 ---
@@ -112,7 +113,7 @@ Other scripts:
 | `npm run validate` | Check the question bank for errors and quality warnings |
 | `npm run review` | Write `docs/review-sheet.md` for human vetting of questions |
 | `npm run review:accept` | Mark the current questions as reviewed |
-| `npm test` | Run the engine test suite (147 checks) |
+| `npm test` | Run the engine test suite (184 checks) |
 | `npm run typecheck` | TypeScript check, no build |
 | `npm run build` | Generate → split → validate → typecheck → build to `dist/` |
 | `npm run preview` | Serve the production build locally |
@@ -202,6 +203,19 @@ Like all the other data, feedback is stored only in that browser and is never se
 | **My mistakes** | Only questions previously answered incorrectly |
 | **Weak areas** | Automatically targets topics below 70% mastery |
 | **Challenge** | Prioritises difficulty 3–4 questions |
+| **Full paper** | A whole subject paper in one sitting, timed like the real booklet |
+
+### Full paper
+
+The other modes ask *what should I practise?*. This one asks the question a parent actually has — **can my child hold it together for fifty minutes?** — which is a different skill from getting questions right, and one a ten-question run cannot rehearse.
+
+Maths (50 questions), English (54) and Verbal Reasoning (80) each have a paper, all timed at 50 minutes, matching the GL familiarisation papers described in `docs/latymer-alignment.md`. Each is built section by section to a fixed quota — a run of 50 that happens to contain no geometry is not a maths paper, however well the questions were chosen — and the sections are never interleaved. Within a section, the ordinary rules still apply: spaced repetition, the difficulty ceiling, avoiding recently served questions.
+
+**A paper runs straight through.** No learning loop, no technique cards: up to two extra questions per mistake would turn a 50-question paper into a 150-question one, and sitting it unaided is the thing being rehearsed. The teaching is not lost — the end-of-session review still carries the full explanation for every question got wrong.
+
+The summary reports **section by section** ("Spelling 7/12"), including sections the child never reached, which is how a real paper reports back and what tells a parent where the next fortnight should go. These are raw marks, deliberately **not** a scaled or standardised score: a real 11+ scaled score is worked out against how everyone else sitting that paper did, which this app cannot know and should not pretend to.
+
+Non-Verbal Reasoning has no paper — 12 questions is a taster, not a section. `PAPERS` in `src/logic/papers.ts` is keyed by subject, so adding one is a single entry.
 
 **Choose what to practise** on the home screen narrows the Quick 5/10/20 and Mixed sessions to any combination of subjects, and to particular topics within them — Maths and English but not the reasoning papers, say, or fractions and geometry alone. The panel shows how many questions the current selection leaves, and warns when that is too few for a full session. The choice is remembered between visits. *My mistakes* and *Weak areas* deliberately ignore it: those are scoped by what the child has actually answered, and quietly filtering them would hide questions they got wrong.
 
@@ -292,6 +306,7 @@ src/
     index.ts                   loads and indexes the bank
   logic/
     questionSelector.ts        which questions to serve, and when they are due
+    papers.ts                  full-paper structure: sections, quotas, timings
     session.ts                 quiz + learning-loop state machine
     sessionStorage.ts          saving and resuming an unfinished session
     mastery.ts                 topic and subject mastery

@@ -171,6 +171,8 @@ export type SessionMode =
   | 'mistakes'
   | 'weak'
   | 'challenge'
+  /** A whole subject paper, section by section — see src/logic/papers.ts. */
+  | 'paper'
 
 export interface SessionConfig {
   mode: SessionMode

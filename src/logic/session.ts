@@ -108,8 +108,11 @@ export function mainAnswers(state: SessionState): SessionAnswer[] {
  * A short technique card appears after every 6th question answered — so a
  * Quick 20 sees about three of them, and a Quick 5 none at all. Never two in a
  * row: the card just shown is still on the state, which blocks the next one.
+ *
+ * A full paper gets none. Nobody hands out advice halfway through the real one.
  */
 function techniqueCardFor(state: SessionState): TechniqueCard | null {
+  if (state.config.mode === 'paper') return null
   const answered = mainAnswers(state).length
   const isLast = state.index + 1 >= state.questions.length
   if (isLast || answered === 0 || answered % 6 !== 0) return null
@@ -250,6 +253,17 @@ export function sessionReducer(state: SessionState, action: SessionAction): Sess
       if (state.phase === 'feedback') {
         // Correct first time — move straight on.
         if (state.lastCorrect) return advance(state, action.at)
+        // A full paper runs straight through. The learning loop is the right
+        // thing in practice and the wrong thing here: up to two extra questions
+        // per mistake would turn a 50-question paper into a 150-question one,
+        // and sitting the paper unaided is the thing being rehearsed. The
+        // teaching is not lost — the end-of-paper review carries the full
+        // explanation for every question got wrong.
+        // ponytail: the feedback screen itself still shows mid-paper, and the
+        // clock still stops behind it. Faithful would be no feedback until the
+        // end; that needs a no-feedback path through QuizSession, so it waits
+        // until someone has actually sat a paper and found it jarring.
+        if (state.config.mode === 'paper') return advance(state, action.at)
         // Wrong — enter the learning loop.
         const followUp = selectFollowUp(
           state.questions[state.index],
