@@ -169,8 +169,8 @@ Like all the other data, feedback is stored only in that browser and is never se
 | Mode | Description |
 | --- | --- |
 | **Quick 5 / 10 / 20** | Mixed-subject sessions of increasing length |
-| **Subject practice** | Pick Maths, English or Verbal Reasoning, then a specific topic |
-| **Mixed practice** | All three subjects, interleaved |
+| **Subject practice** | Pick a subject, then a specific topic |
+| **Mixed practice** | Any combination of subjects, interleaved — pick which ones on the home screen |
 | **My mistakes** | Only questions previously answered incorrectly |
 | **Weak areas** | Automatically targets topics below 70% mastery |
 | **Challenge** | Prioritises difficulty 3–4 questions |

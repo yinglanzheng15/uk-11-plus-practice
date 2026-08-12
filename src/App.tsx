@@ -20,7 +20,7 @@ import {
   type RestoredSession,
 } from './logic/sessionStorage'
 import { mainAnswers, sessionDurationMs, type SessionState } from './logic/session'
-import type { FeedbackReason, Progress, Question, SessionConfig } from './types'
+import type { FeedbackReason, Progress, Question, SessionConfig, SubjectId } from './types'
 
 type View = 'home' | 'quiz' | 'dashboard' | 'parent'
 
@@ -160,6 +160,10 @@ export default function App() {
     setProgress((p) => ({ ...p, preferences: { ...p.preferences, secondsPerQuestion } }))
   }, [])
 
+  const handleSetMixedSubjects = useCallback((mixedSubjects: SubjectId[]) => {
+    setProgress((p) => ({ ...p, preferences: { ...p.preferences, mixedSubjects } }))
+  }, [])
+
   const handleReport = useCallback(
     (questionId: string, reason: FeedbackReason, message: string) => {
       setProgress((p) => addFeedback(p, { kind: 'question', questionId, reason, message }))
@@ -236,6 +240,7 @@ export default function App() {
             progress={progress}
             onStart={startSession}
             onSetTimed={handleSetTimed}
+            onSetMixedSubjects={handleSetMixedSubjects}
             resumable={resumable}
             onResume={handleResume}
             onDiscardResume={handleDiscardResume}

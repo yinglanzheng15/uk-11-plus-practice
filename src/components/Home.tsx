@@ -12,6 +12,7 @@ interface Props {
   progress: Progress
   onStart: (config: SessionConfig) => void
   onSetTimed: (timed: boolean) => void
+  onSetMixedSubjects: (subjects: SubjectId[]) => void
   /** An unfinished session from a previous visit, if there is one worth offering. */
   resumable?: RestoredSession | null
   onResume: () => void
@@ -32,6 +33,7 @@ export function Home({
   progress,
   onStart,
   onSetTimed,
+  onSetMixedSubjects,
   resumable,
   onResume,
   onDiscardResume,
@@ -39,6 +41,27 @@ export function Home({
   const [subjectPicker, setSubjectPicker] = useState<SubjectId | null>(null)
   const timed = progress.preferences.timed
   const secondsPerQuestion = progress.preferences.secondsPerQuestion
+  const mixedSubjects = progress.preferences.mixedSubjects
+  // Empty preference displays as "all subjects" and starts a session the
+  // same way — [] already means "all subjects" throughout the app.
+  const selectedMixedIds =
+    mixedSubjects.length === 0 ? SUBJECTS.map((s) => s.id) : mixedSubjects
+  const mixedSummary =
+    mixedSubjects.length === 0
+      ? 'All subjects'
+      : selectedMixedIds
+          .map((id) => SUBJECTS.find((s) => s.id === id)?.shortLabel ?? id)
+          .join(', ')
+
+  function toggleMixedSubject(id: SubjectId) {
+    const isSelected = selectedMixedIds.includes(id)
+    // Never allow deselecting down to zero — that would leave nothing to practise.
+    if (isSelected && selectedMixedIds.length === 1) return
+    const next = isSelected
+      ? selectedMixedIds.filter((s) => s !== id)
+      : [...selectedMixedIds, id]
+    onSetMixedSubjects(next.length === SUBJECTS.length ? [] : next)
+  }
 
   const accuracy = overallAccuracy(progress)
   const mistakes = mistakeIds(progress)
@@ -253,9 +276,13 @@ export function Home({
                 : `${weakTopics.length} topic${weakTopics.length === 1 ? '' : 's'}`}
             </span>
           </button>
-          <button type="button" className="tile" onClick={() => start('mixed', 10, [])}>
+          <button
+            type="button"
+            className="tile"
+            onClick={() => start('mixed', 10, mixedSubjects)}
+          >
             Mixed practice
-            <span className="tile-sub">All three subjects</span>
+            <span className="tile-sub">{mixedSummary}</span>
           </button>
           <button
             type="button"
@@ -265,6 +292,27 @@ export function Home({
             Challenge
             <span className="tile-sub">Harder questions</span>
           </button>
+        </div>
+
+        <p className="muted small" style={{ marginTop: 16, marginBottom: 8 }}>
+          Subjects for mixed practice
+        </p>
+        <div className="chip-row" role="group" aria-label="Subjects for mixed practice">
+          {SUBJECTS.map((s) => {
+            const selected = selectedMixedIds.includes(s.id)
+            return (
+              <button
+                key={s.id}
+                type="button"
+                className={selected ? 'chip-toggle chip-toggle-active' : 'chip-toggle'}
+                style={{ ['--tile-colour' as string]: s.colour }}
+                aria-pressed={selected}
+                onClick={() => toggleMixedSubject(s.id)}
+              >
+                {s.shortLabel}
+              </button>
+            )
+          })}
         </div>
 
         <label

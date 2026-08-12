@@ -62,6 +62,20 @@ check('little overlap with previous session', overlap === 0, `overlap=${overlap}
 const subjOnly = selectQuestions(cfg({ mode: 'subject', subjects: ['maths'] }), emptyProgress(), 3)
 check('subject filter respected', subjOnly.questions.every((q) => q.subject === 'maths'))
 
+const mixedSubset = selectQuestions(
+  cfg({ mode: 'mixed', subjects: ['maths', 'english'], length: 10 }),
+  emptyProgress(),
+  3,
+)
+check(
+  'mixed session respects a chosen subject subset',
+  mixedSubset.questions.every((q) => q.subject === 'maths' || q.subject === 'english'),
+)
+check(
+  'mixed session with a subset still spans those subjects',
+  new Set(mixedSubset.questions.map((q) => q.subject)).size > 1,
+)
+
 const topicOnly = selectQuestions(
   cfg({ mode: 'subject', subjects: ['maths'], topic: 'Fractions', length: 5 }),
   emptyProgress(),

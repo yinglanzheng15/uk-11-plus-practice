@@ -7,8 +7,9 @@ const KEY = 'elevenplus:v1:progress'
 /**
  * 2 added `streak` to QuestionRecord for spaced repetition.
  * 3 added `preferences.secondsPerQuestion`.
+ * 4 added `preferences.mixedSubjects`.
  */
-export const SCHEMA_VERSION = 3
+export const SCHEMA_VERSION = 4
 
 export function emptyProgress(): Progress {
   return {
@@ -19,7 +20,11 @@ export function emptyProgress(): Progress {
     feedback: [],
     streak: { lastDate: null, current: 0, best: 0 },
     totals: { answered: 0, correct: 0 },
-    preferences: { timed: false, secondsPerQuestion: DEFAULT_SECONDS_PER_QUESTION },
+    preferences: {
+      timed: false,
+      secondsPerQuestion: DEFAULT_SECONDS_PER_QUESTION,
+      mixedSubjects: [],
+    },
   }
 }
 
@@ -69,6 +74,10 @@ function migrate(raw: unknown): Progress {
         data.preferences.secondsPerQuestion > 0
           ? data.preferences.secondsPerQuestion
           : DEFAULT_SECONDS_PER_QUESTION,
+      // Added in schema 4; older saved profiles will not have it.
+      mixedSubjects: Array.isArray(data.preferences?.mixedSubjects)
+        ? data.preferences.mixedSubjects
+        : [],
     },
   }
 }
