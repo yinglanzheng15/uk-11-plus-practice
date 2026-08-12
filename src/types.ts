@@ -143,6 +143,8 @@ export interface Progress {
      * while a relaxed practice run wants considerably more.
      */
     secondsPerQuestion: number
+    /** Last-chosen subject subset for Mixed practice. Empty means "all subjects". */
+    mixedSubjects: SubjectId[]
   }
 }
 
