@@ -20,7 +20,7 @@ interface Shufflable {
   optionFigures?: string[]
 }
 
-function hashString(value: string): number {
+export function hashString(value: string): number {
   let h = 2166136261
   for (let i = 0; i < value.length; i += 1) {
     h ^= value.charCodeAt(i)
@@ -29,7 +29,7 @@ function hashString(value: string): number {
   return h >>> 0
 }
 
-function seededRandom(seed: number): () => number {
+export function seededRandom(seed: number): () => number {
   let a = seed >>> 0
   return () => {
     a = (a + 0x6d2b79f5) >>> 0

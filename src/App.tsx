@@ -12,7 +12,7 @@ import {
   resetProgress,
 } from './logic/progress'
 import { addFeedback, clearFeedback, removeFeedback } from './logic/feedback'
-import { loadProgress, saveProgress, clearProgress } from './logic/storage'
+import { loadProgress, saveProgress, clearProgress, flushProgress } from './logic/storage'
 import {
   clearSession,
   loadSession,
@@ -46,9 +46,29 @@ export default function App() {
   const liveSession = useRef<SessionState | null>(null)
 
   // Persist on every change, so a refresh mid-session never loses answered work.
+  // The write itself is batched (see SAVE_DEBOUNCE_MS), so a steady run of
+  // answers costs one write rather than twenty.
   useEffect(() => {
     saveProgress(progress)
   }, [progress])
+
+  // Batching means a queued write can still be outstanding when the tab goes
+  // away, so force it out. `pagehide` is the one that fires reliably when a
+  // mobile browser discards the tab; `visibilitychange` covers switching apps or
+  // tabs without leaving. Both are idempotent when nothing is pending.
+  useEffect(() => {
+    const flush = () => flushProgress()
+    const onHide = () => {
+      if (document.visibilityState === 'hidden') flushProgress()
+    }
+    window.addEventListener('pagehide', flush)
+    document.addEventListener('visibilitychange', onHide)
+    return () => {
+      window.removeEventListener('pagehide', flush)
+      document.removeEventListener('visibilitychange', onHide)
+      flushProgress()
+    }
+  }, [])
 
   const startSession = useCallback(
     (config: SessionConfig) => {

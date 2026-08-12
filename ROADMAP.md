@@ -27,7 +27,14 @@ What this implied, and what was done about it:
 
 **The single highest-value change.** Everything else is polish by comparison.
 
-There are currently **296 questions** (112 Maths, 80 English, 104 VR) across 8 comprehension passages, **each with five options A–E** to match the papers these schools set. The anti-repetition logic remembers the last 60 questions served, so the bank is now comfortably above the point where that constraint has to keep relaxing.
+There are currently **434 questions** (208 Maths, 80 English, 134 VR, 12 NVR) across 8 comprehension passages, **each with five options A–E** to match the papers these schools set. The anti-repetition logic remembers the last 60 questions served, so the bank is now comfortably above the point where that constraint has to keep relaxing.
+
+### Done in the fourth pass (templates, 308 → 434)
+
+- **Parameterised templates** (`src/data/templates.ts`, expanded by `npm run generate`): 12 styles × ~10 variants = **126 questions**, covering percentages, ratio, perimeter, fractions of an amount, BIDMAS, unit conversion, the mean, temperature across zero, multi-step money, letter-shift codes, letter-pair sequences and growing-gap number series.
+- Distractors and the `verify` expression are **computed from the same numbers as the answer**, so every variant keeps the misconception it was built around and its arithmetic is machine-proved.
+- Seeds derive from the template id, so output is reproducible and ids are stable across regeneration — progress and spaced repetition survive.
+- Templates suit maths and pattern-based VR. Comprehension, vocabulary and anything where the distractor depends on the *words* stays hand-written.
 
 ### Done in the third pass (five options, 296)
 
@@ -59,10 +66,13 @@ There are currently **296 questions** (112 Maths, 80 English, 104 VR) across 8 c
 | ~~Start~~ | ~~32~~ | ~~20~~ | ~~30~~ | ~~82~~ | ~1 week of variety |
 | ~~Then~~ | ~~63~~ | ~~41~~ | ~~52~~ | ~~156~~ | ~3 weeks |
 | ~~Then~~ | ~~104~~ | ~~80~~ | ~~104~~ | ~~288~~ | ~1 month |
-| **Now** | **112** | **80** | **104** | **296** | five options each |
+| ~~Then~~ | ~~112~~ | ~~80~~ | ~~104~~ | ~~296~~ | ~~five options each~~ |
+| **Now** | **208** | **80** | **134** | **434** | 126 from templates |
 | Full | 300 | 250 | 300 | 850+ | a full year |
 
-Still worth adding: more comprehension passages (8 now, **10–12** would be comfortable — passages are the fastest thing to memorise), and more difficulty-4 stretch questions, which remain the thinnest band despite nearly doubling.
+Still worth adding: more comprehension passages (8 now, **10–12** would be comfortable — passages are the fastest thing to memorise), and more difficulty-4 stretch questions, which remain the thinnest band.
+
+Note what templates do *not* fix. They multiply styles the bank already has, so they raise the count without raising the *variety* of reasoning — and they cluster at difficulty 2–3, because a Stretch question is usually stretching for reasons the numbers cannot supply. The remaining gaps (passages, difficulty 4, the GL types in `docs/latymer-alignment.md`) are still hand-written work.
 
 Add them in batches by topic rather than scattering — it is easier to keep quality and difficulty consistent that way. See `docs/question-format.md`. The validator catches structural mistakes, and `npm run validate` should be run after every batch.
 
@@ -154,5 +164,59 @@ Problem solving is the natural next section. Growing NVR beyond the taster is th
 ## 7. Deliberately not recommended
 
 - **Adding an AI question generator.** A curated bank with hand-written explanations and realistic distractors is more reliable than generated questions, and generation would reintroduce the API keys, costs and network dependency the app was specified to avoid.
-- **Accounts, leaderboards or cloud sync.** Local-only storage is a feature here, not a limitation.
+- ~~**Accounts, leaderboards or cloud sync.**~~ **Superseded, 11 Aug 2026.** This held while the app was free and local-only, and it is still the right default: leaderboards and public profiles remain ruled out. But the decision to charge for it (see [`docs/commercialisation.md`](docs/commercialisation.md)) requires parent accounts and progress sync — you cannot bill an anonymous browser, and a parent paying monthly reasonably expects their child's history on both the iPad and the laptop. The shape chosen keeps most of what the original stance was protecting: **parent-only accounts**, no child logins, no child personal data, no ad profiling, and `localStorage` retained as the offline fallback rather than replaced.
 - **More gamification.** Points, badges and streak pressure tend to shift motivation away from learning. The current light touch is the right level.
+
+---
+
+## 8. Data and structure debt
+
+From a full-repo scan on 11 August 2026. Nothing here is a bug — the bank validates and the
+147 smoke-test checks pass. These are the things that will bite as the bank grows or as
+paying users arrive.
+
+### Data
+
+- **Nine topics have no Stretch (difficulty 4) question at all**: Factors and multiples,
+  Place value, Decimals, Order of operations, Negative numbers, Fractions (Maths); Word
+  building (VR); Spelling (English); Odd one out and Sequences (NVR). This one interacts with
+  the engine: `difficultyCeiling()` in `src/logic/questionSelector.ts` raises the ceiling to 4
+  at 85% mastery, so a child who masters Fractions is promised harder questions the bank
+  cannot supply. **Highest-value data gap** — one or two questions each closes it.
+- **Two topics have no Foundation (difficulty 1) question**: Maths Word problems (0/2/12/5 —
+  badly top-heavy) and NVR Figure pairs. A child meeting Word problems for the first time
+  starts at difficulty 2.
+- **Maths `verify` coverage is 157/208 (75%).** The other 51 are hand-checked only. The
+  validator machine-checks the arithmetic wherever `verify` is present, so every one added is
+  a class of error permanently ruled out. Cheapest quality win in the repo.
+- **Only 15 of 434 questions (3%) have explicit `followUpIds`.** The learning loop falls back
+  to same-skill then same-topic matching, which works, but the follow-up after a mistake is
+  the teaching moment — the hand-picked ones are much better than the inferred ones.
+- **English is the thinnest subject at 80 questions**, and 36 of those are Comprehension
+  bound to 8 passages. Grammar/Spelling/Punctuation/Vocabulary have 10–12 each. This is also
+  where `docs/latymer-alignment.md` puts the biggest fidelity gap ("No mistake").
+- **192 distinct tags, 62 of them used exactly once**, against 96 distinct skills. Tags are
+  not used by the selector at all today, so this is latent rather than harmful — but if
+  anything ever filters on tags, a third of them match one question. Either prune to a
+  controlled vocabulary or accept that they are free-text notes and stop adding them.
+- **NVR is still 12 questions across 3 topics** — a taster, as documented. It is the only
+  subject where a "subject practice" session repeats almost immediately.
+
+### Structure
+
+- **The PRNG is implemented twice, identically.** `mulberry32()` in
+  `src/logic/questionSelector.ts:7` and `seededRandom()` in `src/data/shuffle.ts:32` are the
+  same algorithm, byte for byte, under two names. `shuffle.ts` is the one already shared with
+  `scripts/generate-questions.ts` — delete `mulberry32` and import `seededRandom`.
+- **`topicKey()` is inlined in three places.** It is exported from `src/data/index.ts` but
+  `src/components/SessionSummary.tsx:40` rebuilds the string by hand. (`src/data/access.ts`
+  inlines it deliberately, to avoid an import cycle with the file the split produces — that
+  one is fine and commented.)
+- **`scripts/smoke-test.ts` is the largest file in the repo at 615 lines** and growing with
+  every feature. It is still one flat script with a `check()` helper and no framework, which
+  is the right call — but it is at the size where splitting it by area (bank / selection /
+  session / persistence) would make a failure easier to locate.
+- **`src/styles/global.css` is 962 hand-written lines.** Fine as it stands, and no framework
+  is warranted; worth knowing before anyone proposes a redesign.
+- **`src/App.tsx` passes seven callbacks into `ParentView`.** Tolerable at four screens. If a
+  fifth screen or child profiles land, that is the point to reach for context, not before.

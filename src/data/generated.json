@@ -1,0 +1,4004 @@
+[
+  {
+    "id": "maths-percentages-sale-price-v01",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A winter coat costs £80. In a sale its price is reduced by 20%. What is the sale price?",
+    "options": [
+      "£64",
+      "£16",
+      "£96",
+      "£60",
+      "£68"
+    ],
+    "answer": 0,
+    "explanation": "20% of £80 is £80 ÷ 100 × 20 = £16. The sale price is what is left: £80 − £16 = £64.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 20% instead of taking it off.",
+      "This treats 20% as £20. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 15% rather than the 20% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "80 - 80 * 20 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v02",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A bicycle costs £60. In a sale its price is reduced by 10%. What is the sale price?",
+    "options": [
+      "£54",
+      "£6",
+      "£66",
+      "£50",
+      "£51"
+    ],
+    "answer": 0,
+    "explanation": "10% of £60 is £60 ÷ 100 × 10 = £6. The sale price is what is left: £60 − £6 = £54.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 10% instead of taking it off.",
+      "This treats 10% as £10. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 15% rather than the 10% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "60 - 60 * 10 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v03",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A games console costs £80. In a sale its price is reduced by 15%. What is the sale price?",
+    "options": [
+      "£68",
+      "£12",
+      "£92",
+      "£65",
+      "£48"
+    ],
+    "answer": 0,
+    "explanation": "15% of £80 is £80 ÷ 100 × 15 = £12. The sale price is what is left: £80 − £12 = £68.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 15% instead of taking it off.",
+      "This treats 15% as £15. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 40% rather than the 15% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "80 - 80 * 15 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v04",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A pair of football boots costs £500. In a sale its price is reduced by 10%. What is the sale price?",
+    "options": [
+      "£450",
+      "£50",
+      "£550",
+      "£490",
+      "£425"
+    ],
+    "answer": 0,
+    "explanation": "10% of £500 is £500 ÷ 100 × 10 = £50. The sale price is what is left: £500 − £50 = £450.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 10% instead of taking it off.",
+      "This treats 10% as £10. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 15% rather than the 10% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "500 - 500 * 10 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v05",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A pair of football boots costs £80. In a sale its price is reduced by 25%. What is the sale price?",
+    "options": [
+      "£60",
+      "£20",
+      "£100",
+      "£55",
+      "£72"
+    ],
+    "answer": 0,
+    "explanation": "25% of £80 is £80 ÷ 100 × 25 = £20. The sale price is what is left: £80 − £20 = £60.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 25% instead of taking it off.",
+      "This treats 25% as £25. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 10% rather than the 25% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "80 - 80 * 25 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v06",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A bicycle costs £80. In a sale its price is reduced by 25%. What is the sale price?",
+    "options": [
+      "£60",
+      "£20",
+      "£100",
+      "£55",
+      "£72"
+    ],
+    "answer": 0,
+    "explanation": "25% of £80 is £80 ÷ 100 × 25 = £20. The sale price is what is left: £80 − £20 = £60.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 25% instead of taking it off.",
+      "This treats 25% as £25. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 10% rather than the 25% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "80 - 80 * 25 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v07",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A telescope costs £320. In a sale its price is reduced by 20%. What is the sale price?",
+    "options": [
+      "£256",
+      "£64",
+      "£384",
+      "£300",
+      "£288"
+    ],
+    "answer": 0,
+    "explanation": "20% of £320 is £320 ÷ 100 × 20 = £64. The sale price is what is left: £320 − £64 = £256.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 20% instead of taking it off.",
+      "This treats 20% as £20. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 10% rather than the 20% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "320 - 320 * 20 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v08",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A telescope costs £400. In a sale its price is reduced by 20%. What is the sale price?",
+    "options": [
+      "£320",
+      "£80",
+      "£480",
+      "£380",
+      "£300"
+    ],
+    "answer": 0,
+    "explanation": "20% of £400 is £400 ÷ 100 × 20 = £80. The sale price is what is left: £400 − £80 = £320.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 20% instead of taking it off.",
+      "This treats 20% as £20. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 25% rather than the 20% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "400 - 400 * 20 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v09",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A sewing machine costs £200. In a sale its price is reduced by 10%. What is the sale price?",
+    "options": [
+      "£180",
+      "£20",
+      "£220",
+      "£190",
+      "£120"
+    ],
+    "answer": 0,
+    "explanation": "10% of £200 is £200 ÷ 100 × 10 = £20. The sale price is what is left: £200 − £20 = £180.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 10% instead of taking it off.",
+      "This treats 10% as £10. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 40% rather than the 10% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "200 - 200 * 10 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v10",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A telescope costs £80. In a sale its price is reduced by 20%. What is the sale price?",
+    "options": [
+      "£64",
+      "£16",
+      "£96",
+      "£60",
+      "£68"
+    ],
+    "answer": 0,
+    "explanation": "20% of £80 is £80 ÷ 100 × 20 = £16. The sale price is what is left: £80 − £16 = £64.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 20% instead of taking it off.",
+      "This treats 20% as £20. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 15% rather than the 20% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "80 - 80 * 20 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v11",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A games console costs £480. In a sale its price is reduced by 15%. What is the sale price?",
+    "options": [
+      "£408",
+      "£72",
+      "£552",
+      "£465",
+      "£288"
+    ],
+    "answer": 0,
+    "explanation": "15% of £480 is £480 ÷ 100 × 15 = £72. The sale price is what is left: £480 − £72 = £408.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 15% instead of taking it off.",
+      "This treats 15% as £15. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 40% rather than the 15% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "480 - 480 * 15 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-percentages-sale-price-v12",
+    "subject": "maths",
+    "topic": "Percentages",
+    "skill": "percentage_decrease",
+    "type": "percentages",
+    "difficulty": 2,
+    "question": "A sewing machine costs £360. In a sale its price is reduced by 10%. What is the sale price?",
+    "options": [
+      "£324",
+      "£36",
+      "£396",
+      "£350",
+      "£306"
+    ],
+    "answer": 0,
+    "explanation": "10% of £360 is £360 ÷ 100 × 10 = £36. The sale price is what is left: £360 − £36 = £324.",
+    "distractorNotes": [
+      "",
+      "This is the discount itself — the amount taken off, not the price paid.",
+      "This adds the 10% instead of taking it off.",
+      "This treats 10% as £10. A percentage is a fraction of the price, not a fixed number of pounds.",
+      "This takes off 15% rather than the 10% given in the question."
+    ],
+    "learningPoint": "Find the percentage first, then decide whether the question wants that amount or what remains.",
+    "verify": "360 - 360 * 10 / 100",
+    "tags": [
+      "percentages",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v01",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£1,150 is shared between Rafiq and Tom in the ratio 3 : 7. How much does Rafiq receive?",
+    "options": [
+      "£345",
+      "£805",
+      "£115",
+      "£575",
+      "£460"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 3 : 7 makes 3 + 7 = 10 equal parts. One part is £1,150 ÷ 10 = £115, so Rafiq's 3 parts are worth 3 × £115 = £345.",
+    "distractorNotes": [
+      "",
+      "This is Tom's share — the ratio is 3 : 7, so Rafiq takes the 3 parts.",
+      "This is the value of a single part, not of Rafiq's 3 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "1150 / 10 * 3",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v02",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£770 is shared between Esme and Amira in the ratio 2 : 5. How much does Esme receive?",
+    "options": [
+      "£220",
+      "£550",
+      "£110",
+      "£385",
+      "£330"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 2 : 5 makes 2 + 5 = 7 equal parts. One part is £770 ÷ 7 = £110, so Esme's 2 parts are worth 2 × £110 = £220.",
+    "distractorNotes": [
+      "",
+      "This is Amira's share — the ratio is 2 : 5, so Esme takes the 2 parts.",
+      "This is the value of a single part, not of Esme's 2 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "770 / 7 * 2",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v03",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£520 is shared between Priya and Nadia in the ratio 3 : 5. How much does Priya receive?",
+    "options": [
+      "£195",
+      "£325",
+      "£65",
+      "£260",
+      "£130"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 3 : 5 makes 3 + 5 = 8 equal parts. One part is £520 ÷ 8 = £65, so Priya's 3 parts are worth 3 × £65 = £195.",
+    "distractorNotes": [
+      "",
+      "This is Nadia's share — the ratio is 3 : 5, so Priya takes the 3 parts.",
+      "This is the value of a single part, not of Priya's 3 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "520 / 8 * 3",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v04",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£440 is shared between Jonah and Nadia in the ratio 3 : 5. How much does Jonah receive?",
+    "options": [
+      "£165",
+      "£275",
+      "£55",
+      "£220",
+      "£110"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 3 : 5 makes 3 + 5 = 8 equal parts. One part is £440 ÷ 8 = £55, so Jonah's 3 parts are worth 3 × £55 = £165.",
+    "distractorNotes": [
+      "",
+      "This is Nadia's share — the ratio is 3 : 5, so Jonah takes the 3 parts.",
+      "This is the value of a single part, not of Jonah's 3 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "440 / 8 * 3",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v05",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£1,260 is shared between Priya and Amira in the ratio 5 : 7. How much does Priya receive?",
+    "options": [
+      "£525",
+      "£735",
+      "£105",
+      "£630",
+      "£210"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 5 : 7 makes 5 + 7 = 12 equal parts. One part is £1,260 ÷ 12 = £105, so Priya's 5 parts are worth 5 × £105 = £525.",
+    "distractorNotes": [
+      "",
+      "This is Amira's share — the ratio is 5 : 7, so Priya takes the 5 parts.",
+      "This is the value of a single part, not of Priya's 5 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "1260 / 12 * 5",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v06",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£880 is shared between Callum and Jonah in the ratio 3 : 5. How much does Callum receive?",
+    "options": [
+      "£330",
+      "£550",
+      "£110",
+      "£440",
+      "£220"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 3 : 5 makes 3 + 5 = 8 equal parts. One part is £880 ÷ 8 = £110, so Callum's 3 parts are worth 3 × £110 = £330.",
+    "distractorNotes": [
+      "",
+      "This is Jonah's share — the ratio is 3 : 5, so Callum takes the 3 parts.",
+      "This is the value of a single part, not of Callum's 3 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "880 / 8 * 3",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v07",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£560 is shared between Rafiq and Tom in the ratio 2 : 5. How much does Rafiq receive?",
+    "options": [
+      "£160",
+      "£400",
+      "£80",
+      "£280",
+      "£240"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 2 : 5 makes 2 + 5 = 7 equal parts. One part is £560 ÷ 7 = £80, so Rafiq's 2 parts are worth 2 × £80 = £160.",
+    "distractorNotes": [
+      "",
+      "This is Tom's share — the ratio is 2 : 5, so Rafiq takes the 2 parts.",
+      "This is the value of a single part, not of Rafiq's 2 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "560 / 7 * 2",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v08",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£1,380 is shared between Priya and Tom in the ratio 5 : 7. How much does Priya receive?",
+    "options": [
+      "£575",
+      "£805",
+      "£115",
+      "£690",
+      "£230"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 5 : 7 makes 5 + 7 = 12 equal parts. One part is £1,380 ÷ 12 = £115, so Priya's 5 parts are worth 5 × £115 = £575.",
+    "distractorNotes": [
+      "",
+      "This is Tom's share — the ratio is 5 : 7, so Priya takes the 5 parts.",
+      "This is the value of a single part, not of Priya's 5 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "1380 / 12 * 5",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v09",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£1,200 is shared between Rafiq and Priya in the ratio 5 : 7. How much does Rafiq receive?",
+    "options": [
+      "£500",
+      "£700",
+      "£100",
+      "£600",
+      "£200"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 5 : 7 makes 5 + 7 = 12 equal parts. One part is £1,200 ÷ 12 = £100, so Rafiq's 5 parts are worth 5 × £100 = £500.",
+    "distractorNotes": [
+      "",
+      "This is Priya's share — the ratio is 5 : 7, so Rafiq takes the 5 parts.",
+      "This is the value of a single part, not of Rafiq's 5 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "1200 / 12 * 5",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v10",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£400 is shared between Tom and Priya in the ratio 3 : 5. How much does Tom receive?",
+    "options": [
+      "£150",
+      "£250",
+      "£50",
+      "£200",
+      "£100"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 3 : 5 makes 3 + 5 = 8 equal parts. One part is £400 ÷ 8 = £50, so Tom's 3 parts are worth 3 × £50 = £150.",
+    "distractorNotes": [
+      "",
+      "This is Priya's share — the ratio is 3 : 5, so Tom takes the 3 parts.",
+      "This is the value of a single part, not of Tom's 3 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "400 / 8 * 3",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v11",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£1,200 is shared between Callum and Priya in the ratio 3 : 7. How much does Callum receive?",
+    "options": [
+      "£360",
+      "£840",
+      "£120",
+      "£600",
+      "£480"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 3 : 7 makes 3 + 7 = 10 equal parts. One part is £1,200 ÷ 10 = £120, so Callum's 3 parts are worth 3 × £120 = £360.",
+    "distractorNotes": [
+      "",
+      "This is Priya's share — the ratio is 3 : 7, so Callum takes the 3 parts.",
+      "This is the value of a single part, not of Callum's 3 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "1200 / 10 * 3",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-ratio-share-v12",
+    "subject": "maths",
+    "topic": "Ratio and proportion",
+    "skill": "sharing_in_a_ratio",
+    "type": "ratio",
+    "difficulty": 3,
+    "question": "£350 is shared between Jonah and Esme in the ratio 3 : 7. How much does Jonah receive?",
+    "options": [
+      "£105",
+      "£245",
+      "£35",
+      "£175",
+      "£140"
+    ],
+    "answer": 0,
+    "explanation": "The ratio 3 : 7 makes 3 + 7 = 10 equal parts. One part is £350 ÷ 10 = £35, so Jonah's 3 parts are worth 3 × £35 = £105.",
+    "distractorNotes": [
+      "",
+      "This is Esme's share — the ratio is 3 : 7, so Jonah takes the 3 parts.",
+      "This is the value of a single part, not of Jonah's 3 parts.",
+      "This shares the money equally, ignoring the ratio.",
+      "This is the difference between the two shares, not the share itself."
+    ],
+    "learningPoint": "Add the numbers in the ratio to get the number of parts, divide to find one part, then multiply.",
+    "verify": "350 / 10 * 3",
+    "tags": [
+      "ratio",
+      "money",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v01",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular photograph is 15 cm long and 6 cm wide. What is its perimeter?",
+    "options": [
+      "42 cm",
+      "90 cm",
+      "21 cm",
+      "36 cm",
+      "60 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 15 cm and two of 6 cm, so the perimeter is 2 × (15 + 6) = 42 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (15 + 6)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v02",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular photograph is 12 cm long and 8 cm wide. What is its perimeter?",
+    "options": [
+      "40 cm",
+      "96 cm",
+      "20 cm",
+      "32 cm",
+      "48 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 12 cm and two of 8 cm, so the perimeter is 2 × (12 + 8) = 40 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (12 + 8)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v03",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular rug is 23 cm long and 14 cm wide. What is its perimeter?",
+    "options": [
+      "74 cm",
+      "322 cm",
+      "37 cm",
+      "60 cm",
+      "92 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 23 cm and two of 14 cm, so the perimeter is 2 × (23 + 14) = 74 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (23 + 14)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v04",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular flower bed is 10 cm long and 6 cm wide. What is its perimeter?",
+    "options": [
+      "32 cm",
+      "60 cm",
+      "16 cm",
+      "26 cm",
+      "40 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 10 cm and two of 6 cm, so the perimeter is 2 × (10 + 6) = 32 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (10 + 6)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v05",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular flower bed is 20 cm long and 11 cm wide. What is its perimeter?",
+    "options": [
+      "62 cm",
+      "220 cm",
+      "31 cm",
+      "51 cm",
+      "80 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 20 cm and two of 11 cm, so the perimeter is 2 × (20 + 11) = 62 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (20 + 11)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v06",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular rug is 15 cm long and 8 cm wide. What is its perimeter?",
+    "options": [
+      "46 cm",
+      "120 cm",
+      "23 cm",
+      "38 cm",
+      "60 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 15 cm and two of 8 cm, so the perimeter is 2 × (15 + 8) = 46 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (15 + 8)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v07",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular flower bed is 14 cm long and 10 cm wide. What is its perimeter?",
+    "options": [
+      "48 cm",
+      "140 cm",
+      "24 cm",
+      "38 cm",
+      "56 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 14 cm and two of 10 cm, so the perimeter is 2 × (14 + 10) = 48 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (14 + 10)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v08",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular rug is 13 cm long and 8 cm wide. What is its perimeter?",
+    "options": [
+      "42 cm",
+      "104 cm",
+      "21 cm",
+      "34 cm",
+      "52 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 13 cm and two of 8 cm, so the perimeter is 2 × (13 + 8) = 42 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (13 + 8)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v09",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular paddock is 15 cm long and 9 cm wide. What is its perimeter?",
+    "options": [
+      "48 cm",
+      "135 cm",
+      "24 cm",
+      "39 cm",
+      "60 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 15 cm and two of 9 cm, so the perimeter is 2 × (15 + 9) = 48 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (15 + 9)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v10",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular notice board is 18 cm long and 12 cm wide. What is its perimeter?",
+    "options": [
+      "60 cm",
+      "216 cm",
+      "30 cm",
+      "48 cm",
+      "72 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 18 cm and two of 12 cm, so the perimeter is 2 × (18 + 12) = 60 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (18 + 12)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v11",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular notice board is 14 cm long and 9 cm wide. What is its perimeter?",
+    "options": [
+      "46 cm",
+      "126 cm",
+      "23 cm",
+      "37 cm",
+      "56 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 14 cm and two of 9 cm, so the perimeter is 2 × (14 + 9) = 46 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (14 + 9)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-geometry-perimeter-v12",
+    "subject": "maths",
+    "topic": "Geometry",
+    "skill": "area_and_perimeter",
+    "type": "geometry",
+    "difficulty": 2,
+    "question": "A rectangular photograph is 13 cm long and 3 cm wide. What is its perimeter?",
+    "options": [
+      "32 cm",
+      "39 cm",
+      "16 cm",
+      "29 cm",
+      "52 cm"
+    ],
+    "answer": 0,
+    "explanation": "A rectangle has two sides of 13 cm and two of 3 cm, so the perimeter is 2 × (13 + 3) = 32 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies the sides, which gives the area rather than the distance round the edge.",
+      "This adds one long side and one short side — only half of the way round.",
+      "This counts both long sides but only one short side.",
+      "This treats the shape as a square with all sides the length of the longer one."
+    ],
+    "learningPoint": "Perimeter is the distance all the way round: add the two different sides, then double.",
+    "verify": "2 * (13 + 3)",
+    "tags": [
+      "geometry",
+      "perimeter",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v01",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 3/5 of 90?",
+    "options": [
+      "54",
+      "18",
+      "36",
+      "150",
+      "72"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 90 ÷ 5 = 18. Then multiply by the top: 18 × 3 = 54.",
+    "distractorNotes": [
+      "",
+      "This is 1/5 of 90 — one part, when the question asks for 3.",
+      "This is the 2 parts left over, not the 3 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 4 parts instead of 3."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "90 / 5 * 3",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v02",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 3/5 of 75?",
+    "options": [
+      "45",
+      "15",
+      "30",
+      "125",
+      "60"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 75 ÷ 5 = 15. Then multiply by the top: 15 × 3 = 45.",
+    "distractorNotes": [
+      "",
+      "This is 1/5 of 75 — one part, when the question asks for 3.",
+      "This is the 2 parts left over, not the 3 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 4 parts instead of 3."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "75 / 5 * 3",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v03",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 3/8 of 96?",
+    "options": [
+      "36",
+      "12",
+      "60",
+      "256",
+      "48"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 96 ÷ 8 = 12. Then multiply by the top: 12 × 3 = 36.",
+    "distractorNotes": [
+      "",
+      "This is 1/8 of 96 — one part, when the question asks for 3.",
+      "This is the 5 parts left over, not the 3 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 4 parts instead of 3."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "96 / 8 * 3",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v04",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 3/8 of 192?",
+    "options": [
+      "72",
+      "24",
+      "120",
+      "512",
+      "96"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 192 ÷ 8 = 24. Then multiply by the top: 24 × 3 = 72.",
+    "distractorNotes": [
+      "",
+      "This is 1/8 of 192 — one part, when the question asks for 3.",
+      "This is the 5 parts left over, not the 3 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 4 parts instead of 3."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "192 / 8 * 3",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v05",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 5/8 of 200?",
+    "options": [
+      "125",
+      "25",
+      "75",
+      "320",
+      "150"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 200 ÷ 8 = 25. Then multiply by the top: 25 × 5 = 125.",
+    "distractorNotes": [
+      "",
+      "This is 1/8 of 200 — one part, when the question asks for 5.",
+      "This is the 3 parts left over, not the 5 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 6 parts instead of 5."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "200 / 8 * 5",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v06",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 5/8 of 240?",
+    "options": [
+      "150",
+      "30",
+      "90",
+      "384",
+      "180"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 240 ÷ 8 = 30. Then multiply by the top: 30 × 5 = 150.",
+    "distractorNotes": [
+      "",
+      "This is 1/8 of 240 — one part, when the question asks for 5.",
+      "This is the 3 parts left over, not the 5 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 6 parts instead of 5."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "240 / 8 * 5",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v07",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 3/5 of 105?",
+    "options": [
+      "63",
+      "21",
+      "42",
+      "175",
+      "84"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 105 ÷ 5 = 21. Then multiply by the top: 21 × 3 = 63.",
+    "distractorNotes": [
+      "",
+      "This is 1/5 of 105 — one part, when the question asks for 3.",
+      "This is the 2 parts left over, not the 3 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 4 parts instead of 3."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "105 / 5 * 3",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v08",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 3/5 of 45?",
+    "options": [
+      "27",
+      "9",
+      "18",
+      "75",
+      "36"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 45 ÷ 5 = 9. Then multiply by the top: 9 × 3 = 27.",
+    "distractorNotes": [
+      "",
+      "This is 1/5 of 45 — one part, when the question asks for 3.",
+      "This is the 2 parts left over, not the 3 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 4 parts instead of 3."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "45 / 5 * 3",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v09",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 5/8 of 120?",
+    "options": [
+      "75",
+      "15",
+      "45",
+      "192",
+      "90"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 120 ÷ 8 = 15. Then multiply by the top: 15 × 5 = 75.",
+    "distractorNotes": [
+      "",
+      "This is 1/8 of 120 — one part, when the question asks for 5.",
+      "This is the 3 parts left over, not the 5 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 6 parts instead of 5."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "120 / 8 * 5",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-fractions-of-amount-v10",
+    "subject": "maths",
+    "topic": "Fractions",
+    "skill": "fraction_of_quantity",
+    "type": "fractions",
+    "difficulty": 2,
+    "question": "What is 5/8 of 160?",
+    "options": [
+      "100",
+      "20",
+      "60",
+      "256",
+      "120"
+    ],
+    "answer": 0,
+    "explanation": "Divide by the bottom to find one part: 160 ÷ 8 = 20. Then multiply by the top: 20 × 5 = 100.",
+    "distractorNotes": [
+      "",
+      "This is 1/8 of 160 — one part, when the question asks for 5.",
+      "This is the 3 parts left over, not the 5 parts asked for.",
+      "This divides by the top number and multiplies by the bottom — the wrong way round.",
+      "This counts 6 parts instead of 5."
+    ],
+    "learningPoint": "Divide by the bottom, multiply by the top.",
+    "verify": "160 / 8 * 5",
+    "tags": [
+      "fractions",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v01",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 3,
+    "question": "Work out 14 + 5 × 4",
+    "options": [
+      "34",
+      "76",
+      "23",
+      "74",
+      "20"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 5 × 4 = 20 first, then add: 14 + 20 = 34.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 5 and 4.",
+      "This does the multiplication but forgets to add the 14."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "14 + 5 * 4",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v02",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 3,
+    "question": "Work out 12 + 2 × 9",
+    "options": [
+      "30",
+      "126",
+      "23",
+      "33",
+      "18"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 2 × 9 = 18 first, then add: 12 + 18 = 30.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 2 and 9.",
+      "This does the multiplication but forgets to add the 12."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "12 + 2 * 9",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v03",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 3,
+    "question": "Work out 13 + 5 × 9",
+    "options": [
+      "58",
+      "162",
+      "27",
+      "74",
+      "45"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 5 × 9 = 45 first, then add: 13 + 45 = 58.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 5 and 9.",
+      "This does the multiplication but forgets to add the 13."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "13 + 5 * 9",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v04",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 3,
+    "question": "Work out 15 + 6 × 4",
+    "options": [
+      "39",
+      "84",
+      "25",
+      "94",
+      "24"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 6 × 4 = 24 first, then add: 15 + 24 = 39.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 6 and 4.",
+      "This does the multiplication but forgets to add the 15."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "15 + 6 * 4",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v05",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 3,
+    "question": "Work out 13 + 9 × 8",
+    "options": [
+      "85",
+      "176",
+      "30",
+      "125",
+      "72"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 9 × 8 = 72 first, then add: 13 + 72 = 85.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 9 and 8.",
+      "This does the multiplication but forgets to add the 13."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "13 + 9 * 8",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v06",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 2,
+    "question": "Work out 4 + 8 × 5",
+    "options": [
+      "44",
+      "60",
+      "17",
+      "37",
+      "40"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 8 × 5 = 40 first, then add: 4 + 40 = 44.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 8 and 5.",
+      "This does the multiplication but forgets to add the 4."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "4 + 8 * 5",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v07",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 2,
+    "question": "Work out 4 + 7 × 3",
+    "options": [
+      "25",
+      "33",
+      "14",
+      "31",
+      "21"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 7 × 3 = 21 first, then add: 4 + 21 = 25.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 7 and 3.",
+      "This does the multiplication but forgets to add the 4."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "4 + 7 * 3",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v08",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 3,
+    "question": "Work out 16 + 5 × 3",
+    "options": [
+      "31",
+      "63",
+      "24",
+      "83",
+      "15"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 5 × 3 = 15 first, then add: 16 + 15 = 31.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 5 and 3.",
+      "This does the multiplication but forgets to add the 16."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "16 + 5 * 3",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v09",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 2,
+    "question": "Work out 8 + 7 × 7",
+    "options": [
+      "57",
+      "105",
+      "22",
+      "63",
+      "49"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 7 × 7 = 49 first, then add: 8 + 49 = 57.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 7 and 7.",
+      "This does the multiplication but forgets to add the 8."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "8 + 7 * 7",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-order-of-operations-v10",
+    "subject": "maths",
+    "topic": "Order of operations",
+    "skill": "bidmas",
+    "type": "number",
+    "difficulty": 2,
+    "question": "Work out 6 + 4 × 9",
+    "options": [
+      "42",
+      "90",
+      "19",
+      "33",
+      "36"
+    ],
+    "answer": 0,
+    "explanation": "Multiplication comes before addition, so work out 4 × 9 = 36 first, then add: 6 + 36 = 42.",
+    "distractorNotes": [
+      "",
+      "This works left to right, adding before multiplying.",
+      "This adds all three numbers, ignoring the multiplication sign.",
+      "This multiplies the wrong pair — the × applies to 4 and 9.",
+      "This does the multiplication but forgets to add the 6."
+    ],
+    "learningPoint": "Do multiplication and division before addition and subtraction, whatever order they are written in.",
+    "verify": "6 + 4 * 9",
+    "tags": [
+      "bidmas",
+      "order of operations",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v01",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many m are there in 2.2 km?",
+    "options": [
+      "2200 m",
+      "220 m",
+      "22000 m",
+      "0.0022 m",
+      "2.2 m"
+    ],
+    "answer": 0,
+    "explanation": "There are 1000 m in 1 km, so multiply: 2.2 × 1000 = 2200 m.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1000.",
+      "This multiplies by 10000 instead of 1000.",
+      "This divides by 1000. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "2.2 * 1000",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v02",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many g are there in 4.4 kg?",
+    "options": [
+      "4400 g",
+      "440 g",
+      "44000 g",
+      "0.0044 g",
+      "4.4 g"
+    ],
+    "answer": 0,
+    "explanation": "There are 1000 g in 1 kg, so multiply: 4.4 × 1000 = 4400 g.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1000.",
+      "This multiplies by 10000 instead of 1000.",
+      "This divides by 1000. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "4.4 * 1000",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v03",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many ml are there in 3.5 litres?",
+    "options": [
+      "3500 ml",
+      "350 ml",
+      "35000 ml",
+      "0.0035 ml",
+      "3.5 ml"
+    ],
+    "answer": 0,
+    "explanation": "There are 1000 ml in 1 litre, so multiply: 3.5 × 1000 = 3500 ml.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1000.",
+      "This multiplies by 10000 instead of 1000.",
+      "This divides by 1000. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "3.5 * 1000",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v04",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many ml are there in 3.1 litres?",
+    "options": [
+      "3100 ml",
+      "310 ml",
+      "31000 ml",
+      "0.0031 ml",
+      "3.1 ml"
+    ],
+    "answer": 0,
+    "explanation": "There are 1000 ml in 1 litre, so multiply: 3.1 × 1000 = 3100 ml.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1000.",
+      "This multiplies by 10000 instead of 1000.",
+      "This divides by 1000. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "3.1 * 1000",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v05",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many ml are there in 6.4 litres?",
+    "options": [
+      "6400 ml",
+      "640 ml",
+      "64000 ml",
+      "0.0064 ml",
+      "6.4 ml"
+    ],
+    "answer": 0,
+    "explanation": "There are 1000 ml in 1 litre, so multiply: 6.4 × 1000 = 6400 ml.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1000.",
+      "This multiplies by 10000 instead of 1000.",
+      "This divides by 1000. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "6.4 * 1000",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v06",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many m are there in 6.4 km?",
+    "options": [
+      "6400 m",
+      "640 m",
+      "64000 m",
+      "0.0064 m",
+      "6.4 m"
+    ],
+    "answer": 0,
+    "explanation": "There are 1000 m in 1 km, so multiply: 6.4 × 1000 = 6400 m.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1000.",
+      "This multiplies by 10000 instead of 1000.",
+      "This divides by 1000. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "6.4 * 1000",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v07",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many m are there in 7.5 km?",
+    "options": [
+      "7500 m",
+      "750 m",
+      "75000 m",
+      "0.0075 m",
+      "7.5 m"
+    ],
+    "answer": 0,
+    "explanation": "There are 1000 m in 1 km, so multiply: 7.5 × 1000 = 7500 m.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1000.",
+      "This multiplies by 10000 instead of 1000.",
+      "This divides by 1000. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "7.5 * 1000",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v08",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many m are there in 5.3 km?",
+    "options": [
+      "5300 m",
+      "530 m",
+      "53000 m",
+      "0.0053 m",
+      "5.3 m"
+    ],
+    "answer": 0,
+    "explanation": "There are 1000 m in 1 km, so multiply: 5.3 × 1000 = 5300 m.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1000.",
+      "This multiplies by 10000 instead of 1000.",
+      "This divides by 1000. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "5.3 * 1000",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v09",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many cm are there in 8 m?",
+    "options": [
+      "800 cm",
+      "80 cm",
+      "8000 cm",
+      "0.08 cm",
+      "8 cm"
+    ],
+    "answer": 0,
+    "explanation": "There are 100 cm in 1 m, so multiply: 8 × 100 = 800 cm.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 10 instead of 100.",
+      "This multiplies by 1000 instead of 100.",
+      "This divides by 100. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "8 * 100",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-unit-conversion-v10",
+    "subject": "maths",
+    "topic": "Measurement",
+    "skill": "unit_conversion",
+    "type": "measurement",
+    "difficulty": 2,
+    "question": "How many g are there in 7.7 kg?",
+    "options": [
+      "7700 g",
+      "770 g",
+      "77000 g",
+      "0.0077 g",
+      "7.7 g"
+    ],
+    "answer": 0,
+    "explanation": "There are 1000 g in 1 kg, so multiply: 7.7 × 1000 = 7700 g.",
+    "distractorNotes": [
+      "",
+      "This multiplies by 100 instead of 1000.",
+      "This multiplies by 10000 instead of 1000.",
+      "This divides by 1000. Going from a big unit to a small one gives *more* of them, so multiply.",
+      "This changes the label without changing the number."
+    ],
+    "learningPoint": "Changing to a smaller unit always gives a bigger number, so multiply — and check the size of your answer makes sense.",
+    "verify": "7.7 * 1000",
+    "tags": [
+      "measurement",
+      "units",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v01",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five lengths in centimetres are 6, 27, 2, 36, 14. What is the mean?",
+    "options": [
+      "17",
+      "14",
+      "34",
+      "85",
+      "19"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 6 + 27 + 2 + 36 + 14 = 85. There are 5 values, so the mean is 85 ÷ 5 = 17.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(6 + 27 + 2 + 36 + 14) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v02",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five lengths in centimetres are 3, 13, 8, 37, 29. What is the mean?",
+    "options": [
+      "18",
+      "13",
+      "34",
+      "90",
+      "20"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 3 + 13 + 8 + 37 + 29 = 90. There are 5 values, so the mean is 90 ÷ 5 = 18.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(3 + 13 + 8 + 37 + 29) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v03",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five temperatures in °C are 4, 24, 25, 40, 37. What is the mean?",
+    "options": [
+      "26",
+      "25",
+      "36",
+      "130",
+      "22"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 4 + 24 + 25 + 40 + 37 = 130. There are 5 values, so the mean is 130 ÷ 5 = 26.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(4 + 24 + 25 + 40 + 37) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v04",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five lengths in centimetres are 25, 4, 34, 21, 36. What is the mean?",
+    "options": [
+      "24",
+      "25",
+      "32",
+      "120",
+      "20"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 25 + 4 + 34 + 21 + 36 = 120. There are 5 values, so the mean is 120 ÷ 5 = 24.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(25 + 4 + 34 + 21 + 36) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v05",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five test scores are 34, 18, 29, 12, 32. What is the mean?",
+    "options": [
+      "25",
+      "29",
+      "22",
+      "125",
+      "23"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 34 + 18 + 29 + 12 + 32 = 125. There are 5 values, so the mean is 125 ÷ 5 = 25.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(34 + 18 + 29 + 12 + 32) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v06",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five weights in kilograms are 16, 2, 4, 28, 20. What is the mean?",
+    "options": [
+      "14",
+      "16",
+      "26",
+      "70",
+      "15"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 16 + 2 + 4 + 28 + 20 = 70. There are 5 values, so the mean is 70 ÷ 5 = 14.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(16 + 2 + 4 + 28 + 20) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v07",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five test scores are 38, 40, 38, 20, 4. What is the mean?",
+    "options": [
+      "28",
+      "38",
+      "36",
+      "140",
+      "22"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 38 + 40 + 38 + 20 + 4 = 140. There are 5 values, so the mean is 140 ÷ 5 = 28.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(38 + 40 + 38 + 20 + 4) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v08",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five numbers of goals scored in a season are 20, 37, 29, 15, 19. What is the mean?",
+    "options": [
+      "24",
+      "20",
+      "22",
+      "120",
+      "26"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 20 + 37 + 29 + 15 + 19 = 120. There are 5 values, so the mean is 120 ÷ 5 = 24.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(20 + 37 + 29 + 15 + 19) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v09",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five weights in kilograms are 13, 11, 10, 4, 22. What is the mean?",
+    "options": [
+      "12",
+      "11",
+      "18",
+      "60",
+      "13"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 13 + 11 + 10 + 4 + 22 = 60. There are 5 values, so the mean is 60 ÷ 5 = 12.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(13 + 11 + 10 + 4 + 22) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-mean-of-five-v10",
+    "subject": "maths",
+    "topic": "Data handling",
+    "skill": "mean",
+    "type": "statistics",
+    "difficulty": 2,
+    "question": "Five weights in kilograms are 27, 11, 31, 39, 37. What is the mean?",
+    "options": [
+      "29",
+      "31",
+      "28",
+      "145",
+      "25"
+    ],
+    "answer": 0,
+    "explanation": "Add them up: 27 + 11 + 31 + 39 + 37 = 145. There are 5 values, so the mean is 145 ÷ 5 = 29.",
+    "distractorNotes": [
+      "",
+      "This is the median — the middle value once they are in order.",
+      "This is the range — the difference between largest and smallest.",
+      "This is the total. The mean is the total shared between the five.",
+      "This is halfway between the largest and smallest, which is not the mean."
+    ],
+    "learningPoint": "Mean = total ÷ how many. Check you have divided by the number of values.",
+    "verify": "(27 + 11 + 31 + 39 + 37) / 5",
+    "tags": [
+      "average",
+      "mean",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v01",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 2,
+    "question": "At midnight the temperature at the car park was −4 °C. By noon it had risen to 10 °C. By how many degrees did it rise?",
+    "options": [
+      "14 °C",
+      "6 °C",
+      "4 °C",
+      "10 °C",
+      "13 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 4 degrees to reach 0 °C, then a further 10 degrees. Altogether that is 4 + 10 = 14 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "4 + 10",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v02",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 3,
+    "question": "At midnight the temperature at the allotment was −7 °C. By noon it had risen to 16 °C. By how many degrees did it rise?",
+    "options": [
+      "23 °C",
+      "9 °C",
+      "7 °C",
+      "16 °C",
+      "22 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 7 degrees to reach 0 °C, then a further 16 degrees. Altogether that is 7 + 16 = 23 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "7 + 16",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v03",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 3,
+    "question": "At midnight the temperature at Aviemore was −13 °C. By noon it had risen to 15 °C. By how many degrees did it rise?",
+    "options": [
+      "28 °C",
+      "2 °C",
+      "13 °C",
+      "15 °C",
+      "27 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 13 degrees to reach 0 °C, then a further 15 degrees. Altogether that is 13 + 15 = 28 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "13 + 15",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v04",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 2,
+    "question": "At midnight the temperature at the car park was −10 °C. By noon it had risen to 6 °C. By how many degrees did it rise?",
+    "options": [
+      "16 °C",
+      "4 °C",
+      "10 °C",
+      "6 °C",
+      "15 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 10 degrees to reach 0 °C, then a further 6 degrees. Altogether that is 10 + 6 = 16 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "10 + 6",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v05",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 2,
+    "question": "At midnight the temperature at a mountain hut was −8 °C. By noon it had risen to 5 °C. By how many degrees did it rise?",
+    "options": [
+      "13 °C",
+      "3 °C",
+      "8 °C",
+      "5 °C",
+      "12 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 8 degrees to reach 0 °C, then a further 5 degrees. Altogether that is 8 + 5 = 13 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "8 + 5",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v06",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 2,
+    "question": "At midnight the temperature at the car park was −2 °C. By noon it had risen to 14 °C. By how many degrees did it rise?",
+    "options": [
+      "16 °C",
+      "12 °C",
+      "2 °C",
+      "14 °C",
+      "15 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 2 degrees to reach 0 °C, then a further 14 degrees. Altogether that is 2 + 14 = 16 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "2 + 14",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v07",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 2,
+    "question": "At midnight the temperature at the car park was −6 °C. By noon it had risen to 10 °C. By how many degrees did it rise?",
+    "options": [
+      "16 °C",
+      "4 °C",
+      "6 °C",
+      "10 °C",
+      "15 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 6 degrees to reach 0 °C, then a further 10 degrees. Altogether that is 6 + 10 = 16 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "6 + 10",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v08",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 3,
+    "question": "At midnight the temperature at the school field was −12 °C. By noon it had risen to 15 °C. By how many degrees did it rise?",
+    "options": [
+      "27 °C",
+      "3 °C",
+      "12 °C",
+      "15 °C",
+      "26 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 12 degrees to reach 0 °C, then a further 15 degrees. Altogether that is 12 + 15 = 27 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "12 + 15",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v09",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 2,
+    "question": "At midnight the temperature at the allotment was −2 °C. By noon it had risen to 14 °C. By how many degrees did it rise?",
+    "options": [
+      "16 °C",
+      "12 °C",
+      "2 °C",
+      "14 °C",
+      "15 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 2 degrees to reach 0 °C, then a further 14 degrees. Altogether that is 2 + 14 = 16 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "2 + 14",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-temperature-rise-v10",
+    "subject": "maths",
+    "topic": "Negative numbers",
+    "skill": "temperature_difference",
+    "type": "number",
+    "difficulty": 2,
+    "question": "At midnight the temperature at Sheffield was −13 °C. By noon it had risen to 3 °C. By how many degrees did it rise?",
+    "options": [
+      "16 °C",
+      "10 °C",
+      "13 °C",
+      "3 °C",
+      "15 °C"
+    ],
+    "answer": 0,
+    "explanation": "The temperature climbs 13 degrees to reach 0 °C, then a further 3 degrees. Altogether that is 13 + 3 = 16 degrees.",
+    "distractorNotes": [
+      "",
+      "This subtracts the two numbers, which ignores the crossing of zero.",
+      "This counts only the rise up to 0 °C.",
+      "This counts only the rise from 0 °C, missing the part below zero.",
+      "This misses one degree — count the step from −1 °C to 0 °C as well."
+    ],
+    "learningPoint": "To find a change that crosses zero, add the two distances from zero rather than subtracting.",
+    "verify": "13 + 3",
+    "tags": [
+      "negative numbers",
+      "temperature",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v01",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Esme buys 6 gel pens at £1.00 each and one pencil case costing £4.80, and pays with a £50 note. How much change should there be?",
+    "options": [
+      "£39.20",
+      "£10.80",
+      "£44.00",
+      "£44.20",
+      "£15.20"
+    ],
+    "answer": 0,
+    "explanation": "6 × £1.00 = £6.00, plus £4.80 for the pencil case, giving £10.80. The change is £50 − £10.80 = £39.20.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the pencil case.",
+      "This pays for only one gel pen instead of 6.",
+      "This multiplies the pencil case by 6 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(5000 - (6 * 100 + 480)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v02",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Amira buys 4 erasers at £1.40 each and one pencil case costing £3.10, and pays with a £20 note. How much change should there be?",
+    "options": [
+      "£11.30",
+      "£8.70",
+      "£14.40",
+      "£15.50",
+      "£2.00"
+    ],
+    "answer": 0,
+    "explanation": "4 × £1.40 = £5.60, plus £3.10 for the pencil case, giving £8.70. The change is £20 − £8.70 = £11.30.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the pencil case.",
+      "This pays for only one eraser instead of 4.",
+      "This multiplies the pencil case by 4 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(2000 - (4 * 140 + 310)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v03",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Nadia buys 3 gel pens at £2.70 each and one glue stick costing £3.60, and pays with a £50 note. How much change should there be?",
+    "options": [
+      "£38.30",
+      "£11.70",
+      "£41.90",
+      "£43.70",
+      "£31.10"
+    ],
+    "answer": 0,
+    "explanation": "3 × £2.70 = £8.10, plus £3.60 for the glue stick, giving £11.70. The change is £50 − £11.70 = £38.30.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the glue stick.",
+      "This pays for only one gel pen instead of 3.",
+      "This multiplies the glue stick by 3 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(5000 - (3 * 270 + 360)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v04",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Callum buys 3 erasers at £2.40 each and one glue stick costing £1.70, and pays with a £50 note. How much change should there be?",
+    "options": [
+      "£41.10",
+      "£8.90",
+      "£42.80",
+      "£45.90",
+      "£37.70"
+    ],
+    "answer": 0,
+    "explanation": "3 × £2.40 = £7.20, plus £1.70 for the glue stick, giving £8.90. The change is £50 − £8.90 = £41.10.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the glue stick.",
+      "This pays for only one eraser instead of 3.",
+      "This multiplies the glue stick by 3 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(5000 - (3 * 240 + 170)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v05",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Rafiq buys 4 notebooks at £1.80 each and one ruler costing £2.40, and pays with a £50 note. How much change should there be?",
+    "options": [
+      "£40.40",
+      "£9.60",
+      "£42.80",
+      "£45.80",
+      "£33.20"
+    ],
+    "answer": 0,
+    "explanation": "4 × £1.80 = £7.20, plus £2.40 for the ruler, giving £9.60. The change is £50 − £9.60 = £40.40.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the ruler.",
+      "This pays for only one notebook instead of 4.",
+      "This multiplies the ruler by 4 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(5000 - (4 * 180 + 240)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v06",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Amira buys 3 notebooks at £2.00 each and one ruler costing £2.70, and pays with a £20 note. How much change should there be?",
+    "options": [
+      "£11.30",
+      "£8.70",
+      "£14.00",
+      "£15.30",
+      "£5.90"
+    ],
+    "answer": 0,
+    "explanation": "3 × £2.00 = £6.00, plus £2.70 for the ruler, giving £8.70. The change is £20 − £8.70 = £11.30.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the ruler.",
+      "This pays for only one notebook instead of 3.",
+      "This multiplies the ruler by 3 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(2000 - (3 * 200 + 270)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v07",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Nadia buys 3 notebooks at £1.90 each and one ruler costing £4.20, and pays with a £20 note. How much change should there be?",
+    "options": [
+      "£10.10",
+      "£9.90",
+      "£14.30",
+      "£13.90",
+      "£1.70"
+    ],
+    "answer": 0,
+    "explanation": "3 × £1.90 = £5.70, plus £4.20 for the ruler, giving £9.90. The change is £20 − £9.90 = £10.10.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the ruler.",
+      "This pays for only one notebook instead of 3.",
+      "This multiplies the ruler by 3 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(2000 - (3 * 190 + 420)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v08",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Amira buys 5 notebooks at £1.00 each and one sketchpad costing £3.80, and pays with a £50 note. How much change should there be?",
+    "options": [
+      "£41.20",
+      "£8.80",
+      "£45.00",
+      "£45.20",
+      "£26.00"
+    ],
+    "answer": 0,
+    "explanation": "5 × £1.00 = £5.00, plus £3.80 for the sketchpad, giving £8.80. The change is £50 − £8.80 = £41.20.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the sketchpad.",
+      "This pays for only one notebook instead of 5.",
+      "This multiplies the sketchpad by 5 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(5000 - (5 * 100 + 380)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v09",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Rafiq buys 4 notebooks at £1.50 each and one glue stick costing £2.60, and pays with a £20 note. How much change should there be?",
+    "options": [
+      "£11.40",
+      "£8.60",
+      "£14.00",
+      "£15.90",
+      "£3.60"
+    ],
+    "answer": 0,
+    "explanation": "4 × £1.50 = £6.00, plus £2.60 for the glue stick, giving £8.60. The change is £20 − £8.60 = £11.40.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the glue stick.",
+      "This pays for only one notebook instead of 4.",
+      "This multiplies the glue stick by 4 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(2000 - (4 * 150 + 260)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "maths-money-change-v10",
+    "subject": "maths",
+    "topic": "Word problems",
+    "skill": "multi_step_money",
+    "type": "word-problem",
+    "difficulty": 3,
+    "question": "Jonah buys 5 gel pens at £1.60 each and one ruler costing £1.70, and pays with a £20 note. How much change should there be?",
+    "options": [
+      "£10.30",
+      "£9.70",
+      "£12.00",
+      "£16.70",
+      "£3.50"
+    ],
+    "answer": 0,
+    "explanation": "5 × £1.60 = £8.00, plus £1.70 for the ruler, giving £9.70. The change is £20 − £9.70 = £10.30.",
+    "distractorNotes": [
+      "",
+      "This is what she spends, not the change she gets back.",
+      "This forgets the ruler.",
+      "This pays for only one gel pen instead of 5.",
+      "This multiplies the ruler by 5 as well, but she buys only one."
+    ],
+    "learningPoint": "In a multi-step money question, work out the total spent first, then take it away from what was handed over.",
+    "verify": "(2000 - (5 * 160 + 170)) / 100",
+    "tags": [
+      "money",
+      "multi-step",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v01",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If RAIN is written in code as VEMR, how would LAMP be written in the same code?",
+    "options": [
+      "PEQT",
+      "ODPS",
+      "HWIL",
+      "PEQU",
+      "PAMP"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 4 places: R → V, A → E, I → M, N → R. Doing the same to LAMP gives PEQT.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 3 places.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 5 places rather than 4.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v02",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If SHIP is written in code as UJKR, how would NEST be written in the same code?",
+    "options": [
+      "PGUV",
+      "OFTU",
+      "LCQR",
+      "PGUW",
+      "PEST"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 2 places: S → U, H → J, I → K, P → R. Doing the same to NEST gives PGUV.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 1 place.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 3 places rather than 2.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v03",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If LAMP is written in code as PEQT, how would GATE be written in the same code?",
+    "options": [
+      "KEXI",
+      "JDWH",
+      "CWPA",
+      "KEXJ",
+      "KATE"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 4 places: L → P, A → E, M → Q, P → T. Doing the same to GATE gives KEXI.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 3 places.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 5 places rather than 4.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v04",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If NEST is written in code as RIWX, how would FARM be written in the same code?",
+    "options": [
+      "JEVQ",
+      "IDUP",
+      "BWNI",
+      "JEVR",
+      "JARM"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 4 places: N → R, E → I, S → W, T → X. Doing the same to FARM gives JEVQ.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 3 places.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 5 places rather than 4.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v05",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If DESK is written in code as FGUM, how would BOOK be written in the same code?",
+    "options": [
+      "DQQM",
+      "CPPL",
+      "ZMMI",
+      "DQQN",
+      "DOOK"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 2 places: D → F, E → G, S → U, K → M. Doing the same to BOOK gives DQQM.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 1 place.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 3 places rather than 2.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v06",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If MOON is written in code as PRRQ, how would BOOK be written in the same code?",
+    "options": [
+      "ERRN",
+      "DQQM",
+      "YLLH",
+      "ERRO",
+      "EOOK"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 3 places: M → P, O → R, O → R, N → Q. Doing the same to BOOK gives ERRN.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 2 places.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 4 places rather than 3.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v07",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If HAND is written in code as LERH, how would DOG be written in the same code?",
+    "options": [
+      "HSK",
+      "GRJ",
+      "ZKC",
+      "HSL",
+      "HOG"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 4 places: H → L, A → E, N → R, D → H. Doing the same to DOG gives HSK.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 3 places.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 5 places rather than 4.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v08",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If NEST is written in code as PGUV, how would GATE be written in the same code?",
+    "options": [
+      "ICVG",
+      "HBUF",
+      "EYRC",
+      "ICVH",
+      "IATE"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 2 places: N → P, E → G, S → U, T → V. Doing the same to GATE gives ICVG.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 1 place.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 3 places rather than 2.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v09",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If FROG is written in code as HTQI, how would ROSE be written in the same code?",
+    "options": [
+      "TQUG",
+      "SPTF",
+      "PMQC",
+      "TQUH",
+      "TOSE"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 2 places: F → H, R → T, O → Q, G → I. Doing the same to ROSE gives TQUG.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 1 place.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 3 places rather than 2.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-shift-code-v10",
+    "subject": "verbal-reasoning",
+    "topic": "Codes",
+    "skill": "letter_codes",
+    "type": "codes",
+    "difficulty": 3,
+    "question": "If BOOK is written in code as FSSO, how would HAND be written in the same code?",
+    "options": [
+      "LERH",
+      "KDQG",
+      "DWJZ",
+      "LERI",
+      "LAND"
+    ],
+    "answer": 0,
+    "explanation": "Each letter moves forward 4 places: B → F, O → S, O → S, K → O. Doing the same to HAND gives LERH.",
+    "distractorNotes": [
+      "",
+      "This moves each letter forward only 3 places.",
+      "This moves the letters backwards instead of forwards.",
+      "The last letter has moved 5 places rather than 4.",
+      "Only the first letter has been coded — the rule applies to every letter."
+    ],
+    "learningPoint": "Work out the rule from the example first, then apply exactly the same rule to every letter of the new word.",
+    "tags": [
+      "codes",
+      "letter shifts",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v01",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? HK, JM, LO, NQ, ___",
+    "options": [
+      "PS",
+      "OR",
+      "QT",
+      "PT",
+      "RU"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 2 letters after the last: H → J → L → N → P. Within a pair the second letter is 3 on from the first, so the answer is PS.",
+    "distractorNotes": [
+      "",
+      "This moves on only 1 letter instead of 2.",
+      "This moves on 3 letters instead of 2.",
+      "The first letter is right, but the pair should be 3 apart, as in HK.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v02",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? EF, HI, KL, NO, ___",
+    "options": [
+      "QR",
+      "PQ",
+      "RS",
+      "QS",
+      "TU"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 3 letters after the last: E → H → K → N → Q. Within a pair the second letter is 1 on from the first, so the answer is QR.",
+    "distractorNotes": [
+      "",
+      "This moves on only 2 letters instead of 3.",
+      "This moves on 4 letters instead of 3.",
+      "The first letter is right, but the pair should be 1 apart, as in EF.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v03",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? GJ, IL, KN, MP, ___",
+    "options": [
+      "OR",
+      "NQ",
+      "PS",
+      "OS",
+      "QT"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 2 letters after the last: G → I → K → M → O. Within a pair the second letter is 3 on from the first, so the answer is OR.",
+    "distractorNotes": [
+      "",
+      "This moves on only 1 letter instead of 2.",
+      "This moves on 3 letters instead of 2.",
+      "The first letter is right, but the pair should be 3 apart, as in GJ.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v04",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? EG, HJ, KM, NP, ___",
+    "options": [
+      "QS",
+      "PR",
+      "RT",
+      "QT",
+      "TV"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 3 letters after the last: E → H → K → N → Q. Within a pair the second letter is 2 on from the first, so the answer is QS.",
+    "distractorNotes": [
+      "",
+      "This moves on only 2 letters instead of 3.",
+      "This moves on 4 letters instead of 3.",
+      "The first letter is right, but the pair should be 2 apart, as in EG.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v05",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? KL, MN, OP, QR, ___",
+    "options": [
+      "ST",
+      "RS",
+      "TU",
+      "SU",
+      "UV"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 2 letters after the last: K → M → O → Q → S. Within a pair the second letter is 1 on from the first, so the answer is ST.",
+    "distractorNotes": [
+      "",
+      "This moves on only 1 letter instead of 2.",
+      "This moves on 3 letters instead of 2.",
+      "The first letter is right, but the pair should be 1 apart, as in KL.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v06",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? AC, DF, GI, JL, ___",
+    "options": [
+      "MO",
+      "LN",
+      "NP",
+      "MP",
+      "PR"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 3 letters after the last: A → D → G → J → M. Within a pair the second letter is 2 on from the first, so the answer is MO.",
+    "distractorNotes": [
+      "",
+      "This moves on only 2 letters instead of 3.",
+      "This moves on 4 letters instead of 3.",
+      "The first letter is right, but the pair should be 2 apart, as in AC.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v07",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? FH, HJ, JL, LN, ___",
+    "options": [
+      "NP",
+      "MO",
+      "OQ",
+      "NQ",
+      "PR"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 2 letters after the last: F → H → J → L → N. Within a pair the second letter is 2 on from the first, so the answer is NP.",
+    "distractorNotes": [
+      "",
+      "This moves on only 1 letter instead of 2.",
+      "This moves on 3 letters instead of 2.",
+      "The first letter is right, but the pair should be 2 apart, as in FH.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v08",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? NO, PQ, RS, TU, ___",
+    "options": [
+      "VW",
+      "UV",
+      "WX",
+      "VX",
+      "XY"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 2 letters after the last: N → P → R → T → V. Within a pair the second letter is 1 on from the first, so the answer is VW.",
+    "distractorNotes": [
+      "",
+      "This moves on only 1 letter instead of 2.",
+      "This moves on 3 letters instead of 2.",
+      "The first letter is right, but the pair should be 1 apart, as in NO.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v09",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? FI, HK, JM, LO, ___",
+    "options": [
+      "NQ",
+      "MP",
+      "OR",
+      "NR",
+      "PS"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 2 letters after the last: F → H → J → L → N. Within a pair the second letter is 3 on from the first, so the answer is NQ.",
+    "distractorNotes": [
+      "",
+      "This moves on only 1 letter instead of 2.",
+      "This moves on 3 letters instead of 2.",
+      "The first letter is right, but the pair should be 3 apart, as in FI.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-letter-sequence-pairs-v10",
+    "subject": "verbal-reasoning",
+    "topic": "Letter sequences",
+    "skill": "letter_patterns",
+    "type": "letter-sequence",
+    "difficulty": 2,
+    "question": "What comes next in this sequence? IJ, LM, OP, RS, ___",
+    "options": [
+      "UV",
+      "TU",
+      "VW",
+      "UW",
+      "XY"
+    ],
+    "answer": 0,
+    "explanation": "Each pair starts 3 letters after the last: I → L → O → R → U. Within a pair the second letter is 1 on from the first, so the answer is UV.",
+    "distractorNotes": [
+      "",
+      "This moves on only 2 letters instead of 3.",
+      "This moves on 4 letters instead of 3.",
+      "The first letter is right, but the pair should be 1 apart, as in IJ.",
+      "This jumps two pairs ahead rather than one."
+    ],
+    "learningPoint": "Look at the first letters as their own sequence, then the second letters as another.",
+    "tags": [
+      "letter sequence",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v01",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 5, 9, 17, 29, ___",
+    "options": [
+      "45",
+      "41",
+      "33",
+      "49",
+      "58"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 4, 8, 12 — each 4 more than the one before. The next gap is 16, so the next number is 29 + 16 = 45.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 12 instead of letting it grow by 4 again.",
+      "This uses the first gap of 4, which only fitted the first step.",
+      "This grows the gap by 4 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "29 + 16",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v02",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 6, 12, 19, 27, ___",
+    "options": [
+      "36",
+      "35",
+      "33",
+      "37",
+      "54"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 6, 7, 8 — each 1 more than the one before. The next gap is 9, so the next number is 27 + 9 = 36.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 8 instead of letting it grow by 1 again.",
+      "This uses the first gap of 6, which only fitted the first step.",
+      "This grows the gap by 1 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "27 + 9",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v03",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 7, 9, 12, 16, ___",
+    "options": [
+      "21",
+      "20",
+      "18",
+      "22",
+      "32"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 2, 3, 4 — each 1 more than the one before. The next gap is 5, so the next number is 16 + 5 = 21.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 4 instead of letting it grow by 1 again.",
+      "This uses the first gap of 2, which only fitted the first step.",
+      "This grows the gap by 1 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "16 + 5",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v04",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 4, 7, 13, 22, ___",
+    "options": [
+      "34",
+      "31",
+      "25",
+      "37",
+      "44"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 3, 6, 9 — each 3 more than the one before. The next gap is 12, so the next number is 22 + 12 = 34.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 9 instead of letting it grow by 3 again.",
+      "This uses the first gap of 3, which only fitted the first step.",
+      "This grows the gap by 3 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "22 + 12",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v05",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 6, 11, 18, 27, ___",
+    "options": [
+      "38",
+      "36",
+      "32",
+      "40",
+      "54"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 5, 7, 9 — each 2 more than the one before. The next gap is 11, so the next number is 27 + 11 = 38.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 9 instead of letting it grow by 2 again.",
+      "This uses the first gap of 5, which only fitted the first step.",
+      "This grows the gap by 2 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "27 + 11",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v06",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 2, 5, 10, 17, ___",
+    "options": [
+      "26",
+      "24",
+      "20",
+      "28",
+      "34"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 3, 5, 7 — each 2 more than the one before. The next gap is 9, so the next number is 17 + 9 = 26.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 7 instead of letting it grow by 2 again.",
+      "This uses the first gap of 3, which only fitted the first step.",
+      "This grows the gap by 2 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "17 + 9",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v07",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 4, 6, 10, 16, ___",
+    "options": [
+      "24",
+      "22",
+      "18",
+      "26",
+      "32"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 2, 4, 6 — each 2 more than the one before. The next gap is 8, so the next number is 16 + 8 = 24.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 6 instead of letting it grow by 2 again.",
+      "This uses the first gap of 2, which only fitted the first step.",
+      "This grows the gap by 2 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "16 + 8",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v08",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 9, 14, 23, 36, ___",
+    "options": [
+      "53",
+      "49",
+      "41",
+      "57",
+      "72"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 5, 9, 13 — each 4 more than the one before. The next gap is 17, so the next number is 36 + 17 = 53.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 13 instead of letting it grow by 4 again.",
+      "This uses the first gap of 5, which only fitted the first step.",
+      "This grows the gap by 4 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "36 + 17",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v09",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 7, 12, 21, 34, ___",
+    "options": [
+      "51",
+      "47",
+      "39",
+      "55",
+      "68"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 5, 9, 13 — each 4 more than the one before. The next gap is 17, so the next number is 34 + 17 = 51.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 13 instead of letting it grow by 4 again.",
+      "This uses the first gap of 5, which only fitted the first step.",
+      "This grows the gap by 4 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "34 + 17",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  },
+  {
+    "id": "vr-number-series-growing-v10",
+    "subject": "verbal-reasoning",
+    "topic": "Number and letter relationships",
+    "skill": "number_series",
+    "type": "number-series",
+    "difficulty": 3,
+    "question": "What is the next number in this sequence? 7, 9, 13, 19, ___",
+    "options": [
+      "27",
+      "25",
+      "21",
+      "29",
+      "38"
+    ],
+    "answer": 0,
+    "explanation": "The gaps are 2, 4, 6 — each 2 more than the one before. The next gap is 8, so the next number is 19 + 8 = 27.",
+    "distractorNotes": [
+      "",
+      "This repeats the last gap of 6 instead of letting it grow by 2 again.",
+      "This uses the first gap of 2, which only fitted the first step.",
+      "This grows the gap by 2 twice over.",
+      "This doubles the last number, but the sequence does not multiply."
+    ],
+    "learningPoint": "If the gaps are not equal, write them down and look for a pattern in the gaps themselves.",
+    "verify": "19 + 8",
+    "tags": [
+      "number series",
+      "patterns",
+      "generated"
+    ]
+  }
+]

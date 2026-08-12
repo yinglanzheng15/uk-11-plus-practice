@@ -1,16 +1,18 @@
 {
   "name": "uk-11-plus-practice",
   "private": true,
-  "version": "1.4.0",
+  "version": "1.5.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate": "tsx scripts/generate-questions.ts",
+    "split": "tsx scripts/split-bank.ts",
     "validate": "tsx scripts/validate-questions.ts",
     "review": "tsx scripts/review-sheet.ts",
     "review:accept": "tsx scripts/review-accept.ts",
-    "test": "tsx scripts/smoke-test.ts",
+    "test": "npm run generate && npm run split && tsx scripts/smoke-test.ts",
     "typecheck": "tsc --noEmit",
-    "build": "npm run validate && tsc --noEmit && vite build",
+    "build": "npm run generate && npm run split && npm run validate && tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -16,7 +16,11 @@ This app's **structure and skill taxonomy** were informed by the publicly docume
 - **No paywalled or restricted material was accessed or circumvented.** Where content could not be legally accessed, it simply was not used.
 - **No school, consortium, publisher or examination board is claimed as a source, partner or endorser.**
 
-The comprehension passages in `src/data/passages.json` — `The Keeper's Daughter`, `Saturday at the Market`, `The Causeway` and `The New Girl` — are original short fiction written for this app.
+The comprehension passages in `src/data/passages.json` — `The Keeper's Daughter`, `Saturday at the Market`, `The Causeway`, `The New Girl`, `The Sunflower Contest`, `Mooring at Dusk`, `The Birds That Almost Never Land` and `Why the Local Library Still Matters` — are original writing produced for this app. The last two are non-fiction and argument; the rest are short fiction.
+
+## Generated questions
+
+`src/data/generated.json` holds questions expanded from the parameterised templates in `src/data/templates.ts` (see [docs/question-format.md](docs/question-format.md)). The templates are original code written for this project: the wording, the number ranges and the misconception each distractor represents were all authored here. No generated question is derived from any external item bank, and no external service is involved — expansion is a local build step.
 
 ## What this app is and is not
 

@@ -136,8 +136,13 @@ function normaliseOption(text: string): string {
 
 // ---- Load ----------------------------------------------------------------
 
+// free.json is a *copy* of a slice of the authored banks, emitted by
+// scripts/split-bank.ts. Validating it too would report every question in it as
+// a duplicate of itself.
+const NOT_A_BANK = new Set(['passages.json', 'free.json'])
+
 const bankFiles = readdirSync(dataDir).filter(
-  (f) => f.endsWith('.json') && f !== 'passages.json',
+  (f) => f.endsWith('.json') && !NOT_A_BANK.has(f),
 )
 
 const questions: Question[] = []
@@ -441,7 +446,10 @@ for (const q of questions) {
   pointUse.set(key, [...(pointUse.get(key) ?? []), q.id])
 }
 for (const [, ids] of pointUse) {
-  if (ids.length > 2) {
+  // Variants of one template teach the same rule on purpose — that is the point
+  // of a template, so only flag a point shared across different sources.
+  const sources = new Set(ids.map((id) => id.replace(/-v\d+$/, '')))
+  if (ids.length > 2 && sources.size > 2) {
     warnings.push(
       `${ids.length} questions share an identical learning point (${ids.slice(0, 3).join(', ')}…)`,
     )

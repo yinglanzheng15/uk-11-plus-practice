@@ -121,8 +121,50 @@ export function loadProgress(): Progress {
   }
 }
 
+/**
+ * How long writes are batched for.
+ *
+ * Every answer produces a new Progress object, and writing each one serialises
+ * the child's entire history — every question record, session and feedback note.
+ * Locally that is a few milliseconds and nobody notices. The reason to batch it
+ * is that this same call becomes a network write once progress syncs to a
+ * server: without batching that is one full-blob round trip per question.
+ */
+export const SAVE_DEBOUNCE_MS = 2000
+
+let pending: Progress | null = null
+let timer: ReturnType<typeof setTimeout> | null = null
+
+function cancelPending(): void {
+  if (timer !== null) {
+    clearTimeout(timer)
+    timer = null
+  }
+  pending = null
+}
+
+/**
+ * Queue a save.
+ *
+ * The in-memory copy is updated synchronously, so a read straight after a write
+ * always sees the new value — only the trip to storage is deferred.
+ *
+ * This is a throttle with a trailing write rather than a true debounce: the
+ * first save starts the clock and later ones only replace what will be written.
+ * A plain debounce would push the deadline back on every answer, so a child
+ * answering steadily could go a whole session without anything reaching disk.
+ */
 export function saveProgress(progress: Progress): void {
   memoryFallback = progress
+  pending = progress
+  if (timer === null) timer = setTimeout(flushProgress, SAVE_DEBOUNCE_MS)
+}
+
+/** Write any queued save immediately. Safe to call when nothing is pending. */
+export function flushProgress(): void {
+  const progress = pending
+  cancelPending()
+  if (progress === null) return
   try {
     window.localStorage.setItem(KEY, JSON.stringify(progress))
   } catch {
@@ -131,6 +173,9 @@ export function saveProgress(progress: Progress): void {
 }
 
 export function clearProgress(): void {
+  // Drop any queued write first, or it would land after the wipe and put the
+  // child's history straight back.
+  cancelPending()
   memoryFallback = null
   try {
     window.localStorage.removeItem(KEY)

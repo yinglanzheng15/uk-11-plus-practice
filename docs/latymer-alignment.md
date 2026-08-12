@@ -49,6 +49,12 @@ sensible units. These fit existing topics.
 **Recommendation:** add ~20 questions across the four gaps. All are numeric, so
 each can carry a `verify` expression and be machine-checked by `npm run validate`.
 
+All four are also **template-shaped** — the reasoning is fixed and only the
+numbers move — so each is one entry in `src/data/templates.ts` rather than five
+or six hand-written objects, and the `verify` expression comes out of the
+template for free. Roman numerals need a conversion helper; the other three are
+a dozen lines each. See [question-format.md](question-format.md#templates-one-style-many-numbers).
+
 ---
 
 ## English — one structural gap: the GL "spot the error / N" format
@@ -99,7 +105,10 @@ Two classic GL types have no clear home in the bank:
 Everything else in the paper (letter-for-number codes, number series, number
 logic, move-a-letter, compound words) maps onto existing topics.
 
-**Recommendation:** add ~12 VR questions for the two missing types.
+**Recommendation:** add ~12 VR questions for the two missing types. Both are
+hand-written work — the answer depends on the *words*, not on a number that can
+be varied. (The bank's letter codes, letter sequences and number series are now
+template-generated; the word-based types are not, and should not be.)
 
 ---
 
@@ -129,9 +138,9 @@ screen-reader-only users; the text descriptions mitigate but don't remove this.
 
 1. English "No mistake" spelling + punctuation (highest fidelity gain, ~16 Q).
 2. Maths coordinates / Roman numerals / timetables / algebra (~20 Q, all
-   machine-verifiable).
-3. VR two-meanings + insert-a-letter (~12 Q).
+   machine-verifiable, and all four best written as templates).
+3. VR two-meanings + insert-a-letter (~12 Q, hand-written).
 4. Grow NVR beyond the taster.
 
-Every batch: `npm run validate`, then `npm run review` and read
-`docs/review-sheet.md`, then `npm run review:accept`.
+Every batch: `npm run generate` if it touched a template, `npm run validate`,
+then `npm run review` and read `docs/review-sheet.md`, then `npm run review:accept`.

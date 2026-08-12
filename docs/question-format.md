@@ -101,6 +101,47 @@ Passages live in `src/data/passages.json`:
 
 Questions reference one with `passageId`. Several questions should share a passage — that mirrors how comprehension is actually assessed and rewards reading it properly. Passages must be **original writing**, never extracts from published work.
 
+## Templates: one style, many numbers
+
+A **template** is a question style plus the numbers it varies over. It lives in `src/data/templates.ts` and is expanded by `npm run generate` into `src/data/generated.json` — an ordinary bank file that is validated, reviewed, shuffled and served like any hand-written question.
+
+```ts
+{
+  id: 'maths-percentages-sale-price',   // variants become …-v01, -v02, …
+  count: 12,
+  subject: 'maths', topic: 'Percentages', skill: 'percentage_decrease',
+  type: 'percentages', difficulty: 2, tags: ['percentages', 'money'],
+  build(r) {
+    const price = 20 * r.int(3, 25)          // r is a seeded RNG: int() and pick()
+    const cut = r.pick([10, 15, 20, 25, 40])
+    const discount = price * cut / 100
+    return {
+      question: `A tent costs £${price}. Its price is reduced by ${cut}%. …`,
+      options: [ …correct first… ],
+      distractorNotes: [ … ],
+      explanation: …, learningPoint: …,
+      verify: `${price} - ${price} * ${cut} / 100`,
+    }
+  },
+}
+```
+
+What makes this worth doing rather than just pasting more JSON:
+
+- **Distractors are computed from the same numbers as the answer**, so every variant still catches the misconception it was designed around — "found the discount but not the price paid" stays wrong in exactly that way at any price.
+- **`verify` is generated too**, so the arithmetic of all twelve variants is proved by the validator.
+- **Seeds come from the template id and variant number**, so output is reproducible: the same twelve questions every run, with stable ids, so progress and spaced repetition keep working.
+
+Rules:
+
+- Put the correct option first, as everywhere else — the app shuffles.
+- Keep values integer and pick ranges that stay realistic (a £47 bicycle in a 17% sale is not an 11+ question).
+- A `build` may throw or return colliding options; the generator discards that draw and re-rolls, so ranges do not need to be collision-proof.
+- Editing a `build` deliberately re-rolls its variants. The ids survive but the numbers change, which resets what a child had learnt about *those* questions — prefer adding a new template to rewriting a popular one.
+- Do not hand-edit `generated.json`; it is overwritten on every build.
+
+A template is the wrong tool when the reasoning itself is what varies — comprehension, most verbal reasoning, anything where a good distractor depends on the specific words. Those stay hand-written.
+
 ## Vetting new questions
 
 Two layers, because they catch different things.
@@ -185,9 +226,19 @@ Warnings (printed, don't fail the build):
 
 ## Adding questions
 
+**One question at a time** — comprehension, vocabulary, anything where the distractors depend on the words:
+
 1. Open the relevant file in `src/data/`.
 2. Append your objects, correct answer first, following the id convention.
 3. Run `npm run validate`.
 4. Run `npm run dev` and try them.
 
 No code changes are needed — the bank is loaded and indexed automatically.
+
+**A dozen at a time** — anything where the numbers are what vary:
+
+1. Add a template to `src/data/templates.ts` (see [Templates](#templates-one-style-many-numbers) above).
+2. Run `npm run generate`, then `npm run validate`.
+3. Read a variant or two in `docs/review-sheet.md` before trusting the other ten.
+
+The rule of thumb: if you find yourself copying a question and changing the numbers, write a template instead.

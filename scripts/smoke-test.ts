@@ -1,4 +1,6 @@
-﻿import { QUESTIONS, getQuestion, topicKey } from '../src/data/index'
+﻿import { readFileSync } from 'node:fs'
+import { QUESTIONS, getQuestion, topicKey, installPaidQuestions } from '../src/data/index'
+import { FREE_PER_TOPIC, partitionBank } from '../src/data/access'
 import {
   intervalDaysFor,
   isDue,
@@ -28,9 +30,23 @@ import {
   noteServed,
   recordAnswer,
 } from '../src/logic/progress'
-import { emptyProgress } from '../src/logic/storage'
+import {
+  clearProgress,
+  emptyProgress,
+  flushProgress,
+  loadProgress,
+  saveProgress,
+} from '../src/logic/storage'
 import { topicMastery } from '../src/logic/mastery'
 import type { Progress, SessionConfig } from '../src/types'
+
+// The client bundles only the free half of the bank and fetches the rest at
+// runtime. Node has no fetch target here, so the test installs the paid half
+// straight from the file the build emits — every check below then sees the same
+// complete bank the app sees.
+const freeOnlyCount = QUESTIONS.length
+const paidBank = JSON.parse(readFileSync('public/paid.json', 'utf8'))
+const installed = installPaidQuestions(paidBank)
 
 let failures = 0
 function check(name: string, condition: boolean, detail = '') {
@@ -653,6 +669,93 @@ console.log('\n== exporting and restoring progress ==')
     renamed.ok &&
       Object.keys(renamed.progress.preferences.practiceTopics).length === 0,
   )
+}
+
+console.log('\n== free / paid split ==')
+{
+  check('the free half alone is not the whole bank', freeOnlyCount < QUESTIONS.length)
+  check('the paid half installed', installed === paidBank.length, `installed=${installed}`)
+  check('the two halves reassemble the bank', freeOnlyCount + installed === QUESTIONS.length)
+
+  // Every topic must survive into the free tier, or a subject would look broken
+  // to a non-paying visitor.
+  const { free, paid } = partitionBank(QUESTIONS)
+  const topicsOf = (qs: typeof QUESTIONS) => new Set(qs.map((q) => `${q.subject}::${q.topic}`))
+  check('every topic is represented in the free half', topicsOf(free).size === topicsOf(QUESTIONS).size)
+  check(
+    'no topic gives away more than the cap',
+    [...topicsOf(QUESTIONS)].every(
+      (k) => free.filter((q) => `${q.subject}::${q.topic}` === k).length <= FREE_PER_TOPIC,
+    ),
+  )
+
+  // A question in both halves would be served twice in one session.
+  const freeIds = new Set(free.map((q) => q.id))
+  check('the halves do not overlap', paid.every((q) => !freeIds.has(q.id)))
+  check('the split loses nothing', free.length + paid.length === QUESTIONS.length)
+
+  // Same bank in, same split out — a redeploy must not move questions between
+  // tiers under a child who is part-way through the free one.
+  const again = partitionBank(QUESTIONS)
+  check(
+    'the split is deterministic',
+    again.free.map((q) => q.id).join() === free.map((q) => q.id).join(),
+  )
+
+  // Installing twice must not duplicate: the loader is called once at startup
+  // today, but a retry or a re-auth would call it again.
+  check('installing the paid half twice is a no-op', installPaidQuestions(paidBank) === 0)
+}
+
+console.log('\n== batched saving ==')
+{
+  // storage.ts talks to window.localStorage. Node has neither, so stand one up
+  // and count what actually reaches it — the point of the batching is the
+  // number of writes, which is only observable from the store's side.
+  let writes = 0
+  let removes = 0
+  let stored: string | null = null
+  ;(globalThis as any).window = {
+    localStorage: {
+      getItem: () => stored,
+      setItem: (_k: string, v: string) => {
+        writes += 1
+        stored = v
+      },
+      removeItem: () => {
+        removes += 1
+        stored = null
+      },
+    },
+  }
+
+  let p: Progress = emptyProgress()
+  for (let i = 0; i < 5; i += 1) {
+    p = { ...p, totals: { answered: i + 1, correct: i } }
+    saveProgress(p)
+  }
+  check('a burst of saves writes nothing yet', writes === 0, `writes=${writes}`)
+  check(
+    'but a read still sees the newest value',
+    loadProgress().totals.answered === 5,
+  )
+
+  flushProgress()
+  check('the flush collapses them into one write', writes === 1, `writes=${writes}`)
+  check('and it is the last value that landed', loadProgress().totals.answered === 5)
+
+  flushProgress()
+  check('flushing again writes nothing', writes === 1, `writes=${writes}`)
+
+  // A queued write landing after a reset would put the wiped history back.
+  saveProgress({ ...p, totals: { answered: 99, correct: 99 } })
+  clearProgress()
+  check('a reset removes the stored profile', removes === 1)
+  flushProgress()
+  check('and the queued write is dropped, not replayed', writes === 1, `writes=${writes}`)
+  check('so the profile stays empty', loadProgress().totals.answered === 0)
+
+  delete (globalThis as any).window
 }
 
 console.log(failures === 0 ? '\nAll checks passed.' : `\n${failures} check(s) failed.`)

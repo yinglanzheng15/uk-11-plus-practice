@@ -10,11 +10,18 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 
 ## Status (handoff summary)
 
-**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (130 checks) and `npm run build` are all green as of the latest commit. No known bugs.
+**Working state:** feature-complete and passing all checks. `npm run validate`, `npm test` (147 checks) and `npm run build` are all green as of the latest commit. No known bugs.
+
+> **Picking this up mid-stream (11 Aug 2026):** the app is being turned into a paid product.
+> The free/paid seam is in place but **deliberately not closed** — the build still ships the
+> whole bank to everyone, so nothing has changed for existing users. Read
+> **[docs/commercialisation.md](docs/commercialisation.md)** first; it has the plan, what is
+> done, and what to do next in order. `ROADMAP.md` §8 has the data and structure findings
+> from the same day's repo scan.
 
 **What's built:**
 - Full quiz engine with the wrong-answer learning loop, mastery tracking, streaks, and all revision modes (Quick 5/10/20, subject/topic practice, mixed, mistakes, weak areas, challenge, timed sessions).
-- **308 questions, each with five options A–E** (112 Maths, 80 English, 104 Verbal Reasoning, 12 Non-Verbal Reasoning) across 8 comprehension passages — every topic has at least 4 questions, and every subject has both Foundation (difficulty 1) and Stretch (difficulty 4) coverage. The 12 Non-Verbal Reasoning questions are a **taster** of a new visual (inline-SVG) subject — see `docs/latymer-alignment.md`.
+- **434 questions, each with five options A–E** (208 Maths, 80 English, 134 Verbal Reasoning, 12 Non-Verbal Reasoning) across 8 comprehension passages — 126 of them expanded from 12 *templates* (see below), the rest hand-written — every topic has at least 4 questions, and every subject has both Foundation (difficulty 1) and Stretch (difficulty 4) coverage. The 12 Non-Verbal Reasoning questions are a **taster** of a new visual (inline-SVG) subject — see `docs/latymer-alignment.md`.
 - **Two-layer question vetting**: `npm run validate` catches structural issues and machine-verifies maths answers via an optional `verify` expression; `npm run review` generates `docs/review-sheet.md` for human read-through, with `npm run review:accept` to avoid re-reviewing.
 - **Skip for now.** A question can be parked and comes back at the end of the run for a second look. A skip records nothing and never counts against the score.
 - **Resume after a refresh.** An unfinished session is saved as you go and offered back — *"Carry on where you left off?"* — for up to 24 hours. A timed session keeps the time it had left rather than burning it while the tab was shut.
@@ -26,12 +33,12 @@ It runs entirely in the browser as a static site. No backend, no database, no lo
 **Repo:** [github.com/yinglanzheng15/uk-11-plus-practice](https://github.com/yinglanzheng15/uk-11-plus-practice) — public, pushed and up to date.
 
 **Not yet done / deliberately deferred:**
-- **The 296 questions have passed `npm run validate` but only the first 156 have had a human read-through.** The letter sequences, codes and hidden words in the new batch were additionally checked by script. Run `npm run review` and read `docs/review-sheet.md` before treating the bank as vetted; then `npm run review:accept`.
-- **Question bank is at 296/850+** of the original stretch target. See `ROADMAP.md`.
+- **The 434 questions have passed `npm run validate` but only the first 156 have had a human read-through.** The 126 generated ones are read a template at a time — check one variant of each carefully, then skim the rest for anything the numbers broke. The letter sequences, codes and hidden words in the new batch were additionally checked by script. Run `npm run review` and read `docs/review-sheet.md` before treating the bank as vetted; then `npm run review:accept`.
+- **Question bank is at 434/850+** of the original stretch target. See `ROADMAP.md`.
 - No multi-child profiles yet. **Non-Verbal Reasoning now has a 12-question taster** (odd-one-out, sequences, figure pairs) proving the inline-SVG format; growing it into a full section, plus a Problem-Solving section, are scoped in `ROADMAP.md`.
 - **The Latymer / GL familiarisation papers** (added under `data/past papers/`) were analysed in `docs/latymer-alignment.md`, which lists the specific Maths/English/VR question types still worth adding. Those PDFs are © GL Assessment — do **not** commit them to the public repo.
 
-**Where to pick this up:** `ROADMAP.md` has the full prioritised list. `docs/question-format.md` covers adding questions. `docs/review-sheet.md` is generated, not hand-edited — run `npm run review` after any bank change.
+**Where to pick this up:** `docs/commercialisation.md` for the paid-product work. `ROADMAP.md` has the full prioritised list, with the data and structure debt in §8. `docs/question-format.md` covers adding questions. `docs/review-sheet.md` is generated and **gitignored** — it is the whole bank with answers, so it stays local; run `npm run review` after any bank change.
 
 ---
 
@@ -41,8 +48,8 @@ Prioritised, grounded in the real GL/Latymer familiarisation papers. The content
 
 **1. Close the content-fidelity gaps** (highest value, fits the existing engine)
 - **English "No mistake" spelling + punctuation** — the biggest gap. GL splits a sentence into labelled parts; the child picks the faulty part *or* **E = "No mistake"** (~1 in 5 answers). Add ~8 + ~8 questions in that exact shape. *Do this first.*
-- **Maths missing types** — coordinates, Roman numerals, timetable/time-interval reading, function machines / simple algebra (~20 Q). All numeric, so each can carry a `verify` expression the validator checks.
-- **VR missing types** — "word with two meanings" (homographs) and "insert a letter that ends one word and starts the next" (~12 Q).
+- **Maths missing types** — coordinates, Roman numerals, timetable/time-interval reading, function machines / simple algebra (~20 Q). All numeric and all template-shaped: write four templates in `src/data/templates.ts` rather than twenty objects, and the `verify` expressions come out of them for free.
+- **VR missing types** — "word with two meanings" (homographs) and "insert a letter that ends one word and starts the next" (~12 Q). Hand-written: the answer turns on the words, not on a number that can be varied.
 
 **2. Make sessions feel like the real exam**
 - A **Full-paper mode** per subject: fixed-length timed run (50 Maths, 80 VR at ~37s/Q) with the section structure of the real booklet and a scaled score.
@@ -58,8 +65,8 @@ Prioritised, grounded in the real GL/Latymer familiarisation papers. The content
 - A home-screen picker mirroring the six real GL booklets.
 
 **5. Quality & vetting (ongoing)**
-- The 308 questions still need the human read-through (`npm run review` → read → `npm run review:accept`), including the new NVR taster.
-- Spot-check that topic *coverage* reflects the papers' actual weighting (comprehension and VR letter/number types are heavily represented).
+- The 434 questions still need the human read-through (`npm run review` → read → `npm run review:accept`), including the new NVR taster.
+- Spot-check that topic *coverage* reflects the papers' actual weighting (comprehension and VR letter/number types are heavily represented). Maths is now the largest subject at 208 questions, roughly half of them template-generated — worth watching that the hand-written half still carries the harder multi-step reasoning.
 
 ---
 
@@ -100,15 +107,32 @@ Other scripts:
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | Start the dev server |
+| `npm run generate` | Expand `src/data/templates.ts` into `src/data/generated.json` |
+| `npm run split` | Split the bank into `src/data/free.json` and `public/paid.json` |
 | `npm run validate` | Check the question bank for errors and quality warnings |
 | `npm run review` | Write `docs/review-sheet.md` for human vetting of questions |
 | `npm run review:accept` | Mark the current questions as reviewed |
-| `npm test` | Run the engine test suite (130 checks) |
+| `npm test` | Run the engine test suite (147 checks) |
 | `npm run typecheck` | TypeScript check, no build |
-| `npm run build` | Validate → typecheck → build to `dist/` |
+| `npm run build` | Generate → split → validate → typecheck → build to `dist/` |
 | `npm run preview` | Serve the production build locally |
 
 `npm run build` runs the validator first, so a broken question bank cannot be deployed.
+
+### The free / paid split
+
+The client bundles only the free half of the bank (`src/data/free.json`, 99 questions —
+three per topic, easiest first, per `src/data/access.ts`). The rest is fetched at runtime by
+`loadPaidQuestions()` in `src/data/index.ts`, which `src/main.tsx` awaits before the first
+render, so the rest of the app still sees one plain synchronous `QUESTIONS` array.
+
+**This is the seam, not a paywall.** The build writes the paid half to `public/paid.json`,
+so the deployed app is still the whole bank, free to everyone, exactly as before. Closing it
+takes two changes: point `VITE_PAID_BANK_URL` at an authenticated endpoint, and stop
+emitting `PUBLIC_PAID` in `scripts/split-bank.ts`.
+
+Both outputs are generated and gitignored, as is `docs/review-sheet.md` — it is the entire
+bank *with answers*, so it is kept local rather than published.
 
 ### Question vetting
 
@@ -116,6 +140,10 @@ Questions go through two layers before they count as done:
 
 1. **`npm run validate`** — structure, duplicates, UK English, and *machine-verified arithmetic*: a maths question can carry a `verify` expression that the validator evaluates and checks against the marked answer, so the sums are proved rather than trusted.
 2. **`npm run review`** — generates a readable sheet of every question, in the order the child sees them, for a person to check the things automation cannot judge: ambiguity, arguable distractors, and whether an explanation actually teaches.
+
+### Growing the bank with templates
+
+`src/data/templates.ts` holds *parameterised* questions: one style, plus the numbers it varies over. `npm run generate` expands each into a dozen concrete questions with computed distractors and a computed `verify` expression, writes them to `src/data/generated.json`, and the usual two layers of vetting then apply. Seeds are derived from the template id, so output is reproducible and ids are stable.
 
 Full details in [docs/question-format.md](docs/question-format.md).
 
@@ -239,14 +267,24 @@ These bands are an in-app learning indicator to guide practice. They are **not**
 index.html
 vite.config.ts                 base path for GitHub Pages
 scripts/
+  generate-questions.ts        expands templates into generated.json
+  split-bank.ts                splits the bank into free.json + public/paid.json
   validate-questions.ts        question-bank validator
+  review-sheet.ts              writes docs/review-sheet.md for human vetting
   smoke-test.ts                engine tests
+public/
+  paid.json                    generated, gitignored — fetched at runtime
 src/
   types.ts                     Question, Progress, SessionConfig …
   data/
-    maths.json                 the question banks
+    maths.json                 the authored question banks
     english.json
     verbal-reasoning.json
+    non-verbal-reasoning.json
+    templates.ts               parameterised question styles
+    generated.json             expanded from templates — do not hand-edit
+    free.json                  generated, gitignored — the bundled free half
+    access.ts                  the free/paid split rule
     passages.json              comprehension passages
     subjects.ts                subject registry
     shuffle.ts                 deterministic option shuffling
@@ -264,18 +302,20 @@ src/
 .github/workflows/deploy.yml   GitHub Pages deployment
 ```
 
-See **[docs/question-format.md](docs/question-format.md)** for the question schema and instructions for adding more questions, **[ROADMAP.md](ROADMAP.md)** for planned improvements and known limitations, and **[sources.md](sources.md)** for the material consulted when designing the skill taxonomy.
+See **[docs/question-format.md](docs/question-format.md)** for the question schema and instructions for adding more questions, **[ROADMAP.md](ROADMAP.md)** for planned improvements and known limitations, **[docs/commercialisation.md](docs/commercialisation.md)** for the paid-product plan, and **[sources.md](sources.md)** for the material consulted when designing the skill taxonomy.
 
 ### Adding a new subject
 
 The app does not hard-code the three current subjects. To add Non-Verbal Reasoning, Problem Solving or Creative Comprehension:
 
 1. Add `src/data/<subject>.json`
-2. Import it in `src/data/index.ts`
+2. Import it in `scripts/split-bank.ts` — that is what feeds both halves of the bank now
 3. Add an entry to `SUBJECTS` in `src/data/subjects.ts`
 4. Add the id to `VALID_SUBJECTS` in `scripts/validate-questions.ts`
 
-Nothing else needs to change.
+Nothing else needs to change. `src/data/index.ts` imports only the generated `free.json`, so
+it does not need touching for a new subject — the validator picks up any `.json` in
+`src/data/` automatically.
 
 ---
 
