@@ -41,6 +41,12 @@ export interface Question {
    * `options` string is the accessible description and review-sheet fallback.
    */
   optionFigures?: string[]
+  /**
+   * Suppresses the load-time option shuffle, for question shapes where the
+   * order is part of the question — GL error-spotting items split a sentence
+   * into parts A–D with E always "No mistake". Authored order is served order.
+   */
+  fixedOptions?: boolean
   /** Index into `options`. */
   answer: number
   explanation: string

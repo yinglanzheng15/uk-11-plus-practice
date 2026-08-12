@@ -42,6 +42,7 @@ interface Question {
   passageId?: string
   question: string
   options: string[]
+  fixedOptions?: boolean
   answer: number
   explanation: string
   distractorNotes?: string[]

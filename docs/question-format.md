@@ -50,6 +50,14 @@ The app permutes the options at load time using a hash of the `id` (`src/data/sh
 
 **Do not shuffle by hand.** If you do, `answer` must still point at the correct option, but you lose the reviewability benefit for no gain.
 
+### `fixedOptions`: when the order *is* the question
+
+Set `"fixedOptions": true` and the load-time shuffle is skipped, so the authored order is the served order — and `answer` then points at the true position, not 0.
+
+Use it only where the order carries meaning. The one shape in the bank today is GL's **error-spotting** items (`type: "spelling-error-spotting"` and `"punctuation-error-spotting"`): a sentence split into parts A–D read left to right, with **E always "No mistake"**. Shuffling those would scramble the sentence and hide the option the child is being taught to consider last. There is no always-pick-A risk, because the answer position varies with where the author put the mistake.
+
+Roughly **one in five** of these should be "No mistake" — that is the real papers' rate, and a child who never sees it correct learns never to pick it. Spread the rest across A–D. A smoke-test check enforces both the trailing "No mistake" and the 10–30% band.
+
 ## Follow-ups: the learning loop
 
 When a question is answered incorrectly, the app serves a *related* question. It looks for one in this order:

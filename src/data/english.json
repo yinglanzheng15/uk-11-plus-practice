@@ -2496,5 +2496,525 @@
       "vocabulary",
       "precise word choice"
     ]
+  },
+  {
+    "id": "english-spelling-013",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "error_spotting",
+    "type": "spelling-error-spotting",
+    "difficulty": 2,
+    "question": "One part of this sentence contains a spelling mistake: 'The children recieved / their certificates from / the head teacher / on Friday afternoon.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "The children recieved",
+      "their certificates from",
+      "the head teacher",
+      "on Friday afternoon.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 0,
+    "explanation": "'Recieved' should be 'received'. The letters go e before i after a c, which is the exception to the usual 'i before e' rule.",
+    "distractorNotes": [
+      "",
+      "'Certificates' is spelled correctly.",
+      "'Head teacher' is correctly spelled as two words.",
+      "'Friday' and 'afternoon' are both correct.",
+      "There is a mistake in this sentence: 'recieved' should be 'received'."
+    ],
+    "learningPoint": "I before e except after c: believe and field, but receive, deceive and ceiling.",
+    "tags": [
+      "spelling",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-spelling-014",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "error_spotting",
+    "type": "spelling-error-spotting",
+    "difficulty": 2,
+    "question": "One part of this sentence contains a spelling mistake: 'Tom promised that / he would come to the party / but he was definately late / for the games.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "Tom promised that",
+      "he would come to the party",
+      "but he was definately late",
+      "for the games.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 2,
+    "explanation": "'Definately' should be 'definitely'. The word is built from 'finite', so the middle letter is an i, never an a.",
+    "distractorNotes": [
+      "'Promised' is spelled correctly.",
+      "'Party' is spelled correctly.",
+      "",
+      "'Games' is spelled correctly.",
+      "There is a mistake in this sentence: 'definately' should be 'definitely'."
+    ],
+    "learningPoint": "Look for a smaller word hiding inside a long one: there is a finite in definitely, so it cannot be spelled with an a.",
+    "tags": [
+      "spelling",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-spelling-015",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "error_spotting",
+    "type": "spelling-error-spotting",
+    "difficulty": 3,
+    "question": "One part of this sentence contains a spelling mistake: 'The necessary equipment / was already waiting / in the separate cupboard / beside the library.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "The necessary equipment",
+      "was already waiting",
+      "in the separate cupboard",
+      "beside the library.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 4,
+    "explanation": "Every part is correct. 'Necessary', 'already', 'separate' and 'library' are all commonly misspelled, but each one here is right, so the answer is 'No mistake'.",
+    "distractorNotes": [
+      "'Necessary' is correct: one c and two s letters.",
+      "'Already' is correct as one word with a single l.",
+      "'Separate' is correct — there is a rat in the middle of it.",
+      "'Library' is correct, with the r that people often drop when saying it.",
+      ""
+    ],
+    "learningPoint": "'No mistake' is a real answer and roughly one question in five uses it. Check every part before choosing it, but do not be afraid of it.",
+    "tags": [
+      "spelling",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-spelling-016",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "error_spotting",
+    "type": "spelling-error-spotting",
+    "difficulty": 3,
+    "question": "One part of this sentence contains a spelling mistake: 'The accident / occured near the bridge / shortly before / the school bus arrived.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "The accident",
+      "occured near the bridge",
+      "shortly before",
+      "the school bus arrived.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 1,
+    "explanation": "'Occured' should be 'occurred'. The stress falls on the last syllable of 'occur', so the final r doubles before the -ed ending.",
+    "distractorNotes": [
+      "'Accident' is spelled correctly.",
+      "",
+      "'Shortly' is spelled correctly.",
+      "'Arrived' is spelled correctly.",
+      "There is a mistake in this sentence: 'occured' should be 'occurred'."
+    ],
+    "learningPoint": "When a two-syllable verb is stressed on the second syllable, double the final consonant before -ed or -ing: occurred, preferred, beginning.",
+    "tags": [
+      "spelling",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-spelling-017",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "error_spotting",
+    "type": "spelling-error-spotting",
+    "difficulty": 3,
+    "question": "One part of this sentence contains a spelling mistake: 'After a long discussion / the two friends / finally settled / their arguement.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "After a long discussion",
+      "the two friends",
+      "finally settled",
+      "their arguement.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 3,
+    "explanation": "'Arguement' should be 'argument'. 'Argue' loses its final e before the -ment ending, which is unusual and worth memorising.",
+    "distractorNotes": [
+      "'Discussion' is spelled correctly.",
+      "'Friends' is spelled correctly.",
+      "'Finally' is correct, with two l letters.",
+      "",
+      "There is a mistake in this sentence: 'arguement' should be 'argument'."
+    ],
+    "learningPoint": "Most words keep the e before -ment, as in movement and amusement. Argument is the exception that drops it.",
+    "tags": [
+      "spelling",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-spelling-018",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "error_spotting",
+    "type": "spelling-error-spotting",
+    "difficulty": 1,
+    "question": "One part of this sentence contains a spelling mistake: 'The beutiful garden / was full of / roses and lilies / all through the summer.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "The beutiful garden",
+      "was full of",
+      "roses and lilies",
+      "all through the summer.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 0,
+    "explanation": "'Beutiful' should be 'beautiful'. The word starts with the three vowels e, a, u after the b.",
+    "distractorNotes": [
+      "",
+      "'Full' is spelled correctly.",
+      "'Lilies' is the correct plural: the y of lily becomes ies.",
+      "'Through' is spelled correctly.",
+      "There is a mistake in this sentence: 'beutiful' should be 'beautiful'."
+    ],
+    "learningPoint": "Beautiful begins with 'beau', a French spelling that keeps all three vowels in the order e, a, u.",
+    "tags": [
+      "spelling",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-spelling-019",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "error_spotting",
+    "type": "spelling-error-spotting",
+    "difficulty": 2,
+    "question": "One part of this sentence contains a spelling mistake: 'Everyone agreed that / the concert had been / a sucessful evening / for the whole school.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "Everyone agreed that",
+      "the concert had been",
+      "a sucessful evening",
+      "for the whole school.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 2,
+    "explanation": "'Sucessful' should be 'successful'. There are two c letters and two s letters in the middle, then a single l at the end.",
+    "distractorNotes": [
+      "'Agreed' is spelled correctly.",
+      "'Concert' is spelled correctly.",
+      "",
+      "'Whole' is the right word here, and it is spelled correctly.",
+      "There is a mistake in this sentence: 'sucessful' should be 'successful'."
+    ],
+    "learningPoint": "The ending -ful only ever has one l: successful, careful, hopeful.",
+    "tags": [
+      "spelling",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-spelling-020",
+    "subject": "english",
+    "topic": "Spelling",
+    "skill": "error_spotting",
+    "type": "spelling-error-spotting",
+    "difficulty": 4,
+    "question": "One part of this sentence contains a spelling mistake: 'The rhythm of the drums / echoed along the corridor / and interrupted / our committee meeting.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "The rhythm of the drums",
+      "echoed along the corridor",
+      "and interrupted",
+      "our committee meeting.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 4,
+    "explanation": "Every part is correct. 'Rhythm', 'corridor', 'interrupted' and 'committee' are all difficult words, but each is spelled properly here, so the answer is 'No mistake'.",
+    "distractorNotes": [
+      "'Rhythm' is correct: rh at the start and a y as its only vowel letter.",
+      "'Corridor' is correct, with two r letters in the middle and one at the end.",
+      "'Interrupted' is correct, with two r letters.",
+      "'Committee' is correct: double m, double t, double e.",
+      ""
+    ],
+    "learningPoint": "A hard-looking word is not the same as a wrong one. Check the letters rather than trusting the feeling that something must be misspelled.",
+    "tags": [
+      "spelling",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-punctuation-011",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "error_spotting",
+    "type": "punctuation-error-spotting",
+    "difficulty": 1,
+    "question": "One part of this sentence contains a punctuation mistake: 'On Saturday morning / we drove to manchester / to visit my aunt / and her three dogs.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "On Saturday morning",
+      "we drove to manchester",
+      "to visit my aunt",
+      "and her three dogs.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 1,
+    "explanation": "'Manchester' is the name of a city, so it needs a capital M.",
+    "distractorNotes": [
+      "'Saturday' correctly has a capital S because days of the week are names.",
+      "",
+      "'Aunt' is right without a capital here, because it is not being used as her name.",
+      "This part needs no capital letter and ends with a full stop, which is correct.",
+      "There is a mistake in this sentence: 'manchester' needs a capital M."
+    ],
+    "learningPoint": "Names of people, places, days and months always take a capital letter. A word like aunt or mum only takes one when it is used as the person's name.",
+    "tags": [
+      "punctuation",
+      "capital letters",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-punctuation-012",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "error_spotting",
+    "type": "punctuation-error-spotting",
+    "difficulty": 3,
+    "question": "One part of this sentence contains a punctuation mistake: 'The noise was coming / from the room / where the boys coats / were hanging up.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "The noise was coming",
+      "from the room",
+      "where the boys coats",
+      "were hanging up.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 2,
+    "explanation": "It should be 'the boys' coats'. The coats belong to more than one boy, and a plural already ending in s takes just an apostrophe after the s.",
+    "distractorNotes": [
+      "This part needs no punctuation of its own.",
+      "There is nothing missing from this part.",
+      "",
+      "This part correctly ends the sentence with a full stop.",
+      "There is a mistake in this sentence: 'boys coats' needs an apostrophe after boys."
+    ],
+    "learningPoint": "For a plural that already ends in s, add the apostrophe after the s: the boys' coats. For a plural that does not, add apostrophe s: the children's coats.",
+    "tags": [
+      "punctuation",
+      "apostrophes",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-punctuation-013",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "error_spotting",
+    "type": "punctuation-error-spotting",
+    "difficulty": 3,
+    "question": "One part of this sentence contains a punctuation mistake: 'When the bell rang, / Jack picked up his bag, / which was far too heavy, / and hurried outside.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "When the bell rang,",
+      "Jack picked up his bag,",
+      "which was far too heavy,",
+      "and hurried outside.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 4,
+    "explanation": "Every part is correct. The comma after the opening clause is right, and the pair of commas around 'which was far too heavy' correctly marks off the extra information.",
+    "distractorNotes": [
+      "A clause starting with when at the front of a sentence is correctly followed by a comma.",
+      "This comma opens the pair that encloses the extra information.",
+      "This comma closes that pair, so the extra information is properly marked off at both ends.",
+      "The sentence correctly ends with a full stop.",
+      ""
+    ],
+    "learningPoint": "Extra information dropped into the middle of a sentence needs a comma at each end — one on its own is the mistake to look for.",
+    "tags": [
+      "punctuation",
+      "commas",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-punctuation-014",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "error_spotting",
+    "type": "punctuation-error-spotting",
+    "difficulty": 2,
+    "question": "One part of this sentence contains a punctuation mistake: 'Where did you put / the tickets / for the school / concert.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "Where did you put",
+      "the tickets",
+      "for the school",
+      "concert.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 3,
+    "explanation": "The sentence asks something, so it must end with a question mark rather than a full stop: 'concert?'",
+    "distractorNotes": [
+      "'Where' correctly has a capital W because it starts the sentence.",
+      "Nothing is missing from this part.",
+      "Nothing needs to be added between these words.",
+      "",
+      "There is a mistake in this sentence: the full stop after concert should be a question mark."
+    ],
+    "learningPoint": "Decide what the whole sentence is doing before choosing its final mark. If it asks, it ends with a question mark, however far away the question word is.",
+    "tags": [
+      "punctuation",
+      "sentence endings",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-punctuation-015",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "error_spotting",
+    "type": "punctuation-error-spotting",
+    "difficulty": 2,
+    "question": "One part of this sentence contains a punctuation mistake: 'We packed sandwiches, / apples crisps and juice / into the basket / before we set off.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "We packed sandwiches,",
+      "apples crisps and juice",
+      "into the basket",
+      "before we set off.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 1,
+    "explanation": "A comma is missing between the items in the list: it should read 'apples, crisps and juice'.",
+    "distractorNotes": [
+      "This comma is correct — it separates the first item of the list from the next.",
+      "",
+      "Nothing is missing between these words.",
+      "This part correctly ends the sentence.",
+      "There is a mistake in this sentence: 'apples crisps' needs a comma between them."
+    ],
+    "learningPoint": "In a list, put a comma between the items and use 'and' before the last one: sandwiches, apples, crisps and juice.",
+    "tags": [
+      "punctuation",
+      "commas",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-punctuation-016",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "error_spotting",
+    "type": "punctuation-error-spotting",
+    "difficulty": 4,
+    "question": "One part of this sentence contains a punctuation mistake: 'Ellie put down her pen and said / \"I have finished / my history project / at last.\"' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "Ellie put down her pen and said",
+      "\"I have finished",
+      "my history project",
+      "at last.\"",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 0,
+    "explanation": "A comma is needed after 'said', before the speech marks open: Ellie put down her pen and said, \"I have finished...\"",
+    "distractorNotes": [
+      "",
+      "The speech marks correctly open here, and spoken words correctly start with a capital I.",
+      "Nothing is missing from this part of the speech.",
+      "The full stop is correctly placed inside the closing speech marks.",
+      "There is a mistake in this sentence: a comma is needed after said."
+    ],
+    "learningPoint": "Speech is introduced by a comma before the speech marks open, and the closing full stop goes inside them: She said, \"I am ready.\"",
+    "tags": [
+      "punctuation",
+      "speech marks",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-punctuation-017",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "error_spotting",
+    "type": "punctuation-error-spotting",
+    "difficulty": 2,
+    "question": "One part of this sentence contains a punctuation mistake: 'On the market stall / there were bananas, / plums and a crate / of orange's.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "On the market stall",
+      "there were bananas,",
+      "plums and a crate",
+      "of orange's.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 3,
+    "explanation": "'Orange's' should be 'oranges'. The word is simply a plural — nothing belongs to the oranges, so it takes no apostrophe.",
+    "distractorNotes": [
+      "Nothing is missing from the opening of the sentence.",
+      "This comma correctly separates the items of the list.",
+      "'And' correctly joins the last item without another comma.",
+      "",
+      "There is a mistake in this sentence: 'orange's' should be 'oranges', with no apostrophe."
+    ],
+    "learningPoint": "An apostrophe never makes a plural. Use one only for something missing, as in don't, or for belonging, as in the girl's bag.",
+    "tags": [
+      "punctuation",
+      "apostrophes",
+      "error spotting",
+      "no mistake"
+    ]
+  },
+  {
+    "id": "english-punctuation-018",
+    "subject": "english",
+    "topic": "Punctuation",
+    "skill": "error_spotting",
+    "type": "punctuation-error-spotting",
+    "difficulty": 4,
+    "question": "One part of this sentence contains a punctuation mistake: 'Although it was raining hard / the whole team / stayed out on the pitch / until the final whistle.' Which part is it? If every part is correct, choose 'No mistake'.",
+    "options": [
+      "Although it was raining hard",
+      "the whole team",
+      "stayed out on the pitch",
+      "until the final whistle.",
+      "No mistake"
+    ],
+    "fixedOptions": true,
+    "answer": 0,
+    "explanation": "A comma is needed at the end of this part: 'Although it was raining hard,' The clause is not a sentence on its own, and a comma marks where the main part begins.",
+    "distractorNotes": [
+      "",
+      "Nothing is missing between these words.",
+      "This part needs no punctuation of its own.",
+      "The sentence correctly ends with a full stop.",
+      "There is a mistake in this sentence: a comma is needed after 'hard'."
+    ],
+    "learningPoint": "When a sentence opens with a clause beginning although, because, when or if, close that clause with a comma before the main part starts.",
+    "tags": [
+      "punctuation",
+      "commas",
+      "error spotting",
+      "no mistake"
+    ]
   }
 ]

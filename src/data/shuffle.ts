@@ -18,6 +18,8 @@ interface Shufflable {
   distractorNotes?: string[]
   /** Parallel to options; realigned alongside them when present (NVR figures). */
   optionFigures?: string[]
+  /** Set when the options carry meaning in their authored order — see below. */
+  fixedOptions?: boolean
 }
 
 export function hashString(value: string): number {
@@ -39,8 +41,18 @@ export function seededRandom(seed: number): () => number {
   }
 }
 
-/** Returns a copy with options, answer index and distractor notes all realigned. */
+/**
+ * Returns a copy with options, answer index and distractor notes all realigned.
+ *
+ * A question marked `fixedOptions` is returned untouched. Some question shapes
+ * encode meaning in the order itself: GL's error-spotting items split a sentence
+ * into parts A–D read left to right, with E always "No mistake". Permuting those
+ * would scramble the sentence and hide the option the child is being taught to
+ * consider last. There is no always-pick-A risk in that shape, because the
+ * answer position varies by where the author put the mistake.
+ */
 export function shuffleOptions<T extends Shufflable>(question: T): T {
+  if (question.fixedOptions) return { ...question }
   const rand = seededRandom(hashString(question.id))
   const order = question.options.map((_, i) => i)
 

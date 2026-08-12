@@ -758,6 +758,49 @@ console.log('\n== batched saving ==')
   delete (globalThis as any).window
 }
 
+console.log('\n== error-spotting questions keep their option order ==')
+{
+  // The authored file, before the load-time shuffle, to compare against.
+  const raw = JSON.parse(readFileSync('src/data/english.json', 'utf8')) as {
+    id: string
+    options: string[]
+  }[]
+
+  // Options are normally permuted at load time. These carry the sentence in
+  // parts A-D, so a shuffle would scramble the sentence and move "No mistake"
+  // out of E — the position the child is taught to consider last.
+  const fixed = QUESTIONS.filter((q) => q.fixedOptions)
+  check('the bank has error-spotting questions', fixed.length === 16, `got ${fixed.length}`)
+  check(
+    'every one still ends with "No mistake"',
+    fixed.every((q) => q.options[q.options.length - 1] === 'No mistake'),
+  )
+  check(
+    'and no other option is "No mistake"',
+    fixed.every((q) => q.options.filter((o) => o === 'No mistake').length === 1),
+  )
+  check(
+    'the served order matches the authored order',
+    fixed.every((q) => {
+      const authored = raw.find((r: { id: string }) => r.id === q.id)
+      return authored && authored.options.every((o: string, i: number) => o === q.options[i])
+    }),
+  )
+  check(
+    'roughly one in five answers is "No mistake"',
+    (() => {
+      const share = fixed.filter((q) => q.options[q.answer] === 'No mistake').length / fixed.length
+      return share >= 0.1 && share <= 0.3
+    })(),
+  )
+  // Everything else must still be shuffled, or the always-pick-A problem is back.
+  const shuffledSomewhere = QUESTIONS.filter((q) => !q.fixedOptions).some((q) => {
+    const authored = raw.find((r: { id: string }) => r.id === q.id)
+    return authored && authored.options.some((o: string, i: number) => o !== q.options[i])
+  })
+  check('ordinary questions are still shuffled', shuffledSomewhere)
+}
+
 console.log(failures === 0 ? '\nAll checks passed.' : `\n${failures} check(s) failed.`)
 process.exit(failures === 0 ? 0 : 1)
 
