@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { SUBJECTS } from '../data/subjects'
-import { topicsForSubject } from '../data'
+import { topicKey, topicsForSubject } from '../data'
+import { PracticePanel, practiceTopicKeys, selectedSubjects } from './PracticePanel'
 import { mistakeIds, overallAccuracy } from '../logic/progress'
 import { topicMastery } from '../logic/mastery'
 import { mainAnswers } from '../logic/session'
@@ -12,7 +13,8 @@ interface Props {
   progress: Progress
   onStart: (config: SessionConfig) => void
   onSetTimed: (timed: boolean) => void
-  onSetMixedSubjects: (subjects: SubjectId[]) => void
+  onSetPracticeSubjects: (subjects: SubjectId[]) => void
+  onSetPracticeTopics: (topics: Record<SubjectId, string[]>) => void
   /** An unfinished session from a previous visit, if there is one worth offering. */
   resumable?: RestoredSession | null
   onResume: () => void
@@ -33,7 +35,8 @@ export function Home({
   progress,
   onStart,
   onSetTimed,
-  onSetMixedSubjects,
+  onSetPracticeSubjects,
+  onSetPracticeTopics,
   resumable,
   onResume,
   onDiscardResume,
@@ -41,27 +44,18 @@ export function Home({
   const [subjectPicker, setSubjectPicker] = useState<SubjectId | null>(null)
   const timed = progress.preferences.timed
   const secondsPerQuestion = progress.preferences.secondsPerQuestion
-  const mixedSubjects = progress.preferences.mixedSubjects
-  // Empty preference displays as "all subjects" and starts a session the
-  // same way — [] already means "all subjects" throughout the app.
-  const selectedMixedIds =
-    mixedSubjects.length === 0 ? SUBJECTS.map((s) => s.id) : mixedSubjects
-  const mixedSummary =
-    mixedSubjects.length === 0
-      ? 'All subjects'
-      : selectedMixedIds
-          .map((id) => SUBJECTS.find((s) => s.id === id)?.shortLabel ?? id)
-          .join(', ')
-
-  function toggleMixedSubject(id: SubjectId) {
-    const isSelected = selectedMixedIds.includes(id)
-    // Never allow deselecting down to zero — that would leave nothing to practise.
-    if (isSelected && selectedMixedIds.length === 1) return
-    const next = isSelected
-      ? selectedMixedIds.filter((s) => s !== id)
-      : [...selectedMixedIds, id]
-    onSetMixedSubjects(next.length === SUBJECTS.length ? [] : next)
-  }
+  const practiceSubjects = progress.preferences.practiceSubjects
+  const practiceTopics = progress.preferences.practiceTopics
+  // The filters every quick and mixed session runs with. Both are the "no
+  // filtering" values ([] / undefined) until the child narrows the selection.
+  const chosenTopicKeys = practiceTopicKeys(practiceSubjects, practiceTopics)
+  const subjectList = selectedSubjects(practiceSubjects)
+    .map((id) => SUBJECTS.find((s) => s.id === id)?.shortLabel ?? id)
+    .join(', ')
+  // Two forms of the same thing: one that stands alone as a tile label, one
+  // that reads as part of a sentence.
+  const practiceLabel = practiceSubjects.length === 0 ? 'All subjects' : subjectList
+  const practicePhrase = practiceSubjects.length === 0 ? 'every subject' : subjectList
 
   const accuracy = overallAccuracy(progress)
   const mistakes = mistakeIds(progress)
@@ -77,7 +71,7 @@ export function Home({
         title: 'Warm up with a Quick 5',
         blurb: 'Five mixed questions to get going — only a few minutes.',
         cta: 'Start Quick 5',
-        run: () => start('quick5', 5, []),
+        run: () => startPractice('quick5', 5),
       }
     }
     if (mistakes.length >= 3) {
@@ -101,21 +95,31 @@ export function Home({
     return {
       eyebrow: 'Keep it up',
       title: 'A mixed Quick 10',
-      blurb: 'Ten questions across every subject to keep everything sharp.',
+      blurb: `Ten questions across ${practicePhrase} to keep everything sharp.`,
       cta: 'Start Quick 10',
-      run: () => start('quick10', 10, []),
+      run: () => startPractice('quick10', 10),
     }
   })()
 
-  function start(mode: SessionMode, length: number, subjects: SubjectId[], topic?: string) {
+  function start(
+    mode: SessionMode,
+    length: number,
+    subjects: SubjectId[],
+    topicKeys?: string[],
+  ) {
     onStart({
       mode,
       length,
       subjects,
-      topic,
+      topicKeys,
       timed,
       timeLimitMs: timed ? timeLimitFor(length, secondsPerQuestion) : undefined,
     })
+  }
+
+  /** Quick and mixed sessions all honour the panel's selection. */
+  function startPractice(mode: SessionMode, length: number) {
+    start(mode, length, practiceSubjects, chosenTopicKeys)
   }
 
   if (subjectPicker) {
@@ -141,7 +145,9 @@ export function Home({
               type="button"
               className="tile tile-accent"
               style={{ ['--tile-colour' as string]: subject.colour }}
-              onClick={() => start('subject', 10, [subjectPicker], topic)}
+              onClick={() =>
+                start('subject', 10, [subjectPicker], [topicKey(subjectPicker, topic)])
+              }
             >
               {topic}
               <span className="tile-sub">10 questions</span>
@@ -211,15 +217,27 @@ export function Home({
         <h2 className="section-title">What would you like to practise?</h2>
 
         <div className="tile-grid">
-          <button type="button" className="tile" onClick={() => start('quick5', 5, [])}>
+          <button
+            type="button"
+            className="tile"
+            onClick={() => startPractice('quick5', 5)}
+          >
             Quick 5
             <span className="tile-sub">About 3–5 minutes</span>
           </button>
-          <button type="button" className="tile" onClick={() => start('quick10', 10, [])}>
+          <button
+            type="button"
+            className="tile"
+            onClick={() => startPractice('quick10', 10)}
+          >
             Quick 10
             <span className="tile-sub">About 5–10 minutes</span>
           </button>
-          <button type="button" className="tile" onClick={() => start('quick20', 20, [])}>
+          <button
+            type="button"
+            className="tile"
+            onClick={() => startPractice('quick20', 20)}
+          >
             Quick 20
             <span className="tile-sub">About 10–15 minutes</span>
           </button>
@@ -279,10 +297,10 @@ export function Home({
           <button
             type="button"
             className="tile"
-            onClick={() => start('mixed', 10, mixedSubjects)}
+            onClick={() => startPractice('mixed', 10)}
           >
             Mixed practice
-            <span className="tile-sub">{mixedSummary}</span>
+            <span className="tile-sub">{practiceLabel}</span>
           </button>
           <button
             type="button"
@@ -292,27 +310,6 @@ export function Home({
             Challenge
             <span className="tile-sub">Harder questions</span>
           </button>
-        </div>
-
-        <p className="muted small" style={{ marginTop: 16, marginBottom: 8 }}>
-          Subjects for mixed practice
-        </p>
-        <div className="chip-row" role="group" aria-label="Subjects for mixed practice">
-          {SUBJECTS.map((s) => {
-            const selected = selectedMixedIds.includes(s.id)
-            return (
-              <button
-                key={s.id}
-                type="button"
-                className={selected ? 'chip-toggle chip-toggle-active' : 'chip-toggle'}
-                style={{ ['--tile-colour' as string]: s.colour }}
-                aria-pressed={selected}
-                onClick={() => toggleMixedSubject(s.id)}
-              >
-                {s.shortLabel}
-              </button>
-            )
-          })}
         </div>
 
         <label
@@ -339,6 +336,13 @@ export function Home({
           </p>
         )}
       </div>
+
+      <PracticePanel
+        subjects={practiceSubjects}
+        topics={practiceTopics}
+        onSetSubjects={onSetPracticeSubjects}
+        onSetTopics={onSetPracticeTopics}
+      />
 
       <div className="card">
         <h2 className="section-title">Your progress so far</h2>

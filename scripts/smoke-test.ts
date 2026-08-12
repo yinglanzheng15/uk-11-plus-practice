@@ -1,4 +1,4 @@
-﻿import { QUESTIONS, getQuestion } from '../src/data/index'
+﻿import { QUESTIONS, getQuestion, topicKey } from '../src/data/index'
 import {
   intervalDaysFor,
   isDue,
@@ -76,13 +76,67 @@ check(
   new Set(mixedSubset.questions.map((q) => q.subject)).size > 1,
 )
 
+const quickSubset = selectQuestions(
+  cfg({ mode: 'quick10', subjects: ['maths', 'english'], length: 10 }),
+  emptyProgress(),
+  3,
+)
+check(
+  'quick session respects a chosen subject subset',
+  quickSubset.questions.every((q) => q.subject === 'maths' || q.subject === 'english'),
+)
+
 const topicOnly = selectQuestions(
-  cfg({ mode: 'subject', subjects: ['maths'], topic: 'Fractions', length: 5 }),
+  cfg({
+    mode: 'subject',
+    subjects: ['maths'],
+    topicKeys: [topicKey('maths', 'Fractions')],
+    length: 5,
+  }),
   emptyProgress(),
   4,
 )
 check('topic filter respected', topicOnly.questions.every((q) => q.topic === 'Fractions'))
 check('topic session non-empty', topicOnly.questions.length > 0)
+
+// "Vocabulary" is a topic in both English and Verbal Reasoning, so filtering on
+// the bare topic name would quietly pull in the wrong subject.
+const sharedTopicName = selectQuestions(
+  cfg({
+    mode: 'quick10',
+    subjects: ['english', 'verbal-reasoning'],
+    topicKeys: [topicKey('english', 'Vocabulary')],
+    length: 10,
+  }),
+  emptyProgress(),
+  6,
+)
+check(
+  'topic keys do not leak across subjects sharing a topic name',
+  sharedTopicName.questions.length > 0 &&
+    sharedTopicName.questions.every(
+      (q) => q.subject === 'english' && q.topic === 'Vocabulary',
+    ),
+)
+
+const multiTopic = selectQuestions(
+  cfg({
+    mode: 'quick10',
+    subjects: ['maths'],
+    topicKeys: [topicKey('maths', 'Fractions'), topicKey('maths', 'Geometry')],
+    length: 10,
+  }),
+  emptyProgress(),
+  7,
+)
+check(
+  'several topics can be combined',
+  multiTopic.questions.every((q) => q.topic === 'Fractions' || q.topic === 'Geometry'),
+)
+check(
+  'a multi-topic session draws on both',
+  new Set(multiTopic.questions.map((q) => q.topic)).size === 2,
+)
 
 const challenge = selectQuestions(cfg({ mode: 'challenge' }), emptyProgress(), 5)
 check('challenge prefers difficulty >= 3', challenge.questions.every((q) => q.difficulty >= 3))
@@ -96,7 +150,12 @@ const emptyWeak = selectQuestions(cfg({ mode: 'weak' }), emptyProgress(), 7)
 check('weak mode empty on fresh profile', emptyWeak.questions.length === 0)
 
 const oversized = selectQuestions(
-  cfg({ mode: 'subject', subjects: ['maths'], topic: 'Fractions', length: 99 }),
+  cfg({
+    mode: 'subject',
+    subjects: ['maths'],
+    topicKeys: [topicKey('maths', 'Fractions')],
+    length: 99,
+  }),
   emptyProgress(),
   8,
 )
@@ -575,6 +634,24 @@ console.log('\n== exporting and restoring progress ==')
   check(
     'an older file without streaks is migrated',
     migrated.ok && migrated.progress.questions[QUESTIONS[0].id].streak === 1,
+  )
+
+  // Schema 4 stored the chosen subjects as `mixedSubjects`; renaming the field
+  // must not throw away a selection the child already made.
+  const v4 = JSON.parse(exportProgress(emptyProgress()))
+  delete v4.progress.preferences.practiceSubjects
+  delete v4.progress.preferences.practiceTopics
+  v4.progress.preferences.mixedSubjects = ['maths', 'english']
+  const renamed = parseBackup(JSON.stringify(v4))
+  check(
+    'a schema 4 subject choice survives the rename',
+    renamed.ok &&
+      renamed.progress.preferences.practiceSubjects.join(',') === 'maths,english',
+  )
+  check(
+    'a schema 4 profile gets an empty topic selection',
+    renamed.ok &&
+      Object.keys(renamed.progress.preferences.practiceTopics).length === 0,
   )
 }
 

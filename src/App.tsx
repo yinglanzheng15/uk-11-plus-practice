@@ -160,9 +160,16 @@ export default function App() {
     setProgress((p) => ({ ...p, preferences: { ...p.preferences, secondsPerQuestion } }))
   }, [])
 
-  const handleSetMixedSubjects = useCallback((mixedSubjects: SubjectId[]) => {
-    setProgress((p) => ({ ...p, preferences: { ...p.preferences, mixedSubjects } }))
+  const handleSetPracticeSubjects = useCallback((practiceSubjects: SubjectId[]) => {
+    setProgress((p) => ({ ...p, preferences: { ...p.preferences, practiceSubjects } }))
   }, [])
+
+  const handleSetPracticeTopics = useCallback(
+    (practiceTopics: Record<SubjectId, string[]>) => {
+      setProgress((p) => ({ ...p, preferences: { ...p.preferences, practiceTopics } }))
+    },
+    [],
+  )
 
   const handleReport = useCallback(
     (questionId: string, reason: FeedbackReason, message: string) => {
@@ -240,7 +247,8 @@ export default function App() {
             progress={progress}
             onStart={startSession}
             onSetTimed={handleSetTimed}
-            onSetMixedSubjects={handleSetMixedSubjects}
+            onSetPracticeSubjects={handleSetPracticeSubjects}
+            onSetPracticeTopics={handleSetPracticeTopics}
             resumable={resumable}
             onResume={handleResume}
             onDiscardResume={handleDiscardResume}

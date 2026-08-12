@@ -8,8 +8,10 @@ const KEY = 'elevenplus:v1:progress'
  * 2 added `streak` to QuestionRecord for spaced repetition.
  * 3 added `preferences.secondsPerQuestion`.
  * 4 added `preferences.mixedSubjects`.
+ * 5 renamed it to `preferences.practiceSubjects` (it now governs quick
+ *   sessions too) and added `preferences.practiceTopics`.
  */
-export const SCHEMA_VERSION = 4
+export const SCHEMA_VERSION = 5
 
 export function emptyProgress(): Progress {
   return {
@@ -23,7 +25,8 @@ export function emptyProgress(): Progress {
     preferences: {
       timed: false,
       secondsPerQuestion: DEFAULT_SECONDS_PER_QUESTION,
-      mixedSubjects: [],
+      practiceSubjects: [],
+      practiceTopics: {},
     },
   }
 }
@@ -47,6 +50,25 @@ function migrateQuestions(
       typeof r?.streak === 'number' ? r : { ...r, streak: r?.lastCorrect ? 1 : 0 }
   }
   return out
+}
+
+export function isPlainObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value)
+}
+
+/**
+ * The chosen practice subjects, accepting the schema-4 `mixedSubjects` name so
+ * that upgrading does not silently reset a child's selection.
+ *
+ * Shared with the backup importer, which reads hand-editable files and so has
+ * exactly the same problem.
+ */
+export function readSubjects(preferences: unknown): string[] {
+  if (!isPlainObject(preferences)) return []
+  const current = preferences.practiceSubjects
+  if (Array.isArray(current)) return current
+  const legacy = preferences.mixedSubjects
+  return Array.isArray(legacy) ? legacy : []
 }
 
 function migrate(raw: unknown): Progress {
@@ -74,10 +96,14 @@ function migrate(raw: unknown): Progress {
         data.preferences.secondsPerQuestion > 0
           ? data.preferences.secondsPerQuestion
           : DEFAULT_SECONDS_PER_QUESTION,
-      // Added in schema 4; older saved profiles will not have it.
-      mixedSubjects: Array.isArray(data.preferences?.mixedSubjects)
-        ? data.preferences.mixedSubjects
-        : [],
+      // Added in schema 4 as `mixedSubjects`, renamed in schema 5. A profile
+      // saved at v4 keeps whatever subjects the child had already chosen.
+      practiceSubjects: readSubjects(data.preferences),
+      // Added in schema 5; older saved profiles will not have it.
+      practiceTopics:
+        isPlainObject(data.preferences?.practiceTopics)
+          ? (data.preferences.practiceTopics as Record<string, string[]>)
+          : {},
     },
   }
 }
