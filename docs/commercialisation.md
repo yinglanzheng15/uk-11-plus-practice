@@ -145,12 +145,20 @@ Two things to get right, because they are the usual bugs in this pattern:
 A subscription needs a reason to still be there next month. From `ROADMAP.md`, in order of
 commercial value:
 
-1. **Full-paper timed mode** with a per-section breakdown and a score. This is the thing
-   parents actually buy — *"is my child ready?"* — and it is already scoped.
-2. **Multi-child profiles.** Falls out of step 3 and doubles the value to a two-child family.
-3. **The English "No mistake" gap** — `docs/latymer-alignment.md` calls it the biggest
-   fidelity gap against the real GL papers, ~16 questions.
-4. **A weekly parent email**: what your child practised, what they are strong at, what to
+**Built since this was written:** full-paper timed mode with the per-section breakdown —
+the thing parents actually buy, *"is my child ready?"* — and the English "No mistake" gap,
+which `docs/latymer-alignment.md` called the biggest fidelity gap against the real papers.
+
+The breakdown reports **raw marks per section, not a scaled score**, and that is settled
+rather than pending. A real 11+ scaled score is standardised against everyone else who sat
+that paper; the app has no such sample, and a made-up number a parent might read as *"she
+would get 112"* is worse than no number. Sell the honesty — it is the same argument as the
+privacy story below. Do not let this come back as a feature request.
+
+What is left, in order of commercial value:
+
+1. **Multi-child profiles.** Falls out of step 3 and doubles the value to a two-child family.
+2. **A weekly parent email**: what your child practised, what they are strong at, what to
    work on. Cheap to build on the existing `Progress` blob, and the single best retention
    mechanic for a parent-paid product — it makes the subscription visible.
 
