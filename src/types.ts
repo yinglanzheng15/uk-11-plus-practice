@@ -143,8 +143,16 @@ export interface Progress {
      * while a relaxed practice run wants considerably more.
      */
     secondsPerQuestion: number
-    /** Last-chosen subject subset for Mixed practice. Empty means "all subjects". */
-    mixedSubjects: SubjectId[]
+    /**
+     * Last-chosen subject subset for quick and mixed practice. Empty means
+     * "all subjects".
+     */
+    practiceSubjects: SubjectId[]
+    /**
+     * Last-chosen topic subset per subject. A missing or empty entry means
+     * "every topic for that subject".
+     */
+    practiceTopics: Record<SubjectId, string[]>
   }
 }
 
@@ -163,7 +171,13 @@ export interface SessionConfig {
   length: number
   /** Empty means "all subjects". */
   subjects: SubjectId[]
-  topic?: string
+  /**
+   * `subject::topic` keys (see `topicKey` in src/data/index.ts). Topic names
+   * are not unique across subjects — "Vocabulary" belongs to both English and
+   * Verbal Reasoning — so the pair is the only safe filter. Omitted or empty
+   * means "every topic".
+   */
+  topicKeys?: string[]
   timed: boolean
   /** Total time allowed, in ms. Only meaningful when `timed` is true. */
   timeLimitMs?: number

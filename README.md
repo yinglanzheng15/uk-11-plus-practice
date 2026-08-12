@@ -170,10 +170,12 @@ Like all the other data, feedback is stored only in that browser and is never se
 | --- | --- |
 | **Quick 5 / 10 / 20** | Mixed-subject sessions of increasing length |
 | **Subject practice** | Pick a subject, then a specific topic |
-| **Mixed practice** | Any combination of subjects, interleaved — pick which ones on the home screen |
+| **Mixed practice** | Every chosen subject, interleaved |
 | **My mistakes** | Only questions previously answered incorrectly |
 | **Weak areas** | Automatically targets topics below 70% mastery |
 | **Challenge** | Prioritises difficulty 3–4 questions |
+
+**Choose what to practise** on the home screen narrows the Quick 5/10/20 and Mixed sessions to any combination of subjects, and to particular topics within them — Maths and English but not the reasoning papers, say, or fractions and geometry alone. The panel shows how many questions the current selection leaves, and warns when that is too few for a full session. The choice is remembered between visits. *My mistakes* and *Weak areas* deliberately ignore it: those are scoped by what the child has actually answered, and quietly filtering them would hide questions they got wrong.
 
 Any session can optionally be timed. **The pace is set by a grown-up in the Parent tab** — Gentle (90s a question), Steady (60s), Standard (45s, the default), Exam pace (37s) or Fast (30s). Exam pace is roughly that of Dame Alice Owen's verbal reasoning paper, 80 questions in 50 minutes. Timings differ between schools and change from year to year, so check the school's own admissions material for the year being sat. The timer never fails the child — when it expires, the session ends gracefully and shows results for the questions reached.
 

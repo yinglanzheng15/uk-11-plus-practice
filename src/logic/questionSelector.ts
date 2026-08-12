@@ -111,7 +111,10 @@ function poolForMode(config: SessionConfig, progress: Progress): Question[] {
   let pool = QUESTIONS.filter(
     (q) => subjects.length === 0 || subjects.includes(q.subject),
   )
-  if (config.topic) pool = pool.filter((q) => q.topic === config.topic)
+  if (config.topicKeys?.length) {
+    const keys = new Set(config.topicKeys)
+    pool = pool.filter((q) => keys.has(topicKey(q.subject, q.topic)))
+  }
 
   switch (config.mode) {
     case 'mistakes': {

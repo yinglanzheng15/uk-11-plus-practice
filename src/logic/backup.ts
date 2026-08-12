@@ -6,7 +6,13 @@
  * child from zero. A plain JSON file is the whole answer: no account, no
  * server, and something a parent can actually read and keep.
  */
-import { DEFAULT_SECONDS_PER_QUESTION, emptyProgress, SCHEMA_VERSION } from './storage'
+import {
+  DEFAULT_SECONDS_PER_QUESTION,
+  emptyProgress,
+  isPlainObject,
+  readSubjects,
+  SCHEMA_VERSION,
+} from './storage'
 import type { Progress } from '../types'
 
 /** Identifies our own files, so an unrelated JSON file fails clearly. */
@@ -129,6 +135,11 @@ export function parseBackup(text: string): ImportResult {
           p.preferences.secondsPerQuestion > 0
             ? p.preferences.secondsPerQuestion
             : DEFAULT_SECONDS_PER_QUESTION,
+        // Files exported at schema 4 name this `mixedSubjects`.
+        practiceSubjects: readSubjects(p.preferences),
+        practiceTopics: isPlainObject(p.preferences?.practiceTopics)
+          ? (p.preferences.practiceTopics as Record<string, string[]>)
+          : {},
       },
     },
   }
