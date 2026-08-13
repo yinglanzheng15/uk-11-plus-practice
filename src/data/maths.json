@@ -3717,5 +3717,191 @@
             "word problems",
             "division"
         ]
+    },
+    {
+        "id": "maths-factors-008",
+        "subject": "maths",
+        "topic": "Factors and multiples",
+        "skill": "common_multiples",
+        "type": "factors",
+        "difficulty": 4,
+        "question": "What is the smallest number greater than 1 that is a multiple of both 6 and 8?",
+        "options": [
+            "24",
+            "48",
+            "2",
+            "14",
+            "12"
+        ],
+        "answer": 0,
+        "explanation": "Multiples of 8 are 8, 16, 24, ... and 24 is the first that is also a multiple of 6 (6 x 4). So the lowest common multiple of 6 and 8 is 24.",
+        "distractorNotes": [
+            "",
+            "48 is a common multiple of 6 and 8, but it is not the smallest — 24 comes first.",
+            "2 is the highest common factor of 6 and 8, not a common multiple.",
+            "This adds 6 and 8 instead of finding a number both divide into.",
+            "12 is a multiple of 6 but not of 8, because 8 does not divide 12."
+        ],
+        "learningPoint": "The lowest common multiple is the smallest number in both times-tables. List multiples of the larger number and find the first one the smaller number also divides.",
+        "tags": [
+            "factors and multiples",
+            "lowest common multiple"
+        ]
+    },
+    {
+        "id": "maths-order-of-operations-008",
+        "subject": "maths",
+        "topic": "Order of operations",
+        "skill": "bidmas",
+        "type": "order-of-operations",
+        "difficulty": 4,
+        "question": "Work out 3 + 4 x (10 - 2²).",
+        "options": [
+            "27",
+            "42",
+            "39",
+            "24",
+            "35"
+        ],
+        "answer": 0,
+        "verify": "3 + 4 * (10 - 2**2)",
+        "explanation": "Brackets first, and inside them the power first: 2² = 4, so 10 - 4 = 6. Then multiply: 4 x 6 = 24. Then add: 3 + 24 = 27.",
+        "distractorNotes": [
+            "",
+            "This works strictly left to right (3 + 4, then x 6) instead of multiplying before adding.",
+            "This ignores the brackets: 3 + 4x10 - 4 = 39.",
+            "This works out 4 x 6 = 24 but forgets to add the 3 at the start.",
+            "This forgets to square the 2, using 10 - 2 = 8 instead of 10 - 4 = 6."
+        ],
+        "learningPoint": "BIDMAS: Brackets, then Indices (powers), then Division/Multiplication, then Addition/Subtraction. Work inside brackets first, powers before the multiply.",
+        "tags": [
+            "order of operations",
+            "bidmas",
+            "powers"
+        ]
+    },
+    {
+        "id": "maths-negative-numbers-008",
+        "subject": "maths",
+        "topic": "Negative numbers",
+        "skill": "subtracting_past_zero",
+        "type": "negative-numbers",
+        "difficulty": 4,
+        "question": "The temperature is −6 °C. It falls by 5 °C, then rises by 8 °C. What is the final temperature?",
+        "options": [
+            "−3 °C",
+            "3 °C",
+            "−19 °C",
+            "−9 °C",
+            "7 °C"
+        ],
+        "answer": 0,
+        "verify": "-6 - 5 + 8",
+        "explanation": "Start at −6. A fall of 5 gives −6 − 5 = −11. A rise of 8 gives −11 + 8 = −3 °C.",
+        "distractorNotes": [
+            "",
+            "This has the right size but the wrong sign — starting deep below zero, a fall then a smaller rise still leaves it below zero.",
+            "This treats every change as a fall (−6 − 5 − 8). The last change is a rise, so it is added on.",
+            "This swaps the two changes, treating the 8 as a fall and the 5 as a rise.",
+            "This treats the fall of 5 as a rise as well (−6 + 5 + 8)."
+        ],
+        "learningPoint": "A fall makes a temperature lower (subtract); a rise makes it higher (add). Deal with each change one at a time.",
+        "tags": [
+            "negative numbers",
+            "temperature"
+        ]
+    },
+    {
+        "id": "maths-place-value-009",
+        "subject": "maths",
+        "topic": "Place value",
+        "skill": "reading_large_numbers",
+        "type": "place-value",
+        "difficulty": 4,
+        "question": "What is the value of the digit 7 in the number 3 704 500?",
+        "options": [
+            "700 000",
+            "70 000",
+            "7 000 000",
+            "7",
+            "700"
+        ],
+        "answer": 0,
+        "verify": "7 * 100000",
+        "explanation": "In 3 704 500 the 7 sits in the hundred-thousands column, so its value is 7 x 100,000 = 700,000.",
+        "distractorNotes": [
+            "",
+            "The 7 is in the hundred-thousands column, not the ten-thousands, so it is worth 700,000.",
+            "This would be its value if the 7 were in the millions column, but here it is one column to the right.",
+            "This is just the digit itself, not its value in this position.",
+            "This is the value of a 7 in the hundreds column, three columns too far to the right."
+        ],
+        "learningPoint": "A digit's value depends on its column. From the right: ones, tens, hundreds, thousands, ten-thousands, hundred-thousands, millions.",
+        "tags": [
+            "place value",
+            "large numbers"
+        ]
+    },
+    {
+        "id": "maths-fractions-013",
+        "subject": "maths",
+        "topic": "Fractions",
+        "skill": "fraction_of_quantity",
+        "type": "fractions",
+        "difficulty": 4,
+        "question": "What is 2/3 of 3/4?",
+        "options": [
+            "1/2",
+            "5/7",
+            "6/7",
+            "8/9",
+            "1/4"
+        ],
+        "answer": 0,
+        "explanation": "'Of' means multiply: 2/3 x 3/4 = 6/12 = 1/2. Multiply the top numbers together and the bottom numbers together, then simplify.",
+        "distractorNotes": [
+            "",
+            "This adds the fractions by adding tops and bottoms (2+3 over 3+4). 'Of' means multiply, not add.",
+            "This multiplies the top numbers but adds the bottom numbers.",
+            "This multiplies across the wrong pairs (2x4 over 3x3).",
+            "This finds one third of 3/4 but forgets to take two thirds."
+        ],
+        "learningPoint": "'Of' means multiply. For a fraction of a fraction, multiply the numerators and multiply the denominators, then simplify.",
+        "tags": [
+            "fractions",
+            "fraction of a fraction",
+            "multiplying fractions"
+        ]
+    },
+    {
+        "id": "maths-ratio-009",
+        "subject": "maths",
+        "topic": "Ratio and proportion",
+        "skill": "scaling_recipes",
+        "type": "ratio",
+        "difficulty": 1,
+        "question": "A recipe uses 2 eggs to make 1 cake. How many eggs are needed to make 3 cakes?",
+        "options": [
+            "6",
+            "5",
+            "3",
+            "2",
+            "1"
+        ],
+        "answer": 0,
+        "verify": "2 * 3",
+        "explanation": "Each cake needs 2 eggs, so 3 cakes need 2 x 3 = 6 eggs.",
+        "distractorNotes": [
+            "",
+            "This adds 2 and 3 instead of using 2 eggs for each of the 3 cakes.",
+            "This uses 1 egg per cake instead of 2.",
+            "This is the eggs needed for a single cake, not for 3.",
+            "This is the number of cakes, not the number of eggs."
+        ],
+        "learningPoint": "If each one needs the same amount, multiply that amount by how many you are making.",
+        "tags": [
+            "ratio and proportion",
+            "scaling"
+        ]
     }
 ]
