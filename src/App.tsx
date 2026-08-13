@@ -20,6 +20,7 @@ import {
   type RestoredSession,
 } from './logic/sessionStorage'
 import { mainAnswers, sessionDurationMs, type SessionState } from './logic/session'
+import { scoreBand, track } from './logic/analytics'
 import type { FeedbackReason, Progress, Question, SessionConfig, SubjectId } from './types'
 
 type View = 'home' | 'quiz' | 'dashboard' | 'parent'
@@ -73,6 +74,7 @@ export default function App() {
   const startSession = useCallback(
     (config: SessionConfig) => {
       const result = selectQuestions(config, progress)
+      track(`start/${config.mode}/${config.subjects.join('+') || 'all'}`)
       setProgress((p) => noteServed(p, result.questions.map((q) => q.id)))
       setResumable(null)
       liveSession.current = null
@@ -130,6 +132,12 @@ export default function App() {
 
   const handleFinish = useCallback((state: SessionState) => {
     const answered = mainAnswers(state)
+    track(
+      `finish/${state.config.mode}/${scoreBand(
+        answered.filter((a) => a.correct).length,
+        answered.length,
+      )}`,
+    )
     const weak = [
       ...new Set(
         answered

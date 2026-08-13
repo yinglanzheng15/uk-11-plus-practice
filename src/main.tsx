@@ -2,7 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import { loadPaidQuestions } from './data'
+import { initAnalytics } from './logic/analytics'
 import './styles/global.css'
+
+initAnalytics()
 
 // The paid half of the bank is fetched before the first render, so nothing in
 // the app has to deal with a half-loaded bank. loadPaidQuestions never throws —

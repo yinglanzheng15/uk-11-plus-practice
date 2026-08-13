@@ -3,9 +3,13 @@ name: Deploy to GitHub Pages
 # The repository is public and Settings -> Pages -> Source is "GitHub Actions",
 # so every push to main republishes the site. workflow_dispatch is kept so a
 # deployment can also be re-run by hand from the Actions tab.
+# Pull requests build and test but do not deploy, so a change is checked before
+# it reaches main rather than after.
 on:
   workflow_dispatch:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
 
 permissions:
@@ -38,14 +42,19 @@ jobs:
       # Validates the question bank, type-checks, then builds to dist/.
       - run: npm run build
 
+      # Pages steps need write permissions a fork's pull request will not have,
+      # so they are skipped on PRs — the build and tests above are the point there.
       - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
 
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
         with:
           path: dist
 
   deploy:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

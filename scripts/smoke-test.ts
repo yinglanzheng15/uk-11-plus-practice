@@ -1,6 +1,7 @@
 ﻿import { readFileSync } from 'node:fs'
 import { QUESTIONS, getQuestion, topicKey, installPaidQuestions } from '../src/data/index'
 import { FREE_PER_TOPIC, partitionBank } from '../src/data/access'
+import { hashString, seededRandom, shuffleOptions } from '../src/data/shuffle'
 import {
   intervalDaysFor,
   isDue,
@@ -12,6 +13,7 @@ import {
   RESUME_MAX_AGE_MS,
 } from '../src/logic/sessionStorage'
 import { describeBackup, exportProgress, parseBackup } from '../src/logic/backup'
+import { initAnalytics, scoreBand, track } from '../src/logic/analytics'
 import { PACE_PRESETS, timeLimitFor } from '../src/logic/pace'
 import { PAPERS, paperLength } from '../src/logic/papers'
 import { formatDuration } from '../src/components/Timer'
@@ -37,7 +39,16 @@ import {
   flushProgress,
   loadProgress,
   saveProgress,
+  DEFAULT_SECONDS_PER_QUESTION,
+  SCHEMA_VERSION,
 } from '../src/logic/storage'
+import {
+  addFeedback,
+  clearFeedback,
+  feedbackToMarkdown,
+  reasonLabel,
+  removeFeedback,
+} from '../src/logic/feedback'
 import { topicMastery } from '../src/logic/mastery'
 import type { Progress, SessionConfig } from '../src/types'
 
@@ -885,6 +896,301 @@ console.log('\n== error-spotting questions keep their option order ==')
     return authored && authored.options.some((o: string, i: number) => o !== q.options[i])
   })
   check('ordinary questions are still shuffled', shuffledSomewhere)
+}
+
+console.log('\n== analytics ==')
+{
+  check('a perfect session lands in the top band', scoreBand(10, 10) === '80-100')
+  check('a bad session lands in the bottom band', scoreBand(3, 10) === '0-39')
+  check('band boundaries are inclusive from below', scoreBand(4, 10) === '40-59')
+  check('an empty session has no band', scoreBand(0, 0) === 'none')
+  // Both come from a division elsewhere, so neither is trusted to be sane.
+  check('a negative score cannot escape the bands', scoreBand(-1, 10) === '0-39')
+  check('an impossible score cannot escape the bands', scoreBand(20, 10) === '80-100')
+  // No DOM here, so both calls hit their guards. Neither may throw:
+  // `initAnalytics` runs at import time in main.tsx, and a counter that can
+  // raise would take a practice session down with it.
+  let threw = false
+  try {
+    initAnalytics()
+    track('smoke-test')
+  } catch {
+    threw = true
+  }
+  check('analytics is inert outside a browser', !threw)
+}
+
+console.log('\n== migrating an older profile ==')
+{
+  // The highest-stakes untested path in the app: every child on an older schema
+  // runs `migrate` on their next visit, and a mistake here silently throws away
+  // months of practice. localStorage is stood up the same way as the batching
+  // section above, but only `stored` is ever read.
+  let stored: string | null = null
+  ;(globalThis as any).window = {
+    localStorage: {
+      getItem: () => stored,
+      setItem: () => {},
+      removeItem: () => {
+        stored = null
+      },
+    },
+  }
+
+  // A profile written by the first release: no streaks, no feedback, and none
+  // of the preferences added since.
+  stored = JSON.stringify({
+    version: 1,
+    questions: {
+      'q-right': { attempts: 3, correct: 2, lastSeen: 111, lastCorrect: true },
+      'q-wrong': { attempts: 1, correct: 0, lastSeen: 222, lastCorrect: false },
+    },
+    recentQuestionIds: ['q-right'],
+    sessions: [{ finishedAt: 1, mode: 'quick10', subjects: [], total: 10, correct: 7 }],
+    streak: { lastDate: '2024-01-01', current: 3, best: 5 },
+    totals: { answered: 4, correct: 2 },
+    preferences: { timed: true },
+  })
+  const v1 = loadProgress()
+
+  check('the schema version is stamped forward', v1.version === SCHEMA_VERSION)
+  check('lifetime totals survive', v1.totals.answered === 4 && v1.totals.correct === 2)
+  check('the best streak survives', v1.streak.best === 5 && v1.streak.current === 3)
+  check('per-question history survives', v1.questions['q-right']?.attempts === 3)
+  check('finished sessions survive', v1.sessions.length === 1)
+  check('the recently-served list survives', v1.recentQuestionIds[0] === 'q-right')
+  check('an existing preference survives', v1.preferences.timed === true)
+  // Pre-schema-2 records have no streak. A question last answered correctly
+  // starts one rung up the review ladder rather than coming straight back.
+  check('a correct answer earns a streak of 1', v1.questions['q-right']?.streak === 1)
+  check('a wrong answer starts at 0', v1.questions['q-wrong']?.streak === 0)
+  check('fields added since default rather than vanish', Array.isArray(v1.feedback))
+  check(
+    'the pace defaults',
+    v1.preferences.secondsPerQuestion === DEFAULT_SECONDS_PER_QUESTION,
+  )
+  check('practice topics default', Object.keys(v1.preferences.practiceTopics).length === 0)
+
+  // Schema 4 called this `mixedSubjects`. Losing it would silently reset a
+  // child's chosen subjects on upgrade.
+  stored = JSON.stringify({ version: 4, preferences: { mixedSubjects: ['maths', 'english'] } })
+  check(
+    'a schema-4 subject choice is carried forward',
+    loadProgress().preferences.practiceSubjects.join() === 'maths,english',
+  )
+
+  // Hand-edited or half-written values must be repaired, not trusted — a pace
+  // of 0 would produce a session with no time at all.
+  for (const bad of [0, -5, 'fast', null]) {
+    stored = JSON.stringify({ preferences: { secondsPerQuestion: bad } })
+    check(
+      `a pace of ${JSON.stringify(bad)} is repaired`,
+      loadProgress().preferences.secondsPerQuestion === DEFAULT_SECONDS_PER_QUESTION,
+    )
+  }
+  stored = JSON.stringify({ preferences: { practiceTopics: 'nonsense' } })
+  check(
+    'a damaged topic selection is repaired',
+    Object.keys(loadProgress().preferences.practiceTopics).length === 0,
+  )
+
+  // Damaged storage must give a usable empty profile, never an exception — the
+  // app cannot start at all if loading throws.
+  for (const junk of ['{not json', 'null', '[]', '7', '"a string"']) {
+    stored = junk
+    let answered = -1
+    try {
+      answered = loadProgress().totals.answered
+    } catch {
+      answered = -1
+    }
+    check(`stored junk ${junk} yields a fresh profile`, answered === 0)
+  }
+
+  // Private browsing and full-quota devices throw on read.
+  ;(globalThis as any).window.localStorage.getItem = () => {
+    throw new Error('SecurityError')
+  }
+  let threw = false
+  let recovered = false
+  try {
+    recovered = loadProgress().totals.answered === 0
+  } catch {
+    threw = true
+  }
+  check('unreadable storage falls back instead of throwing', !threw && recovered)
+
+  delete (globalThis as any).window
+}
+
+console.log('\n== feedback ==')
+{
+  const sample = QUESTIONS[0]
+  let p: Progress = emptyProgress()
+
+  p = addFeedback(p, { kind: 'general', message: 'too many fractions' }, 1000)
+  p = addFeedback(p, { kind: 'question', questionId: sample.id, reason: 'typo', message: 'spelling' }, 1000)
+
+  check('feedback is kept newest first', p.feedback[0]?.message === 'spelling')
+  check('both items are kept', p.feedback.length === 2)
+  // Same timestamp, so only the counter separates them. Colliding ids would
+  // make "delete this one" delete both.
+  check('ids are unique even within the same millisecond', p.feedback[0].id !== p.feedback[1].id)
+
+  const keep = p.feedback[0].id
+  const gone = p.feedback[1].id
+  const after = removeFeedback(p, gone)
+  check('removing takes exactly one item', after.feedback.length === 1)
+  check('and it is the right one', after.feedback[0].id === keep)
+  check('removing an unknown id is harmless', removeFeedback(p, 'fb-nope').feedback.length === 2)
+  check('clearing empties the list', clearFeedback(p).feedback.length === 0)
+  check('the original is never mutated', p.feedback.length === 2)
+
+  // A legacy profile predates the feedback field entirely.
+  const legacy = { ...emptyProgress(), feedback: undefined as unknown as Progress['feedback'] }
+  check(
+    'feedback can be added to a profile that has none',
+    addFeedback(legacy, { kind: 'general', message: 'first' }).feedback.length === 1,
+  )
+
+  // 200 is the cap. Without it a profile grows without bound in localStorage.
+  let many: Progress = emptyProgress()
+  for (let i = 0; i < 205; i += 1) {
+    many = addFeedback(many, { kind: 'general', message: `note ${i}` }, 2000 + i)
+  }
+  check('the feedback list is capped at 200', many.feedback.length === 200)
+  check('and it is the oldest that fall off', many.feedback[0].message === 'note 204')
+
+  const md = feedbackToMarkdown(p)
+  check('the export names the reported question', md.includes(sample.id))
+  check('and quotes its text, so the bank can be fixed', md.includes(sample.question))
+  check('and gives the marked answer', md.includes(sample.options[sample.answer]))
+  check('and labels the reason in words', md.includes(reasonLabel('typo')))
+  check('general notes are exported too', md.includes('too many fractions'))
+  check('an empty export still says so', feedbackToMarkdown(emptyProgress()).includes('No feedback'))
+
+  // Reports outlive the bank: a question can be deleted after being flagged.
+  const orphan = addFeedback(emptyProgress(), {
+    kind: 'question',
+    questionId: 'deleted-question',
+    reason: 'answer-wrong',
+    message: '',
+  })
+  check(
+    'a report on a deleted question still exports',
+    feedbackToMarkdown(orphan).includes('no longer in the bank'),
+  )
+  check('an unknown reason still gets a label', reasonLabel(undefined) === 'Note')
+}
+
+console.log('\n== option shuffling keeps the right answer right ==')
+{
+  // Questions are authored with the correct answer first and permuted at load
+  // time. If that permutation and the answer index ever drift apart, a child is
+  // marked wrong for choosing correctly — the worst bug this app could have, and
+  // an invisible one. So it is checked against every question in the bank.
+  // The authored files, before the load-time shuffle: the four hand-written
+  // subject banks plus the template output that `npm run generate` emits.
+  type Authored = { id: string; options: string[]; answer: number }
+  const authoredById = new Map<string, Authored>()
+  for (const file of [
+    'english',
+    'maths',
+    'verbal-reasoning',
+    'non-verbal-reasoning',
+    'generated',
+  ]) {
+    const bank = JSON.parse(readFileSync(`src/data/${file}.json`, 'utf8')) as Authored[]
+    for (const q of bank) authoredById.set(q.id, q)
+  }
+
+  // A bank-wide failure can name hundreds of questions; a handful plus a count
+  // is enough to start debugging and short enough to read.
+  const someIds = (qs: readonly { id: string }[]) =>
+    qs.slice(0, 5).map((q) => q.id).join(', ') +
+    (qs.length > 5 ? ' (+' + (qs.length - 5) + ' more)' : '')
+
+  const unmatched = QUESTIONS.filter((q) => !authoredById.has(q.id))
+  check(
+    'every served question comes from an authored file',
+    unmatched.length === 0,
+    someIds(unmatched),
+  )
+
+  const wrongAnswer = QUESTIONS.filter((q) => {
+    const a = authoredById.get(q.id)
+    return a && q.options[q.answer] !== a.options[a.answer]
+  })
+  check(
+    'every served question still marks the authored answer',
+    wrongAnswer.length === 0,
+    someIds(wrongAnswer),
+  )
+
+  const notPermutation = QUESTIONS.filter((q) => {
+    const a = authoredById.get(q.id)
+    return a && [...q.options].sort().join(' ') !== [...a.options].sort().join(' ')
+  })
+  check(
+    'and offers exactly the authored options, no more and no fewer',
+    notPermutation.length === 0,
+    someIds(notPermutation),
+  )
+
+  // The whole point of shuffling: the answer must not sit at A every time.
+  const atA = QUESTIONS.filter((q) => !q.fixedOptions && q.answer === 0).length
+  const shufflable = QUESTIONS.filter((q) => !q.fixedOptions).length
+  check(
+    'the answer is not parked at A',
+    atA < shufflable * 0.4,
+    `${atA} of ${shufflable}`,
+  )
+
+  // Stable across reloads and devices, because the seed is the question id.
+  // If this drifts, a child sees the options move around between sessions.
+  const sample = { id: 'shuffle-demo', options: ['right', 'b', 'c', 'd', 'e'], answer: 0 }
+  const once = shuffleOptions(sample)
+  const twice = shuffleOptions(sample)
+  check('shuffling is deterministic', once.options.join() === twice.options.join())
+  check('and the seed is the id, so a different id permutes differently', (() => {
+    const other = shuffleOptions({ ...sample, id: 'shuffle-demo-2' })
+    return other.options.join() !== once.options.join()
+  })())
+  check('the marked answer follows its text', once.options[once.answer] === 'right')
+
+  // Parallel arrays must move with the options or an explanation ends up
+  // attached to the wrong distractor.
+  const withNotes = shuffleOptions({
+    id: 'notes-demo',
+    options: ['a', 'b', 'c', 'd', 'e'],
+    answer: 0,
+    distractorNotes: ['note-a', 'note-b', 'note-c', 'note-d', 'note-e'],
+    optionFigures: ['fig-a', 'fig-b', 'fig-c', 'fig-d', 'fig-e'],
+  })
+  check(
+    'distractor notes stay with their option',
+    withNotes.options.every((o, i) => withNotes.distractorNotes![i] === `note-${o}`),
+  )
+  check(
+    'option figures stay with their option',
+    withNotes.options.every((o, i) => withNotes.optionFigures![i] === `fig-${o}`),
+  )
+
+  // Error-spotting items carry the sentence in their order — see the section above.
+  const fixed = shuffleOptions({ ...sample, fixedOptions: true })
+  check('a fixed-order question is left alone', fixed.options.join() === sample.options.join())
+  check('and keeps its answer index', fixed.answer === sample.answer)
+
+  check('hashing is stable', hashString('abc') === hashString('abc'))
+  check('and separates different ids', hashString('abc') !== hashString('abd'))
+  const rand = seededRandom(hashString('seed'))
+  const draws = [rand(), rand(), rand(), rand(), rand()]
+  check('random draws stay in [0, 1)', draws.every((n) => n >= 0 && n < 1))
+  check('and do not repeat a single value', new Set(draws).size === 5)
+  check(
+    'the same seed replays the same draws',
+    seededRandom(hashString('seed'))() === draws[0],
+  )
 }
 
 console.log(failures === 0 ? '\nAll checks passed.' : `\n${failures} check(s) failed.`)
