@@ -26,7 +26,7 @@ npm run dev      # http://localhost:5173/uk-11-plus-practice/
 
 ## Status
 
-Feature-complete, all checks green. 450 questions across 4 subjects; 434 human-reviewed (the 16 outstanding are the new GL-style error-spotting questions).
+Feature-complete, all checks green. 468 questions across 4 subjects; 434 human-reviewed (the 34 outstanding are the GL-style error-spotting questions and 18 gap-fill questions added since — run `npm run review` to vet them). The gap-fill batch closed every maths topic that previously had no Stretch (difficulty 4) question and both topics missing a Foundation one; see ROADMAP §8. NVR remains a 12-question taster.
 
 **Pick it up here:** [`docs/commercialisation.md`](docs/commercialisation.md) for the paid-product work in progress — the free/paid seam exists but is deliberately open, so the deployed app still ships the whole bank to everyone. [`ROADMAP.md`](ROADMAP.md) has the prioritised next steps (§8 is the data/structure debt), and [`docs/latymer-alignment.md`](docs/latymer-alignment.md) lists the question types still worth adding. The GL PDFs under `data/past papers/` are © GL Assessment — do **not** commit them.
 
