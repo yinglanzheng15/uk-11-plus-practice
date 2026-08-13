@@ -162,16 +162,47 @@ export function Dashboard({ progress }: Props) {
       {recentMistakes.length > 0 && (
         <div className="card">
           <h2 className="section-title">Recent mistakes</h2>
+          <p className="muted small" style={{ marginTop: 0 }}>
+            Tap one to go through it again — no need to re-answer.
+          </p>
           <ul className="list-plain">
             {recentMistakes.map((id) => {
               const q = getQuestion(id)
               if (!q) return null
+              // Native <details> for a keyboard-accessible accordion — no state.
+              // The chosen answer isn't stored, so we re-read the teaching that
+              // doesn't need it: correct answer, working, rule and the traps.
               return (
                 <li key={id}>
-                  <p className="small muted" style={{ margin: 0 }}>
-                    {getSubject(q.subject).label} · {q.topic}
-                  </p>
-                  <p style={{ margin: '2px 0 0' }}>{q.question}</p>
+                  <details>
+                    <summary style={{ cursor: 'pointer' }}>
+                      <span className="small muted">
+                        {getSubject(q.subject).label} · {q.topic}
+                      </span>
+                      <span style={{ display: 'block', margin: '2px 0 0' }}>
+                        {q.question}
+                      </span>
+                    </summary>
+                    <p className="small" style={{ margin: '8px 0 0' }}>
+                      <strong>Correct answer:</strong> {q.options[q.answer]}
+                    </p>
+                    <p className="small" style={{ margin: '4px 0 0' }}>{q.explanation}</p>
+                    {q.distractorNotes?.some((n, i) => n && i !== q.answer) && (
+                      <ul className="list-plain small" style={{ margin: '4px 0 0' }}>
+                        {q.options.map((opt, i) =>
+                          i !== q.answer && q.distractorNotes?.[i] ? (
+                            <li key={i} style={{ margin: '2px 0 0' }}>
+                              <strong>{opt}:</strong> {q.distractorNotes[i]}
+                            </li>
+                          ) : null,
+                        )}
+                      </ul>
+                    )}
+                    <p className="small muted" style={{ margin: '4px 0 0' }}>
+                      <strong>Remember: </strong>
+                      {q.learningPoint}
+                    </p>
+                  </details>
                 </li>
               )
             })}
