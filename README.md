@@ -50,7 +50,7 @@ Feature-complete, all checks green. 450 questions across 4 subjects; 434 human-r
 
 ## Design decisions worth knowing
 
-- **Wrong answers teach.** A mistake gives the correct answer, why it is right, why each distractor is tempting, a *Remember* rule, and an optional related question — up to twice, then it moves on. Follow-ups never count against the session score. The end-of-session review repeats all of it for every question got wrong or left unanswered.
+- **Wrong answers teach.** A mistake gives the correct answer, why it is right, why each distractor is tempting, a *Remember* rule, and an optional related question — up to twice, then it moves on. Follow-ups never count against the session score. The end-of-session review repeats all of it for every question got wrong or left unanswered, and **My progress → Recent mistakes** keeps each one re-readable afterwards: tap a question to reopen the working, the traps and the *Remember* rule without re-answering it.
 - **Skipping is exam technique.** A skipped question is parked and comes back at the end; it records nothing either way.
 - **Full paper runs straight through** — no learning loop, and marks are raw, deliberately not a scaled score.
 - **Mastery bands are an in-app indicator**, not a standardised score, and the app says so wherever they appear.
