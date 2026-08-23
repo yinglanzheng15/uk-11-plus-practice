@@ -6,6 +6,7 @@ import { formatDuration } from './Timer'
 import { getSubject, SUBJECTS } from '../data/subjects'
 import { subjectMastery, topicMastery } from '../logic/mastery'
 import { overallAccuracy } from '../logic/progress'
+import { topicTiming } from '../logic/timing'
 import type { Progress } from '../types'
 
 interface Props {
@@ -138,6 +139,8 @@ function ParentProgress({ progress }: ProgressProps) {
   const recentAvg = avg(recent)
   const olderAvg = avg(older)
 
+  const timing = topicTiming(progress).sort((a, b) => b.avgMs - a.avgMs)
+
   return (
     <>
       <div className="card">
@@ -224,6 +227,29 @@ function ParentProgress({ progress }: ProgressProps) {
               colour={getSubject(t.subject).colour}
             />
           ))}
+        </div>
+      )}
+
+      {timing.length > 0 && (
+        <div className="card">
+          <h2 className="section-title">Time per topic</h2>
+          <p className="muted small">
+            Average time per answer, slowest topics first. Answered since this device
+            was last updated — often more revealing than accuracy alone, since a topic
+            answered quickly but wrongly is a different problem from one answered
+            slowly but rightly.
+          </p>
+          <ul className="list-plain">
+            {timing.slice(0, 8).map((t) => (
+              <li key={t.key}>
+                <strong>
+                  {getSubject(t.subject).shortLabel} · {t.topic}
+                </strong>{' '}
+                — {formatDuration(t.avgMs)} avg over {t.attempts} answer
+                {t.attempts === 1 ? '' : 's'}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

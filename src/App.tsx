@@ -126,9 +126,14 @@ export default function App() {
   // Follow-ups are chosen by the learning loop rather than by selectQuestions,
   // so noting every served question here is what stops one reappearing as a
   // main question in the very next session.
-  const handleRecord = useCallback((question: Question, correct: boolean) => {
-    setProgress((p) => noteServed(recordAnswer(p, question, correct), [question.id]))
-  }, [])
+  const handleRecord = useCallback(
+    (question: Question, correct: boolean, elapsedMs: number) => {
+      setProgress((p) =>
+        noteServed(recordAnswer(p, question, correct, elapsedMs), [question.id]),
+      )
+    },
+    [],
+  )
 
   const handleFinish = useCallback((state: SessionState) => {
     const answered = mainAnswers(state)

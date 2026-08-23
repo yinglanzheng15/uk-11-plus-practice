@@ -50,6 +50,7 @@ import {
   removeFeedback,
 } from '../src/logic/feedback'
 import { topicMastery } from '../src/logic/mastery'
+import { topicTiming } from '../src/logic/timing'
 import type { Progress, SessionConfig } from '../src/types'
 
 // The client bundles only the free half of the bank and fetches the rest at
@@ -465,6 +466,28 @@ console.log('\n== progress, mastery, persistence ==')
   check('progress survives a JSON round-trip', round.totals.answered === p.totals.answered)
 }
 
+console.log('\n== per-topic timing ==')
+{
+  let p: Progress = emptyProgress()
+  const ratio = QUESTIONS.filter((q) => q.topic === 'Ratio and proportion')
+  check('enough Ratio and proportion questions to test with', ratio.length >= 2)
+  p = recordAnswer(p, ratio[0], true, 10_000)
+  check(
+    'a topic below the minimum attempts is excluded',
+    topicTiming(p).find((t) => t.topic === 'Ratio and proportion') === undefined,
+  )
+  p = recordAnswer(p, ratio[1], true, 20_000)
+  const ratioTiming = topicTiming(p).find((t) => t.topic === 'Ratio and proportion')!
+  check('average time is the mean of the two answers', ratioTiming?.avgMs === 15_000)
+  check('attempts is counted across both questions', ratioTiming?.attempts === 2)
+
+  const untimed = recordAnswer(emptyProgress(), ratio[0], true)
+  check(
+    'recordAnswer defaults elapsedMs to 0 when omitted',
+    untimed.questions[ratio[0].id]?.totalElapsedMs === 0,
+  )
+}
+
 console.log('\n== bank integrity ==')
 {
   check('every question resolvable by id', QUESTIONS.every((q) => getQuestion(q.id)?.id === q.id))
@@ -483,11 +506,25 @@ console.log('\n== spaced repetition ==')
   check('the ladder stops climbing at the top', intervalDaysFor(9) === 21)
 
   const now = Date.now()
-  const fresh = { attempts: 1, correct: 1, lastSeen: now, lastCorrect: true, streak: 1 }
+  const fresh = {
+    attempts: 1,
+    correct: 1,
+    lastSeen: now,
+    lastCorrect: true,
+    streak: 1,
+    totalElapsedMs: 0,
+  }
   check('answered right today is not due today', !isDue(fresh, now))
   check('the same question is due tomorrow', isDue(fresh, now + DAY + 1))
 
-  const wrong = { attempts: 1, correct: 0, lastSeen: now, lastCorrect: false, streak: 0 }
+  const wrong = {
+    attempts: 1,
+    correct: 0,
+    lastSeen: now,
+    lastCorrect: false,
+    streak: 0,
+    totalElapsedMs: 0,
+  }
   check('a mistake is due immediately', isDue(wrong, now))
 
   // The behaviour that matters: with everything already learnt, the selector
@@ -503,6 +540,7 @@ console.log('\n== spaced repetition ==')
       lastSeen: q.id === overdue.id ? now - 30 * DAY : now,
       lastCorrect: true,
       streak: 3,
+      totalElapsedMs: 0,
     }
   }
   const p: Progress = { ...emptyProgress(), questions }
@@ -964,6 +1002,12 @@ console.log('\n== migrating an older profile ==')
   // starts one rung up the review ladder rather than coming straight back.
   check('a correct answer earns a streak of 1', v1.questions['q-right']?.streak === 1)
   check('a wrong answer starts at 0', v1.questions['q-wrong']?.streak === 0)
+  // Pre-schema-6 records have no timing data — there is nothing to recover, so
+  // it starts at 0 rather than being guessed at.
+  check(
+    'a pre-schema-6 record has no elapsed time to recover',
+    v1.questions['q-right']?.totalElapsedMs === 0,
+  )
   check('fields added since default rather than vanish', Array.isArray(v1.feedback))
   check(
     'the pace defaults',

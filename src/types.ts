@@ -74,6 +74,12 @@ export interface QuestionRecord {
    * -repetition interval — see `REVIEW_INTERVAL_DAYS` in questionSelector.ts.
    */
   streak: number
+  /**
+   * Sum of `elapsedMs` across every attempt at this question. Divided by
+   * `attempts` for the average — see `topicTiming()` in `logic/timing.ts`.
+   * Records written before schema 6 default this to 0.
+   */
+  totalElapsedMs: number
 }
 
 export interface TopicKey {

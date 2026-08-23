@@ -28,6 +28,7 @@ export function recordAnswer(
   progress: Progress,
   question: Question,
   correct: boolean,
+  elapsedMs: number = 0,
   at: number = Date.now(),
 ): Progress {
   const existing = progress.questions[question.id]
@@ -38,6 +39,7 @@ export function recordAnswer(
     lastCorrect: correct,
     // One mistake sends the question back to the start of the review ladder.
     streak: correct ? (existing?.streak ?? 0) + 1 : 0,
+    totalElapsedMs: (existing?.totalElapsedMs ?? 0) + Math.max(0, elapsedMs),
   }
   return {
     ...progress,

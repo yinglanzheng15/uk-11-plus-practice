@@ -23,7 +23,7 @@ interface Props {
   /** A restored session, when the child chose to carry on where they left off. */
   initialState?: SessionState
   /** Persist a single answer. Follow-ups are recorded too. */
-  onRecord: (question: Question, correct: boolean) => void
+  onRecord: (question: Question, correct: boolean, elapsedMs: number) => void
   /** Called on every transition so the session survives a refresh. */
   onPersist: (state: SessionState) => void
   onFinish: (state: SessionState) => void
@@ -86,8 +86,9 @@ export function QuizSession({
       const q = currentQuestion(state)
       if (!q) return
       if (state.phase !== 'question' && state.phase !== 'followup') return
-      onRecord(q, option === q.answer)
-      apply((s) => sessionReducer(s, { type: 'answer', option, at: Date.now() }))
+      const at = Date.now()
+      onRecord(q, option === q.answer, at - state.questionStartedAt)
+      apply((s) => sessionReducer(s, { type: 'answer', option, at }))
     },
     [state, onRecord, apply],
   )

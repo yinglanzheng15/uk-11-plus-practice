@@ -109,6 +109,8 @@ export function parseBackup(text: string): ImportResult {
       lastSeen: record.lastSeen,
       lastCorrect: record.lastCorrect ?? false,
       streak: record.streak ?? (record.lastCorrect ? 1 : 0),
+      // A file exported before schema 6 has no timing data to restore.
+      totalElapsedMs: typeof record.totalElapsedMs === 'number' ? record.totalElapsedMs : 0,
     }
   }
 

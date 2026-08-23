@@ -10,8 +10,9 @@ const KEY = 'elevenplus:v1:progress'
  * 4 added `preferences.mixedSubjects`.
  * 5 renamed it to `preferences.practiceSubjects` (it now governs quick
  *   sessions too) and added `preferences.practiceTopics`.
+ * 6 added `totalElapsedMs` to QuestionRecord, for per-topic timing.
  */
-export const SCHEMA_VERSION = 5
+export const SCHEMA_VERSION = 6
 
 export function emptyProgress(): Progress {
   return {
@@ -39,6 +40,10 @@ export function emptyProgress(): Progress {
  * Records written before schema 2 have no `streak`. Rather than guess at a
  * history we do not have, a question last answered correctly starts one rung up
  * the review ladder — it comes back tomorrow instead of immediately.
+ *
+ * Records written before schema 6 have no `totalElapsedMs`. There is no way to
+ * recover timing for past attempts, so it starts at 0 — the question's average
+ * is simply undercounted until it is answered again, rather than guessed at.
  */
 function migrateQuestions(
   questions: Record<string, QuestionRecord> | undefined,
@@ -46,8 +51,12 @@ function migrateQuestions(
   if (!questions) return {}
   const out: Record<string, QuestionRecord> = {}
   for (const [id, r] of Object.entries(questions)) {
-    out[id] =
+    const withStreak =
       typeof r?.streak === 'number' ? r : { ...r, streak: r?.lastCorrect ? 1 : 0 }
+    out[id] =
+      typeof withStreak.totalElapsedMs === 'number'
+        ? withStreak
+        : { ...withStreak, totalElapsedMs: 0 }
   }
   return out
 }
