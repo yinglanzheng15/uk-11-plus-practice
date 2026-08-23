@@ -144,7 +144,7 @@ Storage schema went to version 2. Profiles saved before this get `streak: 1` for
 - ~~**Export and import progress.**~~ Done — the parent view has **Download progress** and **Restore from a file**. The file is plain JSON, produced in the browser and never uploaded. A restore is parsed and summarised (*"Saved on 10 August 2026: 412 questions answered across 38 sessions"*) before the parent confirms, because it replaces everything.
 - **More than one child.** One browser currently means one child. A simple profile picker would let siblings share a device.
 - ~~**Per-question timing.**~~ Done — `elapsedMs` now accumulates into `totalElapsedMs` on each `QuestionRecord` (schema v6), and the Parent view's Progress tab shows a **Time per topic** card, slowest first, once a topic has at least 2 timed answers.
-- **Offline use (PWA).** A service worker would let the app run with no connection at all — useful on a tablet in the car or on a train. The app is already fully self-contained, so this is mostly configuration.
+- ~~**Offline use (PWA).**~~ Done — `vite-plugin-pwa` precaches the whole build, including the paid question bank (`paid.json`), so the app keeps working with no connection at all once loaded once online. Manifest and icons are new; nothing else changed.
 - **Sound and animation are absent by design.** If the child finds it dry, a small correct/incorrect chime (with a mute setting) would be the least distracting addition.
 
 ---

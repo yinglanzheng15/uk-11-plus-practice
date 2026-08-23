@@ -41,7 +41,9 @@ Feature-complete, all checks green. 468 questions across 4 subjects, all human-r
 | Full-paper mode: sections, quotas, timings | `src/logic/papers.ts` |
 | Quiz + learning-loop state machine | `src/logic/session.ts`, `sessionStorage.ts` |
 | Mastery bands, progress, streaks | `src/logic/mastery.ts`, `progress.ts` |
+| Time spent per topic | `src/logic/timing.ts` |
 | Progress export / restore | `src/logic/backup.ts` |
+| Offline support (PWA) | `VitePWA` config in `vite.config.ts`; icons in `public/` |
 | Anonymous usage counts (GoatCounter) | `src/logic/analytics.ts` — empty `SITE` to switch off |
 | Subject registry (adding a subject) | `src/data/subjects.ts` + `VALID_SUBJECTS` in `scripts/validate-questions.ts` |
 | GitHub Pages base path (if the repo is renamed) | `base` in `vite.config.ts` |
@@ -55,4 +57,5 @@ Feature-complete, all checks green. 468 questions across 4 subjects, all human-r
 - **Full paper runs straight through** — no learning loop, and marks are raw, deliberately not a scaled score.
 - **Mastery bands are an in-app indicator**, not a standardised score, and the app says so wherever they appear.
 - **Privacy:** nothing leaves the browser except cookieless GoatCounter pageviews and two coarse events (mode, score band).
+- **Works offline.** Once a device has loaded the app once online, a service worker precaches everything — including the paid question bank, normally fetched separately at runtime — so it keeps working with no connection at all, e.g. a tablet in the car.
 - **Accessibility:** full keyboard use (1–4 + Enter), 44px targets, never colour alone, `aria-live` feedback, respects `prefers-reduced-motion`, no horizontal scroll from 320px.
