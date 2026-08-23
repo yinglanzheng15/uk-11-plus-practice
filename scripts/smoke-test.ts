@@ -40,8 +40,17 @@ import {
   loadProgress,
   saveProgress,
   DEFAULT_SECONDS_PER_QUESTION,
+  LEGACY_PROGRESS_KEY,
   SCHEMA_VERSION,
 } from '../src/logic/storage'
+import {
+  createProfile,
+  deleteProfile,
+  ensureProfile,
+  loadProfiles,
+  renameProfile,
+  setActiveProfileId,
+} from '../src/logic/profiles'
 import {
   addFeedback,
   clearFeedback,
@@ -779,31 +788,32 @@ console.log('\n== batched saving ==')
     },
   }
 
+  const testProfileId = 'test-profile'
   let p: Progress = emptyProgress()
   for (let i = 0; i < 5; i += 1) {
     p = { ...p, totals: { answered: i + 1, correct: i } }
-    saveProgress(p)
+    saveProgress(testProfileId, p)
   }
   check('a burst of saves writes nothing yet', writes === 0, `writes=${writes}`)
   check(
     'but a read still sees the newest value',
-    loadProgress().totals.answered === 5,
+    loadProgress(testProfileId).totals.answered === 5,
   )
 
   flushProgress()
   check('the flush collapses them into one write', writes === 1, `writes=${writes}`)
-  check('and it is the last value that landed', loadProgress().totals.answered === 5)
+  check('and it is the last value that landed', loadProgress(testProfileId).totals.answered === 5)
 
   flushProgress()
   check('flushing again writes nothing', writes === 1, `writes=${writes}`)
 
   // A queued write landing after a reset would put the wiped history back.
-  saveProgress({ ...p, totals: { answered: 99, correct: 99 } })
-  clearProgress()
+  saveProgress(testProfileId, { ...p, totals: { answered: 99, correct: 99 } })
+  clearProgress(testProfileId)
   check('a reset removes the stored profile', removes === 1)
   flushProgress()
   check('and the queued write is dropped, not replayed', writes === 1, `writes=${writes}`)
-  check('so the profile stays empty', loadProgress().totals.answered === 0)
+  check('so the profile stays empty', loadProgress(testProfileId).totals.answered === 0)
 
   delete (globalThis as any).window
 }
@@ -974,6 +984,7 @@ console.log('\n== migrating an older profile ==')
       },
     },
   }
+  const testProfileId = 'test-profile'
 
   // A profile written by the first release: no streaks, no feedback, and none
   // of the preferences added since.
@@ -989,7 +1000,7 @@ console.log('\n== migrating an older profile ==')
     totals: { answered: 4, correct: 2 },
     preferences: { timed: true },
   })
-  const v1 = loadProgress()
+  const v1 = loadProgress(testProfileId)
 
   check('the schema version is stamped forward', v1.version === SCHEMA_VERSION)
   check('lifetime totals survive', v1.totals.answered === 4 && v1.totals.correct === 2)
@@ -1020,7 +1031,7 @@ console.log('\n== migrating an older profile ==')
   stored = JSON.stringify({ version: 4, preferences: { mixedSubjects: ['maths', 'english'] } })
   check(
     'a schema-4 subject choice is carried forward',
-    loadProgress().preferences.practiceSubjects.join() === 'maths,english',
+    loadProgress(testProfileId).preferences.practiceSubjects.join() === 'maths,english',
   )
 
   // Hand-edited or half-written values must be repaired, not trusted — a pace
@@ -1029,13 +1040,13 @@ console.log('\n== migrating an older profile ==')
     stored = JSON.stringify({ preferences: { secondsPerQuestion: bad } })
     check(
       `a pace of ${JSON.stringify(bad)} is repaired`,
-      loadProgress().preferences.secondsPerQuestion === DEFAULT_SECONDS_PER_QUESTION,
+      loadProgress(testProfileId).preferences.secondsPerQuestion === DEFAULT_SECONDS_PER_QUESTION,
     )
   }
   stored = JSON.stringify({ preferences: { practiceTopics: 'nonsense' } })
   check(
     'a damaged topic selection is repaired',
-    Object.keys(loadProgress().preferences.practiceTopics).length === 0,
+    Object.keys(loadProgress(testProfileId).preferences.practiceTopics).length === 0,
   )
 
   // Damaged storage must give a usable empty profile, never an exception — the
@@ -1044,7 +1055,7 @@ console.log('\n== migrating an older profile ==')
     stored = junk
     let answered = -1
     try {
-      answered = loadProgress().totals.answered
+      answered = loadProgress(testProfileId).totals.answered
     } catch {
       answered = -1
     }
@@ -1058,11 +1069,89 @@ console.log('\n== migrating an older profile ==')
   let threw = false
   let recovered = false
   try {
-    recovered = loadProgress().totals.answered === 0
+    recovered = loadProgress(testProfileId).totals.answered === 0
   } catch {
     threw = true
   }
   check('unreadable storage falls back instead of throwing', !threw && recovered)
+
+  delete (globalThis as any).window
+}
+
+console.log('\n== child profiles ==')
+{
+  // Unlike the sections above, this needs several distinct keys behaving like
+  // real localStorage at once (profiles list, active-profile pointer, and a
+  // progress key per profile) rather than one `stored` variable standing in
+  // for a single key — so a small real Map-backed store stands in instead.
+  const store = new Map<string, string>()
+  ;(globalThis as any).window = {
+    localStorage: {
+      getItem: (k: string) => store.get(k) ?? null,
+      setItem: (k: string, v: string) => {
+        store.set(k, v)
+      },
+      removeItem: (k: string) => {
+        store.delete(k)
+      },
+    },
+  }
+
+  check('a brand new device has no profiles yet', loadProfiles().length === 0)
+  const first = ensureProfile()
+  check('ensureProfile creates exactly one profile', loadProfiles().length === 1)
+  check('the new profile is generically named', first.name === 'Player 1')
+  check(
+    'calling ensureProfile again returns the same profile, not a second one',
+    ensureProfile().id === first.id && loadProfiles().length === 1,
+  )
+
+  const second = createProfile("Sam's profile")
+  check('a second profile can be added', loadProfiles().length === 2)
+  check('its name is kept as given', second.name === "Sam's profile")
+
+  renameProfile(first.id, '  Alex  ')
+  check(
+    'renaming trims whitespace and sticks',
+    loadProfiles().find((p) => p.id === first.id)?.name === 'Alex',
+  )
+  renameProfile(first.id, '   ')
+  check(
+    'renaming to blank is a no-op rather than an empty name',
+    loadProfiles().find((p) => p.id === first.id)?.name === 'Alex',
+  )
+
+  saveProgress(second.id, { ...emptyProgress(), totals: { answered: 3, correct: 2 } })
+  flushProgress()
+  check(
+    "each profile's progress is stored separately",
+    loadProgress(first.id).totals.answered === 0 &&
+      loadProgress(second.id).totals.answered === 3,
+  )
+
+  setActiveProfileId(second.id)
+  check('switching the active profile sticks', ensureProfile().id === second.id)
+
+  deleteProfile(first.id)
+  check('deleting a profile removes it from the list', loadProfiles().length === 1)
+  check(
+    "deleting a profile clears its stored progress, not the survivor's",
+    loadProgress(first.id).totals.answered === 0 &&
+      loadProgress(second.id).totals.answered === 3,
+  )
+
+  // A device that predates profiles has progress sitting under the old fixed
+  // key. The very first ensureProfile() call must fold it into a profile
+  // rather than leaving it orphaned or losing it outright.
+  store.clear()
+  store.set(LEGACY_PROGRESS_KEY, JSON.stringify({ ...emptyProgress(), totals: { answered: 41, correct: 30 } }))
+  const migrated = ensureProfile()
+  check('a pre-profiles device gets exactly one profile', loadProfiles().length === 1)
+  check(
+    "that profile's progress is the migrated data, not a blank slate",
+    loadProgress(migrated.id).totals.answered === 41,
+  )
+  check('the old fixed key is cleaned up after migrating', !store.has(LEGACY_PROGRESS_KEY))
 
   delete (globalThis as any).window
 }

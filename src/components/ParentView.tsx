@@ -7,6 +7,7 @@ import { getSubject, SUBJECTS } from '../data/subjects'
 import { subjectMastery, topicMastery } from '../logic/mastery'
 import { overallAccuracy } from '../logic/progress'
 import { topicTiming } from '../logic/timing'
+import type { ChildProfile } from '../logic/profiles'
 import type { Progress } from '../types'
 
 interface Props {
@@ -17,6 +18,12 @@ interface Props {
   onClearFeedback: () => void
   onRestore: (progress: Progress) => void
   onSetSecondsPerQuestion: (seconds: number) => void
+  profiles: ChildProfile[]
+  activeProfileId: string
+  onSwitchProfile: (profile: ChildProfile) => void
+  onCreateProfile: (name: string) => void
+  onRenameProfile: (id: string, name: string) => void
+  onDeleteProfile: (id: string) => void
 }
 
 function formatDate(at: number): string {
@@ -36,6 +43,12 @@ export function ParentView({
   onClearFeedback,
   onRestore,
   onSetSecondsPerQuestion,
+  profiles,
+  activeProfileId,
+  onSwitchProfile,
+  onCreateProfile,
+  onRenameProfile,
+  onDeleteProfile,
 }: Props) {
   const [tab, setTab] = useState<'progress' | 'feedback' | 'settings'>('progress')
   const feedbackCount = (progress.feedback ?? []).length
@@ -100,6 +113,12 @@ export function ParentView({
             onReset={onReset}
             onRestore={onRestore}
             onSetSecondsPerQuestion={onSetSecondsPerQuestion}
+            profiles={profiles}
+            activeProfileId={activeProfileId}
+            onSwitchProfile={onSwitchProfile}
+            onCreateProfile={onCreateProfile}
+            onRenameProfile={onRenameProfile}
+            onDeleteProfile={onDeleteProfile}
           />
         )}
         {tab === 'progress' && <ParentProgress progress={progress} />}

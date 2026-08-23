@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { BackupPanel } from './BackupPanel'
 import { PacePanel } from './PacePanel'
+import { ProfilesPanel } from './ProfilesPanel'
 import { APP_VERSION, CHANGELOG } from '../data/changelog'
+import type { ChildProfile } from '../logic/profiles'
 import type { Progress } from '../types'
 
 interface Props {
@@ -9,18 +11,36 @@ interface Props {
   onReset: () => void
   onRestore: (progress: Progress) => void
   onSetSecondsPerQuestion: (seconds: number) => void
+  profiles: ChildProfile[]
+  activeProfileId: string
+  onSwitchProfile: (profile: ChildProfile) => void
+  onCreateProfile: (name: string) => void
+  onRenameProfile: (id: string, name: string) => void
+  onDeleteProfile: (id: string) => void
 }
 
-type SettingsTab = 'timing' | 'data' | 'version' | 'about'
+type SettingsTab = 'profiles' | 'timing' | 'data' | 'version' | 'about'
 
 const TABS: { id: SettingsTab; label: string }[] = [
+  { id: 'profiles', label: 'Profiles' },
   { id: 'timing', label: 'Timing' },
   { id: 'data', label: 'Data' },
   { id: 'version', label: 'Version' },
   { id: 'about', label: 'About' },
 ]
 
-export function SettingsView({ progress, onReset, onRestore, onSetSecondsPerQuestion }: Props) {
+export function SettingsView({
+  progress,
+  onReset,
+  onRestore,
+  onSetSecondsPerQuestion,
+  profiles,
+  activeProfileId,
+  onSwitchProfile,
+  onCreateProfile,
+  onRenameProfile,
+  onDeleteProfile,
+}: Props) {
   const [tab, setTab] = useState<SettingsTab>('timing')
 
   return (
@@ -43,6 +63,17 @@ export function SettingsView({ progress, onReset, onRestore, onSetSecondsPerQues
       </div>
 
       <div id="panel-settings" role="tabpanel" aria-labelledby={`settings-tab-${tab}`}>
+        {tab === 'profiles' && (
+          <ProfilesPanel
+            profiles={profiles}
+            activeProfileId={activeProfileId}
+            onSwitch={onSwitchProfile}
+            onCreate={onCreateProfile}
+            onRename={onRenameProfile}
+            onDelete={onDeleteProfile}
+          />
+        )}
+
         {tab === 'timing' && (
           <PacePanel
             secondsPerQuestion={progress.preferences.secondsPerQuestion}
@@ -145,8 +176,8 @@ function AboutCard() {
         affiliated with, or endorsed by, any school, consortium or examination board.
       </p>
       <p className="muted small" style={{ marginBottom: 0 }}>
-        One browser currently means one child's progress. Profiles for siblings sharing a
-        device are a planned improvement — see <code>ROADMAP.md</code>.
+        Siblings can share one device — see the Profiles tab. Each profile still keeps
+        its progress only in this browser; there is still no account.
       </p>
     </div>
   )

@@ -43,6 +43,7 @@ Feature-complete, all checks green. 468 questions across 4 subjects, all human-r
 | Mastery bands, progress, streaks | `src/logic/mastery.ts`, `progress.ts` |
 | Time spent per topic | `src/logic/timing.ts` |
 | Progress export / restore | `src/logic/backup.ts` |
+| Child profiles (siblings sharing a device) | `src/logic/profiles.ts`, `src/components/ProfilesPanel.tsx` |
 | Offline support (PWA) | `VitePWA` config in `vite.config.ts`; icons in `public/` |
 | Anonymous usage counts (GoatCounter) | `src/logic/analytics.ts` — empty `SITE` to switch off |
 | Subject registry (adding a subject) | `src/data/subjects.ts` + `VALID_SUBJECTS` in `scripts/validate-questions.ts` |
@@ -58,4 +59,5 @@ Feature-complete, all checks green. 468 questions across 4 subjects, all human-r
 - **Mastery bands are an in-app indicator**, not a standardised score, and the app says so wherever they appear.
 - **Privacy:** nothing leaves the browser except cookieless GoatCounter pageviews and two coarse events (mode, score band).
 - **Works offline.** Once a device has loaded the app once online, a service worker precaches everything — including the paid question bank, normally fetched separately at runtime — so it keeps working with no connection at all, e.g. a tablet in the car.
+- **Siblings can share a device.** Each child gets their own profile (Parent → Settings → Profiles), with completely separate progress, mastery and sessions. Still no account: profiles are just separately-keyed localStorage, switched locally on the device. A device with existing progress from before profiles existed keeps it — it becomes that device's first profile automatically, nothing is lost or asked of the parent.
 - **Accessibility:** full keyboard use (1–4 + Enter), 44px targets, never colour alone, `aria-live` feedback, respects `prefers-reduced-motion`, no horizontal scroll from 320px.
