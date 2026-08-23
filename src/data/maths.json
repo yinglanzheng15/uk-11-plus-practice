@@ -15,6 +15,7 @@
             "7"
         ],
         "answer": 0,
+        "verify": "7 * 100000",
         "explanation": "Reading from the right, the digits are units, tens, hundreds, thousands, ten thousands, hundred thousands, millions. The 7 sits in the hundred thousands column, so it is worth 700 000.",
         "distractorNotes": [
             "",
@@ -138,6 +139,7 @@
             "6"
         ],
         "answer": 0,
+        "verify": "12 * 18 / 6",
         "explanation": "They flash together at common multiples of 12 and 18. Multiples of 12 are 12, 24, 36, …; multiples of 18 are 18, 36, …. The lowest common multiple is 36 seconds.",
         "distractorNotes": [
             "",
@@ -169,6 +171,7 @@
             "18"
         ],
         "answer": 0,
+        "verify": "6 + 4 * 5 - 2",
         "explanation": "Multiplication comes before addition and subtraction, so 4 × 5 = 20 first. Then 6 + 20 − 2 = 24.",
         "distractorNotes": [
             "",
@@ -202,6 +205,7 @@
             "24"
         ],
         "answer": 0,
+        "verify": "3 * (8 - 5) + 10 / 2",
         "explanation": "Brackets first: 8 − 5 = 3. Then multiplication and division: 3 × 3 = 9 and 10 ÷ 2 = 5. Finally 9 + 5 = 14.",
         "distractorNotes": [
             "",
@@ -232,6 +236,7 @@
             "11 °C"
         ],
         "answer": 0,
+        "verify": "-7 + 11",
         "explanation": "Rising 11 degrees from −7 °C: 7 degrees takes you up to 0 °C, and the remaining 4 degrees take you to 4 °C.",
         "distractorNotes": [
             "",
@@ -265,6 +270,7 @@
             "−9"
         ],
         "answer": 0,
+        "verify": "6 - (-3)",
         "explanation": "From −3 °C up to 0 °C is 3 degrees, and from 0 °C up to 6 °C is another 6 degrees. Altogether that is 3 + 6 = 9 degrees.",
         "distractorNotes": [
             "",
@@ -356,6 +362,7 @@
             "48"
         ],
         "answer": 0,
+        "verify": "96 * 5 / 8",
         "explanation": "One eighth of 96 is 96 ÷ 8 = 12. Five eighths is 5 × 12 = 60 pages.",
         "distractorNotes": [
             "",
@@ -389,6 +396,7 @@
             "147"
         ],
         "answer": 0,
+        "verify": "63 * 3 / 7",
         "explanation": "One seventh of 63 is 63 ÷ 7 = 9. Three sevenths is 3 × 9 = 27.",
         "distractorNotes": [
             "",
@@ -479,6 +487,7 @@
             "0.0024"
         ],
         "answer": 0,
+        "verify": "0.6 * 0.4",
         "explanation": "6 × 4 = 24. There is one decimal place in each number, so there are two in the answer: 0.24.",
         "distractorNotes": [
             "",
@@ -509,6 +518,7 @@
             "£40"
         ],
         "answer": 0,
+        "verify": "80 * 25 / 100",
         "explanation": "25% is the same as one quarter, and £80 ÷ 4 = £20.",
         "distractorNotes": [
             "",
@@ -542,6 +552,7 @@
             "£12"
         ],
         "answer": 0,
+        "verify": "60 * 10 / 100",
         "explanation": "10% means one tenth, and £60 ÷ 10 = £6.",
         "distractorNotes": [
             "",
@@ -572,6 +583,7 @@
             "£54"
         ],
         "answer": 0,
+        "verify": "45 - 45 * 20 / 100",
         "explanation": "20% of £45 is £9, so the price falls by £9. The sale price is £45 − £9 = £36.",
         "distractorNotes": [
             "",
@@ -603,6 +615,7 @@
             "£6"
         ],
         "answer": 0,
+        "verify": "54 * 5 / 9",
         "explanation": "There are 4 + 5 = 9 equal parts, and £54 ÷ 9 = £6 per part. Priya has 5 parts, so she receives 5 × £6 = £30.",
         "distractorNotes": [
             "",
@@ -726,6 +739,7 @@
             "112°"
         ],
         "answer": 0,
+        "verify": "180 - 47 - 68",
         "explanation": "The angles in a triangle add up to 180°. Since 47 + 68 = 115, the third angle is 180 − 115 = 65°.",
         "distractorNotes": [
             "",
@@ -849,6 +863,7 @@
             "17.5"
         ],
         "answer": 0,
+        "verify": "(12 + 15 + 9 + 14 + 20) / 5",
         "explanation": "The total is 12 + 15 + 9 + 14 + 20 = 70, and 70 ÷ 5 = 14.",
         "distractorNotes": [
             "",
@@ -880,6 +895,7 @@
             "80"
         ],
         "answer": 0,
+        "verify": "(21 + 16 + 20) - (14 + 9)",
         "explanation": "Wednesday to Friday: 21 + 16 + 20 = 57. Monday and Tuesday: 14 + 9 = 23. The difference is 57 − 23 = 34.",
         "distractorNotes": [
             "",
@@ -911,6 +927,7 @@
             "£2.80"
         ],
         "answer": 0,
+        "verify": "10 - (3 * 2.40 + 1.85)",
         "explanation": "The notebooks cost 3 × £2.40 = £7.20. Adding the pen gives £7.20 + £1.85 = £9.05. The change is £10 − £9.05 = £0.95.",
         "distractorNotes": [
             "",
@@ -974,6 +991,7 @@
             "208"
         ],
         "answer": 0,
+        "verify": "(45 + 7) / 4",
         "explanation": "Work backwards: undo the subtraction with 45 + 7 = 52, then undo the multiplication with 52 ÷ 4 = 13.",
         "distractorNotes": [
             "",
@@ -3734,6 +3752,7 @@
             "12"
         ],
         "answer": 0,
+        "verify": "6 * 8 / 2",
         "explanation": "Multiples of 8 are 8, 16, 24, ... and 24 is the first that is also a multiple of 6 (6 x 4). So the lowest common multiple of 6 and 8 is 24.",
         "distractorNotes": [
             "",
