@@ -10,6 +10,7 @@
     "validate": "tsx scripts/validate-questions.ts",
     "review": "tsx scripts/review-sheet.ts",
     "review:accept": "tsx scripts/review-accept.ts",
+    "triage": "tsx scripts/triage-feedback.ts",
     "test": "npm run generate && npm run split && tsx scripts/smoke-test.ts",
     "typecheck": "tsc --noEmit",
     "build": "npm run generate && npm run split && npm run validate && tsc --noEmit && vite build",
