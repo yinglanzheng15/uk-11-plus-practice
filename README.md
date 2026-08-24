@@ -19,14 +19,15 @@ npm run dev      # http://localhost:5173/uk-11-plus-practice/
 | `npm run split` | Split the bank into `src/data/free.json` and `public/paid.json` |
 | `npm run validate` | Check the question bank (structure + machine-verified maths) |
 | `npm run review` / `review:accept` | Write `docs/review-sheet.md` for human vetting / mark as seen |
-| `npm test` | Engine test suite (184 checks) |
+| `npm run triage -- <file>` | Turn a downloaded progress backup into a list of flagged questions to fix |
+| `npm test` | Engine test suite (305 checks) |
 | `npm run typecheck` / `build` / `preview` | TS check / full build to `dist/` / serve the build |
 
 `build` and the deploy workflow both run the validator and tests first, so a broken bank cannot ship.
 
 ## Status
 
-Feature-complete, all checks green. 468 questions across 4 subjects, all human-reviewed. The gap-fill batch closed every maths topic that previously had no Stretch (difficulty 4) question and both topics missing a Foundation one; see ROADMAP §8. NVR remains a 12-question taster.
+Feature-complete, all checks green. 480 questions across 4 subjects, all human-reviewed. The gap-fill batch closed every maths topic that previously had no Stretch (difficulty 4) question and both topics missing a Foundation one; see ROADMAP §8. NVR has grown from a 12-question taster to 24 questions across 8 topics — the original odd-one-out/sequences/figure-pairs set plus rotation, reflection, grid completion, hidden shape and cube nets, built on a reusable SVG shape library (`src/data/nvrShapes.ts`) rather than hand-drawn coordinates; the five new topics are two questions each for now, proving the format rather than filling it out.
 
 **Pick it up here:** [`docs/commercialisation.md`](docs/commercialisation.md) for the paid-product work in progress — the free/paid seam exists but is deliberately open, so the deployed app still ships the whole bank to everyone. [`ROADMAP.md`](ROADMAP.md) has the prioritised next steps (§8 is the data/structure debt), and [`docs/latymer-alignment.md`](docs/latymer-alignment.md) lists the question types still worth adding. The GL PDFs under `data/past papers/` are © GL Assessment — do **not** commit them.
 
@@ -36,6 +37,8 @@ Feature-complete, all checks green. 468 questions across 4 subjects, all human-r
 | --- | --- |
 | Question schema, adding questions | [`docs/question-format.md`](docs/question-format.md) |
 | Templates (parameterised questions) | `src/data/templates.ts`, `scripts/generate-questions.ts` |
+| NVR figures (reusable SVG shape helpers) | `src/data/nvrShapes.ts` |
+| Acting on flagged questions | `scripts/triage-feedback.ts` |
 | Free/paid split rule and runtime fetch | `src/data/access.ts`, `scripts/split-bank.ts`, `src/data/index.ts` |
 | Which question is served next, spaced repetition | `src/logic/questionSelector.ts` |
 | Full-paper mode: sections, quotas, timings | `src/logic/papers.ts` |
