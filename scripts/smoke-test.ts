@@ -60,6 +60,20 @@ import {
 } from '../src/logic/feedback'
 import { topicMastery } from '../src/logic/mastery'
 import { topicTiming } from '../src/logic/timing'
+import {
+  analogyStrip,
+  arrowIcon,
+  cubeNetSvg,
+  dotRow,
+  flagIcon,
+  gridStrip,
+  invalidNetSvg,
+  overlayIcon,
+  polygonPoints,
+  sequenceStrip,
+  shapeIcon,
+  shapeMarkup,
+} from '../src/data/nvrShapes'
 import type { Progress, SessionConfig } from '../src/types'
 
 // The client bundles only the free half of the bank and fetches the rest at
@@ -494,6 +508,107 @@ console.log('\n== per-topic timing ==')
   check(
     'recordAnswer defaults elapsedMs to 0 when omitted',
     untimed.questions[ratio[0].id]?.totalElapsedMs === 0,
+  )
+}
+
+console.log('\n== NVR shape helpers ==')
+{
+  const countOf = (haystack: string, needle: string) =>
+    haystack.split(needle).length - 1
+
+  check('a triangle has 3 points', polygonPoints(3).split(' ').length === 3)
+  check('a hexagon has 6 points', polygonPoints(6).split(' ').length === 6)
+  check(
+    'every point is a valid "x,y" pair',
+    polygonPoints(5)
+      .split(' ')
+      .every((p) => /^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(p)),
+  )
+  check('a triangle needs at least 3 sides', (() => {
+    try {
+      polygonPoints(2)
+      return false
+    } catch {
+      return true
+    }
+  })())
+
+  check('dotRow(4) draws exactly 4 dots', countOf(dotRow(4), '<circle') === 4)
+  check('dotRow(0) draws nothing', dotRow(0) === '')
+  check('dotRow(1) centres its single dot', dotRow(1).includes("cx='50'"))
+
+  const plain = shapeIcon({ sides: 5 })
+  const shaded = shapeIcon({ sides: 5, shaded: true })
+  check('an unshaded icon has no fill-opacity', !plain.includes('fill-opacity'))
+  check('a shaded icon does', shaded.includes('fill-opacity'))
+  check(
+    'mirroring wraps the shape in a horizontal-flip transform',
+    shapeIcon({ sides: 3, mirror: true }).includes("scale(-1,1)"),
+  )
+  check('every icon uses the shared 100x100 viewBox', plain.includes("viewBox='0 0 100 100'"))
+
+  const overlaid = overlayIcon({ sides: 4 }, { sides: 3 })
+  check('an overlay icon draws both shapes', countOf(overlaid, '<polygon') === 2)
+
+  const flagRight = flagIcon({ side: 'right' })
+  const flagLeft = flagIcon({ side: 'left' })
+  check('a flag has a pole and a pennant', flagRight.includes('<line') && flagRight.includes('<polygon'))
+  check(
+    "left- and right-facing flags are not the same shape (that is the point)",
+    flagRight !== flagLeft,
+  )
+
+  const arrow0 = arrowIcon(0)
+  const arrow90 = arrowIcon(90)
+  // Always wrapped in a rotate transform, even at 0 — matching the existing
+  // hand-drawn arrows in the bank, which do the same for a uniform shape.
+  check('an unrotated arrow rotates by 0', arrow0.includes('rotate(0'))
+  check('a rotated arrow rotates by the angle asked for', arrow90.includes('rotate(90'))
+  check('the two are visually different shapes', arrow0 !== arrow90)
+
+  // Cells are built from *Markup, not *Icon — an Icon self-wraps in its own
+  // <svg>, and nesting that inside a strip/grid cell's own <svg> renders
+  // broken in a real browser (caught by hand while reviewing the first
+  // grid-completion question; see the doc comment on `cell` in nvrShapes.ts).
+  // These checks guard against that regressing: every <svg> in a strip or
+  // grid must be either the one outer wrapper or a cell wrapper — never a
+  // third, nested one from a stray *Icon call.
+  const strip3 = sequenceStrip([shapeMarkup({ sides: 3 }), shapeMarkup({ sides: 4 }), shapeMarkup({ sides: 5 })])
+  check('a 3-cell sequence strip nests 3 shown figures', countOf(strip3, '<svg x=') === 3)
+  check('and ends in exactly one placeholder', countOf(strip3, 'stroke-dasharray') === 1)
+  check('and no cell double-wraps its own <svg>', countOf(strip3, '<svg') === 4)
+
+  const pair = analogyStrip(shapeMarkup({ sides: 3 }), shapeMarkup({ sides: 3, shaded: true }), shapeMarkup({ sides: 4 }))
+  check('an analogy strip nests 3 shown figures', countOf(pair, '<svg x=') === 3)
+  check('and both transition arrows', countOf(pair, '&#8594;') === 2)
+  check('and exactly one placeholder', countOf(pair, 'stroke-dasharray') === 1)
+  check('and no cell double-wraps its own <svg>', countOf(pair, '<svg') === 4)
+
+  const cells = [0, 1, 2, 3].map((i) => shapeMarkup({ sides: 3 + i }))
+  const grid = gridStrip(cells, 2, 2, 3)
+  check('a 2x2 grid nests 3 shown figures', countOf(grid, '<svg x=') === 3)
+  check('and replaces the missing cell with a placeholder', countOf(grid, 'stroke-dasharray') === 1)
+  check('and no cell double-wraps its own <svg>', countOf(grid, '<svg') === 4)
+
+  check(
+    'passing a full *Icon into a cell would have caused exactly this bug',
+    countOf(sequenceStrip([shapeIcon({ sides: 3 })]), '<svg') === 3,
+  )
+
+  check('a cube net has exactly 6 squares', countOf(cubeNetSvg(), '<rect') === 6)
+  check(
+    'a shaded net face is marked',
+    cubeNetSvg(0).includes('fill-opacity') && !cubeNetSvg().includes('fill-opacity'),
+  )
+  check("an invalid 'row' net still has 6 squares", countOf(invalidNetSvg('row'), '<rect') === 6)
+  check("an invalid 'block' net still has 6 squares", countOf(invalidNetSvg('block'), '<rect') === 6)
+  check(
+    "an 'extra-square' net has 7",
+    countOf(invalidNetSvg('extra-square'), '<rect') === 7,
+  )
+  check(
+    "a 'missing-square' net has 5",
+    countOf(invalidNetSvg('missing-square'), '<rect') === 5,
   )
 }
 

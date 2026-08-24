@@ -482,7 +482,12 @@ button {
   color: var(--text);
 }
 
-.figure svg {
+/* Direct child only: a sequence/grid figure nests its own per-cell <svg>
+   elements (see src/data/nvrShapes.ts), each already sized and positioned
+   by its own x/y/width/height attributes. A descendant selector here would
+   force every nested cell to width:100% too, stretching them all to
+   roughly the same size and stacking them on top of each other. */
+.figure > svg {
   display: block;
   height: auto;
 }
@@ -495,7 +500,7 @@ button {
   background: var(--surface-alt);
 }
 
-.figure-stem svg {
+.figure-stem > svg {
   width: 100%;
   max-width: 420px;
   margin: 0 auto;
@@ -505,7 +510,7 @@ button {
   flex: 0 0 auto;
 }
 
-.option-figure svg {
+.option-figure > svg {
   width: 64px;
   height: 64px;
 }
