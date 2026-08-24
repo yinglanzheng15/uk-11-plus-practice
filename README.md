@@ -19,14 +19,15 @@ npm run dev      # http://localhost:5173/uk-11-plus-practice/
 | `npm run split` | Split the bank into `src/data/free.json` and `public/paid.json` |
 | `npm run validate` | Check the question bank (structure + machine-verified maths) |
 | `npm run review` / `review:accept` | Write `docs/review-sheet.md` for human vetting / mark as seen |
-| `npm test` | Engine test suite (184 checks) |
+| `npm run triage -- <file>` | Turn a downloaded progress backup into a list of flagged questions to fix |
+| `npm test` | Engine test suite (305 checks) |
 | `npm run typecheck` / `build` / `preview` | TS check / full build to `dist/` / serve the build |
 
 `build` and the deploy workflow both run the validator and tests first, so a broken bank cannot ship.
 
 ## Status
 
-Feature-complete, all checks green. 468 questions across 4 subjects, all human-reviewed. The gap-fill batch closed every maths topic that previously had no Stretch (difficulty 4) question and both topics missing a Foundation one; see ROADMAP §8. NVR remains a 12-question taster.
+Feature-complete, all checks green. 480 questions across 4 subjects, all human-reviewed. The gap-fill batch closed every maths topic that previously had no Stretch (difficulty 4) question and both topics missing a Foundation one; see ROADMAP §8. NVR has grown from a 12-question taster to 24 questions across 8 topics — the original odd-one-out/sequences/figure-pairs set plus rotation, reflection, grid completion, hidden shape and cube nets, built on a reusable SVG shape library (`src/data/nvrShapes.ts`) rather than hand-drawn coordinates; the five new topics are two questions each for now, proving the format rather than filling it out.
 
 **Pick it up here:** [`docs/commercialisation.md`](docs/commercialisation.md) for the paid-product work in progress — the free/paid seam exists but is deliberately open, so the deployed app still ships the whole bank to everyone. [`ROADMAP.md`](ROADMAP.md) has the prioritised next steps (§8 is the data/structure debt), and [`docs/latymer-alignment.md`](docs/latymer-alignment.md) lists the question types still worth adding. The GL PDFs under `data/past papers/` are © GL Assessment — do **not** commit them.
 
@@ -36,12 +37,17 @@ Feature-complete, all checks green. 468 questions across 4 subjects, all human-r
 | --- | --- |
 | Question schema, adding questions | [`docs/question-format.md`](docs/question-format.md) |
 | Templates (parameterised questions) | `src/data/templates.ts`, `scripts/generate-questions.ts` |
+| NVR figures (reusable SVG shape helpers) | `src/data/nvrShapes.ts` |
+| Acting on flagged questions | `scripts/triage-feedback.ts` |
 | Free/paid split rule and runtime fetch | `src/data/access.ts`, `scripts/split-bank.ts`, `src/data/index.ts` |
 | Which question is served next, spaced repetition | `src/logic/questionSelector.ts` |
 | Full-paper mode: sections, quotas, timings | `src/logic/papers.ts` |
 | Quiz + learning-loop state machine | `src/logic/session.ts`, `sessionStorage.ts` |
 | Mastery bands, progress, streaks | `src/logic/mastery.ts`, `progress.ts` |
+| Time spent per topic | `src/logic/timing.ts` |
 | Progress export / restore | `src/logic/backup.ts` |
+| Child profiles (siblings sharing a device) | `src/logic/profiles.ts`, `src/components/ProfilesPanel.tsx` |
+| Offline support (PWA) | `VitePWA` config in `vite.config.ts`; icons in `public/` |
 | Anonymous usage counts (GoatCounter) | `src/logic/analytics.ts` — empty `SITE` to switch off |
 | Subject registry (adding a subject) | `src/data/subjects.ts` + `VALID_SUBJECTS` in `scripts/validate-questions.ts` |
 | GitHub Pages base path (if the repo is renamed) | `base` in `vite.config.ts` |
@@ -55,4 +61,6 @@ Feature-complete, all checks green. 468 questions across 4 subjects, all human-r
 - **Full paper runs straight through** — no learning loop, and marks are raw, deliberately not a scaled score.
 - **Mastery bands are an in-app indicator**, not a standardised score, and the app says so wherever they appear.
 - **Privacy:** nothing leaves the browser except cookieless GoatCounter pageviews and two coarse events (mode, score band).
+- **Works offline.** Once a device has loaded the app once online, a service worker precaches everything — including the paid question bank, normally fetched separately at runtime — so it keeps working with no connection at all, e.g. a tablet in the car.
+- **Siblings can share a device.** Each child gets their own profile (Parent → Settings → Profiles), with completely separate progress, mastery and sessions. Still no account: profiles are just separately-keyed localStorage, switched locally on the device. A device with existing progress from before profiles existed keeps it — it becomes that device's first profile automatically, nothing is lost or asked of the parent.
 - **Accessibility:** full keyboard use (1–4 + Enter), 44px targets, never colour alone, `aria-live` feedback, respects `prefers-reduced-motion`, no horizontal scroll from 320px.

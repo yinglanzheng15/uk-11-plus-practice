@@ -3,15 +3,26 @@ import type { Progress, QuestionRecord } from '../types'
 /** Generous rather than pressured — the pace a child starts with. */
 export const DEFAULT_SECONDS_PER_QUESTION = 45
 
-const KEY = 'elevenplus:v1:progress'
+/**
+ * The single fixed key every device used before profiles existed — one
+ * browser, one child. `ensureProfile()` in `logic/profiles.ts` migrates
+ * whatever is under it into a first profile the first time this loads.
+ */
+export const LEGACY_PROGRESS_KEY = 'elevenplus:v1:progress'
+
+export function progressKey(profileId: string): string {
+  return `elevenplus:v1:progress:${profileId}`
+}
+
 /**
  * 2 added `streak` to QuestionRecord for spaced repetition.
  * 3 added `preferences.secondsPerQuestion`.
  * 4 added `preferences.mixedSubjects`.
  * 5 renamed it to `preferences.practiceSubjects` (it now governs quick
  *   sessions too) and added `preferences.practiceTopics`.
+ * 6 added `totalElapsedMs` to QuestionRecord, for per-topic timing.
  */
-export const SCHEMA_VERSION = 5
+export const SCHEMA_VERSION = 6
 
 export function emptyProgress(): Progress {
   return {
@@ -39,6 +50,10 @@ export function emptyProgress(): Progress {
  * Records written before schema 2 have no `streak`. Rather than guess at a
  * history we do not have, a question last answered correctly starts one rung up
  * the review ladder — it comes back tomorrow instead of immediately.
+ *
+ * Records written before schema 6 have no `totalElapsedMs`. There is no way to
+ * recover timing for past attempts, so it starts at 0 — the question's average
+ * is simply undercounted until it is answered again, rather than guessed at.
  */
 function migrateQuestions(
   questions: Record<string, QuestionRecord> | undefined,
@@ -46,8 +61,12 @@ function migrateQuestions(
   if (!questions) return {}
   const out: Record<string, QuestionRecord> = {}
   for (const [id, r] of Object.entries(questions)) {
-    out[id] =
+    const withStreak =
       typeof r?.streak === 'number' ? r : { ...r, streak: r?.lastCorrect ? 1 : 0 }
+    out[id] =
+      typeof withStreak.totalElapsedMs === 'number'
+        ? withStreak
+        : { ...withStreak, totalElapsedMs: 0 }
   }
   return out
 }
@@ -108,16 +127,20 @@ function migrate(raw: unknown): Progress {
   }
 }
 
-/** In-memory fallback used when localStorage is unavailable (private mode, quota). */
-let memoryFallback: Progress | null = null
+/**
+ * In-memory fallback used when localStorage is unavailable (private mode,
+ * quota), keyed by profile — so that even without persistence, switching
+ * profiles within one tab cannot leak one child's answers into another's.
+ */
+const memoryFallback = new Map<string, Progress>()
 
-export function loadProgress(): Progress {
+export function loadProgress(profileId: string): Progress {
   try {
-    const raw = window.localStorage.getItem(KEY)
-    if (!raw) return memoryFallback ?? emptyProgress()
+    const raw = window.localStorage.getItem(progressKey(profileId))
+    if (!raw) return memoryFallback.get(profileId) ?? emptyProgress()
     return migrate(JSON.parse(raw))
   } catch {
-    return memoryFallback ?? emptyProgress()
+    return memoryFallback.get(profileId) ?? emptyProgress()
   }
 }
 
@@ -132,7 +155,7 @@ export function loadProgress(): Progress {
  */
 export const SAVE_DEBOUNCE_MS = 2000
 
-let pending: Progress | null = null
+let pending: { profileId: string; progress: Progress } | null = null
 let timer: ReturnType<typeof setTimeout> | null = null
 
 function cancelPending(): void {
@@ -153,32 +176,36 @@ function cancelPending(): void {
  * first save starts the clock and later ones only replace what will be written.
  * A plain debounce would push the deadline back on every answer, so a child
  * answering steadily could go a whole session without anything reaching disk.
+ *
+ * Only one write is ever queued at a time. Switching profiles flushes
+ * whatever was pending for the old one first (see App.tsx), so this never
+ * needs to batch more than one profile at once.
  */
-export function saveProgress(progress: Progress): void {
-  memoryFallback = progress
-  pending = progress
+export function saveProgress(profileId: string, progress: Progress): void {
+  memoryFallback.set(profileId, progress)
+  pending = { profileId, progress }
   if (timer === null) timer = setTimeout(flushProgress, SAVE_DEBOUNCE_MS)
 }
 
 /** Write any queued save immediately. Safe to call when nothing is pending. */
 export function flushProgress(): void {
-  const progress = pending
+  const entry = pending
   cancelPending()
-  if (progress === null) return
+  if (entry === null) return
   try {
-    window.localStorage.setItem(KEY, JSON.stringify(progress))
+    window.localStorage.setItem(progressKey(entry.profileId), JSON.stringify(entry.progress))
   } catch {
     // Storage full or blocked — the in-memory copy keeps the session working.
   }
 }
 
-export function clearProgress(): void {
+export function clearProgress(profileId: string): void {
   // Drop any queued write first, or it would land after the wipe and put the
   // child's history straight back.
-  cancelPending()
-  memoryFallback = null
+  if (pending?.profileId === profileId) cancelPending()
+  memoryFallback.delete(profileId)
   try {
-    window.localStorage.removeItem(KEY)
+    window.localStorage.removeItem(progressKey(profileId))
   } catch {
     // Nothing more we can do; the caller resets state regardless.
   }

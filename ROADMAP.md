@@ -140,11 +140,11 @@ Storage schema went to version 2. Profiles saved before this get `streak: 1` for
 - ~~**Decline the practice question.**~~ Done — "Next question instead" sits beside "Try a practice question" after a mistake. The learning loop is the recommended path, not a compulsory one, and the end-of-session review carries the teaching for anyone who skips it.
 - ~~**Skip a question.**~~ Done — **Skip for now** parks a question and re-offers it once the run reaches the end. A skip records nothing at all, and anything still unanswered is reported in the summary rather than counted as wrong. Skipping again on the second pass releases it, which is what guarantees the session terminates.
 - ~~**Adjustable timing.**~~ Done — the Parent tab sets seconds per question for timed sessions (`src/logic/pace.ts`). The presets are anchored on a published paper where one could be verified. Schema went to version 3; older profiles and hand-edited backup files get the 45-second default rather than a zero limit.
-- **Act on flagged questions.** The Feedback tab collects question reports with their ids; there is no script yet that takes an exported feedback file and lists the flagged questions alongside their bank entries. A small `npm run triage` would close that loop.
+- ~~**Act on flagged questions.**~~ Done — `npm run triage -- <progress-backup.json>` (`scripts/triage-feedback.ts`) takes the file a parent downloads from Parent → Settings → Data, resolves every question report against the current bank on disk, and says which file to edit (or that a generated.json question needs a template edit instead, or that the question no longer exists).
 - ~~**Export and import progress.**~~ Done — the parent view has **Download progress** and **Restore from a file**. The file is plain JSON, produced in the browser and never uploaded. A restore is parsed and summarised (*"Saved on 10 August 2026: 412 questions answered across 38 sessions"*) before the parent confirms, because it replaces everything.
-- **More than one child.** One browser currently means one child. A simple profile picker would let siblings share a device.
-- **Per-question timing.** `elapsedMs` is already recorded but unused. The parent view could show which topics take longest — often more revealing than accuracy alone.
-- **Offline use (PWA).** A service worker would let the app run with no connection at all — useful on a tablet in the car or on a train. The app is already fully self-contained, so this is mostly configuration.
+- ~~**More than one child.**~~ Done — `logic/profiles.ts` plus a Profiles tab in Parent → Settings. Progress, sessions and the resume-a-quiz snapshot are all keyed per profile (`elevenplus:v1:progress:<id>`, `…:session:<id>`); a device with pre-existing progress gets it migrated into a first profile automatically the first time it loads.
+- ~~**Per-question timing.**~~ Done — `elapsedMs` now accumulates into `totalElapsedMs` on each `QuestionRecord` (schema v6), and the Parent view's Progress tab shows a **Time per topic** card, slowest first, once a topic has at least 2 timed answers.
+- ~~**Offline use (PWA).**~~ Done — `vite-plugin-pwa` precaches the whole build, including the paid question bank (`paid.json`), so the app keeps working with no connection at all once loaded once online. Manifest and icons are new; nothing else changed.
 - **Sound and animation are absent by design.** If the child finds it dry, a small correct/incorrect chime (with a mute setting) would be the least distracting addition.
 
 ---
@@ -153,11 +153,11 @@ Storage schema went to version 2. Profiles saved before this get `streak: 1` for
 
 The architecture already supports extra subjects — a JSON file, an import, and a registry entry, as described in the README. The London 11+ Consortium format also includes:
 
-- **Non-Verbal Reasoning** — **a 12-question taster now exists** (`src/data/non-verbal-reasoning.json`): odd-one-out, sequences and figure pairs, drawn with inline SVG. The question model gained `figure` and `optionFigures` fields and `QuestionCard` renders them, so the format is proven end-to-end. Growing it into a full section means more types (rotation, reflection, matrix/grid completion, hidden shape, cube nets) and, ideally, a small library of reusable SVG shape helpers so each question isn't hand-drawn. NVR is inherently inaccessible to screen-reader-only users; per-option text descriptions mitigate but don't remove this.
+- **Non-Verbal Reasoning** — **24 questions across 8 topics now** (`src/data/non-verbal-reasoning.json`): the original taster (odd-one-out, sequences, figure pairs) plus five new types — rotation, reflection, grid completion, hidden shape and cube nets. The reusable SVG shape-helper library the roadmap asked for now exists at `src/data/nvrShapes.ts` (polygons, dots, flags, arrows, overlays, cube nets, and the strip/grid layout wrappers every multi-cell figure uses) — building a new NVR question is calling functions and choosing options, not hand-computing coordinates. Building it also surfaced and fixed a real pre-existing bug: `.figure-stem svg` in `global.css` was a descendant selector, so it forced every nested per-cell `<svg>` in a Sequences or Figure pairs figure to `width: 100%` too, stretching all the cells to roughly the same size and stacking them on top of each other — invisible to `npm run review`, which only renders text, never the SVGs themselves. Fixed to `.figure-stem > svg` (see `src/styles/global.css`), which also fixed every existing multi-cell figure, not just the new ones. The five new types are two questions each (one, for cube nets) — enough to prove the library works end to end, not a content push; growing depth here is still open. NVR is inherently inaccessible to screen-reader-only users; per-option text descriptions mitigate but don't remove this.
 - **Problem solving** — largely multi-step reasoning; fits the existing text-based model with no changes.
 - **Creative comprehension** — open-ended writing, which does not fit multiple choice at all. Would need a different answer type and, realistically, a parent to mark it.
 
-Problem solving is the natural next section. Growing NVR beyond the taster is the most valuable but the most work. See `docs/latymer-alignment.md` for the Maths/English/VR question types the real GL papers use that the text banks don't yet cover.
+Problem solving is the natural next section. See `docs/latymer-alignment.md` for the Maths/English/VR question types the real GL papers use that the text banks don't yet cover.
 
 ---
 
@@ -199,8 +199,8 @@ paying users arrive.
   not used by the selector at all today, so this is latent rather than harmful — but if
   anything ever filters on tags, a third of them match one question. Either prune to a
   controlled vocabulary or accept that they are free-text notes and stop adding them.
-- **NVR is still 12 questions across 3 topics** — a taster, as documented. It is the only
-  subject where a "subject practice" session repeats almost immediately.
+- **NVR is 24 questions across 8 topics** — still thin (the five new topics have one or two
+  questions each; see §6), and "subject practice" still repeats quickly within any one topic.
 
 ### Structure
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { getQuestion } from '../data'
+import { getQuestion, topicKey } from '../data'
 import { getSubject } from '../data/subjects'
 import { formatDuration } from './Timer'
 import { paperFor } from '../logic/papers'
@@ -38,7 +38,7 @@ export function SessionSummary({ state, onExit, onRestart }: Props) {
   for (const a of answered) {
     const q = getQuestion(a.questionId)
     if (!q) continue
-    const key = `${q.subject}::${q.topic}`
+    const key = topicKey(q.subject, q.topic)
     const entry = byTopic.get(key) ?? { right: 0, n: 0, label: q.topic }
     entry.n += 1
     if (a.correct) entry.right += 1

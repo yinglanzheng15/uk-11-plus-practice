@@ -19,6 +19,15 @@ import {
   saveSession,
   type RestoredSession,
 } from './logic/sessionStorage'
+import {
+  createProfile,
+  deleteProfile,
+  ensureProfile,
+  loadProfiles,
+  renameProfile,
+  setActiveProfileId,
+  type ChildProfile,
+} from './logic/profiles'
 import { mainAnswers, sessionDurationMs, type SessionState } from './logic/session'
 import { scoreBand, track } from './logic/analytics'
 import type { FeedbackReason, Progress, Question, SessionConfig, SubjectId } from './types'
@@ -36,12 +45,19 @@ interface ActiveSession {
 }
 
 export default function App() {
-  const [progress, setProgress] = useState<Progress>(() => loadProgress())
+  // One browser can hold several children's progress side by side — see
+  // logic/profiles.ts. ensureProfile() also runs the one-time migration for a
+  // device that predates profiles, so this is always safe to call first.
+  const [activeProfile, setActiveProfile] = useState<ChildProfile>(() => ensureProfile())
+  const [profiles, setProfiles] = useState<ChildProfile[]>(() => loadProfiles())
+  const [progress, setProgress] = useState<Progress>(() => loadProgress(activeProfile.id))
   const [view, setView] = useState<View>('home')
   const [session, setSession] = useState<ActiveSession | null>(null)
   // Read once on load. A saved session is only *offered* — it is never resumed
   // automatically, because the child may well want to start something else.
-  const [resumable, setResumable] = useState<RestoredSession | null>(() => loadSession())
+  const [resumable, setResumable] = useState<RestoredSession | null>(() =>
+    loadSession(activeProfile.id),
+  )
   // The most recent snapshot, kept so that leaving a quiz can offer it straight
   // back rather than throwing it away.
   const liveSession = useRef<SessionState | null>(null)
@@ -50,8 +66,8 @@ export default function App() {
   // The write itself is batched (see SAVE_DEBOUNCE_MS), so a steady run of
   // answers costs one write rather than twenty.
   useEffect(() => {
-    saveProgress(progress)
-  }, [progress])
+    saveProgress(activeProfile.id, progress)
+  }, [activeProfile.id, progress])
 
   // Batching means a queued write can still be outstanding when the tab goes
   // away, so force it out. `pagehide` is the one that fires reliably when a
@@ -78,7 +94,7 @@ export default function App() {
       setProgress((p) => noteServed(p, result.questions.map((q) => q.id)))
       setResumable(null)
       liveSession.current = null
-      clearSession()
+      clearSession(activeProfile.id)
       setSession({
         config,
         questions: result.questions,
@@ -87,7 +103,7 @@ export default function App() {
       })
       setView('quiz')
     },
-    [progress],
+    [progress, activeProfile.id],
   )
 
   const handleResume = useCallback(() => {
@@ -104,31 +120,36 @@ export default function App() {
   }, [resumable])
 
   const handleDiscardResume = useCallback(() => {
-    clearSession()
+    clearSession(activeProfile.id)
     liveSession.current = null
     setResumable(null)
-  }, [])
+  }, [activeProfile.id])
 
   const sessionNote = session?.note
   const handlePersist = useCallback(
     (state: SessionState) => {
       if (state.phase === 'complete') {
         liveSession.current = null
-        clearSession()
+        clearSession(activeProfile.id)
       } else {
         liveSession.current = state
-        saveSession(state, sessionNote)
+        saveSession(activeProfile.id, state, sessionNote)
       }
     },
-    [sessionNote],
+    [activeProfile.id, sessionNote],
   )
 
   // Follow-ups are chosen by the learning loop rather than by selectQuestions,
   // so noting every served question here is what stops one reappearing as a
   // main question in the very next session.
-  const handleRecord = useCallback((question: Question, correct: boolean) => {
-    setProgress((p) => noteServed(recordAnswer(p, question, correct), [question.id]))
-  }, [])
+  const handleRecord = useCallback(
+    (question: Question, correct: boolean, elapsedMs: number) => {
+      setProgress((p) =>
+        noteServed(recordAnswer(p, question, correct, elapsedMs), [question.id]),
+      )
+    },
+    [],
+  )
 
   const handleFinish = useCallback((state: SessionState) => {
     const answered = mainAnswers(state)
@@ -218,29 +239,98 @@ export default function App() {
     setProgress((p) => clearFeedback(p))
   }, [])
 
-  // A restore replaces the profile wholesale, so any half-done session from the
-  // old one is meaningless and goes too.
-  const handleRestore = useCallback((restored: Progress) => {
-    clearSession()
-    liveSession.current = null
-    setResumable(null)
-    setSession(null)
-    setProgress(restored)
-  }, [])
+  // A restore replaces the active child's progress wholesale, so any
+  // half-done session of theirs is meaningless and goes too. Other children's
+  // profiles on this device are untouched.
+  const handleRestore = useCallback(
+    (restored: Progress) => {
+      clearSession(activeProfile.id)
+      liveSession.current = null
+      setResumable(null)
+      setSession(null)
+      setProgress(restored)
+    },
+    [activeProfile.id],
+  )
 
   const handleReset = useCallback(() => {
-    clearProgress()
-    clearSession()
+    clearProgress(activeProfile.id)
+    clearSession(activeProfile.id)
     liveSession.current = null
     setResumable(null)
     setSession(null)
     setProgress(resetProgress())
+  }, [activeProfile.id])
+
+  /**
+   * Switch to a different child's profile.
+   *
+   * Any pending write for the outgoing profile is flushed first — the
+   * debounced save in storage.ts only ever tracks one profile's write at a
+   * time, so switching without flushing could drop its last few seconds of
+   * progress. Session-scoped state (the live quiz, the resume offer) is
+   * reset rather than carried over, since it belongs to whoever was using
+   * the device a moment ago, not the child switching in.
+   */
+  const handleSwitchProfile = useCallback(
+    (profile: ChildProfile) => {
+      if (profile.id === activeProfile.id) return
+      flushProgress()
+      setActiveProfileId(profile.id)
+      setActiveProfile(profile)
+      setProgress(loadProgress(profile.id))
+      setResumable(loadSession(profile.id))
+      liveSession.current = null
+      setSession(null)
+      setView('home')
+    },
+    [activeProfile.id],
+  )
+
+  const handleCreateProfile = useCallback((name: string) => {
+    const profile = createProfile(name)
+    setProfiles((list) => [...list, profile])
+    return profile
   }, [])
+
+  const handleRenameProfile = useCallback(
+    (id: string, name: string) => {
+      renameProfile(id, name)
+      const trimmed = name.trim()
+      if (!trimmed) return
+      setProfiles((list) => list.map((p) => (p.id === id ? { ...p, name: trimmed } : p)))
+      if (id === activeProfile.id) {
+        setActiveProfile((p) => ({ ...p, name: trimmed }))
+      }
+    },
+    [activeProfile.id],
+  )
+
+  // Deleting the profile currently in use, or the last one left, would leave
+  // the app with no valid profile to fall back to — the caller (ProfilesPanel)
+  // disables both, but the check is repeated here since it is destructive.
+  const handleDeleteProfile = useCallback(
+    (id: string) => {
+      if (id === activeProfile.id || profiles.length <= 1) return
+      deleteProfile(id)
+      setProfiles((list) => list.filter((p) => p.id !== id))
+    },
+    [activeProfile.id, profiles.length],
+  )
 
   return (
     <div className="app">
       <header className="app-header">
-        <h1 className="app-title">11+ Practice</h1>
+        <h1 className="app-title">
+          11+ Practice
+          {/* Only shown once there is more than one child on this device — a
+              single-profile household should never see profile plumbing. */}
+          {profiles.length > 1 && (
+            <span className="muted small" style={{ fontWeight: 600 }}>
+              {activeProfile.name}
+            </span>
+          )}
+        </h1>
         <nav aria-label="Main">
           <button
             type="button"
@@ -310,6 +400,12 @@ export default function App() {
             onClearFeedback={handleClearFeedback}
             onRestore={handleRestore}
             onSetSecondsPerQuestion={handleSetSecondsPerQuestion}
+            profiles={profiles}
+            activeProfileId={activeProfile.id}
+            onSwitchProfile={handleSwitchProfile}
+            onCreateProfile={handleCreateProfile}
+            onRenameProfile={handleRenameProfile}
+            onDeleteProfile={handleDeleteProfile}
           />
         )}
       </main>

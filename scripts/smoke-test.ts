@@ -40,8 +40,17 @@ import {
   loadProgress,
   saveProgress,
   DEFAULT_SECONDS_PER_QUESTION,
+  LEGACY_PROGRESS_KEY,
   SCHEMA_VERSION,
 } from '../src/logic/storage'
+import {
+  createProfile,
+  deleteProfile,
+  ensureProfile,
+  loadProfiles,
+  renameProfile,
+  setActiveProfileId,
+} from '../src/logic/profiles'
 import {
   addFeedback,
   clearFeedback,
@@ -50,6 +59,21 @@ import {
   removeFeedback,
 } from '../src/logic/feedback'
 import { topicMastery } from '../src/logic/mastery'
+import { topicTiming } from '../src/logic/timing'
+import {
+  analogyStrip,
+  arrowIcon,
+  cubeNetSvg,
+  dotRow,
+  flagIcon,
+  gridStrip,
+  invalidNetSvg,
+  overlayIcon,
+  polygonPoints,
+  sequenceStrip,
+  shapeIcon,
+  shapeMarkup,
+} from '../src/data/nvrShapes'
 import type { Progress, SessionConfig } from '../src/types'
 
 // The client bundles only the free half of the bank and fetches the rest at
@@ -465,6 +489,129 @@ console.log('\n== progress, mastery, persistence ==')
   check('progress survives a JSON round-trip', round.totals.answered === p.totals.answered)
 }
 
+console.log('\n== per-topic timing ==')
+{
+  let p: Progress = emptyProgress()
+  const ratio = QUESTIONS.filter((q) => q.topic === 'Ratio and proportion')
+  check('enough Ratio and proportion questions to test with', ratio.length >= 2)
+  p = recordAnswer(p, ratio[0], true, 10_000)
+  check(
+    'a topic below the minimum attempts is excluded',
+    topicTiming(p).find((t) => t.topic === 'Ratio and proportion') === undefined,
+  )
+  p = recordAnswer(p, ratio[1], true, 20_000)
+  const ratioTiming = topicTiming(p).find((t) => t.topic === 'Ratio and proportion')!
+  check('average time is the mean of the two answers', ratioTiming?.avgMs === 15_000)
+  check('attempts is counted across both questions', ratioTiming?.attempts === 2)
+
+  const untimed = recordAnswer(emptyProgress(), ratio[0], true)
+  check(
+    'recordAnswer defaults elapsedMs to 0 when omitted',
+    untimed.questions[ratio[0].id]?.totalElapsedMs === 0,
+  )
+}
+
+console.log('\n== NVR shape helpers ==')
+{
+  const countOf = (haystack: string, needle: string) =>
+    haystack.split(needle).length - 1
+
+  check('a triangle has 3 points', polygonPoints(3).split(' ').length === 3)
+  check('a hexagon has 6 points', polygonPoints(6).split(' ').length === 6)
+  check(
+    'every point is a valid "x,y" pair',
+    polygonPoints(5)
+      .split(' ')
+      .every((p) => /^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(p)),
+  )
+  check('a triangle needs at least 3 sides', (() => {
+    try {
+      polygonPoints(2)
+      return false
+    } catch {
+      return true
+    }
+  })())
+
+  check('dotRow(4) draws exactly 4 dots', countOf(dotRow(4), '<circle') === 4)
+  check('dotRow(0) draws nothing', dotRow(0) === '')
+  check('dotRow(1) centres its single dot', dotRow(1).includes("cx='50'"))
+
+  const plain = shapeIcon({ sides: 5 })
+  const shaded = shapeIcon({ sides: 5, shaded: true })
+  check('an unshaded icon has no fill-opacity', !plain.includes('fill-opacity'))
+  check('a shaded icon does', shaded.includes('fill-opacity'))
+  check(
+    'mirroring wraps the shape in a horizontal-flip transform',
+    shapeIcon({ sides: 3, mirror: true }).includes("scale(-1,1)"),
+  )
+  check('every icon uses the shared 100x100 viewBox', plain.includes("viewBox='0 0 100 100'"))
+
+  const overlaid = overlayIcon({ sides: 4 }, { sides: 3 })
+  check('an overlay icon draws both shapes', countOf(overlaid, '<polygon') === 2)
+
+  const flagRight = flagIcon({ side: 'right' })
+  const flagLeft = flagIcon({ side: 'left' })
+  check('a flag has a pole and a pennant', flagRight.includes('<line') && flagRight.includes('<polygon'))
+  check(
+    "left- and right-facing flags are not the same shape (that is the point)",
+    flagRight !== flagLeft,
+  )
+
+  const arrow0 = arrowIcon(0)
+  const arrow90 = arrowIcon(90)
+  // Always wrapped in a rotate transform, even at 0 — matching the existing
+  // hand-drawn arrows in the bank, which do the same for a uniform shape.
+  check('an unrotated arrow rotates by 0', arrow0.includes('rotate(0'))
+  check('a rotated arrow rotates by the angle asked for', arrow90.includes('rotate(90'))
+  check('the two are visually different shapes', arrow0 !== arrow90)
+
+  // Cells are built from *Markup, not *Icon — an Icon self-wraps in its own
+  // <svg>, and nesting that inside a strip/grid cell's own <svg> renders
+  // broken in a real browser (caught by hand while reviewing the first
+  // grid-completion question; see the doc comment on `cell` in nvrShapes.ts).
+  // These checks guard against that regressing: every <svg> in a strip or
+  // grid must be either the one outer wrapper or a cell wrapper — never a
+  // third, nested one from a stray *Icon call.
+  const strip3 = sequenceStrip([shapeMarkup({ sides: 3 }), shapeMarkup({ sides: 4 }), shapeMarkup({ sides: 5 })])
+  check('a 3-cell sequence strip nests 3 shown figures', countOf(strip3, '<svg x=') === 3)
+  check('and ends in exactly one placeholder', countOf(strip3, 'stroke-dasharray') === 1)
+  check('and no cell double-wraps its own <svg>', countOf(strip3, '<svg') === 4)
+
+  const pair = analogyStrip(shapeMarkup({ sides: 3 }), shapeMarkup({ sides: 3, shaded: true }), shapeMarkup({ sides: 4 }))
+  check('an analogy strip nests 3 shown figures', countOf(pair, '<svg x=') === 3)
+  check('and both transition arrows', countOf(pair, '&#8594;') === 2)
+  check('and exactly one placeholder', countOf(pair, 'stroke-dasharray') === 1)
+  check('and no cell double-wraps its own <svg>', countOf(pair, '<svg') === 4)
+
+  const cells = [0, 1, 2, 3].map((i) => shapeMarkup({ sides: 3 + i }))
+  const grid = gridStrip(cells, 2, 2, 3)
+  check('a 2x2 grid nests 3 shown figures', countOf(grid, '<svg x=') === 3)
+  check('and replaces the missing cell with a placeholder', countOf(grid, 'stroke-dasharray') === 1)
+  check('and no cell double-wraps its own <svg>', countOf(grid, '<svg') === 4)
+
+  check(
+    'passing a full *Icon into a cell would have caused exactly this bug',
+    countOf(sequenceStrip([shapeIcon({ sides: 3 })]), '<svg') === 3,
+  )
+
+  check('a cube net has exactly 6 squares', countOf(cubeNetSvg(), '<rect') === 6)
+  check(
+    'a shaded net face is marked',
+    cubeNetSvg(0).includes('fill-opacity') && !cubeNetSvg().includes('fill-opacity'),
+  )
+  check("an invalid 'row' net still has 6 squares", countOf(invalidNetSvg('row'), '<rect') === 6)
+  check("an invalid 'block' net still has 6 squares", countOf(invalidNetSvg('block'), '<rect') === 6)
+  check(
+    "an 'extra-square' net has 7",
+    countOf(invalidNetSvg('extra-square'), '<rect') === 7,
+  )
+  check(
+    "a 'missing-square' net has 5",
+    countOf(invalidNetSvg('missing-square'), '<rect') === 5,
+  )
+}
+
 console.log('\n== bank integrity ==')
 {
   check('every question resolvable by id', QUESTIONS.every((q) => getQuestion(q.id)?.id === q.id))
@@ -483,11 +630,25 @@ console.log('\n== spaced repetition ==')
   check('the ladder stops climbing at the top', intervalDaysFor(9) === 21)
 
   const now = Date.now()
-  const fresh = { attempts: 1, correct: 1, lastSeen: now, lastCorrect: true, streak: 1 }
+  const fresh = {
+    attempts: 1,
+    correct: 1,
+    lastSeen: now,
+    lastCorrect: true,
+    streak: 1,
+    totalElapsedMs: 0,
+  }
   check('answered right today is not due today', !isDue(fresh, now))
   check('the same question is due tomorrow', isDue(fresh, now + DAY + 1))
 
-  const wrong = { attempts: 1, correct: 0, lastSeen: now, lastCorrect: false, streak: 0 }
+  const wrong = {
+    attempts: 1,
+    correct: 0,
+    lastSeen: now,
+    lastCorrect: false,
+    streak: 0,
+    totalElapsedMs: 0,
+  }
   check('a mistake is due immediately', isDue(wrong, now))
 
   // The behaviour that matters: with everything already learnt, the selector
@@ -503,6 +664,7 @@ console.log('\n== spaced repetition ==')
       lastSeen: q.id === overdue.id ? now - 30 * DAY : now,
       lastCorrect: true,
       streak: 3,
+      totalElapsedMs: 0,
     }
   }
   const p: Progress = { ...emptyProgress(), questions }
@@ -741,31 +903,32 @@ console.log('\n== batched saving ==')
     },
   }
 
+  const testProfileId = 'test-profile'
   let p: Progress = emptyProgress()
   for (let i = 0; i < 5; i += 1) {
     p = { ...p, totals: { answered: i + 1, correct: i } }
-    saveProgress(p)
+    saveProgress(testProfileId, p)
   }
   check('a burst of saves writes nothing yet', writes === 0, `writes=${writes}`)
   check(
     'but a read still sees the newest value',
-    loadProgress().totals.answered === 5,
+    loadProgress(testProfileId).totals.answered === 5,
   )
 
   flushProgress()
   check('the flush collapses them into one write', writes === 1, `writes=${writes}`)
-  check('and it is the last value that landed', loadProgress().totals.answered === 5)
+  check('and it is the last value that landed', loadProgress(testProfileId).totals.answered === 5)
 
   flushProgress()
   check('flushing again writes nothing', writes === 1, `writes=${writes}`)
 
   // A queued write landing after a reset would put the wiped history back.
-  saveProgress({ ...p, totals: { answered: 99, correct: 99 } })
-  clearProgress()
+  saveProgress(testProfileId, { ...p, totals: { answered: 99, correct: 99 } })
+  clearProgress(testProfileId)
   check('a reset removes the stored profile', removes === 1)
   flushProgress()
   check('and the queued write is dropped, not replayed', writes === 1, `writes=${writes}`)
-  check('so the profile stays empty', loadProgress().totals.answered === 0)
+  check('so the profile stays empty', loadProgress(testProfileId).totals.answered === 0)
 
   delete (globalThis as any).window
 }
@@ -936,6 +1099,7 @@ console.log('\n== migrating an older profile ==')
       },
     },
   }
+  const testProfileId = 'test-profile'
 
   // A profile written by the first release: no streaks, no feedback, and none
   // of the preferences added since.
@@ -951,7 +1115,7 @@ console.log('\n== migrating an older profile ==')
     totals: { answered: 4, correct: 2 },
     preferences: { timed: true },
   })
-  const v1 = loadProgress()
+  const v1 = loadProgress(testProfileId)
 
   check('the schema version is stamped forward', v1.version === SCHEMA_VERSION)
   check('lifetime totals survive', v1.totals.answered === 4 && v1.totals.correct === 2)
@@ -964,6 +1128,12 @@ console.log('\n== migrating an older profile ==')
   // starts one rung up the review ladder rather than coming straight back.
   check('a correct answer earns a streak of 1', v1.questions['q-right']?.streak === 1)
   check('a wrong answer starts at 0', v1.questions['q-wrong']?.streak === 0)
+  // Pre-schema-6 records have no timing data — there is nothing to recover, so
+  // it starts at 0 rather than being guessed at.
+  check(
+    'a pre-schema-6 record has no elapsed time to recover',
+    v1.questions['q-right']?.totalElapsedMs === 0,
+  )
   check('fields added since default rather than vanish', Array.isArray(v1.feedback))
   check(
     'the pace defaults',
@@ -976,7 +1146,7 @@ console.log('\n== migrating an older profile ==')
   stored = JSON.stringify({ version: 4, preferences: { mixedSubjects: ['maths', 'english'] } })
   check(
     'a schema-4 subject choice is carried forward',
-    loadProgress().preferences.practiceSubjects.join() === 'maths,english',
+    loadProgress(testProfileId).preferences.practiceSubjects.join() === 'maths,english',
   )
 
   // Hand-edited or half-written values must be repaired, not trusted — a pace
@@ -985,13 +1155,13 @@ console.log('\n== migrating an older profile ==')
     stored = JSON.stringify({ preferences: { secondsPerQuestion: bad } })
     check(
       `a pace of ${JSON.stringify(bad)} is repaired`,
-      loadProgress().preferences.secondsPerQuestion === DEFAULT_SECONDS_PER_QUESTION,
+      loadProgress(testProfileId).preferences.secondsPerQuestion === DEFAULT_SECONDS_PER_QUESTION,
     )
   }
   stored = JSON.stringify({ preferences: { practiceTopics: 'nonsense' } })
   check(
     'a damaged topic selection is repaired',
-    Object.keys(loadProgress().preferences.practiceTopics).length === 0,
+    Object.keys(loadProgress(testProfileId).preferences.practiceTopics).length === 0,
   )
 
   // Damaged storage must give a usable empty profile, never an exception — the
@@ -1000,7 +1170,7 @@ console.log('\n== migrating an older profile ==')
     stored = junk
     let answered = -1
     try {
-      answered = loadProgress().totals.answered
+      answered = loadProgress(testProfileId).totals.answered
     } catch {
       answered = -1
     }
@@ -1014,11 +1184,89 @@ console.log('\n== migrating an older profile ==')
   let threw = false
   let recovered = false
   try {
-    recovered = loadProgress().totals.answered === 0
+    recovered = loadProgress(testProfileId).totals.answered === 0
   } catch {
     threw = true
   }
   check('unreadable storage falls back instead of throwing', !threw && recovered)
+
+  delete (globalThis as any).window
+}
+
+console.log('\n== child profiles ==')
+{
+  // Unlike the sections above, this needs several distinct keys behaving like
+  // real localStorage at once (profiles list, active-profile pointer, and a
+  // progress key per profile) rather than one `stored` variable standing in
+  // for a single key — so a small real Map-backed store stands in instead.
+  const store = new Map<string, string>()
+  ;(globalThis as any).window = {
+    localStorage: {
+      getItem: (k: string) => store.get(k) ?? null,
+      setItem: (k: string, v: string) => {
+        store.set(k, v)
+      },
+      removeItem: (k: string) => {
+        store.delete(k)
+      },
+    },
+  }
+
+  check('a brand new device has no profiles yet', loadProfiles().length === 0)
+  const first = ensureProfile()
+  check('ensureProfile creates exactly one profile', loadProfiles().length === 1)
+  check('the new profile is generically named', first.name === 'Player 1')
+  check(
+    'calling ensureProfile again returns the same profile, not a second one',
+    ensureProfile().id === first.id && loadProfiles().length === 1,
+  )
+
+  const second = createProfile("Sam's profile")
+  check('a second profile can be added', loadProfiles().length === 2)
+  check('its name is kept as given', second.name === "Sam's profile")
+
+  renameProfile(first.id, '  Alex  ')
+  check(
+    'renaming trims whitespace and sticks',
+    loadProfiles().find((p) => p.id === first.id)?.name === 'Alex',
+  )
+  renameProfile(first.id, '   ')
+  check(
+    'renaming to blank is a no-op rather than an empty name',
+    loadProfiles().find((p) => p.id === first.id)?.name === 'Alex',
+  )
+
+  saveProgress(second.id, { ...emptyProgress(), totals: { answered: 3, correct: 2 } })
+  flushProgress()
+  check(
+    "each profile's progress is stored separately",
+    loadProgress(first.id).totals.answered === 0 &&
+      loadProgress(second.id).totals.answered === 3,
+  )
+
+  setActiveProfileId(second.id)
+  check('switching the active profile sticks', ensureProfile().id === second.id)
+
+  deleteProfile(first.id)
+  check('deleting a profile removes it from the list', loadProfiles().length === 1)
+  check(
+    "deleting a profile clears its stored progress, not the survivor's",
+    loadProgress(first.id).totals.answered === 0 &&
+      loadProgress(second.id).totals.answered === 3,
+  )
+
+  // A device that predates profiles has progress sitting under the old fixed
+  // key. The very first ensureProfile() call must fold it into a profile
+  // rather than leaving it orphaned or losing it outright.
+  store.clear()
+  store.set(LEGACY_PROGRESS_KEY, JSON.stringify({ ...emptyProgress(), totals: { answered: 41, correct: 30 } }))
+  const migrated = ensureProfile()
+  check('a pre-profiles device gets exactly one profile', loadProfiles().length === 1)
+  check(
+    "that profile's progress is the migrated data, not a blank slate",
+    loadProgress(migrated.id).totals.answered === 41,
+  )
+  check('the old fixed key is cleaned up after migrating', !store.has(LEGACY_PROGRESS_KEY))
 
   delete (globalThis as any).window
 }

@@ -15,7 +15,9 @@ import { TECHNIQUE_CARDS } from '../data/techniqueCards'
 import type { Phase, SessionState } from './session'
 import type { SessionAnswer, SessionConfig } from '../types'
 
-const KEY = 'elevenplus:v1:session'
+export function sessionKey(profileId: string): string {
+  return `elevenplus:v1:session:${profileId}`
+}
 export const SESSION_SCHEMA_VERSION = 1
 
 /**
@@ -51,8 +53,12 @@ interface StoredSession {
   timedOut: boolean
 }
 
-/** In-memory fallback for private mode or a full quota, mirroring storage.ts. */
-let memoryFallback: StoredSession | null = null
+/**
+ * In-memory fallback for private mode or a full quota, mirroring storage.ts —
+ * keyed by profile so a device with no persistence still keeps one child's
+ * half-finished quiz separate from another's.
+ */
+const memoryFallback = new Map<string, StoredSession>()
 
 function serialise(
   state: SessionState,
@@ -150,27 +156,31 @@ function deserialise(stored: StoredSession, at: number): RestoredSession | null 
 }
 
 export function saveSession(
+  profileId: string,
   state: SessionState,
   note: string | undefined,
   at: number = Date.now(),
 ): void {
   if (state.phase === 'complete') {
-    clearSession()
+    clearSession(profileId)
     return
   }
   const stored = serialise(state, note, at)
-  memoryFallback = stored
+  memoryFallback.set(profileId, stored)
   try {
-    window.localStorage.setItem(KEY, JSON.stringify(stored))
+    window.localStorage.setItem(sessionKey(profileId), JSON.stringify(stored))
   } catch {
     // Quota or private mode — the in-memory copy still survives a re-render.
   }
 }
 
-export function loadSession(at: number = Date.now()): RestoredSession | null {
-  let stored: StoredSession | null = memoryFallback
+export function loadSession(
+  profileId: string,
+  at: number = Date.now(),
+): RestoredSession | null {
+  let stored: StoredSession | null = memoryFallback.get(profileId) ?? null
   try {
-    const raw = window.localStorage.getItem(KEY)
+    const raw = window.localStorage.getItem(sessionKey(profileId))
     if (raw) stored = JSON.parse(raw) as StoredSession
   } catch {
     // Fall through to the in-memory copy, or to null.
@@ -184,10 +194,10 @@ export function loadSession(at: number = Date.now()): RestoredSession | null {
   }
 }
 
-export function clearSession(): void {
-  memoryFallback = null
+export function clearSession(profileId: string): void {
+  memoryFallback.delete(profileId)
   try {
-    window.localStorage.removeItem(KEY)
+    window.localStorage.removeItem(sessionKey(profileId))
   } catch {
     // Nothing more we can do; the caller drops the session regardless.
   }

@@ -31,7 +31,11 @@
       "The rectangle is made of straight sides, like most of the group."
     ],
     "learningPoint": "Odd-one-out shapes: check the basic build first — straight sides against curves, and how many sides there are.",
-    "tags": ["odd-one-out", "shapes", "nvr"]
+    "tags": [
+      "odd-one-out",
+      "shapes",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-odd-002",
@@ -65,7 +69,11 @@
       "The parallelogram has four sides, like most of the group."
     ],
     "learningPoint": "Count the sides. A group of four-sided shapes with one five-sided shape hides the odd one in the side count, not the tilt.",
-    "tags": ["odd-one-out", "sides", "nvr"]
+    "tags": [
+      "odd-one-out",
+      "sides",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-odd-003",
@@ -99,7 +107,11 @@
       "The hexagon is shaded, which is the feature the group shares."
     ],
     "learningPoint": "When the shapes are all different, look for what they have in common — here, shading. The one that breaks the shared feature is the answer.",
-    "tags": ["odd-one-out", "shading", "nvr"]
+    "tags": [
+      "odd-one-out",
+      "shading",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-odd-004",
@@ -133,7 +145,50 @@
       "The dot is inside the hexagon, like most of the group."
     ],
     "learningPoint": "Watch the position of extra marks such as dots relative to the main shape — inside, outside or touching — not just the shape itself.",
-    "tags": ["odd-one-out", "position", "nvr"]
+    "tags": [
+      "odd-one-out",
+      "position",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-odd-005",
+    "subject": "non-verbal-reasoning",
+    "topic": "Odd one out",
+    "skill": "nvr_odd_one_out",
+    "type": "odd-one-out",
+    "difficulty": 4,
+    "question": "Each shape should have as many dots as it has sides. Which one breaks that rule?",
+    "options": [
+      "A heptagon with 5 dots",
+      "A triangle with 3 dots",
+      "A square with 4 dots",
+      "A pentagon with 5 dots",
+      "A hexagon with 6 dots"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,14 78,28 85,58 66,82 34,82 15,58 22,28'/><circle cx='22.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='36.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='50.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='64.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='78.0' cy='68' r='4.2' fill='currentColor' stroke='none'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,18 82,80 18,80'/><circle cx='22.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='50.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='78.0' cy='68' r='4.2' fill='currentColor' stroke='none'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><rect x='20' y='20' width='60' height='60'/><circle cx='22.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='40.7' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='59.3' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='78.0' cy='68' r='4.2' fill='currentColor' stroke='none'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 84,42 71,82 29,82 16,42'/><circle cx='22.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='36.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='50.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='64.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='78.0' cy='68' r='4.2' fill='currentColor' stroke='none'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,14 83,32 83,68 50,86 17,68 17,32'/><circle cx='22.0' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='33.2' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='44.4' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='55.6' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='66.8' cy='68' r='4.2' fill='currentColor' stroke='none'/><circle cx='78.0' cy='68' r='4.2' fill='currentColor' stroke='none'/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "Four of the shapes carry exactly as many dots as they have sides: the triangle has 3 and 3, the square 4 and 4, the pentagon 5 and 5, the hexagon 6 and 6. The heptagon has seven sides but only five dots, breaking the rule.",
+    "distractorNotes": [
+      "",
+      "The triangle's 3 dots match its 3 sides, following the rule.",
+      "The square's 4 dots match its 4 sides, following the rule.",
+      "The pentagon's 5 dots match its 5 sides, following the rule.",
+      "The hexagon's 6 dots match its 6 sides, following the rule."
+    ],
+    "learningPoint": "When a shape carries two features — like an outline and a count — check whether the two features match the same rule as the rest of the group, not just whether the shape itself looks different.",
+    "tags": [
+      "odd-one-out",
+      "sides",
+      "counting",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-seq-001",
@@ -168,7 +223,11 @@
       "A half-quarter turn is too small — each step here is a full quarter-turn."
     ],
     "learningPoint": "For rotating figures, work out the size and direction of each turn — a quarter-turn clockwise here — and continue it by one more step.",
-    "tags": ["sequence", "rotation", "nvr"]
+    "tags": [
+      "sequence",
+      "rotation",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-seq-002",
@@ -203,7 +262,11 @@
       "Six dots skips ahead too far — the count rises one at a time."
     ],
     "learningPoint": "Count how many elements appear at each step. A steady rise of one means simply adding one more element to the last figure.",
-    "tags": ["sequence", "counting", "nvr"]
+    "tags": [
+      "sequence",
+      "counting",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-seq-003",
@@ -238,7 +301,11 @@
       "The triangle is where the sequence started, not where it is heading."
     ],
     "learningPoint": "A growing sequence can change the number of sides. Track the count — three, four, five — and continue it by adding one more side.",
-    "tags": ["sequence", "sides", "nvr"]
+    "tags": [
+      "sequence",
+      "sides",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-seq-004",
@@ -273,7 +340,52 @@
       "A fully shaded square changes the rule; only one corner is ever shaded."
     ],
     "learningPoint": "Follow a moving feature around the figure. Decide the direction — clockwise here — and step it on by one position.",
-    "tags": ["sequence", "rotation", "shading", "nvr"]
+    "tags": [
+      "sequence",
+      "rotation",
+      "shading",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-seq-005",
+    "subject": "non-verbal-reasoning",
+    "topic": "Sequences",
+    "skill": "nvr_sequences",
+    "type": "sequence",
+    "difficulty": 4,
+    "question": "Two things change at once in this sequence. Which figure comes next?",
+    "figure": "<svg viewBox='0 0 380 96' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4'><svg x='0' y='8' width='80' height='80' viewBox='0 0 100 100' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'><polygon points='50,18 82,80 18,80'/></svg><svg x='100' y='8' width='80' height='80' viewBox='0 0 100 100' fill='none' stroke='currentColor' stroke-width='4'><rect x='20' y='20' width='60' height='60' fill='currentColor' fill-opacity='0.28'/></svg><svg x='200' y='8' width='80' height='80' viewBox='0 0 100 100' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'><polygon points='50,16 84,42 71,82 29,82 16,42'/></svg><rect x='300' y='8' width='80' height='80' rx='8' stroke-dasharray='6 6' stroke-width='3'/><text x='340' y='63' font-size='46' text-anchor='middle' fill='currentColor' stroke='none'>?</text></svg>",
+    "options": [
+      "A shaded hexagon",
+      "An unshaded hexagon",
+      "A shaded pentagon",
+      "A shaded heptagon",
+      "A shaded square"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'><polygon points='50,14 83,32 83,68 50,86 17,68 17,32' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'><polygon points='50,14 83,32 83,68 50,86 17,68 17,32'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'><polygon points='50,16 84,42 71,82 29,82 16,42' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'><polygon points='50,14 78,28 85,58 66,82 34,82 15,58 22,28' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4'><rect x='20' y='20' width='60' height='60' fill='currentColor' fill-opacity='0.28'/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "Two things change together: the number of sides grows by one each step (three, four, five, so next is six), and the shading alternates unshaded, shaded, unshaded, so next is shaded. Six sides and shaded together give a shaded hexagon.",
+    "distractorNotes": [
+      "",
+      "The hexagon has the right number of sides, but the shading should also continue the alternating pattern — this step should be shaded.",
+      "This repeats the third figure's shape with the wrong shading; the sides must grow by one as well.",
+      "A heptagon has one side too many — the pattern adds only one side each step, taking pentagon to hexagon.",
+      "This repeats the second figure exactly, ignoring both the growing sides and the alternating shading."
+    ],
+    "learningPoint": "When two features change at once, track each separately — here the side count and the shading — and combine both for the next step rather than continuing just one.",
+    "tags": [
+      "sequence",
+      "sides",
+      "shading",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-pair-001",
@@ -308,7 +420,11 @@
       "An unshaded circle changes the shape and misses the shading change."
     ],
     "learningPoint": "Find exactly what changes between the first pair — here, empty becomes shaded — and apply that same change to the third figure.",
-    "tags": ["analogy", "shading", "nvr"]
+    "tags": [
+      "analogy",
+      "shading",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-pair-002",
@@ -343,7 +459,11 @@
       "A diagonal is only half of the quarter-turn the pattern needs."
     ],
     "learningPoint": "Rotation pairs: measure the turn in the first pair — a quarter-turn clockwise — and give the third figure exactly the same turn.",
-    "tags": ["analogy", "rotation", "nvr"]
+    "tags": [
+      "analogy",
+      "rotation",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-pair-003",
@@ -378,7 +498,11 @@
       "A circle changes the shape; the triangle should be kept."
     ],
     "learningPoint": "Some pairs add or remove a feature. Spot exactly what is added — one dot, inside — and add the same thing to the third figure.",
-    "tags": ["analogy", "added-feature", "nvr"]
+    "tags": [
+      "analogy",
+      "added-feature",
+      "nvr"
+    ]
   },
   {
     "id": "nvr-pair-004",
@@ -413,6 +537,403 @@
       "A pentagon does not appear in the third figure at all."
     ],
     "learningPoint": "When figures nest, the rule may be to keep just one part. Check whether the inner or the outer shape survives, then reproduce it exactly.",
-    "tags": ["analogy", "nesting", "nvr"]
+    "tags": [
+      "analogy",
+      "nesting",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-pair-005",
+    "subject": "non-verbal-reasoning",
+    "topic": "Figure pairs",
+    "skill": "nvr_analogies",
+    "type": "analogy",
+    "difficulty": 1,
+    "question": "The first figure changes to the second in the same way as the third should change. Which figure completes the pair?",
+    "figure": "<svg viewBox='0 0 500 96' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4'><svg x='0' y='8' width='80' height='80' viewBox='0 0 100 100' fill='none' stroke='currentColor' stroke-width='4'><rect x='36' y='36' width='28' height='28'/></svg><text x='100' y='60' font-size='40' text-anchor='middle' fill='currentColor' stroke='none'>&#8594;</text><svg x='120' y='8' width='80' height='80' viewBox='0 0 100 100' fill='none' stroke='currentColor' stroke-width='4'><rect x='14' y='14' width='72' height='72'/></svg><svg x='250' y='8' width='80' height='80' viewBox='0 0 100 100' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'><polygon points='50,38 66,72 34,72'/></svg><text x='350' y='60' font-size='40' text-anchor='middle' fill='currentColor' stroke='none'>&#8594;</text><rect x='372' y='8' width='80' height='80' rx='8' stroke-dasharray='6 6' stroke-width='3'/><text x='412' y='63' font-size='46' text-anchor='middle' fill='currentColor' stroke='none'>?</text></svg>",
+    "options": [
+      "A large triangle",
+      "A small triangle",
+      "A large square",
+      "A large circle",
+      "A small circle"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'><polygon points='50,10 90,86 10,86'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round'><polygon points='50,38 66,72 34,72'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4'><rect x='14' y='14' width='72' height='72'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4'><circle cx='50' cy='50' r='42'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4'><circle cx='50' cy='50' r='16'/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "In the first pair the shape stays a square but grows much larger. Applying the same change to the small triangle — keeping the shape but making it much larger — gives a large triangle.",
+    "distractorNotes": [
+      "",
+      "A small triangle just repeats the third figure without making the change.",
+      "A large square changes the shape as well as the size; only the triangle's size should change.",
+      "A large circle is the right size change but the wrong shape — the third figure was a triangle.",
+      "A small circle changes the shape and misses the size change altogether."
+    ],
+    "learningPoint": "Find the one thing that changes between the first pair — here, size — and apply exactly that change to the third figure, keeping everything else the same.",
+    "tags": [
+      "analogy",
+      "size",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-rotation-001",
+    "subject": "non-verbal-reasoning",
+    "topic": "Rotation",
+    "skill": "nvr_rotation",
+    "type": "rotation",
+    "difficulty": 2,
+    "question": "The arrow shown points up. Which option shows the same arrow after a quarter-turn (90°) clockwise?",
+    "figure": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(0 50 50)'><line x1='50' y1='82' x2='50' y2='26'/><polyline points='34,44 50,26 66,44'/></g></svg>",
+    "options": [
+      "An arrow pointing right",
+      "An arrow pointing up",
+      "An arrow pointing down",
+      "An arrow pointing left",
+      "An arrow pointing down and to the right"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(90 50 50)'><line x1='50' y1='82' x2='50' y2='26'/><polyline points='34,44 50,26 66,44'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(0 50 50)'><line x1='50' y1='82' x2='50' y2='26'/><polyline points='34,44 50,26 66,44'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(180 50 50)'><line x1='50' y1='82' x2='50' y2='26'/><polyline points='34,44 50,26 66,44'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(270 50 50)'><line x1='50' y1='82' x2='50' y2='26'/><polyline points='34,44 50,26 66,44'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(135 50 50)'><line x1='50' y1='82' x2='50' y2='26'/><polyline points='34,44 50,26 66,44'/></g></svg>"
+    ],
+    "answer": 0,
+    "explanation": "A quarter-turn clockwise moves 'up' to 'right'. Turning the arrow 90° clockwise from pointing up gives an arrow pointing right.",
+    "distractorNotes": [
+      "",
+      "This is the arrow with no turn applied at all.",
+      "This is a half-turn (180°), twice as far as asked.",
+      "This is three-quarters of a turn, further than asked.",
+      "A 135° turn is not a quarter-turn."
+    ],
+    "learningPoint": "A quarter-turn clockwise is always 90°. Picture the hands of a clock: up moves to where 3 o'clock points.",
+    "tags": [
+      "rotation",
+      "angle",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-rotation-002",
+    "subject": "non-verbal-reasoning",
+    "topic": "Rotation",
+    "skill": "nvr_rotation",
+    "type": "rotation",
+    "difficulty": 3,
+    "question": "This flag is on a pole. Which option shows the same flag and pole rotated a half-turn (180°)?",
+    "figure": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></svg>",
+    "options": [
+      "The flag and pole rotated a half-turn",
+      "The flag with no turn applied",
+      "The flag reflected instead of rotated",
+      "The flag rotated a quarter-turn only",
+      "The reflected flag rotated a half-turn"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(180 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 5,25 35,35' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(90 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(180 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 5,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>"
+    ],
+    "answer": 0,
+    "explanation": "Rotating 180° turns the whole figure round its centre. The pole ends up at a new angle and the pennant ends up on the opposite side, pointing the opposite way — not just the pennant flipping while the pole stays still.",
+    "distractorNotes": [
+      "",
+      "This shows no rotation at all.",
+      "This is a mirror image, not a rotation — a genuine rotation moves the pole too, not just the flag.",
+      "This is only a quarter-turn (90°), not a half-turn.",
+      "This combines a reflection with the rotation, which was never asked for."
+    ],
+    "learningPoint": "A half-turn (180°) can look deceptively like a reflection for some shapes. Check the whole figure, including parts like a pole, not just where a marking ends up.",
+    "tags": [
+      "rotation",
+      "flag",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-reflection-001",
+    "subject": "non-verbal-reasoning",
+    "topic": "Reflection",
+    "skill": "nvr_reflection",
+    "type": "reflection",
+    "difficulty": 2,
+    "question": "This flag is attached to an upright pole. Which option shows it reflected in a mirror line running straight down the pole?",
+    "figure": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></svg>",
+    "options": [
+      "The pole unchanged, with the flag now on the other side",
+      "The flag with no change at all",
+      "The whole flag and pole rotated a half-turn instead",
+      "The reflected flag, but also rotated a quarter-turn",
+      "The original flag rotated a quarter-turn, not reflected"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 5,25 35,35' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(180 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(90 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 5,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(90 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>"
+    ],
+    "answer": 0,
+    "explanation": "Reflecting in a line running down the pole leaves the pole exactly where it is — only the pennant swaps to the other side, still pointing outward the same way up.",
+    "distractorNotes": [
+      "",
+      "This shows no change at all — the flag stays on the right.",
+      "This rotates the whole pole as well as the flag; a reflection in the pole's own line leaves the pole exactly where it was.",
+      "This gets the flag onto the correct side but then rotates it too, which was never asked for.",
+      "This is a rotation, not a reflection — notice the pole itself has tilted."
+    ],
+    "learningPoint": "A reflection in a line keeps everything on that line exactly still. Check for a part of the figure that should not move at all — here, the pole — to tell a reflection from a rotation.",
+    "tags": [
+      "reflection",
+      "flag",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-reflection-002",
+    "subject": "non-verbal-reasoning",
+    "topic": "Reflection",
+    "skill": "nvr_reflection",
+    "type": "reflection",
+    "difficulty": 3,
+    "question": "This flag is on a pole tilted at an angle. Which option shows it reflected in a mirror line running down the pole, with the pole staying at exactly the same angle?",
+    "figure": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(45 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>",
+    "options": [
+      "The same tilted pole, with the flag now on the other side",
+      "The original figure, unchanged",
+      "The pole rotated to a new angle, not reflected",
+      "The flag reflected, but the pole tilted the wrong way",
+      "The whole figure rotated much further round"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(45 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 5,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(45 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(135 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(-45 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 5,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><g transform='rotate(225 50 50)'><line x1='35' y1='15' x2='35' y2='85'/><polygon points='35,15 65,25 35,35' fill='currentColor' fill-opacity='0.28'/></g></svg>"
+    ],
+    "answer": 0,
+    "explanation": "Reflecting in a line down the pole leaves the pole exactly as it was, at the same angle — only the pennant swaps to the other side of it.",
+    "distractorNotes": [
+      "",
+      "This is the original figure — nothing has changed.",
+      "The pole has rotated to a different angle; a reflection in the pole's own line must leave the pole's angle exactly as it was.",
+      "The flag correctly moved to the other side, but the pole's tilt has also flipped — a reflection in the pole should leave the pole exactly where it was.",
+      "This rotates the whole figure by a much larger angle instead of reflecting it."
+    ],
+    "learningPoint": "However a shape is tilted, a reflection in a line along part of it leaves that part completely unchanged. Find the fixed part first, then check only that the rest has flipped sides.",
+    "tags": [
+      "reflection",
+      "flag",
+      "angle",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-grid-001",
+    "subject": "non-verbal-reasoning",
+    "topic": "Grid completion",
+    "skill": "nvr_grid_completion",
+    "type": "grid-completion",
+    "difficulty": 2,
+    "question": "Look at how the shapes change across the grid. Which figure completes it?",
+    "figure": "<svg viewBox='0 0 190 190' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4'><svg x='0' y='0' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='74,26 74,74 26,74 26,26'/></svg><svg x='100' y='0' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='74,26 74,74 26,74 26,26' fill='currentColor' fill-opacity='0.28'/></svg><svg x='0' y='100' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,67 20.6,67'/></svg><rect x='100' y='100' width='90' height='90' rx='8' stroke-dasharray='6 6' stroke-width='3' fill='none' stroke='currentColor'/><text x='145' y='162.1' font-size='51.74999999999999' text-anchor='middle' fill='currentColor' stroke='none'>?</text></svg>",
+    "options": [
+      "A shaded triangle",
+      "An unshaded triangle",
+      "A shaded square",
+      "An unshaded square",
+      "A shaded pentagon"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,67 20.6,67' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,67 20.6,67'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='74,26 74,74 26,74 26,26' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='74,26 74,74 26,74 26,26'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 82.3,39.5 70,77.5 30,77.5 17.7,39.5' fill='currentColor' fill-opacity='0.28'/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "Along the bottom row, both shapes are triangles. Down the right column, both shapes are shaded. The missing cell is in the bottom row and the right column, so it must be a shaded triangle.",
+    "distractorNotes": [
+      "",
+      "This keeps the triangle correctly, but the right-hand column is always shaded, and this is not.",
+      "The bottom row is always a triangle, not a square.",
+      "This is neither shaded, for the right column, nor a triangle, for the bottom row.",
+      "A pentagon does not fit either rule — the shapes in this grid are only squares and triangles."
+    ],
+    "learningPoint": "In a grid, check what stays the same along each row and each column separately, then combine both rules for the missing cell.",
+    "tags": [
+      "grid",
+      "shading",
+      "sides",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-grid-002",
+    "subject": "non-verbal-reasoning",
+    "topic": "Grid completion",
+    "skill": "nvr_grid_completion",
+    "type": "grid-completion",
+    "difficulty": 4,
+    "question": "This grid follows two rules at once — one across each row, one down each column. Which figure completes it?",
+    "figure": "<svg viewBox='0 0 290 290' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4'><svg x='0' y='0' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,67 20.6,67'/></svg><svg x='100' y='0' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='74,26 74,74 26,74 26,26'/></svg><svg x='200' y='0' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 82.3,39.5 70,77.5 30,77.5 17.7,39.5'/></svg><svg x='0' y='100' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,67 20.6,67' fill='currentColor' fill-opacity='0.28'/></svg><svg x='100' y='100' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='74,26 74,74 26,74 26,26' fill='currentColor' fill-opacity='0.28'/></svg><rect x='200' y='100' width='90' height='90' rx='8' stroke-dasharray='6 6' stroke-width='3' fill='none' stroke='currentColor'/><text x='245' y='162.1' font-size='51.74999999999999' text-anchor='middle' fill='currentColor' stroke='none'>?</text><svg x='0' y='200' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,67 20.6,67'/></svg><svg x='100' y='200' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='74,26 74,74 26,74 26,26'/></svg><svg x='200' y='200' width='90' height='90' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 82.3,39.5 70,77.5 30,77.5 17.7,39.5'/></svg></svg>",
+    "options": [
+      "A shaded pentagon",
+      "An unshaded pentagon",
+      "A shaded square",
+      "A shaded hexagon",
+      "A shaded triangle"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 82.3,39.5 70,77.5 30,77.5 17.7,39.5' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 82.3,39.5 70,77.5 30,77.5 17.7,39.5'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='74,26 74,74 26,74 26,26' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,33 79.4,67 50,84 20.6,67 20.6,33' fill='currentColor' fill-opacity='0.28'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,67 20.6,67' fill='currentColor' fill-opacity='0.28'/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "Reading across each row, the number of sides is set by the column: three in the first, four in the second, five in the third. Reading down each column, the middle row is always shaded. The missing cell is in the third column and the middle row, so it must be a shaded pentagon.",
+    "distractorNotes": [
+      "",
+      "The pentagon is right for this column, but the middle row is always shaded, and this one is not.",
+      "The shading is right for the middle row, but the last column is always a pentagon, not a square.",
+      "A hexagon has one side too many — this grid's columns stop at pentagons; there is no fourth column.",
+      "The triangle belongs to the first column, not the last."
+    ],
+    "learningPoint": "When two rules run at once — one across rows, one down columns — work out each separately before combining them for the missing cell. Watch for an option that gets only one rule right.",
+    "tags": [
+      "grid",
+      "sides",
+      "shading",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-hidden-001",
+    "subject": "non-verbal-reasoning",
+    "topic": "Hidden shape",
+    "skill": "nvr_hidden_shape",
+    "type": "hidden-shape",
+    "difficulty": 3,
+    "question": "One of these figures has a pentagon hidden inside it, overlapping with another shape. Which one?",
+    "figure": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 82.3,39.5 70,77.5 30,77.5 17.7,39.5'/></svg>",
+    "options": [
+      "A pentagon overlapping a square",
+      "A square overlapping a triangle",
+      "A hexagon overlapping a triangle",
+      "Two overlapping squares, one smaller",
+      "A hexagon overlapping a square"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 82.3,39.5 70,77.5 30,77.5 17.7,39.5' fill='currentColor' fill-opacity='0.18'/><polygon points='50,16 84,50 50,84 16,50' fill='currentColor' fill-opacity='0.4'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 84,50 50,84 16,50' fill='currentColor' fill-opacity='0.18'/><polygon points='50,16 79.4,67 20.6,67' fill='currentColor' fill-opacity='0.4'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,33 79.4,67 50,84 20.6,67 20.6,33' fill='currentColor' fill-opacity='0.18'/><polygon points='50,16 79.4,67 20.6,67' fill='currentColor' fill-opacity='0.4'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 84,50 50,84 16,50' fill='currentColor' fill-opacity='0.18'/><polygon points='50,30 70,50 50,70 30,50' fill='currentColor' fill-opacity='0.4'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,33 79.4,67 50,84 20.6,67 20.6,33' fill='currentColor' fill-opacity='0.18'/><polygon points='50,16 84,50 50,84 16,50' fill='currentColor' fill-opacity='0.4'/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "Only one figure is built from a pentagon layered with another shape — here, a pentagon overlapping a square. The others combine different pairs of shapes, none of which include a pentagon.",
+    "distractorNotes": [
+      "",
+      "This overlaps a square and a triangle — no pentagon here.",
+      "This overlaps a hexagon and a triangle — the pentagon is missing.",
+      "These are two squares of different sizes — still no pentagon.",
+      "This overlaps a hexagon and a square — again, no pentagon."
+    ],
+    "learningPoint": "When a shape is hidden inside a more complex figure, look for its outline specifically — count its sides — rather than judging the whole figure by its general appearance.",
+    "tags": [
+      "hidden-shape",
+      "overlap",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-hidden-002",
+    "subject": "non-verbal-reasoning",
+    "topic": "Hidden shape",
+    "skill": "nvr_hidden_shape",
+    "type": "hidden-shape",
+    "difficulty": 2,
+    "question": "One of these figures has a hexagon hidden inside it. Which one?",
+    "figure": "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,33 79.4,67 50,84 20.6,67 20.6,33'/></svg>",
+    "options": [
+      "A hexagon overlapping a triangle",
+      "A pentagon overlapping a triangle",
+      "A square overlapping a triangle",
+      "A pentagon overlapping a square",
+      "Two overlapping triangles, one smaller"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,33 79.4,67 50,84 20.6,67 20.6,33' fill='currentColor' fill-opacity='0.18'/><polygon points='50,16 79.4,67 20.6,67' fill='currentColor' fill-opacity='0.4'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 82.3,39.5 70,77.5 30,77.5 17.7,39.5' fill='currentColor' fill-opacity='0.18'/><polygon points='50,16 79.4,67 20.6,67' fill='currentColor' fill-opacity='0.4'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 84,50 50,84 16,50' fill='currentColor' fill-opacity='0.18'/><polygon points='50,16 79.4,67 20.6,67' fill='currentColor' fill-opacity='0.4'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 82.3,39.5 70,77.5 30,77.5 17.7,39.5' fill='currentColor' fill-opacity='0.18'/><polygon points='50,16 84,50 50,84 16,50' fill='currentColor' fill-opacity='0.4'/></svg>",
+      "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'><polygon points='50,16 79.4,67 20.6,67' fill='currentColor' fill-opacity='0.18'/><polygon points='50,30 67.3,60 32.7,60' fill='currentColor' fill-opacity='0.4'/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "Counting the sides of each hidden shape, only one figure contains a six-sided hexagon — here, overlapping a triangle.",
+    "distractorNotes": [
+      "",
+      "This hides a pentagon, not a hexagon — one side too few.",
+      "This hides a square, which has only four sides.",
+      "This overlaps a pentagon and a square — no hexagon.",
+      "These are two triangles of different sizes — still no hexagon."
+    ],
+    "learningPoint": "Count the sides of each shape inside a busy figure one at a time. The number of sides tells you exactly which shape it is, however it overlaps with others.",
+    "tags": [
+      "hidden-shape",
+      "overlap",
+      "sides",
+      "nvr"
+    ]
+  },
+  {
+    "id": "nvr-cubenet-001",
+    "subject": "non-verbal-reasoning",
+    "topic": "Cube nets",
+    "skill": "nvr_cube_nets",
+    "type": "cube-net",
+    "difficulty": 2,
+    "question": "Which of these is a net that folds up into a closed cube?",
+    "options": [
+      "A cross-shaped arrangement of six squares",
+      "Six squares in a single straight row",
+      "Six squares in a 2-by-3 block",
+      "Seven squares joined together",
+      "Five squares joined together"
+    ],
+    "optionFigures": [
+      "<svg viewBox='0 0 100 90' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='3'><rect x='4' y='26' width='22' height='22'/><rect x='26' y='4' width='22' height='22'/><rect x='26' y='26' width='22' height='22'/><rect x='48' y='26' width='22' height='22'/><rect x='70' y='26' width='22' height='22'/><rect x='26' y='48' width='22' height='22'/></svg>",
+      "<svg viewBox='0 0 130 90' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='3'><rect x='4' y='4' width='22' height='22'/><rect x='26' y='4' width='22' height='22'/><rect x='48' y='4' width='22' height='22'/><rect x='70' y='4' width='22' height='22'/><rect x='92' y='4' width='22' height='22'/><rect x='114' y='4' width='22' height='22'/></svg>",
+      "<svg viewBox='0 0 130 90' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='3'><rect x='4' y='4' width='22' height='22'/><rect x='26' y='4' width='22' height='22'/><rect x='48' y='4' width='22' height='22'/><rect x='4' y='26' width='22' height='22'/><rect x='26' y='26' width='22' height='22'/><rect x='48' y='26' width='22' height='22'/></svg>",
+      "<svg viewBox='0 0 130 90' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='3'><rect x='4' y='26' width='22' height='22'/><rect x='26' y='4' width='22' height='22'/><rect x='26' y='26' width='22' height='22'/><rect x='48' y='26' width='22' height='22'/><rect x='70' y='26' width='22' height='22'/><rect x='26' y='48' width='22' height='22'/><rect x='70' y='48' width='22' height='22'/></svg>",
+      "<svg viewBox='0 0 130 90' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-width='3'><rect x='4' y='26' width='22' height='22'/><rect x='26' y='4' width='22' height='22'/><rect x='26' y='26' width='22' height='22'/><rect x='48' y='26' width='22' height='22'/><rect x='26' y='48' width='22' height='22'/></svg>"
+    ],
+    "answer": 0,
+    "explanation": "A cube has six square faces, and only certain arrangements of six squares fold up without any of them overlapping. The cross shape is one of them — folding the four squares in the crossbar up and around, with the two end squares becoming the top and bottom.",
+    "distractorNotes": [
+      "",
+      "A straight row of six squares folds into a long strip, not a cube — it overlaps itself.",
+      "A 2-by-3 block is too thick in the middle to fold into a cube without the squares overlapping.",
+      "A cube always has exactly six faces — seven squares is one too many.",
+      "A cube needs six faces — five squares is one too few."
+    ],
+    "learningPoint": "Count the squares first — a cube net always has exactly six. Then check the arrangement is not too straight or too thick to fold without overlapping.",
+    "tags": [
+      "cube-net",
+      "folding",
+      "nvr"
+    ]
   }
 ]

@@ -6,6 +6,8 @@ import { formatDuration } from './Timer'
 import { getSubject, SUBJECTS } from '../data/subjects'
 import { subjectMastery, topicMastery } from '../logic/mastery'
 import { overallAccuracy } from '../logic/progress'
+import { topicTiming } from '../logic/timing'
+import type { ChildProfile } from '../logic/profiles'
 import type { Progress } from '../types'
 
 interface Props {
@@ -16,6 +18,12 @@ interface Props {
   onClearFeedback: () => void
   onRestore: (progress: Progress) => void
   onSetSecondsPerQuestion: (seconds: number) => void
+  profiles: ChildProfile[]
+  activeProfileId: string
+  onSwitchProfile: (profile: ChildProfile) => void
+  onCreateProfile: (name: string) => void
+  onRenameProfile: (id: string, name: string) => void
+  onDeleteProfile: (id: string) => void
 }
 
 function formatDate(at: number): string {
@@ -35,6 +43,12 @@ export function ParentView({
   onClearFeedback,
   onRestore,
   onSetSecondsPerQuestion,
+  profiles,
+  activeProfileId,
+  onSwitchProfile,
+  onCreateProfile,
+  onRenameProfile,
+  onDeleteProfile,
 }: Props) {
   const [tab, setTab] = useState<'progress' | 'feedback' | 'settings'>('progress')
   const feedbackCount = (progress.feedback ?? []).length
@@ -99,6 +113,12 @@ export function ParentView({
             onReset={onReset}
             onRestore={onRestore}
             onSetSecondsPerQuestion={onSetSecondsPerQuestion}
+            profiles={profiles}
+            activeProfileId={activeProfileId}
+            onSwitchProfile={onSwitchProfile}
+            onCreateProfile={onCreateProfile}
+            onRenameProfile={onRenameProfile}
+            onDeleteProfile={onDeleteProfile}
           />
         )}
         {tab === 'progress' && <ParentProgress progress={progress} />}
@@ -137,6 +157,8 @@ function ParentProgress({ progress }: ProgressProps) {
         )
   const recentAvg = avg(recent)
   const olderAvg = avg(older)
+
+  const timing = topicTiming(progress).sort((a, b) => b.avgMs - a.avgMs)
 
   return (
     <>
@@ -224,6 +246,29 @@ function ParentProgress({ progress }: ProgressProps) {
               colour={getSubject(t.subject).colour}
             />
           ))}
+        </div>
+      )}
+
+      {timing.length > 0 && (
+        <div className="card">
+          <h2 className="section-title">Time per topic</h2>
+          <p className="muted small">
+            Average time per answer, slowest topics first. Answered since this device
+            was last updated — often more revealing than accuracy alone, since a topic
+            answered quickly but wrongly is a different problem from one answered
+            slowly but rightly.
+          </p>
+          <ul className="list-plain">
+            {timing.slice(0, 8).map((t) => (
+              <li key={t.key}>
+                <strong>
+                  {getSubject(t.subject).shortLabel} · {t.topic}
+                </strong>{' '}
+                — {formatDuration(t.avgMs)} avg over {t.attempts} answer
+                {t.attempts === 1 ? '' : 's'}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 
